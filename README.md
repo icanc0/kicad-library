@@ -1,2 +1,2 @@
 # library
-KiCad libraries for all Reality Labs projects
+KiCad libraries for my projects
