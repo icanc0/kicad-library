@@ -22,7 +22,7 @@
 				)
 			)
 		)
-		(property "Footprint" "footprint:USB-C_SMD-TYPE-C-31-M-12"
+		(property "Footprint" "footprints:USB-C_SMD-TYPE-C-31-M-12"
 			(at 0 -10.16 0)
 			(effects
 				(font
@@ -90,24 +90,6 @@
 				)
 				(fill
 					(type background)
-				)
-			)
-			(pin unspecified line
-				(at -1.27 -15.24 90)
-				(length 2.54)
-				(name "SH"
-					(effects
-						(font
-							(size 1 1)
-						)
-					)
-				)
-				(number "0"
-					(effects
-						(font
-							(size 1 1)
-						)
-					)
 				)
 			)
 			(pin unspecified line
@@ -438,6 +420,24 @@
 		(symbol "USB-TYPE-C-018_1_1"
 			(pin unspecified line
 				(at 1.27 -15.24 90)
+				(length 2.54)
+				(name "SH"
+					(effects
+						(font
+							(size 1 1)
+						)
+					)
+				)
+				(number "0"
+					(effects
+						(font
+							(size 1 1)
+						)
+					)
+				)
+			)
+			(pin unspecified line
+				(at -1.27 -15.24 90)
 				(length 2.54)
 				(name "SH"
 					(effects
