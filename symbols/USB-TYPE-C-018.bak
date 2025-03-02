@@ -22,7 +22,7 @@
 				)
 			)
 		)
-		(property "Footprint" "footprint:USB-C_SMD-TYPE-C-31-M-12"
+		(property "Footprint" "footprints:USB-C_SMD-TYPE-C-31-M-12"
 			(at 0 -10.16 0)
 			(effects
 				(font
