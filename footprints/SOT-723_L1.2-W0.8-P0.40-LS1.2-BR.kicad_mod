@@ -1,29 +1,179 @@
-(module "SOT-723_L1.2-W0.8-P0.40-LS1.2-BR" (layer F.Cu) (tedit 67281BAA)
-  (descr "SOT-723_L1.2-W0.8-P0.40-LS1.2-BR footprint")
-  (tags "SOT-723_L1.2-W0.8-P0.40-LS1.2-BR footprint C70022")
-  (attr smd)
-  (fp_text reference REF** (at 0 -2.6762) (layer F.SilkS)
-    (effects (font (size 1 1) (thickness 0.15)))
-  )
-  (fp_text value SOT-723_L1.2-W0.8-P0.40-LS1.2-BR (at 0 2.6762) (layer F.Fab)
-    (effects (font (size 1 1) (thickness 0.15)))
-  )
-  (fp_circle (center 0.599949 0.599949) (end 0.629921 0.599949) (layer F.SilkS) (width 0.059995))
-  (fp_circle (center 0.889002 0.381001) (end 0.989002 0.381001) (layer F.Fab) (width 0.2))
-  (fp_line (start 0.4762 0.6762) (end -0.4762 0.6762) (layer F.SilkS) (width 0.1524))
-  (fp_line (start -0.4762 0.6762) (end -0.4762 0.375591) (layer F.SilkS) (width 0.1524))
-  (fp_line (start 0.4762 -0.6762) (end -0.4762 -0.6762) (layer F.SilkS) (width 0.1524))
-  (fp_line (start -0.4762 -0.6762) (end -0.4762 -0.375591) (layer F.SilkS) (width 0.1524))
-  (fp_line (start 0.4762 -0.024409) (end 0.4762 0.024409) (layer F.SilkS) (width 0.1524))
-  (pad 1 smd rect (at 0.529591 0.400051) (size 0.489002 0.294006) (layers F.Cu F.Mask F.Paste))
-  (pad 2 smd rect (at 0.529591 -0.400051) (size 0.489002 0.294006) (layers F.Cu F.Mask F.Paste))
-  (pad 3 smd rect (at -0.529591 0) (size 0.489002 0.434011) (layers F.Cu F.Mask F.Paste))
-  (fp_text user REF** (at 0 4.6762) (layer F.Fab)
-    (effects (font (size 1 1) (thickness 0.15)))
-  )
-  (model kicad-library/footprints/3dmodels/SOT-723_L1.2-W0.8-P0.40-LS1.2-BR.step
-    (at (xyz -36.959995 33.11 0))
-    (scale (xyz 1 1 1))
-    (rotate (xyz 0 0 -180))
-  )
+(footprint "SOT-723_L1.2-W0.8-P0.40-LS1.2-BR"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "SOT-723_L1.2-W0.8-P0.40-LS1.2-BR footprint")
+	(tags "SOT-723_L1.2-W0.8-P0.40-LS1.2-BR footprint C70022")
+	(property "Reference" "REF**"
+		(at 0 -2.6762 0)
+		(layer "F.SilkS")
+		(uuid "7a790883-b4b7-4a7e-9dc5-73fe62f4751b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SOT-723_L1.2-W0.8-P0.40-LS1.2-BR"
+		(at 0 2.6762 0)
+		(layer "F.Fab")
+		(uuid "7c8941ed-9347-4321-9422-250c92f0189d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "efff3f48-8a58-4024-893a-a16a0d5df198")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "64dc0ef2-22a7-43cb-8b9a-05382de6cc39")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ec7dfccc-c62f-4d76-9873-7467db42b9bb")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -0.4762 -0.6762)
+		(end -0.4762 -0.375591)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4e36c272-4a3d-4ee7-bfc8-8fece60eaa0e")
+	)
+	(fp_line
+		(start -0.4762 0.6762)
+		(end -0.4762 0.375591)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ef83e908-d4b4-489c-a675-c36b60ad03ed")
+	)
+	(fp_line
+		(start 0.4762 -0.6762)
+		(end -0.4762 -0.6762)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "87989381-ea94-4049-96c1-29ec2fbb6add")
+	)
+	(fp_line
+		(start 0.4762 -0.024409)
+		(end 0.4762 0.024409)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0fcdf009-5c0f-406b-957c-8066d2549332")
+	)
+	(fp_line
+		(start 0.4762 0.6762)
+		(end -0.4762 0.6762)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7c865298-5131-4e2e-ac88-100e1cd16370")
+	)
+	(fp_circle
+		(center 0.599949 0.599949)
+		(end 0.629921 0.599949)
+		(stroke
+			(width 0.059995)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "ed8915e0-476e-4dc0-9e36-404d2836c42a")
+	)
+	(fp_circle
+		(center 0.889002 0.381001)
+		(end 0.989002 0.381001)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.Fab")
+		(uuid "ae001bb2-b24f-436d-b9d4-63e42ac1ba59")
+	)
+	(fp_text user "REF**"
+		(at 0 4.6762 0)
+		(layer "F.Fab")
+		(uuid "2d680224-5529-4cf0-ad33-6014f9412fd0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at 0.529591 0.400051)
+		(size 0.489002 0.294006)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "0b649d4d-212a-43f7-83e8-152ca9410174")
+	)
+	(pad "2" smd rect
+		(at 0.529591 -0.400051)
+		(size 0.489002 0.294006)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "b8346160-e01d-40fb-832a-693e76a69d1b")
+	)
+	(pad "3" smd rect
+		(at -0.529591 0)
+		(size 0.489002 0.434011)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "c24a8311-d839-471a-bfd2-1a6fa27aa91c")
+	)
+	(model "${KIPRJMOD}/kicad-library/footprints/3dmodels/SOT-723_L1.2-W0.8-P0.40-LS1.2-BR.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 -180)
+		)
+	)
 )
