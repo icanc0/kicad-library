@@ -22,7 +22,7 @@
 				)
 			)
 		)
-		(property "Footprint" "poka-yoke_txrx:poka-yoke_txrx"
+		(property "Footprint" "poka-yoke_rxtx:poka-yoke_rxtx"
 			(at 1.27 -3.81 0)
 			(effects
 				(font
