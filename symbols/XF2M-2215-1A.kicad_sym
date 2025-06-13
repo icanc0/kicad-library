@@ -10,7 +10,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "J"
-			(at 12.954 10.16 0)
+			(at 0 36.068 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -18,7 +18,7 @@
 			)
 		)
 		(property "Value" "XF2M-2215-1A"
-			(at 12.954 7.62 0)
+			(at 0 33.528 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -26,7 +26,7 @@
 			)
 		)
 		(property "Footprint" "CON22_1X22_DRB_XF2C_TYC"
-			(at 0 0 0)
+			(at -24.13 26.416 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36,7 +36,7 @@
 			)
 		)
 		(property "Datasheet" "XF2M-2215-1A"
-			(at 0 0 0)
+			(at -17.78 29.972 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -80,22 +80,286 @@
 				(hide yes)
 			)
 		)
-		(symbol "XF2M-2215-1A_0_1"
+		(symbol "XF2M-2215-1A_1_1"
 			(rectangle
-				(start 7.62 2.54)
-				(end 17.78 -60.96)
+				(start 1.27 27.94)
+				(end 8.89 -33.02)
 				(stroke
-					(width 0)
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start 1.27 26.797)
+				(end 2.54 26.543)
+				(stroke
+					(width 0.1524)
 					(type default)
 				)
 				(fill
 					(type none)
 				)
 			)
-			(pin unspecified line
-				(at 0 0 0)
-				(length 7.62)
-				(name "1"
+			(rectangle
+				(start 1.27 24.257)
+				(end 2.54 24.003)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 1.27 21.717)
+				(end 2.54 21.463)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 1.27 19.177)
+				(end 2.54 18.923)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 1.27 16.637)
+				(end 2.54 16.383)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 1.27 14.097)
+				(end 2.54 13.843)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 1.27 11.557)
+				(end 2.54 11.303)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 1.27 9.017)
+				(end 2.54 8.763)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 1.27 6.477)
+				(end 2.54 6.223)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 1.27 3.937)
+				(end 2.54 3.683)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 1.27 1.397)
+				(end 2.54 1.143)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 1.27 -1.143)
+				(end 2.54 -1.397)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 1.27 -3.683)
+				(end 2.54 -3.937)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 1.27 -6.223)
+				(end 2.54 -6.477)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 1.27 -8.763)
+				(end 2.54 -9.017)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 1.27 -11.303)
+				(end 2.54 -11.557)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 1.27 -13.843)
+				(end 2.54 -14.097)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 1.27 -16.383)
+				(end 2.54 -16.637)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 1.27 -18.923)
+				(end 2.54 -19.177)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 1.27 -21.463)
+				(end 2.54 -21.717)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 1.27 -24.003)
+				(end 2.54 -24.257)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 1.27 -26.543)
+				(end 2.54 -26.797)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 1.27 -29.083)
+				(end 2.54 -29.337)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 1.27 -31.623)
+				(end 2.54 -31.877)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -2.54 26.67 0)
+				(length 3.81)
+				(name "Pin_1"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -110,10 +374,10 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 0 -2.54 0)
-				(length 7.62)
-				(name "2"
+			(pin passive line
+				(at -2.54 24.13 0)
+				(length 3.81)
+				(name "Pin_2"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -128,10 +392,10 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 0 -5.08 0)
-				(length 7.62)
-				(name "3"
+			(pin passive line
+				(at -2.54 21.59 0)
+				(length 3.81)
+				(name "Pin_3"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -146,10 +410,10 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 0 -7.62 0)
-				(length 7.62)
-				(name "4"
+			(pin passive line
+				(at -2.54 19.05 0)
+				(length 3.81)
+				(name "Pin_4"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -164,10 +428,10 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 0 -10.16 0)
-				(length 7.62)
-				(name "5"
+			(pin passive line
+				(at -2.54 16.51 0)
+				(length 3.81)
+				(name "Pin_5"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -182,10 +446,10 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 0 -12.7 0)
-				(length 7.62)
-				(name "6"
+			(pin passive line
+				(at -2.54 13.97 0)
+				(length 3.81)
+				(name "Pin_6"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -200,10 +464,10 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 0 -15.24 0)
-				(length 7.62)
-				(name "7"
+			(pin passive line
+				(at -2.54 11.43 0)
+				(length 3.81)
+				(name "Pin_7"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -218,10 +482,10 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 0 -17.78 0)
-				(length 7.62)
-				(name "8"
+			(pin passive line
+				(at -2.54 8.89 0)
+				(length 3.81)
+				(name "Pin_8"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -236,10 +500,10 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 0 -20.32 0)
-				(length 7.62)
-				(name "9"
+			(pin passive line
+				(at -2.54 6.35 0)
+				(length 3.81)
+				(name "Pin_9"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -254,10 +518,10 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 0 -22.86 0)
-				(length 7.62)
-				(name "10"
+			(pin passive line
+				(at -2.54 3.81 0)
+				(length 3.81)
+				(name "Pin_10"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -272,10 +536,10 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 0 -25.4 0)
-				(length 7.62)
-				(name "11"
+			(pin passive line
+				(at -2.54 1.27 0)
+				(length 3.81)
+				(name "Pin_11"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -290,10 +554,10 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 0 -27.94 0)
-				(length 7.62)
-				(name "12"
+			(pin passive line
+				(at -2.54 -1.27 0)
+				(length 3.81)
+				(name "Pin_12"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -308,10 +572,10 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 0 -30.48 0)
-				(length 7.62)
-				(name "13"
+			(pin passive line
+				(at -2.54 -3.81 0)
+				(length 3.81)
+				(name "Pin_13"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -326,10 +590,10 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 0 -33.02 0)
-				(length 7.62)
-				(name "14"
+			(pin passive line
+				(at -2.54 -6.35 0)
+				(length 3.81)
+				(name "Pin_14"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -344,10 +608,10 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 0 -35.56 0)
-				(length 7.62)
-				(name "15"
+			(pin passive line
+				(at -2.54 -8.89 0)
+				(length 3.81)
+				(name "Pin_15"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -362,10 +626,10 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 0 -38.1 0)
-				(length 7.62)
-				(name "16"
+			(pin passive line
+				(at -2.54 -11.43 0)
+				(length 3.81)
+				(name "Pin_16"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -380,10 +644,10 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 0 -40.64 0)
-				(length 7.62)
-				(name "17"
+			(pin passive line
+				(at -2.54 -13.97 0)
+				(length 3.81)
+				(name "Pin_17"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -398,10 +662,10 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 0 -43.18 0)
-				(length 7.62)
-				(name "18"
+			(pin passive line
+				(at -2.54 -16.51 0)
+				(length 3.81)
+				(name "Pin_18"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -416,10 +680,10 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 0 -45.72 0)
-				(length 7.62)
-				(name "19"
+			(pin passive line
+				(at -2.54 -19.05 0)
+				(length 3.81)
+				(name "Pin_19"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -434,10 +698,10 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 0 -48.26 0)
-				(length 7.62)
-				(name "20"
+			(pin passive line
+				(at -2.54 -21.59 0)
+				(length 3.81)
+				(name "Pin_20"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -452,10 +716,10 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 0 -50.8 0)
-				(length 7.62)
-				(name "21"
+			(pin passive line
+				(at -2.54 -24.13 0)
+				(length 3.81)
+				(name "Pin_21"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -470,10 +734,10 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 0 -53.34 0)
-				(length 7.62)
-				(name "22"
+			(pin passive line
+				(at -2.54 -26.67 0)
+				(length 3.81)
+				(name "Pin_22"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -488,12 +752,10 @@
 					)
 				)
 			)
-		)
-		(symbol "XF2M-2215-1A_1_1"
-			(pin unspecified line
-				(at 0 -55.88 0)
-				(length 7.62)
-				(name "23_case"
+			(pin passive line
+				(at -2.54 -29.21 0)
+				(length 3.81)
+				(name "Pin_23_case"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -508,10 +770,10 @@
 					)
 				)
 			)
-			(pin unspecified line
-				(at 0 -58.42 0)
-				(length 7.62)
-				(name "24_case"
+			(pin passive line
+				(at -2.54 -31.75 0)
+				(length 3.81)
+				(name "Pin_24_case"
 					(effects
 						(font
 							(size 1.27 1.27)
