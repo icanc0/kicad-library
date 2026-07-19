@@ -197,3 +197,8 @@ Polish (b5, geometry-only; full notes appended to each part's original row above
 - symbols/XF2M-2215-1A.kicad_sym — generic Pin_N name text hidden (numbers are the connector identity)
 - symbols/CH32X035G8U6.kicad_sym — re-spaced 2.54→3.81 pitch / 5.08 pin length (fanout-friendly)
 - symbols/FE21.kicad_sym — widened +2.54/side to headrig's proven fanout geometry
+
+Skips (b5, no promotion):
+- SKIP (used=0): cm5-carrier-v2 SGM2590D + CABLINE_VS_20P (lib/sym/pd_usb.kicad_sym) — unplaced on the source board, fail the proven-on-a-named-board bar; ready to promote from a board that places them.
+- SKIP (require_mpn, standing): cm5-carrier-v2 TVS "TVS_UNI_4V5_TBD" (mpn TBD-bench-select) — b4 row stands; still bench-select.
+- Board-local generics stay board-local (no MPN, not central-eligible).
