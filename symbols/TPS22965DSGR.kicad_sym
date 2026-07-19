@@ -1,0 +1,124 @@
+(kicad_symbol_lib
+	(version 20231120)
+	(generator "kagent_authored")
+	(generator_version "8.0")
+	(symbol "TPS22965DSGR"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at -7.62 11.43 0)
+			(show_name no)
+			(effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "TPS22965DSGR"
+			(at -7.62 8.89 0)
+			(show_name no)
+			(effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "cm5v2:TPS22965DSGR_WSON-8-1EP_2x2mm"
+			(at 0 0 0)
+			(show_name no)
+			(hide yes)
+			(effects (font (size 1.27 1.27))))
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps22965.pdf"
+			(at 0 0 0)
+			(show_name no)
+			(hide yes)
+			(effects (font (size 1.27 1.27))))
+		(property "Description" "5.7V 6A load switch, 16mohm, WSON-8 DSG. Consolidated load switch for USB-A host / TYPEC0 OTG VBUS / HDMI-5V."
+			(at 0 0 0)
+			(show_name no)
+			(hide yes)
+			(effects (font (size 1.27 1.27))))
+		(property "ki_keywords" "load switch power TPS22965 USB VBUS"
+			(at 0 0 0)
+			(show_name no)
+			(hide yes)
+			(effects (font (size 1.27 1.27))))
+		(property "ki_fp_filters" "TPS22965*WSON*2x2*"
+			(at 0 0 0)
+			(show_name no)
+			(hide yes)
+			(effects (font (size 1.27 1.27))))
+		(property "MPN" "TPS22965DSGR"
+			(at 0 0 0)
+			(show_name no)
+			(hide yes)
+			(effects (font (size 1.27 1.27))))
+		(property "Manufacturer" "Texas Instruments"
+			(at 0 0 0)
+			(show_name no)
+			(hide yes)
+			(effects (font (size 1.27 1.27))))
+		(symbol "TPS22965DSGR_0_1"
+			(rectangle
+				(start -7.62 7.62)
+				(end 7.62 -7.62)
+				(stroke (width 0.254) (type default))
+				(fill (type background))))
+		(symbol "TPS22965DSGR_1_1"
+			(pin power_in line
+				(at -10.16 5.08 0)
+				(length 2.54)
+				(name "VIN"
+					(effects (font (size 1.27 1.27))))
+				(number "1"
+					(effects (font (size 1.27 1.27)))))
+			(pin power_in line
+				(at -10.16 2.54 0)
+				(length 2.54)
+				(name "VIN"
+					(effects (font (size 1.27 1.27))))
+				(number "2"
+					(effects (font (size 1.27 1.27)))))
+			(pin power_in line
+				(at -10.16 -2.54 0)
+				(length 2.54)
+				(name "VBIAS"
+					(effects (font (size 1.27 1.27))))
+				(number "4"
+					(effects (font (size 1.27 1.27)))))
+			(pin input line
+				(at -10.16 -5.08 0)
+				(length 2.54)
+				(name "ON"
+					(effects (font (size 1.27 1.27))))
+				(number "3"
+					(effects (font (size 1.27 1.27)))))
+			(pin power_out line
+				(at 10.16 5.08 180)
+				(length 2.54)
+				(name "VOUT"
+					(effects (font (size 1.27 1.27))))
+				(number "7"
+					(effects (font (size 1.27 1.27)))))
+			(pin passive line
+				(at 10.16 2.54 180)
+				(length 2.54)
+				(name "VOUT"
+					(effects (font (size 1.27 1.27))))
+				(number "8"
+					(effects (font (size 1.27 1.27)))))
+			(pin passive line
+				(at 10.16 -5.08 180)
+				(length 2.54)
+				(name "CT"
+					(effects (font (size 1.27 1.27))))
+				(number "6"
+					(effects (font (size 1.27 1.27)))))
+			(pin power_in line
+				(at 0 -10.16 90)
+				(length 2.54)
+				(name "GND"
+					(effects (font (size 1.27 1.27))))
+				(number "5"
+					(effects (font (size 1.27 1.27)))))
+			(pin power_in line
+				(at 2.54 -10.16 90)
+				(length 2.54)
+				(name "EP"
+					(effects (font (size 1.27 1.27))))
+				(number "9"
+					(effects (font (size 1.27 1.27)))))))
+)
