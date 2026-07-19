@@ -46,7 +46,7 @@ re-author (see note). Mechanical fixes recorded per line.
 - symbols/RP2040.kicad_sym — mpn=RP2040 from=? — fit: PASS — official-style: stacked visible IOVDD/DVDD power_in pins (stock convention), GND(57) bottom, no changes
 - symbols/SPH252012HR24MT.kicad_sym — mpn=SPH252012HR24MT (LCSC C370416) from=? — fit: PASS — REPAIRED: same JLC2KiCad +152.4 mm arc-offset bug as BDHH; coil translated onto pins, etypes→passive
 - symbols/TC2050-IDC.kicad_sym — mpn=TC2050-IDC from=? — fit: PASS — Tag-Connect 2x5, clean, no changes
-- symbols/TMAG5273A2QDBVR.kicad_sym — mpn=TMAG5273A2QDBVR from=LED-driver-board — fit: FLAG — GND(2) sits above VCC(4) across facing sides (power-up/GND-down); needs pin re-side on re-author. etypes (GND/VCC power_in, I2C bidirectional, INT open_collector, GND(TEST) passive), value moved below
+- symbols/TMAG5273A2QDBVR.kicad_sym — mpn=TMAG5273A2QDBVR from=LED-driver-board — fit: PASS — re-authored pin re-side: VCC(4) top-left, SCL/SDA pair left, INT#(5) right, GND(2)+GND(TEST)(3) bottom edge (power-up/GND-down); stale pin-1 dot removed. etypes (GND/VCC power_in, I2C bidirectional, INT open_collector, GND(TEST) passive) (audit)
 - symbols/TP4065.kicad_sym — mpn=TP4065 from=? — fit: PASS — VCC top, PROG bottom; note GND left-mid. etypes (VCC/GND power_in, CHRG open_collector, BAT/PROG passive)
 - symbols/TPS65132WRVCR_C2876379.kicad_sym — mpn=TPS65132WRVCR (LCSC C2876379) from=TPS65132-add — fit: PASS — VIN top-left, outs right, PGND/AGND/EP all bottom. 21-pin etypes (grounds power_in, OUTP/OUTN power_out with stacked twin passive, SW/CFLY/REG passive, I2C bidirectional)
 - symbols/TS-1187A-B-A-B.kicad_sym — mpn=TS-1187A-B-A-B from=? — fit: PASS — tact switch glyph; refdes U→SW, value moved below
