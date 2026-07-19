@@ -56,7 +56,7 @@
       (rectangle (start -10.16 -5.08) (end 10.16 5.08)
         (stroke (width 0.254)) (fill (type background))
       )
-      (pin input line (at -15.24 2.54 0) (length 5.08)
+      (pin power_in line (at -15.24 2.54 0) (length 5.08)
         (name "VIN"
           (effects (font (size 1.016 1.016)))
         )
@@ -64,7 +64,7 @@
           (effects (font (size 1.016 1.016)))
         )
       )
-      (pin output line (at 15.24 2.54 180.0) (length 5.08)
+      (pin power_out line (at 15.24 2.54 180.0) (length 5.08)
         (name "VOUT"
           (effects (font (size 1.016 1.016)))
         )
