@@ -162,3 +162,15 @@ Skip / dedup / pass-over notes (no promotion):
 - headrig LVC07A (SN74LVC07APWR) — stock-covered: 74xx family glyph + MPN
 - skibidi LMV331 — stock-covered: Comparator:LMV331
 - skibidi USBC16P — stock-covered: Connector USB-C 16P family
+
+Final promote pass 2026-07-19 (librarian, batch 5): board-authored queue promotions
+(capjack / iphone-x-shim / cm5-carrier-v2) + central polish. Same rule — render + LOOK
+before every promoted row; pin numbers/names/etypes preserved EXACTLY on all promotions
+(geometry-only fixes noted per row).
+
+capjack (hardware/libs/capjack_authored.kicad_sym):
+- symbols/CN3722.kicad_sym — mpn=CN3722 (LCSC C77905) from=capjack — fit: PASS — CC/CV supercap charger, P-FET buck controller, TSSOP-16 full pad set; VCC(15) power-up top-left, GND(3)+PGND(2) bottom, PWR/SET/COMP banks left, DRV/SENSE/STAT banks right, CHRG/DONE open_collector; NC(12) typed passive as authored (etypes preserved exactly)
+- symbols/FP6296.kicad_sym — mpn=FP6296XR-G1 (LCSC C133888) from=capjack — fit: PASS — 10A non-sync boost, HSOP-8+EP; HVDD(8) power-up top-left, EN/FB/COMP/OC left, LX1/LX2 + VCC(LDO out) right, GND_EP(9) bottom; FB/COMP passive (divider-safe)
+- symbols/LM74700.kicad_sym — mpn=LM74700QDBVRQ1 (LCSC C2941042) from=capjack — fit: PASS — ideal-diode controller, SOT-23-6; IN(ANODE/EN) + CP(VCAP) left, OUT(CATHODE) + GATE right, GND(2) bottom; series-path pins passive as authored
+- symbols/TPS54332.kicad_sym — mpn=TPS54332DDAR (LCSC C41312) from=capjack — fit: PASS — 28V 3.5A 1MHz non-sync buck, HSOP-8+EP; VIN(2) power-up top-left, EN/SS/VSENSE/COMP left, PH/BOOT right, GND(7)+PAD(9) bottom
+- STOCK-ADVISORY: LMV321 (mpn LMV321IDBVR, LCSC C3014306, SOT-23-5) from=capjack → Amplifier_Operational:LMV321 (EXACT stock part, pin-map verified identical: 1=IN+/3=IN-/5=V+/4=OUT/2=V-). Do not promote.
