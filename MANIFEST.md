@@ -59,3 +59,15 @@ re-author (see note). Mechanical fixes recorded per line.
 - symbols/X322512MSB4SI.kicad_sym — mpn=X322512MSB4SI from=? — fit: PASS — 32.768k crystal, case GNDs; note GND(4) top-left. etypes→passive, value moved below
 - symbols/XF2M-2215-1A.kicad_sym — mpn=XF2M-2215-1A from=iphone-x-shim — fit: PASS — 22-pin FPC + case pins 23/24 exposed (full pad set), clean single column, no changes
 - symbols/XSON8_XH_2x3x0p4_WIN.kicad_sym — mpn=W25Q32RVXHJQ TR from=? — fit: PASS — VCC top / VSS bottom correct. REPAIRED: VSS pins were off the 1.27 grid (y=-24.765, silent-open trap) — snapped to -25.4 with length compensated; VSS power_out→power_in
+
+Central-intake wave 2026-07-19 (librarian): cross-board dedupe + early-board candidates.
+Every row below = rendered + LOOKed before promotion; pin numbers/names/etypes preserved
+exactly unless the fix was geometry/text (noted per row).
+
+- symbols/SY6280AAC.kicad_sym — mpn=SY6280AAC from=wristcam-v2 — fit: PASS — load switch, IN/OUT power corners, GND bottom, EN/ISET grouped left; byte-identical twin on foxjig; stardeck (input-typed ISET/EN) and headrig (pin 3 renamed ILIM) variants passed over
+- symbols/TPD4E05U06.kicad_sym — mpn=TPD4E05U06DQAR from=cm5-carrier-v2 — fit: PASS — TVS-array internals drawn, flow-through D1/D2 left-right, GND 3+8 stacked bottom (8 hidden); NC etype 'free' preserved; symbol renamed TPD4E05U06DQA→TPD4E05U06; beats the plain-box foxjig/stardeck/headrig copies
+- symbols/MT2492.kicad_sym — mpn=MT2492 from=iphone-x-shim — fit: PASS — buck: VIN/EN left power-up, FB passive (divider-safe), SW output + BS right, GND bottom; camera-fpc-adapters twin passed over (GND mid-left, input-typed FB)
+- symbols/SDCW2012-2-900TF.kicad_sym — mpn=SDCW2012-2-900TF (LCSC C54888) from=wristcam-v2 — fit: PASS — USB CMC, vendor numbering 1/4 in-left, 2/3 out-right (windings 1-2, 4-3, verified against the LCSC DLW21SN land pattern convention); renamed CMC_USB→MPN, baked title updated, Value moved below body
+- symbols/DLW21SN900SQ2L.kicad_sym — mpn=DLW21SN900SQ2L (LCSC C97856) from=skibidi-hub — fit: PASS — 2-line CMC, same 1-2/4-3 winding convention; renamed CMC_2LN→MPN, baked title updated, Value moved below body
+- symbols/DLM0QSB120HY2D.kicad_sym — mpn=DLM0QSB120HY2D from=vitracker-v2 — fit: PASS — MIPI CMC as true coil glyph, windings 1-2 top / 4-3 bottom (Murata numbering). WARNING: headrig-jig's board-local CMC_2LN + CMC_0504 pair uses a DIFFERENT self-consistent corner numbering (1,2 left / 3,4 right) — never mix that board's symbol or footprint with this central part; migrate headrig as a pair or re-map both
+- symbols/DLW21SN900HQ2L.kicad_sym — mpn=DLW21SN900HQ2L (LCSC C97855) from=vitracker-v2 — fit: PASS — coil glyph; un-hid pin numbers (winding orientation was invisible), Ref moved clear of coupling bars, Value cleaned of _C97855 suffix and moved below glyph
