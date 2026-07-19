@@ -154,3 +154,11 @@ Skip / dedup / pass-over notes (no promotion):
 - DEDUP (same MPN, diff numbering): headrig-jig CMC_2LN (mpn DLM0QSB120HY2D, LCSC C3211477) duplicates central symbols/DLM0QSB120HY2D.kicad_sym (from vitracker-v2). Board copy is a plain box, corner numbering IN(1)/N_IN(2) left, OUT(3)/P_OUT(4) right, paired to board-local footprint CMC_0504 — DIFFERENT from central's coil-glyph Murata numbering (1,2 top / 4,3 bottom). NOT re-promoted; see the existing DLM0QSB120HY2D warning row — migrate headrig symbol+footprint together or re-map both.
 - DEDUP (same MPN): headrig-jig SPINOR_128M (mpn W25Q128JVSIQ, LCSC C97521, 3.3V) duplicates central symbols/W25Q128JVSIQTR.kicad_sym — re-map to central, do not promote. NB: this 3.3V JV part is DISTINCT from the new 1.8V W25Q128JWPIQ-1V8 — check the board rail before mapping.
 - NOT-CENTRAL (board-local generic, no MPN): skibidi-hub MODULE_CONN (Value CAMERA), BREAKOUT, GLOVE_CONN — placeholder connectors with no MPN; board-local scratch, not central-eligible.
+
+## migration-dedup advisories (b4 supplement)
+- stardeck XF2M22_MIRROR — mirror-dup: use central XF2M-2215-1A
+- headrig LOADSW_SY6280 — dedup: use central SY6280AAC (board copy used=0)
+- headrig T113S3 — GARB, used=0: attic board-side, never promote
+- headrig LVC07A (SN74LVC07APWR) — stock-covered: 74xx family glyph + MPN
+- skibidi LMV331 — stock-covered: Comparator:LMV331
+- skibidi USBC16P — stock-covered: Connector USB-C 16P family
