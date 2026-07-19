@@ -471,7 +471,7 @@
 				)
 			)
 			(pin power_in line
-				(at 0 20.32 270)
+				(at -7.62 -22.86 90)
 				(length 2.54)
 				(name "EP/VSS"
 					(effects
