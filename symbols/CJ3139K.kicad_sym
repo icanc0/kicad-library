@@ -1,9 +1,9 @@
 (kicad_symbol_lib (version 20210201) (generator TousstNicolas/JLC2KiCad_lib)
   (symbol "CJ3139K"   (in_bom yes) (on_board yes)
-    (property "Reference" "Q" (id 0) (at 0 1.27 0)
+    (property "Reference" "Q" (id 0) (at -1.27 8.89 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "CJ3139K" (id 1) (at 0 -2.54 0)
+    (property "Value" "CJ3139K" (id 1) (at -1.27 -8.89 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "footprints:SOT-723_L1.2-W0.8-P0.40-LS1.2-BR" (id 2) (at 0 -10.16 0)
@@ -28,19 +28,19 @@
         (stroke (width 0) (type default) (color 0 0 0 0))
         (fill (type none))
       )
-      (pin unspecified line
+      (pin passive line
         (at 2.54 6.35 270)
         (length 2.54000508001016)
         (name "D" (effects (font (size 1 1))))
         (number "3" (effects (font (size 1 1))))
       )
-      (pin unspecified line
+      (pin passive line
         (at -5.08 1.27 0)
         (length 2.54)
         (name "G" (effects (font (size 1 1))))
         (number "1" (effects (font (size 1 1))))
       )
-      (pin unspecified line
+      (pin passive line
         (at 2.54 -6.35 90)
         (length 2.54000508001016)
         (name "S" (effects (font (size 1 1))))
