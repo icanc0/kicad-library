@@ -1,0 +1,208 @@
+(kicad_symbol_lib
+	(version 20231120)
+	(generator "kagent_authored")
+	(generator_version "8.0")
+	(symbol "TPS25944L"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at -10.16 20.32 0)
+			(show_name no)
+			(effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "TPS25944L"
+			(at -10.16 17.78 0)
+			(show_name no)
+			(effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "cm5v2:TPS25944L_WQFN-20-1EP_RVC0020A"
+			(at 0 0 0)
+			(show_name no)
+			(hide yes)
+			(effects (font (size 1.27 1.27))))
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps25944l.pdf"
+			(at 0 0 0)
+			(show_name no)
+			(hide yes)
+			(effects (font (size 1.27 1.27))))
+		(property "Description" "2.7-18V, 0.6-5.2A eFuse, integrated FET + overvoltage protection + reverse-current blocking. +4V rail OVP series cutoff. WQFN-20 RVC."
+			(at 0 0 0)
+			(show_name no)
+			(hide yes)
+			(effects (font (size 1.27 1.27))))
+		(property "ki_keywords" "eFuse overvoltage protection OVP hot swap power mux TPS25944"
+			(at 0 0 0)
+			(show_name no)
+			(hide yes)
+			(effects (font (size 1.27 1.27))))
+		(property "ki_fp_filters" "TPS25944*WQFN*RVC*"
+			(at 0 0 0)
+			(show_name no)
+			(hide yes)
+			(effects (font (size 1.27 1.27))))
+		(property "MPN" "TPS25944LRVCR"
+			(at 0 0 0)
+			(show_name no)
+			(hide yes)
+			(effects (font (size 1.27 1.27))))
+		(property "Manufacturer" "Texas Instruments"
+			(at 0 0 0)
+			(show_name no)
+			(hide yes)
+			(effects (font (size 1.27 1.27))))
+		(symbol "TPS25944L_0_1"
+			(rectangle
+				(start -10.16 16.51)
+				(end 10.16 -16.51)
+				(stroke (width 0.254) (type default))
+				(fill (type background))))
+		(symbol "TPS25944L_1_1"
+			(pin power_in line
+				(at -12.7 12.7 0)
+				(length 2.54)
+				(name "IN"
+					(effects (font (size 1.27 1.27))))
+				(number "9"
+					(effects (font (size 1.27 1.27)))))
+			(pin power_in line
+				(at -12.7 10.16 0)
+				(length 2.54)
+				(name "IN"
+					(effects (font (size 1.27 1.27))))
+				(number "10"
+					(effects (font (size 1.27 1.27)))))
+			(pin power_in line
+				(at -12.7 7.62 0)
+				(length 2.54)
+				(name "IN"
+					(effects (font (size 1.27 1.27))))
+				(number "11"
+					(effects (font (size 1.27 1.27)))))
+			(pin power_in line
+				(at -12.7 5.08 0)
+				(length 2.54)
+				(name "IN"
+					(effects (font (size 1.27 1.27))))
+				(number "12"
+					(effects (font (size 1.27 1.27)))))
+			(pin power_in line
+				(at -12.7 2.54 0)
+				(length 2.54)
+				(name "IN"
+					(effects (font (size 1.27 1.27))))
+				(number "13"
+					(effects (font (size 1.27 1.27)))))
+			(pin input line
+				(at -12.7 -2.54 0)
+				(length 2.54)
+				(name "EN/UVLO"
+					(effects (font (size 1.27 1.27))))
+				(number "14"
+					(effects (font (size 1.27 1.27)))))
+			(pin input line
+				(at -12.7 -5.08 0)
+				(length 2.54)
+				(name "OVP"
+					(effects (font (size 1.27 1.27))))
+				(number "15"
+					(effects (font (size 1.27 1.27)))))
+			(pin input line
+				(at -12.7 -7.62 0)
+				(length 2.54)
+				(name "DMODE"
+					(effects (font (size 1.27 1.27))))
+				(number "1"
+					(effects (font (size 1.27 1.27)))))
+			(pin power_out line
+				(at 12.7 12.7 180)
+				(length 2.54)
+				(name "OUT"
+					(effects (font (size 1.27 1.27))))
+				(number "4"
+					(effects (font (size 1.27 1.27)))))
+			(pin passive line
+				(at 12.7 10.16 180)
+				(length 2.54)
+				(name "OUT"
+					(effects (font (size 1.27 1.27))))
+				(number "5"
+					(effects (font (size 1.27 1.27)))))
+			(pin passive line
+				(at 12.7 7.62 180)
+				(length 2.54)
+				(name "OUT"
+					(effects (font (size 1.27 1.27))))
+				(number "6"
+					(effects (font (size 1.27 1.27)))))
+			(pin passive line
+				(at 12.7 5.08 180)
+				(length 2.54)
+				(name "OUT"
+					(effects (font (size 1.27 1.27))))
+				(number "7"
+					(effects (font (size 1.27 1.27)))))
+			(pin passive line
+				(at 12.7 2.54 180)
+				(length 2.54)
+				(name "OUT"
+					(effects (font (size 1.27 1.27))))
+				(number "8"
+					(effects (font (size 1.27 1.27)))))
+			(pin output line
+				(at 12.7 -2.54 180)
+				(length 2.54)
+				(name "PGOOD"
+					(effects (font (size 1.27 1.27))))
+				(number "2"
+					(effects (font (size 1.27 1.27)))))
+			(pin input line
+				(at 12.7 -5.08 180)
+				(length 2.54)
+				(name "PGTH"
+					(effects (font (size 1.27 1.27))))
+				(number "3"
+					(effects (font (size 1.27 1.27)))))
+			(pin output line
+				(at 12.7 -7.62 180)
+				(length 2.54)
+				(name "~{FLT}"
+					(effects (font (size 1.27 1.27))))
+				(number "20"
+					(effects (font (size 1.27 1.27)))))
+			(pin output line
+				(at 12.7 -10.16 180)
+				(length 2.54)
+				(name "IMON"
+					(effects (font (size 1.27 1.27))))
+				(number "19"
+					(effects (font (size 1.27 1.27)))))
+			(pin passive line
+				(at 12.7 -12.7 180)
+				(length 2.54)
+				(name "dVdT"
+					(effects (font (size 1.27 1.27))))
+				(number "18"
+					(effects (font (size 1.27 1.27)))))
+			(pin passive line
+				(at 12.7 -15.24 180)
+				(length 2.54)
+				(name "ILIM"
+					(effects (font (size 1.27 1.27))))
+				(number "17"
+					(effects (font (size 1.27 1.27)))))
+			(pin power_in line
+				(at -2.54 -19.05 90)
+				(length 2.54)
+				(name "GND"
+					(effects (font (size 1.27 1.27))))
+				(number "16"
+					(effects (font (size 1.27 1.27)))))
+			(pin power_in line
+				(at 0 -19.05 90)
+				(length 2.54)
+				(name "EP"
+					(effects (font (size 1.27 1.27))))
+				(number "21"
+					(effects (font (size 1.27 1.27)))))))
+)
