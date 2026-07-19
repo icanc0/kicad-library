@@ -30,7 +30,7 @@ re-author (see note). Mechanical fixes recorded per line.
 - symbols/FUSB302BUCX.kicad_sym — mpn=FUSB302BUCX from=varifocal-motherboard — fit: PASS — etypes set (VDD/GND power_in, CC/I2C bidirectional, INT_N open_collector, VBUS/VCONN passive), value moved below
 - symbols/HT7533-1_C14289.kicad_sym — mpn=HT7533-1 (LCSC C14289) from=3v3-LDO-add — fit: PASS — note GND right-bottom edge not bottom. etypes (Vin power_in, Vout power_out, GND power_in), value moved below
 - symbols/ICM-42670-P.kicad_sym — mpn=ICM-42670-P from=? — fit: PASS — note GND left-mid. etypes set (VDD/VDDIO/GND power_in, I2C/SPI bidirectional, INT1 output); RESV pins left passive (datasheet tie/float call not guessed)
-- symbols/ICM-42688-P.kicad_sym — mpn=ICM-42688-P from=? — fit: FLAG — body ~66x69 mm for 14 pins (body∝pins law; package-style 4-side pin layout, legacy pins-at-top-level structure); needs compact re-author. VDD/VDDIO/GND→power_in applied
+- symbols/ICM-42688-P.kicad_sym — mpn=ICM-42688-P from=? — fit: PASS — re-authored compact 36x23 mm body, functional grouping: VDD/VDDIO top-left, SPI/I2C bus left (CS/SCLK/SDI/SDO order), INT1/INT2 top-right, RESV_1-5 banked bottom-right, sole GND bottom-center; proper _0_1 sub-symbol structure. VDD/VDDIO/GND→power_in (audit)
 - symbols/isaac-anime-girl-oc.kicad_sym — non-part: keep (owner) — art, not graded
 - symbols/KF1027B-04P-G00-DFT-01B.kicad_sym — mpn=KF1027B-04P-G00-DFT-01B from=? — fit: PASS — proper 4-slider glyphs + ON label; etypes input→passive, refdes U→SW, value moved below
 - symbols/LP3320B6F.kicad_sym — mpn=LP3320B6F from=LED-driver-board — fit: PASS — note GND left row-2. etypes (VIN/GND power_in, NC no_connect, LX/FB/EN passive), value moved below
