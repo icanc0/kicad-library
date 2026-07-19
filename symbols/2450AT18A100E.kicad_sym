@@ -1,9 +1,9 @@
 (kicad_symbol_lib (version 20210201) (generator TousstNicolas/JLC2KiCad_lib)
   (symbol "2450AT18A100E"   (in_bom yes) (on_board yes)
-    (property "Reference" "U" (id 0) (at 0 1.27 0)
+    (property "Reference" "U" (id 0) (at 0.0 6.35 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "2450AT18A100E" (id 1) (at 0 -2.54 0)
+    (property "Value" "2450AT18A100E" (id 1) (at 0.0 -7.62 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "footprints:ANT-SMD_L3.2-W1.6" (id 2) (at 0 -10.16 0)
@@ -44,7 +44,7 @@
         (stroke (width 0) (type default) (color 0 0 0 0))
         (fill (type none))
       )
-      (pin unspecified line
+      (pin passive line
         (at 0.0 -5.08 90)
         (length 2.54000508001016)
         (name "ANT" (effects (font (size 1 1))))
@@ -58,7 +58,7 @@
         (stroke (width 0) (type default) (color 0 0 0 0))
         (fill (type none))
       )
-      (pin unspecified line
+      (pin passive line
         (at 0.0 3.81 270)
         (length 2.54000508001016)
         (name "2" (effects (font (size 1 1))))

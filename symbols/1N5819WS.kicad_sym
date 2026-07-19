@@ -1,9 +1,9 @@
 (kicad_symbol_lib (version 20210201) (generator TousstNicolas/JLC2KiCad_lib)
   (symbol "1N5819WS"   (in_bom yes) (on_board yes)
-    (property "Reference" "D" (id 0) (at 0 1.27 0)
+    (property "Reference" "D" (id 0) (at 0.0 2.54 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "1N5819WS" (id 1) (at 0 -2.54 0)
+    (property "Value" "1N5819WS" (id 1) (at 0.0 -2.54 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "footprints:SOD-323_L1.8-W1.3-LS2.5-RD" (id 2) (at 0 -10.16 0)
@@ -50,13 +50,13 @@
         (stroke (width 0) (type default) (color 0 0 0 0))
         (fill (type background))
       )
-      (pin unspecified line
+      (pin passive line
         (at -5.08 -0.0 0)
         (length 3.81)
         (name "K" (effects (font (size 1 1))))
         (number "1" (effects (font (size 1 1))))
       )
-      (pin unspecified line
+      (pin passive line
         (at 5.08 -0.0 180)
         (length 3.81)
         (name "A" (effects (font (size 1 1))))
