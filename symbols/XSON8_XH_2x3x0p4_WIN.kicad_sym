@@ -183,9 +183,9 @@
 					)
 				)
 			)
-			(pin power_out line
-				(at 52.07 -24.765 90)
-				(length 7.62)
+			(pin power_in line
+				(at 52.07 -25.4 90)
+				(length 8.255)
 				(name "VSS"
 					(effects
 						(font
@@ -273,9 +273,9 @@
 					)
 				)
 			)
-			(pin power_out line
-				(at 57.15 -24.765 90)
-				(length 7.62)
+			(pin power_in line
+				(at 57.15 -25.4 90)
+				(length 8.255)
 				(name "VSS"
 					(effects
 						(font

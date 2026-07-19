@@ -48,3 +48,14 @@ re-author (see note). Mechanical fixes recorded per line.
 - symbols/TC2050-IDC.kicad_sym — mpn=TC2050-IDC from=? — fit: PASS — Tag-Connect 2x5, clean, no changes
 - symbols/TMAG5273A2QDBVR.kicad_sym — mpn=TMAG5273A2QDBVR from=LED-driver-board — fit: FLAG — GND(2) sits above VCC(4) across facing sides (power-up/GND-down); needs pin re-side on re-author. etypes (GND/VCC power_in, I2C bidirectional, INT open_collector, GND(TEST) passive), value moved below
 - symbols/TP4065.kicad_sym — mpn=TP4065 from=? — fit: PASS — VCC top, PROG bottom; note GND left-mid. etypes (VCC/GND power_in, CHRG open_collector, BAT/PROG passive)
+- symbols/TPS65132WRVCR_C2876379.kicad_sym — mpn=TPS65132WRVCR (LCSC C2876379) from=TPS65132-add — fit: PASS — VIN top-left, outs right, PGND/AGND/EP all bottom. 21-pin etypes (grounds power_in, OUTP/OUTN power_out with stacked twin passive, SW/CFLY/REG passive, I2C bidirectional)
+- symbols/TS-1187A-B-A-B.kicad_sym — mpn=TS-1187A-B-A-B from=? — fit: PASS — tact switch glyph; refdes U→SW, value moved below
+- symbols/TSSOP_0104PWR_TEX.kicad_sym — mpn=TXU0104PWR from=? — fit: PASS — NC pins properly no_connect; note VCCA/VCCB mid-left, GND left-bottom. GND power_out→power_in, OE→passive
+- symbols/TZ1269D.kicad_sym — mpn=TZ1269D from=? — fit: PASS — zener array internals shown; note GND top-left. GND input→power_in (was ERC-poison), I/O→passive, value moved below
+- symbols/USB-TYPE-C-018.kicad_sym — mpn=TYPE-C-018 (KH-TYPE-C-018) from=? — fit: PASS — 16P+4 shell receptacle, physical A/B column layout; all pins→passive (connector law), refdes U→J, value moved off the DP/DN rows
+- symbols/W25Q128JVSIQTR.kicad_sym — mpn=W25Q128JVSIQ from=? — fit: PASS — etypes (VCC/GND power_in, CS/CLK input, IO bidirectional), value moved below
+- symbols/Wago-2060-452-998-404.kicad_sym — mpn=2060-452/998-404 from=wago-add — fit: PASS — contact glyphs; etypes→passive (both body styles), value moved fully below box
+- symbols/WPN252012H2R2MT.kicad_sym — mpn=WPN252012H2R2MT from=? — fit: PASS — coil glyph correct (healthy twin of the two repaired inductors); etypes→passive
+- symbols/X322512MSB4SI.kicad_sym — mpn=X322512MSB4SI from=? — fit: PASS — 32.768k crystal, case GNDs; note GND(4) top-left. etypes→passive, value moved below
+- symbols/XF2M-2215-1A.kicad_sym — mpn=XF2M-2215-1A from=iphone-x-shim — fit: PASS — 22-pin FPC + case pins 23/24 exposed (full pad set), clean single column, no changes
+- symbols/XSON8_XH_2x3x0p4_WIN.kicad_sym — mpn=W25Q32RVXHJQ TR from=? — fit: PASS — VCC top / VSS bottom correct. REPAIRED: VSS pins were off the 1.27 grid (y=-24.765, silent-open trap) — snapped to -25.4 with length compensated; VSS power_out→power_in
