@@ -71,8 +71,8 @@
 		)
 		(symbol "CH32X035G8U6_0_1"
 			(rectangle
-				(start -36.83 17.78)
-				(end 39.37 -20.32)
+				(start -36.83 27.94)
+				(end 39.37 -26.67)
 				(stroke
 					(width 0)
 					(type default)
@@ -82,7 +82,7 @@
 				)
 			)
 			(circle
-				(center -35.5601 16.51)
+				(center -35.5601 26.67)
 				(radius 0.381)
 				(stroke
 					(width 0)
@@ -93,8 +93,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -39.37 15.24 0)
-				(length 2.54)
+				(at -41.91 25.4 0)
+				(length 5.08)
 				(name "PC15/CC2/T2C3_/T1ET_"
 					(effects
 						(font
@@ -111,8 +111,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -39.37 -7.62 0)
-				(length 2.54)
+				(at -41.91 -8.89 0)
+				(length 5.08)
 				(name "PA5/SCK/TX4_/O2N0/A5"
 					(effects
 						(font
@@ -129,8 +129,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -39.37 -10.16 0)
-				(length 2.54)
+				(at -41.91 -12.7 0)
+				(length 5.08)
 				(name "PA6/MISO/T3C1/T1BK_/O1N0/A6"
 					(effects
 						(font
@@ -147,8 +147,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -39.37 -12.7 0)
-				(length 2.54)
+				(at -41.91 -16.51 0)
+				(length 5.08)
 				(name "PA7/MOSI/T3C2/T1C1N_/TX1_/O2P0/A7"
 					(effects
 						(font
@@ -165,8 +165,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -39.37 -15.24 0)
-				(length 2.54)
+				(at -41.91 -20.32 0)
+				(length 5.08)
 				(name "PB0/TX4/T1C2N_/O1P0/A8"
 					(effects
 						(font
@@ -183,8 +183,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -39.37 -17.78 0)
-				(length 2.54)
+				(at -41.91 -24.13 0)
+				(length 5.08)
 				(name "PB3/TX3/T2C3_/T2C3N_/O2P1"
 					(effects
 						(font
@@ -201,8 +201,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 41.91 -17.78 180)
-				(length 2.54)
+				(at 44.45 -24.13 180)
+				(length 5.08)
 				(name "PB4/T2C4_/T3C1_/T2BK_/RX3/O1P2"
 					(effects
 						(font
@@ -219,8 +219,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 41.91 -15.24 180)
-				(length 2.54)
+				(at 44.45 -20.32 180)
+				(length 5.08)
 				(name "PB1/T1C3N_/RX4/O2N1/A9/PB5/O1O1/T3C2_/T1BK"
 					(effects
 						(font
@@ -237,8 +237,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 41.91 -12.7 180)
-				(length 2.54)
+				(at 44.45 -16.51 180)
+				(length 5.08)
 				(name "PB6/T1C1N/CTS3/O1N1"
 					(effects
 						(font
@@ -255,8 +255,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 41.91 -10.16 180)
-				(length 2.54)
+				(at 44.45 -12.7 180)
+				(length 5.08)
 				(name "PB7/T1C2N/RTS3_/O2P2"
 					(effects
 						(font
@@ -273,8 +273,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 41.91 -7.62 180)
-				(length 2.54)
+				(at 44.45 -8.89 180)
+				(length 5.08)
 				(name "PB8/T1C3N/O1P1"
 					(effects
 						(font
@@ -291,8 +291,8 @@
 				)
 			)
 			(pin power_in line
-				(at -39.37 12.7 0)
-				(length 2.54)
+				(at -41.91 21.59 0)
+				(length 5.08)
 				(name "VDD"
 					(effects
 						(font
@@ -309,8 +309,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 41.91 -5.08 180)
-				(length 2.54)
+				(at 44.45 -5.08 180)
+				(length 5.08)
 				(name "PB9/T1C1/MCO/TX4_"
 					(effects
 						(font
@@ -327,8 +327,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 41.91 -2.54 180)
-				(length 2.54)
+				(at 44.45 -1.27 180)
+				(length 5.08)
 				(name "PB10/TX1/T1C2"
 					(effects
 						(font
@@ -345,8 +345,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 41.91 0 180)
-				(length 2.54)
+				(at 44.45 2.54 180)
+				(length 5.08)
 				(name "PB11/T1C3/T2C1N_/RX1"
 					(effects
 						(font
@@ -363,8 +363,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 41.91 2.54 180)
-				(length 2.54)
+				(at 44.45 6.35 180)
+				(length 5.08)
 				(name "PB12/T1C4_/T2C2N_"
 					(effects
 						(font
@@ -381,8 +381,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 41.91 5.08 180)
-				(length 2.54)
+				(at 44.45 10.16 180)
+				(length 5.08)
 				(name "PC19/DCK/T2C1_/T3C1_/I2C_/RX3_/C1P0"
 					(effects
 						(font
@@ -399,8 +399,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 41.91 7.62 180)
-				(length 2.54)
+				(at 44.45 13.97 180)
+				(length 5.08)
 				(name "PC18/DIO/TX3_/T2C1N_/T3C2_/I2C_/T1ET_"
 					(effects
 						(font
@@ -417,8 +417,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 41.91 10.16 180)
-				(length 2.54)
+				(at 44.45 17.78 180)
+				(length 5.08)
 				(name "PC16/UDM/T1C4/TX4_/I2C_/RX4_/CTS1/PC11"
 					(effects
 						(font
@@ -435,8 +435,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 41.91 12.7 180)
-				(length 2.54)
+				(at 44.45 21.59 180)
+				(length 5.08)
 				(name "PC17/UDP/RTS1/TX4_/I2C_/RX4_/T1ET/PC10"
 					(effects
 						(font
@@ -453,8 +453,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 41.91 15.24 180)
-				(length 2.54)
+				(at 44.45 25.4 180)
+				(length 5.08)
 				(name "PC14/CC1/T1C3_/T2C2_"
 					(effects
 						(font
@@ -471,8 +471,8 @@
 				)
 			)
 			(pin power_in line
-				(at -7.62 -22.86 90)
-				(length 2.54)
+				(at -7.62 -31.75 90)
+				(length 5.08)
 				(name "EP/VSS"
 					(effects
 						(font
@@ -489,8 +489,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -39.37 10.16 0)
-				(length 2.54)
+				(at -41.91 17.78 0)
+				(length 5.08)
 				(name "PC0/TX2_/T2C4_/T1C1_/T2BK_/A10"
 					(effects
 						(font
@@ -507,8 +507,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -39.37 7.62 0)
-				(length 2.54)
+				(at -41.91 13.97 0)
+				(length 5.08)
 				(name "PC3/T1C4_/T2C3N_/T2C1N_/C1N0/A13"
 					(effects
 						(font
@@ -525,8 +525,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -39.37 5.08 0)
-				(length 2.54)
+				(at -41.91 10.16 0)
+				(length 5.08)
 				(name "PA0/T2C1/CTS2/C1P1/A0"
 					(effects
 						(font
@@ -543,8 +543,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -39.37 2.54 0)
-				(length 2.54)
+				(at -41.91 6.35 0)
+				(length 5.08)
 				(name "PA1/RTS2/T2C2/C1O/O1N2/O2N2/A1"
 					(effects
 						(font
@@ -561,8 +561,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -39.37 0 0)
-				(length 2.54)
+				(at -41.91 2.54 0)
+				(length 5.08)
 				(name "PA2/TX2/T2C3/O2O1/T2ET_/A2"
 					(effects
 						(font
@@ -579,8 +579,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -39.37 -2.54 0)
-				(length 2.54)
+				(at -41.91 -1.27 0)
+				(length 5.08)
 				(name "PA3/T2C4/O1O0/T3C1_/RX2/A3"
 					(effects
 						(font
@@ -597,8 +597,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -39.37 -5.08 0)
-				(length 2.54)
+				(at -41.91 -5.08 0)
+				(length 5.08)
 				(name "PA4/CS/O2O0/T3C2_/A4"
 					(effects
 						(font
