@@ -92,7 +92,7 @@
 					(type background)
 				)
 			)
-			(pin unspecified line
+			(pin power_in line
 				(at -12.7 12.7 0)
 				(length 2.54)
 				(name "VIN"
@@ -110,7 +110,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at -12.7 7.62 0)
 				(length 2.54)
 				(name "ENP"
@@ -128,7 +128,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at -12.7 5.08 0)
 				(length 2.54)
 				(name "ENN"
@@ -146,7 +146,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin bidirectional line
 				(at -12.7 1.27 0)
 				(length 2.54)
 				(name "SDA"
@@ -164,7 +164,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin bidirectional line
 				(at -12.7 -1.27 0)
 				(length 2.54)
 				(name "SCL"
@@ -182,7 +182,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at -12.7 -5.08 0)
 				(length 2.54)
 				(name "CFLY2"
@@ -200,7 +200,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at -12.7 -7.62 0)
 				(length 2.54)
 				(name "CFLY1"
@@ -218,7 +218,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin power_in line
 				(at -7.62 -17.78 90)
 				(length 2.54)
 				(name "PGND"
@@ -236,7 +236,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin power_in line
 				(at -5.08 -17.78 90)
 				(length 2.54)
 				(name "PGND"
@@ -254,7 +254,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin power_in line
 				(at -2.54 -17.78 90)
 				(length 2.54)
 				(name "PGND"
@@ -272,7 +272,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin power_in line
 				(at 0 -17.78 90)
 				(length 2.54)
 				(name "PGND"
@@ -290,7 +290,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin power_in line
 				(at 5.08 -17.78 90)
 				(length 2.54)
 				(name "AGND"
@@ -308,7 +308,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin power_in line
 				(at 7.62 -17.78 90)
 				(length 2.54)
 				(name "AGND"
@@ -326,7 +326,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 12.7 12.7 180)
 				(length 2.54)
 				(name "SW"
@@ -344,7 +344,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 12.7 10.16 180)
 				(length 2.54)
 				(name "SW"
@@ -362,7 +362,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin power_out line
 				(at 12.7 6.35 180)
 				(length 2.54)
 				(name "OUTP"
@@ -380,7 +380,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 12.7 3.81 180)
 				(length 2.54)
 				(name "OUTP"
@@ -398,7 +398,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin power_out line
 				(at 12.7 0 180)
 				(length 2.54)
 				(name "OUTN"
@@ -416,7 +416,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 12.7 -3.81 180)
 				(length 2.54)
 				(name "REG"
@@ -434,7 +434,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 12.7 -6.35 180)
 				(length 2.54)
 				(name "REG"
@@ -454,7 +454,7 @@
 			)
 		)
 		(symbol "TPS65132WRVCR_C2876379_1_1"
-			(pin unspecified line
+			(pin passive line
 				(at 2.54 -17.78 90)
 				(length 2.54)
 				(name "EP"

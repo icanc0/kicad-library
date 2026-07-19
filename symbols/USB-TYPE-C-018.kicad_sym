@@ -6,8 +6,8 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(property "Reference" "U"
-			(at 0 1.27 0)
+		(property "Reference" "J"
+			(at 0.0 17.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15,7 +15,7 @@
 			)
 		)
 		(property "Value" "USB-TYPE-C-018"
-			(at 0 -2.54 0)
+			(at 0.0 -17.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -92,7 +92,7 @@
 					(type background)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 1.27 15.24 270)
 				(length 2.54)
 				(name "SH"
@@ -110,7 +110,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at -1.27 15.24 270)
 				(length 2.54)
 				(name "SH"
@@ -128,7 +128,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 11.43 -8.89 180)
 				(length 2.54)
 				(name "GND"
@@ -146,7 +146,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 11.43 8.89 180)
 				(length 2.54)
 				(name "GND"
@@ -164,7 +164,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 11.43 -6.35 180)
 				(length 2.54)
 				(name "VBUS"
@@ -182,7 +182,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 11.43 -3.81 180)
 				(length 2.54)
 				(name "CC1"
@@ -200,7 +200,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 11.43 -1.27 180)
 				(length 2.54)
 				(name "DP1"
@@ -218,7 +218,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 11.43 1.27 180)
 				(length 2.54)
 				(name "DN1"
@@ -236,7 +236,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 11.43 3.81 180)
 				(length 2.54)
 				(name "SBU1"
@@ -254,7 +254,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 11.43 6.35 180)
 				(length 2.54)
 				(name "VBUS"
@@ -272,7 +272,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at -11.43 8.89 0)
 				(length 2.54)
 				(name "GND"
@@ -290,7 +290,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at -11.43 -8.89 0)
 				(length 2.54)
 				(name "GND"
@@ -308,7 +308,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at -11.43 6.35 0)
 				(length 2.54)
 				(name "VBUS"
@@ -326,7 +326,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at -11.43 3.81 0)
 				(length 2.54)
 				(name "CC2"
@@ -344,7 +344,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at -11.43 1.27 0)
 				(length 2.54)
 				(name "DP2"
@@ -362,7 +362,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at -11.43 -1.27 0)
 				(length 2.54)
 				(name "DN2"
@@ -380,7 +380,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at -11.43 -3.81 0)
 				(length 2.54)
 				(name "SBU2"
@@ -398,7 +398,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at -11.43 -6.35 0)
 				(length 2.54)
 				(name "VBUS"
@@ -418,7 +418,7 @@
 			)
 		)
 		(symbol "USB-TYPE-C-018_1_1"
-			(pin unspecified line
+			(pin passive line
 				(at 1.27 -15.24 90)
 				(length 2.54)
 				(name "SH"
@@ -436,7 +436,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at -1.27 -15.24 90)
 				(length 2.54)
 				(name "SH"
