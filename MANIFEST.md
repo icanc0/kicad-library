@@ -38,3 +38,13 @@ re-author (see note). Mechanical fixes recorded per line.
 - symbols/MCP1603T_180I_OS.kicad_sym — mpn=MCP1603T-180I/OS from=1v8-buck — fit: PASS — GND bottom; etypes (VIN/GND power_in, LX/VFB/SHDN passive)
 - symbols/MCU_RaspberryPi_RP2350.kicad_sym — mpn=RP2350A from=? — fit: PASS — official-style QFN-60: power rails top, GND(61) bottom, no changes
 - symbols/NCP167BMX330TBG.kicad_sym — mpn=NCP167BMX330TBG from=LED-driver-board — fit: FLAG — sides mirrored: OUT on left, IN/EN on right (outputs-right law); needs re-side on re-author. etypes (IN/GND power_in, OUT power_out, EN/EPAD passive), value moved below
+- symbols/NH-B1515RGBA-HF.kicad_sym — mpn=NH-B1515RGBA-HF from=? — fit: PASS — RGB LED glyphs shown; etypes→passive, refdes U→D, value moved below
+- symbols/NTMFS5C410NLT1G.kicad_sym — mpn=NTMFS5C410NLT1G from=LED-driver-board — fit: FLAG — power NMOS drawn as plain box (charter rule 2: "mosfets don't look like mosfets"); re-author with FET glyph, S=1-3 G=4 D=5 on the DFN-5 land. etypes→passive, value moved below
+- symbols/poka-yoke_rxtx.kicad_sym — mpn=n/a (owner utility) from=? — fit: PASS — RX/TX cross-over poka-yoke, in/out typed correctly
+- symbols/PZ254-2-04-WS.kicad_sym — mpn=PZ254-2-04-WS from=LED-driver-board — fit: PASS — 2x4 header; etypes→passive, refdes U→J, value moved below
+- symbols/PZ254-2-08-WS.kicad_sym — mpn=PZ254-2-08-WS from=? — fit: PASS — 2x8 header; etypes→passive, refdes U→J, value moved below
+- symbols/RP2040.kicad_sym — mpn=RP2040 from=? — fit: PASS — official-style: stacked visible IOVDD/DVDD power_in pins (stock convention), GND(57) bottom, no changes
+- symbols/SPH252012HR24MT.kicad_sym — mpn=SPH252012HR24MT (LCSC C370416) from=? — fit: PASS — REPAIRED: same JLC2KiCad +152.4 mm arc-offset bug as BDHH; coil translated onto pins, etypes→passive
+- symbols/TC2050-IDC.kicad_sym — mpn=TC2050-IDC from=? — fit: PASS — Tag-Connect 2x5, clean, no changes
+- symbols/TMAG5273A2QDBVR.kicad_sym — mpn=TMAG5273A2QDBVR from=LED-driver-board — fit: FLAG — GND(2) sits above VCC(4) across facing sides (power-up/GND-down); needs pin re-side on re-author. etypes (GND/VCC power_in, I2C bidirectional, INT open_collector, GND(TEST) passive), value moved below
+- symbols/TP4065.kicad_sym — mpn=TP4065 from=? — fit: PASS — VCC top, PROG bottom; note GND left-mid. etypes (VCC/GND power_in, CHRG open_collector, BAT/PROG passive)
