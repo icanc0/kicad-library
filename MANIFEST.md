@@ -28,3 +28,13 @@ re-author (see note). Mechanical fixes recorded per line.
 - symbols/DRV8841PWPR.kicad_sym — mpn=DRV8841PWPR from=varifocal-motherboard — fit: PASS — note GND(28) top-right, GND(14) bottom-left is correct. Full etype rationalization (VMA/VMB/GND power_in, xOUT output, V3 power_out, nFLT open_collector, logic ins input, CP/ISEN/VREF passive, EP passive)
 - symbols/ESP32-S3(FN8).kicad_sym — mpn=ESP32-S3FN8 from=? — fit: PASS — power top-left, SPI group bottom-right, EP bottom. 57-pin etype backfill (VDD3P3*/VDDA/VDD_SPI power_in, GPIO bidirectional, XTAL/straps/LNA passive, EP passive)
 - symbols/FUSB302BUCX.kicad_sym — mpn=FUSB302BUCX from=varifocal-motherboard — fit: PASS — etypes set (VDD/GND power_in, CC/I2C bidirectional, INT_N open_collector, VBUS/VCONN passive), value moved below
+- symbols/HT7533-1_C14289.kicad_sym — mpn=HT7533-1 (LCSC C14289) from=3v3-LDO-add — fit: PASS — note GND right-bottom edge not bottom. etypes (Vin power_in, Vout power_out, GND power_in), value moved below
+- symbols/ICM-42670-P.kicad_sym — mpn=ICM-42670-P from=? — fit: PASS — note GND left-mid. etypes set (VDD/VDDIO/GND power_in, I2C/SPI bidirectional, INT1 output); RESV pins left passive (datasheet tie/float call not guessed)
+- symbols/ICM-42688-P.kicad_sym — mpn=ICM-42688-P from=? — fit: FLAG — body ~66x69 mm for 14 pins (body∝pins law; package-style 4-side pin layout, legacy pins-at-top-level structure); needs compact re-author. VDD/VDDIO/GND→power_in applied
+- symbols/isaac-anime-girl-oc.kicad_sym — non-part: keep (owner) — art, not graded
+- symbols/KF1027B-04P-G00-DFT-01B.kicad_sym — mpn=KF1027B-04P-G00-DFT-01B from=? — fit: PASS — proper 4-slider glyphs + ON label; etypes input→passive, refdes U→SW, value moved below
+- symbols/LP3320B6F.kicad_sym — mpn=LP3320B6F from=LED-driver-board — fit: PASS — note GND left row-2. etypes (VIN/GND power_in, NC no_connect, LX/FB/EN passive), value moved below
+- symbols/MC33269DR2-3_3.kicad_sym — mpn=MC33269DR2-3.3 from=? — fit: PASS — GND/ADJ bottom. Deleted baked decorative text "comment"; OUT(2) power_out + stacked 3/6/7 passive (single-driver rule), NC→no_connect, value moved below
+- symbols/MCP1603T_180I_OS.kicad_sym — mpn=MCP1603T-180I/OS from=1v8-buck — fit: PASS — GND bottom; etypes (VIN/GND power_in, LX/VFB/SHDN passive)
+- symbols/MCU_RaspberryPi_RP2350.kicad_sym — mpn=RP2350A from=? — fit: PASS — official-style QFN-60: power rails top, GND(61) bottom, no changes
+- symbols/NCP167BMX330TBG.kicad_sym — mpn=NCP167BMX330TBG from=LED-driver-board — fit: FLAG — sides mirrored: OUT on left, IN/EN on right (outputs-right law); needs re-side on re-author. etypes (IN/GND power_in, OUT power_out, EN/EPAD passive), value moved below
