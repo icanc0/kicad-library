@@ -1,0 +1,184 @@
+(kicad_symbol_lib
+	(version 20241209)
+	(generator "cm5-carrier-v2-ethernet")
+	(generator_version "10.0")
+	(symbol "HR911130A"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at -17.78 22.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27))))
+		(property "Value" "HR911130A"
+			(at 5.080000000000002 22.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27))))
+		(property "Footprint" "cm5v2:RJ45_HR911130A_MagJack"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27))))
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C54408.pdf"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27))))
+		(property "Description" "Gigabit RJ45 MagJack with integrated 1000Base-T magnetics + 2 LEDs, shielded"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27))))
+		(property "ki_keywords" "RJ45 magjack gigabit ethernet integrated magnetics HanRun"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27))))
+		(property "ki_fp_filters" "RJ45*HR911130*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27))))
+		(property "MPN" "HR911130A"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27))))
+		(property "Manufacturer" "HanRun"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27))))
+		(property "LCSC" "C54408"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27))))
+		(symbol "HR911130A_0_1"
+			(rectangle
+				(start -17.78 20.32)
+				(end 17.78 -20.32)
+				(stroke (width 0.254) (type default))
+				(fill (type background))))
+		(symbol "HR911130A_1_1"
+			(pin passive line
+				(at -20.32 17.78 0)
+				(length 2.54)
+				(name "P2 MDI0+"
+					(effects (font (size 1.27 1.27))))
+				(number "2"
+					(effects (font (size 1.27 1.27)))))
+			(pin passive line
+				(at -20.32 15.240000000000002 0)
+				(length 2.54)
+				(name "P3 MDI0-"
+					(effects (font (size 1.27 1.27))))
+				(number "3"
+					(effects (font (size 1.27 1.27)))))
+			(pin passive line
+				(at -20.32 12.700000000000003 0)
+				(length 2.54)
+				(name "P4 MDI1+"
+					(effects (font (size 1.27 1.27))))
+				(number "4"
+					(effects (font (size 1.27 1.27)))))
+			(pin passive line
+				(at -20.32 10.160000000000004 0)
+				(length 2.54)
+				(name "P7 MDI1-"
+					(effects (font (size 1.27 1.27))))
+				(number "7"
+					(effects (font (size 1.27 1.27)))))
+			(pin passive line
+				(at -20.32 7.620000000000004 0)
+				(length 2.54)
+				(name "P5 MDI2+"
+					(effects (font (size 1.27 1.27))))
+				(number "5"
+					(effects (font (size 1.27 1.27)))))
+			(pin passive line
+				(at -20.32 5.080000000000004 0)
+				(length 2.54)
+				(name "P6 MDI2-"
+					(effects (font (size 1.27 1.27))))
+				(number "6"
+					(effects (font (size 1.27 1.27)))))
+			(pin passive line
+				(at -20.32 2.5400000000000036 0)
+				(length 2.54)
+				(name "P8 MDI3+"
+					(effects (font (size 1.27 1.27))))
+				(number "8"
+					(effects (font (size 1.27 1.27)))))
+			(pin passive line
+				(at -20.32 3.552713678800501e-15 0)
+				(length 2.54)
+				(name "P9 MDI3-"
+					(effects (font (size 1.27 1.27))))
+				(number "9"
+					(effects (font (size 1.27 1.27)))))
+			(pin passive line
+				(at -20.32 -2.5399999999999965 0)
+				(length 2.54)
+				(name "P1 CT"
+					(effects (font (size 1.27 1.27))))
+				(number "1"
+					(effects (font (size 1.27 1.27)))))
+			(pin passive line
+				(at 20.32 17.78 180)
+				(length 2.54)
+				(name "P11 LEDG_A"
+					(effects (font (size 1.27 1.27))))
+				(number "11"
+					(effects (font (size 1.27 1.27)))))
+			(pin passive line
+				(at 20.32 13.97 180)
+				(length 2.54)
+				(name "P12 LEDG_K"
+					(effects (font (size 1.27 1.27))))
+				(number "12"
+					(effects (font (size 1.27 1.27)))))
+			(pin passive line
+				(at 20.32 10.16 180)
+				(length 2.54)
+				(name "P14 LEDY_A"
+					(effects (font (size 1.27 1.27))))
+				(number "14"
+					(effects (font (size 1.27 1.27)))))
+			(pin passive line
+				(at 20.32 6.35 180)
+				(length 2.54)
+				(name "P13 LEDY_K"
+					(effects (font (size 1.27 1.27))))
+				(number "13"
+					(effects (font (size 1.27 1.27)))))
+			(pin passive line
+				(at 20.32 2.5399999999999996 180)
+				(length 2.54)
+				(name "P10 GND"
+					(effects (font (size 1.27 1.27))))
+				(number "10"
+					(effects (font (size 1.27 1.27)))))
+			(pin passive line
+				(at 0 -22.86 90)
+				(length 2.54)
+				(name "SHIELD"
+					(effects (font (size 1.27 1.27))))
+				(number "SH"
+					(effects (font (size 1.27 1.27)))))
+)
+		(embedded_fonts no)
+	)
+)
