@@ -9,7 +9,7 @@ legibility, ERC-correct pin etypes). `fit: PASS` may carry notes; `fit: FLAG` ne
 re-author (see note). Mechanical fixes recorded per line.
 
 - symbols/1N5819WS.kicad_sym — mpn=1N5819WS from=? — fit: PASS — diode glyph; etypes→passive, ref/value moved clear of glyph
-- symbols/218-2LPSTR.kicad_sym — mpn=218-2LPSTR from=? — fit: FLAG — DIP switch drawn as plain box, no switch elements (KF1027B in this lib shows the standard); redraw wanted. etypes input→passive, refdes U→SW, value moved below
+- symbols/218-2LPSTR.kicad_sym — mpn=218-2LPSTR from=? — fit: PASS — re-authored to the KF1027B house DIP standard: 2 vertical slider glyphs + ON label, pins restacked top/bottom (position columns 1↔4, 2↔3), pin names hidden. etypes input→passive, refdes U→SW (audit)
 - symbols/2450AT18A100E.kicad_sym — mpn=2450AT18A100E from=? — fit: PASS — chip antenna, inline vertical glyph (feed pin 1 bottom); etypes→passive, ref/value moved off the pins
 - symbols/245863050104829+.kicad_sym — mpn=245863050104829+ from=NS-display-mezzanine — fit: PASS — 56-pin FPC connector, MP1-6 mech pads exposed (full pad set). FINDING (high): second symbol `245863050104829+_missing_gnd` in this file is a stale bad copy pointing at the ATTICKED footprint `footprints:245863050104829_missing pads` (broken link) — never place it; owner should attic the symbol copy too
 - symbols/A3901SEJTR-T.kicad_sym — mpn=A3901SEJTR-T from=? — fit: PASS — dual H-bridge, box OK; note GND sits mid-left not bottom. etypes set (GND/VBB power_in, IN input, OUT output, PAD passive), value moved below
