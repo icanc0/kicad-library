@@ -37,7 +37,7 @@ re-author (see note). Mechanical fixes recorded per line.
 - symbols/MC33269DR2-3_3.kicad_sym — mpn=MC33269DR2-3.3 from=? — fit: PASS — GND/ADJ bottom. Deleted baked decorative text "comment"; OUT(2) power_out + stacked 3/6/7 passive (single-driver rule), NC→no_connect, value moved below
 - symbols/MCP1603T_180I_OS.kicad_sym — mpn=MCP1603T-180I/OS from=1v8-buck — fit: PASS — GND bottom; etypes (VIN/GND power_in, LX/VFB/SHDN passive)
 - symbols/MCU_RaspberryPi_RP2350.kicad_sym — mpn=RP2350A from=? — fit: PASS — official-style QFN-60: power rails top, GND(61) bottom, no changes
-- symbols/NCP167BMX330TBG.kicad_sym — mpn=NCP167BMX330TBG from=LED-driver-board — fit: FLAG — sides mirrored: OUT on left, IN/EN on right (outputs-right law); needs re-side on re-author. etypes (IN/GND power_in, OUT power_out, EN/EPAD passive), value moved below
+- symbols/NCP167BMX330TBG.kicad_sym — mpn=NCP167BMX330TBG from=LED-driver-board — fit: PASS — re-authored to inputs-left/outputs-right: IN(4)/EN(3) left, OUT(1) right, GND(2)+EPAD(5) bottom edge; stale pin-1 dot removed. etypes (IN/GND power_in, OUT power_out, EN/EPAD passive) (audit)
 - symbols/NH-B1515RGBA-HF.kicad_sym — mpn=NH-B1515RGBA-HF from=? — fit: PASS — RGB LED glyphs shown; etypes→passive, refdes U→D, value moved below
 - symbols/NTMFS5C410NLT1G.kicad_sym — mpn=NTMFS5C410NLT1G from=LED-driver-board — fit: FLAG — power NMOS drawn as plain box (charter rule 2: "mosfets don't look like mosfets"); re-author with FET glyph, S=1-3 G=4 D=5 on the DFN-5 land. etypes→passive, value moved below
 - symbols/poka-yoke_rxtx.kicad_sym — mpn=n/a (owner utility) from=? — fit: PASS — RX/TX cross-over poka-yoke, in/out typed correctly
