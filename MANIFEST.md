@@ -8,7 +8,7 @@ against the owner's laws (power-up/GND-down, body∝pins, internals-not-lazy-box
 legibility, ERC-correct pin etypes). `fit: PASS` may carry notes; `fit: FLAG` needs a
 re-author (see note). Mechanical fixes recorded per line.
 
-- symbols/1N5819WS.kicad_sym — mpn=1N5819WS from=? — fit: PASS — diode glyph; etypes→passive, ref/value moved clear of glyph
+- symbols/1N5819WS.kicad_sym — mpn=1N5819WS from=? — fit: PASS — diode glyph; etypes→passive, ref/value moved clear of glyph; defaults verified 2026-07-25: KEXIN SOD-323F → stock Diode_SMD:D_SOD-323F, LCSC C369937 (C191023 was a bad import guess), real PDF datasheet (was a shop link)
 - symbols/218-2LPSTR.kicad_sym — mpn=218-2LPSTR from=? — fit: PASS — re-authored to the KF1027B house DIP standard: 2 vertical slider glyphs + ON label, pins restacked top/bottom (position columns 1↔4, 2↔3), pin names hidden. etypes input→passive, refdes U→SW (audit)
 - symbols/2450AT18A100E.kicad_sym — mpn=2450AT18A100E from=? — fit: PASS — chip antenna, inline vertical glyph (feed pin 1 bottom); etypes→passive, ref/value moved off the pins
 - symbols/245863050104829+.kicad_sym — mpn=245863050104829+ from=NS-display-mezzanine — fit: PASS — 56-pin FPC connector, MP1-6 mech pads exposed (full pad set). RESOLVED (librarian 2026-07-19): stale second symbol `245863050104829+_missing_gnd` (footprint link to the atticked `footprints:245863050104829_missing pads`) moved out to attic/245863050104829+_missing_gnd.kicad_sym; healthy symbol untouched — never place the attic copy
