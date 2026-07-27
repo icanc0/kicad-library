@@ -1,0 +1,2295 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/icanc0/kicad-library/schema/kag-part-manifest-v2.schema.json",
+  "title": "KiCad Agent Guide part manifest v2",
+  "description": "Closed authority for one logical KiCad identity, its existing KiCad assets, portable per-symbol Datasheet URLs, and exact local document evidence. Filesystem existence and no-symlink regular-file authority, byte/hash/size equality across receipts, current receipt expiry and ClamAV-definition timing, declared MPN normalization, ordered official-first attempts, redirect-chain/effective-URL/header binding, graph reciprocity, active-SHA selection, symbol-URL membership in official source provenance, exact identity equality, rejection-metadata contents, and actual KiCad property values remain Python validation responsibilities.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schema_version",
+    "part_id",
+    "record_state",
+    "identity",
+    "names",
+    "classifications",
+    "assets",
+    "relationships",
+    "provenance",
+    "documentation",
+    "extensions"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "../schema/kag-part-manifest-v2.schema.json"
+    },
+    "schema_version": {
+      "const": "2.0.0"
+    },
+    "part_id": {
+      "$ref": "#/$defs/partId"
+    },
+    "record_state": {
+      "enum": [
+        "symbol-only",
+        "complete",
+        "quarantined"
+      ]
+    },
+    "identity": {
+      "$ref": "#/$defs/identity"
+    },
+    "names": {
+      "$ref": "#/$defs/names"
+    },
+    "classifications": {
+      "$ref": "#/$defs/classifications"
+    },
+    "assets": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/logicalAsset"
+      }
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/relationship"
+      }
+    },
+    "provenance": {
+      "$ref": "#/$defs/provenance"
+    },
+    "documentation": {
+      "$ref": "#/$defs/documentation"
+    },
+    "quarantine": {
+      "$ref": "#/$defs/quarantine"
+    },
+    "extensions": {
+      "$ref": "#/$defs/extensions"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "record_state": {
+            "const": "quarantined"
+          }
+        },
+        "required": [
+          "record_state"
+        ]
+      },
+      "then": {
+        "required": [
+          "quarantine"
+        ],
+        "properties": {
+          "assets": {
+            "items": {
+              "properties": {
+                "qualification": {
+                  "const": "quarantined"
+                }
+              },
+              "required": [
+                "qualification"
+              ]
+            }
+          }
+        }
+      },
+      "else": {
+        "not": {
+          "required": [
+            "quarantine"
+          ]
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "record_state": {
+            "const": "symbol-only"
+          }
+        },
+        "required": [
+          "record_state"
+        ]
+      },
+      "then": {
+        "properties": {
+          "assets": {
+            "contains": {
+              "properties": {
+                "kind": {
+                  "const": "symbol"
+                },
+                "qualification": {
+                  "const": "qualified"
+                }
+              },
+              "required": [
+                "kind",
+                "qualification"
+              ]
+            },
+            "not": {
+              "contains": {
+                "properties": {
+                  "kind": {
+                    "enum": [
+                      "footprint",
+                      "model"
+                    ]
+                  },
+                  "qualification": {
+                    "const": "qualified"
+                  }
+                },
+                "required": [
+                  "kind",
+                  "qualification"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "record_state": {
+            "const": "complete"
+          }
+        },
+        "required": [
+          "record_state"
+        ]
+      },
+      "then": {
+        "properties": {
+          "assets": {
+            "allOf": [
+              {
+                "contains": {
+                  "properties": {
+                    "kind": {
+                      "const": "symbol"
+                    },
+                    "qualification": {
+                      "const": "qualified"
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "qualification"
+                  ]
+                }
+              },
+              {
+                "contains": {
+                  "properties": {
+                    "kind": {
+                      "const": "footprint"
+                    },
+                    "qualification": {
+                      "const": "qualified"
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "qualification"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "identity": {
+            "properties": {
+              "kind": {
+                "const": "manufactured"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          }
+        },
+        "required": [
+          "identity"
+        ]
+      },
+      "then": {
+        "properties": {
+          "identity": {
+            "properties": {
+              "manufacturer": {
+                "$ref": "#/$defs/manufacturer"
+              },
+              "mpn": {
+                "$ref": "#/$defs/exactMpn"
+              }
+            }
+          },
+          "documentation": {
+            "properties": {
+              "active_sha256": {
+                "$ref": "#/$defs/sha256"
+              },
+              "symbol_urls": {
+                "minItems": 1
+              },
+              "documents": {
+                "contains": {
+                  "allOf": [
+                    {
+                      "$ref": "#/$defs/document"
+                    },
+                    {
+                      "properties": {
+                        "media_type": {
+                          "const": "application/pdf"
+                        },
+                        "role": {
+                          "const": "manufacturer-datasheet"
+                        },
+                        "disposition": {
+                          "const": "active"
+                        },
+                        "source": {
+                          "properties": {
+                            "selected_kind": {
+                              "enum": [
+                                "official",
+                                "mirror"
+                              ]
+                            },
+                            "state": {
+                              "const": "verified"
+                            },
+                            "currentness": {
+                              "const": "current"
+                            }
+                          }
+                        },
+                        "admission": {
+                          "properties": {
+                            "profile": {
+                              "const": "secure-pdf"
+                            },
+                            "original_bytes_unchanged": {
+                              "const": true
+                            }
+                          }
+                        },
+                        "security": {
+                          "allOf": [
+                            {
+                              "$ref": "#/$defs/securePdfSecurity"
+                            },
+                            {
+                              "properties": {
+                                "scan": {
+                                  "properties": {
+                                    "state": {
+                                      "const": "clean"
+                                    },
+                                    "currentness": {
+                                      "const": "current"
+                                    },
+                                    "quarantined": {
+                                      "const": false
+                                    }
+                                  }
+                                },
+                                "policy": {
+                                  "properties": {
+                                    "state": {
+                                      "const": "pass"
+                                    },
+                                    "currentness": {
+                                      "const": "current"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "identity_evidence": {
+                          "allOf": [
+                            {
+                              "$ref": "#/$defs/identityEvidence"
+                            },
+                            {
+                              "properties": {
+                                "state": {
+                                  "const": "pass"
+                                },
+                                "match_kind": {
+                                  "enum": [
+                                    "exact_order_code",
+                                    "explicit_family"
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "extraction",
+                        "identity_evidence"
+                      ]
+                    }
+                  ]
+                },
+                "minContains": 1,
+                "maxContains": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "identity": {
+            "properties": {
+              "kind": {
+                "const": "internal_utility"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          }
+        },
+        "required": [
+          "identity"
+        ]
+      },
+      "then": {
+        "properties": {
+          "identity": {
+            "properties": {
+              "manufacturer": {
+                "const": null
+              },
+              "mpn": {
+                "$ref": "#/$defs/notApplicableMpn"
+              },
+              "family_coverage": {
+                "maxItems": 0
+              }
+            }
+          },
+          "documentation": {
+            "properties": {
+              "active_sha256": {
+                "$ref": "#/$defs/sha256"
+              },
+              "symbol_urls": {
+                "minItems": 1
+              },
+              "documents": {
+                "contains": {
+                  "allOf": [
+                    {
+                      "$ref": "#/$defs/document"
+                    },
+                    {
+                      "properties": {
+                        "media_type": {
+                          "const": "text/markdown"
+                        },
+                        "role": {
+                          "const": "internal-specification"
+                        },
+                        "revision": {
+                          "properties": {
+                            "status": {
+                              "const": "exact"
+                            },
+                            "label": {
+                              "$ref": "#/$defs/nonEmptyString"
+                            }
+                          }
+                        },
+                        "disposition": {
+                          "const": "active"
+                        },
+                        "source": {
+                          "properties": {
+                            "selected_kind": {
+                              "const": "repository"
+                            },
+                            "state": {
+                              "const": "verified"
+                            },
+                            "currentness": {
+                              "const": "current"
+                            }
+                          }
+                        },
+                        "admission": {
+                          "properties": {
+                            "profile": {
+                              "const": "repository-authored-spec"
+                            },
+                            "original_bytes_unchanged": {
+                              "const": true
+                            }
+                          }
+                        },
+                        "security": {
+                          "$ref": "#/$defs/notApplicableSecurity"
+                        }
+                      },
+                      "not": {
+                        "anyOf": [
+                          {
+                            "required": [
+                              "extraction"
+                            ]
+                          },
+                          {
+                            "required": [
+                              "identity_evidence"
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "minContains": 1,
+                "maxContains": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "identity": {
+            "properties": {
+              "kind": {
+                "const": "artwork"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          }
+        },
+        "required": [
+          "identity"
+        ]
+      },
+      "then": {
+        "properties": {
+          "identity": {
+            "properties": {
+              "manufacturer": {
+                "const": null
+              },
+              "mpn": {
+                "$ref": "#/$defs/notApplicableMpn"
+              },
+              "family_coverage": {
+                "maxItems": 0
+              }
+            }
+          },
+          "documentation": {
+            "properties": {
+              "active_sha256": {
+                "const": null
+              },
+              "symbol_urls": {
+                "maxItems": 0
+              },
+              "documents": {
+                "maxItems": 0
+              },
+              "rejections": {
+                "maxItems": 0
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "token": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "partId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)*$"
+    },
+    "sha256": {
+      "description": "Full lowercase SHA-256 digest of exact file bytes.",
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "gitSha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "dateTime": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:Z|[+-]\\d{2}:\\d{2})$"
+    },
+    "repoPath": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!\\.?$)(?!\\./)(?!/)(?![A-Za-z]:)(?![A-Za-z][A-Za-z0-9+.-]*:)(?!.*\\\\)(?!.*(?:^|/)\\.\\.(?:/|$)).+$"
+    },
+    "httpsUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://[^\\s#]+$"
+    },
+    "manufacturer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "display",
+        "normalized"
+      ],
+      "properties": {
+        "display": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "normalized": {
+          "$ref": "#/$defs/token"
+        }
+      }
+    },
+    "identifier": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scheme",
+        "value"
+      ],
+      "properties": {
+        "scheme": {
+          "$ref": "#/$defs/token"
+        },
+        "value": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "mpn": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "raw",
+        "canonical",
+        "comparison_key",
+        "normalization",
+        "significant_characters"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "exact",
+            "not-applicable"
+          ]
+        },
+        "raw": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "canonical": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "comparison_key": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "normalization": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "trim",
+              "uppercase",
+              "remove-hyphen",
+              "remove-space"
+            ]
+          }
+        },
+        "significant_characters": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "exact"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "raw": {
+                "$ref": "#/$defs/nonEmptyString"
+              },
+              "canonical": {
+                "$ref": "#/$defs/nonEmptyString"
+              },
+              "comparison_key": {
+                "$ref": "#/$defs/nonEmptyString"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "not-applicable"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "raw": {
+                "const": null
+              },
+              "canonical": {
+                "const": null
+              },
+              "comparison_key": {
+                "const": null
+              },
+              "normalization": {
+                "maxItems": 0
+              },
+              "significant_characters": {
+                "maxItems": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    "exactMpn": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/mpn"
+        },
+        {
+          "properties": {
+            "status": {
+              "const": "exact"
+            }
+          }
+        }
+      ]
+    },
+    "notApplicableMpn": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/mpn"
+        },
+        {
+          "properties": {
+            "status": {
+              "const": "not-applicable"
+            }
+          }
+        }
+      ]
+    },
+    "familyCoverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "manufacturer",
+        "family",
+        "order_codes"
+      ],
+      "properties": {
+        "manufacturer": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "family": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "order_codes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/nonEmptyString"
+          }
+        }
+      }
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "manufacturer",
+        "mpn",
+        "identifiers",
+        "family_coverage",
+        "description"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "manufactured",
+            "internal_utility",
+            "artwork"
+          ]
+        },
+        "manufacturer": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/manufacturer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "mpn": {
+          "$ref": "#/$defs/mpn"
+        },
+        "identifiers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/identifier"
+          }
+        },
+        "family_coverage": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/familyCoverage"
+          }
+        },
+        "description": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "internalSymbol": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "asset_path",
+        "name"
+      ],
+      "properties": {
+        "asset_path": {
+          "$ref": "#/$defs/repoPath"
+        },
+        "name": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "names": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "canonical",
+        "aliases",
+        "internal_symbols"
+      ],
+      "properties": {
+        "canonical": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "aliases": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/nonEmptyString"
+          }
+        },
+        "internal_symbols": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/internalSymbol"
+          }
+        }
+      }
+    },
+    "package": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "display",
+        "terminal_count",
+        "evidence"
+      ],
+      "properties": {
+        "display": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "terminal_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "evidence": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "family": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "id",
+        "role"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "silicon",
+            "package",
+            "product"
+          ]
+        },
+        "id": {
+          "$ref": "#/$defs/partId"
+        },
+        "role": {
+          "const": "member"
+        }
+      }
+    },
+    "classifications": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "package",
+        "families"
+      ],
+      "properties": {
+        "package": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/package"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "families": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/family"
+          }
+        }
+      }
+    },
+    "logicalAsset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "kind",
+        "qualification",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "$ref": "#/$defs/repoPath"
+        },
+        "kind": {
+          "enum": [
+            "symbol",
+            "footprint",
+            "model"
+          ]
+        },
+        "qualification": {
+          "enum": [
+            "qualified",
+            "unqualified-candidate",
+            "quarantined"
+          ]
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "internal_name": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "assetTarget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "asset_path"
+      ],
+      "properties": {
+        "asset_path": {
+          "$ref": "#/$defs/repoPath"
+        }
+      }
+    },
+    "partTarget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "part_id"
+      ],
+      "properties": {
+        "part_id": {
+          "$ref": "#/$defs/partId"
+        }
+      }
+    },
+    "referenceTarget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "declared_reference"
+      ],
+      "properties": {
+        "declared_reference": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "relationship": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "source_asset",
+        "target",
+        "disposition",
+        "evidence"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "declares-footprint",
+            "declares-model",
+            "name-match",
+            "same-silicon-family",
+            "same-mpn",
+            "replacement"
+          ]
+        },
+        "source_asset": {
+          "$ref": "#/$defs/repoPath"
+        },
+        "target": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/assetTarget"
+            },
+            {
+              "$ref": "#/$defs/partTarget"
+            },
+            {
+              "$ref": "#/$defs/referenceTarget"
+            }
+          ]
+        },
+        "disposition": {
+          "enum": [
+            "unqualified-candidate",
+            "missing",
+            "informational",
+            "replacement",
+            "quarantined"
+          ]
+        },
+        "evidence": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "provenanceEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "path",
+        "locator",
+        "evidence"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "manifest",
+            "git-introduction",
+            "asset-property",
+            "datasheet"
+          ]
+        },
+        "path": {
+          "$ref": "#/$defs/repoPath"
+        },
+        "locator": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "evidence": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "commit": {
+          "$ref": "#/$defs/gitSha"
+        },
+        "date": {
+          "$ref": "#/$defs/dateTime"
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository_commit",
+        "source_board",
+        "entries"
+      ],
+      "properties": {
+        "repository_commit": {
+          "$ref": "#/$defs/gitSha"
+        },
+        "source_board": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "entries": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/provenanceEntry"
+          }
+        }
+      }
+    },
+    "revision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "label",
+        "published_on"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "exact",
+            "unmarked"
+          ]
+        },
+        "label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "published_on": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "exact"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "label": {
+                "$ref": "#/$defs/nonEmptyString"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "label": {
+                "const": null
+              }
+            }
+          }
+        }
+      ]
+    },
+    "symbolUrl": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "asset_path",
+        "internal_name",
+        "url"
+      ],
+      "properties": {
+        "asset_path": {
+          "$ref": "#/$defs/repoPath"
+        },
+        "internal_name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "url": {
+          "$ref": "#/$defs/httpsUrl"
+        }
+      }
+    },
+    "redirect": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "from_url",
+        "status",
+        "to_url"
+      ],
+      "properties": {
+        "from_url": {
+          "$ref": "#/$defs/httpsUrl"
+        },
+        "status": {
+          "enum": [
+            301,
+            302,
+            303,
+            307,
+            308
+          ]
+        },
+        "to_url": {
+          "$ref": "#/$defs/httpsUrl"
+        }
+      }
+    },
+    "sourceAttempt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "url",
+        "label",
+        "outcome",
+        "code",
+        "detail",
+        "sha256"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "official",
+            "mirror",
+            "repository"
+          ]
+        },
+        "url": {
+          "$ref": "#/$defs/httpsUrl"
+        },
+        "label": {
+          "type": "string"
+        },
+        "outcome": {
+          "enum": [
+            "transport_error",
+            "quarantined",
+            "qualified"
+          ]
+        },
+        "code": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "detail": {
+          "type": "string"
+        },
+        "sha256": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/sha256"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "outcome": {
+                "const": "transport_error"
+              }
+            },
+            "required": [
+              "outcome"
+            ]
+          },
+          "then": {
+            "properties": {
+              "sha256": {
+                "const": null
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "sha256": {
+                "$ref": "#/$defs/sha256"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "responseHeaders": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "content-type": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "content-length": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "etag": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "last-modified": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "documentSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "official_urls",
+        "attempts",
+        "selected_kind",
+        "requested_url",
+        "effective_url",
+        "redirects",
+        "response_headers",
+        "state",
+        "currentness",
+        "observed_at",
+        "sha256",
+        "size_bytes"
+      ],
+      "properties": {
+        "official_urls": {
+          "description": "Official sources attempted before any mirror selection.",
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/httpsUrl"
+          }
+        },
+        "attempts": {
+          "description": "Ordered source attempts; Python validation binds official-first ordering and the final qualified selection.",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/sourceAttempt"
+          }
+        },
+        "selected_kind": {
+          "enum": [
+            "official",
+            "mirror",
+            "repository"
+          ]
+        },
+        "requested_url": {
+          "$ref": "#/$defs/httpsUrl"
+        },
+        "effective_url": {
+          "$ref": "#/$defs/httpsUrl"
+        },
+        "redirects": {
+          "type": "array",
+          "maxItems": 5,
+          "items": {
+            "$ref": "#/$defs/redirect"
+          }
+        },
+        "response_headers": {
+          "$ref": "#/$defs/responseHeaders"
+        },
+        "state": {
+          "enum": [
+            "verified",
+            "unverified",
+            "rejected",
+            "error"
+          ]
+        },
+        "currentness": {
+          "enum": [
+            "current",
+            "stale",
+            "unknown",
+            "superseded"
+          ]
+        },
+        "observed_at": {
+          "$ref": "#/$defs/dateTime"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "size_bytes": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "admission": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "profile",
+        "sha256",
+        "path",
+        "admitted_at",
+        "original_bytes_unchanged"
+      ],
+      "properties": {
+        "profile": {
+          "enum": [
+            "secure-pdf",
+            "repository-authored-spec"
+          ]
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "path": {
+          "$ref": "#/$defs/repoPath"
+        },
+        "admitted_at": {
+          "$ref": "#/$defs/dateTime"
+        },
+        "original_bytes_unchanged": {
+          "const": true
+        }
+      }
+    },
+    "scanReceipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sha256",
+        "byte_count",
+        "scanner",
+        "scanner_version",
+        "signature_version",
+        "signature_timestamp",
+        "definition_age_seconds",
+        "definition_max_age_seconds",
+        "state",
+        "currentness",
+        "scanned_at",
+        "expires_at",
+        "quarantined"
+      ],
+      "properties": {
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "byte_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "scanner": {
+          "const": "clamscan"
+        },
+        "scanner_version": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "signature_version": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "signature_timestamp": {
+          "$ref": "#/$defs/dateTime"
+        },
+        "definition_age_seconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "definition_max_age_seconds": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 86400
+        },
+        "state": {
+          "enum": [
+            "clean",
+            "malicious",
+            "quarantined",
+            "unverified",
+            "error"
+          ]
+        },
+        "currentness": {
+          "enum": [
+            "current",
+            "stale",
+            "unknown",
+            "superseded"
+          ]
+        },
+        "scanned_at": {
+          "$ref": "#/$defs/dateTime"
+        },
+        "expires_at": {
+          "$ref": "#/$defs/dateTime"
+        },
+        "quarantined": {
+          "type": "boolean"
+        }
+      }
+    },
+    "policyReceipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sha256",
+        "policy_name",
+        "policy_version",
+        "state",
+        "currentness",
+        "evaluated_at",
+        "expires_at"
+      ],
+      "properties": {
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "policy_name": {
+          "const": "kag-safe-pdf"
+        },
+        "policy_version": {
+          "const": "1"
+        },
+        "state": {
+          "enum": [
+            "pass",
+            "fail",
+            "unverified",
+            "error"
+          ]
+        },
+        "currentness": {
+          "enum": [
+            "current",
+            "stale",
+            "unknown",
+            "superseded"
+          ]
+        },
+        "evaluated_at": {
+          "$ref": "#/$defs/dateTime"
+        },
+        "expires_at": {
+          "$ref": "#/$defs/dateTime"
+        }
+      }
+    },
+    "securePdfSecurity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "profile",
+        "scan",
+        "policy"
+      ],
+      "properties": {
+        "profile": {
+          "const": "secure-pdf"
+        },
+        "scan": {
+          "$ref": "#/$defs/scanReceipt"
+        },
+        "policy": {
+          "$ref": "#/$defs/policyReceipt"
+        }
+      }
+    },
+    "notApplicableSecurity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "profile",
+        "reason"
+      ],
+      "properties": {
+        "profile": {
+          "const": "not-applicable"
+        },
+        "reason": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "security": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/securePdfSecurity"
+        },
+        {
+          "$ref": "#/$defs/notApplicableSecurity"
+        }
+      ]
+    },
+    "extraction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sha256",
+        "text_sha256",
+        "text_byte_count",
+        "page_count",
+        "encoding",
+        "extractor",
+        "extractor_version",
+        "extracted_at"
+      ],
+      "properties": {
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "text_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "text_byte_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "page_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "encoding": {
+          "const": "UTF-8"
+        },
+        "extractor": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "extractor_version": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "extracted_at": {
+          "$ref": "#/$defs/dateTime"
+        }
+      }
+    },
+    "identityEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sha256",
+        "state",
+        "match_kind",
+        "expected_manufacturer",
+        "expected_order_code",
+        "expected_family",
+        "observed_title",
+        "matched_manufacturer",
+        "matched_order_code",
+        "matched_family",
+        "validator",
+        "validator_version",
+        "validator_rules_sha256",
+        "validated_at",
+        "reason"
+      ],
+      "properties": {
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "state": {
+          "enum": [
+            "pass",
+            "fail",
+            "error"
+          ]
+        },
+        "match_kind": {
+          "enum": [
+            "exact_order_code",
+            "explicit_family",
+            null
+          ]
+        },
+        "expected_manufacturer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "expected_order_code": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "expected_family": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "observed_title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "matched_manufacturer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "matched_order_code": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "matched_family": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "validator": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "validator_version": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "validator_rules_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "validated_at": {
+          "$ref": "#/$defs/dateTime"
+        },
+        "reason": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "state": {
+                "const": "pass"
+              }
+            },
+            "required": [
+              "state"
+            ]
+          },
+          "then": {
+            "properties": {
+              "match_kind": {
+                "enum": [
+                  "exact_order_code",
+                  "explicit_family"
+                ]
+              },
+              "expected_manufacturer": {
+                "$ref": "#/$defs/nonEmptyString"
+              },
+              "matched_manufacturer": {
+                "$ref": "#/$defs/nonEmptyString"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "match_kind": {
+                "const": null
+              },
+              "matched_manufacturer": {
+                "const": null
+              },
+              "matched_order_code": {
+                "const": null
+              },
+              "matched_family": {
+                "const": null
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "match_kind": {
+                "const": "exact_order_code"
+              }
+            },
+            "required": [
+              "match_kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "expected_order_code": {
+                "$ref": "#/$defs/nonEmptyString"
+              },
+              "matched_order_code": {
+                "$ref": "#/$defs/nonEmptyString"
+              },
+              "matched_family": {
+                "const": null
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "match_kind": {
+                "const": "explicit_family"
+              }
+            },
+            "required": [
+              "match_kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "expected_order_code": {
+                "const": null
+              },
+              "expected_family": {
+                "$ref": "#/$defs/nonEmptyString"
+              },
+              "matched_order_code": {
+                "const": null
+              },
+              "matched_family": {
+                "$ref": "#/$defs/nonEmptyString"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "document": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256",
+        "size_bytes",
+        "media_type",
+        "role",
+        "revision",
+        "disposition",
+        "source",
+        "admission",
+        "security"
+      ],
+      "properties": {
+        "path": {
+          "$ref": "#/$defs/repoPath"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "size_bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "media_type": {
+          "enum": [
+            "application/pdf",
+            "text/markdown"
+          ]
+        },
+        "role": {
+          "enum": [
+            "manufacturer-datasheet",
+            "errata",
+            "application-note",
+            "reference-manual",
+            "package-drawing",
+            "internal-specification",
+            "other"
+          ]
+        },
+        "revision": {
+          "$ref": "#/$defs/revision"
+        },
+        "disposition": {
+          "enum": [
+            "active",
+            "pending-replacement",
+            "superseded"
+          ]
+        },
+        "replaces_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "superseded_by_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "source": {
+          "$ref": "#/$defs/documentSource"
+        },
+        "admission": {
+          "$ref": "#/$defs/admission"
+        },
+        "security": {
+          "$ref": "#/$defs/security"
+        },
+        "extraction": {
+          "$ref": "#/$defs/extraction"
+        },
+        "identity_evidence": {
+          "$ref": "#/$defs/identityEvidence"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "disposition": {
+                "const": "active"
+              }
+            },
+            "required": [
+              "disposition"
+            ]
+          },
+          "then": {
+            "not": {
+              "required": [
+                "superseded_by_sha256"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "disposition": {
+                "const": "pending-replacement"
+              }
+            },
+            "required": [
+              "disposition"
+            ]
+          },
+          "then": {
+            "required": [
+              "replaces_sha256"
+            ],
+            "not": {
+              "required": [
+                "superseded_by_sha256"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "disposition": {
+                "const": "superseded"
+              }
+            },
+            "required": [
+              "disposition"
+            ]
+          },
+          "then": {
+            "required": [
+              "superseded_by_sha256"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "media_type": {
+                "const": "application/pdf"
+              }
+            },
+            "required": [
+              "media_type"
+            ]
+          },
+          "then": {
+            "required": [
+              "extraction",
+              "identity_evidence"
+            ],
+            "properties": {
+              "path": {
+                "pattern": "^datasheets/sha256/[0-9a-f]{2}/[0-9a-f]{64}\\.pdf$"
+              },
+              "source": {
+                "properties": {
+                  "state": {
+                    "const": "verified"
+                  }
+                }
+              },
+              "admission": {
+                "properties": {
+                  "profile": {
+                    "const": "secure-pdf"
+                  }
+                }
+              },
+              "security": {
+                "allOf": [
+                  {
+                    "$ref": "#/$defs/securePdfSecurity"
+                  },
+                  {
+                    "properties": {
+                      "scan": {
+                        "properties": {
+                          "state": {
+                            "const": "clean"
+                          },
+                          "quarantined": {
+                            "const": false
+                          }
+                        }
+                      },
+                      "policy": {
+                        "properties": {
+                          "state": {
+                            "const": "pass"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "identity_evidence": {
+                "allOf": [
+                  {
+                    "$ref": "#/$defs/identityEvidence"
+                  },
+                  {
+                    "properties": {
+                      "state": {
+                        "const": "pass"
+                      },
+                      "match_kind": {
+                        "enum": [
+                          "exact_order_code",
+                          "explicit_family"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "path": {
+                "pattern": "^specs/[a-z0-9]+(?:[.-][a-z0-9]+)*/.+\\.md$"
+              },
+              "role": {
+                "const": "internal-specification"
+              },
+              "admission": {
+                "properties": {
+                  "profile": {
+                    "const": "repository-authored-spec"
+                  }
+                }
+              },
+              "security": {
+                "$ref": "#/$defs/notApplicableSecurity"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "rejection": {
+      "description": "Metadata only; suspicious original bytes remain outside Git.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sha256",
+        "size_bytes",
+        "metadata_path",
+        "stage",
+        "code",
+        "rejected_at",
+        "source_uri",
+        "affected_identity"
+      ],
+      "properties": {
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "size_bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "metadata_path": {
+          "type": "string",
+          "pattern": "^rejections/datasheets/[0-9a-f]{64}\\.json$"
+        },
+        "stage": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "code": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "rejected_at": {
+          "$ref": "#/$defs/dateTime"
+        },
+        "source_uri": {
+          "$ref": "#/$defs/httpsUrl"
+        },
+        "affected_identity": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "documentation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "active_sha256",
+        "symbol_urls",
+        "documents",
+        "rejections"
+      ],
+      "properties": {
+        "active_sha256": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/sha256"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "symbol_urls": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/symbolUrl"
+          }
+        },
+        "documents": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/document"
+          },
+          "contains": {
+            "properties": {
+              "disposition": {
+                "const": "active"
+              }
+            },
+            "required": [
+              "disposition"
+            ]
+          },
+          "minContains": 0,
+          "maxContains": 1
+        },
+        "rejections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/rejection"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "active_sha256": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "active_sha256"
+            ]
+          },
+          "then": {
+            "properties": {
+              "documents": {
+                "contains": {
+                  "properties": {
+                    "disposition": {
+                      "const": "active"
+                    }
+                  },
+                  "required": [
+                    "disposition"
+                  ]
+                },
+                "minContains": 1,
+                "maxContains": 1
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "documents": {
+                "contains": {
+                  "properties": {
+                    "disposition": {
+                      "const": "active"
+                    }
+                  },
+                  "required": [
+                    "disposition"
+                  ]
+                },
+                "minContains": 0,
+                "maxContains": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    "quarantine": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "reason_codes",
+        "reason",
+        "replacement_part_id"
+      ],
+      "properties": {
+        "reason_codes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/token"
+          }
+        },
+        "reason": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "replacement_part_id": {
+          "$ref": "#/$defs/partId"
+        }
+      }
+    },
+    "promotionExtension": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fit_note",
+        "note"
+      ],
+      "properties": {
+        "fit_note": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "extensions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "promotion": {
+          "$ref": "#/$defs/promotionExtension"
+        }
+      }
+    }
+  }
+}
