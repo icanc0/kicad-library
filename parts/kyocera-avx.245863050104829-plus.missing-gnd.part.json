@@ -1,0 +1,147 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "kyocera-avx.245863050104829-plus.missing-gnd",
+  "record_state": "quarantined",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "KYOCERA AVX",
+      "normalized": "kyocera-avx"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "245863050104829+",
+      "canonical": "245863050104829+",
+      "comparison_key": "245863050104829+",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": [
+        "+"
+      ]
+    },
+    "identifiers": [
+      {
+        "scheme": "mouser",
+        "value": "346-245863050104829+"
+      }
+    ],
+    "description": "Quarantined stale duplicate of KYOCERA AVX 245863050104829+ whose declared footprint omits mechanical pads MP1 and MP2."
+  },
+  "names": {
+    "canonical": "KYOCERA AVX 245863050104829+ missing-gnd stale copy",
+    "aliases": [
+      "245863050104829+_missing_gnd",
+      "245863050104829_missing pads"
+    ],
+    "internal_symbols": [
+      {
+        "asset_path": "attic/245863050104829+_missing_gnd.kicad_sym",
+        "name": "245863050104829+_missing_gnd"
+      }
+    ]
+  },
+  "classifications": {
+    "package": {
+      "display": "5863-series 50-position 0.35 mm-pitch board-to-board receptacle; quarantined copy",
+      "terminal_count": 56,
+      "evidence": "The stale symbol still exposes contacts 1-50 and MP1-MP6, but its declared atticked footprint exposes only contacts 1-50 and MP3-MP6."
+    },
+    "families": [
+      {
+        "kind": "product",
+        "id": "kyocera-avx.5863-series",
+        "role": "member"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "path": "attic/245863050104829+_missing_gnd.kicad_sym",
+      "kind": "symbol",
+      "qualification": "quarantined",
+      "sha256": "f1e948b1a9ff4648d6f9a9fcd666bfc9caa41f5f3aefabd1cf39c8d185da7920",
+      "internal_name": "245863050104829+_missing_gnd"
+    },
+    {
+      "path": "attic/245863050104829_missing-pads.kicad_mod",
+      "kind": "footprint",
+      "qualification": "quarantined",
+      "sha256": "4b14f8f02fbb0f4185a31c418e687936ade6c88f33c5e83d3aebc32eb105101f",
+      "internal_name": "245863050104829_missing pads"
+    }
+  ],
+  "relationships": [
+    {
+      "kind": "declares-footprint",
+      "source_asset": "attic/245863050104829+_missing_gnd.kicad_sym",
+      "target": {
+        "asset_path": "attic/245863050104829_missing-pads.kicad_mod"
+      },
+      "disposition": "quarantined",
+      "evidence": "The stale symbol declares footprints:245863050104829_missing pads; the atticked footprint with that internal name lacks MP1 and MP2 and is retained only for history."
+    },
+    {
+      "kind": "same-mpn",
+      "source_asset": "attic/245863050104829+_missing_gnd.kicad_sym",
+      "target": {
+        "part_id": "kyocera-avx.245863050104829-plus"
+      },
+      "disposition": "informational",
+      "evidence": "Both records carry exact MPN 245863050104829+; this record is the stale duplicate and must not be selected."
+    },
+    {
+      "kind": "replacement",
+      "source_asset": "attic/245863050104829+_missing_gnd.kicad_sym",
+      "target": {
+        "part_id": "kyocera-avx.245863050104829-plus"
+      },
+      "disposition": "replacement",
+      "evidence": "Use the active healthy symbol record, whose candidate footprint exposes the complete 1-50 and MP1-MP6 pad set."
+    }
+  ],
+  "provenance": {
+    "repository_commit": "d2ab75728a4d73953e4e78fe63178dd36ef11956",
+    "source_board": "NS-display-mezzanine",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "entry for symbols/245863050104829+.kicad_sym, quarantine note",
+        "evidence": "The manifest says the stale second symbol 245863050104829+_missing_gnd and its missing-pads footprint were moved to attic and must never be placed; the healthy symbol is the replacement."
+      },
+      {
+        "kind": "git-introduction",
+        "path": "attic/245863050104829+_missing_gnd.kicad_sym",
+        "locator": "original first-add commit before attic move",
+        "evidence": "The path history traces to commit d8cbdb9551ec92ba77e23da1ee4d5d861a8a0be4 with summary 'mezzaine for NS display'.",
+        "commit": "d8cbdb9551ec92ba77e23da1ee4d5d861a8a0be4",
+        "date": "2024-09-14T15:59:51-04:00"
+      },
+      {
+        "kind": "asset-property",
+        "path": "attic/245863050104829+_missing_gnd.kicad_sym",
+        "locator": "Footprint and Manufacturer_Part_Number properties",
+        "evidence": "Observed Manufacturer_Part_Number 245863050104829+ and declared Footprint footprints:245863050104829_missing pads."
+      },
+      {
+        "kind": "asset-property",
+        "path": "attic/245863050104829_missing-pads.kicad_mod",
+        "locator": "pad inventory",
+        "evidence": "Observed 54 pads: contacts 1-50 and MP3-MP6; MP1 and MP2 are absent, while the active footprint contains all 56 pads."
+      }
+    ]
+  },
+  "quarantine": {
+    "reason_codes": [
+      "stale-duplicate",
+      "incomplete-footprint-pad-set",
+      "attic-only"
+    ],
+    "reason": "This is a stale duplicate whose declared atticked footprint omits MP1 and MP2. The repository manifest explicitly says never to place the attic copy.",
+    "replacement_part_id": "kyocera-avx.245863050104829-plus"
+  },
+  "extensions": {}
+}

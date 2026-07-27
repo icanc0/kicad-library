@@ -209,6 +209,31 @@
                 }
               }
             ]
+          },
+          "classifications": {
+            "properties": {
+              "package": {
+                "$ref": "#/$defs/package"
+              }
+            }
+          },
+          "relationships": {
+            "contains": {
+              "properties": {
+                "kind": {
+                  "const": "declares-footprint"
+                },
+                "disposition": {
+                  "const": "qualified"
+                }
+              },
+              "required": [
+                "kind",
+                "disposition",
+                "qualification"
+              ]
+            },
+            "minContains": 1
           }
         }
       }
@@ -241,6 +266,11 @@
               "mpn": {
                 "$ref": "#/$defs/exactMpn"
               }
+            },
+            "not": {
+              "required": [
+                "utility_contract"
+              ]
             }
           },
           "documentation": {
@@ -394,8 +424,14 @@
               },
               "family_coverage": {
                 "maxItems": 0
+              },
+              "utility_contract": {
+                "$ref": "#/$defs/utilityContract"
               }
-            }
+            },
+            "required": [
+              "utility_contract"
+            ]
           },
           "documentation": {
             "properties": {
@@ -515,6 +551,11 @@
               "family_coverage": {
                 "maxItems": 0
               }
+            },
+            "not": {
+              "required": [
+                "utility_contract"
+              ]
             }
           },
           "documentation": {
@@ -827,6 +868,9 @@
         },
         "description": {
           "$ref": "#/$defs/nonEmptyString"
+        },
+        "utility_contract": {
+          "$ref": "#/$defs/utilityContract"
         }
       }
     },
@@ -977,8 +1021,84 @@
         },
         "internal_name": {
           "$ref": "#/$defs/nonEmptyString"
+        },
+        "semantic": {
+          "$ref": "#/$defs/assetSemantic"
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "symbol"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "required": [
+              "semantic"
+            ],
+            "properties": {
+              "semantic": {
+                "properties": {
+                  "profile": {
+                    "const": "kicad-symbol-pins-v1"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "footprint"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "required": [
+              "semantic"
+            ],
+            "properties": {
+              "semantic": {
+                "properties": {
+                  "profile": {
+                    "const": "kicad-footprint-terminals-v1"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "model"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "not": {
+              "required": [
+                "semantic"
+              ]
+            }
+          }
+        }
+      ]
     },
     "assetTarget": {
       "type": "object",
@@ -1055,6 +1175,7 @@
         },
         "disposition": {
           "enum": [
+            "qualified",
             "unqualified-candidate",
             "missing",
             "informational",
@@ -1064,8 +1185,45 @@
         },
         "evidence": {
           "$ref": "#/$defs/nonEmptyString"
+        },
+        "qualification": {
+          "$ref": "#/$defs/relationshipQualification"
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "disposition": {
+                "const": "qualified"
+              }
+            },
+            "required": [
+              "disposition"
+            ]
+          },
+          "then": {
+            "required": [
+              "qualification"
+            ],
+            "properties": {
+              "kind": {
+                "const": "declares-footprint"
+              },
+              "target": {
+                "$ref": "#/$defs/assetTarget"
+              }
+            }
+          },
+          "else": {
+            "not": {
+              "required": [
+                "qualification"
+              ]
+            }
+          }
+        }
+      ]
     },
     "provenanceEntry": {
       "type": "object",
@@ -1928,6 +2086,9 @@
         },
         "identity_evidence": {
           "$ref": "#/$defs/identityEvidence"
+        },
+        "spec_binding": {
+          "$ref": "#/$defs/specBinding"
         }
       },
       "allOf": [
@@ -2071,6 +2232,11 @@
                   }
                 ]
               }
+            },
+            "not": {
+              "required": [
+                "spec_binding"
+              ]
             }
           },
           "else": {
@@ -2091,7 +2257,10 @@
               "security": {
                 "$ref": "#/$defs/notApplicableSecurity"
               }
-            }
+            },
+            "required": [
+              "spec_binding"
+            ]
           }
         }
       ]
@@ -2288,6 +2457,82 @@
       "properties": {
         "promotion": {
           "$ref": "#/$defs/promotionExtension"
+        }
+      }
+    },
+    "utilityContract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "profile",
+        "connectivity_authority",
+        "internal_connections"
+      ],
+      "properties": {
+        "profile": {
+          "const": "terminal-interface-v1"
+        },
+        "connectivity_authority": {
+          "const": "board-level"
+        },
+        "internal_connections": {
+          "type": "array",
+          "maxItems": 0
+        }
+      }
+    },
+    "assetSemantic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "profile",
+        "sha256"
+      ],
+      "properties": {
+        "profile": {
+          "enum": [
+            "kicad-symbol-pins-v1",
+            "kicad-footprint-terminals-v1"
+          ]
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "relationshipQualification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "profile",
+        "source_semantic_sha256",
+        "target_semantic_sha256"
+      ],
+      "properties": {
+        "profile": {
+          "const": "pin-pad-exact-v1"
+        },
+        "source_semantic_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "target_semantic_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "specBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "profile",
+        "contract_sha256"
+      ],
+      "properties": {
+        "profile": {
+          "const": "kag-internal-utility-markdown-v1"
+        },
+        "contract_sha256": {
+          "$ref": "#/$defs/sha256"
         }
       }
     }

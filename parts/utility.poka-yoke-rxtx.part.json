@@ -1,0 +1,181 @@
+{
+  "$schema": "../schema/kag-part-manifest-v2.schema.json",
+  "schema_version": "2.0.0",
+  "part_id": "utility.poka-yoke-rxtx",
+  "record_state": "symbol-only",
+  "identity": {
+    "manufacturer": null,
+    "mpn": {
+      "status": "not-applicable",
+      "raw": null,
+      "canonical": null,
+      "comparison_key": null,
+      "normalization": [],
+      "significant_characters": []
+    },
+    "identifiers": [],
+    "description": "Owner utility exposing separate RX/TX input and output endpoints for explicit board-level poka-yoke routing; it is not a manufactured part identity.",
+    "kind": "internal_utility",
+    "family_coverage": [],
+    "utility_contract": {
+      "profile": "terminal-interface-v1",
+      "connectivity_authority": "board-level",
+      "internal_connections": []
+    }
+  },
+  "names": {
+    "canonical": "Poka-yoke RX/TX routing utility",
+    "aliases": [
+      "poka-yoke_rxtx",
+      "poka_yoke_txrx",
+      "poka-yoke_txrx"
+    ],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/poka-yoke_rxtx.kicad_sym",
+        "name": "poka_yoke_txrx"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/poka-yoke_rxtx.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "2ee57de4a8b4051e2b7680adb67c1e2c69d183ec8bfba4f476fd357b294ba592",
+      "internal_name": "poka_yoke_txrx",
+      "semantic": {
+        "profile": "kicad-symbol-pins-v1",
+        "sha256": "6acd00cca72bb8dadd8a45bd500de8ab4fa860d32632aebe1efbcb86b1f2fe46"
+      }
+    },
+    {
+      "path": "footprints/poka-yoke_rxtx.pretty/poka-yoke_rxtx.kicad_mod",
+      "kind": "footprint",
+      "qualification": "unqualified-candidate",
+      "sha256": "84e2c860ab0651db61aa3673185d6a738bc7ad5bcff88b63682e0d4455e8f805",
+      "internal_name": "poka-yoke_rxtx",
+      "semantic": {
+        "profile": "kicad-footprint-terminals-v1",
+        "sha256": "593c1adb377677d9eceb30658ecfd87f1dd4ec80327b1333f1fb3a5ae8912474"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "kind": "declares-footprint",
+      "source_asset": "symbols/poka-yoke_rxtx.kicad_sym",
+      "target": {
+        "asset_path": "footprints/poka-yoke_rxtx.pretty/poka-yoke_rxtx.kicad_mod"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "The symbol Footprint property declares poka-yoke_rxtx:poka-yoke_rxtx. Exact semantic receipts bind the current symbol and footprint terminals, but this relationship remains an unqualified candidate and establishes no logical completeness or internal connectivity."
+    }
+  ],
+  "provenance": {
+    "repository_commit": "d2ab75728a4d73953e4e78fe63178dd36ef11956",
+    "source_board": null,
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "entry for symbols/poka-yoke_rxtx.kicad_sym",
+        "evidence": "mpn=n/a (owner utility), from=?, fit: PASS; described as an RX/TX cross-over poka-yoke."
+      },
+      {
+        "kind": "git-introduction",
+        "path": "symbols/poka-yoke_rxtx.kicad_sym",
+        "locator": "first-add commit",
+        "evidence": "Introduced by commit 336476f7f37ab8bc9058f5243f7e7a3ba8a3459f with summary 'i added a bunch of things'.",
+        "commit": "336476f7f37ab8bc9058f5243f7e7a3ba8a3459f",
+        "date": "2024-11-09T05:06:02-05:00"
+      },
+      {
+        "kind": "asset-property",
+        "path": "symbols/poka-yoke_rxtx.kicad_sym",
+        "locator": "symbol poka_yoke_txrx",
+        "evidence": "Observed four pins: Rx_In and Tx_In inputs, Tx_Out and Rx_Out outputs; embedded Footprint property poka-yoke_rxtx:poka-yoke_rxtx."
+      },
+      {
+        "kind": "datasheet",
+        "path": "specs/utility.poka-yoke-rxtx/v1.md",
+        "locator": "repository-authored internal specification v1",
+        "evidence": "Versioned specification records the observed four-pin symbol contract and explicitly leaves crossover connectivity to board-level wiring and routing."
+      }
+    ]
+  },
+  "extensions": {},
+  "documentation": {
+    "active_sha256": "ecbaa85cc0c62ab6cf21e35f43f9650a7a2a89662979f7a33a8cd3ac1f576888",
+    "symbol_urls": [
+      {
+        "asset_path": "symbols/poka-yoke_rxtx.kicad_sym",
+        "internal_name": "poka_yoke_txrx",
+        "url": "https://github.com/icanc0/kicad-library/blob/main/specs/utility.poka-yoke-rxtx/v1.md"
+      }
+    ],
+    "documents": [
+      {
+        "path": "specs/utility.poka-yoke-rxtx/v1.md",
+        "sha256": "ecbaa85cc0c62ab6cf21e35f43f9650a7a2a89662979f7a33a8cd3ac1f576888",
+        "size_bytes": 1761,
+        "media_type": "text/markdown",
+        "role": "internal-specification",
+        "revision": {
+          "status": "exact",
+          "label": "v1",
+          "published_on": "2026-07-27"
+        },
+        "disposition": "active",
+        "source": {
+          "official_urls": [
+            "https://github.com/icanc0/kicad-library/blob/main/specs/utility.poka-yoke-rxtx/v1.md"
+          ],
+          "attempts": [
+            {
+              "kind": "repository",
+              "url": "https://github.com/icanc0/kicad-library/blob/main/specs/utility.poka-yoke-rxtx/v1.md",
+              "label": "canonical repository specification",
+              "outcome": "qualified",
+              "code": "repository-spec-current",
+              "detail": "reviewed repository-authored Markdown at the exact active path",
+              "sha256": "ecbaa85cc0c62ab6cf21e35f43f9650a7a2a89662979f7a33a8cd3ac1f576888"
+            }
+          ],
+          "selected_kind": "repository",
+          "requested_url": "https://github.com/icanc0/kicad-library/blob/main/specs/utility.poka-yoke-rxtx/v1.md",
+          "effective_url": "https://github.com/icanc0/kicad-library/blob/main/specs/utility.poka-yoke-rxtx/v1.md",
+          "redirects": [],
+          "response_headers": {
+            "content-type": "text/markdown"
+          },
+          "state": "verified",
+          "currentness": "current",
+          "observed_at": "2026-07-27T08:24:14Z",
+          "sha256": "ecbaa85cc0c62ab6cf21e35f43f9650a7a2a89662979f7a33a8cd3ac1f576888",
+          "size_bytes": 1761
+        },
+        "admission": {
+          "profile": "repository-authored-spec",
+          "sha256": "ecbaa85cc0c62ab6cf21e35f43f9650a7a2a89662979f7a33a8cd3ac1f576888",
+          "path": "specs/utility.poka-yoke-rxtx/v1.md",
+          "admitted_at": "2026-07-27T08:24:14Z",
+          "original_bytes_unchanged": true
+        },
+        "security": {
+          "profile": "not-applicable",
+          "reason": "repository-authored Markdown is reviewed as source text and is not parsed as a PDF"
+        },
+        "spec_binding": {
+          "profile": "kag-internal-utility-markdown-v1",
+          "contract_sha256": "17089ad3809068f55c947dc6b56f4a67898325d9277095fc35283eea8d771511"
+        }
+      }
+    ],
+    "rejections": []
+  }
+}

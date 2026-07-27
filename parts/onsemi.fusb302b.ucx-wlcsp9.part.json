@@ -1,0 +1,146 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "onsemi.fusb302b.ucx-wlcsp9",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "onsemi",
+      "normalized": "onsemi"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "FUSB302BUCX",
+      "canonical": "FUSB302BUCX",
+      "comparison_key": "FUSB302BUCX",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C891307"
+      }
+    ],
+    "description": "FUSB302B programmable USB Type-C and Power Delivery controller in the UCX WLCSP-9 package."
+  },
+  "names": {
+    "canonical": "onsemi FUSB302B UCX",
+    "aliases": [
+      "FUSB302BUCX"
+    ],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/FUSB302BUCX.kicad_sym",
+        "name": "FUSB302BUCX"
+      }
+    ]
+  },
+  "classifications": {
+    "package": {
+      "display": "UCX WLCSP-9, 3x3 array, 1.3 mm x 1.2 mm, 0.40 mm pitch",
+      "terminal_count": 9,
+      "evidence": "The symbol exposes balls A1-C3 and its declared candidate footprint exposes the same nine-ball grid."
+    },
+    "families": [
+      {
+        "kind": "silicon",
+        "id": "onsemi.fusb302b",
+        "role": "member"
+      },
+      {
+        "kind": "package",
+        "id": "package.wlcsp-9.1p3x1p2.r3c3.p0p40",
+        "role": "member"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "path": "symbols/FUSB302BUCX.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "a81ab9c0760b74ace00d65d4bebe67c401b8be46a7355cd4cb0e140b7b1a3236",
+      "internal_name": "FUSB302BUCX"
+    },
+    {
+      "path": "footprints/WLCSP-9_L1.3-W1.2-R3-C3-P0.40-TL.kicad_mod",
+      "kind": "footprint",
+      "qualification": "unqualified-candidate",
+      "sha256": "a540f41ee80ea9d9d9c80079a7568112c9d791e500c2b3204e33d3335fab7c45",
+      "internal_name": "WLCSP-9_L1.3-W1.2-R3-C3-P0.40-TL"
+    },
+    {
+      "path": "footprints/3dmodels/WLCSP-9_L1.3-W1.2-R3-C3-P0.40-TL.step",
+      "kind": "model",
+      "qualification": "unqualified-candidate",
+      "sha256": "7c8884e440a16856e56080ea4d1f75f9e802c41960113edf8173aba347c94eda"
+    }
+  ],
+  "relationships": [
+    {
+      "kind": "declares-footprint",
+      "source_asset": "symbols/FUSB302BUCX.kicad_sym",
+      "target": {
+        "asset_path": "footprints/WLCSP-9_L1.3-W1.2-R3-C3-P0.40-TL.kicad_mod"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "The symbol Footprint property is footprints:WLCSP-9_L1.3-W1.2-R3-C3-P0.40-TL; the nine-ball footprint exists but is not qualified by this symbol-only record."
+    },
+    {
+      "kind": "declares-model",
+      "source_asset": "footprints/WLCSP-9_L1.3-W1.2-R3-C3-P0.40-TL.kicad_mod",
+      "target": {
+        "asset_path": "footprints/3dmodels/WLCSP-9_L1.3-W1.2-R3-C3-P0.40-TL.step"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "The candidate footprint declares the repository model kicad-library/footprints/3dmodels/WLCSP-9_L1.3-W1.2-R3-C3-P0.40-TL.step; the model remains unqualified."
+    },
+    {
+      "kind": "same-silicon-family",
+      "source_asset": "symbols/FUSB302BUCX.kicad_sym",
+      "target": {
+        "part_id": "onsemi.fusb302b.mpx-wqfn14"
+      },
+      "disposition": "informational",
+      "evidence": "Both records are FUSB302B silicon-family variants, but UCX uses the WLCSP ball map and MPX uses the WQFN-14 plus exposed-pad pin map; they are not package-interchangeable."
+    }
+  ],
+  "provenance": {
+    "repository_commit": "d2ab75728a4d73953e4e78fe63178dd36ef11956",
+    "source_board": "varifocal-motherboard",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "entry for symbols/FUSB302BUCX.kicad_sym",
+        "evidence": "Records mpn=FUSB302BUCX, from=varifocal-motherboard, fit: PASS."
+      },
+      {
+        "kind": "git-introduction",
+        "path": "symbols/FUSB302BUCX.kicad_sym",
+        "locator": "first-add commit",
+        "evidence": "Introduced by commit 4440364c1919eaca873720b012f183f419bed52d with summary 'add from varifocal motherboard'.",
+        "commit": "4440364c1919eaca873720b012f183f419bed52d",
+        "date": "2025-03-12T06:27:39-04:00"
+      },
+      {
+        "kind": "asset-property",
+        "path": "symbols/FUSB302BUCX.kicad_sym",
+        "locator": "symbol FUSB302BUCX properties and pins",
+        "evidence": "Observed Value FUSB302BUCX, LCSC C891307, declared WLCSP-9 footprint, and balls A1-C3."
+      },
+      {
+        "kind": "datasheet",
+        "path": "symbols/FUSB302BUCX.kicad_sym",
+        "locator": "Datasheet property",
+        "evidence": "Embedded source URL: https://atta.szlcsc.com/upload/public/pdf/source/20200113/C481901_9A95BE9D93C1C4C02FC79A03F46C1050.pdf"
+      }
+    ]
+  },
+  "extensions": {}
+}
