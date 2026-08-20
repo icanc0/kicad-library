@@ -1,0 +1,75 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "fullway.fsw3410",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Full-Way",
+      "normalized": "full-way"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "FSW3410YQFN18G/TR",
+      "canonical": "FSW3410YQFN18G/TR",
+      "comparison_key": "FSW3410YQFN18G",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C41370613"
+      }
+    ],
+    "description": "Central library symbol FSW3410YQFN18G/TR promoted from /home/vincent/projects/skibidi-hub."
+  },
+  "names": {
+    "canonical": "FSW3410YQFN18G/TR",
+    "aliases": [
+      "FSW3410"
+    ],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/FSW3410.kicad_sym",
+        "name": "FSW3410"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/FSW3410.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "67777364fb0e6ebd7be3071f05c35877cc7039d71ef82c35a9f3a8e1b642f52c",
+      "internal_name": "FSW3410"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "d68c578c0cf4df539008952eaf5d0f9683c60433",
+    "source_board": "/home/vincent/projects/skibidi-hub",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/FSW3410.kicad_sym",
+        "evidence": "First-import fit pass: U9 on skibidi-hub: dual-differential USB3.1 10 Gb/s passive 2:1 mux (X2QFN-18, LCSC C41370613), upstream lane select via CC-level comparator; CN-SOURCING-1 replacement for HD3SS3212. 19-pin contract byte-identical to board-authored (wave-1 audit)."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "U9 on skibidi-hub: dual-differential USB3.1 10 Gb/s passive 2:1 mux (X2QFN-18, LCSC C41370613), upstream lane select via CC-level comparator; CN-SOURCING-1 replacement for HD3SS3212. 19-pin contract byte-identical to board-authored (wave-1 audit).",
+      "note": ""
+    }
+  }
+}

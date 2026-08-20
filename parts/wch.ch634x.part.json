@@ -1,0 +1,73 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "wch.ch634x",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "WCH (Nanjing Qinheng)",
+      "normalized": "wch-nanjing-qinheng"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "CH634X",
+      "canonical": "CH634X",
+      "comparison_key": "CH634X",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C48985831"
+      }
+    ],
+    "description": "Central library symbol CH634X promoted from /home/vincent/projects/skibidi-hub."
+  },
+  "names": {
+    "canonical": "CH634X",
+    "aliases": [],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/CH634X.kicad_sym",
+        "name": "CH634X"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/CH634X.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "128f3ac57c918dbdf0f70cb37c8da8ac69bffbb7f97ed308010641b38665c75e",
+      "internal_name": "CH634X"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "d68c578c0cf4df539008952eaf5d0f9683c60433",
+    "source_board": "/home/vincent/projects/skibidi-hub",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/CH634X.kicad_sym",
+        "evidence": "First-import fit pass: U1 on skibidi-hub: USB3 4-port hub core with Mode-2 charge-through PD + built-in 1V2 buck (QFN-68 8x8 P0.4, LCSC C48985831); footprint verified pin-for-pin against the LCSC EasyEDA land (COUNCIL3 G2). 69-pin contract incl. EP, byte-identical to board-authored (wave-1 audit)."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "U1 on skibidi-hub: USB3 4-port hub core with Mode-2 charge-through PD + built-in 1V2 buck (QFN-68 8x8 P0.4, LCSC C48985831); footprint verified pin-for-pin against the LCSC EasyEDA land (COUNCIL3 G2). 69-pin contract incl. EP, byte-identical to board-authored (wave-1 audit).",
+      "note": ""
+    }
+  }
+}

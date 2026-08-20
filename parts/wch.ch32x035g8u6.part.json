@@ -1,0 +1,73 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "wch.ch32x035g8u6",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "WCH (Jiangsu Qin Heng)",
+      "normalized": "wch-jiangsu-qin-heng"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "CH32X035G8U6",
+      "canonical": "CH32X035G8U6",
+      "comparison_key": "CH32X035G8U6",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C7437027"
+      }
+    ],
+    "description": "Central library symbol CH32X035G8U6 promoted from /home/vincent/projects/lever."
+  },
+  "names": {
+    "canonical": "CH32X035G8U6",
+    "aliases": [],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/CH32X035G8U6.kicad_sym",
+        "name": "CH32X035G8U6"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/CH32X035G8U6.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "bd8e87a16be47249e7d828b0209bf85f34cb251c19dca5736121940e792e591c",
+      "internal_name": "CH32X035G8U6"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "d68c578c0cf4df539008952eaf5d0f9683c60433",
+    "source_board": "/home/vincent/projects/lever",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/CH32X035G8U6.kicad_sym",
+        "evidence": "First-import fit pass: U1 on lever: USB-PD interposer control MCU (QFN-28, LCSC C7437027), fit:PASS librarian audit 2026-07-19. EP numbering: central symbol EP=pin 29; lever's board-local symbol uses EP=0 with a declared functional-role divergence (ADOPTIONS.md wave 1)."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "U1 on lever: USB-PD interposer control MCU (QFN-28, LCSC C7437027), fit:PASS librarian audit 2026-07-19. EP numbering: central symbol EP=pin 29; lever's board-local symbol uses EP=0 with a declared functional-role divergence (ADOPTIONS.md wave 1).",
+      "note": ""
+    }
+  }
+}

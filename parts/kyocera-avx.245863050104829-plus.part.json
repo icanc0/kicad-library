@@ -1,0 +1,150 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "kyocera-avx.245863050104829-plus",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "KYOCERA AVX",
+      "normalized": "kyocera-avx"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "245863050104829+",
+      "canonical": "245863050104829+",
+      "comparison_key": "245863050104829+",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": [
+        "+"
+      ]
+    },
+    "identifiers": [
+      {
+        "scheme": "mouser",
+        "value": "346-245863050104829+"
+      }
+    ],
+    "description": "KYOCERA AVX 5863-series 0.35 mm-pitch 50-position board-to-board receptacle, 8.0 mm mating height."
+  },
+  "names": {
+    "canonical": "KYOCERA AVX 245863050104829+",
+    "aliases": [
+      "245863050104829+",
+      "245863050104829"
+    ],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/245863050104829+.kicad_sym",
+        "name": "245863050104829+"
+      }
+    ]
+  },
+  "classifications": {
+    "package": {
+      "display": "5863-series 50-position 0.35 mm-pitch board-to-board receptacle with MP1-MP6",
+      "terminal_count": 56,
+      "evidence": "The active symbol and candidate footprint both expose contacts 1-50 and mechanical pads MP1-MP6."
+    },
+    "families": [
+      {
+        "kind": "product",
+        "id": "kyocera-avx.5863-series",
+        "role": "member"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "path": "symbols/245863050104829+.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "930e3f9a30bb065c580924771b91db9d527595560caba9455b71bc972ad8d64b",
+      "internal_name": "245863050104829+"
+    },
+    {
+      "path": "footprints/245863050104829.kicad_mod",
+      "kind": "footprint",
+      "qualification": "unqualified-candidate",
+      "sha256": "c53aa7f5ea8d9693b71eb57ac4ea05c7affd522753b60b271353e6ad3653e3d9",
+      "internal_name": "245863050104829"
+    },
+    {
+      "path": "footprints/3dmodels/205863050104.stp",
+      "kind": "model",
+      "qualification": "unqualified-candidate",
+      "sha256": "2365a9517f70e462bb4ab61c66066cf52d26605a13768746ba5fdfa1205da92b"
+    },
+    {
+      "path": "3dmodels/245863050104829+.stp",
+      "kind": "model",
+      "qualification": "unqualified-candidate",
+      "sha256": "9b60c1464b84106303811f08c02294286aa46d06696273e926ec3dd28a4a568f"
+    }
+  ],
+  "relationships": [
+    {
+      "kind": "declares-footprint",
+      "source_asset": "symbols/245863050104829+.kicad_sym",
+      "target": {
+        "asset_path": "footprints/245863050104829.kicad_mod"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "The symbol Footprint property is the bare name 245863050104829; the top-level footprint with that internal name has the full 1-50 and MP1-MP6 pad set, but remains unqualified in this symbol-only record."
+    },
+    {
+      "kind": "declares-model",
+      "source_asset": "footprints/245863050104829.kicad_mod",
+      "target": {
+        "asset_path": "footprints/3dmodels/205863050104.stp"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "The candidate footprint directly declares ${KIPRJMOD}/kicad-library/footprints/3dmodels/205863050104.stp; the STEP header names 24_5863_050_104_829_+_.STEP, but the model is not qualified by this slice."
+    },
+    {
+      "kind": "name-match",
+      "source_asset": "symbols/245863050104829+.kicad_sym",
+      "target": {
+        "asset_path": "3dmodels/245863050104829+.stp"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "This second model's repository filename matches the exact MPN, but the active footprint does not reference it and its STEP header does not name the MPN; it is recorded only as a name-matched candidate."
+    }
+  ],
+  "provenance": {
+    "repository_commit": "d2ab75728a4d73953e4e78fe63178dd36ef11956",
+    "source_board": "NS-display-mezzanine",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "entry for symbols/245863050104829+.kicad_sym",
+        "evidence": "Records mpn=245863050104829+, from=NS-display-mezzanine, fit: PASS, and confirms the healthy symbol exposes MP1-MP6."
+      },
+      {
+        "kind": "git-introduction",
+        "path": "symbols/245863050104829+.kicad_sym",
+        "locator": "first-add commit",
+        "evidence": "Introduced by commit d8cbdb9551ec92ba77e23da1ee4d5d861a8a0be4 with summary 'mezzaine for NS display'.",
+        "commit": "d8cbdb9551ec92ba77e23da1ee4d5d861a8a0be4",
+        "date": "2024-09-14T15:59:51-04:00"
+      },
+      {
+        "kind": "asset-property",
+        "path": "symbols/245863050104829+.kicad_sym",
+        "locator": "Manufacturer_Name and Manufacturer_Part_Number properties",
+        "evidence": "Observed Manufacturer_Name Kyocera AVX, Manufacturer_Part_Number 245863050104829+, Mouser part 346-245863050104829+, and contacts 1-50 plus MP1-MP6."
+      },
+      {
+        "kind": "datasheet",
+        "path": "symbols/245863050104829+.kicad_sym",
+        "locator": "Datasheet property",
+        "evidence": "Embedded source URL: https://www.mouser.co.uk/datasheet/2/909/5863-1602212.pdf"
+      }
+    ]
+  },
+  "extensions": {}
+}

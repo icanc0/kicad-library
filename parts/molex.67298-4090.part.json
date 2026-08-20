@@ -1,0 +1,117 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "molex.67298-4090",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Molex",
+      "normalized": "molex"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "67298-4090",
+      "canonical": "67298-4090",
+      "comparison_key": "672984090",
+      "normalization": [
+        "trim",
+        "uppercase",
+        "remove-hyphen"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "farnell",
+        "value": "2751688"
+      }
+    ],
+    "description": "Dual USB Type-A receptacle, right-angle through-hole, with eight electrical terminals and four mounting posts."
+  },
+  "names": {
+    "canonical": "Molex 67298-4090",
+    "aliases": [
+      "USB_67298-4090",
+      "MOLEX_USB_67298-4090",
+      "MOLEX_67298-4090"
+    ],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/CM4IO.kicad_sym",
+        "name": "USB_67298-4090"
+      }
+    ]
+  },
+  "classifications": {
+    "package": {
+      "display": "Dual USB Type-A right-angle through-hole receptacle; 8 contacts plus MT1-MT4",
+      "terminal_count": 12,
+      "evidence": "The embedded symbol and candidate footprint both expose 1-8 and MT1-MT4."
+    },
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/CM4IO.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "aa2ad306ca866abdfbc9f2564a17f61cc7fefde6e93a922d862e1ad6806fd0f2",
+      "internal_name": "USB_67298-4090"
+    },
+    {
+      "path": "footprints/CM4IO.pretty/MOLEX_USB_67298-4090.kicad_mod",
+      "kind": "footprint",
+      "qualification": "unqualified-candidate",
+      "sha256": "f977c8ee1a79287481a558e6bada2a6557718ad48caa9c20a3043e9af23bf748",
+      "internal_name": "MOLEX_USB_67298-4090"
+    }
+  ],
+  "relationships": [
+    {
+      "kind": "declares-footprint",
+      "source_asset": "symbols/CM4IO.kicad_sym",
+      "target": {
+        "asset_path": "footprints/CM4IO.pretty/MOLEX_USB_67298-4090.kicad_mod"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "Internal symbol USB_67298-4090 declares CM4IO:MOLEX_USB_67298-4090; the matching in-repository footprint is recorded only as a candidate."
+    },
+    {
+      "kind": "declares-model",
+      "source_asset": "footprints/CM4IO.pretty/MOLEX_USB_67298-4090.kicad_mod",
+      "target": {
+        "declared_reference": "./CM4IO.3dshapes/672984090.stp"
+      },
+      "disposition": "missing",
+      "evidence": "The legacy footprint contains this model reference, but no repository file resolves it; no model is qualified or attached to this part record."
+    }
+  ],
+  "provenance": {
+    "repository_commit": "d2ab75728a4d73953e4e78fe63178dd36ef11956",
+    "source_board": "cm4-carrier",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "entry for symbols/CM4IO.kicad_sym",
+        "evidence": "The CM4IO reference pack entry names USB_67298-4090 among its internal symbols, records from=cm4-carrier, and marks the symbol library fit: PASS."
+      },
+      {
+        "kind": "git-introduction",
+        "path": "symbols/CM4IO.kicad_sym",
+        "locator": "first-add commit",
+        "evidence": "Introduced by commit c53a07f8cb9df001623467ede5b1534ab5c73329 with summary 'added cm4'.",
+        "commit": "c53a07f8cb9df001623467ede5b1534ab5c73329",
+        "date": "2024-09-07T14:48:44-04:00"
+      },
+      {
+        "kind": "asset-property",
+        "path": "symbols/CM4IO.kicad_sym",
+        "locator": "symbol USB_67298-4090 properties Field4-Field8",
+        "evidence": "Observed manufacturer Molex, Farnell identifier 2751688, Value USB_67298-4090, and Footprint CM4IO:MOLEX_USB_67298-4090."
+      }
+    ]
+  },
+  "extensions": {}
+}

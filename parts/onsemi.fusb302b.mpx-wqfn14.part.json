@@ -1,0 +1,119 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "onsemi.fusb302b.mpx-wqfn14",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "onsemi",
+      "normalized": "onsemi"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "FUSB302BMPX",
+      "canonical": "FUSB302BMPX",
+      "comparison_key": "FUSB302BMPX",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [],
+    "description": "FUSB302B programmable USB Type-C and Power Delivery controller in the MPX WQFN-14 package with exposed pad."
+  },
+  "names": {
+    "canonical": "onsemi FUSB302B MPX",
+    "aliases": [
+      "FUSB302BMPX"
+    ],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/FUSB302BMPX.kicad_sym",
+        "name": "FUSB302BMPX"
+      }
+    ]
+  },
+  "classifications": {
+    "package": {
+      "display": "MPX WQFN-14 with exposed pad, 2.5 mm x 2.5 mm, 0.50 mm pitch",
+      "terminal_count": 15,
+      "evidence": "The symbol exposes pins 1-14 plus exposed-pad pin 15 and declares a WQFN-14-1EP footprint name."
+    },
+    "families": [
+      {
+        "kind": "silicon",
+        "id": "onsemi.fusb302b",
+        "role": "member"
+      },
+      {
+        "kind": "package",
+        "id": "package.wqfn-14-ep.2p5x2p5.p0p50",
+        "role": "member"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "path": "symbols/FUSB302BMPX.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "bac52c84f8f66518ff23319e90445da28921e6af2f2db0fc7d35f7713a935299",
+      "internal_name": "FUSB302BMPX"
+    }
+  ],
+  "relationships": [
+    {
+      "kind": "declares-footprint",
+      "source_asset": "symbols/FUSB302BMPX.kicad_sym",
+      "target": {
+        "declared_reference": "cm5v2:WQFN-14-1EP_2.5x2.5mm_P0.5mm_EP1.45x1.45mm"
+      },
+      "disposition": "missing",
+      "evidence": "The symbol declares this board-local cm5v2 footprint, but no corresponding footprint asset exists in this repository; no footprint or model is attached."
+    },
+    {
+      "kind": "same-silicon-family",
+      "source_asset": "symbols/FUSB302BMPX.kicad_sym",
+      "target": {
+        "part_id": "onsemi.fusb302b.ucx-wlcsp9"
+      },
+      "disposition": "informational",
+      "evidence": "Both records are FUSB302B silicon-family variants, but MPX uses pins 1-14 plus exposed pad 15 while UCX uses balls A1-C3; they are not package-interchangeable."
+    }
+  ],
+  "provenance": {
+    "repository_commit": "d2ab75728a4d73953e4e78fe63178dd36ef11956",
+    "source_board": "cm5-carrier-v2",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "entry for symbols/FUSB302BMPX.kicad_sym",
+        "evidence": "Records mpn=FUSB302BMPX, from=cm5-carrier-v2, fit: PASS, and explicitly warns that the MPX MLP/WQFN-14 pin map is not interchangeable with the UCX WLCSP variant."
+      },
+      {
+        "kind": "git-introduction",
+        "path": "symbols/FUSB302BMPX.kicad_sym",
+        "locator": "first-add commit",
+        "evidence": "Introduced by commit 30663f50fe130610c5902a267320acef959b9f8d with summary 'TPS65132'.",
+        "commit": "30663f50fe130610c5902a267320acef959b9f8d",
+        "date": "2025-06-12T22:06:02-04:00"
+      },
+      {
+        "kind": "asset-property",
+        "path": "symbols/FUSB302BMPX.kicad_sym",
+        "locator": "symbol FUSB302BMPX properties and pins",
+        "evidence": "Observed MPN FUSB302BMPX, Description ending WQFN-14, declared cm5v2 WQFN-14-1EP footprint, pins 1-14, and GND exposed-pad pin 15."
+      },
+      {
+        "kind": "datasheet",
+        "path": "symbols/FUSB302BMPX.kicad_sym",
+        "locator": "Datasheet property",
+        "evidence": "Embedded source URL: http://www.onsemi.com/pub/Collateral/FUSB302B-D.PDF"
+      }
+    ]
+  },
+  "extensions": {}
+}

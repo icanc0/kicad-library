@@ -1,0 +1,73 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "wch.ch217k",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "WCH (Nanjing Qinheng)",
+      "normalized": "wch-nanjing-qinheng"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "CH217K",
+      "canonical": "CH217K",
+      "comparison_key": "CH217K",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C7462749"
+      }
+    ],
+    "description": "Central library symbol CH217K promoted from /home/vincent/projects/skibidi-hub."
+  },
+  "names": {
+    "canonical": "CH217K",
+    "aliases": [],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/CH217K.kicad_sym",
+        "name": "CH217K"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/CH217K.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "ecc6cd719fa38433d179065ae3ff63511f2770232d6b91fb7321c0a30104f373",
+      "internal_name": "CH217K"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "d68c578c0cf4df539008952eaf5d0f9683c60433",
+    "source_board": "/home/vincent/projects/skibidi-hub",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/CH217K.kicad_sym",
+        "evidence": "First-import fit pass: U6 (+ siblings via _ch217k_sw) on skibidi-hub: per-port VBUS current-limit switch (SOT-23-6, LCSC C7462749), Iset=60k/Rset per WCH DS; local DS + comparables index in the board repo. 6-pin contract byte-identical to board-authored (wave-1 audit)."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "U6 (+ siblings via _ch217k_sw) on skibidi-hub: per-port VBUS current-limit switch (SOT-23-6, LCSC C7462749), Iset=60k/Rset per WCH DS; local DS + comparables index in the board repo. 6-pin contract byte-identical to board-authored (wave-1 audit).",
+      "note": ""
+    }
+  }
+}

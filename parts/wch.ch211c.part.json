@@ -1,0 +1,73 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "wch.ch211c",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "WCH (Nanjing Qinheng)",
+      "normalized": "wch-nanjing-qinheng"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "CH211C",
+      "canonical": "CH211C",
+      "comparison_key": "CH211C",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C49438114"
+      }
+    ],
+    "description": "Central library symbol CH211C promoted from /home/vincent/projects/skibidi-hub."
+  },
+  "names": {
+    "canonical": "CH211C",
+    "aliases": [],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/CH211C.kicad_sym",
+        "name": "CH211C"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/CH211C.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "67db96c3f94e7a8954638f758bc792bdaa9703194d4957bfe8994ed490420521",
+      "internal_name": "CH211C"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "d68c578c0cf4df539008952eaf5d0f9683c60433",
+    "source_board": "/home/vincent/projects/skibidi-hub",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/CH211C.kicad_sym",
+        "evidence": "First-import fit pass: U2 on skibidi-hub: upstream PD power-path CC controller (QFN-16-EP 2x2 P0.4, LCSC C49438114), charge-through sink + 36 V HV gate driver; board footprint from the LCSC vendor land (easyeda2kicad). 17-pin contract verified in the wave-1 audit (pin-11 etype note in ADOPTIONS.md)."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "U2 on skibidi-hub: upstream PD power-path CC controller (QFN-16-EP 2x2 P0.4, LCSC C49438114), charge-through sink + 36 V HV gate driver; board footprint from the LCSC vendor land (easyeda2kicad). 17-pin contract verified in the wave-1 audit (pin-11 etype note in ADOPTIONS.md).",
+      "note": ""
+    }
+  }
+}

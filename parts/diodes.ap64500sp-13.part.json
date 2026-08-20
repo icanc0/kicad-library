@@ -1,0 +1,75 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "diodes.ap64500sp-13",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Diodes Incorporated",
+      "normalized": "diodes-incorporated"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "AP64500SP-13",
+      "canonical": "AP64500SP-13",
+      "comparison_key": "AP64500SP-13",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C2070920"
+      }
+    ],
+    "description": "Central library symbol AP64500SP-13 promoted from /home/vincent/projects/skibidi-hub."
+  },
+  "names": {
+    "canonical": "AP64500SP-13",
+    "aliases": [
+      "AP64500"
+    ],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/AP64500.kicad_sym",
+        "name": "AP64500"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/AP64500.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "d28965a3d8861100ec3e617c99f9d5ccba7e3a37ccd65d43db772e3f8165c20d",
+      "internal_name": "AP64500"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "d68c578c0cf4df539008952eaf5d0f9683c60433",
+    "source_board": "/home/vincent/projects/skibidi-hub",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/AP64500.kicad_sym",
+        "evidence": "First-import fit pass: U3 on skibidi-hub: 5 A synchronous buck (3.8-40 V, SO8-EP), charge-through +5V on _buck40v; replaced TPS54531+Schottky (SAFETY-AUDIT-1). 9-pin contract incl. EP, byte-identical to the board-authored symbol (wave-1 audit)."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "U3 on skibidi-hub: 5 A synchronous buck (3.8-40 V, SO8-EP), charge-through +5V on _buck40v; replaced TPS54531+Schottky (SAFETY-AUDIT-1). 9-pin contract incl. EP, byte-identical to the board-authored symbol (wave-1 audit).",
+      "note": ""
+    }
+  }
+}

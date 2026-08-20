@@ -1,0 +1,92 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "utility.poka-yoke-rxtx",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "utility",
+    "manufacturer": null,
+    "mpn": {
+      "status": "not-applicable",
+      "raw": null,
+      "canonical": null,
+      "comparison_key": null,
+      "normalization": [],
+      "significant_characters": []
+    },
+    "identifiers": [],
+    "description": "Owner utility that maps RX/TX inputs to crossed RX/TX outputs; it is not a manufactured part identity."
+  },
+  "names": {
+    "canonical": "Poka-yoke RX/TX crossover",
+    "aliases": [
+      "poka-yoke_rxtx",
+      "poka_yoke_txrx",
+      "poka-yoke_txrx"
+    ],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/poka-yoke_rxtx.kicad_sym",
+        "name": "poka_yoke_txrx"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/poka-yoke_rxtx.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "91c295131a4d20b97e3d5f9c7dad508f3e93d6ae964fa9b15147ce9312def55b",
+      "internal_name": "poka_yoke_txrx"
+    },
+    {
+      "path": "footprints/poka-yoke_rxtx.pretty/poka-yoke_rxtx.kicad_mod",
+      "kind": "footprint",
+      "qualification": "unqualified-candidate",
+      "sha256": "84e2c860ab0651db61aa3673185d6a738bc7ad5bcff88b63682e0d4455e8f805",
+      "internal_name": "poka-yoke_rxtx"
+    }
+  ],
+  "relationships": [
+    {
+      "kind": "declares-footprint",
+      "source_asset": "symbols/poka-yoke_rxtx.kicad_sym",
+      "target": {
+        "asset_path": "footprints/poka-yoke_rxtx.pretty/poka-yoke_rxtx.kicad_mod"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "The symbol Footprint property is poka-yoke_rxtx:poka-yoke_rxtx and the repository contains the matching four-pad footprint, but this slice does not qualify a symbol/footprint pair."
+    }
+  ],
+  "provenance": {
+    "repository_commit": "d2ab75728a4d73953e4e78fe63178dd36ef11956",
+    "source_board": null,
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "entry for symbols/poka-yoke_rxtx.kicad_sym",
+        "evidence": "mpn=n/a (owner utility), from=?, fit: PASS; described as an RX/TX cross-over poka-yoke."
+      },
+      {
+        "kind": "git-introduction",
+        "path": "symbols/poka-yoke_rxtx.kicad_sym",
+        "locator": "first-add commit",
+        "evidence": "Introduced by commit 336476f7f37ab8bc9058f5243f7e7a3ba8a3459f with summary 'i added a bunch of things'.",
+        "commit": "336476f7f37ab8bc9058f5243f7e7a3ba8a3459f",
+        "date": "2024-11-09T05:06:02-05:00"
+      },
+      {
+        "kind": "asset-property",
+        "path": "symbols/poka-yoke_rxtx.kicad_sym",
+        "locator": "symbol poka_yoke_txrx",
+        "evidence": "Observed four pins: Rx_In and Tx_In inputs, Tx_Out and Rx_Out outputs; embedded Footprint property poka-yoke_rxtx:poka-yoke_rxtx."
+      }
+    ]
+  },
+  "extensions": {}
+}
