@@ -18,16 +18,16 @@ never edited from the librarian lane.
 | CH634X | skibidi-hub | **ADOPT-CENTRAL-CLEAN** | Identical 69-pin contract; central is the POLISH upgrade (taller body, verbose port-role group labels matching this board's roles). Adopt central. |
 | FSW3410 | skibidi-hub | **ADOPT-CENTRAL-CLEAN** | Byte-identical 19-pin mux contract. Adopt central. |
 
-## Promotions owed (legacy → full part records)
+## Promotions — DONE (wave 2, 2026-08-20, commit 13e110d)
 
-- **CH32X035G8U6**: has `fit:PASS` but NO part.json. Needs
-  `parts/wch.ch32x035g8u6.part.json`: MPN CH32X035G8U6, LCSC C7437027,
-  footprint QFN-28_L4.0-W4.0-P0.40-BL-EP2.8, evidence link, fit note
-  (librarian audit 2026-07-19; EP numbering: central uses pin 29 — boards
-  using EP=0 must declare their divergence).
-- AP64500, CH211C, CH217K, CH634X, FSW3410: all "legacy symbol" —
-  promotion to part.json records queued as the next librarian wave
-  (per-part focused agents, L24).
+All six records landed (each drafted by a focused per-part extraction
+agent): `wch.ch32x035g8u6` (C7437027), `diodes.ap64500sp-13`
+(C2070920), `wch.ch211c` (C49438114), `wch.ch217k` (C7462749),
+`wch.ch634x` (C48985831), `fullway.fsw3410` (C41370613).
+`validate --policy warn`: 12 records, 12 valid. State: symbol-only —
+promote's two-source pin gate (`ds_pin_ready`) stays the bar for
+"complete"; **wave 3 = per-pin facts intake** (learn + vision-confirm
+against local datasheets, one focused agent per part).
 
 ## Process (L24)
 
