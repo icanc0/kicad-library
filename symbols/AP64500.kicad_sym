@@ -5,7 +5,7 @@
 	(symbol "AP64500" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
 			(property "Reference" "U" (at 0 2.54 0) (effects (font (size 1.27 1.27))))
 			(property "Value" "AP64500" (at 0 5.08 0) (effects (font (size 1.27 1.27))))
-			(property "Footprint" "skibidi-hub_authored:AP64500_FP" (at 0 7.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Footprint" "central-agent:AP64500_FP" (at 0 7.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
 			(property "MPN" "AP64500SP-13" (at 0 10.16 0) (effects (font (size 1.27 1.27)) (hide yes)))
 			(property "LCSC" "C2070920" (at 0 12.7 0) (effects (font (size 1.27 1.27)) (hide yes)))
 			(property "Datasheet" "" (at 0 15.24 0) (effects (font (size 1.27 1.27)) (hide yes)))

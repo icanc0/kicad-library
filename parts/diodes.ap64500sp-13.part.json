@@ -26,7 +26,7 @@
         "value": "C2070920"
       }
     ],
-    "description": "fp joins the part: the authored SO-8EP land (dimensionally-verified 3.9x4.9 EP) promoted alongside the COUNCIL10 symbol so consuming boards resolve the baked Footprint through the manifest."
+    "description": "portable re-land: Footprint property rewritten to central-agent:AP64500_FP at promotion (the baked board-local nick was unresolvable for every central consumer)."
   },
   "names": {
     "canonical": "AP64500SP-13",
@@ -49,7 +49,7 @@
       "path": "symbols/AP64500.kicad_sym",
       "kind": "symbol",
       "qualification": "qualified",
-      "sha256": "4f22d507c6a5f55f241dd8c65ffba5a7771d6d5896813dadc3b31664dcb6a01a",
+      "sha256": "5bcedaa69f358aa656723ead4a6af4360bbdcf2bdce1d5e4a9f9930d2a866b4b",
       "internal_name": "AP64500"
     },
     {
@@ -72,21 +72,21 @@
     }
   ],
   "provenance": {
-    "repository_commit": "cff34da43908d313b42bc5f70f6ec877cd8df388",
+    "repository_commit": "d760bc57b12dc312c286bf1c33019eb7785467b3",
     "source_board": "skibidi-hub",
     "entries": [
       {
         "kind": "manifest",
         "path": "MANIFEST.md",
         "locator": "promotion entry for symbols/AP64500.kicad_sym",
-        "evidence": "First-import fit pass: COUNCIL10 fit pass as recorded at the symbol's promotion (same bytes); footprint is the skibidi-hub authored SO-8EP shipped on that board."
+        "evidence": "First-import fit pass: COUNCIL10 fit pass as recorded at the symbol's first promotion (same ink); footprint is the skibidi-hub authored SO-8EP shipped on that board."
       }
     ]
   },
   "extensions": {
     "promotion": {
-      "fit_note": "COUNCIL10 fit pass as recorded at the symbol's promotion (same bytes); footprint is the skibidi-hub authored SO-8EP shipped on that board.",
-      "note": "fp joins the part: the authored SO-8EP land (dimensionally-verified 3.9x4.9 EP) promoted alongside the COUNCIL10 symbol so consuming boards resolve the baked Footprint through the manifest.",
+      "fit_note": "COUNCIL10 fit pass as recorded at the symbol's first promotion (same ink); footprint is the skibidi-hub authored SO-8EP shipped on that board.",
+      "note": "portable re-land: Footprint property rewritten to central-agent:AP64500_FP at promotion (the baked board-local nick was unresolvable for every central consumer).",
       "pin_gate": {
         "symbol": "AP64500",
         "lcsc": "C2070920",
