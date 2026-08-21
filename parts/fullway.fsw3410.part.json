@@ -26,7 +26,7 @@
         "value": "C41370613"
       }
     ],
-    "description": "COUNCIL10 flow-first rework (wf_0a811788-4e7, 2026-07-21/22): FLIPPED port-major: ports LEFT in J1 receptacle row order (8 parallel name-hops), COM/CTRL/PWR right, bus-level 2:1 trapezoid + /4 slashes + 1/0 throw marks, SEL PD 2M / EN# H: Hi-Z (PU 2M) pull truths. Replaces the pre-council vintage (attic/FSW3410_*.kicad_sym)."
+    "description": "portable fp re-land: authored footprint promoted alongside; baked Footprint rewritten to central-agent:FSW3410_FP (same class as the AP64500 re-land)."
   },
   "names": {
     "canonical": "FSW3410YQFN18G/TR",
@@ -49,27 +49,44 @@
       "path": "symbols/FSW3410.kicad_sym",
       "kind": "symbol",
       "qualification": "qualified",
-      "sha256": "b65f3232caa081d6464a40f54c05537683dbf799d2e733031281a27f86242dbb",
+      "sha256": "2befce1eb64a5b14f0f4764395dac6420a64554d416ca88d36685719050acf08",
       "internal_name": "FSW3410"
+    },
+    {
+      "path": "footprints/central-agent.pretty/FSW3410_FP.kicad_mod",
+      "kind": "footprint",
+      "qualification": "unqualified-candidate",
+      "sha256": "1e0fb52d1b1670642b9d37870cbe14ce0857632effbfdba4f4ab1a4bb7296437",
+      "internal_name": "FSW3410_FP"
     }
   ],
-  "relationships": [],
+  "relationships": [
+    {
+      "kind": "declares-footprint",
+      "source_asset": "symbols/FSW3410.kicad_sym",
+      "target": {
+        "asset_path": "footprints/central-agent.pretty/FSW3410_FP.kicad_mod"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "Promotion supplied this footprint as a candidate; it is not qualified by a symbol-only draft."
+    }
+  ],
   "provenance": {
-    "repository_commit": "8fba08577423db7c49e8add8ece2a47d00daec14",
+    "repository_commit": "9efbca1b142bf81d507c7de9b6ef6bab4951e299",
     "source_board": "skibidi-hub",
     "entries": [
       {
         "kind": "manifest",
         "path": "MANIFEST.md",
         "locator": "promotion entry for symbols/FSW3410.kicad_sym",
-        "evidence": "First-import fit pass: COUNCIL10 fit pass + 5-grader re-grade on skibidi-hub sheets (2026-07-22): pwr-mux-win graded S (2 sub-mm nits accepted); 8/8 J1<->U9 name-hops verified parallel against netmap + SVG + pixels; final build PASS ERC 0/0, legibility 0, FLOWTHRU 28/28. Owner 2026-08-21: extracted single-symbol, kicad-cli SVG re-rendered + LOOKed, L25 audit clean."
+        "evidence": "First-import fit pass: COUNCIL10 fit pass as recorded at the symbol's first promotion (same ink); footprint is the skibidi-hub authored land shipped on that board."
       }
     ]
   },
   "extensions": {
     "promotion": {
-      "fit_note": "COUNCIL10 fit pass + 5-grader re-grade on skibidi-hub sheets (2026-07-22): pwr-mux-win graded S (2 sub-mm nits accepted); 8/8 J1<->U9 name-hops verified parallel against netmap + SVG + pixels; final build PASS ERC 0/0, legibility 0, FLOWTHRU 28/28. Owner 2026-08-21: extracted single-symbol, kicad-cli SVG re-rendered + LOOKed, L25 audit clean.",
-      "note": "COUNCIL10 flow-first rework (wf_0a811788-4e7, 2026-07-21/22): FLIPPED port-major: ports LEFT in J1 receptacle row order (8 parallel name-hops), COM/CTRL/PWR right, bus-level 2:1 trapezoid + /4 slashes + 1/0 throw marks, SEL PD 2M / EN# H: Hi-Z (PU 2M) pull truths. Replaces the pre-council vintage (attic/FSW3410_*.kicad_sym).",
+      "fit_note": "COUNCIL10 fit pass as recorded at the symbol's first promotion (same ink); footprint is the skibidi-hub authored land shipped on that board.",
+      "note": "portable fp re-land: authored footprint promoted alongside; baked Footprint rewritten to central-agent:FSW3410_FP (same class as the AP64500 re-land).",
       "pin_gate": {
         "symbol": "FSW3410",
         "lcsc": "C41370613",
@@ -82,7 +99,7 @@
             "detail": "ds_pin_ready(C41370613) is not ready over 19 pin(s): 0 fact(s), missing pins ['1', '10', '11', '12', '13', '14', '15', '16'], single-source [], disputed [] — two independent verified sources per pin (docs/10) before the SHARED library carries this map"
           }
         ],
-        "allow_pin_gaps": "pin map usage-proven on skibidi-hub (ERC 0/0 + golden netlist + FLOWTHRU gates); COUNCIL10 mined 5 comparable datasheets + own DS, page-precise indexes in skibidi-hub datasheets/comparables/FSW3410-INDEX.md. Two-source per-pin fact rows queued as pmic-test-arena librarian intake (L24)."
+        "allow_pin_gaps": "pin map usage-proven on skibidi-hub (ERC 0/0 + golden netlist + FLOWTHRU gates); COUNCIL10 page-precise datasheet indexes. Two-source per-pin fact rows queued as pmic-test-arena librarian intake (L24)."
       }
     }
   }

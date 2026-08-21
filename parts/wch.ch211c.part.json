@@ -26,7 +26,7 @@
         "value": "C49438114"
       }
     ],
-    "description": "COUNCIL10 flow-first rework (wf_0a811788-4e7, 2026-07-21/22): row-paired CC switch matrix (CCH2<->CCL2 through-row, CCH1+ODH1 junction to CCL1), open arms = reset truth, LDO AUTO strip (OVP 33V, VBUS>4V4), VDD49->adj->VDD33 cascade, I2C 0x35, Rd5K1 on CCH pins only. Replaces the pre-council vintage (attic/CH211C_*.kicad_sym)."
+    "description": "portable fp re-land: authored footprint promoted alongside; baked Footprint rewritten to central-agent:CH211C_FP (same class as the AP64500 re-land)."
   },
   "names": {
     "canonical": "CH211C",
@@ -47,27 +47,44 @@
       "path": "symbols/CH211C.kicad_sym",
       "kind": "symbol",
       "qualification": "qualified",
-      "sha256": "9e50cb1de535d7fb060237b545edbff37437fb13d5ed6f15723c102da2057920",
+      "sha256": "b4861ee4dd6838de7108b860384fd00885a7fe1481eb14acf9e789649cf74480",
       "internal_name": "CH211C"
+    },
+    {
+      "path": "footprints/central-agent.pretty/CH211C_FP.kicad_mod",
+      "kind": "footprint",
+      "qualification": "unqualified-candidate",
+      "sha256": "e9014508e68b6ecc5ba7bc3f320509540c30a620b9ef78e72baba6933412ce75",
+      "internal_name": "CH211C_FP"
     }
   ],
-  "relationships": [],
+  "relationships": [
+    {
+      "kind": "declares-footprint",
+      "source_asset": "symbols/CH211C.kicad_sym",
+      "target": {
+        "asset_path": "footprints/central-agent.pretty/CH211C_FP.kicad_mod"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "Promotion supplied this footprint as a candidate; it is not qualified by a symbol-only draft."
+    }
+  ],
   "provenance": {
-    "repository_commit": "8fba08577423db7c49e8add8ece2a47d00daec14",
+    "repository_commit": "9efbca1b142bf81d507c7de9b6ef6bab4951e299",
     "source_board": "skibidi-hub",
     "entries": [
       {
         "kind": "manifest",
         "path": "MANIFEST.md",
         "locator": "promotion entry for symbols/CH211C.kicad_sym",
-        "evidence": "First-import fit pass: COUNCIL10 fit pass + 5-grader re-grade on skibidi-hub sheets (2026-07-22): pwr-charge graded A; OD1_GE moved west of the pole, CC_OE+GE lifted x-clear; final build PASS ERC 0/0, legibility 0, FLOWTHRU 28/28. Owner 2026-08-21: extracted single-symbol, kicad-cli SVG re-rendered + LOOKed, L25 audit clean."
+        "evidence": "First-import fit pass: COUNCIL10 fit pass as recorded at the symbol's first promotion (same ink); footprint is the skibidi-hub authored land shipped on that board."
       }
     ]
   },
   "extensions": {
     "promotion": {
-      "fit_note": "COUNCIL10 fit pass + 5-grader re-grade on skibidi-hub sheets (2026-07-22): pwr-charge graded A; OD1_GE moved west of the pole, CC_OE+GE lifted x-clear; final build PASS ERC 0/0, legibility 0, FLOWTHRU 28/28. Owner 2026-08-21: extracted single-symbol, kicad-cli SVG re-rendered + LOOKed, L25 audit clean.",
-      "note": "COUNCIL10 flow-first rework (wf_0a811788-4e7, 2026-07-21/22): row-paired CC switch matrix (CCH2<->CCL2 through-row, CCH1+ODH1 junction to CCL1), open arms = reset truth, LDO AUTO strip (OVP 33V, VBUS>4V4), VDD49->adj->VDD33 cascade, I2C 0x35, Rd5K1 on CCH pins only. Replaces the pre-council vintage (attic/CH211C_*.kicad_sym).",
+      "fit_note": "COUNCIL10 fit pass as recorded at the symbol's first promotion (same ink); footprint is the skibidi-hub authored land shipped on that board.",
+      "note": "portable fp re-land: authored footprint promoted alongside; baked Footprint rewritten to central-agent:CH211C_FP (same class as the AP64500 re-land).",
       "pin_gate": {
         "symbol": "CH211C",
         "lcsc": "C49438114",
@@ -80,7 +97,7 @@
             "detail": "ds_pin_ready(C49438114) is not ready over 17 pin(s): 0 fact(s), missing pins ['1', '10', '11', '12', '13', '14', '15', '16'], single-source [], disputed [] — two independent verified sources per pin (docs/10) before the SHARED library carries this map"
           }
         ],
-        "allow_pin_gaps": "pin map usage-proven on skibidi-hub (ERC 0/0 + golden netlist + FLOWTHRU gates); COUNCIL10 mined 5 comparable datasheets + own DS, page-precise indexes in skibidi-hub datasheets/comparables/CH211C-INDEX.md. Two-source per-pin fact rows queued as pmic-test-arena librarian intake (L24)."
+        "allow_pin_gaps": "pin map usage-proven on skibidi-hub (ERC 0/0 + golden netlist + FLOWTHRU gates); COUNCIL10 page-precise datasheet indexes. Two-source per-pin fact rows queued as pmic-test-arena librarian intake (L24)."
       }
     }
   }

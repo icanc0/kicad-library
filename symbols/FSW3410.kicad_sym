@@ -5,7 +5,7 @@
 	(symbol "FSW3410" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
 			(property "Reference" "U" (at 0 2.54 0) (effects (font (size 1.27 1.27))))
 			(property "Value" "FSW3410" (at 0 5.08 0) (effects (font (size 1.27 1.27))))
-			(property "Footprint" "skibidi-hub_authored:FSW3410_FP" (at 0 7.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Footprint" "central-agent:FSW3410_FP" (at 0 7.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
 			(property "MPN" "FSW3410YQFN18G/TR" (at 0 10.16 0) (effects (font (size 1.27 1.27)) (hide yes)))
 			(property "LCSC" "C41370613" (at 0 12.7 0) (effects (font (size 1.27 1.27)) (hide yes)))
 			(property "Datasheet" "" (at 0 15.24 0) (effects (font (size 1.27 1.27)) (hide yes)))

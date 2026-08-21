@@ -5,7 +5,7 @@
 	(symbol "CH211C" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
 			(property "Reference" "U" (at 0 2.54 0) (effects (font (size 1.27 1.27))))
 			(property "Value" "CH211C" (at 0 5.08 0) (effects (font (size 1.27 1.27))))
-			(property "Footprint" "skibidi-hub_authored:CH211C_FP" (at 0 7.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Footprint" "central-agent:CH211C_FP" (at 0 7.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
 			(property "MPN" "CH211C" (at 0 10.16 0) (effects (font (size 1.27 1.27)) (hide yes)))
 			(property "LCSC" "C49438114" (at 0 12.7 0) (effects (font (size 1.27 1.27)) (hide yes)))
 			(property "Datasheet" "" (at 0 15.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
