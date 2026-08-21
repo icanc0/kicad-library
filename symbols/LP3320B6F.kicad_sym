@@ -9,7 +9,7 @@
     (property "Footprint" "footprints:SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BL" (id 2) (at 0 -10.16 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
-    (property "Datasheet" "https://item.szlcsc.com/169042.html" (id 3) (at -2.286 0.127 0)
+    (property "Datasheet" "datasheets/lp3320-lowpowersemi.pdf" (id 3) (at -2.286 0.127 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (property "ki_keywords" "C387699" (id 4) (at 0 0 0)
