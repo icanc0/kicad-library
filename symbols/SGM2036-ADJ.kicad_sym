@@ -5,7 +5,7 @@
 	(symbol "SGM2036-ADJ" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
 			(property "Reference" "U" (at 0 2.54 0) (effects (font (size 1.27 1.27))))
 			(property "Value" "SGM2036-ADJ" (at 0 5.08 0) (effects (font (size 1.27 1.27))))
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 0 7.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Footprint" "footprints:SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BR" (at 0 7.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
 			(property "MPN" "SGM2036-ADJYN5G/TR" (at 0 10.16 0) (effects (font (size 1.27 1.27)) (hide yes)))
 			(property "LCSC" "C194594" (at 0 12.7 0) (effects (font (size 1.27 1.27)) (hide yes)))
 			(symbol "SGM2036-ADJ_1_1"

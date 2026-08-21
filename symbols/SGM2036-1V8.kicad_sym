@@ -7,7 +7,7 @@
 			(property "Value" "SGM2036-1.8" (at 0 -12.7 0) (effects (font (size 1.27 1.27))))
 			(property "MPN" "SGM2036-1.8YN5G/TR" (at 0 7.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
 			(property "LCSC" "C700371" (at 0 10.16 0) (effects (font (size 1.27 1.27)) (hide yes)))
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 0 12.7 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Footprint" "footprints:SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BR" (at 0 12.7 0) (effects (font (size 1.27 1.27)) (hide yes)))
 			(symbol "SGM2036-1V8_1_1"
 				(rectangle (start -12.7 5.08) (end 12.7 -5.08) (stroke (width 0.254) (type solid)) (fill (type background)))
 				(text "SGM2036-1.8" (at 0 6.35 0) (effects (font (size 1.27 1.27) (bold yes))))

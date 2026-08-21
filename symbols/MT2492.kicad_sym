@@ -5,7 +5,9 @@
 	(symbol "MT2492" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
 				(property "Reference" "U" (at 0 2.54 0) (effects (font (size 1.27 1.27))))
 				(property "Value" "MT2492" (at 0 5.08 0) (effects (font (size 1.27 1.27))))
-				(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6" (at 0 7.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+				(property "Footprint" "footprints:SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BL" (at 0 7.62 0) (effects (font (size 1.27 1.27)) (hide yes)))
+				(property "MPN" "MT2492" (at 0 10.16 0) (effects (font (size 1.27 1.27)) (hide yes)))
+				(property "LCSC" "C89358" (at 0 12.7 0) (effects (font (size 1.27 1.27)) (hide yes)))
 				(symbol "MT2492_1_1"
 					(rectangle (start -20.32 7.62) (end 20.32 -7.62) (stroke (width 0.254) (type solid)) (fill (type background)))
 					(text "MT2492  2A 600kHz sync buck (SOT-23-6)" (at 0 8.89 0) (effects (font (size 1.27 1.27) (bold yes))))
