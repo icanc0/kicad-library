@@ -26,7 +26,7 @@
         "value": "C41370613"
       }
     ],
-    "description": "Central library symbol FSW3410YQFN18G/TR promoted from /home/vincent/projects/skibidi-hub."
+    "description": "COUNCIL10 flow-first rework (wf_0a811788-4e7, 2026-07-21/22): FLIPPED port-major: ports LEFT in J1 receptacle row order (8 parallel name-hops), COM/CTRL/PWR right, bus-level 2:1 trapezoid + /4 slashes + 1/0 throw marks, SEL PD 2M / EN# H: Hi-Z (PU 2M) pull truths. Replaces the pre-council vintage (attic/FSW3410_*.kicad_sym)."
   },
   "names": {
     "canonical": "FSW3410YQFN18G/TR",
@@ -49,27 +49,41 @@
       "path": "symbols/FSW3410.kicad_sym",
       "kind": "symbol",
       "qualification": "qualified",
-      "sha256": "67777364fb0e6ebd7be3071f05c35877cc7039d71ef82c35a9f3a8e1b642f52c",
+      "sha256": "b65f3232caa081d6464a40f54c05537683dbf799d2e733031281a27f86242dbb",
       "internal_name": "FSW3410"
     }
   ],
   "relationships": [],
   "provenance": {
-    "repository_commit": "d68c578c0cf4df539008952eaf5d0f9683c60433",
-    "source_board": "/home/vincent/projects/skibidi-hub",
+    "repository_commit": "8fba08577423db7c49e8add8ece2a47d00daec14",
+    "source_board": "skibidi-hub",
     "entries": [
       {
         "kind": "manifest",
         "path": "MANIFEST.md",
         "locator": "promotion entry for symbols/FSW3410.kicad_sym",
-        "evidence": "First-import fit pass: U9 on skibidi-hub: dual-differential USB3.1 10 Gb/s passive 2:1 mux (X2QFN-18, LCSC C41370613), upstream lane select via CC-level comparator; CN-SOURCING-1 replacement for HD3SS3212. 19-pin contract byte-identical to board-authored (wave-1 audit)."
+        "evidence": "First-import fit pass: COUNCIL10 fit pass + 5-grader re-grade on skibidi-hub sheets (2026-07-22): pwr-mux-win graded S (2 sub-mm nits accepted); 8/8 J1<->U9 name-hops verified parallel against netmap + SVG + pixels; final build PASS ERC 0/0, legibility 0, FLOWTHRU 28/28. Owner 2026-08-21: extracted single-symbol, kicad-cli SVG re-rendered + LOOKed, L25 audit clean."
       }
     ]
   },
   "extensions": {
     "promotion": {
-      "fit_note": "U9 on skibidi-hub: dual-differential USB3.1 10 Gb/s passive 2:1 mux (X2QFN-18, LCSC C41370613), upstream lane select via CC-level comparator; CN-SOURCING-1 replacement for HD3SS3212. 19-pin contract byte-identical to board-authored (wave-1 audit).",
-      "note": ""
+      "fit_note": "COUNCIL10 fit pass + 5-grader re-grade on skibidi-hub sheets (2026-07-22): pwr-mux-win graded S (2 sub-mm nits accepted); 8/8 J1<->U9 name-hops verified parallel against netmap + SVG + pixels; final build PASS ERC 0/0, legibility 0, FLOWTHRU 28/28. Owner 2026-08-21: extracted single-symbol, kicad-cli SVG re-rendered + LOOKed, L25 audit clean.",
+      "note": "COUNCIL10 flow-first rework (wf_0a811788-4e7, 2026-07-21/22): FLIPPED port-major: ports LEFT in J1 receptacle row order (8 parallel name-hops), COM/CTRL/PWR right, bus-level 2:1 trapezoid + /4 slashes + 1/0 throw marks, SEL PD 2M / EN# H: Hi-Z (PU 2M) pull truths. Replaces the pre-council vintage (attic/FSW3410_*.kicad_sym).",
+      "pin_gate": {
+        "symbol": "FSW3410",
+        "lcsc": "C41370613",
+        "facts_checked": true,
+        "board_context": null,
+        "state": "waived",
+        "gaps": [
+          {
+            "code": "PIN-FACTS",
+            "detail": "ds_pin_ready(C41370613) is not ready over 19 pin(s): 0 fact(s), missing pins ['1', '10', '11', '12', '13', '14', '15', '16'], single-source [], disputed [] — two independent verified sources per pin (docs/10) before the SHARED library carries this map"
+          }
+        ],
+        "allow_pin_gaps": "pin map usage-proven on skibidi-hub (ERC 0/0 + golden netlist + FLOWTHRU gates); COUNCIL10 mined 5 comparable datasheets + own DS, page-precise indexes in skibidi-hub datasheets/comparables/FSW3410-INDEX.md. Two-source per-pin fact rows queued as pmic-test-arena librarian intake (L24)."
+      }
     }
   }
 }

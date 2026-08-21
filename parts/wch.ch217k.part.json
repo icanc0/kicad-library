@@ -26,7 +26,7 @@
         "value": "C7462749"
       }
     ],
-    "description": "Central library symbol CH217K promoted from /home/vincent/projects/skibidi-hub."
+    "description": "COUNCIL10 flow-first rework (wf_0a811788-4e7, 2026-07-21/22): series SPST drawn ON the VIN->VOUT row, VOUT power-flow arrowhead, 0=ON enable truth, R>=22k floor + Iset=60k/Rset. Replaces the pre-council vintage (attic/CH217K_*.kicad_sym)."
   },
   "names": {
     "canonical": "CH217K",
@@ -47,27 +47,41 @@
       "path": "symbols/CH217K.kicad_sym",
       "kind": "symbol",
       "qualification": "qualified",
-      "sha256": "ecc6cd719fa38433d179065ae3ff63511f2770232d6b91fb7321c0a30104f373",
+      "sha256": "93f7b4ff55314539aa47bd6cca0888020d2e4ebda515a14076dd2220344e8d59",
       "internal_name": "CH217K"
     }
   ],
   "relationships": [],
   "provenance": {
-    "repository_commit": "d68c578c0cf4df539008952eaf5d0f9683c60433",
-    "source_board": "/home/vincent/projects/skibidi-hub",
+    "repository_commit": "8fba08577423db7c49e8add8ece2a47d00daec14",
+    "source_board": "skibidi-hub",
     "entries": [
       {
         "kind": "manifest",
         "path": "MANIFEST.md",
         "locator": "promotion entry for symbols/CH217K.kicad_sym",
-        "evidence": "First-import fit pass: U6 (+ siblings via _ch217k_sw) on skibidi-hub: per-port VBUS current-limit switch (SOT-23-6, LCSC C7462749), Iset=60k/Rset per WCH DS; local DS + comparables index in the board repo. 6-pin contract byte-identical to board-authored (wave-1 audit)."
+        "evidence": "First-import fit pass: COUNCIL10 fit pass + 5-grader re-grade on skibidi-hub sheets (2026-07-22): sensors region B->fixed: TVS tap re-seated jx-34.29, both tail grazes clear; pin geometry byte-identical to pre-council; final build PASS ERC 0/0, legibility 0, FLOWTHRU 28/28. Owner 2026-08-21: extracted single-symbol, kicad-cli SVG re-rendered + LOOKed, L25 audit clean."
       }
     ]
   },
   "extensions": {
     "promotion": {
-      "fit_note": "U6 (+ siblings via _ch217k_sw) on skibidi-hub: per-port VBUS current-limit switch (SOT-23-6, LCSC C7462749), Iset=60k/Rset per WCH DS; local DS + comparables index in the board repo. 6-pin contract byte-identical to board-authored (wave-1 audit).",
-      "note": ""
+      "fit_note": "COUNCIL10 fit pass + 5-grader re-grade on skibidi-hub sheets (2026-07-22): sensors region B->fixed: TVS tap re-seated jx-34.29, both tail grazes clear; pin geometry byte-identical to pre-council; final build PASS ERC 0/0, legibility 0, FLOWTHRU 28/28. Owner 2026-08-21: extracted single-symbol, kicad-cli SVG re-rendered + LOOKed, L25 audit clean.",
+      "note": "COUNCIL10 flow-first rework (wf_0a811788-4e7, 2026-07-21/22): series SPST drawn ON the VIN->VOUT row, VOUT power-flow arrowhead, 0=ON enable truth, R>=22k floor + Iset=60k/Rset. Replaces the pre-council vintage (attic/CH217K_*.kicad_sym).",
+      "pin_gate": {
+        "symbol": "CH217K",
+        "lcsc": "C7462749",
+        "facts_checked": true,
+        "board_context": null,
+        "state": "waived",
+        "gaps": [
+          {
+            "code": "PIN-FACTS",
+            "detail": "ds_pin_ready(C7462749) is not ready over 6 pin(s): 0 fact(s), missing pins ['1', '2', '3', '4', '5', '6'], single-source [], disputed [] — two independent verified sources per pin (docs/10) before the SHARED library carries this map"
+          }
+        ],
+        "allow_pin_gaps": "pin map usage-proven on skibidi-hub (ERC 0/0 + golden netlist + FLOWTHRU gates); COUNCIL10 mined 5 comparable datasheets + own DS, page-precise indexes in skibidi-hub datasheets/comparables/CH217K-INDEX.md. Two-source per-pin fact rows queued as pmic-test-arena librarian intake (L24)."
+      }
     }
   }
 }

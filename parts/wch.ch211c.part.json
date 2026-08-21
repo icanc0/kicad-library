@@ -26,7 +26,7 @@
         "value": "C49438114"
       }
     ],
-    "description": "Central library symbol CH211C promoted from /home/vincent/projects/skibidi-hub."
+    "description": "COUNCIL10 flow-first rework (wf_0a811788-4e7, 2026-07-21/22): row-paired CC switch matrix (CCH2<->CCL2 through-row, CCH1+ODH1 junction to CCL1), open arms = reset truth, LDO AUTO strip (OVP 33V, VBUS>4V4), VDD49->adj->VDD33 cascade, I2C 0x35, Rd5K1 on CCH pins only. Replaces the pre-council vintage (attic/CH211C_*.kicad_sym)."
   },
   "names": {
     "canonical": "CH211C",
@@ -47,27 +47,41 @@
       "path": "symbols/CH211C.kicad_sym",
       "kind": "symbol",
       "qualification": "qualified",
-      "sha256": "67db96c3f94e7a8954638f758bc792bdaa9703194d4957bfe8994ed490420521",
+      "sha256": "9e50cb1de535d7fb060237b545edbff37437fb13d5ed6f15723c102da2057920",
       "internal_name": "CH211C"
     }
   ],
   "relationships": [],
   "provenance": {
-    "repository_commit": "d68c578c0cf4df539008952eaf5d0f9683c60433",
-    "source_board": "/home/vincent/projects/skibidi-hub",
+    "repository_commit": "8fba08577423db7c49e8add8ece2a47d00daec14",
+    "source_board": "skibidi-hub",
     "entries": [
       {
         "kind": "manifest",
         "path": "MANIFEST.md",
         "locator": "promotion entry for symbols/CH211C.kicad_sym",
-        "evidence": "First-import fit pass: U2 on skibidi-hub: upstream PD power-path CC controller (QFN-16-EP 2x2 P0.4, LCSC C49438114), charge-through sink + 36 V HV gate driver; board footprint from the LCSC vendor land (easyeda2kicad). 17-pin contract verified in the wave-1 audit (pin-11 etype note in ADOPTIONS.md)."
+        "evidence": "First-import fit pass: COUNCIL10 fit pass + 5-grader re-grade on skibidi-hub sheets (2026-07-22): pwr-charge graded A; OD1_GE moved west of the pole, CC_OE+GE lifted x-clear; final build PASS ERC 0/0, legibility 0, FLOWTHRU 28/28. Owner 2026-08-21: extracted single-symbol, kicad-cli SVG re-rendered + LOOKed, L25 audit clean."
       }
     ]
   },
   "extensions": {
     "promotion": {
-      "fit_note": "U2 on skibidi-hub: upstream PD power-path CC controller (QFN-16-EP 2x2 P0.4, LCSC C49438114), charge-through sink + 36 V HV gate driver; board footprint from the LCSC vendor land (easyeda2kicad). 17-pin contract verified in the wave-1 audit (pin-11 etype note in ADOPTIONS.md).",
-      "note": ""
+      "fit_note": "COUNCIL10 fit pass + 5-grader re-grade on skibidi-hub sheets (2026-07-22): pwr-charge graded A; OD1_GE moved west of the pole, CC_OE+GE lifted x-clear; final build PASS ERC 0/0, legibility 0, FLOWTHRU 28/28. Owner 2026-08-21: extracted single-symbol, kicad-cli SVG re-rendered + LOOKed, L25 audit clean.",
+      "note": "COUNCIL10 flow-first rework (wf_0a811788-4e7, 2026-07-21/22): row-paired CC switch matrix (CCH2<->CCL2 through-row, CCH1+ODH1 junction to CCL1), open arms = reset truth, LDO AUTO strip (OVP 33V, VBUS>4V4), VDD49->adj->VDD33 cascade, I2C 0x35, Rd5K1 on CCH pins only. Replaces the pre-council vintage (attic/CH211C_*.kicad_sym).",
+      "pin_gate": {
+        "symbol": "CH211C",
+        "lcsc": "C49438114",
+        "facts_checked": true,
+        "board_context": null,
+        "state": "waived",
+        "gaps": [
+          {
+            "code": "PIN-FACTS",
+            "detail": "ds_pin_ready(C49438114) is not ready over 17 pin(s): 0 fact(s), missing pins ['1', '10', '11', '12', '13', '14', '15', '16'], single-source [], disputed [] — two independent verified sources per pin (docs/10) before the SHARED library carries this map"
+          }
+        ],
+        "allow_pin_gaps": "pin map usage-proven on skibidi-hub (ERC 0/0 + golden netlist + FLOWTHRU gates); COUNCIL10 mined 5 comparable datasheets + own DS, page-precise indexes in skibidi-hub datasheets/comparables/CH211C-INDEX.md. Two-source per-pin fact rows queued as pmic-test-arena librarian intake (L24)."
+      }
     }
   }
 }

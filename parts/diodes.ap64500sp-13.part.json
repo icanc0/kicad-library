@@ -26,7 +26,7 @@
         "value": "C2070920"
       }
     ],
-    "description": "Central library symbol AP64500SP-13 promoted from /home/vincent/projects/skibidi-hub."
+    "description": "COUNCIL10 flow-first rework (wf_0a811788-4e7, 2026-07-21/22): sync half-bridge totem on the flow axes, BST/SW/FB right column per L25, EN float-enable 1.18V, RT square-wave, 0.8V FB caption. Replaces the pre-council vintage (attic/AP64500_*.kicad_sym)."
   },
   "names": {
     "canonical": "AP64500SP-13",
@@ -49,27 +49,41 @@
       "path": "symbols/AP64500.kicad_sym",
       "kind": "symbol",
       "qualification": "qualified",
-      "sha256": "d28965a3d8861100ec3e617c99f9d5ccba7e3a37ccd65d43db772e3f8165c20d",
+      "sha256": "4f22d507c6a5f55f241dd8c65ffba5a7771d6d5896813dadc3b31664dcb6a01a",
       "internal_name": "AP64500"
     }
   ],
   "relationships": [],
   "provenance": {
-    "repository_commit": "d68c578c0cf4df539008952eaf5d0f9683c60433",
-    "source_board": "/home/vincent/projects/skibidi-hub",
+    "repository_commit": "8fba08577423db7c49e8add8ece2a47d00daec14",
+    "source_board": "skibidi-hub",
     "entries": [
       {
         "kind": "manifest",
         "path": "MANIFEST.md",
         "locator": "promotion entry for symbols/AP64500.kicad_sym",
-        "evidence": "First-import fit pass: U3 on skibidi-hub: 5 A synchronous buck (3.8-40 V, SO8-EP), charge-through +5V on _buck40v; replaced TPS54531+Schottky (SAFETY-AUDIT-1). 9-pin contract incl. EP, byte-identical to the board-authored symbol (wave-1 audit)."
+        "evidence": "First-import fit pass: COUNCIL10 fit pass + 5-grader re-grade on skibidi-hub sheets (2026-07-22): pwr-buck graded A, residual C33/C34 pitch +2.54 landed same-pass; float=ON and 100n->SW captions dropped at render (anchor-extent mash); final build PASS ERC 0/0, legibility 0, FLOWTHRU 28/28. Owner 2026-08-21: extracted single-symbol, kicad-cli SVG re-rendered + LOOKed, L25 audit clean."
       }
     ]
   },
   "extensions": {
     "promotion": {
-      "fit_note": "U3 on skibidi-hub: 5 A synchronous buck (3.8-40 V, SO8-EP), charge-through +5V on _buck40v; replaced TPS54531+Schottky (SAFETY-AUDIT-1). 9-pin contract incl. EP, byte-identical to the board-authored symbol (wave-1 audit).",
-      "note": ""
+      "fit_note": "COUNCIL10 fit pass + 5-grader re-grade on skibidi-hub sheets (2026-07-22): pwr-buck graded A, residual C33/C34 pitch +2.54 landed same-pass; float=ON and 100n->SW captions dropped at render (anchor-extent mash); final build PASS ERC 0/0, legibility 0, FLOWTHRU 28/28. Owner 2026-08-21: extracted single-symbol, kicad-cli SVG re-rendered + LOOKed, L25 audit clean.",
+      "note": "COUNCIL10 flow-first rework (wf_0a811788-4e7, 2026-07-21/22): sync half-bridge totem on the flow axes, BST/SW/FB right column per L25, EN float-enable 1.18V, RT square-wave, 0.8V FB caption. Replaces the pre-council vintage (attic/AP64500_*.kicad_sym).",
+      "pin_gate": {
+        "symbol": "AP64500",
+        "lcsc": "C2070920",
+        "facts_checked": true,
+        "board_context": null,
+        "state": "waived",
+        "gaps": [
+          {
+            "code": "PIN-FACTS",
+            "detail": "ds_pin_ready(C2070920) is not ready over 9 pin(s): 0 fact(s), missing pins ['1', '2', '3', '4', '5', '6', '7', '8'], single-source [], disputed [] — two independent verified sources per pin (docs/10) before the SHARED library carries this map"
+          }
+        ],
+        "allow_pin_gaps": "pin map usage-proven on skibidi-hub (ERC 0/0 + golden netlist + FLOWTHRU gates); COUNCIL10 mined 5 comparable datasheets + own DS, page-precise indexes in skibidi-hub datasheets/comparables/AP64500-INDEX.md. Two-source per-pin fact rows queued as pmic-test-arena librarian intake (L24)."
+      }
     }
   }
 }
