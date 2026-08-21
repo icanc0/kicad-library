@@ -1,0 +1,73 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "aerosemi.mt2492",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "XI Semiconductor (Aerosemi)",
+      "normalized": "xi-semiconductor-aerosemi"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "MT2492",
+      "canonical": "MT2492",
+      "comparison_key": "MT2492",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C89358"
+      }
+    ],
+    "description": "2A 600kHz sync buck, SOT-23-6; BS/SW/FB right column per L25 (7bcc779)."
+  },
+  "names": {
+    "canonical": "MT2492",
+    "aliases": [],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/MT2492.kicad_sym",
+        "name": "MT2492"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/MT2492.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "57171fe9e87993594c93b8690aa89e770accb48e0c358c1602f2f86ac046ac8b",
+      "internal_name": "MT2492"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "7bcc7793fc44df593c694fdf72963b04658f5a4f",
+    "source_board": "hydra",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/MT2492.kicad_sym",
+        "evidence": "First-import fit pass: Proven on hydra pmicaux (3 stages, U3/U4/U5) through full gates; role-side fixed 8fba085, BS/SW un-inverted 7bcc779, render LOOKed."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "Proven on hydra pmicaux (3 stages, U3/U4/U5) through full gates; role-side fixed 8fba085, BS/SW un-inverted 7bcc779, render LOOKed.",
+      "note": "2A 600kHz sync buck, SOT-23-6; BS/SW/FB right column per L25 (7bcc779)."
+    }
+  }
+}
