@@ -1,0 +1,76 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "sgmicro.sgm2036-1v8",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "SG Micro",
+      "normalized": "sg-micro"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "SGM2036-1.8YN5G/TR",
+      "canonical": "SGM2036-1.8YN5G/TR",
+      "comparison_key": "SGM2036-1.8YN5G",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C700371"
+      }
+    ],
+    "description": "V3 re-emit 2026-08-24; FIXED-voltage family symbol (pin 4 = BP) — one glyph covers every fixed orderable, set Value/MPN/LCSC per instance; family alias SGM2036-FIXED"
+  },
+  "names": {
+    "canonical": "SGM2036-1.8YN5G/TR",
+    "aliases": [
+      "SGM2036-FIXED",
+      "SGM2036-1V8"
+    ],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/SGM2036-1V8.kicad_sym",
+        "name": "SGM2036-1V8"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/SGM2036-1V8.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "c0d25d139280d9fe7842e9360668a13b841d8290b803a5c9eefbc1bc3d6d0832",
+      "internal_name": "SGM2036-1V8"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "feb891d32702e979629b7f250bbdad0472601a31",
+    "source_board": "camera-fpc-adapters",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/SGM2036-1V8.kicad_sym",
+        "evidence": "Draft record; fit evidence not yet supplied."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "",
+      "note": "V3 re-emit 2026-08-24; FIXED-voltage family symbol (pin 4 = BP) — one glyph covers every fixed orderable, set Value/MPN/LCSC per instance; family alias SGM2036-FIXED"
+    }
+  }
+}

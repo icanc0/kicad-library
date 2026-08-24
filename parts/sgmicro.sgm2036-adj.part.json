@@ -1,0 +1,75 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "sgmicro.sgm2036-adj",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "SG Micro",
+      "normalized": "sg-micro"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "SGM2036-ADJYN5G/TR",
+      "canonical": "SGM2036-ADJYN5G/TR",
+      "comparison_key": "SGM2036-ADJYN5G",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C194594"
+      }
+    ],
+    "description": "V3 re-emit 2026-08-24 (hydra symbol campaign regs.md); adjustable FB, VFB=0.8V"
+  },
+  "names": {
+    "canonical": "SGM2036-ADJYN5G/TR",
+    "aliases": [
+      "SGM2036-ADJ"
+    ],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/SGM2036-ADJ.kicad_sym",
+        "name": "SGM2036-ADJ"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/SGM2036-ADJ.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "aa4baced4447d4faf67f42ba79bb207177777919a585d0e16fb78209c7fd5600",
+      "internal_name": "SGM2036-ADJ"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "feb891d32702e979629b7f250bbdad0472601a31",
+    "source_board": "hydra",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/SGM2036-ADJ.kicad_sym",
+        "evidence": "Draft record; fit evidence not yet supplied."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "",
+      "note": "V3 re-emit 2026-08-24 (hydra symbol campaign regs.md); adjustable FB, VFB=0.8V"
+    }
+  }
+}
