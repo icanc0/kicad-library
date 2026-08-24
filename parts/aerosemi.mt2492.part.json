@@ -26,7 +26,7 @@
                 "value": "C89358"
             }
         ],
-        "description": "2A 600kHz sync buck, SOT-23-6; BS/SW/FB right column per L25 (7bcc779)."
+        "description": "600kHz 16V 2A sync buck, SOT23-6; V1 re-emit 2026-08-24 (symbols-0824 regs.md): title=MPN, pin-ink body, BS above SW power_out (L25), FB below gap, Datasheet vendored."
     },
     "names": {
         "canonical": "MT2492",
@@ -47,13 +47,13 @@
             "path": "symbols/MT2492.kicad_sym",
             "kind": "symbol",
             "qualification": "qualified",
-            "sha256": "c8376d3573336ec3a8d0e1c6e6b2260d519af710582ebe4ac56c3a6acd1027da",
+            "sha256": "8eb22615c49981738f65004291a490c2505f01d397f1b9d79ab00431cf886da0",
             "internal_name": "MT2492"
         }
     ],
     "relationships": [],
     "provenance": {
-        "repository_commit": "acfc1d9af7217567fb54a4ca40db0932ea2f4a47",
+        "repository_commit": "39a959a5d26c8f606ca06383368de43b8f298226",
         "source_board": "hydra",
         "entries": [
             {
@@ -61,6 +61,12 @@
                 "path": "MANIFEST.md",
                 "locator": "promotion entry for symbols/MT2492.kicad_sym",
                 "evidence": "First-import fit pass: Proven on hydra pmicaux (3 stages, U3/U4/U5) through full gates; role-side fixed 8fba085, BS/SW un-inverted 7bcc779, render LOOKed."
+            },
+            {
+                "kind": "datasheet",
+                "path": "datasheets/mt2492-aerosemi.pdf",
+                "locator": "p.2 pin table (BS 1, GND 2, FB 3, EN 4, VIN 5, SW 6); p.3 VFB=0.6V",
+                "evidence": "Aerosemi MT2492 primary DS (6pp, title page names MT2492, footer MT2492/V1.0), vendored from datasheet.lcsc.com productCode=C89358 2026-08-24; V1 re-emit rendered + LOOKed on a scratch sheet (repository_commit = drafting baseline HEAD, symbol sha256 re-pinned to the emitted bytes)"
             }
         ]
     },
