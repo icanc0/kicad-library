@@ -1,0 +1,75 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "winbond.w25q128jvsiq",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Winbond",
+      "normalized": "winbond"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "W25Q128JVSIQ",
+      "canonical": "W25Q128JVSIQ",
+      "comparison_key": "W25Q128JVSIQ",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C97521"
+      }
+    ],
+    "description": "3V JV, SOIC-8 208-mil; -IQ QE=1 fixed (pin3=IO2, pin7=IO3 only, /WP //HOLD unavailable, DS revF p73 note 5). NOT interchangeable with the 1.8V JW sibling."
+  },
+  "names": {
+    "canonical": "W25Q128JVSIQ",
+    "aliases": [
+      "W25Q128JVSIQTR"
+    ],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/W25Q128JVSIQTR.kicad_sym",
+        "name": "W25Q128JVSIQTR"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/W25Q128JVSIQTR.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "b764d7acb7aac94c1f6db66b7f924cc0b6e6e3599ebadd85c31f5ce25181a2a2",
+      "internal_name": "W25Q128JVSIQTR"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "b91b10f7a3670f1c2226d6deab40a698b33f6398",
+    "source_board": "hydra",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/W25Q128JVSIQTR.kicad_sym",
+        "evidence": "First-import fit pass: V1 re-author 2026-08-24 (nor.md): vendor Table 3.3 pad names with KiCad overbars, POWER SUPPLY caption + VCC top-left, CS/CLK left, IO0-IO3 right, GND on-grid bottom (was -9.398 off-grid silent-open class); rendered + LOOKed."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "V1 re-author 2026-08-24 (nor.md): vendor Table 3.3 pad names with KiCad overbars, POWER SUPPLY caption + VCC top-left, CS/CLK left, IO0-IO3 right, GND on-grid bottom (was -9.398 off-grid silent-open class); rendered + LOOKed.",
+      "note": "3V JV, SOIC-8 208-mil; -IQ QE=1 fixed (pin3=IO2, pin7=IO3 only, /WP //HOLD unavailable, DS revF p73 note 5). NOT interchangeable with the 1.8V JW sibling."
+    }
+  }
+}

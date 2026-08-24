@@ -1,0 +1,75 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "winbond.w25q128jwpiq",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Winbond",
+      "normalized": "winbond"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "W25Q128JWPIQ",
+      "canonical": "W25Q128JWPIQ",
+      "comparison_key": "W25Q128JWPIQ",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C2689660"
+      }
+    ],
+    "description": "1.8V JW, WSON-8 6x5mm (pkg P per DS revE ordering); EP pad 9 carries no internal signal (float or GND, DS p68) — now EXPOSED as a pin (the old symbol hid it, [FULL] miss). NEVER interchange with the 3.3V JV."
+  },
+  "names": {
+    "canonical": "W25Q128JWPIQ",
+    "aliases": [
+      "W25Q128JWPIQ-1V8"
+    ],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/W25Q128JWPIQ-1V8.kicad_sym",
+        "name": "W25Q128JWPIQ-1V8"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/W25Q128JWPIQ-1V8.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "41ef498a64cb72668b1ad211af4206325b3d78c7f3c0792de8bbd68890c2029d",
+      "internal_name": "W25Q128JWPIQ-1V8"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "b91b10f7a3670f1c2226d6deab40a698b33f6398",
+    "source_board": "vitracker-v2",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/W25Q128JWPIQ-1V8.kicad_sym",
+        "evidence": "First-import fit pass: Family re-emit 2026-08-24 (nor.md follow-through): same generator as W25Q128JVSIQTR, EP added as pin 9 passive, baked title and CONTROL/QSPI BUS captions replaced by the vendor-name V1 layout; rendered + LOOKed."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "Family re-emit 2026-08-24 (nor.md follow-through): same generator as W25Q128JVSIQTR, EP added as pin 9 passive, baked title and CONTROL/QSPI BUS captions replaced by the vendor-name V1 layout; rendered + LOOKed.",
+      "note": "1.8V JW, WSON-8 6x5mm (pkg P per DS revE ordering); EP pad 9 carries no internal signal (float or GND, DS p68) — now EXPOSED as a pin (the old symbol hid it, [FULL] miss). NEVER interchange with the 3.3V JV."
+    }
+  }
+}
