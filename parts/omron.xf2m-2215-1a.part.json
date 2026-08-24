@@ -1,0 +1,90 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "omron.xf2m-2215-1a",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Omron",
+      "normalized": "omron"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "XF2M-2215-1A",
+      "canonical": "XF2M-2215-1A",
+      "comparison_key": "XF2M-2215-1A",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C231416"
+      }
+    ],
+    "description": "22P 0.5mm FPC/FFC rotary backlock; terminals 1..22 are vendor-numbered (No.1 at the reference pin mark), hold-downs are unnumbered by Omron — 23/24 is the land convention. Land = hydra's DS-nominal pads (0.25x1.1 at 0.5); the old CON22_1X22_DRB_XF2C_TYC bare-dir land (XF2C-labelled, 0.81mm pads) stays as legacy for boards that pin it."
+  },
+  "names": {
+    "canonical": "XF2M-2215-1A",
+    "aliases": [],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/XF2M-2215-1A.kicad_sym",
+        "name": "XF2M-2215-1A"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/XF2M-2215-1A.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "4d023b9894a44c1a4aa9b88ec35f9f2ad115cdebf01e4ca4784a1bc8763d2883",
+      "internal_name": "XF2M-2215-1A"
+    },
+    {
+      "path": "footprints/central-agent.pretty/XF2M_2215_1A.kicad_mod",
+      "kind": "footprint",
+      "qualification": "unqualified-candidate",
+      "sha256": "00b8ddd1e799324e95a5099df5512579c5b9959d702f6e1e9f1f8d4d2f269388",
+      "internal_name": "XF2M_2215_1A"
+    }
+  ],
+  "relationships": [
+    {
+      "kind": "declares-footprint",
+      "source_asset": "symbols/XF2M-2215-1A.kicad_sym",
+      "target": {
+        "asset_path": "footprints/central-agent.pretty/XF2M_2215_1A.kicad_mod"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "Promotion supplied this footprint as a candidate; it is not qualified by a symbol-only draft."
+    }
+  ],
+  "provenance": {
+    "repository_commit": "e266e1e041103336596e5383c9109a286750a476",
+    "source_board": "hydra",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/XF2M-2215-1A.kicad_sym",
+        "evidence": "First-import fit pass: V1 re-author 2026-08-24 (xf2m.md): pin-sequential strip (B12/L22, Sige5 p21 idiom), captioned HOLD-DOWN gap, names hidden at symbol level (numbers are the connector identity), pitch 3.81, pin length 5.08, width from ink 15.24; rendered + LOOKed on a scratch sheet."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "V1 re-author 2026-08-24 (xf2m.md): pin-sequential strip (B12/L22, Sige5 p21 idiom), captioned HOLD-DOWN gap, names hidden at symbol level (numbers are the connector identity), pitch 3.81, pin length 5.08, width from ink 15.24; rendered + LOOKed on a scratch sheet.",
+      "note": "22P 0.5mm FPC/FFC rotary backlock; terminals 1..22 are vendor-numbered (No.1 at the reference pin mark), hold-downs are unnumbered by Omron — 23/24 is the land convention. Land = hydra's DS-nominal pads (0.25x1.1 at 0.5); the old CON22_1X22_DRB_XF2C_TYC bare-dir land (XF2C-labelled, 0.81mm pads) stays as legacy for boards that pin it."
+    }
+  }
+}
