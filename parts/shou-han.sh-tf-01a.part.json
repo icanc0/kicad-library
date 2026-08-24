@@ -1,0 +1,96 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "shou-han.sh-tf-01a",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "SHOU HAN",
+      "normalized": "shou-han"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "SH-TF-01A",
+      "canonical": "SH-TF-01A",
+      "comparison_key": "SH-TF-01A",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C22383473"
+      }
+    ],
+    "description": "Push-push microSD/TF socket; pads 9-13 (Cd + 4 shell tabs) numbered per the LCSC/EasyEDA convention, not the vendor drawing (tabs are unnumbered there). Land drawing-verified <=0.1mm vs the SHOU HAN customer drawing (hydra symbols-0824 tf01a review)."
+  },
+  "names": {
+    "canonical": "SH-TF-01A",
+    "aliases": [],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/SH-TF-01A.kicad_sym",
+        "name": "SH-TF-01A"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/SH-TF-01A.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "4367cd4b2e46ae61e6c91e746bf396848723f37c88d31e1670181d09a6e10342",
+      "internal_name": "SH-TF-01A"
+    },
+    {
+      "path": "footprints/central-agent.pretty/SH_TF_01A_MICROSD.kicad_mod",
+      "kind": "footprint",
+      "qualification": "unqualified-candidate",
+      "sha256": "54bd3e64936c3b1d754a49c08e1b0ccd2e1d1b4d700854eba98783d0a341e131",
+      "internal_name": "SH_TF_01A_MICROSD"
+    }
+  ],
+  "relationships": [
+    {
+      "kind": "declares-footprint",
+      "source_asset": "symbols/SH-TF-01A.kicad_sym",
+      "target": {
+        "asset_path": "footprints/central-agent.pretty/SH_TF_01A_MICROSD.kicad_mod"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "Promotion supplied this footprint as a candidate; it is not qualified by a symbol-only draft."
+    }
+  ],
+  "provenance": {
+    "repository_commit": "312a9137c89294e56b1a41d56660e872f7ecfedc",
+    "source_board": "hydra",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/SH-TF-01A.kicad_sym",
+        "evidence": "First-import fit pass: V2 re-author 2026-08-24 (tf01a.md): names re-vendored (Cd, CD/DAT3, SHELL x4), VDD top-left, SD bus functional order, VSS+SHELL right column (bottom comb removed), supplies power_in, CLK input; rendered + LOOKed on a scratch sheet."
+      },
+      {
+        "kind": "datasheet",
+        "path": "datasheets/shtf01a-shouhan-c22383473.pdf",
+        "locator": "p.1 customer drawing rev A: pin table (1 DAT2, 2 CD/DAT3, 3 CMD, 4 VDD, 5 CLK, 6 VSS, 7 DAT0, 8 DAT1) + contact row 'Cd 8 7 6 5 4 3 2 1' + 4 unnumbered shell tabs",
+        "evidence": "SHOU HAN drawing vendored from hydra datasheets/connectors/SHTF01A_C22383473.pdf; land SH_TF_01A_MICROSD cross-checked against it to <=0.1mm (tf01a review 2026-08-24). Detect contract: Cd-to-SHELL closes on card insertion (bench-confirmed) — ground the shell tabs, pull Cd up, read active-low on insert."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "V2 re-author 2026-08-24 (tf01a.md): names re-vendored (Cd, CD/DAT3, SHELL x4), VDD top-left, SD bus functional order, VSS+SHELL right column (bottom comb removed), supplies power_in, CLK input; rendered + LOOKed on a scratch sheet.",
+      "note": "Push-push microSD/TF socket; pads 9-13 (Cd + 4 shell tabs) numbered per the LCSC/EasyEDA convention, not the vendor drawing (tabs are unnumbered there). Land drawing-verified <=0.1mm vs the SHOU HAN customer drawing (hydra symbols-0824 tf01a review)."
+    }
+  }
+}
