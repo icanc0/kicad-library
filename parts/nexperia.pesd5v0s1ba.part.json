@@ -1,0 +1,73 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "nexperia.pesd5v0s1ba",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Nexperia",
+      "normalized": "nexperia"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "PESD5V0S1BA",
+      "canonical": "PESD5V0S1BA",
+      "comparison_key": "PESD5V0S1BA",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C2827694"
+      }
+    ],
+    "description": "Bidirectional ESD diode, SOD-323 (SC-76); symmetric, marking bar cosmetic. Stock Device:D_TVS glyph carried verbatim; vendor pin names K1/K2 (DS v.6 Table 2). Diode:PESD5V0S1UL is the UNIdirectional SOD-882 part — never substitute."
+  },
+  "names": {
+    "canonical": "PESD5V0S1BA",
+    "aliases": [],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/PESD5V0S1BA.kicad_sym",
+        "name": "PESD5V0S1BA"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/PESD5V0S1BA.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "9c873b27262cc61f669aaedc061174a5dcc59a890ebff7f8dcb7be6a2c28783d",
+      "internal_name": "PESD5V0S1BA"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "3a76e70347eebf8d5e0125d76da7f3b8d563acd9",
+    "source_board": "hydra",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/PESD5V0S1BA.kicad_sym",
+        "evidence": "First-import fit pass: New central exact-identity derivative 2026-08-24 (discretes.md finding 8): D_TVS bowtie glyph + K1/K2 names + Diode_SMD:D_SOD-323 + vendored Nexperia DS; rendered + LOOKed on a scratch sheet."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "New central exact-identity derivative 2026-08-24 (discretes.md finding 8): D_TVS bowtie glyph + K1/K2 names + Diode_SMD:D_SOD-323 + vendored Nexperia DS; rendered + LOOKed on a scratch sheet.",
+      "note": "Bidirectional ESD diode, SOD-323 (SC-76); symmetric, marking bar cosmetic. Stock Device:D_TVS glyph carried verbatim; vendor pin names K1/K2 (DS v.6 Table 2). Diode:PESD5V0S1UL is the UNIdirectional SOD-882 part — never substitute."
+    }
+  }
+}
