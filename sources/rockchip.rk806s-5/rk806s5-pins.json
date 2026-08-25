@@ -1,0 +1,695 @@
+{
+ "source": "datasheets/RK806-Datasheet-V1.4.pdf \u00a72.7 Pinout Number Order pp.15-16 (pdftotext -layout); \u00a72.6 Fig 2-2 p14; \u00a71.1 block diagram p9; \u00a71.2 features p7",
+ "pins": [
+  {
+   "pin": 1,
+   "ds_name": "VCC9",
+   "ds_io": "I",
+   "ds_desc": "Power supply of buck9",
+   "pindata_name": "VCC9",
+   "shipped_name": "VCC9",
+   "shipped_etype": "power_in",
+   "name_match": true
+  },
+  {
+   "pin": 2,
+   "ds_name": "SYNC",
+   "ds_io": "I/O",
+   "ds_desc": "Master and slave synchronization signal",
+   "pindata_name": "SYNC",
+   "shipped_name": "SYNC",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 3,
+   "ds_name": "SYNC_CLK",
+   "ds_io": "I/O",
+   "ds_desc": "32k synchronization clk",
+   "pindata_name": "SYNC_CLK",
+   "shipped_name": "SYNC_CLK",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 4,
+   "ds_name": "PWRON",
+   "ds_io": "I",
+   "ds_desc": "Power on key, ~45K pull-up to VCCA",
+   "pindata_name": "PWRON",
+   "shipped_name": "PWRON",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 5,
+   "ds_name": "VOUT8",
+   "ds_io": "I",
+   "ds_desc": "Output feedback voltage of buck8",
+   "pindata_name": "VOUT8",
+   "shipped_name": "VOUT8",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 6,
+   "ds_name": "SW8",
+   "ds_io": "O",
+   "ds_desc": "Switching node of buck8",
+   "pindata_name": "SW8",
+   "shipped_name": "SW8",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 7,
+   "ds_name": "VCC8",
+   "ds_io": "I",
+   "ds_desc": "Power supply of buck8",
+   "pindata_name": "VCC8",
+   "shipped_name": "VCC8",
+   "shipped_etype": "power_in",
+   "name_match": true
+  },
+  {
+   "pin": 8,
+   "ds_name": "NLDO5",
+   "ds_io": "O",
+   "ds_desc": "NMOS LDO5 output",
+   "pindata_name": "NLDO5",
+   "shipped_name": "NLDO5",
+   "shipped_etype": "power_out",
+   "name_match": true
+  },
+  {
+   "pin": 9,
+   "ds_name": "VCC14",
+   "ds_io": "I",
+   "ds_desc": "Power supply of NLDO4/5",
+   "pindata_name": "VCC14",
+   "shipped_name": "VCC14",
+   "shipped_etype": "power_in",
+   "name_match": true
+  },
+  {
+   "pin": 10,
+   "ds_name": "NLDO4",
+   "ds_io": "O",
+   "ds_desc": "NMOS LDO4 output",
+   "pindata_name": "NLDO4",
+   "shipped_name": "NLDO4",
+   "shipped_etype": "power_out",
+   "name_match": true
+  },
+  {
+   "pin": 11,
+   "ds_name": "NLDO3",
+   "ds_io": "O",
+   "ds_desc": "NMOS LDO3 output",
+   "pindata_name": "NLDO3",
+   "shipped_name": "NLDO3",
+   "shipped_etype": "power_out",
+   "name_match": true
+  },
+  {
+   "pin": 12,
+   "ds_name": "NLDO2",
+   "ds_io": "O",
+   "ds_desc": "NMOS LDO2 output",
+   "pindata_name": "NLDO2",
+   "shipped_name": "NLDO2",
+   "shipped_etype": "power_out",
+   "name_match": true
+  },
+  {
+   "pin": 13,
+   "ds_name": "VCC13",
+   "ds_io": "I",
+   "ds_desc": "Power supply of NLDO1/2/3",
+   "pindata_name": "VCC13",
+   "shipped_name": "VCC13",
+   "shipped_etype": "power_in",
+   "name_match": true
+  },
+  {
+   "pin": 14,
+   "ds_name": "NLDO1",
+   "ds_io": "O",
+   "ds_desc": "NMOS LDO1 output",
+   "pindata_name": "NLDO1",
+   "shipped_name": "NLDO1",
+   "shipped_etype": "power_out",
+   "name_match": true
+  },
+  {
+   "pin": 15,
+   "ds_name": "MOSI/SDA",
+   "ds_io": "I/O",
+   "ds_desc": "SPI MOSI. I2C SDA",
+   "pindata_name": "MOSI_SDA",
+   "shipped_name": "SDA",
+   "shipped_etype": "bidirectional",
+   "name_match": false
+  },
+  {
+   "pin": 16,
+   "ds_name": "MISO/PWRCRTL3",
+   "ds_io": "I/O",
+   "ds_desc": "SPI MISO. PWRCTRL3 control",
+   "pindata_name": "MISO_PWRCTRL3",
+   "shipped_name": "MISO",
+   "shipped_etype": "passive",
+   "name_match": false
+  },
+  {
+   "pin": 17,
+   "ds_name": "CLK/SCL",
+   "ds_io": "I",
+   "ds_desc": "SPI CLK. I2C SCL",
+   "pindata_name": "CLK_SCL",
+   "shipped_name": "SCL",
+   "shipped_etype": "bidirectional",
+   "name_match": false
+  },
+  {
+   "pin": 18,
+   "ds_name": "CS",
+   "ds_io": "I",
+   "ds_desc": "SPI/I2C mode select at power-on; SPI CS",
+   "pindata_name": "CS",
+   "shipped_name": "CS",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 19,
+   "ds_name": "INT",
+   "ds_io": "O",
+   "ds_desc": "Interrupt",
+   "pindata_name": "INT",
+   "shipped_name": "INT",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 20,
+   "ds_name": "VCCIO",
+   "ds_io": "O",
+   "ds_desc": "Output for I2C/SPI (PLDO6 output, fed from VCCA \u2014 block diagram p9)",
+   "pindata_name": "VCCIO",
+   "shipped_name": "VCCIO",
+   "shipped_etype": "power_out",
+   "name_match": true
+  },
+  {
+   "pin": 21,
+   "ds_name": "VCCA",
+   "ds_io": "I",
+   "ds_desc": "Analog power supply; supply of PLDO6/RESETB/INT and system logic",
+   "pindata_name": "VCCA",
+   "shipped_name": "VCCA",
+   "shipped_etype": "power_in",
+   "name_match": true
+  },
+  {
+   "pin": 22,
+   "ds_name": "VCC4",
+   "ds_io": "I",
+   "ds_desc": "Power supply of buck4",
+   "pindata_name": "VCC4",
+   "shipped_name": "VCC4",
+   "shipped_etype": "power_in",
+   "name_match": true
+  },
+  {
+   "pin": 23,
+   "ds_name": "SW4",
+   "ds_io": "O",
+   "ds_desc": "Switching node of buck4",
+   "pindata_name": "SW4",
+   "shipped_name": "SW4",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 24,
+   "ds_name": "VOUT4",
+   "ds_io": "I",
+   "ds_desc": "Output feedback voltage of buck4",
+   "pindata_name": "VOUT4",
+   "shipped_name": "VOUT4",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 25,
+   "ds_name": "VOUT10",
+   "ds_io": "I",
+   "ds_desc": "Output feedback voltage of buck10",
+   "pindata_name": "VOUT10",
+   "shipped_name": "VOUT10",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 26,
+   "ds_name": "SW10",
+   "ds_io": "O",
+   "ds_desc": "Switching node of buck10",
+   "pindata_name": "SW10",
+   "shipped_name": "SW10",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 27,
+   "ds_name": "VCC10",
+   "ds_io": "I",
+   "ds_desc": "Power supply of buck10",
+   "pindata_name": "VCC10",
+   "shipped_name": "VCC10",
+   "shipped_etype": "power_in",
+   "name_match": true
+  },
+  {
+   "pin": 28,
+   "ds_name": "VCC6",
+   "ds_io": "I",
+   "ds_desc": "Power supply of buck6",
+   "pindata_name": "VCC6",
+   "shipped_name": "VCC6",
+   "shipped_etype": "power_in",
+   "name_match": true
+  },
+  {
+   "pin": 29,
+   "ds_name": "SW6",
+   "ds_io": "O",
+   "ds_desc": "Switching node of buck6",
+   "pindata_name": "SW6",
+   "shipped_name": "SW6",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 30,
+   "ds_name": "VOUT6",
+   "ds_io": "I",
+   "ds_desc": "Output feedback voltage of buck6",
+   "pindata_name": "VOUT6",
+   "shipped_name": "VOUT6",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 31,
+   "ds_name": "FB6",
+   "ds_io": "I",
+   "ds_desc": "Extended divided resistor mode feedback of buck6",
+   "pindata_name": "FB6",
+   "shipped_name": "FB6",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 32,
+   "ds_name": "VDC",
+   "ds_io": "I",
+   "ds_desc": "VDC power on signal",
+   "pindata_name": "VDC",
+   "shipped_name": "VDC",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 33,
+   "ds_name": "VCC2",
+   "ds_io": "I",
+   "ds_desc": "Power supply of buck2",
+   "pindata_name": "VCC2_1",
+   "shipped_name": "VCC2_1",
+   "shipped_etype": "power_in",
+   "name_match": false
+  },
+  {
+   "pin": 34,
+   "ds_name": "VCC2",
+   "ds_io": "I",
+   "ds_desc": "Power supply of buck2",
+   "pindata_name": "VCC2_2",
+   "shipped_name": "VCC2_2",
+   "shipped_etype": "power_in",
+   "name_match": false
+  },
+  {
+   "pin": 35,
+   "ds_name": "SW2",
+   "ds_io": "O",
+   "ds_desc": "Switching node of buck2",
+   "pindata_name": "SW2_1",
+   "shipped_name": "SW2_1",
+   "shipped_etype": "passive",
+   "name_match": false
+  },
+  {
+   "pin": 36,
+   "ds_name": "SW2",
+   "ds_io": "O",
+   "ds_desc": "Switching node of buck2",
+   "pindata_name": "SW2_2",
+   "shipped_name": "SW2_2",
+   "shipped_etype": "passive",
+   "name_match": false
+  },
+  {
+   "pin": 37,
+   "ds_name": "VOUT2",
+   "ds_io": "I",
+   "ds_desc": "Output feedback voltage of buck2",
+   "pindata_name": "VOUT2",
+   "shipped_name": "VOUT2",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 38,
+   "ds_name": "FB2",
+   "ds_io": "I",
+   "ds_desc": "External divided resistor mode feedback of buck2",
+   "pindata_name": "FB2",
+   "shipped_name": "FB2",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 39,
+   "ds_name": "EXT_EN",
+   "ds_io": "I/O",
+   "ds_desc": "Control extended DCDC enable. Master/Slave select",
+   "pindata_name": "EXT_EN",
+   "shipped_name": "EXT_EN",
+   "shipped_etype": "output",
+   "name_match": true
+  },
+  {
+   "pin": 40,
+   "ds_name": "RESETB",
+   "ds_io": "I/O",
+   "ds_desc": "Reset the AP; <=0.3uF to GND",
+   "pindata_name": "RESETB",
+   "shipped_name": "RESETB",
+   "shipped_etype": "output",
+   "name_match": true
+  },
+  {
+   "pin": 41,
+   "ds_name": "VOUT7",
+   "ds_io": "I",
+   "ds_desc": "Output feedback voltage of buck7",
+   "pindata_name": "VOUT7",
+   "shipped_name": "VOUT7",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 42,
+   "ds_name": "SW7",
+   "ds_io": "O",
+   "ds_desc": "Switching node of buck7",
+   "pindata_name": "SW7",
+   "shipped_name": "SW7",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 43,
+   "ds_name": "VCC7",
+   "ds_io": "I",
+   "ds_desc": "Power supply of buck7",
+   "pindata_name": "VCC7",
+   "shipped_name": "VCC7",
+   "shipped_etype": "power_in",
+   "name_match": true
+  },
+  {
+   "pin": 44,
+   "ds_name": "VCC5",
+   "ds_io": "I",
+   "ds_desc": "Power supply of buck5",
+   "pindata_name": "VCC5",
+   "shipped_name": "VCC5",
+   "shipped_etype": "power_in",
+   "name_match": true
+  },
+  {
+   "pin": 45,
+   "ds_name": "SW5",
+   "ds_io": "O",
+   "ds_desc": "Switching node of buck5",
+   "pindata_name": "SW5",
+   "shipped_name": "SW5",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 46,
+   "ds_name": "VOUT5",
+   "ds_io": "I",
+   "ds_desc": "Output feedback voltage of buck5",
+   "pindata_name": "VOUT5",
+   "shipped_name": "VOUT5",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 47,
+   "ds_name": "FB5",
+   "ds_io": "I",
+   "ds_desc": "External divided resistor mode feedback of buck5",
+   "pindata_name": "FB5",
+   "shipped_name": "FB5",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 48,
+   "ds_name": "FB1",
+   "ds_io": "I",
+   "ds_desc": "External divided resistor mode feedback of buck1",
+   "pindata_name": "FB1",
+   "shipped_name": "FB1",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 49,
+   "ds_name": "VOUT1",
+   "ds_io": "I",
+   "ds_desc": "Output feedback voltage of buck1",
+   "pindata_name": "VOUT1",
+   "shipped_name": "VOUT1",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 50,
+   "ds_name": "SW1",
+   "ds_io": "O",
+   "ds_desc": "Switching node of buck1",
+   "pindata_name": "SW1_1",
+   "shipped_name": "SW1_1",
+   "shipped_etype": "passive",
+   "name_match": false
+  },
+  {
+   "pin": 51,
+   "ds_name": "SW1",
+   "ds_io": "O",
+   "ds_desc": "Switching node of buck1",
+   "pindata_name": "SW1_2",
+   "shipped_name": "SW1_2",
+   "shipped_etype": "passive",
+   "name_match": false
+  },
+  {
+   "pin": 52,
+   "ds_name": "VCC1",
+   "ds_io": "I",
+   "ds_desc": "Power supply of buck1",
+   "pindata_name": "VCC1_1",
+   "shipped_name": "VCC1_1",
+   "shipped_etype": "power_in",
+   "name_match": false
+  },
+  {
+   "pin": 53,
+   "ds_name": "VCC1",
+   "ds_io": "I",
+   "ds_desc": "Power supply of buck1",
+   "pindata_name": "VCC1_2",
+   "shipped_name": "VCC1_2",
+   "shipped_etype": "power_in",
+   "name_match": false
+  },
+  {
+   "pin": 54,
+   "ds_name": "VCC3",
+   "ds_io": "I",
+   "ds_desc": "Power supply of buck3",
+   "pindata_name": "VCC3",
+   "shipped_name": "VCC3",
+   "shipped_etype": "power_in",
+   "name_match": true
+  },
+  {
+   "pin": 55,
+   "ds_name": "SW3",
+   "ds_io": "O",
+   "ds_desc": "Switching node of buck3",
+   "pindata_name": "SW3",
+   "shipped_name": "SW3",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 56,
+   "ds_name": "VOUT3",
+   "ds_io": "I",
+   "ds_desc": "Output feedback voltage of buck3",
+   "pindata_name": "VOUT3",
+   "shipped_name": "VOUT3",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 57,
+   "ds_name": "PLDO3",
+   "ds_io": "O",
+   "ds_desc": "PMOS LDO3 output",
+   "pindata_name": "PLDO3",
+   "shipped_name": "PLDO3",
+   "shipped_etype": "power_out",
+   "name_match": true
+  },
+  {
+   "pin": 58,
+   "ds_name": "PLDO2",
+   "ds_io": "O",
+   "ds_desc": "PMOS LDO2 output",
+   "pindata_name": "PLDO2",
+   "shipped_name": "PLDO2",
+   "shipped_etype": "power_out",
+   "name_match": true
+  },
+  {
+   "pin": 59,
+   "ds_name": "VCC11",
+   "ds_io": "I",
+   "ds_desc": "Power supply of PLDO1/2/3",
+   "pindata_name": "VCC11",
+   "shipped_name": "VCC11",
+   "shipped_etype": "power_in",
+   "name_match": true
+  },
+  {
+   "pin": 60,
+   "ds_name": "PLDO1",
+   "ds_io": "O",
+   "ds_desc": "PMOS LDO1 output",
+   "pindata_name": "PLDO1",
+   "shipped_name": "PLDO1",
+   "shipped_etype": "power_out",
+   "name_match": true
+  },
+  {
+   "pin": 61,
+   "ds_name": "PWRCRTL2",
+   "ds_io": "I/O",
+   "ds_desc": "PWRCTRL2 control (DS table typo PWRCRTL; \u00a71 revision note 6 spells PWRCTRLn)",
+   "pindata_name": "PWRCTRL2",
+   "shipped_name": "PWRCTRL2",
+   "shipped_etype": "input",
+   "name_match": false
+  },
+  {
+   "pin": 62,
+   "ds_name": "PWRCRTL1",
+   "ds_io": "I/O",
+   "ds_desc": "PWRCTRL1 control",
+   "pindata_name": "PWRCTRL1",
+   "shipped_name": "PWRCTRL1",
+   "shipped_etype": "input",
+   "name_match": false
+  },
+  {
+   "pin": 63,
+   "ds_name": "PLDO4",
+   "ds_io": "O",
+   "ds_desc": "PMOS LDO4 output",
+   "pindata_name": "PLDO4",
+   "shipped_name": "PLDO4",
+   "shipped_etype": "power_out",
+   "name_match": true
+  },
+  {
+   "pin": 64,
+   "ds_name": "VCC12",
+   "ds_io": "I",
+   "ds_desc": "Power supply of PLDO4/5",
+   "pindata_name": "VCC12",
+   "shipped_name": "VCC12",
+   "shipped_etype": "power_in",
+   "name_match": true
+  },
+  {
+   "pin": 65,
+   "ds_name": "PLDO5",
+   "ds_io": "O",
+   "ds_desc": "PMOS LDO5 output",
+   "pindata_name": "PLDO5",
+   "shipped_name": "PLDO5",
+   "shipped_etype": "power_out",
+   "name_match": true
+  },
+  {
+   "pin": 66,
+   "ds_name": "FB9",
+   "ds_io": "I",
+   "ds_desc": "External divided resistor mode feedback of buck9",
+   "pindata_name": "FB9",
+   "shipped_name": "FB9",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 67,
+   "ds_name": "VOUT9",
+   "ds_io": "I",
+   "ds_desc": "Output feedback voltage of buck9",
+   "pindata_name": "VOUT9",
+   "shipped_name": "VOUT9",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 68,
+   "ds_name": "SW9",
+   "ds_io": "O",
+   "ds_desc": "Switching node of buck9",
+   "pindata_name": "SW9",
+   "shipped_name": "SW9",
+   "shipped_etype": "passive",
+   "name_match": true
+  },
+  {
+   "pin": 69,
+   "ds_name": "ePAD",
+   "ds_io": "-",
+   "ds_desc": "Ground (Exposed pad; the ONLY ground of the package)",
+   "pindata_name": "EPAD",
+   "shipped_name": "EPAD",
+   "shipped_etype": "power_in",
+   "name_match": false
+  }
+ ]
+}

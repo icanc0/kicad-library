@@ -1,0 +1,106 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "rockchip.rk806s-5",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Rockchip",
+      "normalized": "rockchip"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "RK806S-5",
+      "canonical": "RK806S-5",
+      "comparison_key": "RK806S-5",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C49174044"
+      }
+    ],
+    "description": "family key RK806: RK806-1/-2/-3/S-5 are OTP programs of ONE die (DS §2.1), Value/MPN carry the variant. hydra authors from sources/rockchip.rk806s-5/ (generator = source of truth, declared-sides safety); other boards load central"
+  },
+  "names": {
+    "canonical": "RK806S-5",
+    "aliases": [
+      "RK806"
+    ],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/RK806.kicad_sym",
+        "name": "RK806"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/RK806.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "0d05e8a6c3e2ac7f23a7ee7b4595c2cdbb3c1f0f3b6a7bec48a94ac52aa7bae0",
+      "internal_name": "RK806"
+    },
+    {
+      "path": "footprints/central-agent.pretty/RK806_QFN68.kicad_mod",
+      "kind": "footprint",
+      "qualification": "unqualified-candidate",
+      "sha256": "62455d9a4adb624240e370f71a9546e90c0ce35a9216db6f9f163bafa77a6e97",
+      "internal_name": "RK806_QFN68"
+    }
+  ],
+  "relationships": [
+    {
+      "kind": "declares-footprint",
+      "source_asset": "symbols/RK806.kicad_sym",
+      "target": {
+        "asset_path": "footprints/central-agent.pretty/RK806_QFN68.kicad_mod"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "Promotion supplied this footprint as a candidate; it is not qualified by a symbol-only draft."
+    }
+  ],
+  "provenance": {
+    "repository_commit": "b5468d8bd42fc40eb6901f653f1a2c0d361f3f9a",
+    "source_board": "hydra",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/RK806.kicad_sym",
+        "evidence": "First-import fit pass: hydra symbol campaign 2026-08-24 (review verify/symbols-0824/review/rk806s5.md, Variant B winner): 12 units — BUCK1..10 one tile per stage (VOUT above SW above FB, L25 anatomy, room for the inline SW->L->VOUT stage at owner-ordered pitch 7.62), LDO, CONTROL; DS V1.4 §2.7 names verbatim incl. doubled VCC1/SW1/VCC2/SW2 pads (PWRCTRLn spelling per DS revision note 6); in-context LOOK on placed U2 across the PMIC sheet — crops + LOOK notes at hydra verify/symbols-0824/after/rk806/{REPORT.md,crops/}; verify8 v-pmic verdict CLEAN (69/69 re-derived vs DS §2.7 pp.15-16)"
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "hydra symbol campaign 2026-08-24 (review verify/symbols-0824/review/rk806s5.md, Variant B winner): 12 units — BUCK1..10 one tile per stage (VOUT above SW above FB, L25 anatomy, room for the inline SW->L->VOUT stage at owner-ordered pitch 7.62), LDO, CONTROL; DS V1.4 §2.7 names verbatim incl. doubled VCC1/SW1/VCC2/SW2 pads (PWRCTRLn spelling per DS revision note 6); in-context LOOK on placed U2 across the PMIC sheet — crops + LOOK notes at hydra verify/symbols-0824/after/rk806/{REPORT.md,crops/}; verify8 v-pmic verdict CLEAN (69/69 re-derived vs DS §2.7 pp.15-16)",
+      "note": "family key RK806: RK806-1/-2/-3/S-5 are OTP programs of ONE die (DS §2.1), Value/MPN carry the variant. hydra authors from sources/rockchip.rk806s-5/ (generator = source of truth, declared-sides safety); other boards load central",
+      "pin_gate": {
+        "symbol": "RK806",
+        "lcsc": "C49174044",
+        "facts_checked": true,
+        "board_context": "/home/vincent/projects/hydra",
+        "state": "waived",
+        "gaps": [
+          {
+            "code": "PIN-FACTS",
+            "detail": "ds_pin_ready(C49174044) is not ready over 69 pin(s): 0 fact(s), missing pins ['1', '10', '11', '12', '13', '14', '15', '16'], single-source [], disputed [] — two independent verified sources per pin (docs/10) before the SHARED library carries this map"
+          }
+        ],
+        "allow_pin_gaps": "verify8 v-pmic independently re-derived DS V1.4 §2.7 pp.15-16 — 69/69 pads match, verdict CLEAN; the per-pin ds facts DB carries no rows for C49174044 (subject never populated); ball-level truth vendored at sources/rockchip.rk806s-5/rk806s5-pins.json"
+      }
+    }
+  }
+}
