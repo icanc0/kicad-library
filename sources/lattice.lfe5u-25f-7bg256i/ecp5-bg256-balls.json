@@ -1,0 +1,2771 @@
+{
+ "A1": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "A2": {
+  "name": "PT4A",
+  "bsdl_secfnc": null,
+  "bank": 0,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C4A",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "A3": {
+  "name": "PT6A",
+  "bsdl_secfnc": null,
+  "bank": 0,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C6A",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "A4": {
+  "name": "PT6B",
+  "bsdl_secfnc": null,
+  "bank": 0,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C6B",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "A5": {
+  "name": "PT18A",
+  "bsdl_secfnc": null,
+  "bank": 0,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C18A",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "A6": {
+  "name": "PT18B",
+  "bsdl_secfnc": null,
+  "bank": 0,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C18B",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "A7": {
+  "name": "PT29A",
+  "bsdl_secfnc": "PCLKT0_0",
+  "bank": 0,
+  "dqs": null,
+  "iodb_function": "PCLKT0_0",
+  "pio": "R0C29A",
+  "class": "PIO",
+  "dual_function": [
+   "PCLKT0_0"
+  ]
+ },
+ "A8": {
+  "name": "PT29B",
+  "bsdl_secfnc": null,
+  "bank": 0,
+  "dqs": null,
+  "iodb_function": "PCLKC0_0",
+  "pio": "R0C29B",
+  "class": "PIO",
+  "dual_function": [
+   "PCLKC0_0"
+  ]
+ },
+ "A9": {
+  "name": "PT42A",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C42A",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "A10": {
+  "name": "PT42B",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C42B",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "A11": {
+  "name": "PT53A",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C53A",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "A12": {
+  "name": "PT53B",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C53B",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "A13": {
+  "name": "PT65A",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C65A",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "A14": {
+  "name": "PT65B",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C65B",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "A15": {
+  "name": "PT67B",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C67B",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "A16": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "B1": {
+  "name": "PL2A",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "dqs": "LDQ8",
+  "iodb_function": null,
+  "pio": "R2C0A",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ8"
+  ]
+ },
+ "B2": {
+  "name": "PL2B",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "dqs": "LDQ8",
+  "iodb_function": null,
+  "pio": "R2C0B",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ8"
+  ]
+ },
+ "B3": {
+  "name": "PT4B",
+  "bsdl_secfnc": null,
+  "bank": 0,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C4B",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "B4": {
+  "name": "PT11B",
+  "bsdl_secfnc": null,
+  "bank": 0,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C11B",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "B5": {
+  "name": "PT15B",
+  "bsdl_secfnc": null,
+  "bank": 0,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C15B",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "B6": {
+  "name": "PT22B",
+  "bsdl_secfnc": null,
+  "bank": 0,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C22B",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "B7": {
+  "name": "PT27B",
+  "bsdl_secfnc": null,
+  "bank": 0,
+  "dqs": null,
+  "iodb_function": "PCLKC0_1",
+  "pio": "R0C27B",
+  "class": "PIO",
+  "dual_function": [
+   "PCLKC0_1"
+  ]
+ },
+ "B8": {
+  "name": "PT35B",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": "PCLKC1_0",
+  "pio": "R0C35B",
+  "class": "PIO",
+  "dual_function": [
+   "PCLKC1_0"
+  ]
+ },
+ "B9": {
+  "name": "PT38A",
+  "bsdl_secfnc": "GR_PCLK1_0",
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": "GR_PCLK1_0",
+  "pio": "R0C38A",
+  "class": "PIO",
+  "dual_function": [
+   "GR_PCLK1_0"
+  ]
+ },
+ "B10": {
+  "name": "PT44A",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C44A",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "B11": {
+  "name": "PT49A",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C49A",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "B12": {
+  "name": "PT56A",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C56A",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "B13": {
+  "name": "PT60A",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C60A",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "B14": {
+  "name": "PT67A",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C67A",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "B15": {
+  "name": "PR2B",
+  "bsdl_secfnc": "S0_IN",
+  "bank": 2,
+  "dqs": "RDQ8",
+  "iodb_function": "S0_IN",
+  "pio": "R2C72B",
+  "class": "PIO",
+  "dual_function": [
+   "S0_IN",
+   "RDQ8"
+  ]
+ },
+ "B16": {
+  "name": "PR2A",
+  "bsdl_secfnc": null,
+  "bank": 2,
+  "dqs": "RDQ8",
+  "iodb_function": null,
+  "pio": "R2C72A",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ8"
+  ]
+ },
+ "C1": {
+  "name": "PL5A",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "dqs": "LDQ8",
+  "iodb_function": null,
+  "pio": "R5C0A",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ8"
+  ]
+ },
+ "C2": {
+  "name": "PL5B",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "dqs": "LDQ8",
+  "iodb_function": null,
+  "pio": "R5C0B",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ8"
+  ]
+ },
+ "C3": {
+  "name": "PL2C",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "dqs": "LDQ8",
+  "iodb_function": null,
+  "pio": "R2C0C",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ8"
+  ]
+ },
+ "C4": {
+  "name": "PT11A",
+  "bsdl_secfnc": null,
+  "bank": 0,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C11A",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "C5": {
+  "name": "PT15A",
+  "bsdl_secfnc": null,
+  "bank": 0,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C15A",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "C6": {
+  "name": "PT22A",
+  "bsdl_secfnc": null,
+  "bank": 0,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C22A",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "C7": {
+  "name": "PT27A",
+  "bsdl_secfnc": "PCLKT0_1",
+  "bank": 0,
+  "dqs": null,
+  "iodb_function": "PCLKT0_1",
+  "pio": "R0C27A",
+  "class": "PIO",
+  "dual_function": [
+   "PCLKT0_1"
+  ]
+ },
+ "C8": {
+  "name": "PT35A",
+  "bsdl_secfnc": "PCLKT1_0",
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": "PCLKT1_0",
+  "pio": "R0C35A",
+  "class": "PIO",
+  "dual_function": [
+   "PCLKT1_0"
+  ]
+ },
+ "C9": {
+  "name": "PT38B",
+  "bsdl_secfnc": "GR_PCLK1_1",
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": "GR_PCLK1_1",
+  "pio": "R0C38B",
+  "class": "PIO",
+  "dual_function": [
+   "GR_PCLK1_1"
+  ]
+ },
+ "C10": {
+  "name": "PT44B",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C44B",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "C11": {
+  "name": "PT49B",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C49B",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "C12": {
+  "name": "PT56B",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C56B",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "C13": {
+  "name": "PT60B",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C60B",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "C14": {
+  "name": "PR2C",
+  "bsdl_secfnc": null,
+  "bank": 2,
+  "dqs": "RDQ8",
+  "iodb_function": null,
+  "pio": "R2C72C",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ8"
+  ]
+ },
+ "C15": {
+  "name": "PR5B",
+  "bsdl_secfnc": "S1_IN",
+  "bank": 2,
+  "dqs": "RDQ8",
+  "iodb_function": null,
+  "pio": "R5C72B",
+  "class": "PIO",
+  "dual_function": [
+   "S1_IN",
+   "RDQ8"
+  ]
+ },
+ "C16": {
+  "name": "PR5A",
+  "bsdl_secfnc": "S0_OUT",
+  "bank": 2,
+  "dqs": "RDQ8",
+  "iodb_function": null,
+  "pio": "R5C72A",
+  "class": "PIO",
+  "dual_function": [
+   "S0_OUT",
+   "RDQ8"
+  ]
+ },
+ "D1": {
+  "name": "PL8A",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "dqs": "LDQS8",
+  "iodb_function": null,
+  "pio": "R8C0A",
+  "class": "PIO",
+  "dual_function": [
+   "LDQS8"
+  ]
+ },
+ "D2": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "D3": {
+  "name": "PL2D",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "dqs": "LDQ8",
+  "iodb_function": null,
+  "pio": "R2C0D",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ8"
+  ]
+ },
+ "D4": {
+  "name": "PT9B",
+  "bsdl_secfnc": null,
+  "bank": 0,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C9B",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "D5": {
+  "name": "PT13B",
+  "bsdl_secfnc": null,
+  "bank": 0,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C13B",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "D6": {
+  "name": "PT20B",
+  "bsdl_secfnc": null,
+  "bank": 0,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C20B",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "D7": {
+  "name": "PT24B",
+  "bsdl_secfnc": "GR_PCLK0_0",
+  "bank": 0,
+  "dqs": null,
+  "iodb_function": "GR_PCLK0_0",
+  "pio": "R0C24B",
+  "class": "PIO",
+  "dual_function": [
+   "GR_PCLK0_0"
+  ]
+ },
+ "D8": {
+  "name": "PT33B",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": "PCLKC1_1",
+  "pio": "R0C33B",
+  "class": "PIO",
+  "dual_function": [
+   "PCLKC1_1"
+  ]
+ },
+ "D9": {
+  "name": "PT40A",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C40A",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "D10": {
+  "name": "PT47A",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C47A",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "D11": {
+  "name": "PT51A",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C51A",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "D12": {
+  "name": "PT58A",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C58A",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "D13": {
+  "name": "PT62A",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C62A",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "D14": {
+  "name": "PR2D",
+  "bsdl_secfnc": null,
+  "bank": 2,
+  "dqs": "RDQ8",
+  "iodb_function": null,
+  "pio": "R2C72D",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ8"
+  ]
+ },
+ "D15": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "D16": {
+  "name": "PR8A",
+  "bsdl_secfnc": null,
+  "bank": 2,
+  "dqs": "RDQS8",
+  "iodb_function": null,
+  "pio": "R8C72A",
+  "class": "PIO",
+  "dual_function": [
+   "RDQS8"
+  ]
+ },
+ "E1": {
+  "name": "PL11D",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "dqs": "LDQ8",
+  "iodb_function": null,
+  "pio": "R11C0D",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ8"
+  ]
+ },
+ "E2": {
+  "name": "PL8B",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "dqs": "LDQSN8",
+  "iodb_function": null,
+  "pio": "R8C0B",
+  "class": "PIO",
+  "dual_function": [
+   "LDQSN8"
+  ]
+ },
+ "E3": {
+  "name": "PL5C",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "dqs": "LDQ8",
+  "iodb_function": null,
+  "pio": "R5C0C",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ8"
+  ]
+ },
+ "E4": {
+  "name": "PT9A",
+  "bsdl_secfnc": null,
+  "bank": 0,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C9A",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "E5": {
+  "name": "PT13A",
+  "bsdl_secfnc": null,
+  "bank": 0,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C13A",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "E6": {
+  "name": "PT20A",
+  "bsdl_secfnc": null,
+  "bank": 0,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C20A",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "E7": {
+  "name": "PT24A",
+  "bsdl_secfnc": "GR_PCLK0_1",
+  "bank": 0,
+  "dqs": null,
+  "iodb_function": "GR_PCLK0_1",
+  "pio": "R0C24A",
+  "class": "PIO",
+  "dual_function": [
+   "GR_PCLK0_1"
+  ]
+ },
+ "E8": {
+  "name": "PT33A",
+  "bsdl_secfnc": "PCLKT1_1",
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": "PCLKT1_1",
+  "pio": "R0C33A",
+  "class": "PIO",
+  "dual_function": [
+   "PCLKT1_1"
+  ]
+ },
+ "E9": {
+  "name": "PT40B",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C40B",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "E10": {
+  "name": "PT47B",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C47B",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "E11": {
+  "name": "PT51B",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C51B",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "E12": {
+  "name": "PT58B",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C58B",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "E13": {
+  "name": "PT62B",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "dqs": null,
+  "iodb_function": null,
+  "pio": "R0C62B",
+  "class": "PIO",
+  "dual_function": []
+ },
+ "E14": {
+  "name": "PR5C",
+  "bsdl_secfnc": null,
+  "bank": 2,
+  "dqs": "RDQ8",
+  "iodb_function": null,
+  "pio": "R5C72C",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ8"
+  ]
+ },
+ "E15": {
+  "name": "PR8B",
+  "bsdl_secfnc": null,
+  "bank": 2,
+  "dqs": "RDQSN8",
+  "iodb_function": null,
+  "pio": "R8C72B",
+  "class": "PIO",
+  "dual_function": [
+   "RDQSN8"
+  ]
+ },
+ "E16": {
+  "name": "PR11D",
+  "bsdl_secfnc": null,
+  "bank": 2,
+  "dqs": "RDQ8",
+  "iodb_function": null,
+  "pio": "R11C72D",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ8"
+  ]
+ },
+ "F1": {
+  "name": "PL14A",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "dqs": "LDQ20",
+  "iodb_function": null,
+  "pio": "R14C0A",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ20"
+  ]
+ },
+ "F2": {
+  "name": "PL11C",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "dqs": "LDQ8",
+  "iodb_function": null,
+  "pio": "R11C0C",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ8"
+  ]
+ },
+ "F3": {
+  "name": "PL5D",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "dqs": "LDQ8",
+  "iodb_function": null,
+  "pio": "R5C0D",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ8"
+  ]
+ },
+ "F4": {
+  "name": "PL8C",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "dqs": "LDQ8",
+  "iodb_function": null,
+  "pio": "R8C0C",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ8"
+  ]
+ },
+ "F5": {
+  "name": "PL8D",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "dqs": "LDQ8",
+  "iodb_function": null,
+  "pio": "R8C0D",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ8"
+  ]
+ },
+ "F6": {
+  "name": "VCCIO0",
+  "bsdl_secfnc": null,
+  "bank": 0,
+  "class": "VCCIO",
+  "dual_function": []
+ },
+ "F7": {
+  "name": "VCCIO0",
+  "bsdl_secfnc": null,
+  "bank": 0,
+  "class": "VCCIO",
+  "dual_function": []
+ },
+ "F8": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "F9": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "F10": {
+  "name": "VCCIO1",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "class": "VCCIO",
+  "dual_function": []
+ },
+ "F11": {
+  "name": "VCCIO1",
+  "bsdl_secfnc": null,
+  "bank": 1,
+  "class": "VCCIO",
+  "dual_function": []
+ },
+ "F12": {
+  "name": "PR8D",
+  "bsdl_secfnc": null,
+  "bank": 2,
+  "dqs": "RDQ8",
+  "iodb_function": null,
+  "pio": "R8C72D",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ8"
+  ]
+ },
+ "F13": {
+  "name": "PR8C",
+  "bsdl_secfnc": null,
+  "bank": 2,
+  "dqs": "RDQ8",
+  "iodb_function": null,
+  "pio": "R8C72C",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ8"
+  ]
+ },
+ "F14": {
+  "name": "PR5D",
+  "bsdl_secfnc": null,
+  "bank": 2,
+  "dqs": "RDQ8",
+  "iodb_function": null,
+  "pio": "R5C72D",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ8"
+  ]
+ },
+ "F15": {
+  "name": "PR11C",
+  "bsdl_secfnc": null,
+  "bank": 2,
+  "dqs": "RDQ8",
+  "iodb_function": null,
+  "pio": "R11C72C",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ8"
+  ]
+ },
+ "F16": {
+  "name": "PR14A",
+  "bsdl_secfnc": "S1_OUT",
+  "bank": 2,
+  "dqs": "RDQ20",
+  "iodb_function": null,
+  "pio": "R14C72A",
+  "class": "PIO",
+  "dual_function": [
+   "S1_OUT",
+   "RDQ20"
+  ]
+ },
+ "G1": {
+  "name": "PL20A",
+  "bsdl_secfnc": "GR_PCLK7_1",
+  "bank": 7,
+  "dqs": "LDQS20",
+  "iodb_function": "GR_PCLK7_1",
+  "pio": "R20C0A",
+  "class": "PIO",
+  "dual_function": [
+   "GR_PCLK7_1",
+   "LDQS20"
+  ]
+ },
+ "G2": {
+  "name": "PL14B",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "dqs": "LDQ20",
+  "iodb_function": null,
+  "pio": "R14C0B",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ20"
+  ]
+ },
+ "G3": {
+  "name": "PL14C",
+  "bsdl_secfnc": "VREF1_7",
+  "bank": 7,
+  "dqs": "LDQ20",
+  "iodb_function": "VREF1_7",
+  "pio": "R14C0C",
+  "class": "PIO",
+  "dual_function": [
+   "VREF1_7",
+   "LDQ20"
+  ]
+ },
+ "G4": {
+  "name": "PL11B",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "dqs": "LDQ8",
+  "iodb_function": null,
+  "pio": "R11C0B",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ8"
+  ]
+ },
+ "G5": {
+  "name": "PL11A",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "dqs": "LDQ8",
+  "iodb_function": null,
+  "pio": "R11C0A",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ8"
+  ]
+ },
+ "G6": {
+  "name": "VCC",
+  "bsdl_secfnc": null,
+  "class": "VCC",
+  "dual_function": [],
+  "bank": null
+ },
+ "G7": {
+  "name": "VCC",
+  "bsdl_secfnc": null,
+  "class": "VCC",
+  "dual_function": [],
+  "bank": null
+ },
+ "G8": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "G9": {
+  "name": "VCC",
+  "bsdl_secfnc": null,
+  "class": "VCC",
+  "dual_function": [],
+  "bank": null
+ },
+ "G10": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "G11": {
+  "name": "VCCAUX",
+  "bsdl_secfnc": null,
+  "class": "VCCAUX",
+  "dual_function": [],
+  "bank": null
+ },
+ "G12": {
+  "name": "PR11A",
+  "bsdl_secfnc": null,
+  "bank": 2,
+  "dqs": "RDQ8",
+  "iodb_function": null,
+  "pio": "R11C72A",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ8"
+  ]
+ },
+ "G13": {
+  "name": "PR11B",
+  "bsdl_secfnc": null,
+  "bank": 2,
+  "dqs": "RDQ8",
+  "iodb_function": null,
+  "pio": "R11C72B",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ8"
+  ]
+ },
+ "G14": {
+  "name": "PR14C",
+  "bsdl_secfnc": "VREF1_2",
+  "bank": 2,
+  "dqs": "RDQ20",
+  "iodb_function": "VREF1_2",
+  "pio": "R14C72C",
+  "class": "PIO",
+  "dual_function": [
+   "VREF1_2",
+   "RDQ20"
+  ]
+ },
+ "G15": {
+  "name": "PR14B",
+  "bsdl_secfnc": "S2_IN",
+  "bank": 2,
+  "dqs": "RDQ20",
+  "iodb_function": null,
+  "pio": "R14C72B",
+  "class": "PIO",
+  "dual_function": [
+   "S2_IN",
+   "RDQ20"
+  ]
+ },
+ "G16": {
+  "name": "PR20A",
+  "bsdl_secfnc": "GR_PCLK2_1",
+  "bank": 2,
+  "dqs": "RDQS20",
+  "iodb_function": "GR_PCLK2_1",
+  "pio": "R20C72A",
+  "class": "PIO",
+  "dual_function": [
+   "GR_PCLK2_1",
+   "RDQS20"
+  ]
+ },
+ "H1": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "H2": {
+  "name": "PL20B",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "dqs": "LDQSN20",
+  "iodb_function": null,
+  "pio": "R20C0B",
+  "class": "PIO",
+  "dual_function": [
+   "LDQSN20"
+  ]
+ },
+ "H3": {
+  "name": "PL14D",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "dqs": "LDQ20",
+  "iodb_function": null,
+  "pio": "R14C0D",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ20"
+  ]
+ },
+ "H4": {
+  "name": "PL17B",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "dqs": "LDQ20",
+  "iodb_function": null,
+  "pio": "R17C0B",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ20"
+  ]
+ },
+ "H5": {
+  "name": "PL17A",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "dqs": "LDQ20",
+  "iodb_function": null,
+  "pio": "R17C0A",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ20"
+  ]
+ },
+ "H6": {
+  "name": "VCCIO7",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "class": "VCCIO",
+  "dual_function": []
+ },
+ "H7": {
+  "name": "VCCIO7",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "class": "VCCIO",
+  "dual_function": []
+ },
+ "H8": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "H9": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "H10": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "H11": {
+  "name": "VCCIO2",
+  "bsdl_secfnc": null,
+  "bank": 2,
+  "class": "VCCIO",
+  "dual_function": []
+ },
+ "H12": {
+  "name": "PR17A",
+  "bsdl_secfnc": null,
+  "bank": 2,
+  "dqs": "RDQ20",
+  "iodb_function": null,
+  "pio": "R17C72A",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ20"
+  ]
+ },
+ "H13": {
+  "name": "PR17B",
+  "bsdl_secfnc": null,
+  "bank": 2,
+  "dqs": "RDQ20",
+  "iodb_function": null,
+  "pio": "R17C72B",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ20"
+  ]
+ },
+ "H14": {
+  "name": "PR14D",
+  "bsdl_secfnc": null,
+  "bank": 2,
+  "dqs": "RDQ20",
+  "iodb_function": null,
+  "pio": "R14C72D",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ20"
+  ]
+ },
+ "H15": {
+  "name": "PR20B",
+  "bsdl_secfnc": null,
+  "bank": 2,
+  "dqs": "RDQSN20",
+  "iodb_function": null,
+  "pio": "R20C72B",
+  "class": "PIO",
+  "dual_function": [
+   "RDQSN20"
+  ]
+ },
+ "H16": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "J1": {
+  "name": "PL23A",
+  "bsdl_secfnc": "PCLKT7_1",
+  "bank": 7,
+  "dqs": "LDQ20",
+  "iodb_function": "PCLKT7_1",
+  "pio": "R23C0A",
+  "class": "PIO",
+  "dual_function": [
+   "PCLKT7_1",
+   "LDQ20"
+  ]
+ },
+ "J2": {
+  "name": "PL23B",
+  "bsdl_secfnc": "PCLKC7_1",
+  "bank": 7,
+  "dqs": "LDQ20",
+  "iodb_function": "PCLKC7_1",
+  "pio": "R23C0B",
+  "class": "PIO",
+  "dual_function": [
+   "PCLKC7_1",
+   "LDQ20"
+  ]
+ },
+ "J3": {
+  "name": "PL20C",
+  "bsdl_secfnc": "GR_PCLK7_0",
+  "bank": 7,
+  "dqs": "LDQ20",
+  "iodb_function": "GR_PCLK7_0",
+  "pio": "R20C0C",
+  "class": "PIO",
+  "dual_function": [
+   "GR_PCLK7_0",
+   "LDQ20"
+  ]
+ },
+ "J4": {
+  "name": "PL17C",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "dqs": "LDQ20",
+  "iodb_function": null,
+  "pio": "R17C0C",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ20"
+  ]
+ },
+ "J5": {
+  "name": "PL17D",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "dqs": "LDQ20",
+  "iodb_function": null,
+  "pio": "R17C0D",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ20"
+  ]
+ },
+ "J6": {
+  "name": "VCCIO6",
+  "bsdl_secfnc": null,
+  "bank": 6,
+  "class": "VCCIO",
+  "dual_function": []
+ },
+ "J7": {
+  "name": "VCCIO6",
+  "bsdl_secfnc": null,
+  "bank": 6,
+  "class": "VCCIO",
+  "dual_function": []
+ },
+ "J8": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "J9": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "J10": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "J11": {
+  "name": "VCCIO2",
+  "bsdl_secfnc": null,
+  "bank": 2,
+  "class": "VCCIO",
+  "dual_function": []
+ },
+ "J12": {
+  "name": "PR17D",
+  "bsdl_secfnc": null,
+  "bank": 2,
+  "dqs": "RDQ20",
+  "iodb_function": null,
+  "pio": "R17C72D",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ20"
+  ]
+ },
+ "J13": {
+  "name": "PR17C",
+  "bsdl_secfnc": null,
+  "bank": 2,
+  "dqs": "RDQ20",
+  "iodb_function": null,
+  "pio": "R17C72C",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ20"
+  ]
+ },
+ "J14": {
+  "name": "PR20C",
+  "bsdl_secfnc": "GR_PCLK2_0",
+  "bank": 2,
+  "dqs": "RDQ20",
+  "iodb_function": "GR_PCLK2_0",
+  "pio": "R20C72C",
+  "class": "PIO",
+  "dual_function": [
+   "GR_PCLK2_0",
+   "RDQ20"
+  ]
+ },
+ "J15": {
+  "name": "PR23B",
+  "bsdl_secfnc": "PCLKC2_1",
+  "bank": 2,
+  "dqs": "RDQ20",
+  "iodb_function": "PCLKC2_1",
+  "pio": "R23C72B",
+  "class": "PIO",
+  "dual_function": [
+   "PCLKC2_1",
+   "RDQ20"
+  ]
+ },
+ "J16": {
+  "name": "PR23A",
+  "bsdl_secfnc": "PCLKT2_1_S2_OUT",
+  "bank": 2,
+  "dqs": "RDQ20",
+  "iodb_function": "PCLKT2_1",
+  "pio": "R23C72A",
+  "class": "PIO",
+  "dual_function": [
+   "PCLKT2_1",
+   "PCLKT2_1_S2_OUT",
+   "RDQ20"
+  ]
+ },
+ "K1": {
+  "name": "PL23C",
+  "bsdl_secfnc": "PCLKT7_0",
+  "bank": 7,
+  "dqs": "LDQ20",
+  "iodb_function": "PCLKT7_0",
+  "pio": "R23C0C",
+  "class": "PIO",
+  "dual_function": [
+   "PCLKT7_0",
+   "LDQ20"
+  ]
+ },
+ "K2": {
+  "name": "PL23D",
+  "bsdl_secfnc": "PCLKC7_0",
+  "bank": 7,
+  "dqs": "LDQ20",
+  "iodb_function": "PCLKC7_0",
+  "pio": "R23C0D",
+  "class": "PIO",
+  "dual_function": [
+   "PCLKC7_0",
+   "LDQ20"
+  ]
+ },
+ "K3": {
+  "name": "PL20D",
+  "bsdl_secfnc": null,
+  "bank": 7,
+  "dqs": "LDQ20",
+  "iodb_function": null,
+  "pio": "R20C0D",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ20"
+  ]
+ },
+ "K4": {
+  "name": "PL29A",
+  "bsdl_secfnc": "GR_PCLK6_0",
+  "bank": 6,
+  "dqs": "LDQ32",
+  "iodb_function": "GR_PCLK6_0",
+  "pio": "R29C0A",
+  "class": "PIO",
+  "dual_function": [
+   "GR_PCLK6_0",
+   "LDQ32"
+  ]
+ },
+ "K5": {
+  "name": "PL29B",
+  "bsdl_secfnc": null,
+  "bank": 6,
+  "dqs": "LDQ32",
+  "iodb_function": null,
+  "pio": "R29C0B",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ32"
+  ]
+ },
+ "K6": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "K7": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "K8": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "K9": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "K10": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "K11": {
+  "name": "VCCIO3",
+  "bsdl_secfnc": null,
+  "bank": 3,
+  "class": "VCCIO",
+  "dual_function": []
+ },
+ "K12": {
+  "name": "PR29B",
+  "bsdl_secfnc": null,
+  "bank": 3,
+  "dqs": "RDQ32",
+  "iodb_function": null,
+  "pio": "R29C72B",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ32"
+  ]
+ },
+ "K13": {
+  "name": "PR29A",
+  "bsdl_secfnc": "GR_PCLK3_0",
+  "bank": 3,
+  "dqs": "RDQ32",
+  "iodb_function": "GR_PCLK3_0",
+  "pio": "R29C72A",
+  "class": "PIO",
+  "dual_function": [
+   "GR_PCLK3_0",
+   "RDQ32"
+  ]
+ },
+ "K14": {
+  "name": "PR20D",
+  "bsdl_secfnc": null,
+  "bank": 2,
+  "dqs": "RDQ20",
+  "iodb_function": null,
+  "pio": "R20C72D",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ20"
+  ]
+ },
+ "K15": {
+  "name": "PR23D",
+  "bsdl_secfnc": "PCLKC2_0",
+  "bank": 2,
+  "dqs": "RDQ20",
+  "iodb_function": "PCLKC2_0",
+  "pio": "R23C72D",
+  "class": "PIO",
+  "dual_function": [
+   "PCLKC2_0",
+   "RDQ20"
+  ]
+ },
+ "K16": {
+  "name": "PR23C",
+  "bsdl_secfnc": "PCLKT2_0_S3_IN",
+  "bank": 2,
+  "dqs": "RDQ20",
+  "iodb_function": "PCLKT2_0",
+  "pio": "R23C72C",
+  "class": "PIO",
+  "dual_function": [
+   "PCLKT2_0",
+   "PCLKT2_0_S3_IN",
+   "RDQ20"
+  ]
+ },
+ "L1": {
+  "name": "PL26A",
+  "bsdl_secfnc": "PCLKT6_1",
+  "bank": 6,
+  "dqs": "LDQ32",
+  "iodb_function": "PCLKT6_1",
+  "pio": "R26C0A",
+  "class": "PIO",
+  "dual_function": [
+   "PCLKT6_1",
+   "LDQ32"
+  ]
+ },
+ "L2": {
+  "name": "PL26B",
+  "bsdl_secfnc": "PCLKC6_1",
+  "bank": 6,
+  "dqs": "LDQ32",
+  "iodb_function": "PCLKC6_1",
+  "pio": "R26C0B",
+  "class": "PIO",
+  "dual_function": [
+   "PCLKC6_1",
+   "LDQ32"
+  ]
+ },
+ "L3": {
+  "name": "PL32C",
+  "bsdl_secfnc": null,
+  "bank": 6,
+  "dqs": "LDQ32",
+  "iodb_function": null,
+  "pio": "R32C0C",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ32"
+  ]
+ },
+ "L4": {
+  "name": "PL29C",
+  "bsdl_secfnc": "GR_PCLK6_1",
+  "bank": 6,
+  "dqs": "LDQ32",
+  "iodb_function": "GR_PCLK6_1",
+  "pio": "R29C0C",
+  "class": "PIO",
+  "dual_function": [
+   "GR_PCLK6_1",
+   "LDQ32"
+  ]
+ },
+ "L5": {
+  "name": "PL29D",
+  "bsdl_secfnc": null,
+  "bank": 6,
+  "dqs": "LDQ32",
+  "iodb_function": null,
+  "pio": "R29C0D",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ32"
+  ]
+ },
+ "L6": {
+  "name": "VCCIO8",
+  "bsdl_secfnc": null,
+  "bank": 8,
+  "class": "VCCIO",
+  "dual_function": []
+ },
+ "L7": {
+  "name": "VCCAUX",
+  "bsdl_secfnc": null,
+  "class": "VCCAUX",
+  "dual_function": [],
+  "bank": null
+ },
+ "L8": {
+  "name": "VCC",
+  "bsdl_secfnc": null,
+  "class": "VCC",
+  "dual_function": [],
+  "bank": null
+ },
+ "L9": {
+  "name": "VCC",
+  "bsdl_secfnc": null,
+  "class": "VCC",
+  "dual_function": [],
+  "bank": null
+ },
+ "L10": {
+  "name": "VCC",
+  "bsdl_secfnc": null,
+  "class": "VCC",
+  "dual_function": [],
+  "bank": null
+ },
+ "L11": {
+  "name": "VCCIO3",
+  "bsdl_secfnc": null,
+  "bank": 3,
+  "class": "VCCIO",
+  "dual_function": []
+ },
+ "L12": {
+  "name": "PR29D",
+  "bsdl_secfnc": null,
+  "bank": 3,
+  "dqs": "RDQ32",
+  "iodb_function": null,
+  "pio": "R29C72D",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ32"
+  ]
+ },
+ "L13": {
+  "name": "PR29C",
+  "bsdl_secfnc": "GR_PCLK3_1",
+  "bank": 3,
+  "dqs": "RDQ32",
+  "iodb_function": "GR_PCLK3_1",
+  "pio": "R29C72C",
+  "class": "PIO",
+  "dual_function": [
+   "GR_PCLK3_1",
+   "RDQ32"
+  ]
+ },
+ "L14": {
+  "name": "PR32C",
+  "bsdl_secfnc": null,
+  "bank": 3,
+  "dqs": "RDQ32",
+  "iodb_function": null,
+  "pio": "R32C72C",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ32"
+  ]
+ },
+ "L15": {
+  "name": "PR26B",
+  "bsdl_secfnc": "PCLKC3_1",
+  "bank": 3,
+  "dqs": "RDQ32",
+  "iodb_function": "PCLKC3_1",
+  "pio": "R26C72B",
+  "class": "PIO",
+  "dual_function": [
+   "PCLKC3_1",
+   "RDQ32"
+  ]
+ },
+ "L16": {
+  "name": "PR26A",
+  "bsdl_secfnc": "PCLKT3_1_S3_OUT",
+  "bank": 3,
+  "dqs": "RDQ32",
+  "iodb_function": "PCLKT3_1",
+  "pio": "R26C72A",
+  "class": "PIO",
+  "dual_function": [
+   "PCLKT3_1",
+   "PCLKT3_1_S3_OUT",
+   "RDQ32"
+  ]
+ },
+ "M1": {
+  "name": "PL26C",
+  "bsdl_secfnc": "PCLKT6_0",
+  "bank": 6,
+  "dqs": "LDQ32",
+  "iodb_function": "PCLKT6_0",
+  "pio": "R26C0C",
+  "class": "PIO",
+  "dual_function": [
+   "PCLKT6_0",
+   "LDQ32"
+  ]
+ },
+ "M2": {
+  "name": "PL26D",
+  "bsdl_secfnc": "PCLKC6_0",
+  "bank": 6,
+  "dqs": "LDQ32",
+  "iodb_function": "PCLKC6_0",
+  "pio": "R26C0D",
+  "class": "PIO",
+  "dual_function": [
+   "PCLKC6_0",
+   "LDQ32"
+  ]
+ },
+ "M3": {
+  "name": "PL32D",
+  "bsdl_secfnc": null,
+  "bank": 6,
+  "dqs": "LDQ32",
+  "iodb_function": null,
+  "pio": "R32C0D",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ32"
+  ]
+ },
+ "M4": {
+  "name": "PL35C",
+  "bsdl_secfnc": null,
+  "bank": 6,
+  "dqs": "LDQ32",
+  "iodb_function": null,
+  "pio": "R35C0C",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ32"
+  ]
+ },
+ "M5": {
+  "name": "PL44C",
+  "bsdl_secfnc": "D9_IO9",
+  "bank": 6,
+  "dqs": "LDQ44",
+  "iodb_function": null,
+  "pio": "R44C0C",
+  "class": "PIO",
+  "dual_function": [
+   "D9_IO9",
+   "LDQ44"
+  ]
+ },
+ "M6": {
+  "name": "PL47A",
+  "bsdl_secfnc": "LLC_GPLL0T_MFGOUT1",
+  "bank": 6,
+  "dqs": "LDQ44",
+  "iodb_function": null,
+  "pio": "R47C0A",
+  "class": "PIO",
+  "dual_function": [
+   "LLC_GPLL0T_MFGOUT1",
+   "LDQ44"
+  ]
+ },
+ "M7": {
+  "name": "PB9B",
+  "bsdl_secfnc": "D2_IO2",
+  "bank": 8,
+  "dqs": null,
+  "iodb_function": "D2/IO2",
+  "pio": "R50C9B",
+  "class": "PIO",
+  "dual_function": [
+   "D2/IO2",
+   "D2_IO2"
+  ]
+ },
+ "M8": {
+  "name": "PB15B",
+  "bsdl_secfnc": "DOUT_CSON_ATB_FORCE",
+  "bank": 8,
+  "dqs": null,
+  "iodb_function": "DOUT/CSON",
+  "pio": "R50C15B",
+  "class": "PIO",
+  "dual_function": [
+   "DOUT/CSON",
+   "DOUT_CSON_ATB_FORCE"
+  ]
+ },
+ "M9": {
+  "name": "PB18A",
+  "bsdl_secfnc": "WRITEN_ATB_SENSE",
+  "bank": 8,
+  "dqs": null,
+  "iodb_function": "WRITEN",
+  "pio": "R50C18A",
+  "class": "PIO",
+  "dual_function": [
+   "WRITEN",
+   "WRITEN_ATB_SENSE"
+  ]
+ },
+ "M10": {
+  "name": "TDO",
+  "bsdl_secfnc": null,
+  "class": "CFG",
+  "dual_function": [],
+  "bank": null
+ },
+ "M11": {
+  "name": "PR47A",
+  "bsdl_secfnc": "LRC_GPLL0T_MFGOUT1",
+  "bank": 3,
+  "dqs": "RDQ44",
+  "iodb_function": null,
+  "pio": "R47C72A",
+  "class": "PIO",
+  "dual_function": [
+   "LRC_GPLL0T_MFGOUT1",
+   "RDQ44"
+  ]
+ },
+ "M12": {
+  "name": "PR44C",
+  "bsdl_secfnc": "LRC_GPLL0T_MFGOUT2",
+  "bank": 3,
+  "dqs": "RDQ44",
+  "iodb_function": null,
+  "pio": "R44C72C",
+  "class": "PIO",
+  "dual_function": [
+   "LRC_GPLL0T_MFGOUT2",
+   "RDQ44"
+  ]
+ },
+ "M13": {
+  "name": "PR35C",
+  "bsdl_secfnc": "S5_IN",
+  "bank": 3,
+  "dqs": "RDQ32",
+  "iodb_function": null,
+  "pio": "R35C72C",
+  "class": "PIO",
+  "dual_function": [
+   "S5_IN",
+   "RDQ32"
+  ]
+ },
+ "M14": {
+  "name": "PR32D",
+  "bsdl_secfnc": null,
+  "bank": 3,
+  "dqs": "RDQ32",
+  "iodb_function": null,
+  "pio": "R32C72D",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ32"
+  ]
+ },
+ "M15": {
+  "name": "PR26D",
+  "bsdl_secfnc": "PCLKC3_0",
+  "bank": 3,
+  "dqs": "RDQ32",
+  "iodb_function": "PCLKC3_0",
+  "pio": "R26C72D",
+  "class": "PIO",
+  "dual_function": [
+   "PCLKC3_0",
+   "RDQ32"
+  ]
+ },
+ "M16": {
+  "name": "PR26C",
+  "bsdl_secfnc": "PCLKT3_0_S4_IN",
+  "bank": 3,
+  "dqs": "RDQ32",
+  "iodb_function": "PCLKT3_0",
+  "pio": "R26C72C",
+  "class": "PIO",
+  "dual_function": [
+   "PCLKT3_0",
+   "PCLKT3_0_S4_IN",
+   "RDQ32"
+  ]
+ },
+ "N1": {
+  "name": "PL32A",
+  "bsdl_secfnc": null,
+  "bank": 6,
+  "dqs": "LDQS32",
+  "iodb_function": null,
+  "pio": "R32C0A",
+  "class": "PIO",
+  "dual_function": [
+   "LDQS32"
+  ]
+ },
+ "N2": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "N3": {
+  "name": "PL35D",
+  "bsdl_secfnc": null,
+  "bank": 6,
+  "dqs": "LDQ32",
+  "iodb_function": null,
+  "pio": "R35C0D",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ32"
+  ]
+ },
+ "N4": {
+  "name": "PL38A",
+  "bsdl_secfnc": null,
+  "bank": 6,
+  "dqs": "LDQ44",
+  "iodb_function": null,
+  "pio": "R38C0A",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ44"
+  ]
+ },
+ "N5": {
+  "name": "PL44D",
+  "bsdl_secfnc": "D8_IO8",
+  "bank": 6,
+  "dqs": "LDQ44",
+  "iodb_function": null,
+  "pio": "R44C0D",
+  "class": "PIO",
+  "dual_function": [
+   "D8_IO8",
+   "LDQ44"
+  ]
+ },
+ "N6": {
+  "name": "PL47B",
+  "bsdl_secfnc": "LLC_GPLL0C_MFGOUT1",
+  "bank": 6,
+  "dqs": "LDQ44",
+  "iodb_function": null,
+  "pio": "R47C0B",
+  "class": "PIO",
+  "dual_function": [
+   "LLC_GPLL0C_MFGOUT1",
+   "LDQ44"
+  ]
+ },
+ "N7": {
+  "name": "PB9A",
+  "bsdl_secfnc": "D3_IO3",
+  "bank": 8,
+  "dqs": null,
+  "iodb_function": "D3/IO3",
+  "pio": "R50C9A",
+  "class": "PIO",
+  "dual_function": [
+   "D3/IO3",
+   "D3_IO3"
+  ]
+ },
+ "N8": {
+  "name": "PB15A",
+  "bsdl_secfnc": "HOLDN_DI_BUSY_CSSPIN_CEN",
+  "bank": 8,
+  "dqs": null,
+  "iodb_function": "HOLDN/DI/BUSY/CSSPIN/CEN",
+  "pio": "R50C15A",
+  "class": "PIO",
+  "dual_function": [
+   "HOLDN/DI/BUSY/CSSPIN/CEN",
+   "HOLDN_DI_BUSY_CSSPIN_CEN"
+  ]
+ },
+ "N9": {
+  "name": "CCLK",
+  "bsdl_secfnc": "MCLK_SCK",
+  "class": "CFG",
+  "dual_function": [
+   "MCLK_SCK"
+  ],
+  "bank": null
+ },
+ "N10": {
+  "name": "CFG_0",
+  "bsdl_secfnc": null,
+  "class": "CFG",
+  "dual_function": [],
+  "bank": null
+ },
+ "N11": {
+  "name": "PR47B",
+  "bsdl_secfnc": "LRC_GPLL0C_MFGOUT1",
+  "bank": 3,
+  "dqs": "RDQ44",
+  "iodb_function": null,
+  "pio": "R47C72B",
+  "class": "PIO",
+  "dual_function": [
+   "LRC_GPLL0C_MFGOUT1",
+   "RDQ44"
+  ]
+ },
+ "N12": {
+  "name": "PR44D",
+  "bsdl_secfnc": "LRC_GPLL0C_MFGOUT2",
+  "bank": 3,
+  "dqs": "RDQ44",
+  "iodb_function": null,
+  "pio": "R44C72D",
+  "class": "PIO",
+  "dual_function": [
+   "LRC_GPLL0C_MFGOUT2",
+   "RDQ44"
+  ]
+ },
+ "N13": {
+  "name": "PR38A",
+  "bsdl_secfnc": "S5_OUT",
+  "bank": 3,
+  "dqs": "RDQ44",
+  "iodb_function": null,
+  "pio": "R38C72A",
+  "class": "PIO",
+  "dual_function": [
+   "S5_OUT",
+   "RDQ44"
+  ]
+ },
+ "N14": {
+  "name": "PR35D",
+  "bsdl_secfnc": null,
+  "bank": 3,
+  "dqs": "RDQ32",
+  "iodb_function": null,
+  "pio": "R35C72D",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ32"
+  ]
+ },
+ "N15": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "N16": {
+  "name": "PR32A",
+  "bsdl_secfnc": null,
+  "bank": 3,
+  "dqs": "RDQS32",
+  "iodb_function": null,
+  "pio": "R32C72A",
+  "class": "PIO",
+  "dual_function": [
+   "RDQS32"
+  ]
+ },
+ "P1": {
+  "name": "PL35A",
+  "bsdl_secfnc": null,
+  "bank": 6,
+  "dqs": "LDQ32",
+  "iodb_function": null,
+  "pio": "R35C0A",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ32"
+  ]
+ },
+ "P2": {
+  "name": "PL32B",
+  "bsdl_secfnc": null,
+  "bank": 6,
+  "dqs": "LDQSN32",
+  "iodb_function": null,
+  "pio": "R32C0B",
+  "class": "PIO",
+  "dual_function": [
+   "LDQSN32"
+  ]
+ },
+ "P3": {
+  "name": "PL38B",
+  "bsdl_secfnc": null,
+  "bank": 6,
+  "dqs": "LDQ44",
+  "iodb_function": null,
+  "pio": "R38C0B",
+  "class": "PIO",
+  "dual_function": [
+   "LDQ44"
+  ]
+ },
+ "P4": {
+  "name": "PL41A",
+  "bsdl_secfnc": "D13_IO13",
+  "bank": 6,
+  "dqs": "LDQ44",
+  "iodb_function": null,
+  "pio": "R41C0A",
+  "class": "PIO",
+  "dual_function": [
+   "D13_IO13",
+   "LDQ44"
+  ]
+ },
+ "P5": {
+  "name": "PL47D",
+  "bsdl_secfnc": "LLC_GPLL0C_IN",
+  "bank": 6,
+  "dqs": "LDQ44",
+  "iodb_function": "LLC_GPLL0C_IN",
+  "pio": "R47C0D",
+  "class": "PIO",
+  "dual_function": [
+   "LLC_GPLL0C_IN",
+   "LDQ44"
+  ]
+ },
+ "P6": {
+  "name": "PL47C",
+  "bsdl_secfnc": "LLC_GPLL0T_IN",
+  "bank": 6,
+  "dqs": "LDQ44",
+  "iodb_function": "LLC_GPLL0T_IN",
+  "pio": "R47C0C",
+  "class": "PIO",
+  "dual_function": [
+   "LLC_GPLL0T_IN",
+   "LDQ44"
+  ]
+ },
+ "P7": {
+  "name": "PB6B",
+  "bsdl_secfnc": "D4_MOSI2_IO4",
+  "bank": 8,
+  "dqs": null,
+  "iodb_function": "D4/MOSI2/IO4",
+  "pio": "R50C6B",
+  "class": "PIO",
+  "dual_function": [
+   "D4/MOSI2/IO4",
+   "D4_MOSI2_IO4"
+  ]
+ },
+ "P8": {
+  "name": "PB13B",
+  "bsdl_secfnc": "CS1N",
+  "bank": 8,
+  "dqs": null,
+  "iodb_function": "CS1N",
+  "pio": "R50C13B",
+  "class": "PIO",
+  "dual_function": [
+   "CS1N"
+  ]
+ },
+ "P9": {
+  "name": "DONE",
+  "bsdl_secfnc": null,
+  "class": "CFG",
+  "dual_function": [],
+  "bank": null
+ },
+ "P10": {
+  "name": "CFG_1",
+  "bsdl_secfnc": null,
+  "class": "CFG",
+  "dual_function": [],
+  "bank": null
+ },
+ "P11": {
+  "name": "PR47C",
+  "bsdl_secfnc": "LRC_GPLL0T_IN",
+  "bank": 3,
+  "dqs": "RDQ44",
+  "iodb_function": "LRC_GPLL0T_IN",
+  "pio": "R47C72C",
+  "class": "PIO",
+  "dual_function": [
+   "LRC_GPLL0T_IN",
+   "RDQ44"
+  ]
+ },
+ "P12": {
+  "name": "PR47D",
+  "bsdl_secfnc": "LRC_GPLL0C_IN_S7_OUT",
+  "bank": 3,
+  "dqs": "RDQ44",
+  "iodb_function": "LRC_GPLL0C_IN",
+  "pio": "R47C72D",
+  "class": "PIO",
+  "dual_function": [
+   "LRC_GPLL0C_IN",
+   "LRC_GPLL0C_IN_S7_OUT",
+   "RDQ44"
+  ]
+ },
+ "P13": {
+  "name": "PR41A",
+  "bsdl_secfnc": "S6_OUT",
+  "bank": 3,
+  "dqs": "RDQ44",
+  "iodb_function": null,
+  "pio": "R41C72A",
+  "class": "PIO",
+  "dual_function": [
+   "S6_OUT",
+   "RDQ44"
+  ]
+ },
+ "P14": {
+  "name": "PR38B",
+  "bsdl_secfnc": "S6_IN",
+  "bank": 3,
+  "dqs": "RDQ44",
+  "iodb_function": null,
+  "pio": "R38C72B",
+  "class": "PIO",
+  "dual_function": [
+   "S6_IN",
+   "RDQ44"
+  ]
+ },
+ "P15": {
+  "name": "PR32B",
+  "bsdl_secfnc": null,
+  "bank": 3,
+  "dqs": "RDQSN32",
+  "iodb_function": null,
+  "pio": "R32C72B",
+  "class": "PIO",
+  "dual_function": [
+   "RDQSN32"
+  ]
+ },
+ "P16": {
+  "name": "PR35A",
+  "bsdl_secfnc": "S4_OUT",
+  "bank": 3,
+  "dqs": "RDQ32",
+  "iodb_function": null,
+  "pio": "R35C72A",
+  "class": "PIO",
+  "dual_function": [
+   "S4_OUT",
+   "RDQ32"
+  ]
+ },
+ "R1": {
+  "name": "PL35B",
+  "bsdl_secfnc": "VREF1_6",
+  "bank": 6,
+  "dqs": "LDQ32",
+  "iodb_function": "VREF1_6",
+  "pio": "R35C0B",
+  "class": "PIO",
+  "dual_function": [
+   "VREF1_6",
+   "LDQ32"
+  ]
+ },
+ "R2": {
+  "name": "PL38C",
+  "bsdl_secfnc": "D15_IO15",
+  "bank": 6,
+  "dqs": "LDQ44",
+  "iodb_function": null,
+  "pio": "R38C0C",
+  "class": "PIO",
+  "dual_function": [
+   "D15_IO15",
+   "LDQ44"
+  ]
+ },
+ "R3": {
+  "name": "PL41B",
+  "bsdl_secfnc": "D12_IO12",
+  "bank": 6,
+  "dqs": "LDQ44",
+  "iodb_function": null,
+  "pio": "R41C0B",
+  "class": "PIO",
+  "dual_function": [
+   "D12_IO12",
+   "LDQ44"
+  ]
+ },
+ "R4": {
+  "name": "PL41C",
+  "bsdl_secfnc": "D11_IO11",
+  "bank": 6,
+  "dqs": "LDQ44",
+  "iodb_function": null,
+  "pio": "R41C0C",
+  "class": "PIO",
+  "dual_function": [
+   "D11_IO11",
+   "LDQ44"
+  ]
+ },
+ "R5": {
+  "name": "PL44A",
+  "bsdl_secfnc": "LLC_GPLL0T_MFGOUT2",
+  "bank": 6,
+  "dqs": "LDQS44",
+  "iodb_function": null,
+  "pio": "R44C0A",
+  "class": "PIO",
+  "dual_function": [
+   "LLC_GPLL0T_MFGOUT2",
+   "LDQS44"
+  ]
+ },
+ "R6": {
+  "name": "PB4B",
+  "bsdl_secfnc": "D6_IO6",
+  "bank": 8,
+  "dqs": null,
+  "iodb_function": "D6/IO6",
+  "pio": "R50C4B",
+  "class": "PIO",
+  "dual_function": [
+   "D6/IO6",
+   "D6_IO6"
+  ]
+ },
+ "R7": {
+  "name": "PB6A",
+  "bsdl_secfnc": "D5_MISO2_IO5",
+  "bank": 8,
+  "dqs": null,
+  "iodb_function": "D5/MISO2/IO5",
+  "pio": "R50C6A",
+  "class": "PIO",
+  "dual_function": [
+   "D5/MISO2/IO5",
+   "D5_MISO2_IO5"
+  ]
+ },
+ "R8": {
+  "name": "PB13A",
+  "bsdl_secfnc": "SN_CSN_SCAN_SHFT_EN",
+  "bank": 8,
+  "dqs": null,
+  "iodb_function": "SN/CSN",
+  "pio": "R50C13A",
+  "class": "PIO",
+  "dual_function": [
+   "SN/CSN",
+   "SN_CSN_SCAN_SHFT_EN"
+  ]
+ },
+ "R9": {
+  "name": "PROGRAMN",
+  "bsdl_secfnc": null,
+  "class": "CFG",
+  "dual_function": [],
+  "bank": null
+ },
+ "R10": {
+  "name": "CFG_2",
+  "bsdl_secfnc": null,
+  "class": "CFG",
+  "dual_function": [],
+  "bank": null
+ },
+ "R11": {
+  "name": "TDI",
+  "bsdl_secfnc": null,
+  "class": "CFG",
+  "dual_function": [],
+  "bank": null
+ },
+ "R12": {
+  "name": "PR44A",
+  "bsdl_secfnc": null,
+  "bank": 3,
+  "dqs": "RDQS44",
+  "iodb_function": null,
+  "pio": "R44C72A",
+  "class": "PIO",
+  "dual_function": [
+   "RDQS44"
+  ]
+ },
+ "R13": {
+  "name": "PR41C",
+  "bsdl_secfnc": null,
+  "bank": 3,
+  "dqs": "RDQ44",
+  "iodb_function": null,
+  "pio": "R41C72C",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ44"
+  ]
+ },
+ "R14": {
+  "name": "PR41B",
+  "bsdl_secfnc": "S7_IN",
+  "bank": 3,
+  "dqs": "RDQ44",
+  "iodb_function": null,
+  "pio": "R41C72B",
+  "class": "PIO",
+  "dual_function": [
+   "S7_IN",
+   "RDQ44"
+  ]
+ },
+ "R15": {
+  "name": "PR38C",
+  "bsdl_secfnc": null,
+  "bank": 3,
+  "dqs": "RDQ44",
+  "iodb_function": null,
+  "pio": "R38C72C",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ44"
+  ]
+ },
+ "R16": {
+  "name": "PR35B",
+  "bsdl_secfnc": "VREF1_3",
+  "bank": 3,
+  "dqs": "RDQ32",
+  "iodb_function": "VREF1_3",
+  "pio": "R35C72B",
+  "class": "PIO",
+  "dual_function": [
+   "VREF1_3",
+   "RDQ32"
+  ]
+ },
+ "T1": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "T2": {
+  "name": "PL38D",
+  "bsdl_secfnc": "D14_IO14",
+  "bank": 6,
+  "dqs": "LDQ44",
+  "iodb_function": null,
+  "pio": "R38C0D",
+  "class": "PIO",
+  "dual_function": [
+   "D14_IO14",
+   "LDQ44"
+  ]
+ },
+ "T3": {
+  "name": "PL41D",
+  "bsdl_secfnc": "D10_IO10",
+  "bank": 6,
+  "dqs": "LDQ44",
+  "iodb_function": null,
+  "pio": "R41C0D",
+  "class": "PIO",
+  "dual_function": [
+   "D10_IO10",
+   "LDQ44"
+  ]
+ },
+ "T4": {
+  "name": "PL44B",
+  "bsdl_secfnc": "LLC_GPLL0C_MFGOUT2",
+  "bank": 6,
+  "dqs": "LDQSN44",
+  "iodb_function": null,
+  "pio": "R44C0B",
+  "class": "PIO",
+  "dual_function": [
+   "LLC_GPLL0C_MFGOUT2",
+   "LDQSN44"
+  ]
+ },
+ "T5": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "T6": {
+  "name": "PB4A",
+  "bsdl_secfnc": "D7_IO7",
+  "bank": 8,
+  "dqs": null,
+  "iodb_function": "D7/IO7",
+  "pio": "R50C4A",
+  "class": "PIO",
+  "dual_function": [
+   "D7/IO7",
+   "D7_IO7"
+  ]
+ },
+ "T7": {
+  "name": "PB11A",
+  "bsdl_secfnc": "D1_MISO_IO1",
+  "bank": 8,
+  "dqs": null,
+  "iodb_function": "D1/MISO/IO1",
+  "pio": "R50C11A",
+  "class": "PIO",
+  "dual_function": [
+   "D1/MISO/IO1",
+   "D1_MISO_IO1"
+  ]
+ },
+ "T8": {
+  "name": "PB11B",
+  "bsdl_secfnc": "D0_MOSI_IO0",
+  "bank": 8,
+  "dqs": null,
+  "iodb_function": "D0/MOSI/IO0",
+  "pio": "R50C11B",
+  "class": "PIO",
+  "dual_function": [
+   "D0/MOSI/IO0",
+   "D0_MOSI_IO0"
+  ]
+ },
+ "T9": {
+  "name": "INITN",
+  "bsdl_secfnc": null,
+  "class": "CFG",
+  "dual_function": [],
+  "bank": null
+ },
+ "T10": {
+  "name": "TCK",
+  "bsdl_secfnc": "TEST_CLK",
+  "class": "CFG",
+  "dual_function": [
+   "TEST_CLK"
+  ],
+  "bank": null
+ },
+ "T11": {
+  "name": "TMS",
+  "bsdl_secfnc": null,
+  "class": "CFG",
+  "dual_function": [],
+  "bank": null
+ },
+ "T12": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ },
+ "T13": {
+  "name": "PR44B",
+  "bsdl_secfnc": null,
+  "bank": 3,
+  "dqs": "RDQSN44",
+  "iodb_function": null,
+  "pio": "R44C72B",
+  "class": "PIO",
+  "dual_function": [
+   "RDQSN44"
+  ]
+ },
+ "T14": {
+  "name": "PR41D",
+  "bsdl_secfnc": null,
+  "bank": 3,
+  "dqs": "RDQ44",
+  "iodb_function": null,
+  "pio": "R41C72D",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ44"
+  ]
+ },
+ "T15": {
+  "name": "PR38D",
+  "bsdl_secfnc": null,
+  "bank": 3,
+  "dqs": "RDQ44",
+  "iodb_function": null,
+  "pio": "R38C72D",
+  "class": "PIO",
+  "dual_function": [
+   "RDQ44"
+  ]
+ },
+ "T16": {
+  "name": "GND",
+  "bsdl_secfnc": null,
+  "class": "GND",
+  "dual_function": [],
+  "bank": null
+ }
+}

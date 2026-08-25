@@ -1,0 +1,122 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "lattice.lfe5u-25f-7bg256i",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Lattice",
+      "normalized": "lattice"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "LFE5U-25F-7BG256I",
+      "canonical": "LFE5U-25F-7BG256I",
+      "comparison_key": "LFE5U-25F-7BG256I",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C1550762"
+      }
+    ],
+    "description": "family aliases (D13, generator docstring): the caBGA-256 ballout is common to the whole LFE5U BG256 family per the FPGA-DS-02012 pinout table (one column per package) — 17 sibling MPNs aliased; CAVEAT: only the 25F BSDL is on disk, diff the 12F/45F BSDL PIN_MAPs before promoting an alias to a placed part. hydra authors from sources/lattice.lfe5u-25f-7bg256i/ (generator = source of truth); other boards load central"
+  },
+  "names": {
+    "canonical": "LFE5U-25F-7BG256I",
+    "aliases": [
+      "LFE5U-12F-6BG256C",
+      "LFE5U-12F-6BG256I",
+      "LFE5U-12F-7BG256C",
+      "LFE5U-12F-7BG256I",
+      "LFE5U-12F-8BG256C",
+      "LFE5U-12F-8BG256I",
+      "LFE5U-25F-6BG256C",
+      "LFE5U-25F-6BG256I",
+      "LFE5U-25F-7BG256C",
+      "LFE5U-25F-8BG256C",
+      "LFE5U-25F-8BG256I",
+      "LFE5U-45F-6BG256C",
+      "LFE5U-45F-6BG256I",
+      "LFE5U-45F-7BG256C",
+      "LFE5U-45F-7BG256I",
+      "LFE5U-45F-8BG256C",
+      "LFE5U-45F-8BG256I"
+    ],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/LFE5U-25F-7BG256I.kicad_sym",
+        "name": "LFE5U-25F-7BG256I"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/LFE5U-25F-7BG256I.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "f2f23f5eab4f3f8983167eaa07f7cda62bd86531b39975871163e6be2c3ae42a",
+      "internal_name": "LFE5U-25F-7BG256I"
+    },
+    {
+      "path": "footprints/central-agent.pretty/ECP5_CABGA256.kicad_mod",
+      "kind": "footprint",
+      "qualification": "unqualified-candidate",
+      "sha256": "6de2162a17fa4dffb075fd41dc185744b4d641355ab876f74e36ba0a3c09b905",
+      "internal_name": "ECP5_CABGA256"
+    }
+  ],
+  "relationships": [
+    {
+      "kind": "declares-footprint",
+      "source_asset": "symbols/LFE5U-25F-7BG256I.kicad_sym",
+      "target": {
+        "asset_path": "footprints/central-agent.pretty/ECP5_CABGA256.kicad_mod"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "Promotion supplied this footprint as a candidate; it is not qualified by a symbol-only draft."
+    }
+  ],
+  "provenance": {
+    "repository_commit": "d0ef3dd73b4e6778890e1a5327be5bd2caabdb22",
+    "source_board": "hydra",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/LFE5U-25F-7BG256I.kicad_sym",
+        "evidence": "First-import fit pass: hydra symbol campaign 2026-08-24 (review verify/symbols-0824/review/ecp5.md §6, V1 winner): 256 pins / 11 units pitch 3.81 — one unit per Lattice I/O BANK carrying its own VCCIO (one unit = one I/O-voltage domain; banks 7/6/0/1/2/3/8), captioned PIC rows \"<row> <dual function>\", A/B pairs left C/D pairs right true-then-complement, plus sysCONFIG/JTAG, CORE POWER, 2 pure GND columns (D9); BSDL primary names verbatim; in-context LOOK on BOTH placed instances AGGA U20 + AGGB U22, every unit — hydra verify/symbols-0824/after/ecp5/{REPORT.md,agga-U20-u1..11.png,aggb-U22-u1..11.png}; verify8 v-ecp5 verdict CLEAN (256/256 balls BSDL-verbatim, bank membership perfect, sysCONFIG set exact)"
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "hydra symbol campaign 2026-08-24 (review verify/symbols-0824/review/ecp5.md §6, V1 winner): 256 pins / 11 units pitch 3.81 — one unit per Lattice I/O BANK carrying its own VCCIO (one unit = one I/O-voltage domain; banks 7/6/0/1/2/3/8), captioned PIC rows \"<row> <dual function>\", A/B pairs left C/D pairs right true-then-complement, plus sysCONFIG/JTAG, CORE POWER, 2 pure GND columns (D9); BSDL primary names verbatim; in-context LOOK on BOTH placed instances AGGA U20 + AGGB U22, every unit — hydra verify/symbols-0824/after/ecp5/{REPORT.md,agga-U20-u1..11.png,aggb-U22-u1..11.png}; verify8 v-ecp5 verdict CLEAN (256/256 balls BSDL-verbatim, bank membership perfect, sysCONFIG set exact)",
+      "note": "family aliases (D13, generator docstring): the caBGA-256 ballout is common to the whole LFE5U BG256 family per the FPGA-DS-02012 pinout table (one column per package) — 17 sibling MPNs aliased; CAVEAT: only the 25F BSDL is on disk, diff the 12F/45F BSDL PIN_MAPs before promoting an alias to a placed part. hydra authors from sources/lattice.lfe5u-25f-7bg256i/ (generator = source of truth); other boards load central",
+      "pin_gate": {
+        "symbol": "LFE5U-25F-7BG256I",
+        "lcsc": "C1550762",
+        "facts_checked": true,
+        "board_context": "/home/vincent/projects/hydra",
+        "state": "waived",
+        "gaps": [
+          {
+            "code": "PIN-FACTS",
+            "detail": "ds_pin_ready(C1550762) is not ready over 256 pin(s): 0 fact(s), missing pins ['A1', 'A10', 'A11', 'A12', 'A13', 'A14', 'A15', 'A16'], single-source [], disputed [] — two independent verified sources per pin (docs/10) before the SHARED library carries this map"
+          }
+        ],
+        "allow_pin_gaps": "verify8 v-ecp5 independently re-derived all 256 balls from the Lattice BSDL PIN_MAP_STRING (BSDLLFE5U25FCABGA256.bsm) cross-checked 197/197 PIO against the prjtrellis iodb — verdict CLEAN; the per-pin ds facts DB carries no rows for C1550762; ball-level truth vendored at sources/lattice.lfe5u-25f-7bg256i/ecp5-bg256-balls.json"
+      }
+    }
+  }
+}
