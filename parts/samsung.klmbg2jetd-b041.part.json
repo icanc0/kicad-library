@@ -1,0 +1,115 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "samsung.klmbg2jetd-b041",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Samsung",
+      "normalized": "samsung"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "KLMBG2JETD-B041",
+      "canonical": "KLMBG2JETD-B041",
+      "comparison_key": "KLMBG2JETD-B041",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C2803245"
+      }
+    ],
+    "description": "one generator, two symbols (D13): the JEDEC generic eMMC_BGA153 rides as the second internal symbol of this file (rank/variant knob) — request it by internal name. hydra authors from sources/samsung.klmbg2jetd-b041/ (generator = source of truth); other boards load central"
+  },
+  "names": {
+    "canonical": "KLMBG2JETD-B041",
+    "aliases": [],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/KLMBG2JETD-B041.kicad_sym",
+        "name": "KLMBG2JETD-B041"
+      },
+      {
+        "asset_path": "symbols/KLMBG2JETD-B041.kicad_sym",
+        "name": "eMMC_BGA153"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/KLMBG2JETD-B041.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "d22938de1dc65474a278ff108c9b2357c387d50d873924aedc7b70f3525a6056",
+      "internal_name": "KLMBG2JETD-B041"
+    },
+    {
+      "path": "symbols/KLMBG2JETD-B041.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "d22938de1dc65474a278ff108c9b2357c387d50d873924aedc7b70f3525a6056",
+      "internal_name": "eMMC_BGA153"
+    },
+    {
+      "path": "footprints/central-agent.pretty/EMMC_BGA153.kicad_mod",
+      "kind": "footprint",
+      "qualification": "unqualified-candidate",
+      "sha256": "24a56dc09acd660140a0c42346cc93dcdf86866a83fc94f852e2b8223a8f1b3d",
+      "internal_name": "EMMC_BGA153"
+    }
+  ],
+  "relationships": [
+    {
+      "kind": "declares-footprint",
+      "source_asset": "symbols/KLMBG2JETD-B041.kicad_sym",
+      "target": {
+        "asset_path": "footprints/central-agent.pretty/EMMC_BGA153.kicad_mod"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "Promotion supplied this footprint as a candidate; it is not qualified by a symbol-only draft."
+    }
+  ],
+  "provenance": {
+    "repository_commit": "a9419fb21b19bb0ab7e52f9d742e8558ebcccb98",
+    "source_board": "hydra",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/KLMBG2JETD-B041.kicad_sym",
+        "evidence": "First-import fit pass: hydra symbol campaign 2026-08-24 (review verify/symbols-0824/review/emmc.md, winner V3): 153 pins / 5 units at pitch 3.81 — eMMC I/F (DAT/CMD/CLK/STROBE/RESET left, Vcc x4 + Vccq x5 + Vddi right, vendor duplicate rail names never indexed), pure Vss/Vssq GND column (D9), 3 NC/RFU/VSF units with every ball pinned (D10); in-context LOOK on placed U15 across the STORAGE sheet — hydra verify/symbols-0824/after/final/hydra-STORAGE.png + after/master1/crops/storage-u15.png; verify8 v-mem verdict: accurate as landed / defect-free at the symbol (153/153 re-derived from Kingston TB29 Table 8, LOOK crops sto-if/sto-nc/sto-vss confirmed)"
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "hydra symbol campaign 2026-08-24 (review verify/symbols-0824/review/emmc.md, winner V3): 153 pins / 5 units at pitch 3.81 — eMMC I/F (DAT/CMD/CLK/STROBE/RESET left, Vcc x4 + Vccq x5 + Vddi right, vendor duplicate rail names never indexed), pure Vss/Vssq GND column (D9), 3 NC/RFU/VSF units with every ball pinned (D10); in-context LOOK on placed U15 across the STORAGE sheet — hydra verify/symbols-0824/after/final/hydra-STORAGE.png + after/master1/crops/storage-u15.png; verify8 v-mem verdict: accurate as landed / defect-free at the symbol (153/153 re-derived from Kingston TB29 Table 8, LOOK crops sto-if/sto-nc/sto-vss confirmed)",
+      "note": "one generator, two symbols (D13): the JEDEC generic eMMC_BGA153 rides as the second internal symbol of this file (rank/variant knob) — request it by internal name. hydra authors from sources/samsung.klmbg2jetd-b041/ (generator = source of truth); other boards load central",
+      "pin_gate": {
+        "symbol": "KLMBG2JETD-B041",
+        "lcsc": "C2803245",
+        "facts_checked": true,
+        "board_context": "/home/vincent/projects/hydra",
+        "state": "waived",
+        "gaps": [
+          {
+            "code": "PIN-FACTS",
+            "detail": "ds_pin_ready(C2803245) is not ready over 153 pin(s): 0 fact(s), missing pins ['A1', 'A10', 'A11', 'A12', 'A13', 'A14', 'A2', 'A3'], single-source [], disputed [] — two independent verified sources per pin (docs/10) before the SHARED library carries this map"
+          }
+        ],
+        "allow_pin_gaps": "verify8 v-mem independently re-parsed Kingston eMMC TB29 (PZ90) v1.1 Table 8 (HS400 ball assignment) and cross-checked Samsung KLMAG1JETD-B041 s3.1 Table 2 — 153/153 match; the per-pin ds facts DB carries no rows for C2803245; ball-level truth vendored at sources/samsung.klmbg2jetd-b041/emmc-truth-153.json"
+      }
+    }
+  }
+}
