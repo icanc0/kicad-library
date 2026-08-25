@@ -16,14 +16,15 @@ FACTS (D12): facts/lpddr4x-truth.json, cited per ball:
   Rank: Samsung ordering key (sibling DS sec 3.0 p8) `3D = x32 DDP`; K4U6E3S4AA decodes 6E = 16 Gb,
   3S = x32 single-die -> one die per channel = single rank, so H3 R3 J5 P5 A8 are no_connect on it.
 
-Units (7, pitch 3.81, review verify/symbols-0824/review/lpddr4x.md sec 5 winner):
+Units (5, pitch 3.81, review verify/symbols-0824/review/lpddr4x.md sec 5 winner; GND merged
+to one two-sided block + NC renumbered 7->5, owner 2026-08-25 / guide #268):
   1 "LPDDR4X CH A"  DQ[7:0]_a + DQS0/DMI0, DQ[15:8]_a + DQS1/DMI1 left; CA[5:0]_a, CK, CS/CKE, ODT right
   2 "LPDDR4X CH B"  mirror, _b
   3 "LPDDR4X PWR"   VDD1 x8 / VDD2 x24 left; VDDQ x20 + ZQ0/ZQ1/RESET_n right (vendor duplicate names)
-  4-6 "LPDDR4X GND n/3"  VSS single left columns 20/20/18 (D9)
-  7 "LPDDR4X DNU / NC"   12 DNU + 5 NC, etype no_connect (D10)
+  4 "LPDDR4X GND"       ALL 58 VSS, two-sided 29 L + 29 R (D9 + guide #268)
+  5 "LPDDR4X DNU / NC"   12 DNU + 5 NC, etype no_connect (D10)
 Pin count == 200 == footprint pads (asserted). Names = vendor ink verbatim (D6); board roles are
-net labels at the instance (boardlib/sheets/ddr.py).
+net labels at the instance (boardlib/sheets/soc_dram.py).
 """
 import contextlib as _ctx
 import json as _json
@@ -40,7 +41,7 @@ _PADS = set(_json.load(open(_HERE / "facts/dram-200-ball-positions.json")))
 LPDDR4X_RANK1 = ("H3", "R3", "J5", "P5", "A8")          # CS1_a CS1_b CKE1_a CKE1_b ZQ1
 LPDDR4X_NC_BALLS = tuple(b for b, n in _SAM.items() if n in ("DNU", "NC"))   # 12 DNU + 5 NC
 _VSS = [b for b, n in _SAM.items() if n == "VSS"]                            # 58, row-major
-LPDDR4X_VSS_UNITS = (_VSS[:20], _VSS[20:40], _VSS[40:])   # units 4/5/6 — the sheet partitions by THIS
+LPDDR4X_VSS = tuple(_VSS)                 # unit 4 carries ALL of them (29 L + 29 R, guide #268)
 DRAM_MPN = "K4U6E3S4AA-MGCL"
 _DS_SAMSUNG = "datasheets/SEC_K4UBE3D4AA-MGCL_200F_10x15.pdf"
 _DS_MICRON = "datasheets/MT53E256M32D2DS-046-IT-B-Octopart.pdf"
@@ -135,10 +136,14 @@ def _pwr(rank):
         width=25.4)
 
 
-def _gnd(k):
-    return Unit(f"LPDDR4X GND {k + 1}/3",
-                left=[Group("", [("VSS", b, "power_in") for b in LPDDR4X_VSS_UNITS[k]])],
-                width=20.32)
+def _gnd():
+    # owner 2026-08-25 ("fewer but bigger blocks"; guide #268): ONE page-band-tall two-sided
+    # block instead of three 20-ball columns.
+    half = (len(LPDDR4X_VSS) + 1) // 2
+    return Unit("LPDDR4X GND",
+                left=[Group("", [("VSS", b, "power_in") for b in LPDDR4X_VSS[:half]])],
+                right=[Group("", [("VSS", b, "power_in") for b in LPDDR4X_VSS[half:]])],
+                width=25.4)
 
 
 def _nc():
@@ -156,7 +161,7 @@ def lpddr4x(variant=DRAM_MPN):
     """variant="K4U6E3S4AA-MGCL" (default, single-rank) or "generic" (JEDEC, rank-1 live)."""
     generic = variant == "generic"
     rank = 2 if generic else 1
-    units = [_ch("A", rank), _ch("B", rank), _pwr(rank), _gnd(0), _gnd(1), _gnd(2), _nc()]
+    units = [_ch("A", rank), _ch("B", rank), _pwr(rank), _gnd(), _nc()]
     n = sum(len(g.pins) for u in units for side in (u.left, u.right, u.bottom) for g in side)
     assert n == len(_PADS) == 200, f"LPDDR4X symbol carries {n} pins, footprint has {len(_PADS)} pads"
     if generic:
@@ -170,4 +175,5 @@ def lpddr4x(variant=DRAM_MPN):
             ("Footprint", f"{_FPLIB}:LPDDR4X_WFBGA200", True), ("MPN", DRAM_MPN, True),
             ("LCSC", "C2920249", True), ("Datasheet", _DS_SAMSUNG, True)]
     with _pin_len(7.62):
-        return author_symbol(name, units, props=props, pitch=3.81)
+        return author_symbol(name, units, props=props, pitch=3.81,
+                             library_override_reason=SRC_BOARD_REASON)

@@ -1,119 +1,119 @@
 {
-  "$schema": "../schema/kag-part-manifest-v1.schema.json",
-  "schema_version": "1.0.0",
-  "part_id": "samsung.k4u6e3s4aa-mgcl",
-  "record_state": "symbol-only",
-  "identity": {
-    "type": "manufactured-part",
-    "manufacturer": {
-      "display": "Samsung",
-      "normalized": "samsung"
-    },
-    "mpn": {
-      "status": "exact",
-      "raw": "K4U6E3S4AA-MGCL",
-      "canonical": "K4U6E3S4AA-MGCL",
-      "comparison_key": "K4U6E3S4AA-MGCL",
-      "normalization": [
-        "trim",
-        "uppercase"
-      ],
-      "significant_characters": []
-    },
-    "identifiers": [
-      {
-        "scheme": "lcsc",
-        "value": "C2920249"
-      }
-    ],
-    "description": "one generator, two symbols (D13): the JEDEC generic LPDDR4X_x32_FBGA200 (rank-1 balls LIVE) rides as the second internal symbol of this file — request it by internal name. K4U6E3S4AA-MGCL decodes 6E=16Gb 3S=x32 single-die = single rank, so H3 R3 J5 P5 A8 (CS1/CKE1/ZQ1) are no_connect on it. hydra authors from sources/samsung.k4u6e3s4aa-mgcl/ (generator = source of truth); other boards load central"
+ "$schema": "../schema/kag-part-manifest-v1.schema.json",
+ "schema_version": "1.0.0",
+ "part_id": "samsung.k4u6e3s4aa-mgcl",
+ "record_state": "symbol-only",
+ "identity": {
+  "type": "manufactured-part",
+  "manufacturer": {
+   "display": "Samsung",
+   "normalized": "samsung"
   },
-  "names": {
-    "canonical": "K4U6E3S4AA-MGCL",
-    "aliases": [],
-    "internal_symbols": [
-      {
-        "asset_path": "symbols/K4U6E3S4AA-MGCL.kicad_sym",
-        "name": "K4U6E3S4AA-MGCL"
-      },
-      {
-        "asset_path": "symbols/K4U6E3S4AA-MGCL.kicad_sym",
-        "name": "LPDDR4X_x32_FBGA200"
-      }
-    ]
+  "mpn": {
+   "status": "exact",
+   "raw": "K4U6E3S4AA-MGCL",
+   "canonical": "K4U6E3S4AA-MGCL",
+   "comparison_key": "K4U6E3S4AA-MGCL",
+   "normalization": [
+    "trim",
+    "uppercase"
+   ],
+   "significant_characters": []
   },
-  "classifications": {
-    "package": null,
-    "families": []
-  },
-  "assets": [
-    {
-      "path": "symbols/K4U6E3S4AA-MGCL.kicad_sym",
-      "kind": "symbol",
-      "qualification": "qualified",
-      "sha256": "a9760b78e947887d2888b6f57ef6336b7725461b5cc0e0dcad57275f91148675",
-      "internal_name": "K4U6E3S4AA-MGCL"
-    },
-    {
-      "path": "symbols/K4U6E3S4AA-MGCL.kicad_sym",
-      "kind": "symbol",
-      "qualification": "qualified",
-      "sha256": "a9760b78e947887d2888b6f57ef6336b7725461b5cc0e0dcad57275f91148675",
-      "internal_name": "LPDDR4X_x32_FBGA200"
-    },
-    {
-      "path": "footprints/central-agent.pretty/LPDDR4X_WFBGA200.kicad_mod",
-      "kind": "footprint",
-      "qualification": "unqualified-candidate",
-      "sha256": "2ff187b112714cf1735302073626e98726f5caf1ceb5e360ce29a43282171f85",
-      "internal_name": "LPDDR4X_WFBGA200"
-    }
+  "identifiers": [
+   {
+    "scheme": "lcsc",
+    "value": "C2920249"
+   }
   ],
-  "relationships": [
-    {
-      "kind": "declares-footprint",
-      "source_asset": "symbols/K4U6E3S4AA-MGCL.kicad_sym",
-      "target": {
-        "asset_path": "footprints/central-agent.pretty/LPDDR4X_WFBGA200.kicad_mod"
-      },
-      "disposition": "unqualified-candidate",
-      "evidence": "Promotion supplied this footprint as a candidate; it is not qualified by a symbol-only draft."
-    }
-  ],
-  "provenance": {
-    "repository_commit": "823bf84bf9b8bdced8a3a1e92f7650b665410062",
-    "source_board": "hydra",
-    "entries": [
-      {
-        "kind": "manifest",
-        "path": "MANIFEST.md",
-        "locator": "promotion entry for symbols/K4U6E3S4AA-MGCL.kicad_sym",
-        "evidence": "First-import fit pass: hydra symbol campaign 2026-08-24 (review verify/symbols-0824/review/lpddr4x.md sec 5 winner): 200 pins / 7 units pitch 3.81 — CH A + CH B mirrors (DQ bytes + DQS/DMI left, CA/CK/CS/CKE/ODT right, pairs adjacent), PWR (VDD1 x8 / VDD2 x24 / VDDQ x20, vendor duplicate names), 3 pure VSS GND columns (D9), DNU/NC unit (D10); JEDEC vendor ink verbatim (DQS0_t_a, CK_c_b, RESET_n); in-context LOOK on placed U14 across the DDR sheet — hydra verify/symbols-0824/after/final/hydra-DDR.png + after/master1/crops/ddr-u14a.png; verify8 v-mem verdict: accurate as landed / defect-free at the symbol (0/200 diffs vs BOTH Micron MT53E Fig 5 p21 and Samsung SEC sec 4.2 p10 independent re-parses)"
-      }
-    ]
+  "description": "one generator, two symbols (D13): the JEDEC generic LPDDR4X_x32_FBGA200 (rank-1 balls LIVE) rides as the second internal symbol of this file \u2014 request it by internal name. K4U6E3S4AA-MGCL decodes 6E=16Gb 3S=x32 single-die = single rank, so H3 R3 J5 P5 A8 (CS1/CKE1/ZQ1) are no_connect on it. hydra authors from sources/samsung.k4u6e3s4aa-mgcl/ (generator = source of truth); other boards load central"
+ },
+ "names": {
+  "canonical": "K4U6E3S4AA-MGCL",
+  "aliases": [],
+  "internal_symbols": [
+   {
+    "asset_path": "symbols/K4U6E3S4AA-MGCL.kicad_sym",
+    "name": "K4U6E3S4AA-MGCL"
+   },
+   {
+    "asset_path": "symbols/K4U6E3S4AA-MGCL.kicad_sym",
+    "name": "LPDDR4X_x32_FBGA200"
+   }
+  ]
+ },
+ "classifications": {
+  "package": null,
+  "families": []
+ },
+ "assets": [
+  {
+   "path": "symbols/K4U6E3S4AA-MGCL.kicad_sym",
+   "kind": "symbol",
+   "qualification": "qualified",
+   "sha256": "0d3e9a95d389968203a7eb2ecc7b4df308384c39b749b1b81ceb4f375cbf4a8c",
+   "internal_name": "K4U6E3S4AA-MGCL"
   },
-  "extensions": {
-    "promotion": {
-      "fit_note": "hydra symbol campaign 2026-08-24 (review verify/symbols-0824/review/lpddr4x.md sec 5 winner): 200 pins / 7 units pitch 3.81 — CH A + CH B mirrors (DQ bytes + DQS/DMI left, CA/CK/CS/CKE/ODT right, pairs adjacent), PWR (VDD1 x8 / VDD2 x24 / VDDQ x20, vendor duplicate names), 3 pure VSS GND columns (D9), DNU/NC unit (D10); JEDEC vendor ink verbatim (DQS0_t_a, CK_c_b, RESET_n); in-context LOOK on placed U14 across the DDR sheet — hydra verify/symbols-0824/after/final/hydra-DDR.png + after/master1/crops/ddr-u14a.png; verify8 v-mem verdict: accurate as landed / defect-free at the symbol (0/200 diffs vs BOTH Micron MT53E Fig 5 p21 and Samsung SEC sec 4.2 p10 independent re-parses)",
-      "note": "one generator, two symbols (D13): the JEDEC generic LPDDR4X_x32_FBGA200 (rank-1 balls LIVE) rides as the second internal symbol of this file — request it by internal name. K4U6E3S4AA-MGCL decodes 6E=16Gb 3S=x32 single-die = single rank, so H3 R3 J5 P5 A8 (CS1/CKE1/ZQ1) are no_connect on it. hydra authors from sources/samsung.k4u6e3s4aa-mgcl/ (generator = source of truth); other boards load central",
-      "pin_gate": {
-        "symbol": "K4U6E3S4AA-MGCL",
-        "lcsc": "C2920249",
-        "facts_checked": true,
-        "board_context": "/home/vincent/projects/hydra",
-        "state": "waived",
-        "gaps": [
-          {
-            "code": "PIN-FACTS",
-            "detail": "ds_pin_ready(C2920249) is not ready over 200 pin(s): 0 fact(s), missing pins ['A1', 'A10', 'A11', 'A12', 'A2', 'A3', 'A4', 'A5'], single-source [], disputed [] — two independent verified sources per pin (docs/10) before the SHARED library carries this map"
-          },
-          {
-            "code": "PIN-ROLE-MERGE",
-            "detail": "U14 (ic) shorts role-distinct pins onto '+VDD2_DDR': A4=VDD2, A9=VDD2, AB4=VDD2, AB9=VDD2, F5=VDD2, F8=VDD2, G2=ODT_CA_a, H1=VDD2, H12=VDD2, H5=VDD2, H8=VDD2, K1=VDD2, K10=VDD2, K12=VDD2, K3=VDD2, N1=VDD2, N10=VDD2, N12=VDD2, N3=VDD2, R1=VDD2, R12=VDD2, R5=VDD2, R8=VDD2, T2=ODT_CA_b, U5=VDD2, U8=VDD2"
-          }
-        ],
-        "allow_pin_gaps": "verify8 v-mem independently re-parsed Micron MT53E256M32D2DS Fig 5 p21 and Samsung SEC_K4UBE3D4AA sec 4.2 p10 — 0/200 diffs on both, and the per-pin ds facts DB carries no rows for C2920249 (truth vendored at sources/samsung.k4u6e3s4aa-mgcl/lpddr4x-truth.json); the PIN-ROLE-MERGE on placed U14 (ODT_CA_a/b passive sense pins onto the +VDD2_DDR rail with the VDD2 power_in balls) is the Samsung note-2 instructed strap (\"ODT pin should connect to VDD2 or VSS\"), confirmed in both channel crops by v-mem — deliberate, not a role error"
-      }
-    }
+  {
+   "path": "symbols/K4U6E3S4AA-MGCL.kicad_sym",
+   "kind": "symbol",
+   "qualification": "qualified",
+   "sha256": "0d3e9a95d389968203a7eb2ecc7b4df308384c39b749b1b81ceb4f375cbf4a8c",
+   "internal_name": "LPDDR4X_x32_FBGA200"
+  },
+  {
+   "path": "footprints/central-agent.pretty/LPDDR4X_WFBGA200.kicad_mod",
+   "kind": "footprint",
+   "qualification": "unqualified-candidate",
+   "sha256": "2ff187b112714cf1735302073626e98726f5caf1ceb5e360ce29a43282171f85",
+   "internal_name": "LPDDR4X_WFBGA200"
   }
+ ],
+ "relationships": [
+  {
+   "kind": "declares-footprint",
+   "source_asset": "symbols/K4U6E3S4AA-MGCL.kicad_sym",
+   "target": {
+    "asset_path": "footprints/central-agent.pretty/LPDDR4X_WFBGA200.kicad_mod"
+   },
+   "disposition": "unqualified-candidate",
+   "evidence": "Promotion supplied this footprint as a candidate; it is not qualified by a symbol-only draft."
+  }
+ ],
+ "provenance": {
+  "repository_commit": "823bf84bf9b8bdced8a3a1e92f7650b665410062",
+  "source_board": "hydra",
+  "entries": [
+   {
+    "kind": "manifest",
+    "path": "MANIFEST.md",
+    "locator": "promotion entry for symbols/K4U6E3S4AA-MGCL.kicad_sym",
+    "evidence": "First-import fit pass: hydra symbol campaign 2026-08-24 (review verify/symbols-0824/review/lpddr4x.md sec 5 winner): 200 pins / 7 units pitch 3.81 \u2014 CH A + CH B mirrors (DQ bytes + DQS/DMI left, CA/CK/CS/CKE/ODT right, pairs adjacent), PWR (VDD1 x8 / VDD2 x24 / VDDQ x20, vendor duplicate names), 3 pure VSS GND columns (D9), DNU/NC unit (D10); JEDEC vendor ink verbatim (DQS0_t_a, CK_c_b, RESET_n); in-context LOOK on placed U14 across the DDR sheet \u2014 hydra verify/symbols-0824/after/final/hydra-DDR.png + after/master1/crops/ddr-u14a.png; verify8 v-mem verdict: accurate as landed / defect-free at the symbol (0/200 diffs vs BOTH Micron MT53E Fig 5 p21 and Samsung SEC sec 4.2 p10 independent re-parses)"
+   }
+  ]
+ },
+ "extensions": {
+  "promotion": {
+   "fit_note": "hydra symbol campaign 2026-08-24 (review verify/symbols-0824/review/lpddr4x.md sec 5 winner): 200 pins / 7 units pitch 3.81 \u2014 CH A + CH B mirrors (DQ bytes + DQS/DMI left, CA/CK/CS/CKE/ODT right, pairs adjacent), PWR (VDD1 x8 / VDD2 x24 / VDDQ x20, vendor duplicate names), 3 pure VSS GND columns (D9), DNU/NC unit (D10); JEDEC vendor ink verbatim (DQS0_t_a, CK_c_b, RESET_n); in-context LOOK on placed U14 across the DDR sheet \u2014 hydra verify/symbols-0824/after/final/hydra-DDR.png + after/master1/crops/ddr-u14a.png; verify8 v-mem verdict: accurate as landed / defect-free at the symbol (0/200 diffs vs BOTH Micron MT53E Fig 5 p21 and Samsung SEC sec 4.2 p10 independent re-parses)",
+   "note": "one generator, two symbols (D13): the JEDEC generic LPDDR4X_x32_FBGA200 (rank-1 balls LIVE) rides as the second internal symbol of this file \u2014 request it by internal name. K4U6E3S4AA-MGCL decodes 6E=16Gb 3S=x32 single-die = single rank, so H3 R3 J5 P5 A8 (CS1/CKE1/ZQ1) are no_connect on it. hydra authors from sources/samsung.k4u6e3s4aa-mgcl/ (generator = source of truth); other boards load central",
+   "pin_gate": {
+    "symbol": "K4U6E3S4AA-MGCL",
+    "lcsc": "C2920249",
+    "facts_checked": true,
+    "board_context": "/home/vincent/projects/hydra",
+    "state": "waived",
+    "gaps": [
+     {
+      "code": "PIN-FACTS",
+      "detail": "ds_pin_ready(C2920249) is not ready over 200 pin(s): 0 fact(s), missing pins ['A1', 'A10', 'A11', 'A12', 'A2', 'A3', 'A4', 'A5'], single-source [], disputed [] \u2014 two independent verified sources per pin (docs/10) before the SHARED library carries this map"
+     },
+     {
+      "code": "PIN-ROLE-MERGE",
+      "detail": "U14 (ic) shorts role-distinct pins onto '+VDD2_DDR': A4=VDD2, A9=VDD2, AB4=VDD2, AB9=VDD2, F5=VDD2, F8=VDD2, G2=ODT_CA_a, H1=VDD2, H12=VDD2, H5=VDD2, H8=VDD2, K1=VDD2, K10=VDD2, K12=VDD2, K3=VDD2, N1=VDD2, N10=VDD2, N12=VDD2, N3=VDD2, R1=VDD2, R12=VDD2, R5=VDD2, R8=VDD2, T2=ODT_CA_b, U5=VDD2, U8=VDD2"
+     }
+    ],
+    "allow_pin_gaps": "verify8 v-mem independently re-parsed Micron MT53E256M32D2DS Fig 5 p21 and Samsung SEC_K4UBE3D4AA sec 4.2 p10 \u2014 0/200 diffs on both, and the per-pin ds facts DB carries no rows for C2920249 (truth vendored at sources/samsung.k4u6e3s4aa-mgcl/lpddr4x-truth.json); the PIN-ROLE-MERGE on placed U14 (ODT_CA_a/b passive sense pins onto the +VDD2_DDR rail with the VDD2 power_in balls) is the Samsung note-2 instructed strap (\"ODT pin should connect to VDD2 or VSS\"), confirmed in both channel crops by v-mem \u2014 deliberate, not a role error"
+   }
+  }
+ }
 }

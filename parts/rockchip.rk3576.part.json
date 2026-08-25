@@ -1,87 +1,87 @@
 {
-  "$schema": "../schema/kag-part-manifest-v1.schema.json",
-  "schema_version": "1.0.0",
-  "part_id": "rockchip.rk3576",
-  "record_state": "symbol-only",
-  "identity": {
-    "type": "manufactured-part",
-    "manufacturer": {
-      "display": "Rockchip",
-      "normalized": "rockchip"
-    },
-    "mpn": {
-      "status": "exact",
-      "raw": "RK3576",
-      "canonical": "RK3576",
-      "comparison_key": "RK3576",
-      "normalization": [
-        "trim",
-        "uppercase"
-      ],
-      "significant_characters": []
-    },
-    "identifiers": [
-      {
-        "scheme": "lcsc",
-        "value": "C42388007"
-      }
-    ],
-    "description": "VENDOR LAND PENDING: no Footprint prop (deliberate — never synthesize a BGA698 land); promote the footprint as a follow-up when the vendor drawing is vendored. hydra authors from sources/rockchip.rk3576/ (generator = source of truth); other boards load central"
+ "$schema": "../schema/kag-part-manifest-v1.schema.json",
+ "schema_version": "1.0.0",
+ "part_id": "rockchip.rk3576",
+ "record_state": "symbol-only",
+ "identity": {
+  "type": "manufactured-part",
+  "manufacturer": {
+   "display": "Rockchip",
+   "normalized": "rockchip"
   },
-  "names": {
-    "canonical": "RK3576",
-    "aliases": [],
-    "internal_symbols": [
-      {
-        "asset_path": "symbols/RK3576.kicad_sym",
-        "name": "RK3576"
-      }
-    ]
+  "mpn": {
+   "status": "exact",
+   "raw": "RK3576",
+   "canonical": "RK3576",
+   "comparison_key": "RK3576",
+   "normalization": [
+    "trim",
+    "uppercase"
+   ],
+   "significant_characters": []
   },
-  "classifications": {
-    "package": null,
-    "families": []
-  },
-  "assets": [
-    {
-      "path": "symbols/RK3576.kicad_sym",
-      "kind": "symbol",
-      "qualification": "qualified",
-      "sha256": "33f99313ec8a1c363f3764cde6a0aa3787d6361c0df0ada965eb00089f7522e7",
-      "internal_name": "RK3576"
-    }
+  "identifiers": [
+   {
+    "scheme": "lcsc",
+    "value": "C42388007"
+   }
   ],
-  "relationships": [],
-  "provenance": {
-    "repository_commit": "9d186ff18087d4440e18368ece5aa969ca2820f3",
-    "source_board": "hydra",
-    "entries": [
-      {
-        "kind": "manifest",
-        "path": "MANIFEST.md",
-        "locator": "promotion entry for symbols/RK3576.kicad_sym",
-        "evidence": "First-import fit pass: hydra symbol campaign 2026-08-24 (review verify/symbols-0824/review/rk3576.md §7, V2 winner): 698 balls / 34 units pitch 3.81 — EVB U1000A..V domain split, DS Table 2-1 vendor names verbatim (D6), NC/DNU arrays in titled units (D10), twelve pure single-column GND units 10x24+13+12 covering the 265 DS ground returns (D9), no bottom pins; in-context LOOK on placed U1 across the SOC sheets — hydra verify/symbols-0824/after/rk3576/{REPORT.md,crops/}; verify8 v-rk3576 verdict CLEAN (698/698 independently re-derived from DS V1.6 §2.6 Table 2-1). SYMBOL-ONLY: the vendor land BGA698_16R1X17R2X1R08 (EVB p.11) is not in any repo and was never synthesized — footprint pends the vendor land drawing"
-      }
-    ]
-  },
-  "extensions": {
-    "promotion": {
-      "fit_note": "hydra symbol campaign 2026-08-24 (review verify/symbols-0824/review/rk3576.md §7, V2 winner): 698 balls / 34 units pitch 3.81 — EVB U1000A..V domain split, DS Table 2-1 vendor names verbatim (D6), NC/DNU arrays in titled units (D10), twelve pure single-column GND units 10x24+13+12 covering the 265 DS ground returns (D9), no bottom pins; in-context LOOK on placed U1 across the SOC sheets — hydra verify/symbols-0824/after/rk3576/{REPORT.md,crops/}; verify8 v-rk3576 verdict CLEAN (698/698 independently re-derived from DS V1.6 §2.6 Table 2-1). SYMBOL-ONLY: the vendor land BGA698_16R1X17R2X1R08 (EVB p.11) is not in any repo and was never synthesized — footprint pends the vendor land drawing",
-      "note": "VENDOR LAND PENDING: no Footprint prop (deliberate — never synthesize a BGA698 land); promote the footprint as a follow-up when the vendor drawing is vendored. hydra authors from sources/rockchip.rk3576/ (generator = source of truth); other boards load central",
-      "pin_gate": {
-        "symbol": "RK3576",
-        "lcsc": "C42388007",
-        "facts_checked": true,
-        "board_context": "/home/vincent/projects/hydra",
-        "state": "waived",
-        "gaps": [
-          {
-            "code": "PIN-FACTS",
-            "detail": "ds_pin_ready(C42388007) is not ready over 698 pin(s): 0 fact(s), missing pins ['1A1', '1A10', '1A11', '1A12', '1A13', '1A14', '1A15', '1A16'], single-source [], disputed [] — two independent verified sources per pin (docs/10) before the SHARED library carries this map"
-          }
-        ],
-        "allow_pin_gaps": "verify8 v-rk3576 re-parsed DS V1.6 §2.6 Table 2-1 (PDF pp.30-45) independently, 698/698 match, verdict CLEAN; the per-pin ds facts DB is not populated for C42388007 — ball-level truth vendored at sources/rockchip.rk3576/rk3576-balls.json; symbol-only promotion, so symbol-pin==pad agreement is deliberately not claimable until the vendor land BGA698_16R1X17R2X1R08 lands"
-      }
-    }
+  "description": "VENDOR LAND PENDING: no Footprint prop (deliberate \u2014 never synthesize a BGA698 land); promote the footprint as a follow-up when the vendor drawing is vendored. hydra authors from sources/rockchip.rk3576/ (generator = source of truth); other boards load central"
+ },
+ "names": {
+  "canonical": "RK3576",
+  "aliases": [],
+  "internal_symbols": [
+   {
+    "asset_path": "symbols/RK3576.kicad_sym",
+    "name": "RK3576"
+   }
+  ]
+ },
+ "classifications": {
+  "package": null,
+  "families": []
+ },
+ "assets": [
+  {
+   "path": "symbols/RK3576.kicad_sym",
+   "kind": "symbol",
+   "qualification": "qualified",
+   "sha256": "db9bf2782f796b85508eef0e88d76948402219502bef62618384ad624e38c2e5",
+   "internal_name": "RK3576"
   }
+ ],
+ "relationships": [],
+ "provenance": {
+  "repository_commit": "9d186ff18087d4440e18368ece5aa969ca2820f3",
+  "source_board": "hydra",
+  "entries": [
+   {
+    "kind": "manifest",
+    "path": "MANIFEST.md",
+    "locator": "promotion entry for symbols/RK3576.kicad_sym",
+    "evidence": "First-import fit pass: hydra symbol campaign 2026-08-24 (review verify/symbols-0824/review/rk3576.md \u00a77, V2 winner): 698 balls / 34 units pitch 3.81 \u2014 EVB U1000A..V domain split, DS Table 2-1 vendor names verbatim (D6), NC/DNU arrays in titled units (D10), twelve pure single-column GND units 10x24+13+12 covering the 265 DS ground returns (D9), no bottom pins; in-context LOOK on placed U1 across the SOC sheets \u2014 hydra verify/symbols-0824/after/rk3576/{REPORT.md,crops/}; verify8 v-rk3576 verdict CLEAN (698/698 independently re-derived from DS V1.6 \u00a72.6 Table 2-1). SYMBOL-ONLY: the vendor land BGA698_16R1X17R2X1R08 (EVB p.11) is not in any repo and was never synthesized \u2014 footprint pends the vendor land drawing"
+   }
+  ]
+ },
+ "extensions": {
+  "promotion": {
+   "fit_note": "hydra symbol campaign 2026-08-24 (review verify/symbols-0824/review/rk3576.md \u00a77, V2 winner): 698 balls / 34 units pitch 3.81 \u2014 EVB U1000A..V domain split, DS Table 2-1 vendor names verbatim (D6), NC/DNU arrays in titled units (D10), twelve pure single-column GND units 10x24+13+12 covering the 265 DS ground returns (D9), no bottom pins; in-context LOOK on placed U1 across the SOC sheets \u2014 hydra verify/symbols-0824/after/rk3576/{REPORT.md,crops/}; verify8 v-rk3576 verdict CLEAN (698/698 independently re-derived from DS V1.6 \u00a72.6 Table 2-1). SYMBOL-ONLY: the vendor land BGA698_16R1X17R2X1R08 (EVB p.11) is not in any repo and was never synthesized \u2014 footprint pends the vendor land drawing",
+   "note": "VENDOR LAND PENDING: no Footprint prop (deliberate \u2014 never synthesize a BGA698 land); promote the footprint as a follow-up when the vendor drawing is vendored. hydra authors from sources/rockchip.rk3576/ (generator = source of truth); other boards load central",
+   "pin_gate": {
+    "symbol": "RK3576",
+    "lcsc": "C42388007",
+    "facts_checked": true,
+    "board_context": "/home/vincent/projects/hydra",
+    "state": "waived",
+    "gaps": [
+     {
+      "code": "PIN-FACTS",
+      "detail": "ds_pin_ready(C42388007) is not ready over 698 pin(s): 0 fact(s), missing pins ['1A1', '1A10', '1A11', '1A12', '1A13', '1A14', '1A15', '1A16'], single-source [], disputed [] \u2014 two independent verified sources per pin (docs/10) before the SHARED library carries this map"
+     }
+    ],
+    "allow_pin_gaps": "verify8 v-rk3576 re-parsed DS V1.6 \u00a72.6 Table 2-1 (PDF pp.30-45) independently, 698/698 match, verdict CLEAN; the per-pin ds facts DB is not populated for C42388007 \u2014 ball-level truth vendored at sources/rockchip.rk3576/rk3576-balls.json; symbol-only promotion, so symbol-pin==pad agreement is deliberately not claimable until the vendor land BGA698_16R1X17R2X1R08 lands"
+   }
+  }
+ }
 }

@@ -8,7 +8,7 @@ so no half-body is empty; groups of one rail stay contiguous so the sheet's rail
 cross (docs/02 "own rail -> own Group"). Balls are looked up by VENDOR NAME (rk3576_facts) so a
 typo raises at import — never a silent mis-ball.
 
-Unit numbers (author order): 1..22 = A..V below, 23..34 = GND 1/12..12/12.
+Unit numbers (author order): 1..22 = A..V below, 23..26 = GND 1/4..4/4 (two-sided, 36 + 36).
 """
 from symlib.rk3576_facts import ball_of as B, gpio as G
 
