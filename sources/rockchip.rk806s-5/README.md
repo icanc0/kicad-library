@@ -7,7 +7,7 @@ campaign). The board that authored it (hydra) KEEPS authoring locally from these
 ## Files
 
 - `rk806.py` — the generator (`symlib/rk806.py` in hydra). Emits the 69-pin / 12-unit
-  family symbol `RK806` (BUCK1..10 one tile per stage, LDO, CONTROL; pitch 7.62,
+  family symbol `RK806` (BUCK1..10 one tile per stage, PLDO, NLDO, CONTROL — V3 2026-08-26 split the LDO unit; pitch 7.62,
   owner order 2026-08-20). Value/MPN carry the OTP variant (hydra: RK806S-5, LCSC
   C49174044); RK806-1/-2/-3/S-5 are OTP programs of ONE die (DS §2.1), pinout family-wide.
 - `rk806s5-pins.json` — ball->name/type facts (`facts/rk806s5-pins.json` in hydra),

@@ -16,7 +16,8 @@ NAMES  DS §2.7 verbatim: mux pins keep both functions (MOSI/SDA, MISO/PWRCTRL3,
   revision note 6 and every register/§4 mention spell PWRCTRLn, so the symbol does too.
 
 UNITS  1..10 = BUCK1..BUCK10 (one tile per stage so a sheet draws SW -> L -> VOUT inline, owner
-  08-20; L25 anatomy VOUT above SW above FB), 11 = LDO, 12 = CONTROL. Titles "RK806 <DS domain>"
+  08-20; L25 anatomy VOUT above SW above FB), 11 = PLDO, 12 = NLDO (one captioned output per
+  22.86 row, punch #22), 13 = CONTROL. Titles "RK806 <DS domain>"
   (D7); captions = DS section names + the §1.2 rating; pitch 7.62 (owner order 08-20 — room for
   the inline passives — kept; the dead ink was removed instead: no caption repeats a pin name).
 
@@ -97,22 +98,35 @@ def _buck_unit(k):
                 right=[Group(f"{rating} MAX", outs)])
 
 
-def _ldo_unit():
-    # One supply rail = one Group (docs/02), captioned by WHAT IT FEEDS (DS §2.7 "Power supply of
-    # PLDO1/2/3"); spacer rows put each VCC pin directly opposite the first output it feeds and
-    # every caption row level with its block's caption. Right captions = §1.2 ratings in pin order.
+def _ldo_half(title, vccs, outs):
+    """One LDO half (owner 2026-08-26 "organize this better", punch #22): every output is its
+    OWN captioned row (caption = DS §1.2 rating) followed by one spacer, so rows sit 22.86 apart
+    — room for the at-pin output cap, its rail glyph and a probe pad on the pin's own short run.
+    The VCC input sits opposite the first output it feeds (DS §2.7 "Power supply of ...")."""
     sp = Group("", [])
-    return Unit("RK806 LDO",
-                left=[Group("PLDO1/2/3", [_pin("VCC11", "power_in")]), sp, sp,
-                      Group("PLDO4/5", [_pin("VCC12", "power_in")]), sp,
-                      Group("NLDO1/2/3", [_pin("VCC13", "power_in")]), sp, sp,
-                      Group("NLDO4/5", [_pin("VCC14", "power_in")])],
-                right=[Group("500/300/300mA", [_pin("PLDO1", "power_out"), _pin("PLDO2", "power_out"),
-                                               _pin("PLDO3", "power_out")]),
-                       Group("500/300mA", [_pin("PLDO4", "power_out"), _pin("PLDO5", "power_out")]),
-                       Group("300/300/500mA", [_pin("NLDO1", "power_out"), _pin("NLDO2", "power_out"),
-                                               _pin("NLDO3", "power_out")]),
-                       Group("500/300mA", [_pin("NLDO4", "power_out"), _pin("NLDO5", "power_out")])])
+    left = []
+    for i, (vcc, feeds, at_row) in enumerate(vccs):
+        while len(left) < at_row:
+            left.append(sp)
+        left.append(Group(feeds, [_pin(vcc, "power_in")]))
+    right = []
+    for out, rating in outs:
+        right += [Group(rating, [_pin(out, "power_out")]), sp]
+    return Unit(title, left=left, right=right[:-1])
+
+
+def _pldo_unit():
+    # PLDO1-5: VCC11 feeds 1/2/3 (rows 0-8), VCC12 feeds 4/5 (rows 9-14)
+    return _ldo_half("RK806 PLDO", [("VCC11", "PLDO1/2/3", 0), ("VCC12", "PLDO4/5", 9)],
+                     [("PLDO1", "500mA"), ("PLDO2", "300mA"), ("PLDO3", "300mA"),
+                      ("PLDO4", "500mA"), ("PLDO5", "300mA")])
+
+
+def _nldo_unit():
+    # NLDO1-5: VCC13 feeds 1/2/3, VCC14 feeds 4/5
+    return _ldo_half("RK806 NLDO", [("VCC13", "NLDO1/2/3", 0), ("VCC14", "NLDO4/5", 9)],
+                     [("NLDO1", "300mA"), ("NLDO2", "300mA"), ("NLDO3", "500mA"),
+                      ("NLDO4", "500mA"), ("NLDO5", "300mA")])
 
 
 def _control_unit():
@@ -137,14 +151,14 @@ def _control_unit():
 
 
 def rk806():
-    """Symbol "RK806": units 1..10 BUCK1..10, 11 LDO, 12 CONTROL; Value/MPN RK806S-5 (hydra's
+    """Symbol "RK806": units 1..10 BUCK1..10, 11 PLDO, 12 NLDO, 13 CONTROL; Value/MPN RK806S-5 (hydra's
     variant), LCSC C49174044, footprint hydra_authored:RK806_QFN68 (69 pads incl. ePAD 69)."""
-    units = [_buck_unit(k) for k in range(1, 11)] + [_ldo_unit(), _control_unit()]
+    units = [_buck_unit(k) for k in range(1, 11)] + [_pldo_unit(), _nldo_unit(), _control_unit()]
     assert sum(len(g.pins) for u in units for s in (u.left, u.right, u.bottom) for g in s) == 69
     props = [("Reference", "U", False), ("Value", "RK806S-5", False),
              ("Footprint", f"{_FPLIB}:RK806_QFN68", True), ("MPN", "RK806S-5", True),
              ("LCSC", "C49174044", True), ("Datasheet", "RK806-Datasheet-V1.4.pdf", True)]
-    return author_symbol("RK806", units, props=props,
+    return author_symbol("RK806", units, props=props, library_override_reason=SRC_BOARD_REASON,
                          pitch=7.62)   # owner 08-20 "make the symbols bigger": room for the
                                        # inline SW->L->VOUT passives without collision gymnastics
 
