@@ -3,7 +3,7 @@
 Facts: facts/rk3576-balls.json = RK3576 Datasheet V1.6 §2.6 Table 2-1 (PDF pp.30-45), see
 symlib/rk3576_facts.py for the parse provenance, the vendor-name rule (D6) and the etype rule
 (D11). Unit map: symlib/rk3576_units.py (EVB1 U1000A..V domains, canon-split; review
-verify/symbols-0824/review/rk3576.md §7 V2). GND: FOUR two-sided units (36 L + 36 R; owner 2026-08-25 guide #268) of the DS
+verify/symbols-0824/review/rk3576.md §7 V2). GND: THREE two-sided units (48 L + 48 R; owner 2026-08-25 guide #268 + SUPPLY-SPLIT) of the DS
 returns (VSS_0..162, AVSS_0..76, AVSS1_0..24 = 163+77+25 = 265 balls; TVSS, PLL_AVSS and DDRPHY_PLL_AVSS
 ride in units E/C with the domain they return) — 11 x 24 + 25, each 12 L + 12 R (owner 2026-08-25).
 Package land: vendor `BGA698_16R1X17R2X1R08` (EVB p.11) — not in the repo, no Footprint prop.
@@ -16,7 +16,7 @@ from symlib.common import *  # noqa: F401,F403
 from symlib.rk3576_facts import BALLS, vendor_name, etype
 from symlib.rk3576_units import UNITS, LETTERS
 
-GND_PER_SIDE = 36                 # owner 2026-08-25 "fewer but bigger blocks": 4 x (36 L + 36 R)
+GND_PER_SIDE = 48                 # owner "fewer but bigger" + guide SUPPLY-SPLIT (<=4 supply units): 3 x (48 L + 48 R)
 GND_PER_UNIT = 2 * GND_PER_SIDE
 _GND_ORDER = ([f"VSS_{i}" for i in range(163)] + [f"AVSS_{i}" for i in range(77)]
               + [f"AVSS1_{i}" for i in range(25)])
@@ -25,7 +25,7 @@ _GND_ORDER = ([f"VSS_{i}" for i in range(163)] + [f"AVSS_{i}" for i in range(77)
 def _gnd_columns():
     """265 DS ground returns in vendor order as TWO-SIDED units (owner 2026-08-25: "left or
     right would be helpful to save space — why only one side of the symbol"): 24 balls per
-    column-pair per unit -> 3 x (36 + 36) + (25 + 24): four page-band-tall blocks (owner 2026-08-25
+    column-pair per unit -> 2 x (48 + 48) + (37 + 36): three page-band-tall blocks (owner 2026-08-25
     'fewer but bigger'; guide #268), one bus + one glyph per side. Each entry is
     (left_balls, right_balls); a column never exceeds GND_PER_UNIT (S1 24/row)."""
     from symlib.rk3576_facts import ball_of
@@ -97,7 +97,7 @@ def rk3576():
         units.append(Unit(UNIT_TITLE[UNIT[f"GND{k + 1}"]],
                           left=[Group("", [_pin(b) for b in lcol])],
                           right=[Group("", [_pin(b) for b in rcol])], width=38.1))
-    assert len(units) == N_UNITS == 22 + len(GND_COLUMNS)
+    assert len(units) == N_UNITS == len(LETTERS) + len(GND_COLUMNS)
     npins = sum(len(g.pins) for u in units for s in (u.left, u.right) for g in s)
     assert npins == 698, npins
     return author_symbol(

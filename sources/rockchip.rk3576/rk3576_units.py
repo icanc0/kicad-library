@@ -8,7 +8,8 @@ so no half-body is empty; groups of one rail stay contiguous so the sheet's rail
 cross (docs/02 "own rail -> own Group"). Balls are looked up by VENDOR NAME (rk3576_facts) so a
 typo raises at import — never a silent mis-ball.
 
-Unit numbers (author order): 1..22 = A..V below, 23..26 = GND 1/4..4/4 (two-sided, 36 + 36).
+Unit numbers (author order): 1..21 = A,B,D..V below (C merged into D), 22..24 = GND 1/3..3/3
+(two-sided, 48 + 48 + 48 + 48 + 37 + 36).
 """
 from symlib.rk3576_facts import ball_of as B, gpio as G
 
@@ -37,19 +38,21 @@ _B = _ddr("B")
 UNITS = {
     "A": ("RK3576 DDRPHY CH A", _A[0], _A[1]),
     "B": ("RK3576 DDRPHY CH B", _B[0], _B[1] + [("RESET", [B("LP4_RESET")])]),
-    "C": ("RK3576 DDRPHY PWR",
-          [("DDRPHY DVDD", [B(f"DDRPHY_DVDD_{i}") for i in range(5)]),
-           ("PLL DVDD", [B("DDRPHY_PLL_DVDD")]), ("PLL AVDD", [B("DDRPHY_PLL_AVDD1V8")])],
-          [("DDRPHY VDDQ", [B(f"DDRPHY_VDDQ_{i}") for i in range(6)]),
-           ("CK VDDQ", [B("DDRPHY_CK_VDDQ")]), ("CKE VDDQ", [B("DDRPHY_CKE_VDDQ")]),
-           ("PLL AVSS", [B("DDRPHY_PLL_AVSS")])]),
-    "D": ("RK3576 CORE PWR",
+    # D = CORE + DDRPHY supplies in ONE unit (guide SYM-ANATOMY-SUPPLY-SPLIT, 2026-08-26: at
+    # most 4 supply/GND-only units per symbol — 3 GND blocks + this; the former C unit's DDRPHY
+    # rails ride here, PLL AVSS return LAST on the right). Letter C is retired.
+    "D": ("RK3576 CORE + DDRPHY PWR",
           [("CPU_BIG DVDD", [B(f"CPU_BIG_DVDD_{i}") for i in range(8)]),
            ("CPU_LIT DVDD", [B(f"CPU_LIT_DVDD_{i}") for i in range(5)]),
-           ("NPU DVDD", [B(f"NPU_DVDD_{i}") for i in range(5)])],
+           ("NPU DVDD", [B(f"NPU_DVDD_{i}") for i in range(5)]),
+           ("DDRPHY DVDD", [B(f"DDRPHY_DVDD_{i}") for i in range(5)]),
+           ("PLL DVDD", [B("DDRPHY_PLL_DVDD")]), ("PLL AVDD", [B("DDRPHY_PLL_AVDD1V8")])],
           [("LOGIC DVDD", [B(f"LOGIC_DVDD_{i}") for i in range(7)]),
            ("LOGIC_MEM DVDD", [B(f"LOGIC_MEM_DVDD_{i}") for i in range(2)]),
-           ("GPU DVDD", [B(f"GPU_DVDD_{i}") for i in range(5)])]),
+           ("GPU DVDD", [B(f"GPU_DVDD_{i}") for i in range(5)]),
+           ("DDRPHY VDDQ", [B(f"DDRPHY_VDDQ_{i}") for i in range(6)]),
+           ("CK VDDQ", [B("DDRPHY_CK_VDDQ")]), ("CKE VDDQ", [B("DDRPHY_CKE_VDDQ")]),
+           ("PLL AVSS", [B("DDRPHY_PLL_AVSS")])]),
     "E": ("RK3576 PMUIO0/OSC",
           [("PMUIO0", [B("PMUIO0_VCC1V8")]),
            ("PMU LOGIC", [B("PMU_LOGIC_DVDD0V75_0"), B("PMU_LOGIC_DVDD0V75_1")]),
@@ -177,7 +180,7 @@ UNITS = {
           [("TX", [B("UFS_TX_D0P"), B("UFS_TX_D0N"), B("UFS_TX_D1P"), B("UFS_TX_D1N")])]),
 }
 
-LETTERS = "ABCDEFGHIJKLMNOPQRSTUV"
+LETTERS = "ABDEFGHIJKLMNOPQRSTUV"   # C retired 2026-08-26 (merged into D)
 assert list(UNITS) == list(LETTERS)
 
 __all__ = ["UNITS", "LETTERS"]
