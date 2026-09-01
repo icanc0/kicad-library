@@ -1,0 +1,73 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "alpha-omega-semiconductor.ao3400a",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Alpha & Omega Semiconductor",
+      "normalized": "alpha-omega-semiconductor"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "AO3400A",
+      "canonical": "AO3400A",
+      "comparison_key": "AO3400A",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C20917"
+      }
+    ],
+    "description": "30 V, 5.7 A N-channel MOSFET in SOT-23; flattened exact symbol with pins 1=G, 2=S, 3=D."
+  },
+  "names": {
+    "canonical": "AO3400A",
+    "aliases": [],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/AO3400A.kicad_sym",
+        "name": "AO3400A"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/AO3400A.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "426adbd835dea24c41c585349cc0f32696963d5d2b37d1f627923b7a362252c0",
+      "internal_name": "AO3400A"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "129cd638b814537c1922e8d44cc8eec6ee09787f",
+    "source_board": "hydra",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/AO3400A.kicad_sym",
+        "evidence": "Hydra pwrin uses two AO3400A pass FETs in the LM74700 ideal-diode inputs. The central symbol is the KiCad stock AO3400A flattened to avoid kicad-cli lib_symbol_mismatch against the stock extends form; pin identities remain 1=G, 2=S, 3=D."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "Proven on Hydra pwrin as two LM74700 ideal-diode pass FETs; flattened central form keeps generated embed and resolved library definition identical under ERC.",
+      "note": "Exact AO3400A pin map: 1=G, 2=S, 3=D; native Package_TO_SOT_SMD:SOT-23 land."
+    }
+  }
+}
