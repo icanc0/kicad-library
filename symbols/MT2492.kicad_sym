@@ -2,7 +2,7 @@
 	(symbol "MT2492" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
 		(property "Reference" "U" (at 0 30.48 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "MT2492" (at 0 27.94 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "footprints:SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BL" (at 0 25.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6" (at 0 25.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Datasheet" "datasheets/mt2492-aerosemi.pdf" (at 0 22.86 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Description" "Aerosemi MT2492 600kHz 16V 2A synchronous step-down converter, SOT23-6, VFB=0.6V" (at 0 20.32 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "MPN" "MT2492" (at 0 17.78 0) (effects (font (size 1.27 1.27)) (hide yes)))

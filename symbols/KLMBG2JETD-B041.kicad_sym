@@ -5,7 +5,7 @@
 	(symbol "KLMBG2JETD-B041" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
 			(property "Reference" "U" (at 0 62.23 0) (effects (font (size 1.27 1.27))))
 			(property "Value" "KLMBG2JETD-B041" (at 0 59.69 0) (effects (font (size 1.27 1.27))))
-			(property "Footprint" "central-agent:EMMC_BGA153" (at 0 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Footprint" "Package_BGA:LFBGA-153_11.5x13mm_Layout14x14_P0.5mm" (at 0 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
 			(property "MPN" "KLMBG2JETD-B041" (at 0 54.61 0) (effects (font (size 1.27 1.27)) (hide yes)))
 			(property "LCSC" "C2803245" (at 0 52.07 0) (effects (font (size 1.27 1.27)) (hide yes)))
 			(property "Datasheet" "KLMAG1JETD-B041-UUGear.pdf" (at 0 49.53 0) (effects (font (size 1.27 1.27)) (hide yes)))
@@ -201,7 +201,7 @@
 	(symbol "eMMC_BGA153" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
 			(property "Reference" "U" (at 0 57.15 0) (effects (font (size 1.27 1.27))))
 			(property "Value" "eMMC_BGA153" (at 0 54.61 0) (effects (font (size 1.27 1.27))))
-			(property "Footprint" "central-agent:EMMC_BGA153" (at 0 52.07 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Footprint" "Package_BGA:LFBGA-153_11.5x13mm_Layout14x14_P0.5mm" (at 0 52.07 0) (effects (font (size 1.27 1.27)) (hide yes)))
 			(property "Datasheet" "Kingston-EMMC-TB29-PZ90-v1.1.pdf" (at 0 49.53 0) (effects (font (size 1.27 1.27)) (hide yes)))
 			(symbol "eMMC_BGA153_1_1"
 				(rectangle (start -17.78 31.75) (end 17.78 -31.75) (stroke (width 0.254) (type solid)) (fill (type background)))

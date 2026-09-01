@@ -49,11 +49,28 @@
       "path": "symbols/AW35645.kicad_sym",
       "kind": "symbol",
       "qualification": "qualified",
-      "sha256": "02975edb55c0b22dd279738f44608e3d8c59eece2e0e48ea0012166e0061bb42",
+      "sha256": "6c971466059949bca651a851c6c3fff8826cfd8d4e044fe7912602bfe61e5afc",
       "internal_name": "AW35645"
+    },
+    {
+      "path": "footprints/central-agent.pretty/AW35645_FCBGA36_2.4x2.4mm_P0.4mm.kicad_mod",
+      "kind": "footprint",
+      "qualification": "unqualified-candidate",
+      "sha256": "8596fd74bf4537fdbb8287088095ecef073554c8fc84790b816c46d4b7d79f12",
+      "internal_name": "AW35645_FCBGA36_2.4x2.4mm_P0.4mm"
     }
   ],
-  "relationships": [],
+  "relationships": [
+    {
+      "kind": "declares-footprint",
+      "source_asset": "symbols/AW35645.kicad_sym",
+      "target": {
+        "asset_path": "footprints/central-agent.pretty/AW35645_FCBGA36_2.4x2.4mm_P0.4mm.kicad_mod"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "Hydra requalification supplied the vendor-derived 36-ball land and proved a 36/36 symbol-to-pad bijection; the symbol-only record keeps package qualification conservative."
+    }
+  ],
   "provenance": {
     "repository_commit": "67f1c24d297279ad8e458845eebc0dd27fa6afd4",
     "source_board": "hydra",

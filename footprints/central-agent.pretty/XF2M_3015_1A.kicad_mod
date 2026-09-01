@@ -3,7 +3,7 @@
 	(generator "kagent_footprints")
 	(generator_version "10.0")
 	(layer "F.Cu")
-	(descr "XF2M_2215_1A (authored by kicad-agent-guide)")
+	(descr "Omron XF2M-3015-1A, 30 contacts at 0.5 mm pitch; pads 31/32 are library-assigned hold-down identifiers")
 	(attr smd)
 	(property "Reference" "REF**"
 		(at 0 -1.25 0)
@@ -36,7 +36,7 @@
 		(layer "F.Fab")
 	)
 	(fp_circle
-		(center -5.775 0)
+		(center -7.775 0)
 		(end -7.655 0)
 		(stroke
 			(width 0.12)

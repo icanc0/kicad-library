@@ -49,7 +49,7 @@
       "path": "symbols/W25Q128JVSIQTR.kicad_sym",
       "kind": "symbol",
       "qualification": "qualified",
-      "sha256": "b764d7acb7aac94c1f6db66b7f924cc0b6e6e3599ebadd85c31f5ce25181a2a2",
+      "sha256": "d0f343d2bb78ef3491a8b78f24b29b90acdb8415629f4c61b51682c477fedd57",
       "internal_name": "W25Q128JVSIQTR"
     }
   ],
@@ -62,13 +62,13 @@
         "kind": "manifest",
         "path": "MANIFEST.md",
         "locator": "promotion entry for symbols/W25Q128JVSIQTR.kicad_sym",
-        "evidence": "First-import fit pass: V1 re-author 2026-08-24 (nor.md): vendor Table 3.3 pad names with KiCad overbars, POWER SUPPLY caption + VCC top-left, CS/CLK left, IO0-IO3 right, GND on-grid bottom (was -9.398 off-grid silent-open class); rendered + LOOKed."
+        "evidence": "First-import fit pass: V1 re-author 2026-08-24 (nor.md): vendor Table 3.3 pad names with KiCad overbars, POWER SUPPLY caption + VCC top-left, CS/CLK left, IO0-IO3 right, GND on-grid bottom; 2026-09-01 exact -IQ suffix review corrected pins 3/7 to IO2/IO3 because QE=1 makes /WP and /HOLD unavailable; rendered + LOOKed."
       }
     ]
   },
   "extensions": {
     "promotion": {
-      "fit_note": "V1 re-author 2026-08-24 (nor.md): vendor Table 3.3 pad names with KiCad overbars, POWER SUPPLY caption + VCC top-left, CS/CLK left, IO0-IO3 right, GND on-grid bottom (was -9.398 off-grid silent-open class); rendered + LOOKed.",
+      "fit_note": "V1 re-author 2026-08-24 (nor.md): vendor Table 3.3 pad names with KiCad overbars, POWER SUPPLY caption + VCC top-left, CS/CLK left, IO0-IO3 right, GND on-grid bottom; 2026-09-01 exact -IQ suffix review corrected pins 3/7 to IO2/IO3 because QE=1 makes /WP and /HOLD unavailable; rendered + LOOKed.",
       "note": "3V JV, SOIC-8 208-mil; -IQ QE=1 fixed (pin3=IO2, pin7=IO3 only, /WP //HOLD unavailable, DS revF p73 note 5). NOT interchangeable with the 1.8V JW sibling."
     }
   }

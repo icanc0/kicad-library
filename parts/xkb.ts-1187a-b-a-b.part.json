@@ -47,11 +47,28 @@
       "path": "symbols/TS-1187A-B-A-B.kicad_sym",
       "kind": "symbol",
       "qualification": "qualified",
-      "sha256": "1da2f83d41d7b6189e82963070b0963f25e6735ef25063b15fac8888fca9191e",
+      "sha256": "727bda741e2a3cf773a72691250595bb8ba34546a0d3725405bdbf0c3d4a0b7d",
       "internal_name": "TS-1187A-B-A-B"
+    },
+    {
+      "path": "footprints/central-agent.pretty/TS-1187A_5.1x5.1mm.kicad_mod",
+      "kind": "footprint",
+      "qualification": "unqualified-candidate",
+      "sha256": "bbb985a4b43a893c54f06bae02e5ba9197b4ee2b132f750824ad4b807c51dd67",
+      "internal_name": "TS-1187A_5.1x5.1mm"
     }
   ],
-  "relationships": [],
+  "relationships": [
+    {
+      "kind": "declares-footprint",
+      "source_asset": "symbols/TS-1187A-B-A-B.kicad_sym",
+      "target": {
+        "asset_path": "footprints/central-agent.pretty/TS-1187A_5.1x5.1mm.kicad_mod"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "Hydra requalification derived the four-pad land from the XKB customer drawing and proved a 4/4 symbol-to-pad bijection; package qualification remains conservative."
+    }
+  ],
   "provenance": {
     "repository_commit": "67f1c24d297279ad8e458845eebc0dd27fa6afd4",
     "source_board": "hydra",

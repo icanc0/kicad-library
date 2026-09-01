@@ -51,35 +51,18 @@
       "path": "symbols/KLMBG2JETD-B041.kicad_sym",
       "kind": "symbol",
       "qualification": "qualified",
-      "sha256": "d22938de1dc65474a278ff108c9b2357c387d50d873924aedc7b70f3525a6056",
+      "sha256": "2a98ac9a53cf1a05a642a9297e2f8ed3874fc8ee80c44d7d43a75cc67e119f9f",
       "internal_name": "KLMBG2JETD-B041"
     },
     {
       "path": "symbols/KLMBG2JETD-B041.kicad_sym",
       "kind": "symbol",
       "qualification": "qualified",
-      "sha256": "d22938de1dc65474a278ff108c9b2357c387d50d873924aedc7b70f3525a6056",
+      "sha256": "2a98ac9a53cf1a05a642a9297e2f8ed3874fc8ee80c44d7d43a75cc67e119f9f",
       "internal_name": "eMMC_BGA153"
-    },
-    {
-      "path": "footprints/central-agent.pretty/EMMC_BGA153.kicad_mod",
-      "kind": "footprint",
-      "qualification": "unqualified-candidate",
-      "sha256": "24a56dc09acd660140a0c42346cc93dcdf86866a83fc94f852e2b8223a8f1b3d",
-      "internal_name": "EMMC_BGA153"
     }
   ],
-  "relationships": [
-    {
-      "kind": "declares-footprint",
-      "source_asset": "symbols/KLMBG2JETD-B041.kicad_sym",
-      "target": {
-        "asset_path": "footprints/central-agent.pretty/EMMC_BGA153.kicad_mod"
-      },
-      "disposition": "unqualified-candidate",
-      "evidence": "Promotion supplied this footprint as a candidate; it is not qualified by a symbol-only draft."
-    }
-  ],
+  "relationships": [],
   "provenance": {
     "repository_commit": "a9419fb21b19bb0ab7e52f9d742e8558ebcccb98",
     "source_board": "hydra",

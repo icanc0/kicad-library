@@ -49,9 +49,26 @@
       "qualification": "qualified",
       "sha256": "552775c325e96b3f4b4d092b890360b7a6337b19f8f24653a8f3e43c35272859",
       "internal_name": "XF2M-3015-1A"
+    },
+    {
+      "path": "footprints/central-agent.pretty/XF2M_3015_1A.kicad_mod",
+      "kind": "footprint",
+      "qualification": "unqualified-candidate",
+      "sha256": "a3a7858a19ca0c4d16547e7cb9d8f2996d946bdb8d2b650aaff6734a5dd3b8a9",
+      "internal_name": "XF2M_3015_1A"
     }
   ],
-  "relationships": [],
+  "relationships": [
+    {
+      "kind": "declares-footprint",
+      "source_asset": "symbols/XF2M-3015-1A.kicad_sym",
+      "target": {
+        "asset_path": "footprints/central-agent.pretty/XF2M_3015_1A.kicad_mod"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "Hydra V3b extended the proven 22-contact Omron-family land parametrically to 30 contacts and proved a 32/32 symbol-to-pad bijection; package qualification remains conservative."
+    }
+  ],
   "provenance": {
     "repository_commit": "67f1c24d297279ad8e458845eebc0dd27fa6afd4",
     "source_board": "hydra",
