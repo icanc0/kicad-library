@@ -26,7 +26,7 @@
         "value": "C22383473"
       }
     ],
-    "description": "Push-push microSD/TF socket; pads 9-13 (Cd + 4 shell tabs) numbered per the LCSC/EasyEDA convention, not the vendor drawing (tabs are unnumbered there). Land drawing-verified <=0.1mm vs the SHOU HAN customer drawing (hydra symbols-0824 tf01a review)."
+    "description": "Push-push microSD/TF socket; pads 9-13 (Cd + 4 shell tabs) numbered per the LCSC/EasyEDA convention, not the vendor drawing (tabs are unnumbered there). Land drawing-verified <=0.1mm vs the SHOU HAN customer drawing; mechanical outline requalified against Skibidi Hub's proven C22383473 footprint."
   },
   "names": {
     "canonical": "SH-TF-01A",
@@ -54,7 +54,7 @@
       "path": "footprints/central-agent.pretty/SH_TF_01A_MICROSD.kicad_mod",
       "kind": "footprint",
       "qualification": "unqualified-candidate",
-      "sha256": "54bd3e64936c3b1d754a49c08e1b0ccd2e1d1b4d700854eba98783d0a341e131",
+      "sha256": "8f44db3b845e257682a9008e5906cd0bf41bafbde18409f6cbf704598afe1b06",
       "internal_name": "SH_TF_01A_MICROSD"
     }
   ],
@@ -83,14 +83,14 @@
         "kind": "datasheet",
         "path": "datasheets/shtf01a-shouhan-c22383473.pdf",
         "locator": "p.1 customer drawing rev A: pin table (1 DAT2, 2 CD/DAT3, 3 CMD, 4 VDD, 5 CLK, 6 VSS, 7 DAT0, 8 DAT1) + contact row 'Cd 8 7 6 5 4 3 2 1' + 4 unnumbered shell tabs",
-        "evidence": "SHOU HAN drawing vendored from hydra datasheets/connectors/SHTF01A_C22383473.pdf; land SH_TF_01A_MICROSD cross-checked against it to <=0.1mm (tf01a review 2026-08-24). Detect contract: Cd-to-SHELL closes on card insertion (bench-confirmed) — ground the shell tabs, pull Cd up, read active-low on insert."
+        "evidence": "SHOU HAN drawing vendored from hydra datasheets/connectors/SHTF01A_C22383473.pdf; copper and locating holes cross-checked to <=0.1mm (tf01a review 2026-08-24). The moulded-body/card-mouth silhouette was requalified 2026-09-01 against Skibidi Hub's proven C22383473 footprint; the courtyard was corrected to enclose both copper and the 9.70mm body extent. Detect contract: Cd-to-SHELL closes on card insertion (bench-confirmed) — ground the shell tabs, pull Cd up, read active-low on insert."
       }
     ]
   },
   "extensions": {
     "promotion": {
       "fit_note": "V2 re-author 2026-08-24 (tf01a.md): names re-vendored (Cd, CD/DAT3, SHELL x4), VDD top-left, SD bus functional order, VSS+SHELL right column (bottom comb removed), supplies power_in, CLK input; rendered + LOOKed on a scratch sheet.",
-      "note": "Push-push microSD/TF socket; pads 9-13 (Cd + 4 shell tabs) numbered per the LCSC/EasyEDA convention, not the vendor drawing (tabs are unnumbered there). Land drawing-verified <=0.1mm vs the SHOU HAN customer drawing (hydra symbols-0824 tf01a review)."
+      "note": "Push-push microSD/TF socket; pads 9-13 (Cd + 4 shell tabs) numbered per the LCSC/EasyEDA convention, not the vendor drawing (tabs are unnumbered there). Copper is drawing-verified <=0.1mm; mechanical outline requalified against Skibidi Hub's proven C22383473 footprint."
     }
   }
 }
