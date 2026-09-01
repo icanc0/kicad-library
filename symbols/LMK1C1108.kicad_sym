@@ -13,7 +13,7 @@
 			(property "Manufacturer" "Texas Instruments" (at 0 12.7 0) (effects (font (size 1.27 1.27)) (hide yes)))
 			(symbol "LMK1C1108_1_1"
 				(rectangle (start -20.32 15.24) (end 20.32 -15.24) (stroke (width 0.254) (type solid)) (fill (type background)))
-				(text "LMK1C1108 1:8 CLOCK FANOUT" (at 0 16.51 0) (effects (font (size 1.27 1.27) (bold yes))))
+					(text "LMK1C1108 1:8 CLOCK FANOUT" (at 0 13.46 0) (effects (font (size 1.27 1.27) (bold yes))))
 				(text "1G=0 -> Yn LOW" (at -6.35 -12.7 0) (effects (font (size 1.0 1.0))))
 				(polyline (pts (xy -12.7 12.7) (xy -7.62 10.16) (xy -12.7 7.62) (xy -12.7 12.7)) (stroke (width 0.254) (type solid)) (fill (type none)))
 				(polyline (pts (xy -7.62 10.16) (xy -5.08 10.16) (xy -5.08 -8.89)) (stroke (width 0.254) (type solid)) (fill (type none)))

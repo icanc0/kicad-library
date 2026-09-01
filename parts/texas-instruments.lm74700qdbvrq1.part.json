@@ -1,0 +1,76 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "texas-instruments.lm74700qdbvrq1",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Texas Instruments",
+      "normalized": "texas-instruments"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "LM74700QDBVRQ1",
+      "canonical": "LM74700QDBVRQ1",
+      "comparison_key": "LM74700QDBVRQ1",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C2941042"
+      }
+    ],
+    "description": "Automotive ideal-diode controller in SOT-23-6; ANODE/CATHODE sense the series path, GATE drives the external N-MOSF, and EN must not float."
+  },
+  "names": {
+    "canonical": "LM74700QDBVRQ1",
+    "aliases": [
+      "LM74700",
+      "LM74700-Q1"
+    ],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/LM74700.kicad_sym",
+        "name": "LM74700"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/LM74700.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "a16329854534050e8118f5ac7bf48add8e6f65e9416af8465236b4006b013a7a",
+      "internal_name": "LM74700"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "e62dea3fcb71e2f91b66f4c1c167b5816493f98d",
+    "source_board": "capjack",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/LM74700.kicad_sym",
+        "evidence": "Capjack promoted the six-pin exact part after an in-context ideal-diode fit pass. Hydra requalified the same symbol for two 5 V source legs: 1=VCAP, 2=GND, 3=EN, 4=CATHODE, 5=GATE, 6=ANODE; the side-oriented power path keeps ANODE/CATHODE wiring visually traceable."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "Capjack proved the exact six-pin controller; Hydra's 2026-09-01 fit pass confirmed the side-oriented ANODE/CATHODE/GATE geometry on two LM74700 + AO3400A ideal-diode legs.",
+      "note": "Exact LM74700QDBVRQ1 pin map: 1 VCAP, 2 GND, 3 EN, 4 CATHODE, 5 GATE, 6 ANODE; native SOT-23-6 land."
+    }
+  }
+}
