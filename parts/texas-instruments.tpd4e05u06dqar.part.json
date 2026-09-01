@@ -63,6 +63,12 @@
         "path": "MANIFEST.md",
         "locator": "promotion entry for symbols/TPD4E05U06.kicad_sym",
         "evidence": "First-import fit pass: Hydra symbol campaign 2026-08-24 re-authored the TI Fig 6-2 array as a flow-through symbol, preserved pin numbers and electrical types, and render-LOOKed it in USB and storage contexts."
+      },
+      {
+        "kind": "datasheet",
+        "path": "datasheets/tpd4e05u06-ti-slvsbo7o-202408.pdf",
+        "locator": "p.4 Table 4-2 Pin Functions TPD4E05U06 DQA (D1+ 1, D1- 2, GND 3, D2+ 4, D2- 5, NC 6/7/9, GND 8; flow-through pairs per Fig 4-3)",
+        "evidence": "TI TPD4E05U06 datasheet SLVSBO7O (Dec 2012, revised Aug 2024), vendored 2026-09-01 from https://www.ti.com/lit/ds/symlink/tpd4e05u06.pdf; hydra electrical review F-1 confirmed the central symbol's 10/10 pins against it."
       }
     ]
   },

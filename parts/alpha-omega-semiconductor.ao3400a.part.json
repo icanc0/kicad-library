@@ -61,6 +61,12 @@
         "path": "MANIFEST.md",
         "locator": "promotion entry for symbols/AO3400A.kicad_sym",
         "evidence": "Hydra pwrin uses two AO3400A pass FETs in the LM74700 ideal-diode inputs. The central symbol is the KiCad stock AO3400A flattened to avoid kicad-cli lib_symbol_mismatch against the stock extends form; pin identities remain 1=G, 2=S, 3=D."
+      },
+      {
+        "kind": "datasheet",
+        "path": "datasheets/ao3400a-aos-rev3.1-202307.pdf",
+        "locator": "p.1 SOT-23 pinout drawing (1 G, 2 S, 3 D) and ratings table; footer Rev 3.1 July 2023",
+        "evidence": "AOS AO3400A datasheet Rev 3.1 (July 2023), vendored 2026-09-01 from https://www.aosmd.com/res/datasheets/AO3400A.pdf; hydra electrical review F-1 confirmed the central symbol's 3/3 pins against it."
       }
     ]
   },

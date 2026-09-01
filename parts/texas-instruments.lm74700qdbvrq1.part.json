@@ -70,6 +70,12 @@
         "path": "MANIFEST.md",
         "locator": "ink-fix note on the entry for symbols/LM74700.kicad_sym",
         "evidence": "2026-09-01 ink fix (hydra task #5 visual review V11): the bold body title 'LM74700-Q1 (ideal diode controller)' duplicated the Value field plus prose; removed. Group headers, pins and geometry unchanged."
+      },
+      {
+        "kind": "datasheet",
+        "path": "datasheets/lm74700-q1-ti-snosd17g-202012.pdf",
+        "locator": "p.3 Table 5-1 Pin Functions (SOT-23-6: 1 VCAP, 2 GND, 3 EN, 4 CATHODE, 5 GATE, 6 ANODE)",
+        "evidence": "TI LM74700-Q1 datasheet SNOSD17G (Oct 2017, revised Dec 2020), vendored 2026-09-01 from https://www.ti.com/lit/ds/symlink/lm74700-q1.pdf; hydra electrical review F-1 confirmed the central symbol's 6/6 pins against it."
       }
     ]
   },
