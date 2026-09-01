@@ -128,7 +128,7 @@
 			)
 			(symbol "AW35645_6_1"
 				(rectangle (start -12.7 10.16) (end 12.7 -10.16) (stroke (width 0.254) (type solid)) (fill (type background)))
-				(text "CONTROL / POWER" (at 0 11.43 0) (effects (font (size 1.27 1.27) (bold yes))))
+				(text "CONTROL / POWER" (at 0 8.89 0) (effects (font (size 1.27 1.27) (bold yes))))
 				(text "OEB=1 -> ALL PATHS Hi-Z" (at 0 5.08 0) (effects (font (size 1.0 1.0))))
 				(text "OEB=0, SEL=0 -> A" (at 0 1.27 0) (effects (font (size 1.0 1.0))))
 				(text "OEB=0, SEL=1 -> B" (at 0 -1.27 0) (effects (font (size 1.0 1.0))))

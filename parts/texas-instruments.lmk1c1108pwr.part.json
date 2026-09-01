@@ -49,7 +49,7 @@
       "path": "symbols/LMK1C1108.kicad_sym",
       "kind": "symbol",
       "qualification": "qualified",
-      "sha256": "89f6e1ac1c4ea82888b502df1bbaa59b7d173c0b2c34cf4f553f061866d9aa6f",
+      "sha256": "1196a81e3b8dd32b2224fc04aecc253f2d493c13a84fcd2e23ce1a52c94a569e",
       "internal_name": "LMK1C1108"
     }
   ],
@@ -62,13 +62,13 @@
         "kind": "manifest",
         "path": "MANIFEST.md",
         "locator": "promotion entry for symbols/LMK1C1108.kicad_sym",
-        "evidence": "First-import fit pass: Hydra electrical council F1 2026-08-30 verified the pin table against TI SNAS812 Table 5-1. Hydra's 2026-09-01 requalification moved the title below the VDD pin stubs after the strict ink gate found the former title threaded by two supply pins."
+        "evidence": "First-import fit pass: Hydra electrical council F1 2026-08-30 verified the pin table against TI SNAS812 Table 5-1. Hydra's 2026-09-01 requalification removed duplicate baked title/OE prose after the placed close-up showed it competing with the VDD/GND and output pin ink; the unit, Value and pin names carry the same truth without that clutter."
       }
     ]
   },
   "extensions": {
     "promotion": {
-      "fit_note": "Hydra electrical council F1 2026-08-30 verified the pin table against TI SNAS812 Table 5-1; the 2026-09-01 in-context fit pass moved the title clear of the VDD stubs.",
+      "fit_note": "Hydra electrical council F1 2026-08-30 verified the pin table against TI SNAS812 Table 5-1; the 2026-09-01 in-context fit pass removed duplicate internal title/OE prose that crowded the supply and output ink.",
       "note": "One-input, eight-output LVCMOS clock buffer, 1.8 V to 3.3 V, TSSOP-16."
     }
   }

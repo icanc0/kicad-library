@@ -49,7 +49,7 @@
       "path": "symbols/AW35645.kicad_sym",
       "kind": "symbol",
       "qualification": "qualified",
-      "sha256": "6c971466059949bca651a851c6c3fff8826cfd8d4e044fe7912602bfe61e5afc",
+      "sha256": "25050a1f00d126efd2a5b55728627477d131bb68f602f163dbeed7f2c16a6bdb",
       "internal_name": "AW35645"
     },
     {
@@ -79,13 +79,13 @@
         "kind": "manifest",
         "path": "MANIFEST.md",
         "locator": "promotion entry for symbols/AW35645.kicad_sym",
-        "evidence": "First-import fit pass: Hydra de-FPGA architecture 2026-08-28 verified all 36 balls independently against the Awinic datasheet and vendor symbol, used the vendor land, and passed in-context mux-sheet gates."
+        "evidence": "First-import fit pass: Hydra verified all 36 balls independently against the Awinic datasheet and vendor symbol. The 2026-09-01 six-unit requalification moved the CONTROL / POWER title inside the body after strict ink review found the VCC stub threading the former above-body title."
       }
     ]
   },
   "extensions": {
     "promotion": {
-      "fit_note": "Hydra de-FPGA architecture 2026-08-28 verified all 36 balls independently against the Awinic datasheet and vendor symbol, used the vendor land, and passed in-context mux-sheet gates.",
+      "fit_note": "Hydra verified all 36 balls independently; the 2026-09-01 six-unit in-context fit pass moved the CONTROL / POWER title clear of the VCC stub.",
       "note": "Ten-channel 2:1 bidirectional MIPI D-PHY/C-PHY analog switch in FCBGA-36; SEL and OEB must not float."
     }
   }
