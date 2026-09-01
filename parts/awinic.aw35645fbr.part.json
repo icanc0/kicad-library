@@ -49,7 +49,7 @@
       "path": "symbols/AW35645.kicad_sym",
       "kind": "symbol",
       "qualification": "qualified",
-      "sha256": "25050a1f00d126efd2a5b55728627477d131bb68f602f163dbeed7f2c16a6bdb",
+      "sha256": "f9656a2b015bf6d0ade06cffe3132b33ba30c68b1f4c2ea012023ef3c2ef631f",
       "internal_name": "AW35645"
     },
     {
@@ -80,6 +80,12 @@
         "path": "MANIFEST.md",
         "locator": "promotion entry for symbols/AW35645.kicad_sym",
         "evidence": "First-import fit pass: Hydra verified all 36 balls independently against the Awinic datasheet and vendor symbol. The 2026-09-01 six-unit requalification moved the CONTROL / POWER title inside the body after strict ink review found the VCC stub threading the former above-body title."
+      },
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "ink-fix note on the entry for symbols/AW35645.kicad_sym",
+        "evidence": "2026-09-01 ink fix (hydra task #5 visual review V1/V2): lane units 1-5 lose the mux trapezoids, the in-body A=0/B=1 glyph labels that fused with the CLKxP/DAxP pin names, the stub polylines that struck through the names and the SEL/OEB prose; unit 6 loses the truth-table prose and its title becomes 'CONTROL', left-justified clear of the vertical VCC pin name. Pins, numbers and geometry unchanged."
       }
     ]
   },

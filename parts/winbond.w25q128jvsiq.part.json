@@ -49,7 +49,7 @@
       "path": "symbols/W25Q128JVSIQTR.kicad_sym",
       "kind": "symbol",
       "qualification": "qualified",
-      "sha256": "d0f343d2bb78ef3491a8b78f24b29b90acdb8415629f4c61b51682c477fedd57",
+      "sha256": "75cb40020e2f8cd5f1983b9ee798ab91be3c5da6b1bdda4074599f7abb576d06",
       "internal_name": "W25Q128JVSIQTR"
     }
   ],
@@ -63,6 +63,12 @@
         "path": "MANIFEST.md",
         "locator": "promotion entry for symbols/W25Q128JVSIQTR.kicad_sym",
         "evidence": "First-import fit pass: V1 re-author 2026-08-24 (nor.md): vendor Table 3.3 pad names with KiCad overbars, POWER SUPPLY caption + VCC top-left, CS/CLK left, IO0-IO3 right, GND on-grid bottom; 2026-09-01 exact -IQ suffix review corrected pins 3/7 to IO2/IO3 because QE=1 makes /WP and /HOLD unavailable; rendered + LOOKed."
+      },
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "ink-fix note on the entry for symbols/W25Q128JVSIQTR.kicad_sym",
+        "evidence": "2026-09-01 ink fix (hydra task #5 visual review V3): the three baked header strings (POWER SUPPLY / -IQ: QE=1 FIXED / SERIAL DATA IO) overprinted each other across the 43 mm body and the bold title duplicated the Value field; all four texts removed. Pins, numbers and geometry unchanged."
       }
     ]
   },

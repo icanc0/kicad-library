@@ -50,7 +50,7 @@
       "path": "symbols/LM74700.kicad_sym",
       "kind": "symbol",
       "qualification": "qualified",
-      "sha256": "a16329854534050e8118f5ac7bf48add8e6f65e9416af8465236b4006b013a7a",
+      "sha256": "161a08f3d179be615efa7f294b459f1f966f9476c61f878dac50235b176ad553",
       "internal_name": "LM74700"
     }
   ],
@@ -64,6 +64,12 @@
         "path": "MANIFEST.md",
         "locator": "promotion entry for symbols/LM74700.kicad_sym",
         "evidence": "Capjack promoted the six-pin exact part after an in-context ideal-diode fit pass. Hydra requalified the same symbol for two 5 V source legs: 1=VCAP, 2=GND, 3=EN, 4=CATHODE, 5=GATE, 6=ANODE; the side-oriented power path keeps ANODE/CATHODE wiring visually traceable."
+      },
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "ink-fix note on the entry for symbols/LM74700.kicad_sym",
+        "evidence": "2026-09-01 ink fix (hydra task #5 visual review V11): the bold body title 'LM74700-Q1 (ideal diode controller)' duplicated the Value field plus prose; removed. Group headers, pins and geometry unchanged."
       }
     ]
   },

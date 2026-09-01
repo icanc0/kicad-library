@@ -11,7 +11,6 @@
 			(property "Datasheet" "" (at 0 15.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
 			(symbol "LM74700_1_1"
 				(rectangle (start -19.05 7.62) (end 19.05 -7.62) (stroke (width 0.254) (type solid)) (fill (type background)))
-				(text "LM74700-Q1  (ideal diode controller)" (at 0 8.89 0) (effects (font (size 1.27 1.27) (bold yes))))
 				(text "IN" (at -17.05 5.08 0) (effects (font (size 1.0 1.0)) (justify left)))
 				(pin passive line (at -24.13 2.54 0) (length 5.08) (name "ANODE" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))
 				(pin passive line (at -24.13 0 0) (length 5.08) (name "EN" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))

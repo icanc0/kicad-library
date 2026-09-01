@@ -10,13 +10,9 @@
 		(property "Manufacturer" "Winbond" (at 0 13.97 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(symbol "W25Q128JVSIQTR_1_1"
 			(rectangle (start -21.59 8.89) (end 21.59 -8.89) (stroke (width 0.254) (type solid)) (fill (type background)))
-				(text "W25Q128JVSIQ" (at 0 10.16 0) (effects (font (size 1.27 1.27) (bold yes))))
-				(text "-IQ: QE=1 FIXED · IO2/IO3 ONLY" (at 0 6.35 0) (effects (font (size 1.0 1.0))))
-			(text "POWER SUPPLY" (at -19.59 6.35 0) (effects (font (size 1.0 1.0)) (justify left)))
 			(pin power_in line (at -26.67 3.81 0) (length 5.08) (name "VCC" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27)))))
 			(pin input line (at -26.67 -1.27 0) (length 5.08) (name "~{CS}" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
 			(pin input line (at -26.67 -3.81 0) (length 5.08) (name "CLK" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))
-			(text "SERIAL DATA IO" (at 19.59 6.35 0) (effects (font (size 1.0 1.0)) (justify right)))
 			(pin bidirectional line (at 26.67 3.81 180) (length 5.08) (name "DI/IO0" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))
 			(pin bidirectional line (at 26.67 1.27 180) (length 5.08) (name "DO/IO1" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
 				(pin bidirectional line (at 26.67 -1.27 180) (length 5.08) (name "IO2" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
