@@ -1,0 +1,75 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "awinic.aw35645fbr",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Awinic",
+      "normalized": "awinic"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "AW35645FBR",
+      "canonical": "AW35645FBR",
+      "comparison_key": "AW35645FBR",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C5125896"
+      }
+    ],
+    "description": "Ten-channel 2:1 bidirectional MIPI D-PHY/C-PHY analog switch in FCBGA-36; SEL and OEB must not float."
+  },
+  "names": {
+    "canonical": "AW35645FBR",
+    "aliases": [
+      "AW35645"
+    ],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/AW35645.kicad_sym",
+        "name": "AW35645"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/AW35645.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "02975edb55c0b22dd279738f44608e3d8c59eece2e0e48ea0012166e0061bb42",
+      "internal_name": "AW35645"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "67f1c24d297279ad8e458845eebc0dd27fa6afd4",
+    "source_board": "hydra",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/AW35645.kicad_sym",
+        "evidence": "First-import fit pass: Hydra de-FPGA architecture 2026-08-28 verified all 36 balls independently against the Awinic datasheet and vendor symbol, used the vendor land, and passed in-context mux-sheet gates."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "Hydra de-FPGA architecture 2026-08-28 verified all 36 balls independently against the Awinic datasheet and vendor symbol, used the vendor land, and passed in-context mux-sheet gates.",
+      "note": "Ten-channel 2:1 bidirectional MIPI D-PHY/C-PHY analog switch in FCBGA-36; SEL and OEB must not float."
+    }
+  }
+}

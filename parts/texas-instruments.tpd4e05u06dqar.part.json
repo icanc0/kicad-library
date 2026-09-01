@@ -1,0 +1,75 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "texas-instruments.tpd4e05u06dqar",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Texas Instruments",
+      "normalized": "texas-instruments"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "TPD4E05U06DQAR",
+      "canonical": "TPD4E05U06DQAR",
+      "comparison_key": "TPD4E05U06DQAR",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C138714"
+      }
+    ],
+    "description": "Quad-channel 0.5 pF ESD protection array for SuperSpeed interfaces, USON-10 DQA; straight-through pad pairs and both GND pads are explicit."
+  },
+  "names": {
+    "canonical": "TPD4E05U06DQAR",
+    "aliases": [
+      "TPD4E05U06"
+    ],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/TPD4E05U06.kicad_sym",
+        "name": "TPD4E05U06"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/TPD4E05U06.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "b8b3c963b7f2ec25cea298041eb8424b142427d380b153dfe81f7b7ab66eaac6",
+      "internal_name": "TPD4E05U06"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "67f1c24d297279ad8e458845eebc0dd27fa6afd4",
+    "source_board": "hydra",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/TPD4E05U06.kicad_sym",
+        "evidence": "First-import fit pass: Hydra symbol campaign 2026-08-24 re-authored the TI Fig 6-2 array as a flow-through symbol, preserved pin numbers and electrical types, and render-LOOKed it in USB and storage contexts."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "Hydra symbol campaign 2026-08-24 re-authored the TI Fig 6-2 array as a flow-through symbol, preserved pin numbers and electrical types, and render-LOOKed it in USB and storage contexts.",
+      "note": "Quad-channel 0.5 pF ESD protection array for SuperSpeed interfaces, USON-10 DQA; straight-through pad pairs and both GND pads are explicit."
+    }
+  }
+}

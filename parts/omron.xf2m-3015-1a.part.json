@@ -1,0 +1,73 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "omron.xf2m-3015-1a",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Omron",
+      "normalized": "omron"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "XF2M-3015-1A",
+      "canonical": "XF2M-3015-1A",
+      "comparison_key": "XF2M-3015-1A",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C231418"
+      }
+    ],
+    "description": "30-contact 0.5 mm pitch rotary backlock FPC/FFC connector, dual-sided contact, with two hold-down pads."
+  },
+  "names": {
+    "canonical": "XF2M-3015-1A",
+    "aliases": [],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/XF2M-3015-1A.kicad_sym",
+        "name": "XF2M-3015-1A"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/XF2M-3015-1A.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "552775c325e96b3f4b4d092b890360b7a6337b19f8f24653a8f3e43c35272859",
+      "internal_name": "XF2M-3015-1A"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "67f1c24d297279ad8e458845eebc0dd27fa6afd4",
+    "source_board": "hydra",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/XF2M-3015-1A.kicad_sym",
+        "evidence": "First-import fit pass: Hydra V3b 2026-08-31 extended the proven XF2M-2215-1A strip idiom parametrically to 30 contacts, checked 32-pin uniqueness and pitch, exported successfully, and render-LOOKed it against the 22-contact sibling."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "Hydra V3b 2026-08-31 extended the proven XF2M-2215-1A strip idiom parametrically to 30 contacts, checked 32-pin uniqueness and pitch, exported successfully, and render-LOOKed it against the 22-contact sibling.",
+      "note": "30-contact 0.5 mm pitch rotary backlock FPC/FFC connector, dual-sided contact, with two hold-down pads."
+    }
+  }
+}

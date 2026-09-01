@@ -1,0 +1,73 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "xkb.ts-1187a-b-a-b",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "XKB",
+      "normalized": "xkb"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "TS-1187A-B-A-B",
+      "canonical": "TS-1187A-B-A-B",
+      "comparison_key": "TS-1187A-B-A-B",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C318884"
+      }
+    ],
+    "description": "5.1 x 5.1 mm four-pad tactile switch, 160 gf, 1.5 mm height; A-B and C-D are the two internally common rows per the vendor drawing."
+  },
+  "names": {
+    "canonical": "TS-1187A-B-A-B",
+    "aliases": [],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/TS-1187A-B-A-B.kicad_sym",
+        "name": "TS-1187A-B-A-B"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/TS-1187A-B-A-B.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "1da2f83d41d7b6189e82963070b0963f25e6735ef25063b15fac8888fca9191e",
+      "internal_name": "TS-1187A-B-A-B"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "67f1c24d297279ad8e458845eebc0dd27fa6afd4",
+    "source_board": "hydra",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/TS-1187A-B-A-B.kicad_sym",
+        "evidence": "First-import fit pass: Hydra symbol campaign 2026-08-24 verified the A-B/C-D pole pairing against the XKB drawing, corrected metadata and centering, preserved pin numbers, and render-LOOKed the placed switches."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "Hydra symbol campaign 2026-08-24 verified the A-B/C-D pole pairing against the XKB drawing, corrected metadata and centering, preserved pin numbers, and render-LOOKed the placed switches.",
+      "note": "5.1 x 5.1 mm four-pad tactile switch, 160 gf, 1.5 mm height; A-B and C-D are the two internally common rows per the vendor drawing."
+    }
+  }
+}

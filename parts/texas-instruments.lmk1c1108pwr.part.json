@@ -1,0 +1,75 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "texas-instruments.lmk1c1108pwr",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Texas Instruments",
+      "normalized": "texas-instruments"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "LMK1C1108PWR",
+      "canonical": "LMK1C1108PWR",
+      "comparison_key": "LMK1C1108PWR",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C2868241"
+      }
+    ],
+    "description": "One-input, eight-output LVCMOS clock buffer, 1.8 V to 3.3 V, TSSOP-16."
+  },
+  "names": {
+    "canonical": "LMK1C1108PWR",
+    "aliases": [
+      "LMK1C1108"
+    ],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/LMK1C1108.kicad_sym",
+        "name": "LMK1C1108"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/LMK1C1108.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "841c4e369d710ea86c9c48f8dc0366e5fd28b9b515e03f2d50c19e9699c04bc7",
+      "internal_name": "LMK1C1108"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "67f1c24d297279ad8e458845eebc0dd27fa6afd4",
+    "source_board": "hydra",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/LMK1C1108.kicad_sym",
+        "evidence": "First-import fit pass: Hydra electrical council F1 2026-08-30 verified the pin table against TI SNAS812 Table 5-1 and passed the 1:8 camera MCLK tree in context."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "Hydra electrical council F1 2026-08-30 verified the pin table against TI SNAS812 Table 5-1 and passed the 1:8 camera MCLK tree in context.",
+      "note": "One-input, eight-output LVCMOS clock buffer, 1.8 V to 3.3 V, TSSOP-16."
+    }
+  }
+}
