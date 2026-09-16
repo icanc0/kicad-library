@@ -44,3 +44,7 @@ copies a part in and appends the MANIFEST line — review + commit by hand (rend
 
 Boards' own `hardware/libs/` stay the scratch space for parts being authored; graduation to
 central is deliberate, not automatic.
+
+## datasheets/sha256/
+
+Content-addressed vendor PDFs admitted by the guide librarian (`kag parts.datasheet fetch <part> --url <manufacturer pdf>`): ClamAV-scanned, sandbox-checked, identity-proved bytes stored unchanged as `datasheets/sha256/<p>/<sha256>.pdf`. Never edit or rename; the SHA is the identity the fact database binds to.
