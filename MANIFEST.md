@@ -45,7 +45,6 @@ re-author (see note). Mechanical fixes recorded per line.
 - symbols/poka-yoke_rxtx.kicad_sym — mpn=n/a (owner utility) from=? — fit: PASS — RX/TX cross-over poka-yoke, in/out typed correctly
 - symbols/PZ254-2-04-WS.kicad_sym — mpn=PZ254-2-04-WS from=LED-driver-board — fit: PASS — 2x4 header; etypes→passive, refdes U→J, value moved below
 - symbols/PZ254-2-08-WS.kicad_sym — mpn=PZ254-2-08-WS from=? — fit: PASS — 2x8 header; etypes→passive, refdes U→J, value moved below
-- symbols/RP2040.kicad_sym — mpn=RP2040 from=? — fit: PASS — official-style: stacked visible IOVDD/DVDD power_in pins (stock convention), GND(57) bottom, no changes
 - symbols/SPH252012HR24MT.kicad_sym — mpn=SPH252012HR24MT (LCSC C370416) from=? — fit: PASS — REPAIRED: same JLC2KiCad +152.4 mm arc-offset bug as BDHH; coil translated onto pins, etypes→passive
 - symbols/TC2050-IDC.kicad_sym — mpn=TC2050-IDC from=? — fit: PASS — Tag-Connect 2x5, clean, no changes
 - symbols/TMAG5273A2QDBVR.kicad_sym — mpn=TMAG5273A2QDBVR from=LED-driver-board — fit: PASS — re-authored pin re-side: VCC(4) top-left, SCL/SDA pair left, INT#(5) right, GND(2)+GND(TEST)(3) bottom edge (power-up/GND-down); stale pin-1 dot removed. etypes (GND/VCC power_in, I2C bidirectional, INT open_collector, GND(TEST) passive) (audit)
