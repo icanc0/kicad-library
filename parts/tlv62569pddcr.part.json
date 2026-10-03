@@ -1,0 +1,96 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "tlv62569pddcr",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "utility",
+    "manufacturer": null,
+    "mpn": {
+      "status": "not-applicable",
+      "raw": null,
+      "canonical": null,
+      "comparison_key": null,
+      "normalization": [],
+      "significant_characters": []
+    },
+    "identifiers": [],
+    "description": "Central library symbol TLV62569PDDCR promoted from an unspecified board."
+  },
+  "names": {
+    "canonical": "TLV62569PDDCR",
+    "aliases": [],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/TLV62569PDDCR.kicad_sym",
+        "name": "TLV62569PDDCR"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/TLV62569PDDCR.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "c9d15405272e9306101267d8ab32ee6489c37ac260bf43ae4e8851504534f30f",
+      "internal_name": "TLV62569PDDCR"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "8c9e1f872c1fb992558b2ed3c93cf5960a0207f9",
+    "source_board": null,
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/TLV62569PDDCR.kicad_sym",
+        "evidence": "First-import fit pass: TLV62569PDDCR (TI SLVSDG1C, DDC = TSOT-23-6 MO-193, LCSC C398365): pins vision-confirmed on p3 DDC top view and the p24 DDC0006A numbering (1 EN, 2 GND, 3 SW, 4 VIN, 5 PG open-drain, 6 FB) = symbol c9d15405, the L24 council converter glyph (D-10: flow-first + grafts G1-G6; 5 fresh regraders 4/4/3/4/4 x4 and 4/4/3/3/4 on QA page 12f73256). VIN/EN enter left, SW/FB/PG leave right with FB directly under SW (L25, no BST), GND at the bottom, so U3 (VIN->3V3) and U4 (3V3->1V8, EN sequencing, PG open-drain to STATUS_3V3) read left to right; internals show the P/N synchronous stage, DRV, 0.6V comparator and the PG open-drain FET. Land = stock Package_TO_SOT_SMD:TSOT-23-6 (sha 2b3e0975) with its stock TSOT-23-6.step; it fits DDC0006A p24/p25 (pitch 0.95, pads 1-3 / 4-6, no EP). Known open: pin.3.type / pin.6.type are single-source (guide #451, owner call); SYM-PINSET-MATCH is clean."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "TLV62569PDDCR (TI SLVSDG1C, DDC = TSOT-23-6 MO-193, LCSC C398365): pins vision-confirmed on p3 DDC top view and the p24 DDC0006A numbering (1 EN, 2 GND, 3 SW, 4 VIN, 5 PG open-drain, 6 FB) = symbol c9d15405, the L24 council converter glyph (D-10: flow-first + grafts G1-G6; 5 fresh regraders 4/4/3/4/4 x4 and 4/4/3/3/4 on QA page 12f73256). VIN/EN enter left, SW/FB/PG leave right with FB directly under SW (L25, no BST), GND at the bottom, so U3 (VIN->3V3) and U4 (3V3->1V8, EN sequencing, PG open-drain to STATUS_3V3) read left to right; internals show the P/N synchronous stage, DRV, 0.6V comparator and the PG open-drain FET. Land = stock Package_TO_SOT_SMD:TSOT-23-6 (sha 2b3e0975) with its stock TSOT-23-6.step; it fits DDC0006A p24/p25 (pitch 0.95, pads 1-3 / 4-6, no EP). Known open: pin.3.type / pin.6.type are single-source (guide #451, owner call); SYM-PINSET-MATCH is clean.",
+      "note": "",
+      "pin_gate": {
+        "symbol": "TLV62569PDDCR",
+        "lcsc": null,
+        "facts_checked": false,
+        "board_context": null,
+        "state": "unverified",
+        "gaps": [],
+        "allow_pin_gaps": null
+      }
+    },
+    "quality": {
+      "state": "council-graded",
+      "symbol_sha256": "c9d15405272e9306101267d8ab32ee6489c37ac260bf43ae4e8851504534f30f",
+      "installed_symbol_sha256": "c9d15405272e9306101267d8ab32ee6489c37ac260bf43ae4e8851504534f30f",
+      "footprint_sha256": null,
+      "installed_footprint_sha256": null,
+      "quality_receipt": {
+        "path": "quality/tlv62569pddcr/symbol-quality.json",
+        "sha256": "9ca5beab86c5dbe055f25d483c96822fc55b978ac0c7463421972ff6da78e4ac"
+      },
+      "look_receipt": {
+        "path": "quality/tlv62569pddcr/symbol-look.json",
+        "sha256": "1eeab201007acd1a426608f0f45e7ac7583d51add624d09edcb0cf642b25cfe4"
+      },
+      "arena_manifest": {
+        "path": "quality/tlv62569pddcr/arena-manifest.json",
+        "sha256": "82701102ed09bb0b6e618a5a12c113669ae71b80c0fb975631652b49239b8fde"
+      },
+      "arena_manifest_mtime": "2026-10-02T23:53:39+00:00",
+      "arena_manifest_mtime_note": "st_mtime of QA's arena-manifest.json when promoted — the arena render's clock, reset by any cp/checkout; the receipts carry no audit clock and now() is never written",
+      "admission": {
+        "path": "quality/tlv62569pddcr/admission.json",
+        "sha256": "0036c87936fe88c19b185078d8858a2bf918cf0c3073355bfd236ee4b2bfad9e"
+      }
+    }
+  }
+}

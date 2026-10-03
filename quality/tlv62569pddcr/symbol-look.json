@@ -1,0 +1,903 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "TLV62569PDDCR",
+ "symbol_sha256": "c9d15405272e9306101267d8ab32ee6489c37ac260bf43ae4e8851504534f30f",
+ "units": [
+  1
+ ],
+ "designs": [
+  {
+   "id": "design-flow-first",
+   "designer_id": "designer-flow-first-tlv62569pddcr",
+   "stance": "flow-first",
+   "symbol_path": "council/flow-first/TLV62569PDDCR.kicad_sym",
+   "symbol_sha256": "88b9c4b614458a7a1015012a5f5c1937e01e3748d03b7e274db7f64f67921ae4",
+   "renders": [
+    {
+     "id": "design:flow-first:u1",
+     "unit": 1,
+     "path": "council/flow-first/TLV62569PDDCR_unit1.png",
+     "sha256": "7cb71ded2e30d1da89b5e669b6245863a14f618dcea15aaffe9ebd23d53beacc",
+     "background": "#ffffff",
+     "symbol_sha256": "88b9c4b614458a7a1015012a5f5c1937e01e3748d03b7e274db7f64f67921ae4"
+    }
+   ]
+  },
+  {
+   "id": "design-annotation-rich",
+   "designer_id": "designer-annotation-rich-tlv62569pddcr",
+   "stance": "annotation-rich",
+   "symbol_path": "council/annotation-rich/TLV62569PDDCR.kicad_sym",
+   "symbol_sha256": "510223dd37683ba6e0b6e6c2f96f5368331fd70a30c8aca33fadad645fdcce93",
+   "renders": [
+    {
+     "id": "design:annotation-rich:u1",
+     "unit": 1,
+     "path": "council/annotation-rich/TLV62569PDDCR_unit1.png",
+     "sha256": "7ebe64f57e80aa9ee406539d6313a31f9b82febf0c0d26bd07d0d2edaadfec26",
+     "background": "#ffffff",
+     "symbol_sha256": "510223dd37683ba6e0b6e6c2f96f5368331fd70a30c8aca33fadad645fdcce93"
+    }
+   ]
+  },
+  {
+   "id": "design-internals-maximal",
+   "designer_id": "designer-internals-maximal-tlv62569pddcr",
+   "stance": "internals-maximal",
+   "symbol_path": "council/internals-maximal/TLV62569PDDCR.kicad_sym",
+   "symbol_sha256": "771af400d30c58f12c19911c5f09752aade254fbcec89004b7b25daa609a0b2b",
+   "renders": [
+    {
+     "id": "design:internals-maximal:u1",
+     "unit": 1,
+     "path": "council/internals-maximal/TLV62569PDDCR_unit1.png",
+     "sha256": "817158e4a9a39f3520198ca179a645e1af3aee1c917567697928de09cc20f02b",
+     "background": "#ffffff",
+     "symbol_sha256": "771af400d30c58f12c19911c5f09752aade254fbcec89004b7b25daa609a0b2b"
+    }
+   ]
+  }
+ ],
+ "judges": [
+  {
+   "reviewer_id": "judge-1",
+   "design_id": "design-flow-first",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "The straight VIN -> P-FET -> SW-node dot -> SW rail with an N-FET down to a ground mark reads as a half-bridge buck at sheet zoom. Title and Value TLV62569PDDCR match the p1 Device Information name TLV62569PDDC. Two things weaken the read. First, the comparator output and both gate stubs end free, so the glyph shows a power stage next to an unconnected comparator rather than a regulator loop. Second, the horizontal P-FET's gate hangs below the rail and its body arrow is hard to see at sheet zoom.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "The high side is P-channel: body arrow tip at y=6.1 points away from the channel at y=4.76, and body and source are tied on the VIN rail. The low side is N-channel: arrow points into the channel, source to ground. The PG FET is an N-channel open drain to ground. The comparator polarity is right: FB on -, 0.6V on +, as in p6 Figure 4. Nothing contradicts the datasheet. However, the Figure 4 path FB comparator -> Modulator -> Gate Drive -> both FETs is not drawn, and the PG FET gate floats with no PG comparator.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "Smallest body of the three at 25.4 x 17.78, the emitter floor for 8 pins or fewer. The ink is only the FET pair, the comparator, the PG FET and one '0.6V' caption. The bold title duplicates the Value, but the emitter requires a title (unit title = part number). The empty lower-left quadrant comes from the emitter's GND reserve.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "VIN and EN are adjacent on the left at 2.54 pitch, so U3's EN-to-VIN tie is one grid step. SW and FB are adjacent on the right (L25), so the inductor and divider tap sit together. PG is two rows down and GND is at the bottom. Side pins at x=+-17.78 and GND at x=0 are all multiples of 2.54, so every pin end can sit on a 100-mil grid at once.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "Built entirely from Unit(gfx=) polylines, one circle and one text through author_symbol under the strict profile. A scratchpad copy of generate.py rebuilt sha 88b9c4b6 byte-identical to the submitted symbol.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Process note for the chair (not a datasheet issue): flow-first and annotation-rich use the internal name TLV62569PDDCR, but the arena facts.json internal_name is TLV62569DDC, and library-qa symbol_asset.compatibility_findings (line 53) compares every design and the final symbol against one expected name. Whichever design wins needs an internal-name rename graft.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-1",
+   "design_id": "design-annotation-rich",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "The textbook switch-blade half-bridge (VIN, open high blade, node dot, SW in one straight run, low blade dropping to GND) plus a comparator arrow into the bridge reads as a synchronous buck at sheet zoom. Title TLV62569P and Value TLV62569PDDCR match the p1 PG variant name TLV62569PDDC.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "The comparator matches Figure 4: FB on -, 0.6V on +. The PG notes match p7 Table 1 and 7.4.2: 'Z FB>=95%' for EN=High, VFB>=VPG; 'L FB<90%'; 'L EN=L'. Four weaknesses: (1) The neutral blades hide the P-ch high side and N-ch low side (allowed by the trap matrix). (2) The output arrow actuates only the low-side blade, while Figure 4 routes the comparator through the Modulator and Gate Drive to both FETs. (3) The PG FET is drawn with a continuous channel line and no body arrow, so its channel type is unstated. (4) The notes omit Table 1's 'VIN <= 1.4 V -> HIGH Z' row, so 'L FB<90%' is not true in every state (the omission is documented in stance.json left_out).",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "The 24 primitives make a compact glyph, and the notes are mostly wiring-relevant: 'L EN=L' matters for U4's STATUS_3V3 wired-AND and 'no float' comes from p3 and p7 7.4.1. 'H=on' repeats what an EN name without an overbar already says. The body grows to 27.94 x 17.78, 2.54 wider than flow-first, to fit the note column, and the lower-left quadrant is empty.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "VIN and SW share the top row and FB sits directly under SW (L25). EN is 5.08 below VIN with a blank row between, PG is 5.08 below FB, GND is at the bottom center. Side pins at x=+-19.05 (an odd multiple of 1.27) and GND at x=0 cannot all land on one 2.54 grid. That is legal on the guide's 1.27 grid but costs a half-grid offset when wiring.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "Built from Unit(gfx=) polylines, circles and text through author_symbol. A scratchpad copy of generate.py rebuilt sha 510223dd byte-identical. The '>=' glyph renders in the kicad-cli stroke font, as the 1200 dpi crop shows, and no guide rule restricts text to ASCII.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "minor",
+     "summary": "annotation-rich (minor, not disqualifying): the comparator's output arrow actuates only the low-side blade, but p6 Figure 4 routes the FB comparator through the Modulator and Gate Drive to both FETs. Its PG notes also omit p7 Table 1's 'VIN <= 1.4 V -> HIGH Z' row (and the UVLO/thermal LOW rows), so 'L FB<90%' is not true in every state. The designer documented both in stance.json open/left_out.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-1",
+   "design_id": "design-internals-maximal",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 2,
+     "note": "The glyph reads strongly as Figure 4: a vertical half-bridge with sense ovals, a PWM/DRV block and two comparators. However, the body title, which is graphic text that stays even when the Value is edited, and the Value both read TLV62569DDC. p1 lists the SOT23(6) DDC device only as TLV62569PDDC, and the Device Comparison gives Power Good only to the P parts. So the glyph names a non-PG DDC part that TI does not make while drawing a PG pin, which is a datasheet contradiction. At sheet zoom the FET, oval and hop column is also dense.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "This is the most complete Figure 4 mapping. P-ch high side: arrow tip at -0.254 points away from the channel at -1.27, and source and body sit on VIN. N-ch low side: source and body on GND. A peak-current oval sits on the high-side leg and a zero-current oval on the low-side leg (p6 Figure 4, p7 7.3.4), both wired to PWM/DRV. EN goes into PWM/DRV. The error comparator has VREF 0.6V on + and FB on -, with its output into the block. The PG hysteretic comparator has VPG on + and VFB on - and drives an N-ch open drain to ground. There is no BST, COMP, catch diode or discharge FET. 'PWM' is p6 7.1 wording.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "The body is a 27.94 mm square for 6 pins: 1.73x flow-first's area and about 7.6x the 10.16 stock square. It has 66 primitives and an empty lower-left quadrant. Because the error comparator sits left of the GND leg, FB has to hop the leg (arc at x=0, y=-3.81), which is an avoidable crossing. The sense ovals change no wiring.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "Pins are on the correct sides: FB is below SW on the right (L25), PG is adjacent below FB, GND is at the bottom. On the tall body, VIN is in row 0 while SW is in row 3, EN is 7.62 below VIN (a longer U3 tie), and FB is 7.62 below SW. Side pins at x=+-19.05 and GND at x=0 cannot share one 2.54 grid.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "All ink is Unit(gfx=) primitives: arcs for the ovals and the hop, polylines, circles and text. A scratchpad copy of generate.py rebuilt sha a027b549 byte-identical.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "major",
+     "summary": "internals-maximal: the visible body title (emitter graphic text '(text \"TLV62569DDC\" (at 0 15.24))', which stays when the Value is edited) and the Value property both read TLV62569DDC. SLVSDG1C p1 Device Information lists the SOT23(6)/DDC device only as TLV62569PDDC, and the Device Comparison gives the Power Good function only to TLV62569PDDC/PDRL (marking 7G). The glyph names a non-P DDC part that does not exist while drawing pin 5 PG. It must not be selected as-is. Graft: title TLV62569P and Value TLV62569PDDCR; the internal name may stay TLV62569DDC.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-2",
+   "design_id": "design-flow-first",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "render-unit1.png and render-unit1-close.png: VIN runs straight along the top row through a series P-FET to the SW-node dot and on to SW. An N-FET shunt drops from that node to a ground mark directly above the GND name. It reads at 1:1 as a synchronous buck. Name TLV62569PDDCR matches the packet part id and the p1 Device Information entry TLV62569PDDC.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "Polarities are correct. High side: arrow points up out of the channel, body tied to the VIN source (kicad_sym body lead -4.445 to the VIN rail). Low side: arrow points into the channel, body tied to the GND source. PG: N-FET with drain to PG and source to ground. Comparator has FB on (-) and 0.6V on (+), matching p6 Fig 4 and p4 VFB. No BST, COMP, catch diode, inductor or VOUT. Not 4: the comparator output (tip at 2.54,2.54) and all three gate stubs end free, so the Modulator/Gate Drive loop and the PG comparator are not drawn. The low-side source ends at a local ground glyph instead of a wire to pin 2.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Smallest body of the three: 25.4 x 17.78 mm (452 mm^2). Its 43 primitives are all Fig 4 elements. Losses: the bold body text 'TLV62569PDDCR' repeats the Value field exactly, the EN row has no ink, and the lower-left quadrant is empty.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "VIN and EN sit on adjacent left rows, so U3's EN-to-VIN tie is one 2.54 mm jumper. SW and FB sit on adjacent right rows with FB directly under SW (L25), which puts the divider tap next to the inductor. PG sits below a blank row for the U4 pull-up/wired-AND, and GND is bottom centre. All six pin ends share one 2.54 lattice (x +-17.78 vs 0; every y spacing is a multiple of 2.54).",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "Shows the 0.6V reference the divider is sized against, an open-drain PG (needs a pull-up), and a P-ch high side (no bootstrap). It says nothing about EN being active high and not allowed to float (p3, p7 7.4.1), or about PG thresholds and hysteresis (p4 VPG, p7 Table 1).",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "judge-2",
+   "design_id": "design-annotation-rich",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "render-unit1.png: VIN, an open blade, the SW-node dot and SW form one straight run, and a second blade drops from the node toward GND. It reads as a buck half-bridge. Bold 'TLV62569P' names the PG variant (p1 Device Comparison). Not 4: neutral blades read as a generic switcher, not visibly a synchronous FET pair.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 2,
+     "note": "The one drawn control relation targets the wrong switch. The comparator output arrow (kicad_sym 4.57,3.175 to tip 1.9,3.175) points at the low-side blade, which is near x 0.9 at that height; the high-side blade is up at y 6.35-7.75. p6 Fig 4 routes the VREF comparator to the Modulator, then Gate Drive, then both gates. Under adaptive off-time peak-current control (p6 7.1, p7 7.3.4) the low-side on-time comes from TOFF and zero-current detect, not the FB comparator. The PG FET has no body arrow, so its channel type is not shown; stance.json's look note claims 'N-FET', which the ink does not carry. Faithful parts: comparator polarity, 0.6V, and the PG notes, which match p4 VPG and p7 Table 1.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Body 27.94 x 17.78 mm (497 mm^2) with 24 primitives. Every note changes wiring. Losses: the lower-left quadrant is empty and the bold 'TLV62569P' partly repeats the Value.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "Right side has the good layout: FB directly under SW, PG below, GND at the bottom. EN sits two rows (5.08 mm) below VIN. The side pins at x +-19.05 are 7.5 grid steps from GND at x 0, so the six pin ends cannot all land on a 100 mil grid together (stock TLV62568DDC pins are all on 2.54).",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "Most actionable notes of the three. 'H=on' and 'no float' at EN come from p3 'Do not leave floating' and p7 7.4.1. 'Z FB>=95%', 'L FB<90%' and 'L EN=L' at PG come from p7 Table 1 and p4 VPG 95/90 %. 'L EN=L' is exactly the case U4's STATUS_3V3 wired-AND depends on. The 0.6V reference is also marked.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "minor",
+     "summary": "annotation-rich: the comparator output arrow points only at the low-side blade, but p6 Fig 4 routes the VREF comparator through the Modulator and Gate Drive to both FETs, and p6 7.1 / p7 7.3.4 set the low-side on-time by adaptive TOFF and zero-current detect. Fix: aim the arrow at both blades or remove it.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    {
+     "severity": "minor",
+     "summary": "annotation-rich (claim vs ink, not datasheet): the stance.json look note says PG runs into an 'N-FET', but the PG FET in the kicad_sym and the render has no body arrow, so its channel type is not shown.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-2",
+   "design_id": "design-internals-maximal",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 2,
+     "note": "The ink is the strongest read of the three. unit1.png shows a P-over-N half-bridge with the drain-drain dot wired to SW, sense ovals, an error comparator and a PG comparator. But the Value, internal name and bold body text are 'TLV62569DDC'. SLVSDG1C p1 Device Information lists only TLV62569PDDC for SOT23(6), and p6 Fig 4 says 'Power Good feature is only available in TLV62569P'. So a glyph that draws PG under a name without the P contradicts the datasheet and the packet part id TLV62569PDDCR. The designer flagged this as open. With the rename it scores 4.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "All ink matches the datasheet. High side: arrow out of the channel, source and body on the VIN leg. Low side: arrow into the channel, source and body on the GND leg. The peak-current oval sits on the VIN leg above the high-side FET and the zero-current oval on the GND leg below the low-side FET, where Fig 4 puts them. Error comparator: VREF on (+), FB on (-), output into PWM/DRV. PG comparator: VPG on (+), VFB on (-) tapped off FB, with a hysteresis mark, driving an open-drain N-FET to ground (close-ups confirm). No BST, COMP, catch diode, inductor or VOUT. 'PWM' is the p6 7.1 wording.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "Body is 27.94 mm square (781 mm^2): 1.7x flow-first and 7.6x the stock 10.16 mm square, for six pins. It uses 66 primitives, and the ovals and PWM/DRV box change no wiring. The lower-left quadrant is empty and the bold 'TLV62569DDC' body text repeats the Value.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "Pin order is logical: VIN top-left, EN three rows below, SW mid-right, FB three rows under SW (L25 met), PG next to FB, GND at the bottom. The tall body spreads the pins, so U3's EN-to-VIN tie spans 7.62 mm. Side pins at x +-19.05 vs GND at x 0 are off a shared 100 mil grid.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "Shows the whole control loop, and shows that PG follows FB with hysteresis. Missing: VPG has no number (no 95/90 %), EN polarity and the no-float rule are not stated, and 0.6V is the only quantitative note.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "major",
+     "summary": "internals-maximal: Value, internal name and bold body text 'TLV62569DDC' contradict SLVSDG1C p1 Device Information, whose only SOT23(6) device is TLV62569PDDC, and p6 Fig 4 'Power Good feature is only available in TLV62569P'. The glyph draws a PG pin, comparator and FET under a name without the P. Fix: name it TLV62569PDDCR, with the maker updating facts.json internal_name. Every design and the final need the same name.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-3",
+   "design_id": "design-flow-first",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "The clearest silicon identity. A P-ch high-side FET sits inline on the VIN-to-SW row (open arrow points up, out of the channel; source and body on VIN). The SW-node dot drops to an N-ch low side (arrow into the channel; source and body to a ground mark over the GND name). Beside these are a comparator against 0.6V at FB and an N-ch open-drain FET at PG. Value and internal name TLV62569PDDCR match the p18 orderable.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "The FET types match p6 Fig 4 and the packet trap (P-ch VIN->SW, N-ch SW->GND, no BST pin, no catch diode). Comparator polarity is correct (FB on -, 0.6V on +), and PG is an N-FET with drain to PG and source to GND (p7 7.4.2). No contradictions. Held to 3 by omissions: the comparator output and both gate stubs end unconnected, so the FB-to-switch loop is not drawn. The PG comparator and the current sensing are also missing.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Body 25.4 x 17.78 mm (about 452 mm2), the smallest of the three, with 43 primitives, all load-bearing. The empty lower-left quadrant (below EN, left of the low-side leg) is wasted space.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "VIN and SW share row y 6.35 (straight power flow). EN is 2.54 mm under VIN, which makes U3's EN-to-VIN tie trivial. FB is directly under SW at 2.54 mm (L25 clean), PG is 5.08 mm below FB, GND is at bottom centre, and pin tips sit at x +-17.78. The pin field is the most compact and stock-like of the three.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 2,
+     "note": "'0.6V' is the only datasheet value drawn. The comparator output and the two gate stubs end unconnected, so nothing shows that FB controls the switching. EN has no ink and no polarity or no-float note (p3). PG shows neither thresholds nor hysteresis (p4, p7 Table 1). The designer listed both points as open findings.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Pipeline, not datasheet: library-qa look.py:108 calls compatibility_findings, which requires every design's internal name to equal the final symbol's. annotation-rich and flow-first use TLV62569PDDCR; internals-maximal and the arena candidate facts.json (symbol.internal_name) use TLV62569DDC. The chair has to pick one name (the datasheet supports TLV62569PDDCR) and rename the other assets before the LOOK receipt.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-3",
+   "design_id": "design-annotation-rich",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "Reads as a sync buck. VIN runs through an open high-side blade to the SW-node dot and on to SW in one straight run. A low-side blade drops from the node toward GND. A comparator sits at FB with the 0.6V reference on (+), and an open-drain FET sits at PG. Value TLV62569PDDCR matches the p18 orderable; the bold title TLV62569P matches the p1 family name. Held to 3 because both switches are generic blades: they say 'switch' but not the P-ch/N-ch half-bridge of p6 Figure 4. The PG FET is drawn small (gate plate 1.7 mm), so it reads only up close.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "No contradictions found. Comparator polarity matches p6 Fig 4 (FB on -, reference on +, 0.6V per p4 VFB 0.588/0.6/0.612). The PG notes 'Z FB>=95%', 'L FB<90%' and 'L EN=L' match p7 Table 1 and the p4 VPG thresholds (95% rising, 90% falling). 'H=on' and 'no float' match the p3 EN row ('Logic high enables... Do not leave floating'). The packet's trap matrix allows neutral switch blades. Two gaps: (1) the comparator's output arrow points only at the low-side blade, while on silicon the Modulator and Gate Drive switch both FETs (p6 Fig 4); (2) the PG FET has no body arrow, so its N-channel type is not shown.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Body 27.94 x 17.78 mm (about 497 mm2) with 24 non-rectangle primitives and six short notes. Each note maps to a wiring choice (pull-up, wired-AND, tying EN). The lower-left quadrant is empty, and the body is 2.54 mm wider than flow-first's, only to fit the notes.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "VIN (y 6.35) and SW (y 6.35) share a row, so power flows straight across. EN sits 5.08 mm below VIN. FB is directly under SW at 2.54 mm on the same side (L25 SYM-ANATOMY-FB clean), PG is 5.08 mm below FB, and GND is at bottom centre. All pin tips are on the guide's 1.27 mm grid (x +-19.05). The pin order matches the stock glyph, so swapping in this symbol needs no re-wiring.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "The most load-bearing annotation of the three. 'L EN=L' says a disabled U4 pulls the STATUS_3V3 wired-AND low (packet board_refs: U4 PG wired-AND with U15). 'no float' covers U4's EN, which an RP2040 GPIO drives (p3, p7 7.4.1). The 'Z'/'L' thresholds tell you a pull-up is needed. '0.6V' sizes the divider (p9 Eq 2). The designer's notes say it deliberately leaves out Table 1's UVLO, thermal-shutdown and VIN<=1.4V rows, which is acceptable.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "judge-3",
+   "design_id": "design-internals-maximal",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 2,
+     "note": "The drawing reads as a sync buck very strongly: the P/N half-bridge column, a PWM DRV block, error and PG comparators, and the PG open-drain FET. But the internal name, Value and bold title are all 'TLV62569DDC'. SLVSDG1C does not list that device: p1 Device Information has only TLV62569PDDC for SOT23(6), and the p18/p20 orderables are TLV62569PDDCR and TLV62569PDDCT. Dropping the P also drops the suffix that makes pin 5 PG exist (p6 Fig 4: 'Power Good feature is only available in TLV62569P'). That name would go onto the schematic and into the BOM. A datasheet contradiction outranks the drawing, so 2 until renamed.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Closest to p6 Fig 4. P-ch high side (source and body on VIN, filled arrow out of the channel) and N-ch low side (arrow in, source and body on the GND leg). A peak-current oval sits on the VIN leg (p7 7.3.4) and a zero-current oval on the GND leg. The error comparator has FB on -, 0.6V on +, and its output feeds PWM/DRV. EN feeds PWM/DRV, as with Control Logic in Fig 4. The PG comparator has VPG on +, FB on -, and a hysteresis mark, driving an N-FET open drain to ground. 'PWM' is backed by p6 7.1 ('pulse width modulation (PWM) at moderate to heavy load'). Leaving out TOFF, soft start, UVLO and thermal blocks is acceptable.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "Body 27.94 x 27.94 mm (about 781 mm2), about 7.6x the stock 10.16 mm square, for six pins, with 66 primitives. The two current-sense ovals and the FB hop arc add ink that no wiring choice depends on. The lower-left quadrant is empty. The pin field has 7.62 mm gaps between VIN and EN and between SW and FB.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "Pins are on the 1.27 mm grid, and FB is below SW on the same side (L25 clean). But VIN (y 11.43) and SW (y 3.81) are not on one row, so input-to-output flow is not straight. FB is 7.62 mm below SW, and the 27.94 mm tall body takes the most sheet area for U3 and U4. PG adjacent to FB and GND at bottom centre are fine.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "Shows the control mechanism: the FB-to-comparator-to-PWM/DRV loop, peak and zero current sensing, and PG as a hysteretic comparator against VPG. It carries no EN polarity or no-float note (p3) and gives no numbers for the PG thresholds; VPG is unlabelled, while p4 gives 95%/90%.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "major",
+     "summary": "internals-maximal (datasheet): the internal symbol name, Value and bold title are 'TLV62569DDC', a device SLVSDG1C does not list. p1 Device Information has only TLV62569PDDC for SOT23(6); the p18/p20 package option addendum orderables are TLV62569PDDCR and TLV62569PDDCT; p6 Figure 4 says 'Power Good feature is only available in TLV62569P'. The name drops the P that makes pin 5 (PG) exist and would print on the schematic and BOM. Renaming fixes it; the drawing itself is faithful.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   ]
+  }
+ ],
+ "selection": {
+  "winner_design_id": "design-flow-first",
+  "grafts": [
+   {
+    "id": "G1",
+    "from": "internals-maximal (judges 1-3)",
+    "axis": "identity / silicon / expressibility",
+    "closes": "judge 1 identity 3 and silicon 3, judge 2 silicon 3, judge 3 silicon 3 and expressibility 2: the comparator output and both gate stubs ended free, so FB visibly controlled nothing",
+    "change": "a DRV box stands for p6 Figure 4's Modulator + Gate Drive: x -7.62..-3.81, y 2.54..-3.175. The high-side gate lead drops into its top edge and the low-side gate lead enters its right edge. The comparator output leaves its tip, drops at x 1.27 beside the node column, hops the low-side source wire (arc r 0.635 at y -2.54) and enters the box. That one hop is the only crossing, and judge 2 allowed a link only if it did not cross the SW-node column: it crosses the GND leg below the low-side FET, not the SW node. annotation-rich's single arrow to the low blade is NOT taken."
+   },
+   {
+    "id": "G2",
+    "from": "internals-maximal (EN -> PWM/DRV) + annotation-rich (EN row)",
+    "axis": "identity / economy / ergonomics",
+    "closes": "judge 2 economy 3: 'the EN row has no ink'; judge 3 expressibility 2: 'EN has no ink'",
+    "change": "EN enters the DRV box (p6 Figure 4: EN -> Control Logic), so the enable is drawn as part of the converter. EN moves to annotation-rich's row (-20.32, 1.27), two rows below VIN, so its line runs straight into the box under the high-side gate; at y 3.81 it would run 0.16 mm under the high-side gate plate. Cost, recorded: the U3 EN-to-VIN tie is 5.08 mm instead of 2.54. Judge 3 gave that row ergonomics 4, and judges 1-2 marked annotation-rich down for its off-lattice tips, not for this row."
+   },
+   {
+    "id": "G3",
+    "from": "annotation-rich (judges 1-3)",
+    "axis": "expressibility",
+    "closes": "judge 3 expressibility 2 and judge 2 expressibility 3: no EN polarity or no-float rule, no PG thresholds",
+    "change": "at PG, right of the open-drain FET under the PG name: 'Z FB≥95%', 'L FB<90%', 'L EN=L' (p7 Table 1, 7.4.2, p4 VPG). Under the EN name: 'H=on', 'no float' (p3, p7 7.4.1). 'H=on' is kept on the word of judges 2 and 3; judge 1 called it redundant. Table 1's other rows go in the Description instead of the ink: low in UVLO and thermal shutdown, high-Z at VIN <= 1.4 V (judge 1's note on annotation-rich)."
+   },
+   {
+    "id": "G4",
+    "from": "annotation-rich (judges 1, 2)",
+    "axis": "economy / identity",
+    "closes": "judges 1 and 2: the bold body text TLV62569PDDCR repeated the Value exactly",
+    "change": "the bold title is TLV62569P, the p1 PG-variant name. The internal name and Value stay TLV62569PDDCR."
+   },
+   {
+    "id": "G5",
+    "from": "judge 2",
+    "axis": "silicon",
+    "closes": "judge 2 silicon: 'the low-side source ends at a local ground glyph instead of a wire to pin 2'",
+    "change": "the low-side source wire runs down to y -3.302, 0.7 mm above the GND pin name, as internals-maximal's GND leg does. The PG FET keeps its ground mark, as p6 Figure 4 draws it."
+   },
+   {
+    "id": "G6",
+    "from": "judge 1",
+    "axis": "identity",
+    "closes": "judge 1 identity 3: 'the horizontal P-FET's ... body arrow is hard to see at sheet zoom'",
+    "change": "body chevrons grow from 0.75 x 0.42 to 0.9 x 0.5 mm on all three FETs. They stay open chevrons: a closed triangle on the body lead reads as a diode in the render, and the emitter draws no filled polyline."
+   }
+  ],
+  "final_symbol_sha256": "c9d15405272e9306101267d8ab32ee6489c37ac260bf43ae4e8851504534f30f"
+ },
+ "final_renders": [
+  {
+   "id": "qa:u1",
+   "unit": 1,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png",
+   "sha256": "12f73256294edb34f7296b8b6f023c52ee922e883c7d1b2588c5b8cd9701b4b5",
+   "background": "#f5f4ef",
+   "symbol_sha256": "c9d15405272e9306101267d8ab32ee6489c37ac260bf43ae4e8851504534f30f",
+   "nonce": "LOOK-JJGN9RXQARLF",
+   "nonce_sha256": "02dd7b49e2f5aeae91ed81f17c471e4d44f8a24859e2b7a729622cbcb3dc5771"
+  }
+ ],
+ "regraders": [
+  {
+   "reviewer_id": "look-regrader-TLV62569PDDCR-1",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: The page reads as a synchronous buck at a glance. A high-side FET runs VIN to SW and a low-side FET runs from the SW junction dot down to GND. An error amp takes FB against 0.6V and feeds a DRV block. PG is an open-drain FET to an internal ground. The bold caption TLV62569P names the PG variant. This meets D-10's 'function reads from its symbol'.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: The pins match the p3 SOT23-6 (DDC) column: 1 EN, 2 GND, 3 SW, 4 VIN, 5 PG, 6 FB. FET types match p6 Figure 4. The high-side body arrow points away from the channel (P-ch), with its body on VIN. The low-side arrow points into the channel (N-ch), with source to GND. The PG FET is N-ch to ground. In the bytes, VIN ends at x=-4.445 and SW starts at -3.0163, so the high-side FET does not short VIN to SW. FB goes to the - input and the reference to +, as in Figure 4. 0.6V matches p5 VFB (0.588/0.6/0.612). The PG text Z FB>=95% / L FB<90% / L EN=L matches p5 VPG (95% rising, 90% falling) and p7 Table 1. EN H=on / no float matches section 7.4.1. Simplifications, none of which contradict the datasheet: control logic, modulator and gate drive are merged into DRV; the PG comparator is left out; the peak/zero-current, soft-start, UVLO, thermal and TOFF blocks are left out.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: Every stroke does a job. There is no decoration and no clutter. Three nits: (a) the PG FET gate is a stub with nothing drawn driving it; (b) the bold caption TLV62569P repeats the Value field TLV62569PDDCR shown right above it; (c) a 1200x700 mil body for 6 pins, which the internals justify.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "ERGONOMICS 4: VIN and EN are on the left, SW, FB and PG on the right, and GND at bottom centre. FB sits right below SW, so the divider route stays short. EN sits next to VIN, so tying it high is easy. All arena wires come out straight. Pin electrical types match the installed stock Regulator_Switching:TLV62568DDC exactly: EN input, GND/VIN power_in, SW power_out, PG open_collector, FB input. Small KLC deviation: every pin y sits at 50 mil mod 100 (6.35/1.27/3.81/-1.27/-13.97 mm). They all share that offset, so pins still land on KiCad's 50-mil grid.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: The labels carry the facts that matter for wiring. EN: drive high to enable, never float. PG: when it is high-Z or low. The 0.6V reference is enough to size the divider. The hidden Description carries the rest of Table 1 (UVLO, TSD, VIN<=1.4V high-Z) and the 2.5-5.5V, 2A ratings.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Graded QA's own page in receipts/TLV62569PDDCR/qa/arena-manifest.json. It has 1 unit, verdict PASS, symbol sha c9d15405 (the same as candidates/TLV62569PDDCR/TLV62569PDDCR.kicad_sym). The unit 1 page is arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png, sha 12f73256 as the manifest says, 941x749 viewed at full size plus a 3x body zoom, background #f5f4ef. The banner reads LOOK-JJGN9RXQARLF; its sha256 equals the manifest nonce_sha256 02dd7b49. I also checked the full sheet page (page-sheet-U1.png, sha 41e94016): it reads LOOK-GGRKLEXTMRWR, and that hash is in .render-nonces.json. Freshness: .render-state.json lists unit_1.kicad_sch at 2ade17ae, which is the current sheet hash and the manifest's. The RENDER-STALE warning in arena.log came from the verify pass at 19:53:37, before the 19:53:39 re-render. Primary source: SLVSDG1C, sha 1ba6f55d, rehashed.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "No prompt injection found in the candidate files I read (symbol, pin-truth.json) or in packet.json. Nothing written to any repo. The full set of zooms and datasheet renders is in scratchpad/rg1-tlv62569-fresh/; the one exception, tlv_body.png, sits at the scratchpad root under a generic name and may have overwritten an existing scratch file of that name.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-TLV62569PDDCR-2",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: the body reads at once as a synchronous buck. It shows the half-bridge VIN->SW->GND with a junction dot on SW, a DRV box driving both gates, an error amp from FB against 0.6V feeding DRV, and a PG open-drain FET, under the title TLV62569P.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: the pins match the p3 DDC table (4 VIN and 1 EN on the left; 3 SW, 6 FB and 5 PG on the right; 2 GND at the bottom). The high-side is a PMOS with its arrow pointing out of the channel, source on VIN and body tied to VIN; the low-side is an NMOS with its arrow pointing in and body tied to source, the GND path. Both polarities match the zoomed Fig 4. The amp has FB on the inverting (-) input and VREF on the non-inverting (+) input, as in Fig 4. The 0.6V label equals VFB 0.588/0.6/0.612 on p4. 'H=on no float' matches p3 and 7.4.1. 'Z FB>=95% / L FB<90% / L EN=L' matches the p4 VPG rise/fall thresholds and p7 Table 1, and PG is an NMOS open drain to ground. The error-amp-to-DRV wire hops over the GND line correctly, with no false junction. Nothing contradicts the datasheet. There are omissions only: peak and zero current detect, soft start, UVLO and TSD are not drawn. The PG FET gate is a bare stub, because the PG comparator is replaced by the truth text.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: every internal element carries meaning. Two small redundancies: (1) the bold 'TLV62569P' graphic title repeats the Value 'TLV62569PDDCR' two lines above it (U1 / TLV62569PDDCR / TLV62569P stack); (2) the PG FET source goes to its own internal ground glyph instead of the pin-2 GND line.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "ERGONOMICS 4: supply and enable enter on the left, SW, FB and PG leave on the right, and GND sits at bottom centre at x=0. All pin tips land on the 1.27 mm grid on one 2.54 lattice, offset by 1.27 in y. SW and FB are 2.54 apart, so the inductor and divider return wire easily. Pin types are sensible: power_in, input, power_out, input, open_collector, power_in. On the arena sheet, ERC 0 and legibility 0. No ink collides with the pin names.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: the page itself states the load-bearing truths a designer needs: the 0.6V reference for the divider, EN polarity with the no-float rule, the PG hysteresis plus the EN-low state, open-drain behaviour (both glyph and pin type), and P/N half-bridge identity. The Description property carries the rest of Table 1 (UVLO, TSD, VIN<=1.4V high-Z).",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Regrader 2 of 5. Graded QA's own page from the latest arena-manifest.json (TLV62569PDDCR/qa, verdict PASS, units [1]). Page: arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png. I read it at its native 941x749 size and zoomed the body x3. File sha256 is 12f73256..., which matches the manifest. The measured background is #f5f4ef, which matches the declared value and is in the QA LIGHT set. Nonce read from the banner pixels: LOOK-JJGN9RXQARLF. Its sha256 is 02dd7b49..., which equals the manifest nonce_sha256. The parent full-sheet page carries LOOK-GGRKLEXTMRWR, which equals the .render-nonces.json value afb89b7f.... The candidate symbol rehashes to c9d15405... (manifest symbol_sha256). unit_1.kicad_sch rehashes to 2ade17ae..., matching both the manifest sheets entry and the .render-state.json sources. So the arena.log RENDER-STALE warn came from the verify step that ran before the render pass; it is not a stale page. The sheet embeds cand:TLV62569PDDCR with the same six pin rows. I checked everything against the SLVSDG1C datasheet: cached PDF sha 1ba6f55d..., pages p3, p4, p6 (Fig 4) and p7 (Table 1).",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Every axis is >= 3. The single unit (1) was seen. Nothing is open. Nonblocking nits for the chair: the redundant title and the bare PG gate stub. suspected_injection: none found in the manifest, arena.log, verdicts.jsonl, candidate .kicad_sym, packet.json excerpt or datasheet text. I wrote nothing to any repo; only my zoom crops are in the session scratchpad.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-TLV62569PDDCR-3",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: the bold title TLV62569P, a P-channel/N-channel half-bridge, a 0.6V error amp and an open-drain PG transistor read as a synchronous buck with power-good at a glance. Value TLV62569PDDCR and refdes U1 are visible. The P in the title signals that PG exists (only the P variant has it).",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: checked against the hashed datasheet ds.pdf 1ba6f55d (SLVSDG1C).\n- Pin map matches the p3 SOT23-6 column: EN1, GND2, SW3, VIN4, PG5, FB6. Pin types follow the p3 I/O/PWR column: input, power_in, power_out, power_in, open_collector, input.\n- I rendered p6 Fig 4 myself at 400 dpi. The high side is P-channel (arrow away from the channel), the low side N-channel (arrow toward the channel) and the PG transistor N-channel to GND. The symbol draws the same polarities, with each body tied to its source.\n- VREF is on + and FB on -, as in Fig 4. 0.6V matches VFB 0.588/0.6/0.612 V (p4).\n- PG Z at FB>=95% and L at FB<90% match p4 VPG and p7 7.4.2. L at EN=L matches Table 1.\n- EN 'H=on, no float' matches p3 and p7 7.4.1.\n- EN feeding DRV and the error amp feeding DRV match Fig 4 (Control Logic, Modulator, Gate Drive). Nothing contradicts the datasheet.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3 (meets the bar): every stroke maps to a datasheet fact. Body diodes, soft start, UVLO, thermal shutdown and current sense are left out. Small nits, none open:\n- The PG transistor's gate is a dangling stub; its comparator is replaced by the text table.\n- The PG pull-down uses an internal ground glyph instead of a line to the GND pin (Fig 4 does the same).\n- The amp-to-DRV return needs a crossover hop over the low-side source line.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "ERGONOMICS 4:\n- Inputs on the left (VIN top, EN), the switch node and signals on the right (SW top, FB 2.54 mm below it, PG), GND at bottom centre at x=0.\n- All pins are on the 1.27 mm grid the guide requires (docs/02-symbols.md, docs/06-pitfalls.md), and the bottom pin is centred.\n- FB sits next to SW, so the inductor and the divider tap leave from the same side.\n- The QA arena wired every pin cleanly: ERC 0, legibility 0, all on page.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: the canvas carries the traps a reader needs. EN must not float. The PG truth table gives the 95%/90% hysteresis and PG low when disabled. The 0.6V reference lets a reader size the divider. The thermal/UVLO PG-low and VIN<=1.4V Hi-Z cases are only in the hidden Description property; that is acceptable.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Graded the one page listed in the latest arena-manifest.json (/home/vincent/projects/pmic-test-arena/receipts/TLV62569PDDCR/qa/arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png). It is 941x749 on a measured #f5f4ef background, sha256 12f73256... matches the manifest and .render-state.json. I read it at full resolution and again with 3x zooms of the banner, the half-bridge and the PG area. The banner nonce in the pixels reads LOOK-JJGN9RXQARLF; its sha256 is 02dd7b49..., equal to the manifest nonce_sha256. The symbol is sha c9d15405..., equal to candidates/TLV62569PDDCR/TLV62569PDDCR.kicad_sym, and unit_1.kicad_sch embeds the same six pins. The arena.log RENDER-STALE warn is not real: verify ran at 19:53:37 and the render at 19:53:38-39, and the render-state sources equal the current sheet hashes (unit_1 2ade17ae...).",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Unit 1 of 1 seen. Nothing open. No suspected prompt injection in any file or page read. Nothing written to any repo; the scratch crops were deleted.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-TLV62569PDDCR-4",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: the page reads at once as a synchronous buck. VIN runs through the high-side FET to a junction dot at SW, the low-side FET goes from that dot down toward the GND pin, a FB error amp compares against 0.6V and feeds a DRV block, PG is an open-drain FET, and the title TLV62569P is bold. Pin numbers match SLVSDG1C p3 DDC: 4 VIN and 1 EN left, 3 SW, 6 FB and 5 PG right, 2 GND bottom.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: checked at 6x zoom against p6 Figure 4. The high-side body arrow points out of the channel and the body ties to VIN, so it is P-ch. The low-side and PG FET arrows point into the channel, so they are N-ch. The comparator has + on 0.6V and - on FB, as Figure 4 has VREF+/FB-. VFB 0.6V matches p5 (0.588/0.6/0.612). The PG notes 'Z FB>=95% / L FB<90% / L EN=L' match the p5 VPG rising 95% / falling 90% and the p7 Table 1 rows. 'H=on no float' at EN matches p3/7.4.1. There is no BST pin, no inductor, no catch diode and no VOUT pin. Peak/zero-current detect, TOFF and modulator are lumped into DRV, which simplifies without contradicting the datasheet.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: every stroke carries meaning and soft-start/UVLO/TSD blocks are left out. The body is about 30x19 mm for 6 pins, about 3x the stock 10.16 mm square. That is the cost of the D-10 identity ink. The PG FET gate is a dangling stub with a local ground, and 1.0 mm text is small but passed the legibility gate (0 errors).",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "ERGONOMICS 4: VIN-to-SW is one straight top line in the flow direction. FB sits directly under SW on the same side (L25), PG is below it, EN is under VIN, and GND is bottom-centred at x=0. Pins are 5.08 long, on the guide's 1.27 grid, with no crowding at the labels.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: 0.6V for the divider, active-high/no-float EN, and the PG high-Z/low states are visible. Pin types power_in/input/power_out/input/open_collector/power_in carry open-drain PG into ERC, and the hidden Description holds the full PG table incl. the UVLO/TSD/VIN<=1.4V rows.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Graded QA's arena page for unit 1 only: arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png (941x749). Its sha256 12f73256... matches arena-manifest.json. Symbol sha c9d15405... is the same in the candidate and the manifest. Sheet sha 2ade17ae... is the same in the manifest and render-state sources. The banner nonce, read at native and 2x zoom, is LOOK-JJGN9RXQARLF. Its sha256(no newline) = 02dd7b49..., which matches the manifest nonce_sha256.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Notes, none blocking: (a) the arena background is #f5f4ef (measured 245,244,239 and recorded in the manifest), not the council's #ffffff. The packet's receipts_needed says regraders grade QA's own arena pages. (b) The arena.log RENDER-STALE warn came from verify before the render pass. Sheet 19:53:35, PNGs 19:53:38-39, and the render-state source hash equals the current sheet. (c) Arena embedded geometry is diff-identical to the candidate .kicad_sym apart from the added GND power symbol. Suspected injection: none found. Wrote nothing to any repo.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-TLV62569PDDCR-5",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: the bold TLV62569P title and the half-bridge with a P-channel high side VIN->SW and an N-channel low side SW->GND (junction dot at SW) read as a synchronous buck. So do the error amp (FB on -, 0.6V on +) into a DRV block driving both gates, and the open-drain PG FET. You can tell it is a converter with power-good at a glance.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: pin numbers match the p3 SOT23-6 (DDC) column: EN 1, GND 2, SW 3, VIN 4, PG 5, FB 6. Electrical types match the p3 I/O/PWR column (EN, FB input; VIN, GND power_in; SW power_out; PG open_collector). The FET arrows match the polarities in p6 Figure 4 (checked zoomed at 600 dpi): high side arrow points out (P), low side and PG arrows point in (N). The body ties to the source, and the low-side source wires to the GND pin. EA polarity matches Fig 4 (VREF on +, FB on -). 0.6V = VFB 0.588/0.6/0.612 (p4). 'Z FB>=95%' / 'L FB<90%' = VPG rising 95%, falling 90% (p4) and p7 7.4.2. 'L EN=L' = Table 1 Shutdown. 'H=on no float' = p3/p7 7.4.1. The EA->DRV crossing uses a hop over the GND line, so no false junction. Nothing contradicts the datasheet; Modulator, Gate Drive and Control Logic are drawn as one DRV block, and the PG comparator is replaced by its state table.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: there is no decorative ink and every annotation is a datasheet fact. Small redundancies: (a) the PG FET gate is a short dangling stub with no driver drawn; (b) the bold TLV62569P title repeats the visible Value TLV62569PDDCR (kept because the P marks the PG variant); (c) the PG source uses an internal ground glyph rather than meeting the GND pin.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "ERGONOMICS 3: inputs VIN and EN are on the left, SW, FB and PG on the right, and GND at the bottom centre. FB sits next to SW, so the inductor and divider close on one side, and the arena wired all six pins with ERC 0. Non-blocking advisory: every pin tip y is on a 50 mil half-grid (6.35, 1.27, 3.81, -1.27, -13.97 mm), not a 100 mil origin (KLC S4.1 style). The offset is the same for every pin, so it works on KiCad's default 50 mil grid.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: the PG state table, the EN rule and the 0.6V reference (sets Vout = 0.6(1+Rtop/Rbot)) are inked where they are used. UVLO and VIN<=1.4V PG states live in the hidden Description, which is a fair split.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Fresh regrader 5/5, TLV62569PDDCR. Graded the page in QA's arena-manifest.json (schema library-qa-arena-1, verdict PASS, symbol c9d15405... = candidate TLV62569PDDCR.kicad_sym, 1 unit). The page is arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png (941x749): file sha 12f73256... matches the manifest. The body RGB sha 4af78d72... and the banner RGB sha 631fe469... match .render-nonces.json. Measured background is #f5f4ef, as the manifest records. The render-state source hashes equal the current unit_1/_smoke/root sheets, so the RENDER-STALE warn in arena.log is from verify running before the render pass; the renders are current. I read the nonce from the pixels as LOOK-JJGN9RXQARLF. Its sha256 is 02dd7b49..., which equals the manifest's nonce_sha256. I checked it all against SLVSDG1C (sha 1ba6f55d..., re-hashed).",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Every axis is >= 3, unit 1 was seen at native resolution plus nearest-neighbour zooms, and nothing is open. Nothing written to any repo; scratch crops only in the session scratchpad. suspected_injection: none found.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   ]
+  }
+ ]
+}

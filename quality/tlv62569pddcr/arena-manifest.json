@@ -1,0 +1,23 @@
+{
+ "schema_version": "library-qa-arena-1",
+ "part_id": "TLV62569PDDCR",
+ "symbol_sha256": "c9d15405272e9306101267d8ab32ee6489c37ac260bf43ae4e8851504534f30f",
+ "units": [
+  1
+ ],
+ "verdict": "PASS",
+ "build_sha256": "7b741cb09150782852a1626a757656d14762741d3bd14ea4bc70a54fce8b0da8",
+ "sheets": {
+  "unit_1.kicad_sch": "2ade17ae90dd93ea235cbcca60871e85690234ab862fdae83b9719a11e1f3e8f"
+ },
+ "pages": [
+  {
+   "unit": 1,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png",
+   "sha256": "12f73256294edb34f7296b8b6f023c52ee922e883c7d1b2588c5b8cd9701b4b5",
+   "svg_fingerprint": "6b5444fc1755550d4b1fcab4f8b5d841dccee14027f530add031aff115590d20",
+   "nonce_sha256": "02dd7b49e2f5aeae91ed81f17c471e4d44f8a24859e2b7a729622cbcb3dc5771",
+   "background": "#f5f4ef"
+  }
+ ]
+}

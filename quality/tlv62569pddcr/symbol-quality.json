@@ -1,0 +1,48 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "TLV62569PDDCR",
+ "symbol": {
+  "asset_path": "TLV62569PDDCR.kicad_sym",
+  "internal_name": "TLV62569PDDCR",
+  "sha256": "c9d15405272e9306101267d8ab32ee6489c37ac260bf43ae4e8851504534f30f"
+ },
+ "archetype": "identity-topology",
+ "units": [
+  {
+   "unit": 1,
+   "role": "the whole part: one 2-A synchronous step-down converter with power good (SLVSDG1C p1, p6 Figure 4), all 6 pins",
+   "presentation": "identity-topology",
+   "identity_features": [
+    "VIN 4 on the top row through a P-channel high-side FET in series (source and body on VIN, chevron out of the channel) to the switch-node dot and SW 3 (SLVSDG1C p6 Figure 4; p6 7.3.2 high-side / low-side MOSFET)",
+    "N-channel synchronous low side drops from the node (chevron into the channel), source wired to GND 2; no bootstrap pin, no catch diode, no inductor or VOUT inside the body (p6 7.1 'synchronous step-down converter')",
+    "FB 6 directly under SW (L25) into an error comparator, FB on -, 0.6V on + (p4 VFB 0.6 V); the comparator output hops the low-side source wire into a DRV block (Figure 4 Modulator + Gate Drive) that drives both gates",
+    "EN 1 runs into the DRV block (Figure 4 EN -> Control Logic) with 'H=on' / 'no float' (p3, p7 7.4.1)",
+    "PG 5 open_collector: N-channel open drain to ground with 'Z FB>=95%', 'L FB<90%', 'L EN=L' (p7 7.4.2, Table 1, p4 VPG); bold title TLV62569P, the p1 PG variant; Value TLV62569PDDCR (p16 orderable)"
+   ]
+  }
+ ],
+ "evidence": {
+  "comparable_ds": {
+   "path": "comparable_ds.json",
+   "sha256": "5e41d8c93a971d9882530d0f1498cb3931e97da3e4e2d5273f8304b27f1ccab8",
+   "own_sha256": "1ba6f55dfe678d06d563acd6632f1f950a497d812270806021097b55cd81d3c4",
+   "comparable_count": 4
+  },
+  "pin_truth": {
+   "path": "pin-truth.json",
+   "sha256": "477237b6645ae1e0325c6b47ca3a4dca1c05201dc294737adc17a1a4fecc489c",
+   "coverage": "all"
+  }
+ },
+ "generator": {
+  "contract": "python-cli-output-v1",
+  "path": "generate.py",
+  "sha256": "c69f47c4bab865fb90c07220c106247f358e1d3027c0c65e0f13194d41f6fb53",
+  "inputs": [],
+  "expected_symbol_sha256": "c9d15405272e9306101267d8ab32ee6489c37ac260bf43ae4e8851504534f30f"
+ },
+ "look": {
+  "receipt_path": "symbol-look.json",
+  "sha256": "1eeab201007acd1a426608f0f45e7ac7583d51add624d09edcb0cf642b25cfe4"
+ }
+}
