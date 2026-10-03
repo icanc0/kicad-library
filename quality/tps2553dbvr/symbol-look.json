@@ -1,0 +1,781 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "TPS2553DBVR",
+ "symbol_sha256": "c09081ee7574664b9a47497b256531efaf75772d72243370392306cc5eea6a86",
+ "units": [
+  1
+ ],
+ "designs": [
+  {
+   "id": "internals-maximal",
+   "designer_id": "designer-internals-maximal",
+   "stance": "internals-maximal",
+   "symbol_path": "designs/internals-maximal/TPS2553DBVR.kicad_sym",
+   "symbol_sha256": "dbd01eb0710c017738887cdba7ec8b71094d853939baf6cf01475f2adc04287e",
+   "renders": [
+    {
+     "id": "design:internals-maximal:u1",
+     "unit": 1,
+     "path": "designs/internals-maximal/TPS2553DBVR_unit1.png",
+     "sha256": "2cdb7b48388adb9a9b58e77d5a357756ae8dccfb405e9ae3a7c537138429f82a",
+     "background": "#ffffff",
+     "symbol_sha256": "dbd01eb0710c017738887cdba7ec8b71094d853939baf6cf01475f2adc04287e"
+    }
+   ]
+  },
+  {
+   "id": "flow-first",
+   "designer_id": "designer-flow-first",
+   "stance": "flow-first",
+   "symbol_path": "designs/flow-first/TPS2553DBVR.kicad_sym",
+   "symbol_sha256": "2587233ee220ab1ee9f8ac5f4f3eff97602cc147bdb75891544079d991c2250d",
+   "renders": [
+    {
+     "id": "design:flow-first:u1",
+     "unit": 1,
+     "path": "designs/flow-first/TPS2553DBVR_unit1.png",
+     "sha256": "9f2128f03c32a3cab9460a675da43046d32a05a658706b30ba5ffbc819460548",
+     "background": "#ffffff",
+     "symbol_sha256": "2587233ee220ab1ee9f8ac5f4f3eff97602cc147bdb75891544079d991c2250d"
+    }
+   ]
+  },
+  {
+   "id": "annotation-rich",
+   "designer_id": "designer-annotation-rich",
+   "stance": "annotation-rich",
+   "symbol_path": "designs/annotation-rich/TPS2553DBVR.kicad_sym",
+   "symbol_sha256": "7f2f9b5958ffcd295554d17e9e6b2c83ae34df7b0f8cd58e103b19a002711a66",
+   "renders": [
+    {
+     "id": "design:annotation-rich:u1",
+     "unit": 1,
+     "path": "designs/annotation-rich/TPS2553DBVR_unit1.png",
+     "sha256": "a327e8e624ade04c89acc2f92d7ec7540fe8cec177718c9fda1062ceb528b4ef",
+     "background": "#ffffff",
+     "symbol_sha256": "7f2f9b5958ffcd295554d17e9e6b2c83ae34df7b0f8cd58e103b19a002711a66"
+    }
+   ]
+  }
+ ],
+ "judges": [
+  {
+   "reviewer_id": "judge-1",
+   "design_id": "internals-maximal",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Seen: internals-maximal/TPS2553DBVR_unit1.png (sha256 2cdb7b48...) and TPS2553DBVR_unit1_fanout.png (2f26cd97...). I re-rendered the current .kicad_sym (dbd01eb0...) with kicad-cli + rsvg at 600 dpi and it matched unit1.png with 0 differing pixels, so the render is current even though the symbol file is about 20 s newer than the PNG. IDENTITY 4: unit1.png draws the whole p13 Figure chain: IN -> one N-FET (85mΩ) -> CS -> OUT on row y=11.43; CS -> 'I LIMIT CONST-I' <- ILIM; charge pump + driver block; reverse comparator; 3-input OR -> open-drain FET -> ~FAULT. It reads at a glance as a current-limited switch with reverse-voltage detection.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: in a close-up crop, the FET bulk runs up to its own ground triangle, matching p13 (bulk to GND) and p7 (IREV 0.01 uA typ at VOUT 6.5 V, VIN 0 V). Comparator (-) taps the IN node and (+) taps the OUT-side node (p13). 'REV 135mV' -> '4ms' box -> driver and OR (p7 135 mV, p14 9.3.2). Current-limit -> '7.5ms' -> OR (p7 FAULT deglitch 7.5 ms typ; the p13 figure prints 8-ms). THERMAL 155°C goes to driver and OR with no deglitch (p14 9.3.3 'not deglitched'). UVLO 2.35V taps IN (p7). EN has no overbar plus 'H = ON' (p5 TPS2553 row). The FAULT FET is an N-FET with source to GND, not push-pull (p5). No discharge FET, back-to-back pair or latch grafted from the comparables.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "ECONOMY 2: the body is 50.8 x 33.02 mm and the pin tips span 60.96 mm, all for a 6-pin SOT-23. It carries 21 body text items at 1.0 mm. Several captions do not affect wiring (UVLO 2.35V, THERMAL 155°C, 1.5A MAX, 85mΩ). Ink density near the CS/comparator/4ms cluster is high.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "ERGONOMICS 3: inputs sit left (IN 1, EN 3, ILIM 5 at 10.16 mm spacing), outputs right (OUT 6, ~FAULT 4), GND alone at the bottom, and IN/OUT share a row. The fanout render hooks up cleanly with hier labels. Pins are on odd multiples of 1.27 mm: inside the guide's 1.27 grid rule, but off 2.54. EN sits between IN and ILIM on the left, so U8's ILIM=IN tie must cross EN's wire. The large body also lengthens every stub.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: carries the wiring-relevant facts: EN H = ON, ILIM 15k-232k, 'ILIM=IN: 75mA' (p7, p15 9.5.1), FAULT timings 4 ms / 7.5 ms / immediate, REV 135mV, CONST-I (non-latch TPS2553, p13 Note A), 2.5-6.5V. All are datasheet-exact.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "judge-1",
+   "design_id": "flow-first",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Seen: flow-first/TPS2553DBVR_unit1.png (sha256 9f2128f0...) and TPS2553DBVR_unit1_fanout.png (a4bb44be...). I re-rendered the current .kicad_sym (2587233e...) at its -z 6 zoom and it is pixel-identical. IDENTITY 4: unit1.png puts IN -> N-FET -> CS -> OUT straight across the top row (y=10.16), with Driver (EN arrow in) and 'Current Limit' fed by CS and by ILIM from below. A downward comparator ('- +') feeds the Driver and OR, and the OR plus 'OT' drives an open-drain FET -> ~FAULT. That is the p13 core, readable at a glance.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "SILICON 3: everything drawn is faithful. A close-up crop shows the FET bulk going up to an earth glyph (p13 bulk to GND, p7 IREV 0.01 uA). Comparator (-) is fed from the IN node through a hop arc and (+) from the OUT-side node (p13). FAULT FET source goes to ground (p5 open drain). EN has no overbar. Deductions: the comparator output and the Current Limit output run straight into the OR with no deglitch, while p13 draws '4-ms Deglitch' and '8-ms Deglitch' blocks and p7 gives 4 ms / 7.5 ms, so the ink reads as an immediate FAULT on overcurrent and reverse. UVLO, the charge pump and the thermal -> driver shutdown path are omitted. There is no hard contradiction.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "ECONOMY 4: smallest body, 35.56 x 25.4 mm, with only 8 text items. Every line is functional and crossings use hop arcs, with no captions or decoration.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "ERGONOMICS 4: all pins are on the 2.54 grid and IN/OUT share a row. ILIM (5) and GND (2) sit side by side on the bottom 5.08 mm apart, so U17's RILIM drops straight down beside the GND stub (fanout render shows ILIM and GND both exiting downward cleanly). ~FAULT sits right under OUT for the pull-up. The one cost is U8's ILIM=IN tie, which runs from the bottom pin to the top-left IN and needs a net label.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 2,
+     "note": "EXPRESSIBILITY 2: the glyph carries topology only. There is no EN polarity note (only the bar-less name), no RILIM 15k-232k, no ILIM=IN 75 mA option, no deglitch times, no 135 mV threshold and no constant-current/no-latch cue. All of these live only in the hidden Description. The symbol also lacks the Manufacturer, MPN and LCSC fields the other two carry.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "minor",
+     "summary": "SOFT - flow-first: the reverse-comparator output and the Current Limit output enter the OR (and the Driver) with no deglitch. p13 draws '4-ms Deglitch' and '8-ms Deglitch' blocks and p7 gives 4 ms / 7.5 ms typ, so the ink reads as an immediate ~FAULT on reverse or overcurrent. Not a hard contradiction, but a graft of the 4ms/7.5ms boxes from internals-maximal would close it.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-1",
+   "design_id": "annotation-rich",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "Seen: annotation-rich/TPS2553DBVR_unit1.png (sha256 a327e8e6...), the only render this design supplied (no fanout). I re-rendered the current .kicad_sym (7f2f9b59...) at 600 dpi and it is pixel-identical. IDENTITY 3: IN -> N-FET (85mΩ) -> CS -> OUT on row y=12.7, plus an open-drain FET on ~FAULT, reads as a load switch. But CS is a dead-end circle and no current-limit block or ILIM ink exists, so the limiting mechanism is text only. The power FET reads as a discrete MOSFET with EN on its gate.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 1,
+     "note": "SILICON 1, DATASHEET CONTRADICTION: in a 3x close-up of unit1.png, the power-FET body arrow is joined to the right (OUT-side, source) leg. gen.py line 120 confirms this ('body -> source'). That glyph asserts an intrinsic OUT->IN body diode. p13 Functional Block Diagram ties the bulk to GND (600 dpi crop checked), and p7 gives IREV 0.01 uA typ / 1 uA max at VOUT 6.5 V, VIN 0 V, so no such path exists. It also contradicts the design's own row 'OUT>IN+135mV -> FET off'. On this board it would wrongly suggest that U8's reservoir side (VRES) back-feeds VIN. Second, softer defect: EN is wired directly to the power-FET gate, but p13 and p14 9.3.5 show EN enabling the charge pump and driver that actually drive the gate. The table text itself is correct: I>IOS -> I=IOS, L 7.5ms; & TJ>135°C -> off, L now; OUT>IN+135mV -> off, L 4ms; TJ>155°C -> off, L now; 'auto-recover, no latch' (p7, p13 Note A, p14 9.3.1-9.3.3, 9.3.6).",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: body is 40.64 x 30.48 mm. The table is load-bearing, but the ILIM sentence runs the full body width and an empty band sits between the table and the GND pin name.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 2,
+     "note": "ERGONOMICS 2: EN (y=7.62) and ILIM (y=5.08) sit at 2.54 mm pitch. kicad-agent-guide docs/02-symbols.md 'Pitch and the 1.27 mm grid' warns that 2.54 mm stacks hung labels and can merge nets, and asks for 3.81 mm. EN sits between IN and ILIM, so U8's ILIM=IN tie must cross EN's wire, contrary to the generator's 'one short jog' claim. No fanout render was supplied to prove the hookup. IN/OUT on one row and GND alone at the bottom are good.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "EXPRESSIBILITY 3: the richest text of the three: per-condition FET action and FAULT timing, EN 'H=on L=off', 'IOS: R to GND 15k-232k, or =IN: 75mA'. But the body-diode ink contradicts the reverse-blocking row, so the reverse-protection story is self-inconsistent.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "blocker",
+     "summary": "HARD - annotation-rich (TPS2553DBVR_unit1.png power FET; gen.py line 120 'body -> source'): the power N-FET body is tied to its OUT-side source leg, which implies an OUT->IN body diode. This contradicts SLVS841F p13 Functional Block Diagram (bulk tied to GND; 600 dpi crop checked) and p7 IREV 0.01 uA typ / 1 uA max at VOUT 6.5 V, VIN 0 V. It also contradicts the packet trap matrix (no reverse path) and the design's own 'OUT>IN+135mV -> FET off' row. Fix: graft the bulk-to-GND FET glyph from internals-maximal or flow-first.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    {
+     "severity": "minor",
+     "summary": "SOFT - annotation-rich: EN is wired directly to the power-FET gate. p13 Figure and p14 9.3.5 show EN enabling the charge pump and driver, and the driver drives the gate (the gate must be pumped above the source). A reader could take EN's logic level as the gate drive.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-2",
+   "design_id": "internals-maximal",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Identity 4: internals-maximal/TPS2553DBVR_unit1.png redraws the p13 Fig 9.2 core almost one-to-one: N-FET IN->CS->OUT, REV comparator, I LIMIT CONST-I, 3-input OR driving an open-drain FAULT FET to GND. It reads at once as a TPS255x switch.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Silicon 4: body to GND as on p13. Comparator - input from IN and + input from the FET-source/CS node, as p13 draws. REV->4ms->node feeds both CHARGE PUMP+DRIVER and OR (p13). I LIMIT->driver and ->7.5ms->OR. THERMAL->driver and ->OR. UVLO fed from IN. Captions all match p5/p7: 85 mOhm DBV typ, 135 mV, 7.5 ms (p7 table, rightly not the block diagram's 8-ms), 4 ms, UVLO 2.35 V, 155 C, ILIM=IN 75 mA typ, 15k-232k. EN has no overbar and reads H = ON. The only gap is that the 135 C in-current-limit thermal sensor is not drawn.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "Economy 2: the largest body, 2000x1300 mil (rect +/-25.4 x +/-16.51 mm), carrying 22 text strings and 64 primitives for 6 pins. 2.5-6.5V, 1.5A MAX and 85mOhm repeat the Description. Two crossings have no hop or dot (CS vertical over the 4ms->driver line; ILIM vertical over the THERMAL->OR line), visible in the unit1 render.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "Ergonomics 3: internals-maximal/TPS2553DBVR_unit1_fanout.png shows IN and OUT on one row (y=11.43), EN and ILIM on the left, FAULT on the right, GND at the bottom, all wired cleanly. The wide body forces long nets per instance. Pins sit on the 1.27 mm grid, which the guide accepts. Common to all three designs, so not scored against any one: EN is etype input, and U8 EN is fed through 10k / 100k to GND (architecture.md:292), which raises KiCad's input-not-driven ERC (guide docs/02-symbols.md etype table).",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "Expressibility 4: the symbol states EN polarity, the RILIM range, the ILIM=IN option, both deglitch times, the reverse trip, UVLO, the thermal threshold and constant-current (not latch) behaviour, and shows FAULT as open drain.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "judge-2",
+   "design_id": "flow-first",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "Identity 3: flow-first/TPS2553DBVR_unit1.png shows a FET IN->CS->OUT, a Driver, a Current Limit block, a comparator, and an OR into an open-drain FAULT FET, so it reads as a protected high-side switch. The comparator has no label and 'OT' is an unexplained stub input, so the reader has to work out the reverse-voltage and overtemperature functions.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "Silicon 3: the body goes to the ground glyph and the comparator takes - from IN and + from the FET-source/CS node, both as on p13. CS sits on the OUT side and FAULT is an NMOS to GND. But the 4-ms and 7.5-ms deglitch blocks are left out, so comparator->Driver and Current Limit->OR read as immediate. OT feeds only the OR, with no shutdown path to the Driver, while p13 runs Thermal Sense->Driver. These are omissions, not contradictions.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "Economy 4: the smallest body, 1400x1000 mil (+/-17.78 x +/-12.7 mm), with only 8 text strings. Every stroke is topology, and hop arcs mark both crossings (gate over the IN->comparator wire; comparator output over CS), visible in the close-up.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "Ergonomics 4: flow-first/TPS2553DBVR_unit1_fanout.png shows straight-through power, with IN and OUT on the same top row (y=10.16). EN is on the left, FAULT on the right just below OUT, and ILIM and GND sit side by side on the bottom 200 mil apart, so RILIM drops to GND next to the GND pin. All pins are on the 100 mil grid and the fanout labels are clean. U8's ILIM-to-IN tie needs one wire around the body. The EN input etype note is common to all three.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 2,
+     "note": "Expressibility 2: there is no EN polarity hint, no RILIM range or ILIM=IN option, no deglitch times, thresholds or constant-current/no-latch note, and OT is unexplained. It shows topology only.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "judge-2",
+   "design_id": "annotation-rich",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "Identity 3: annotation-rich/TPS2553DBVR_unit1.png shows the FET IN->CS->OUT with 85mOhm, an open-drain FAULT FET, and a condition/FET/FAULT table, so it reads as a current-limited switch. The control path is absent, though: the CS circle has no output, ILIM has no internal ink, and there is no comparator or limit block.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 1,
+     "note": "Silicon 1: this is a datasheet contradiction. The main FET body is tied to the OUT-side source (symbol polyline (0,10.795)->(0,11.75)->(1.27,11.75)), which implies a body diode from OUT to IN. p13 ties the body to GND, and p7 gives IREV of 1 uA max at VOUT=6.5 V, VIN=0 V. The symbol also wires EN directly to the gate, skipping the charge pump and driver of p13 9.1. The table values themselves are all correct: 7.5 ms (p7), 4 ms (p7), 135 mV (p7), 135 C in current limit and 155 C (p7), auto-recover/no latch (p5, p13 Note A), and IOS from 15k-232k or ILIM=IN at 75 mA.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Economy 3: the body is 1600x1200 mil with 22 strings. The truth table earns its place, but the dangling CS circle is ink with no function.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 2,
+     "note": "Ergonomics 2: EN (y=7.62) and ILIM (y=5.08) sit only 2.54 mm apart, against the guide's 3.81 mm pitch rule (docs/02-symbols.md:44, stacked hung labels). U8's ILIM-to-IN tie on the left has to cross EN's wire. Every pin is crowded into the upper half while the table fills the lower body. The designer submitted no fanout render to demonstrate wiring. The EN input etype note is common to all three.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "Expressibility 4: the table gives the per-condition FET state and FAULT timing (I>IOS -> I=IOS, FAULT low after 7.5 ms; TJ>135 C or TJ>155 C -> off, FAULT low at once; OUT>IN+135mV -> off, FAULT low after 4 ms), plus 'auto-recover, no latch', EN H=on/L=off, and the full ILIM programming rule. This is the most behaviour stated of the three.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "blocker",
+     "summary": "annotation-rich: the main N-FET body is tied to the OUT-side source. In TPS2553DBVR.kicad_sym the body polyline runs (0,10.795)->(0,11.75)->(1.27,11.75), and annotation-rich/TPS2553DBVR_unit1.png shows the body arrow strapped to the right (OUT/CS) terminal. That tie implies a body diode from OUT to IN. Datasheet SLVS841F p13 Fig 9.2 ties the switch body to GND (the ground glyph beside the FET). p7 IREV = 0.01 typ / 1 uA max at VOUT = 6.5 V, VIN = 0 V rules out any body-diode path from OUT to IN. The board's architecture.md lines 87 and 218 depend on U17 and U8 blocking reverse current. internals-maximal and flow-first both tie the body to GND as p13 does.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    {
+     "severity": "minor",
+     "summary": "annotation-rich (lesser, node-level): the EN pin wire runs straight to the gate of the high-side N-FET (polyline (-4.91,7.62)->(0,7.62)->(0,10.245)), so the symbol shows the gate sitting at EN logic level. p13 section 9.1 says the charge pump and driver pull the gate above the source, and EN only enables those circuits (p14 9.3.5).",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-3",
+   "design_id": "internals-maximal",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: internals-maximal/TPS2553DBVR_unit1.png is the SLVS841F p13 Figure 9.2 block diagram redrawn. One N-FET IN->OUT, a CS circle, the reverse comparator, CHARGE PUMP + DRIVER, UVLO 2.35V, THERMAL, I LIMIT CONST-I, deglitch boxes, an OR gate and an open-drain FET to ~FAULT. It reads at once as a TPS255x-class adjustable limiter.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: checked against p13 element by element. The FET body chevron goes to an internal ground, as on p13. The comparator - input taps the IN node and the + input taps the source node before CS, so it trips on VOUT>VIN, matching p13 and p7 (95/135/190 mV). The 4ms deglitch feeds both DRIVER and the OR (p13, p14 9.3.2). Current limit goes through 7.5ms (the p7 typ value, not the diagram's 8-ms) into the OR. THERMAL goes to the OR with no deglitch (p14 9.3.3). EN has no bar, H = ON (p5). There is no discharge FET and no back-to-back diodes. One partial point: THERMAL shows only 155C and omits the 135C in-limit sensor (p14 9.3.6); that is an omission, not a contradiction.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "ECONOMY 2: the body is 50.8x33 mm for a 6-pin SOT-23 and carries 11 numeric captions. The comparator apex sits about 0.6 mm under the body top edge and REV 135mV crowds the border. In TPS2553DBVR_unit1_fanout.png the 1.0 mm internals are legible but dense. The bold TPS2553DBVR title repeats the Value field; all three designs share this emitter convention.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "ERGONOMICS 3: the fanout shows IN/OUT on one straight row, EN and ILIM on the left, ~FAULT on the right and GND at the bottom. Every pin tip lands on a 1.27 offset (IN y=11.43, EN 1.27, ILIM -8.89, FAULT -3.81, GND -21.59). The emitter accepts that grid, but it is off 100 mil from the origin. The 61 mm pin span is costly on a dense sheet.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: 2.5-6.5V, H = ON, 15k-232k, ILIM=IN: 75mA, REV 135mV, 4ms, 7.5ms, UVLO 2.35V, 155C and CONST-I (the non-latch part) are all printed, and all match p5-p7 and p15. Pin etypes match the packet; MPN, LCSC and Manufacturer properties are present.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "judge-3",
+   "design_id": "flow-first",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "IDENTITY 3: flow-first/TPS2553DBVR_unit1.png shows an N-FET IN->CS->OUT, an inverted reverse comparator, Driver, Current Limit, an OR gate and an open-drain FET to ~FAULT. It is recognisable as a current-limited switch. With no deglitch, thermal or UVLO blocks it reads as a generic limiter rather than the TPS255x specifically.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "SILICON 3: everything it draws matches p13. The FET body (filled arrow into the channel, N-ch) is tied to an internal ground. The comparator - input taps the IN node through a hop arc and the + input taps the source node before CS, which is the correct polarity. The comparator output goes to Driver and the OR; Current Limit goes to Driver and the OR; ILIM feeds Current Limit. The omissions mislead in places. The comparator feeds the OR directly with no 4 ms deglitch, and Current Limit has no 7.5 ms deglitch (p7, p14 9.3.3), so FAULT looks immediate. OT is a dangling OR stub with no path to Driver, which suggests overtemperature only flags and does not shut the switch off (p14 9.3.6). No charge pump. There is no contradiction.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "ECONOMY 4: smallest body (35.56x25.4 mm), every stroke functional, two hop arcs keep the crossings unambiguous. The fanout (TPS2553DBVR_unit1_fanout.png) stays readable. The bare OT label is cryptic.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "ERGONOMICS 4: the fanout shows IN/OUT on one row (y=10.16), EN on the left and ~FAULT on the right. ILIM and GND sit side by side on the bottom 200 mil apart, so RILIM drops straight down next to the GND symbol. All six tips are on the 100 mil grid (x +/-22.86, y 10.16/2.54/-2.54, bottom x -2.54/2.54).",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 2,
+     "note": "EXPRESSIBILITY 2: no numbers at all: no VIN range, no RILIM 15k-232k, no ILIM-to-IN 75 mA option (board U8 uses it), no deglitch times, no H=on note. Every value needs the datasheet. Pin etypes match the packet, but the MPN, LCSC and Manufacturer properties are missing.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "judge-3",
+   "design_id": "annotation-rich",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "IDENTITY 3: annotation-rich/TPS2553DBVR_unit1.png shows one N-FET IN->CS->OUT, EN to the gate, an open-drain ~FAULT FET and a 4-row condition/FET/~FAULT table. The rows tick onto a vertical bus that drives the FAULT FET gate, a wired-OR of the conditions. It reads as a limiting switch with a fault flag. The CS circle has no output (no current-limit block or reverse comparator drawn), so the sense loop is implied only by the table.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 2,
+     "note": "SILICON 2, with datasheet contradictions. (a) In the zoomed FET the body arrow is tied to the source (OUT side). That implies an OUT->IN body diode, but p13 ties the body to GND and p7 gives IREV 0.01 uA typ / 1 uA max at VOUT=6.5 V, VIN=0 V. (b) The EN wire runs straight to the power-FET gate. p13 9.1 says a charge pump and driver pull the gate above the source, and the block diagram routes EN to Driver/Charge Pump. A 1.1 V logic high (p6 VIH) cannot enhance a high-side N-FET. The table itself is accurate against p7 and p14: I>IOS -> I=IOS, L 7.5ms; & TJ>135C -> off, L now; OUT>IN+135mV -> off, L 4ms; TJ>155C -> off, L now; auto-recover, no latch (TPS2553, not -1). 85 mOhm and 2.5-6.5V also match.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: the 40.64x30.48 mm body is mostly table; every caption carries information. There is dead space between the table and GND, and the bold title repeats the Value field (shared convention).",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "ERGONOMICS 3: IN/OUT share a row (y=12.7), EN and ILIM sit on the left only 100 mil apart (7.62/5.08), ~FAULT is on the right (2.54) and GND at the bottom. All tips are on the 100 mil grid. The tight EN/ILIM pair makes the RILIM drop and the U8 ILIM-to-IN jumper squeeze past the EN wire. There is no fanout render, so wiring was judged from pin geometry.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: H=on L=off, 'IOS: R to GND 15k-232k, or =IN: 75mA' (p6, p15), per-condition FET state and deglitch timing (p7, p14) and auto-recover are the best behavioural annotation of the three. Pin etypes match the packet; MPN, LCSC and Manufacturer properties are present.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "blocker",
+     "summary": "annotation-rich: the power N-FET body is tied to its source (OUT side; kicad_sym body polyline (0,10.795)->(0,11.75)->(1.27,11.75)). That implies an OUT->IN body diode. SLVS841F p13 Functional Block Diagram ties the FET body to GND, and p7 IREV is 0.01 uA typ / 1 uA max at VOUT=6.5 V, VIN=0 V, so no such conduction path exists. Fix by grafting body-to-GND from internals-maximal or flow-first.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    {
+     "severity": "major",
+     "summary": "annotation-rich: the EN wire runs directly to the power-FET gate. SLVS841F p13 9.1 says an internal charge pump and driver pull the gate above the source, and p13 routes EN into Driver/Charge Pump. A 1.1 V logic-high EN (p6 VIH) cannot enhance a high-side N-FET. Fix by routing EN to a driver block.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   ]
+  }
+ ],
+ "selection": {
+  "winner_design_id": "internals-maximal",
+  "grafts": [
+   "G1 from flow-first (economy): body 45.72 x 25.4 mm (1161 mm2, was 1677 mm2: -31 %); 18 text items incl. title (was 22). 1.5A MAX, 85mOhm, UVLO 2.35V and THERMAL 155°C leave the ink for the Description; the UVLO and THERMAL blocks stay. The ink keeps the wiring facts: 2.5-6.5V, H = ON, RILIM 15k-232k, or ILIM=IN: 75mA, 4ms, 7.5ms, OUT>IN+135mV, CONST-I.",
+   "G2 from flow-first (ergonomics): half height 12.7 (asserted against the emitter), half width 22.86: tips IN/EN (-27.94, 7.62/-2.54), OUT/~FAULT (27.94, 7.62/-2.54), ILIM/GND (-2.54/2.54, -17.78), all on the 100 mil grid; pin span 55.88 mm.",
+   "G3 from flow-first (ergonomics): ILIM moves to the bottom edge beside GND (5.08 mm apart): RILIM drops straight to ground next to the GND stub; the ILIM=IN option is the IN net label at the ILIM stub instead of a tie squeezed between the IN and EN rows. EN is alone on the left under IN; ~FAULT on the right under OUT for the pull-up. IN/OUT keep one row.",
+   "G4 from flow-first (economy/identity): hop arcs at all three crossings (reverse line over the power path, reverse->driver over the CS drop, thermal->OR over the ILIM riser); every remaining touch is a dotted junction.",
+   "G5 from annotation-rich (expressibility/economy): the reverse trip is printed as annotation-rich's state-table condition 'OUT>IN+135mV', as the OUT caption beside the comparator's output line (replaces the free 'REV 135mV' text and the 1.5A MAX caption). The Description carries annotation-rich's rows: overtemperature 135 C in current limit / 155 C, immediate; auto-recover, no latch. Its body-to-source FET and EN-to-gate wiring are NOT grafted."
+  ],
+  "final_symbol_sha256": "c09081ee7574664b9a47497b256531efaf75772d72243370392306cc5eea6a86"
+ },
+ "final_renders": [
+  {
+   "id": "qa:u1",
+   "unit": 1,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png",
+   "sha256": "8d01f57f24a0a3bddc3da1c6ef0e8a6bdaa43fdec50054730681d60914aca88a",
+   "background": "#f5f4ef",
+   "symbol_sha256": "c09081ee7574664b9a47497b256531efaf75772d72243370392306cc5eea6a86",
+   "nonce": "LOOK-W39MVFURKW3U",
+   "nonce_sha256": "d024619b6328da6e1d14520ee1d6eec53ca8fea249c9589dfd67fab4235c3147"
+  }
+ ],
+ "regraders": [
+  {
+   "reviewer_id": "qa-regrader-1",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Graded QA root /home/vincent/projects/pmic-test-arena/receipts/TPS2553DBVR/qa/arena-manifest.json (verdict PASS, units [1], symbol_sha256 c09081ee = candidate TPS2553DBVR.kicad_sym rehashed). It lists one unit page: arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png, 1166x987 px, sha256 8d01f57f, matching the manifest and .render-state.json. I viewed it at full size plus 3-5x zoom tiles of the body, both FETs, the labels and the bottom pins. LOOK nonce read from the yellow banner pixels is LOOK-W39MVFURKW3U; its sha256 is d024619b, matching the manifest nonce_sha256. Datasheet: SLVS841F, sha256 88e45370 (rehashed).\n\nIDENTITY 4: the bold title TPS2553DBVR sits over functional ink that reads at once as a current-limited power-distribution switch. The ink shows a single N-FET between IN and OUT, a CS circle, a reverse-voltage comparator, an I LIMIT CONST-I block, deglitch boxes, an OR gate and an open-drain FAULT FET.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: pins are 1 IN, 2 GND, 3 EN, 4 ~{FAULT}, 5 ILIM, 6 OUT, which is the SOT-23 column on p5. EN has no overbar and carries 'H = ON', matching p5 'EN = Active High for the TPS2553', so the overbar on the p13 block diagram (the TPS2552 form) was correctly not copied. The pass FET body goes to ground and the comparator has - on the IN side and + on the source/OUT side, as in the p13 Figure. The comparator output goes to a 4ms box, then to a node feeding both the driver and the OR gate (p13; p7 deglitch 2/4/6 ms). 'OUT>IN+135mV' matches p7 trip 95/135/190 mV and p14 9.3.2. The CS line drops into I LIMIT, ILIM enters it from below, and its output goes to 7.5ms and then the OR gate. That follows the p7 typical 5/7.5/10 ms rather than the '8-ms' text on the block diagram. THERMAL goes straight to the OR gate with no deglitch (p14 9.3.3 / p15 'asserted immediately') and also to the driver. FAULT is an open-drain N-FET with source to ground (p14). 'I LIMIT CONST-I' matches p13 Note A for the non -1 part. '2.5-6.5V' matches p6 VIN. 'RILIM 15k-232k' matches p5/p15. 'ILIM=IN: 75mA' matches p7 'ILIM shorted to IN 50/75/100' and p15. Nothing was grafted from comparables: no back-to-back diodes and no discharge FET. Simplifications only: the charge pump is merged with the driver and the IN feed to the charge pump is not drawn; the two thermal sensors are drawn as one block. All crossings are drawn as hop arcs (CS over the 4ms->driver line, 4ms over the OUT line, THERMAL over ILIM) and every tee has a dot.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: no decorative ink, and every block and caption is datasheet-backed. The body is large for 6 pins: 45.72 x 25.4 mm rectangle, 200-mil pins. Internal labels use 1.0 mm text. The graphic title duplicates the Value field: the library Value at (0,16.51) is visible, and only the arena instance hides it, so a real placement shows TPS2553DBVR twice unless Value is hidden.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "ERGONOMICS 4: IN (pin 1) and OUT (pin 6) sit on the same row (y=7.62) for a straight power path. EN is on the left and ~{FAULT} on the right on the same row (y=-2.54). ILIM and GND are side by side at the bottom, 200 mil apart, so RILIM routes short to ground. All pins are on the 100-mil grid. Etypes from the arena sheet lib_symbols: IN power_in, OUT power_out (lets U17 OUT feed U8 IN), EN input, ~{FAULT} open_collector, ILIM passive (allows ILIM tied to IN), GND power_in.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: the captions carry the load-bearing design facts: EN polarity, VIN range, reverse trip threshold, both deglitch times, immediate thermal flag, constant-current (no latch) behaviour, RILIM range and the ILIM=IN 75 mA option. The open-drain glyph implies the external pull-up. Notes, not symbol findings: (a) the QA page background is #f5f4ef, measured as pixel (245,244,239) and recorded truthfully in the manifest, while council SKILL section 3 says #ffffff; (b) the harness net label shows '__FAULT_', which is the arena turning the pin name ~{FAULT} into a label name, not symbol ink; (c) the arena.log warn rows (PAGE-FILL, SMOKE-SHEET, RENDER-UNINSPECTED) are harness-level. Nothing written to any repo. Temporary crops lived in the session scratchpad and were removed. suspected_injection: none.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "qa-regrader-2",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "I graded the latest QA arena manifest at /home/vincent/projects/pmic-test-arena/receipts/TPS2553DBVR/qa/arena-manifest.json (verdict PASS, units [1], symbol c09081ee). The candidate .kicad_sym and the council final both hash to c09081ee, which matches the manifest. unit_1.kicad_sch hashes to 85fd4025, also a match. Unit page: arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png, 1166x987 px, sha256 8d01f57f, matching the manifest. Background measured at (245,244,239), which is #f5f4ef as the manifest records. I viewed the page whole, in 600x480 full-resolution tiles, and at 3x and 6x zooms. The banner reads LOOK-W39MVFURKW3U, and sha256 of that string is d024619b, equal to the manifest nonce_sha256. Datasheet checked: SLVS841F, sha256 88e45370, which matches the cache.\n\nIDENTITY 4: The bold title TPS2553DBVR and the U1 reference read clearly. Pins are IN 1, EN 3, OUT 6, FAULT-bar 4, ILIM 5 and GND 2, which matches the p5 DBV pin table exactly. The internal ink reads at a glance as a current-limited N-FET switch with a reverse comparator and an open-drain flag.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: I traced the ink against the p13 Functional Block Diagram one connection at a time. IN goes through the N-FET and then CS to OUT, with CS on the OUT side as in the datasheet. The FET body is tied to an internal ground glyph, as on p13. The reverse comparator has '-' on the IN side and '+' at the node between the FET and CS. Its output hops over the OUT wire into the 4ms box. The 4ms box feeds both the driver and the top OR input. UVLO hangs off IN and feeds the driver. THERMAL feeds the driver and the bottom OR input with no deglitch, which agrees with p14 9.3.3. ILIM has an arrow up into I LIMIT. CS has an arrow down into I LIMIT. I LIMIT feeds the driver and also feeds 7.5ms, which goes to the middle OR input. The OR drives the gate of an N-channel FET whose drain goes to FAULT-bar and whose source and body go to ground. That is open-drain, matching the p5 FAULT row.\n\nThe EN pin has no overbar and carries 'H = ON', which is correct for the TPS2553 (p5). It does not copy the TPS2552 EN-bar from p13. The CONST-I label matches p13 Note A for the non -1 part.\n\nEvery caption number matches the datasheet: 2.5-6.5V (p6 VIN), 'RILIM 15k-232k or ILIM=IN: 75mA' (p5/p6, and p7 'ILIM shorted to IN 50 75 100'), OUT>IN+135mV (p7 trip 95/135/190 mV), 4ms (p7 reverse-voltage FAULT deglitch 2/4/6 ms), and 7.5ms (p7 overcurrent deglitch 5/7.5/10). The 7.5ms caption deliberately uses the table value instead of the 8-ms written on p13.\n\nOne small datasheet nuance, not a defect: p7 gives 3/5/7 ms from a reverse-voltage condition to MOSFET turn-off, but the symbol uses the single 4-ms block exactly as p13 draws it.\n\nThe symbol adds nothing from the comparable parts: no back-to-back FETs, no discharge FET, no latch.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: All ink is backed by the datasheet and every crossing is resolved with a hop (CS over the 4ms-to-driver wire, comparator output over OUT, ILIM over the THERMAL wire). Charge pump and driver are merged into one box, which saves space. The cost is the body size: the rectangle runs from -22.86,12.7 to 22.86,-12.7, about 1800x1000 mil for a 6-pin SOT-23. The text inside is about 1.0 mm. It is legible at full resolution but dense at sheet zoom. This is acceptable for an identity-topology part, but it is the weakest axis.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "ERGONOMICS 4: IN and OUT sit on the same row (y=7.62), so power flows straight through. EN is on the left under IN and FAULT-bar is on the right under OUT. ILIM and GND exit the bottom 200 mil apart, so RILIM to GND is a short loop. All pins are on the 2.54 mm grid. Electrical types are power_in (IN, GND), input (EN), power_out (OUT), open_collector (FAULT-bar) and passive (ILIM). That lets the U17 OUT to U8 IN chain and the U8 ILIM-to-IN tie pass ERC. The arena sheet reports ERC 0.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: The symbol carries everything a reader needs about behaviour: EN polarity, both ways of programming ILIM, the reverse trip threshold, the three FAULT sources with their deglitch times, and constant-current (not latching) limiting.\n\nNon-blocking observations about QA's own harness, not the symbol:\n- The build.py hierarchical label for pin 4 is named '__FAULT_' because the ~{FAULT} overbar is lost in the net name.\n- The EN input-shape label glyph reads like 'END' at a glance.\n- The arena instance hides the Value field, so only the symbol's bold graphic text shows the part name.\n\nNo prompt-injection text found in the manifest, arena log, verdicts.jsonl, packet or symbol bytes. I wrote nothing to any repo. Scratch tiles are in /tmp/claude-1000/-home-vincent/73b42dc3-7be7-4f77-8341-7ae69eccaa3b/scratchpad/tps2553-r2/.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "qa-regrader-3",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "QA root /home/vincent/projects/pmic-test-arena/receipts/TPS2553DBVR/qa/arena-manifest.json (latest and only manifest, 15:30). It records symbol c09081ee (the candidate .kicad_sym rehashes to it), units [1], one page: arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png. That page rehashes to 8d01f57f…, matching the manifest. Its bg (245,244,239) is #f5f4ef as declared. unit_1.kicad_sch rehashes to 85fd4025…, also matching. I viewed the page at native 1166x987 plus 3x zooms. Its banner reads LOOK-W39MVFURKW3U, and sha256 of that string = d024619b…, equal to the manifest nonce_sha256. Datasheet: SLVS841F, cached pdf sha 88e45370… (rehashed).\n\nIDENTITY 4: the unit 1 page draws IN -> 3-terminal N-FET -> CS circle -> OUT. It also has a CHARGE PUMP + DRIVER block, an I LIMIT CONST-I block, the reverse comparator, 4ms and 7.5ms deglitch boxes, an OR gate and an open-drain FAULT FET. At a glance it reads as a current-limited power-distribution switch. This is the datasheet's p13 Functional Block Diagram nearly 1:1.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: (1) Pin numbers on the page are IN 1, GND 2, EN 3, ~FAULT 4, ILIM 5, OUT 6, matching the p5 DBV table. (2) EN is active-high for TPS2553 (p5). It is drawn with no bubble and annotated 'H = ON'. (3) '2.5-6.5V' matches p6 7.3 VIN. (4) 'OUT>IN+135mV' and '4ms' match p7 (trip 135 mV typ, reverse FAULT deglitch 4 ms) and p14 9.3.2. Comparator polarity matches p13: - from IN/drain, + from the FET source node. (5) '7.5ms' on the current-limit -> OR path matches the p7 FAULT deglitch and p14 9.3.3. The p13 figure says '8-ms', but the symbol follows the EC table and the text. (6) THERMAL feeds the driver and the OR directly with no deglitch, matching p14/p15 ('not deglitched … immediately'). (7) 'RILIM 15k-232k' matches p5, p6 and p15. 'or ILIM=IN: 75mA' matches p7 ('ILIM shorted to IN' 50/75/100 mA) and p15. (8) CONST-I is the non-latch TPS255x mode (p13 Note A). (9) The 4ms output feeds both the driver and the OR, and CS feeds I LIMIT, as on p13. (10) Pin types: FAULT is open_collector and correct; ILIM is passive, which is acceptable. Only simplification: the charge pump and driver are merged into one box, and the charge-pump IN feed is not drawn.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: the body is 45.72x25.4 mm (1.8in x 1.0in) for 6 pins, with 200-mil pins and 1.0 mm internal text. All ink is datasheet-backed and none is decorative, but it is a large sheet footprint for a part placed twice on the board (U17, U8). The body also carries a bold 'TPS2553DBVR' text that duplicates the Value field. The arena hides Value, so the page shows it once; a board instance with Value visible would show it twice.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "ERGONOMICS 4: IN and OUT share row y=7.62, and EN and FAULT share y=-2.54, so the power path runs straight through. ILIM (5) and GND (2) exit the bottom 200 mil apart, ILIM beside GND, so RILIM drops straight to ground. All pins are on the 100-mil grid. On the page, wires to labels and the GND symbol land cleanly, and arena.log reports ERC 0 and legibility 0.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: the annotations do real work: EN polarity, VIN range, reverse trip threshold, both deglitch times, RILIM range, the ILIM=IN 75 mA option, constant-current (not latch) mode, the overbarred FAULT, and the un-deglitched thermal path. SUPPLEMENTAL, not in the manifest: the full sheet page library-qa-arena-schematic-page-sheet-U1.png (sha 9bedc412…) reads LOOK-QLXDNXXYPPAE at native resolution. It shows the same unit with nothing else on the sheet. HARNESS-ONLY (not symbol defects): the arena net labels render as '__FAULT_' (the sanitized ~{FAULT}) and as 'EN' plus an input flag that reads like 'END'. arena.log carries page-fill and RENDER-UNINSPECTED warns. OUTSIDE LOOK SCOPE: verdicts.jsonl row library-qa-TPS2553DBVR-1 (11:22) is still status=open. It records a missing symbol-quality.json at that time and guide blocker f-b6dd97 (C55266 facts unqualified, SYM-PINSET-MATCH fail-closed). That is the inspector's admission matter, not a page finding. suspected_injection: none. No file I read held instructions addressed to me. Nothing was written to any repo.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "qa-regrader-4",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Graded QA's own arena page. Latest manifest: /home/vincent/projects/pmic-test-arena/receipts/TPS2553DBVR/qa/arena-manifest.json (verdict PASS, units [1], symbol_sha256 c09081ee..., which matches the candidate and final .kicad_sym bytes). Unit 1 page: /home/vincent/projects/pmic-test-arena/receipts/TPS2553DBVR/qa/arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png. It is 1166x987 with a #f5f4ef background, and its sha256 8d01f57f... matches the manifest. I viewed it at full resolution plus 3x zooms of the body and labels. The banner reads LOOK-W39MVFURKW3U, and sha256 of that string equals the manifest nonce_sha256 d024619b.... Archetype from the packet: identity-topology. Datasheet: SLVS841F, sha 88e45370... (re-hashed), pp5, 6, 7 and 13.\n\nIDENTITY 4: The title is TPS2553DBVR. The page shows one N-FET from IN to OUT with a CS circle on the OUT side, a reverse comparator, an I LIMIT CONST-I block, and a three-input OR driving an open-drain FET to FAULT. It reads at once as a current-limited power-distribution switch. This is the topology of the p13 Fig 9.2 block diagram.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: Pins match the p5 SOT-23 column exactly: 1 IN, 2 GND, 3 EN, 4 FAULT with overbar, 5 ILIM, 6 OUT. 6 pins, no EP. EN has no overbar and carries an 'H = ON' note, the correct TPS2553 polarity per p5 (the p13 overbar is not copied). Comparator: '-' from the IN node, '+' from the FET source/OUT node, output through '4ms' into the driver and the OR, as on p13. CS feeds I LIMIT. ILIM arrows up into I LIMIT, and I LIMIT feeds the driver and '7.5ms' into the OR (p7 typ; the p13 '8-ms' trap is avoided). THERMAL goes straight to the driver and to the OR with no deglitch, hopping the ILIM wire. UVLO is fed from IN. The FAULT FET is N-channel open drain with body and source to ground. There is no latch, discharge FET or back-to-back diode. Captions match the datasheet: 2.5-6.5V (p6), OUT>IN+135mV (p7), RILIM 15k-232k (p6), ILIM=IN 75mA (p7 typ). Minor omission, not a contradiction: p13 draws IN feeding the Charge Pump, but the merged CHARGE PUMP + DRIVER block only receives IN via the UVLO arrow.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: Every caption is load-bearing and there is no decorative ink. Merging the charge pump and driver saves ink. The body is wide (pins at +/-27.94 mm, about 45.7 x 25 mm) for a 6-pin part. The internals justify it, but it costs sheet area.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "ERGONOMICS 4: IN (1) and OUT (6) sit on the same row, so power flows left to right. EN is on the left and FAULT on the right, also on one row. ILIM and GND are 5.08 mm apart on the bottom, so an RILIM-to-GND resistor is a short drop. The page shows clean wire stubs and labels, and every pin is on the 2.54 grid. Pin types fit the board: power_in IN and power_out OUT let two parts chain, ILIM is passive so it can tie to IN, and FAULT is open_collector.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: The page alone gives the EN polarity, VIN range, reverse trip, both FAULT deglitch times, the overtemperature path with no delay, constant-current versus latch behaviour, the RILIM range and the ILIM=IN option.\n\nNon-symbol notes: the arena harness renders the ~{FAULT} hierarchical label as '__FAULT_' (a QA build.py sanitization artifact). 'END' is the EN label followed by the input-shape glyph. Neither is a symbol defect. Separately, verdicts.jsonl still holds the earlier library-qa audit finding (missing symbol-quality.json, SYM-PINSET-MATCH fail-closed on unqualified C55266 facts). That is an audit/admission item, not a LOOK item.\n\nNo suspected prompt injection was found in the packet, manifest, logs or verdicts. Nothing was written to any repo; scratch zooms are in /tmp/claude-1000/-home-vincent/73b42dc3-7be7-4f77-8341-7ae69eccaa3b/scratchpad/tps2553-rg4/.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "qa-regrader-5",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "PAGE: the only page in the latest QA manifest, /home/vincent/projects/pmic-test-arena/receipts/TPS2553DBVR/qa/arena-manifest.json (units [1], verdict PASS, symbol c09081ee = candidate TPS2553DBVR.kicad_sym). The page is arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png, 1166x987. I rehashed it to 8d01f57f... (matches the manifest) and measured its background as (245,244,239) = #f5f4ef, as the manifest records. I read nonce LOOK-W39MVFURKW3U from the yellow banner; sha256 of that string = d024619b... = the manifest nonce_sha256. I viewed the page at full size, then each half of the body at 3x. Datasheet: ~/.cache/kicad-agent-guide/datasheets/88e45370.../ds.pdf rehashes to facts.json's sha (SLVS841F).\n\nIDENTITY 4: Value TPS2553DBVR sits above the body. The page shows IN through an N-FET and a CS circle to OUT, a 'I LIMIT CONST-I' block and an open-drain FAULT NMOS driven by a 3-input OR, so it reads at once as a current-limited power-distribution switch. Pins on the page are 1 IN, 3 EN (left), 6 OUT, 4 FAULT with overbar (right), 5 ILIM, 2 GND (bottom). This matches DS p5 'TPS2553 SOT-23' (IN 1, GND 2, EN 3, FAULT 4, ILIM 5, OUT 6).",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: The internals match the DS p13 functional block diagram part for part:\n- Comparator minus input comes from the IN node, plus input from the node between the FET and CS. Its output goes to a 4ms box, then a junction that feeds both CHARGE PUMP+DRIVER and the top OR input.\n- CS feeds I LIMIT (top). I LIMIT feeds the driver and a 7.5ms box into the OR.\n- THERMAL feeds the driver and goes straight into the OR without deglitch, as DS p14 §9.3.3 says ('Overtemperature conditions are not deglitched').\n- UVLO is fed from IN. ILIM enters I LIMIT from below. The FET bulk is tied to GND as on p13. FAULT is an open-drain NMOS with its source to GND.\n- The symbol correctly uses active-high EN ('H = ON', p5 'EN = Active High for the TPS2553'), although p13 draws the TPS2552 EN-bar.\n- It uses 7.5 ms (DS p7 EC FAULT deglitch 5/7.5/10 ms) rather than the diagram's '8-ms'. Its 4ms matches p7 (2/4/6 ms) and p13 §9.3.2.\n- The only simplification is that the charge pump and driver are merged into one block.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: No decorative ink; every glyph is backed by the datasheet. The top cluster is dense: bulk-GND stub, comparator inputs and two hop crossings (the CS-to-I LIMIT line over the 4ms-to-driver line, and THERMAL over ILIM). The two-line RILIM note is small, but it stays legible at full size.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "ERGONOMICS 4: IN and OUT share the top row (y=7.62) for a straight left-to-right power path, and EN and FAULT share the next row (y=-2.54). ILIM and GND sit side by side on the bottom, 5.08 mm apart, so RILIM to GND is a short hop. All pin positions are on the 2.54 grid (from the .kicad_sym). The arena page has straight stubs with no crossings. Pin types fit the circuit: IN/GND power_in, OUT power_out, EN input, FAULT open_collector, ILIM passive.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: Every annotation on the page matches the datasheet:\n- '2.5-6.5V': DS p6 ROC VIN 2.5/6.5.\n- 'OUT>IN+135mV': p7 reverse-voltage comparator 95/135/190 mV, and p13 §9.3.2.\n- '4ms' and '7.5ms': p7 and p14.\n- 'RILIM 15k-232k': p5/p6.\n- 'or ILIM=IN: 75mA': p7 'ILIM shorted to IN 50 75 100', and p15.\n- 'H = ON': p5.\n- 'CONST-I' marks the constant-current (non -1, non-latch) version.\nThe OR gate shows all three FAULT causes listed on DS p5/p14.\n\nNON-SYMBOL HARNESS NOTES (not open against the symbol): the QA arena net label on pin 4 renders as '__FAULT_', which is how the harness sanitizes ~{FAULT}; the symbol's own pin name shows a correct overbar. arena.log also warns PAGE-FILL for unit_1 (23% of A5). No suspected prompt injection in any file read. Nothing was written to any repo; only scratch crops in the session scratchpad.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": []
+  }
+ ]
+}

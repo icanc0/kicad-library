@@ -1,0 +1,107 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "tps2553dbvr",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Texas Instruments",
+      "normalized": "texas-instruments"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "TPS2553DBVR",
+      "canonical": "TPS2553DBVR",
+      "comparison_key": "TPS2553DBVR",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C55266"
+      }
+    ],
+    "description": "Central library symbol TPS2553DBVR promoted from an unspecified board."
+  },
+  "names": {
+    "canonical": "TPS2553DBVR",
+    "aliases": [],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/TPS2553DBVR.kicad_sym",
+        "name": "TPS2553DBVR"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/TPS2553DBVR.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "c09081ee7574664b9a47497b256531efaf75772d72243370392306cc5eea6a86",
+      "internal_name": "TPS2553DBVR"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "8c9e1f872c1fb992558b2ed3c93cf5960a0207f9",
+    "source_board": null,
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/TPS2553DBVR.kicad_sym",
+        "evidence": "First-import fit pass: TPS2553DBVR (TI SLVS841F, DBV SOT-23-6, LCSC C55266): pins vision-confirmed on p5 top view + Pin Functions (1 IN, 2 GND, 3 EN active-high, 4 ~FAULT open-drain, 5 ILIM, 6 OUT, no PowerPAD) = symbol c09081ee, the L24 council glyph (internals-maximal + grafts G1-G5; 5 regraders on QA page 8d01f57f); body is the p13 block diagram; gen.py 4d60c276 rebuilds c09081ee in the library-qa sandbox (f-ace50b). Land = stock Package_TO_SOT_SMD:SOT-23-6 f341c73a, which fits DBV0006A p41/p42 with its stock 3D model. SYM-PINSET-MATCH clean, 13/13 pin facts qualified."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "TPS2553DBVR (TI SLVS841F, DBV SOT-23-6, LCSC C55266): pins vision-confirmed on p5 top view + Pin Functions (1 IN, 2 GND, 3 EN active-high, 4 ~FAULT open-drain, 5 ILIM, 6 OUT, no PowerPAD) = symbol c09081ee, the L24 council glyph (internals-maximal + grafts G1-G5; 5 regraders on QA page 8d01f57f); body is the p13 block diagram; gen.py 4d60c276 rebuilds c09081ee in the library-qa sandbox (f-ace50b). Land = stock Package_TO_SOT_SMD:SOT-23-6 f341c73a, which fits DBV0006A p41/p42 with its stock 3D model. SYM-PINSET-MATCH clean, 13/13 pin facts qualified.",
+      "note": "",
+      "pin_gate": {
+        "symbol": "TPS2553DBVR",
+        "lcsc": "C55266",
+        "facts_checked": true,
+        "board_context": null,
+        "state": "clean",
+        "gaps": [],
+        "allow_pin_gaps": null
+      }
+    },
+    "quality": {
+      "state": "council-graded",
+      "symbol_sha256": "c09081ee7574664b9a47497b256531efaf75772d72243370392306cc5eea6a86",
+      "installed_symbol_sha256": "c09081ee7574664b9a47497b256531efaf75772d72243370392306cc5eea6a86",
+      "footprint_sha256": null,
+      "installed_footprint_sha256": null,
+      "quality_receipt": {
+        "path": "quality/tps2553dbvr/symbol-quality.json",
+        "sha256": "8acc688fb87cac8fb74f241567b4b7f6362263eba7f2782a7c7fa6ce3dd89f3d"
+      },
+      "look_receipt": {
+        "path": "quality/tps2553dbvr/symbol-look.json",
+        "sha256": "2173ff2207c4fa47cf7419a7b8abc03bb7bba8de9621359ad0d7a3413992b766"
+      },
+      "arena_manifest": {
+        "path": "quality/tps2553dbvr/arena-manifest.json",
+        "sha256": "25ecf8b4ecb3b1e3ddf9691cd3e94300c4ed11d4fa361e4bcc79ee722b229110"
+      },
+      "arena_manifest_mtime": "2026-10-02T19:30:25+00:00",
+      "arena_manifest_mtime_note": "st_mtime of QA's arena-manifest.json when promoted — the arena render's clock, reset by any cp/checkout; the receipts carry no audit clock and now() is never written",
+      "admission": {
+        "path": "quality/tps2553dbvr/admission.json",
+        "sha256": "b59352386ec97920b5f5f6bbe61f37fb6c1de15226d4ed59625cf123b26af87e"
+      }
+    }
+  }
+}

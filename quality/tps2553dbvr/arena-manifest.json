@@ -1,0 +1,23 @@
+{
+ "schema_version": "library-qa-arena-1",
+ "part_id": "TPS2553DBVR",
+ "symbol_sha256": "c09081ee7574664b9a47497b256531efaf75772d72243370392306cc5eea6a86",
+ "units": [
+  1
+ ],
+ "verdict": "PASS",
+ "build_sha256": "ec57ad54fae7dd1c10871359a1eeb915c31ae0b51ebe7288a135af04227725f2",
+ "sheets": {
+  "unit_1.kicad_sch": "85fd402567819fa8f4588cf6f9b6d240765ae8f43da0106d23cfda4269f0253e"
+ },
+ "pages": [
+  {
+   "unit": 1,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png",
+   "sha256": "8d01f57f24a0a3bddc3da1c6ef0e8a6bdaa43fdec50054730681d60914aca88a",
+   "svg_fingerprint": "c7104fcadfcf1b2a083b064ca8c270b378a3b32e36b773b052401e816b186423",
+   "nonce_sha256": "d024619b6328da6e1d14520ee1d6eec53ca8fea249c9589dfd67fab4235c3147",
+   "background": "#f5f4ef"
+  }
+ ]
+}

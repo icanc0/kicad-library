@@ -1,0 +1,48 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "TPS2553DBVR",
+ "symbol": {
+  "asset_path": "TPS2553DBVR.kicad_sym",
+  "internal_name": "TPS2553DBVR",
+  "sha256": "c09081ee7574664b9a47497b256531efaf75772d72243370392306cc5eea6a86"
+ },
+ "archetype": "identity-topology",
+ "units": [
+  {
+   "unit": 1,
+   "role": "current-limited power-distribution switch (whole part)",
+   "presentation": "identity-topology",
+   "identity_features": [
+    "one N-channel power FET IN->OUT with its bulk to ground (SLVS841F p13): no OUT->IN body diode",
+    "current sense CS on the OUT side feeding a constant-current I LIMIT block set by ILIM (p13, p15)",
+    "reverse-voltage comparator (- IN, + OUT node) with 4 ms deglitch into the driver and FAULT (p7, p14)",
+    "charge pump + driver enabled by EN (active high on TPS2553) and UVLO; thermal shutdown (p13, p14)",
+    "3-input OR (reverse, overcurrent 7.5 ms, thermal) on an open-drain FET to ~{FAULT} (p5, p13)"
+   ]
+  }
+ ],
+ "evidence": {
+  "comparable_ds": {
+   "path": "comparable_ds.json",
+   "sha256": "a7e78ef1de89a7f77eca580871b90d6dfbf0c12556c03922220c1ce7a0c81ed3",
+   "own_sha256": "88e453700cea2b263cdb5b44fce1e883e0f6d3b975457f879ac1423eeea42071",
+   "comparable_count": 4
+  },
+  "pin_truth": {
+   "path": "pin-truth.json",
+   "sha256": "e36f24757b3f1bf37a5d2c8b786f01b04a5b152d85ed499b4e07f60abcd58939",
+   "coverage": "all"
+  }
+ },
+ "generator": {
+  "contract": "python-cli-output-v1",
+  "path": "gen.py",
+  "sha256": "4d60c27662c5048a795231218f976e556e3f848603c1c6f8ec9e36b6249ee6e6",
+  "inputs": [],
+  "expected_symbol_sha256": "c09081ee7574664b9a47497b256531efaf75772d72243370392306cc5eea6a86"
+ },
+ "look": {
+  "receipt_path": "symbol-look.json",
+  "sha256": "2173ff2207c4fa47cf7419a7b8abc03bb7bba8de9621359ad0d7a3413992b766"
+ }
+}
