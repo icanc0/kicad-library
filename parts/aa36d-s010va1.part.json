@@ -1,0 +1,137 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "aa36d-s010va1",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "JAE",
+      "normalized": "jae"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "AA36D-S010VA1",
+      "canonical": "AA36D-S010VA1",
+      "comparison_key": "AA36D-S010VA1",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [],
+    "description": "Central library symbol AA36D-S010VA1 promoted from truedepth-shim."
+  },
+  "names": {
+    "canonical": "AA36D-S010VA1",
+    "aliases": [
+      "Conn_AA36D_S010VA1"
+    ],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/AA36D-S010VA1.kicad_sym",
+        "name": "Conn_AA36D_S010VA1"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/AA36D-S010VA1.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "6b723c65f57f9613b8338a5c55250a4ef2516ea0199b546a8f36a53776771d84",
+      "internal_name": "Conn_AA36D_S010VA1"
+    },
+    {
+      "path": "footprints/central-agent.pretty/JAE_AA36D-S010VA1_2x05_P0.35mm_PowerPin4_Vertical.kicad_mod",
+      "kind": "footprint",
+      "qualification": "unqualified-candidate",
+      "sha256": "8713dcc9261b7983da59467fa8c763f15556f935745c0f1526f62cd715e3c83d",
+      "internal_name": "JAE_AA36D-S010VA1_2x05_P0.35mm_PowerPin4_Vertical"
+    },
+    {
+      "path": "3dmodels/JAE_AA36D-S010VA1_2x05_P0.35mm_PowerPin4_Vertical.step",
+      "kind": "model",
+      "qualification": "unqualified-candidate",
+      "sha256": "3234a2beb15f2794cebf6568d48aa7426d706088df9e1f9b71d30a0136616d7b"
+    }
+  ],
+  "relationships": [
+    {
+      "kind": "declares-footprint",
+      "source_asset": "symbols/AA36D-S010VA1.kicad_sym",
+      "target": {
+        "asset_path": "footprints/central-agent.pretty/JAE_AA36D-S010VA1_2x05_P0.35mm_PowerPin4_Vertical.kicad_mod"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "Promotion supplied this footprint as a candidate; it is not qualified by a symbol-only draft."
+    },
+    {
+      "kind": "declares-model",
+      "source_asset": "footprints/central-agent.pretty/JAE_AA36D-S010VA1_2x05_P0.35mm_PowerPin4_Vertical.kicad_mod",
+      "target": {
+        "asset_path": "3dmodels/JAE_AA36D-S010VA1_2x05_P0.35mm_PowerPin4_Vertical.step"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "Promotion supplied this model as an unqualified candidate."
+    }
+  ],
+  "provenance": {
+    "repository_commit": "b80bebc58bc55f236dec4ec2fb34b857ef3123ef",
+    "source_board": "truedepth-shim",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/AA36D-S010VA1.kicad_sym",
+        "evidence": "First-import fit pass: connector-by-number fit pass (gh#440, D-17 (2)): 16 passive pins = the land's 16 electrical pads (1-14 once, posts 15 and 16 two pads each), SYM-PINSET-MATCH clean; land provenance D-9 (Vincent's hand-drawn symbol and land, iphone-x-shim 82bdf4d, with the D-12 (1) post-pad x +-2.26 and pin-1 silk-tick corrections; designer: owner); his 15 = Apple 820-00863 p42 DENSE post (legs 15+16), 16 = SPARSE post (legs 17+18), 1-14 as Apple (D-11); focused review 2 regraders pass on QA page 7c9d160d (look 4a0fb01c, quality a10d9e64); unit 1 looked at, every number readable; 3D model aligned to his land (D-7, D-12 photo dimensions). J4500 on truedepth-shim."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "connector-by-number fit pass (gh#440, D-17 (2)): 16 passive pins = the land's 16 electrical pads (1-14 once, posts 15 and 16 two pads each), SYM-PINSET-MATCH clean; land provenance D-9 (Vincent's hand-drawn symbol and land, iphone-x-shim 82bdf4d, with the D-12 (1) post-pad x +-2.26 and pin-1 silk-tick corrections; designer: owner); his 15 = Apple 820-00863 p42 DENSE post (legs 15+16), 16 = SPARSE post (legs 17+18), 1-14 as Apple (D-11); focused review 2 regraders pass on QA page 7c9d160d (look 4a0fb01c, quality a10d9e64); unit 1 looked at, every number readable; 3D model aligned to his land (D-7, D-12 photo dimensions). J4500 on truedepth-shim.",
+      "note": "",
+      "pin_gate": {
+        "symbol": "Conn_AA36D_S010VA1",
+        "lcsc": "JAE|AA36D-S010VA1",
+        "facts_checked": false,
+        "source": "connector-by-number",
+        "board_context": null,
+        "state": "clean",
+        "gaps": [],
+        "allow_pin_gaps": null
+      }
+    },
+    "quality": {
+      "state": "council-graded",
+      "symbol_sha256": "937195dd2dbd52f9c5af9c6da8c1160571c32309a68dda574469bc27ec16287d",
+      "installed_symbol_sha256": "6b723c65f57f9613b8338a5c55250a4ef2516ea0199b546a8f36a53776771d84",
+      "footprint_sha256": "32f3c4c1ba48c656e8a8ff1d399d3656d7fb9270f4370ae98eac14821ec19654",
+      "installed_footprint_sha256": "8713dcc9261b7983da59467fa8c763f15556f935745c0f1526f62cd715e3c83d",
+      "quality_receipt": {
+        "path": "quality/aa36d-s010va1/symbol-quality.json",
+        "sha256": "a10d9e6463a7c769f8f3176e16c9b0ce937b24ea761b62d1093d2287075476e3"
+      },
+      "look_receipt": {
+        "path": "quality/aa36d-s010va1/symbol-look.json",
+        "sha256": "4a0fb01ccba81a7a92d760c056a93970c135e1acbe7b344582f980edde66a837"
+      },
+      "arena_manifest": {
+        "path": "quality/aa36d-s010va1/arena-manifest.json",
+        "sha256": "7125fe6acbb75fcae27b2ac23f90258aae5ac06d3fa83e9ae614db7363e1396f"
+      },
+      "arena_manifest_mtime": "2026-10-04T11:46:44+00:00",
+      "arena_manifest_mtime_note": "st_mtime of QA's arena-manifest.json when promoted — the arena render's clock, reset by any cp/checkout; the receipts carry no audit clock and now() is never written",
+      "admission": {
+        "path": "quality/aa36d-s010va1/admission.json",
+        "sha256": "28a2f0af55db265514034b47ded4af31fb5641f35e3e4d8c66aca7a58cc14b30"
+      }
+    }
+  }
+}

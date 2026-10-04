@@ -1,0 +1,310 @@
+(footprint "JAE_AA36D-S010VA1_2x05_P0.35mm_PowerPin4_Vertical"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "Hirose BM24 series connector, BM24-40DP/2-0.35V (https://www.hirose.com/product/en/download_file/key_name/BM24/category/Catalog/doc_file_id/47680/?file_category_id=4&item_id=50&is_series=1)")
+	(tags "connector Hirose  BM24 40pin header")
+	(property "Reference" "REF**"
+		(at 0 -2.81 0)
+		(layer "F.SilkS")
+		(uuid "6084000e-d1c0-4767-9746-ecc5a61f941d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "JAE_AA36D-S010VA1_2x05_P0.35mm_PowerPin4_Vertical"
+		(at 0 2.81 0)
+		(layer "F.Fab")
+		(uuid "d80a2c96-63f1-47b3-9c23-a4f3b0156295")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0349d792-b115-4291-acf8-cd710323e022")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b9f6df82-04f6-47bd-ad15-6085df94a39f")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "35456500-5ab4-4bee-9b19-f4ba7918721f")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -3.2 -0.85)
+		(end -3.2 0.85)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "42a4da72-ee39-4ff9-ae62-2cefcbee6cb4")
+	)
+	(fp_line
+		(start -0.7 1.335)
+		(end -0.7 1.26)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "db35a6dc-f611-429c-a07d-0a96e1ca634a")
+	)
+	(fp_line
+		(start 3.2 -0.85)
+		(end 3.2 0.85)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7519b2df-865a-4025-b07c-24287b28efbd")
+	)
+	(fp_line
+		(start -3.2 -1.2)
+		(end -3.2 1.2)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "eeb063ba-6515-478e-a397-61d9a53861e9")
+	)
+	(fp_line
+		(start -3.2 1.2)
+		(end 3.2 1.2)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "c966a00c-57f3-4d28-9b0a-34aa95a15b6c")
+	)
+	(fp_line
+		(start 3.2 -1.2)
+		(end -3.2 -1.2)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "264fd02d-16a3-4da0-9599-c822cfde9af9")
+	)
+	(fp_line
+		(start 3.2 1.2)
+		(end 3.2 -1.2)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "15ddbcca-964f-41f3-b85a-4c39b842ffec")
+	)
+	(fp_line
+		(start -2.9 -0.9)
+		(end -2.9 0.9)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "391d0204-0764-41fb-a891-6f58ab523503")
+	)
+	(fp_line
+		(start -2.9 -0.9)
+		(end 2.9 -0.9)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "93baa429-caf6-47a6-bfd4-9d2ed1c7a737")
+	)
+	(fp_line
+		(start -2.9 0.9)
+		(end 2.9 0.9)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "cc12661b-01f9-4cc3-8e17-6f34dc8cce1f")
+	)
+	(fp_line
+		(start 2.9 -0.9)
+		(end 2.9 0.9)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e52baeee-dfb4-48aa-b981-b2ab279bf6d1")
+	)
+	(fp_text user "${REFERENCE}"
+		(at -0.005 2.185 0)
+		(layer "F.Fab")
+		(uuid "a18c2752-95a5-4805-8269-d51d264d14a4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -0.7 0.88)
+		(size 0.17 0.44)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "e024fa8e-c955-4f74-98be-3608c20e653b")
+	)
+	(pad "2" smd rect
+		(at -0.7 -0.88)
+		(size 0.17 0.44)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "5f5209a4-b934-4b1b-a08f-d31d188bf086")
+	)
+	(pad "3" smd rect
+		(at -0.35 0.88)
+		(size 0.17 0.44)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "d2bf70f7-ed40-4d2d-9142-de4b31ee4cfc")
+	)
+	(pad "4" smd rect
+		(at -0.35 -0.88)
+		(size 0.17 0.44)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "e89ee022-57f1-483f-b522-0d1ddd5eea78")
+	)
+	(pad "5" smd rect
+		(at 0 0.88)
+		(size 0.17 0.44)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "9916424c-6722-4b88-9274-1bbfda2c94f6")
+	)
+	(pad "6" smd rect
+		(at 0 -0.88)
+		(size 0.17 0.44)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "552cc026-377b-44c5-8791-e6e39ff19aee")
+	)
+	(pad "7" smd rect
+		(at 0.35 0.88)
+		(size 0.17 0.44)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "b1f14295-8b8a-4ea3-9b8c-0b06b2d3ad32")
+	)
+	(pad "8" smd rect
+		(at 0.35 -0.88)
+		(size 0.17 0.44)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "6b7e8f99-ec09-4322-b91d-9bbf39f30f9f")
+	)
+	(pad "9" smd rect
+		(at 0.7 0.88)
+		(size 0.17 0.44)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "c5b79a0e-5f73-48e7-9e16-b2b946f014c7")
+	)
+	(pad "10" smd rect
+		(at 0.7 -0.88)
+		(size 0.17 0.44)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "ee6d8dd4-7669-49b0-8e2d-f71538dcb803")
+	)
+	(pad "11" smd rect
+		(at -1.225 0.88)
+		(size 0.52 0.44)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "9bab21c5-ea14-407f-95fb-4e953311eb61")
+	)
+	(pad "12" smd rect
+		(at -1.225 -0.88)
+		(size 0.52 0.44)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "ac8357e8-7fa5-41ad-85ec-4e23050c5e81")
+	)
+	(pad "13" smd rect
+		(at 1.225 0.88)
+		(size 0.52 0.44)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "81ad0674-18da-4459-abc2-126086a1026f")
+	)
+	(pad "14" smd rect
+		(at 1.225 -0.88)
+		(size 0.52 0.44)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "d0a0ecac-e725-4cbd-a6fd-f7bbda2e3e71")
+	)
+	(pad "15" smd rect
+		(at -2.26 -0.9125)
+		(size 0.7 0.375)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "7052bce7-fc46-4d4c-b8e0-cb94be34c299")
+	)
+	(pad "15" smd rect
+		(at -2.26 0.9125)
+		(size 0.7 0.375)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "12cb9d84-fa6c-40d7-a834-1013b6666a48")
+	)
+	(pad "16" smd rect
+		(at 2.26 -0.9125)
+		(size 0.7 0.375)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "bf194619-df58-4db9-b1bf-75aa183efe02")
+	)
+	(pad "16" smd rect
+		(at 2.26 0.9125)
+		(size 0.7 0.375)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "1bdd7ea7-165c-4187-9d55-299f0d806f5c")
+	)
+	(model "${KIPRJMOD}/../kicad-library/3dmodels/JAE_AA36D-S010VA1_2x05_P0.35mm_PowerPin4_Vertical.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

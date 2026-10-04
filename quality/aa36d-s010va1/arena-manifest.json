@@ -1,0 +1,23 @@
+{
+ "schema_version": "library-qa-arena-1",
+ "part_id": "AA36D-S010VA1",
+ "symbol_sha256": "937195dd2dbd52f9c5af9c6da8c1160571c32309a68dda574469bc27ec16287d",
+ "units": [
+  1
+ ],
+ "verdict": "PASS",
+ "build_sha256": "4536af7fe74e3df484c897a912542ba03b8df7d88196177dbfc1e9378129bdf8",
+ "sheets": {
+  "unit_1.kicad_sch": "27c8c1289b52e2198989dea8efab3ffd5bd8dea1cbaddccca56fb80cb3e4d83b"
+ },
+ "pages": [
+  {
+   "unit": 1,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png",
+   "sha256": "7c9d160d110ec9371ae71d7a31574b921f1c792a245d2cd4059fde97e5383ce1",
+   "svg_fingerprint": "6f7c0c34ad8c40fceca3503d4dcb3f9dcc616968c747e07efd1ea1d67a4f3dad",
+   "nonce_sha256": "1b965ec03c15a3f18aaff3d4c3ec055f21314ffd1b4391cd22fc8dce0ced96e8",
+   "background": "#f5f4ef"
+  }
+ ]
+}

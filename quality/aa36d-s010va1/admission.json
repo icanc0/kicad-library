@@ -1,0 +1,35 @@
+{
+ "admitted_by": {
+  "agent": "library-inspector-3bd738",
+  "role": "library-inspector"
+ },
+ "author": {
+  "agent": "symbol-maker-8ad793",
+  "board": "truedepth-shim"
+ },
+ "candidate_footprint_sha256": "32f3c4c1ba48c656e8a8ff1d399d3656d7fb9270f4370ae98eac14821ec19654",
+ "candidate_symbol_sha256": "937195dd2dbd52f9c5af9c6da8c1160571c32309a68dda574469bc27ec16287d",
+ "decisions": {
+  "files": [],
+  "mode": "report"
+ },
+ "footprint_sha256": "8713dcc9261b7983da59467fa8c763f15556f935745c0f1526f62cd715e3c83d",
+ "guide": {
+  "bind": "/guide",
+  "commit": "fe4de2590c94abe684b395334e03dc8335308233",
+  "dirty": false
+ },
+ "part_id": "aa36d-s010va1",
+ "pinset": {
+  "manufacturer": "JAE",
+  "mpn": "AA36D-S010VA1",
+  "provenance": {
+   "decision": "D-9"
+  },
+  "result": "clean",
+  "rule": "SYM-PINSET-MATCH",
+  "source": "connector-by-number"
+ },
+ "schema": "kicad-agent-guide/admission@1",
+ "symbol_sha256": "6b723c65f57f9613b8338a5c55250a4ef2516ea0199b546a8f36a53776771d84"
+}
