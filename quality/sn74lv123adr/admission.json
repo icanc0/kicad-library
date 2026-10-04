@@ -1,0 +1,34 @@
+{
+ "admitted_by": {
+  "agent": "library-inspector-952289",
+  "role": "library-inspector"
+ },
+ "author": {
+  "agent": "symbol-maker-3b6cd9",
+  "board": "truedepth-shim"
+ },
+ "candidate_symbol_sha256": "9e4e243ab9979cd369edc8e2ce1140fdbfe182c66c9e697171ebce775af0f547",
+ "decisions": {
+  "files": [],
+  "mode": "report"
+ },
+ "footprint_sha256": null,
+ "guide": {
+  "bind": "/guide",
+  "commit": "73a461c0fd2ec2bf61b0394581d4ef9690f4be4f",
+  "dirty": false
+ },
+ "land": {
+  "footprint": "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm",
+  "kind": "stock",
+  "sha256": "f9b5075740f7816c540ae1137f025d659beaec522ed7b86b1a5274cc9a2d8a25"
+ },
+ "part_id": "sn74lv123adr",
+ "pinset": {
+  "lcsc": "C134010",
+  "result": "clean",
+  "rule": "SYM-PINSET-MATCH"
+ },
+ "schema": "kicad-agent-guide/admission@1",
+ "symbol_sha256": "9e4e243ab9979cd369edc8e2ce1140fdbfe182c66c9e697171ebce775af0f547"
+}

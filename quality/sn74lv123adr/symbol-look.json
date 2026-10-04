@@ -1,0 +1,1185 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "SN74LV123ADR",
+ "symbol_sha256": "9e4e243ab9979cd369edc8e2ce1140fdbfe182c66c9e697171ebce775af0f547",
+ "units": [
+  1,
+  2,
+  3
+ ],
+ "designs": [
+  {
+   "id": "design-flow-first",
+   "designer_id": "designer-flow-first-sn74lv123a",
+   "stance": "flow-first",
+   "symbol_path": "council/flow-first/SN74LV123A.kicad_sym",
+   "symbol_sha256": "68a7f9bfea61e0c5348471c445881c1a3c504913f2a3626e484ef16f609e29c1",
+   "renders": [
+    {
+     "id": "design:flow-first:u1",
+     "unit": 1,
+     "path": "council/flow-first/SN74LV123A_unit1.png",
+     "sha256": "9f4562b93409da2ded25be8038ff32fd8f11aa6f3cd2ad2b2e51f99fb5d3ee66",
+     "background": "#ffffff",
+     "symbol_sha256": "68a7f9bfea61e0c5348471c445881c1a3c504913f2a3626e484ef16f609e29c1"
+    },
+    {
+     "id": "design:flow-first:u2",
+     "unit": 2,
+     "path": "council/flow-first/SN74LV123A_unit2.png",
+     "sha256": "0701fcd572c88b43ffc0994dc2abbaec98f2b91abcb875f277e59d865d1136fb",
+     "background": "#ffffff",
+     "symbol_sha256": "68a7f9bfea61e0c5348471c445881c1a3c504913f2a3626e484ef16f609e29c1"
+    },
+    {
+     "id": "design:flow-first:u3",
+     "unit": 3,
+     "path": "council/flow-first/SN74LV123A_unit3.png",
+     "sha256": "480b572222fff129097a91cbdc1e503026de895202e59a982951cc37d784c5cc",
+     "background": "#ffffff",
+     "symbol_sha256": "68a7f9bfea61e0c5348471c445881c1a3c504913f2a3626e484ef16f609e29c1"
+    }
+   ]
+  },
+  {
+   "id": "design-annotation-rich",
+   "designer_id": "designer-annotation-rich-sn74lv123a",
+   "stance": "annotation-rich",
+   "symbol_path": "council/annotation-rich/SN74LV123A.kicad_sym",
+   "symbol_sha256": "40ee3dd45d5df8f8318f8d9a0ce0921aafb86a0d1d3fccc20696c0df2d48e945",
+   "renders": [
+    {
+     "id": "design:annotation-rich:u1",
+     "unit": 1,
+     "path": "council/annotation-rich/SN74LV123A_unit1.png",
+     "sha256": "14c2a0c468631359a363c993d0cbccdf0c2cdb8a124c984a93b63f5dcc342672",
+     "background": "#ffffff",
+     "symbol_sha256": "40ee3dd45d5df8f8318f8d9a0ce0921aafb86a0d1d3fccc20696c0df2d48e945"
+    },
+    {
+     "id": "design:annotation-rich:u2",
+     "unit": 2,
+     "path": "council/annotation-rich/SN74LV123A_unit2.png",
+     "sha256": "088301dd652faf674de4841f49ab05da9cd75eb31b029f01742d75db8ed3d972",
+     "background": "#ffffff",
+     "symbol_sha256": "40ee3dd45d5df8f8318f8d9a0ce0921aafb86a0d1d3fccc20696c0df2d48e945"
+    },
+    {
+     "id": "design:annotation-rich:u3",
+     "unit": 3,
+     "path": "council/annotation-rich/SN74LV123A_unit3.png",
+     "sha256": "5a9f8673336534d72bace81a6eed9cc80350d27e0b2bbe7719533008c830dbb0",
+     "background": "#ffffff",
+     "symbol_sha256": "40ee3dd45d5df8f8318f8d9a0ce0921aafb86a0d1d3fccc20696c0df2d48e945"
+    }
+   ]
+  },
+  {
+   "id": "design-internals-maximal",
+   "designer_id": "designer-internals-maximal-sn74lv123a",
+   "stance": "internals-maximal",
+   "symbol_path": "council/internals-maximal/SN74LV123A.kicad_sym",
+   "symbol_sha256": "95bbc12bc624e044346072b6ea4b5cfa022f310d90bab4866c7d824b9a7ef167",
+   "renders": [
+    {
+     "id": "design:internals-maximal:u1",
+     "unit": 1,
+     "path": "council/internals-maximal/SN74LV123A_unit1.png",
+     "sha256": "c38f284efa50a8f4f0420b99b8feb358fca464008f9356215cf95bb66aa01638",
+     "background": "#ffffff",
+     "symbol_sha256": "95bbc12bc624e044346072b6ea4b5cfa022f310d90bab4866c7d824b9a7ef167"
+    },
+    {
+     "id": "design:internals-maximal:u2",
+     "unit": 2,
+     "path": "council/internals-maximal/SN74LV123A_unit2.png",
+     "sha256": "58662e2f8219528074476c44f51c8b48a4589865756372f31a9fee23ce91e27d",
+     "background": "#ffffff",
+     "symbol_sha256": "95bbc12bc624e044346072b6ea4b5cfa022f310d90bab4866c7d824b9a7ef167"
+    },
+    {
+     "id": "design:internals-maximal:u3",
+     "unit": 3,
+     "path": "council/internals-maximal/SN74LV123A_unit3.png",
+     "sha256": "4e60361e7c644b9cf8b1d4cb0b81c9696c37a419af67cb4112a5ba1b2a6c45f8",
+     "background": "#ffffff",
+     "symbol_sha256": "95bbc12bc624e044346072b6ea4b5cfa022f310d90bab4866c7d824b9a7ef167"
+    }
+   ]
+  }
+ ],
+ "judges": [
+  {
+   "reviewer_id": "judge-1",
+   "design_id": "design-flow-first",
+   "seen_units": [
+    1,
+    2,
+    3
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "Figure 6 plus an IEC pulse-with-tw mark in the one-shot, and 'tw = K\u00b7RT\u00b7CT' / 'K = 1.0 for CT \u2265 1000 pF'. The K = 1.0 is TI-LV123A-specific (trap row 7). 'Retriggerable' appears only through the IEC mark convention, so readers will not see the 123-vs-221 identity.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "16/16 pin contract matches. Figure 6 topology, bubbles and CLR fork are right, and the K law matches p15 Eq 1. Deviation the designer recorded: Rext/Cext and Cext leave the one-shot's RIGHT edge next to Q/Q-bar, so they read as block outputs. Figure 6 draws them leaving the top.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "Smallest channel body: 43.18 x 17.78 mm (768 mm^2), carrying Figure 6 plus the timing law with no decorative ink. Minor: the formula is split across opposite corners (tw top-right, K bottom-left), and the hysteresis polyline doubles back and is cramped at 1:1.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "Inputs at 5.08 mm leave room for the GND/VCC tie glyphs on A and CLR, and B, the AND and the trigger run in one straight row. But 15/14 and 13/4 sit at 2.54 mm, which guide docs/02 says stacks hung labels and can silently merge nets. The board hangs ARM and ARM-bar on U13B pins 5/12.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "tw law, K and the pulse-with-tw make the timing readable. It lacks the trigger methods (Table 1), the 'clears / cuts tw short' note, the RT-to-VCC hookup and an explicit retrigger note.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "judge-1",
+   "design_id": "design-annotation-rich",
+   "seen_units": [
+    1,
+    2,
+    3
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Figure 6, 'retriggerable' (separates it from the same-pinout 74LS221; load-bearing for the U13B watchdog), tw = K\u00b7RT\u00b7CT with K = 1.0 (separates TI from the HC/Nexperia K of 0.45-0.55) and Table 1. Unmistakably the TI SN74LV123A.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Table 1 checked cell by cell against the p13 render: six rows, header overbars on CLR and A, arrows, and pulse glyphs for Q and Q-bar, all exact. Figure 6 ink is complete, including the timing leads off the block top. The Q-bar low-pulse mark sits outside the bubble, on the pin side, so there is no double negation. 'RT to VCC' matches p3, 'clears; cuts tw short' matches p3 pin 3/11 line 2, the K law matches p15, and none of the p3 trigger-condition wording is used. Nit: the 'retriggerable' bracket also covers row 6 (CLR rising), which always starts a fresh pulse.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "Channel body 43.18 x 30.48 mm (1316 mm^2): 1.7x flow-first and 1.5x internals-maximal. The Table 1 block fills the lower ~15 mm of the body, where there are no pins. The power unit is 25.4 mm wide for 2 pins (others 15.24), and its refdes floats about 16.5 mm above the body. Every item is datasheet-backed, but the sheet cost is high.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "Inputs and Q/Q-bar at 5.08 mm, so ARM and ARM-bar labels are safe. 15/14 at 2.54 mm takes the RT/CT directly. The B row equals the Q row. But all 7 pins sit in the top 60% of a 30.48 mm-tall body, so the pinless table skirt pushes neighbouring parts away on the sheet.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "The three trigger methods, the overriding clear and pulse cut, retriggering, the tw law with its K validity range, the RT-to-VCC hookup and the output waveforms are all on the glyph; nothing needs the datasheet to wire U13A or U13B.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "judge-1",
+   "design_id": "design-internals-maximal",
+   "seen_units": [
+    1,
+    2,
+    3
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "unit1/unit2 renders: Value + title SN74LV123A, full p12 Figure 6 chain, one-shot with an edge triangle and Q/Q-bar pulse marks, so it reads as a monostable. Nothing on the body separates it from 74HC123 or 74LS221, which share the pinout: no K = 1.0 and no 'retriggerable' (packet trap row 7).",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "16/16 (unit, number, name, etype) match the packet. All pin shapes are 'line'. Figure 6 is drawn faithfully: A-bubble Schmitt, B and CLR Schmitts, 3-input AND, CLR fork to the AND and to the R bubble, Rext/Cext and Cext leaving the block top then turning right (Figure 6 order). The edge triangle is backed by p3 'edge-triggered'. Nit: the low-pulse mark for Q-bar is drawn inside the block, before the output bubble. Read strictly, that is a low pulse inverted, i.e. a high pulse on pin 4/12, but Table 1 gives Q-bar a low pulse.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "38.10 x 22.86 mm channel body (871 mm^2). All ink is Figure 6 or Table 1. The body has empty bands above 1A and below 1CLR, and carries less information per mm^2 than flow-first.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "Triggers on the left in Figure 6 order with CLR set apart, outputs on the right, timing pair adjacent at top right. B, the AND and the trigger share one row. Every adjacent pin is at least 3.81 mm apart, the pitch guide docs/02 recommends against stacked hung labels; U13B hangs ARM and ARM-bar on Q/Q-bar, which sit 3.81 apart here. All pins are on the 1.27 grid and units 1 and 2 are geometrically identical.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "Shows the topology, both CLR roles, Schmitt inputs, edge trigger and output pulses. It has no tw law, no RT-to-VCC hint, no trigger-method rows and no retrigger note, so sizing RT/CT or reading the U13B watchdog needs the datasheet.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "minor",
+     "summary": "internals-maximal (minor, notation): the low-pulse mark for 1Q-bar/2Q-bar is drawn inside the one-shot block, before the output bubble. Read strictly, a low pulse then inversion means a high pulse on pins 4/12, but p13 Table 1 and p12 Figure 7 give Q-bar a low pulse. Fix: move the mark outside the bubble (as annotation-rich does) or drop it.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "internals-maximal/ has no stance or design json: no LOOK notes, no recorded symbol or render hashes. The receipt needs them if it is selected or grafted from.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-2",
+   "design_id": "design-flow-first",
+   "seen_units": [
+    1,
+    2,
+    3
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Value SN74LV123A, the Figure 6 gate topology, a one-shot carrying a pulse mark labelled tw, plus 'tw = K*RT*CT' and 'K = 1.0 for CT >= 1000 pF' on units 1 and 2. That is TI's p15 timing law, which separates this part from the HC and Nexperia 74LV123 parts (K 0.45-0.55, trap row 7). The function reads at a glance from the smallest body of the three.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "The Figure 6 topology is right: A input bubble, Schmitt marks on A, B and CLR only, a 3-input AND, the CLR fork to the AND and the R bubble, and the Q-bar output bubble. The single internal high-pulse mark is correct IEC usage. 'K = 1.0 for CT >= 1000 pF' matches p15 ('If CT is >=1000 pF and K = 1.0'). Defect: the Rext/Cext and Cext leads leave the one-shot's right edge next to Q and Q-bar, while p12 draws them off the top edge. The other two designs keep the top exit inside the body under the same engine limit. Here the timing pins read as block outputs. Retriggerability rests only on the IEC plain-pulse convention. Pin contract is clean (exact names, 7/15 full, non-mirrored outputs, passive timing pins). I re-rendered the current .kicad_sym and it is pixel-identical to the submitted PNGs.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "Smallest channel body: 43.18 x 17.78 mm = 768 mm2, against 871 for internals-maximal and 1316 for annotation-rich. There is one pulse mark and two short captions, all backed by p15, and nothing redundant beyond the shared bold title.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "Inputs sit at 5.08 mm pitch, leaving room for the board's GND tie on A and VCC tie on CLR, and the B -> AND -> trigger path is one straight row. CLR is on the left. Defect: Q/Q-bar (13/4 and 5/12) and Rext/Cext/Cext (15/14 and 7/6) are at 2.54 mm pitch. docs/02-symbols.md:46 says that pitch stacks hung labels and can merge nets, and U13B hangs ARM and ARM-bar on exactly that Q/Q-bar pair (architecture.md:289). CT across 2.54 mm stubs also needs a jog.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "Shows trigger gating, A polarity, both CLR roles via the fork and R bubble, and the timing law. Not shown: the trigger edge on the one-shot input, RT-to-VCC, and retriggerability in words, which the U13B watchdog depends on.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "judge-2",
+   "design_id": "design-annotation-rich",
+   "seen_units": [
+    1,
+    2,
+    3
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Value SN74LV123A, Figure 6 topology, 'tw = K*RT*CT / K = 1.0 for / CT >= 1000 pF' inside the one-shot, Table 1 and 'retriggerable'. On units 1 and 2 it is unmistakably TI's LV123A monostable.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Figure 6 is exact, including the timing leads leaving the block top (Rext/Cext left and higher, Cext right). Table 1 matches p13 cell for cell: header CLR, A-bar, B, Q, Q-bar; rows L X X L H / X H X L H / X X L L H / H L up / H down H / up L H, with pulse glyphs. 'RT to VCC' follows p3. The formula follows p15. The Q-bar low pulse sits outside, after the bubble, so it reads unambiguously. No p3 trigger-condition wording appears (trap row 3). Pin contract is clean.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "Every element is datasheet-backed, but Table 1 spells out in letters what the A-bubble/AND/CLR-fork already draws, so one function is encoded twice on the same glyph. The channel body grows to 43.18 x 30.48 mm (1.7x flow-first, about 4x the stock 74HC123 unit), duplicated on both channels, with 68 text items at 1.0 mm. Unit 3 is 25.4 mm wide for two pins, and its Reference/Value sit at y 21.59/19.05 against a body top of 5.08, floating about 15 mm above it in the render.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "Inputs at 5.08 mm, Q/Q-bar at 5.08 mm (safe for ARM and ARM-bar labels), CLR on the left, RT straight up from pin 15. Timing pins 15/14 are at 2.54 mm. All pins crowd the top half, so the bottom of the 30.48 mm body is pin-free sheet area that blocks nearby placement.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "Readable from the glyph: all three trigger methods (Table 1 rows 4-6), the inhibits (rows 2-3), the CLR=L row tagged 'clears; cuts tw short' (both CLR roles, trap row 4), 'retriggerable' (needed for the U13B watchdog), RT to VCC, the tw law and both output pulse polarities.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "judge-2",
+   "design_id": "design-internals-maximal",
+   "seen_units": [
+    1,
+    2,
+    3
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "Units 1 and 2 show Value SN74LV123A and the p12 Figure 6 topology: three Schmitt buffers, a 3-input AND and an R-bubble one-shot with high- and low-pulse marks, so it reads as a monostable. Nothing on the glyph carries TI's timing law (no tw = K*RT*CT, no K = 1.0) and there is no retrigger cue. Telling it apart from HC or Nexperia parts (trap row 7) rests on the Value alone; K appears only in the hidden Description.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "Figure 6 is drawn faithfully: bubble at the A buffer input, CLR fork with a junction dot to both the AND and the R bubble, and the Q-bar output bubble. The timing leads leave the block top with Rext/Cext on the left and higher and Cext on the right, as p12 draws them. The edge-trigger triangle is correct (Table 1 rows 4-6). Defect: the low-pulse glyph sits inside the block just before the Q-bar output bubble (unit 1/2 lower right, row y=-7.62). Strictly that reads as an internal low pulse inverted to a high pulse at the pin, against Figure 7's low pulse on Q-bar. It is the same double-negation class as trap row 5. Pin contract is clean: 16 exact p3 names, 7/15 = 2Rext/Cext and 1Rext/Cext, outputs 13/4 and 5/12 not mirrored, passive timing pins, line shapes, ki_locked.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "No ink lacks datasheet backing. The body is 38.1 x 22.86 mm with dead space in the upper-left quadrant and in the 7.62 mm band between B and CLR. The bold title duplicates the Value in the export (all three designs share this; docs/02-symbols.md:93 hides it on a sheet).",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "Every adjacent pin pair is at least 3.81 mm apart (A-B, 15-14, 13-4), the pitch docs/02-symbols.md:46 recommends, and every pin is on the 1.27 mm grid. A GND tie on A (board U13A/B) fits above B's wire. CLR sits on the left, set apart, ready for the VCC tie. RT runs up from pin 15 (top right) and CT spans adjacent 15/14. Q and Q-bar are both reachable on the right (U13B uses ARM and ARM-bar). Unit 3 is compact at 15.24 x 10.16 mm, but VCC is on the left edge, not the top; all three designs share that engine limit.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "The trigger gate, A polarity, both CLR roles (fork to the AND for the trigger, to R for the clear), edge triggering and Q/Q-bar pulse polarity are all readable. Retriggerability, the tw law and the RT-to-VCC hookup are absent, so the U13B watchdog's dependence on retriggering (trap row 11) cannot be read from the glyph.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "judge-3",
+   "design_id": "design-flow-first",
+   "seen_units": [
+    1,
+    2,
+    3
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Value SN74LV123A on every unit. Figure 6 topology. An IEC monostable pulse labelled tw sits inside the one-shot block. 'tw = K\u00b7RT\u00b7CT' and 'K = 1.0 for CT \u2265 1000 pF' carry the TI-specific timing law (p15), which is exactly what separates this part from a 74HC123 (packet trap row 7).",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "All Figure 6 elements are present: input bubble and Schmitt mark on A (hysteresis loops readable in close-up), Schmitt on B and CLR, a 3-input AND, the CLR junction fork to the AND and to the R bubble, and Q-bar through the output bubble after an internal high pulse (correct by IEC rules). The formula matches p15 exactly and needs no units, since K = 1 holds in any coherent units (k\u03a9 x pF = ns). Minor reduction: the Rext/Cext and Cext leads leave the block's RIGHT edge (1Rext/Cext stub only about 1.7 mm, x 7.62 to 9.31) instead of its top as in Figure 6. Order and adjacency are kept and the electrical meaning is unchanged.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "Most compact functional body: 43.18 x 17.78 mm (about 768 mm\u00b2 against 871 mm\u00b2 for internals-maximal and 1316 mm\u00b2 for annotation-rich) for the same 7 pins. Every mark is backed by Figure 6 or p15. One pulse glyph serves both outputs.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "All 7 channel pins share one 50-mil phase (x = +/-26.67; y = 6.35/1.27/-3.81 left, 3.81/1.27/-3.81/-6.35 right), so an offset anchor puts every pin on 100 mil. Inputs at 5.08 pitch leave room for the U13A/U13B ties (A to GND, CLR to VCC). B, the AND output and the trigger share one straight row. The timing pair is adjacent (2.54 mm) at the top of the right edge, so RT runs straight up to VCC. Q/Q-bar are adjacent and equally reachable, as U13B needs both (ARM/ARM-bar). Unit 3 pins are on the 100-mil grid.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "Shows the trigger topology, CLR's two roles, the one-shot with its tw pulse, and the timing law. It is split, though: 'tw = K\u00b7RT\u00b7CT' sits top-right and its condition 'K = 1.0 for CT \u2265 1000 pF' sits bottom-left, about 2 cm apart. Retriggerable is shown only by the IEC bare-pulse convention, which most readers will not recognise, and there is no RT-to-VCC hookup note.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "judge-3",
+   "design_id": "design-annotation-rich",
+   "seen_units": [
+    1,
+    2,
+    3
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Value SN74LV123A; Figure 6 topology; the tw law with K = 1.0 inside the one-shot; Table 1; the word 'retriggerable'. The part's identity and its separation from the HC123 are unambiguous.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Figure 6 is complete, including the Rext/Cext and Cext leads leaving the one-shot TOP in Figure 6 order. I checked Table 1 against the rendered p13 table: the headers (CLR-bar, A-bar, B, Q, Q-bar), all 6 rows, the arrows and the pulse glyphs match exactly. The Q-bar low pulse is drawn outside the block, after the bubble (correct by IEC rules). 'RT to VCC' (p3, p15 Fig 9), 'clears; cuts tw short' (p3 line 2, p12) and the tw law (p15) are all backed. Nit, not a contradiction: the 'retriggerable' bracket also covers row 6 (CLR rising). Re-triggering through CLR needs CLR to go low first, which clears the output (row 1), and p12 Figure 7 shows retriggering only through A. The bracket belongs on rows 4-5.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "Each channel body is 43.18 x 30.48 mm (about 1316 mm\u00b2, 1.7x flow-first) for 7 pins, and the lower 15 mm of the body is pinless table. Table 1 (30 cells, headers, rule, two notes, bracket) restates what the inked AND gate and R bubble already encode (rows 1-6). Table text is 1.0 mm, small at sheet zoom. Unit 3 is 25.4 mm wide for 2 pins. Below the bar.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "Pin placement is good. y is on the 100-mil grid and x = +/-26.67 for every pin, so one anchor offset grid-aligns the unit. Inputs are at 5.08 pitch; the timing pair is adjacent (2.54) at the top of the right edge; outputs are 5.08 apart. Deductions: half of each channel body is pinless, so nets below the unit must detour around it. Unit 3's Reference floats about 16.5 mm above its body (the shared field is anchored at y = 21.59 against a body top of 5.08), the largest gap of the three designs.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "Every load-bearing behaviour is on the glyph: the three trigger methods (Table 1 rows 4-6 plus the gate), the inhibits (rows 2-3), clear that cuts tw short, retriggerable, tw = K\u00b7RT\u00b7CT with K = 1.0 for CT \u2265 1000 pF, the RT-to-VCC hookup and both output pulse polarities. That covers the U13A hold-off and the U13B retrigger watchdog.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "judge-3",
+   "design_id": "design-internals-maximal",
+   "seen_units": [
+    1,
+    2,
+    3
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "Every unit shows Value SN74LV123A. The channel units copy the p12 Figure 6 logic diagram element by element, so the part reads as a TI dual one-shot. But nothing on the glyph carries the TI timing law (K = 1.0), which packet trap row 7 names as the property that separates this part from the HC123 and Nexperia LV123 (K = 0.45-0.55).",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "Figure 6 is complete and in order. Bubble at the A buffer input; Schmitt marks on A, B and CLR only; one 3-input AND; CLR junction dot forks to the AND and to the R bubble; Rext/Cext and Cext leave the one-shot top, Rext/Cext first; Q-bar exits through the output bubble. The added edge indicator on the trigger input is backed by p1 'Edge Triggered'. Deduction: the Q-bar port draws the Table 1 low pulse INSIDE the block (x 6.5-8.5 mm, y -7.62) and then the output bubble (center x 10.025). Read strictly by IEC rules that is a double negation, so the outside signal would be a HIGH pulse, which contradicts p13 Table 1. annotation-rich puts the low pulse after the bubble.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Channel body 38.1 x 22.86 mm. Every mark comes from Figure 6, Table 1 or p1; nothing is decorative. The 150-mil row pitch (gen.py PITCH = 3.81) and two pulse glyphs add some area and ink compared with flow-first's single block pulse.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "Inputs sit on the left in A, B, CLR order with CLR on the left edge (the board ties it to VCC). The timing pair is adjacent at the top of the right edge, with Q above Q-bar. Borderline: PITCH = 3.81 mixes 100-mil phases within one unit (A at y = 3.81 but B at 0; pins 15/13 at +/-3.81 but 14/4 at +/-7.62; x = +/-24.13), so the pins cannot all land on a 100-mil grid together. Pins 1 and 2 are only 3.81 mm apart, which leaves little room for the GND tie on A above the B wire. In unit 3, VCC at y = 1.27 and GND at x = 0 are also on different phases. Everything still connects on KiCad's default 50-mil grid, and the engine allows GRID = 1.27.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "The structure shows the three trigger methods and both CLR roles (fork to the AND plus the R bubble), and the pulse glyphs show output polarity. Nothing shows the tw = K x RT x CT law, the RT-to-VCC / CT hookup (p3, p15 Figure 9) or that the part is retriggerable (p1, p12).",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "This directory has no stance/design receipt: no LOOK notes, no symbol or render hashes, no gate results. Under SKILL section 4 a blank LOOK note blocks handoff if this design or its grafts are selected.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   ]
+  }
+ ],
+ "selection": {
+  "winner_design_id": "design-flow-first",
+  "grafts": [
+   {
+    "id": "G1",
+    "from": "annotation-rich (also internals-maximal)",
+    "axis": "silicon_faithfulness",
+    "closes": "flow-first's timing leads leave the one-shot's right edge and read as block outputs (judges 1, 2, 3)",
+    "change": "Rext/Cext and Cext leave the one-shot TOP edge (x 1.27 and 3.81), Rext/Cext left and rising higher, then turn right to pins 15/14 (7/6), as p12 Figure 6 draws them. The pins stay at the top of the right edge (the emitter has no top edge)."
+   },
+   {
+    "id": "G2",
+    "from": "annotation-rich (Q/Q-bar at 5.08); judge 1 graft offer, judge 2 graft (2)",
+    "axis": "wiring_ergonomics",
+    "closes": "Q/Q-bar 2.54 apart, where U13B hangs ARM and ARM-bar labels (docs/02-symbols.md:46; judges 1, 2)",
+    "change": "Q and Q-bar sit 5.08 apart (a blank 2.54 row between them), wider than the 3.81 docs/02 asks; every channel pin keeps one 50-mil phase (x +/-26.67; y 6.35, 3.81, 1.27, -1.27, -3.81, -6.35), which answers judge 3's objection to internals-maximal's 3.81 rows. Dropping the right-group caption row (G5) lets Rext/Cext take the top row, so the body stays 17.78 tall."
+   },
+   {
+    "id": "G3",
+    "from": "annotation-rich",
+    "axis": "expressibility",
+    "closes": "no RT-to-VCC hookup on the glyph (judges 1, 2, 3)",
+    "change": "'RT to VCC' over the Rext/Cext lead (p3 'an external resistor connected between Rext/Cext and VCC'; p15 Figure 9); it ends about 1.2 mm left of the 1Rext/Cext name."
+   },
+   {
+    "id": "G4",
+    "from": "annotation-rich",
+    "axis": "identity_read, expressibility",
+    "closes": "retriggerability only through the IEC bare-pulse convention (judges 1, 2, 3); U13B watchdog relies on it",
+    "change": "'retriggerable' inside the one-shot, midway between the R and Q-bar rows and clear of both port labels (p1 'Retriggerable for Very Long Output Pulses'; p12 'retriggerable for very long output pulses up to 100% duty cycle'). No Table 1 bracket, so judge 3's row-6 nit cannot arise."
+   },
+   {
+    "id": "G5",
+    "from": "judge 3 graft 3 (annotation-rich's joined law); judge 1 economy note",
+    "axis": "expressibility, economy",
+    "closes": "'tw = K\u00b7RT\u00b7CT' top-right and 'K = 1.0 for CT \u2265 1000 pF' bottom-left, 2 cm apart",
+    "change": "the two lines form one caption right-aligned against the one-shot's lower-left, under the CLR line (p15 Eq 1); the right-group caption that held 'tw = K\u00b7RT\u00b7CT' is gone."
+   },
+   {
+    "id": "G6",
+    "from": "internals-maximal",
+    "axis": "silicon_faithfulness, expressibility",
+    "closes": "no trigger-edge mark on the one-shot input (judge 2 flow-first expressibility)",
+    "change": "dynamic-input triangle at the one-shot edge on the B row (p1 'Edge Triggered'; p3 'edge-triggered multivibrators'; Table 1 rows 4-6)."
+   },
+   {
+    "id": "G7",
+    "from": "annotation-rich",
+    "axis": "economy (legibility)",
+    "closes": "flow-first's hysteresis polyline doubles back and is cramped at 1:1 (judge 1)",
+    "change": "input buffers 3.81 x 3.048 mm (were 3.81 x 2.032) with the open two-stroke hysteresis loop (low tail left, high tail right) on A, B and CLR only (p1 Schmitt on A, B and CLR)."
+   }
+  ],
+  "final_symbol_sha256": "9e4e243ab9979cd369edc8e2ce1140fdbfe182c66c9e697171ebce775af0f547"
+ },
+ "final_renders": [
+  {
+   "id": "qa:u1",
+   "unit": 1,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png",
+   "sha256": "599974d43c70c0b84806fbb7026aaf1dbec9102e934656d799860956eb4ae6e2",
+   "background": "#f5f4ef",
+   "symbol_sha256": "9e4e243ab9979cd369edc8e2ce1140fdbfe182c66c9e697171ebce775af0f547",
+   "nonce": "LOOK-NKDG3TJCQYA7",
+   "nonce_sha256": "f83f520ca30eb88ebc4fa233877f5841660815a045584f93b39510fc47ccdcd8"
+  },
+  {
+   "id": "qa:u2",
+   "unit": 2,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U2-box1.png",
+   "sha256": "db37f7d1ca01da54564d87c136edcfeddcf153d7c825b9073ca48ab1aa53d66f",
+   "background": "#f5f4ef",
+   "symbol_sha256": "9e4e243ab9979cd369edc8e2ce1140fdbfe182c66c9e697171ebce775af0f547",
+   "nonce": "LOOK-AJNEN3KTWHLN",
+   "nonce_sha256": "98390774bab55155f8301d4faaddfc37b17cfb8ed49941769f6f6d7302b237c1"
+  },
+  {
+   "id": "qa:u3",
+   "unit": 3,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U3-box1.png",
+   "sha256": "ff909866960821c6a3b039267ca18d6b2b9e152322f9d69bcba6ffeb7b06284b",
+   "background": "#f5f4ef",
+   "symbol_sha256": "9e4e243ab9979cd369edc8e2ce1140fdbfe182c66c9e697171ebce775af0f547",
+   "nonce": "LOOK-NNHLNYRWWKN9",
+   "nonce_sha256": "5c1812243845a2228d2dd642afbf841dbe0f556a0e77137362053f684cb662a9"
+  }
+ ],
+ "regraders": [
+  {
+   "reviewer_id": "look-regrader-SN74LV123ADR-1",
+   "seen_units": [
+    1,
+    2,
+    3
+   ],
+   "render_ids": [
+    "qa:u1",
+    "qa:u2",
+    "qa:u3"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: every unit carries the bold title SN74LV123A. Units 1 and 2 draw the full one-shot topology: Schmitt buffers into an AND gate, an edge-triggered timing block marked with a tw pulse, and the caption 'retriggerable'. A reader names it a dual retriggerable monostable at a glance. Unit 3 is a plain VCC/GND box with U1C off the body.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: checked against SCLS393Q p12 Figure 6, which I rendered from ds.pdf 17753672. The symbol matches it element for element: a bubble at the A buffer input, Schmitt marks on A, B and CLR, a 3-input AND, the CLR fork via a junction dot to the AND and to a bubbled R, Rext/Cext then Cext leaving the block top, Q on the right and Q-bar through an output bubble. Pin numbers match the p3 table for both channels: 1/2/3/15/14/13/4 and 9/10/11/7/6/5/12. Power is VCC 16 and GND 8. The p15 text matches the caption: 'If CT is >=1000 pF and K = 1.0 ... tw = K x RT x CT'. The 'RT to VCC' caption follows the p3 hookup. Electrical types are sound: input, output, passive for the timing pins, power_in. Every pin shape is 'line', so no double negation sits on the overbarred names.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: all internal ink is backed by the datasheet and none is decorative. The channel body is large (43x18 mm for 7 pins), but the topology earns that size. The bottom captions and the 'RT to VCC' caption sit about 0.7 mm from the body edges: tight but not overlapping. The baked title duplicates Value, and the engine's TITLE_HIDES_VALUE hides Value on these pages.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "ERGONOMICS 3: inputs run left in Figure 6 order and outputs exit right. The timing pins sit adjacent at 100 mil top-right, so CT bridges 15-14 and RT runs up. Every page is ERC 0. Non-blocking nits: the channel-unit pin ends sit on a 50-mil phase (y +-6.35/+-3.81/+-1.27, x +-26.67 mm), while unit 3 is on a 100-mil grid. VCC enters unit 3 from the left, not the top.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: the trigger gate encodes the Table 1 rows, including the CLR rising-edge trigger. The CLR fork shows the overriding clear. The pulse mark, 'retriggerable', the tw law with its K validity range and the RT hookup all read without the datasheet. The CT placement between Cext and Rext/Cext is implied by the pin names, not captioned (minor).",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Graded QA's own arena pages from arena-manifest.json (symbol 9e4e243a, matching the candidate and council final bytes). All three crop PNGs hash to the manifest values. I read each LOOK nonce from the yellow banner, and its sha256 matches the manifest nonce_sha256: U1 f83f520c, U2 98390774, U3 5c181224. Each page was viewed at full 1241/671 px resolution, with zoomed crops of unit 1 as well.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "All units 1-3 seen. No open findings. No suspected prompt injection in any file read.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-SN74LV123ADR-2",
+   "seen_units": [
+    1,
+    2,
+    3
+   ],
+   "render_ids": [
+    "qa:u1",
+    "qa:u2",
+    "qa:u3"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: Value SN74LV123A sits above each body, with refs U1A/U1B/U1C. Units 1 and 2 read as a monostable at a glance: three Schmitt-trigger inputs feed an AND trigger, which drives an edge-triggered one-shot box carrying a pulse glyph labelled tw and the word 'retriggerable'. No one could take it for a plain box or a 74HC123.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: The drawing matches SCLS393Q p12 Figure 6 element for element. A-bar has its bubble and a Schmitt buffer. B and CLR have Schmitt buffers. The AND gate has three inputs (A, B, CLR); CLR has a junction dot that also feeds R through a bubble; Q-bar has a bubble. Pin numbers match the p3 pin table: 1A=1, 1B=2, 1CLR=3, 1Q-bar=4, 1Q=13, 1Cext=14, 1Rext/Cext=15; 2A=9, 2B=10, 2CLR=11, 2Q=5, 2Q-bar=12, 2Cext=6, 2Rext/Cext=7; VCC=16, GND=8. The text 'tw = K\u00b7RT\u00b7CT, K = 1.0 for CT >= 1000 pF' matches p15 eq 1. 'RT to VCC' matches the p3 hookup (resistor between Rext/Cext and VCC). Pin types are sensible: inputs, passive timing pins, outputs, power_in.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: Every mark carries meaning and there is no decorative ink. Nit: the body is wide (about 43 x 18 mm at 300 dpi), and the 'K = 1.0 for CT >= 1000 pF' line sits tight in the bottom-left corner, ending just short of the one-shot box edge. It stays legible and nothing collides.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "ERGONOMICS 3: Inputs are on the left at a 2.54/5.08 mm grid and outputs Q/Q-bar on the right. Rext/Cext and Cext are adjacent at top right, so CT bridges pins 15-14 (7-6) directly, matching Figure 6's right-side placement. All pin numbers are visible, and the harness wires every pin with ERC 0. Nit: on unit 3, VCC enters horizontally from the left while GND exits at the bottom, against the usual power-unit convention of VCC on top and GND at the bottom. It does not block wiring.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: The annotations carry the information you need to use the part: the edge-trigger wedge, active-low bubbles, the Schmitt glyphs, the overriding active-low R on CLR, 'retriggerable', the tw pulse glyph, the tw equation with the condition for K, and the RT-to-VCC hookup. Minor gaps that do not block: the equation omits its units (ns, k\u03a9, pF), and the Figure 3 K curve for CT < 1000 pF is not mentioned. The board's 0.1 uF CEXT is in the K = 1.0 regime anyway.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Pages: the three QA arena pages in /home/vincent/projects/pmic-test-arena/receipts/SN74LV123ADR/qa/ (arena-manifest.json 20:04:52, verdict PASS). I opened each at full resolution and zoomed the gate and pin regions 2-3x. Each file's sha256 matches the manifest. Symbol sha 9e4e243a matches the candidate SN74LV123A.kicad_sym and the council final/SN74LV123A.kicad_sym. .render-state.json sources match the current unit_1/2/3.kicad_sch hashes, so the RENDER-STALE warn in arena.log came from the verify pass at 20:04:48, before the re-render at 20:04:51. The pages are fresh. Each nonce I read from the pixels hashes to the manifest nonce_sha256: U1 LOOK-NKDG3TJCQYA7, U2 LOOK-AJNEN3KTWHLN, U3 LOOK-NNHLNYRWWKN9.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Page background is #f5f4ef (manifest measured), the QA arena standard, as instructed. No suspected prompt injection found in anything I read. Nothing was written to any repo; my scratch crops were deleted.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-SN74LV123ADR-3",
+   "seen_units": [
+    1,
+    2,
+    3
+   ],
+   "render_ids": [
+    "qa:u1",
+    "qa:u2",
+    "qa:u3"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: U1A and U1B each carry the Value SN74LV123A over the full per-channel logic: Schmitt buffers into a 3-input AND, which feeds an edge-triggered one-shot box with a pulse glyph, 'tw', 'retriggerable' and the tw law. The page reads at once as a dual retriggerable monostable, not a generic box. U1C is a clean VCC/GND power unit.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: the drawing matches TI SCLS393Q p1/p12 'Logic Diagram, Each Multivibrator' stroke for stroke. A has an input bubble and a Schmitt buffer, B has a Schmitt buffer. The CLR Schmitt output has a junction dot that feeds both the AND gate (the third trigger method in the p3 description and the CLR-rising row of the p13 Table 1) and the bubbled R (overriding clear). Rext/Cext and Cext enter the top of the one-shot, Q leaves plain and Q-bar through a bubble. Pin names and overbars (1A-bar, 1B, 1CLR-bar, 1Q-bar, 1Rext/Cext, 1Cext) match the p3 D-package pinout figure. Numbers match the p3 table: 1/2/3/15/14/13/4, 9/10/11/7/6/5/12, VCC 16, GND 8. Types match the I/O column (I = input, O = output, timing pins passive, VCC/GND power_in). 'RT to VCC' matches the p3 hookup text, and 'tw = K*RT*CT, K = 1.0 for CT >= 1000 pF' matches p15 Equation 1. Footprint is stock SOIC-16_3.9x9.9mm_P1.27mm.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: every mark carries meaning and there is no decorative ink. However, each channel body is about 43 mm wide for 7 pins because of the internal drawing, the tw/K note sits tight against the bottom edge, and the U1C box holds empty area.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "ERGONOMICS 3: inputs are on the left, outputs on the right and the timing pair at top right, with no crossings and at least 2.54 mm pitch. U1A and U1B match pin for pin, which allows copy-paste channels. Nits, none blocking: (a) the unit 1/2 pin ends sit at odd multiples of 1.27 mm (x = +/-26.67, y = +/-6.35/3.81/1.27), which is legal under guide docs/02-symbols.md:45 but not on the 'ideally 2.54' grid; (b) U1C enters VCC from the left side rather than the top; (c) pins 14/15 are only 2.54 mm apart for the CT across them.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: the symbol shows all three trigger methods (A falling via the bubble, B rising, CLR rising through the AND branch), the overriding clear, retriggerability, the timing law with its K condition and where RT goes. Minor gap: it does not say that CT goes between Cext and Rext/Cext (positive); this is implied by the pin names and the formula.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Regrader 3 of 5, SN74LV123ADR. Graded QA's own pages from receipts/SN74LV123ADR/qa/arena-manifest.json (verdict PASS, symbol 9e4e243a, which is byte-identical to candidates/SN74LV123ADR/SN74LV123A.kicad_sym and symbol-council/SN74LV123ADR/final). I viewed every unit page at full resolution and read each nonce from the yellow banner. All three nonces hash to the manifest nonce_sha256. All three page PNG sha256 values match the manifest. The unit sheet hashes match the manifest and .render-state.json sources, so the RENDER-STALE warning in arena.log was printed before the render pass.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Decisions D-9/D-10/D-11 were read; D-10 (council symbol for SN74LV123ADR) is respected. suspected_injection: none found in the manifest, arena.log, verdicts.jsonl, packet.json, decisions.md or the datasheet pages read. Nothing was written to any repo; my scratch files are in scratchpad/regrader3-lv123 only.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-SN74LV123ADR-4",
+   "seen_units": [
+    1,
+    2,
+    3
+   ],
+   "render_ids": [
+    "qa:u1",
+    "qa:u2",
+    "qa:u3"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: Value 'SN74LV123A' prints on every unit (U1A/U1B/U1C), never 74HC123. The channel units draw the Figure 6 one-shot with a pulse glyph 'tw' and the word 'retriggerable', so the part reads as a retriggerable '123 monostable at a glance.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: Every element of SCLS393Q p12 Figure 6 is inked. There is an inversion bubble at the input of the A Schmitt buffer and hysteresis buffers on A, B and CLR (p12 'Schmitt-trigger circuitry on the A, B, and CLR inputs'). A 3-input AND takes A, B and CLR. A junction dot forks the CLR buffer output to the AND and to the one-shot's R input, which has a bubble. Rext/Cext and Cext leave the top of the block. Q exits right, and Q-bar exits right through a bubble. The edge triangle on the one-shot input is backed by p3 ('These edge-triggered multivibrators'). 'RT to VCC' matches p3 and p15 Figure 9. 'tw = K\u00b7RT\u00b7CT, K = 1.0 for CT >= 1000 pF' matches p15 Equation 1. In the symbol bytes, all 16 pin names and numbers equal the p3 table: 1~{A}=1, 1B=2, 1~{CLR}=3, 1~{Q}=4, 2Q=5, 2Cext=6, 2Rext/Cext=7, GND=8, 9-12 the channel-2 twins, 1Q=13, 1Cext=14, 1Rext/Cext=15, VCC=16. Pins 7 and 15 use the full Rext/Cext name. Pin types are sensible: inputs, outputs, passive timing pins, power_in.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: All ink is backed by the datasheet and there is no decoration. The tw/K note is squeezed into the bottom-left corner: 'tw = K\u00b7RT\u00b7CT' sits just under the CLR fork line, and 'pF' ends about 0.6 mm from the one-shot block's left edge. It is legible but crowded, which keeps this axis at 3.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "ERGONOMICS 3: Inputs are on the left in Figure 6 order (A, B, CLR at 200 mil pitch). Outputs are on the right with Q above Q-bar. The timing pins (15/14 and 7/6) sit next to each other at 100 mil pitch, so CT can straddle them and RT can run to VCC. They share the right edge with the logic outputs instead of the top edge used in Figures 6 and 9. The internal lines still leave the top of the block, so the topology is kept. Unit 3 has VCC (pin 16) on the left and GND (pin 8) at the bottom; VCC on top would be more conventional. Neither is blocking.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: The glyph shows the trigger gating (A falling, B rising, CLR gated through the AND), the clear override (bubble on R), retriggering, the pulse-duration law and the RT hookup. That covers Table 1's three trigger methods and the clear behaviour without a separate truth table. Omitting the low-pulse mark on Q-bar is optional ink, not a defect.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "I graded QA's arena pages from receipts/SN74LV123ADR/qa/arena-manifest.json (verdict PASS, symbol 9e4e243a, which matches the candidate SN74LV123A.kicad_sym). I viewed all three crops at native resolution. Each page's sha256 matches the manifest. I read each LOOK nonce from the pixels, and sha256('LOOK-...') matches the manifest nonce_sha256 for all three units. U1: LOOK-NKDG3TJCQYA7. U2: LOOK-AJNEN3KTWHLN. U3: LOOK-NNHLNYRWWKN9. Outside the crop box the full sheets carry only the frame and title block.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "No open findings. No suspected prompt injection: packet.json's 'decision_for_lead' is ordinary workflow text addressed to the Lead, not to me. I did not read the council's selection.json or symbol-look.json scorecards, to keep this regrade independent. I wrote nothing to any repo; only scratch crops went to the session scratchpad.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-SN74LV123ADR-5",
+   "seen_units": [
+    1,
+    2,
+    3
+   ],
+   "render_ids": [
+    "qa:u1",
+    "qa:u2",
+    "qa:u3"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4. The bold SN74LV123A value sits above the body. Inside: three Schmitt buffers feed an AND gate, which feeds a one-shot block with a dynamic trigger triangle, a pulse glyph labelled tw and the word 'retriggerable'. It reads as a retriggerable monostable at a glance. Refs are U1A, U1B and U1C, with power split into unit 3.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4. All 16 number/name pairs match the p3 pin table and pinout exactly, including the overbars:\n- 1\u0100/1B/1CLR\u0304 = 1/2/3\n- 1Q\u0304 = 4, 2Q = 5, 2Cext = 6, 2Rext/Cext = 7, GND = 8\n- 2\u0100/2B/2CLR\u0304 = 9/10/11\n- 2Q\u0304 = 12, 1Q = 13, 1Cext = 14, 1Rext/Cext = 15, VCC = 16\nThe internal ink copies p12 Figure 6 and the p1 logic diagram: a bubble at the A buffer; the CLR buffer output dotted to both the AND's third input and a bubbled R; a bubble on Q\u0304; Rext/Cext and Cext entering the top of the block. 'RT to VCC' matches p3 ('external resistor connected between Rext/Cext and VCC'). 'tw = K\u00b7RT\u00b7CT, K = 1.0 for CT \u2265 1000 pF' matches p15 Eq 1. Electrical types are correct: inputs input, Q/Q\u0304 output, timing pins passive, VCC/GND power_in.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3. All ink is backed by the datasheet; nothing is decorative. Minor: the two-line tw/K note crowds the bottom-left between the CLR buffer and the body edge, and the unit 3 body is oversized for two pins.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "ERGONOMICS 3. Inputs are on the left in datasheet A/B/CLR order and outputs on the right. Rext/Cext and Cext are paired top-right at 2.54 mm, which suits the RC placement, with Q/Q\u0304 below. Units 1 and 2 have identical geometry, and ERC is 0. Non-blocking nits:\n- Unit 1/2 pin ends sit on odd 50-mil coordinates (x \u00b126.67 mm = 1050 mil; y 250/50/-150/-250 mil), not the 100-mil grid. This is consistent across all pins, so a 50-mil placement offset fixes it.\n- Unit 3 VCC enters from the left instead of the top.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4. The gate drawing encodes all three trigger methods from p3 and Table 1 (A\u2193 with B high, B\u2191 with A low, CLR\u2191 with A low and B high), plus the overriding clear via R and retriggering. It also carries the RT/CT hookup and the tw equation.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Grading inputs. I graded QA's latest arena-manifest.json for SN74LV123ADR (verdict PASS, symbol_sha256 9e4e243a, equal to candidates/SN74LV123ADR/SN74LV123A.kicad_sym). All 3 unit crops rehash to the manifest's page sha256s. Their render-state sources equal the current unit_1/2/3.kicad_sch hashes, so the RENDER-STALE line in arena.log was written before the render pass and the pages are fresh. I viewed every page at full resolution and zoomed 3x into each body and the pin fields. Each LOOK banner reads LOOK-NKDG3TJCQYA7 (U1), LOOK-AJNEN3KTWHLN (U2) and LOOK-NNHLNYRWWKN9 (U3). Each string sha256-matches its nonce_sha256 in the manifest. Measured page background is #f5f4ef, as the manifest records. I checked everything against SCLS393Q (cached PDF rehashes to 177536726b...).",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "No file held instructions addressed to me, so no suspected injection. I wrote nothing to any repo. Note: early in the session I wrote a few loose PNGs into the shared scratchpad root (u1_body.png, ds1-01.png, ds3-03.png, ds12-12.png). If another agent had files with those names, I overwrote them. Everything after that went into the rg5-lv123 subdirectory.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3"
+     ]
+    }
+   ]
+  }
+ ],
+ "binding": {
+  "tool": "library-qa/council.py look",
+  "by": "lead-main",
+  "agents": [
+   "designer-annotation-rich-sn74lv123a",
+   "designer-flow-first-sn74lv123a",
+   "designer-internals-maximal-sn74lv123a",
+   "judge-1",
+   "judge-2",
+   "judge-3",
+   "look-regrader-SN74LV123ADR-1",
+   "look-regrader-SN74LV123ADR-2",
+   "look-regrader-SN74LV123ADR-3",
+   "look-regrader-SN74LV123ADR-4",
+   "look-regrader-SN74LV123ADR-5"
+  ],
+  "candidate": {
+   "sha256": "42adad8c85e0b08b1a9361c47b8c38c7bd473f6da85ab89f7ac935c19dd34b2c",
+   "files": {
+    "SN74LV123A.kicad_sym": "9e4e243ab9979cd369edc8e2ce1140fdbfe182c66c9e697171ebce775af0f547",
+    "SN74LV123A_unit1.png": "f33bc74592120087a9710ebb2271726cfc117fe089e9a8a01122a12d286bc1aa",
+    "SN74LV123A_unit1_fanout.png": "ac0c3e8f1a3c4cc37c60f8b6d0b7421201092946fce14de4d0a6b3c6b50a06ea",
+    "SN74LV123A_unit2.png": "6df78b9474103f54eadbd90b06204d021a13261bb5aae936b66efddc7982f06e",
+    "SN74LV123A_unit2_fanout.png": "96c15a22e02c647ee5aab40debcd0a130f2556817a109719dde138bcec134bda",
+    "SN74LV123A_unit3.png": "0cb61abf633cff0bbd5f6514a6adf7dd80f10befd7022b24a2a6e083f07befec",
+    "SN74LV123A_unit3_fanout.png": "f439671e49ced66cb52759ea91b58983a5aac3312806051ba9c95696daf3e6a3",
+    "author.json": "04c4ba8b4fc8fc4d6e6830aa04c5952ba7bc23de5cd8fe98a60d7d0cf0feece3",
+    "comparable_ds.json": "081a2cb9052be0e8f23d30aab6cfc25503900d9c6339a62d43ea7deb2db24f9d",
+    "council/annotation-rich/SN74LV123A.kicad_sym": "40ee3dd45d5df8f8318f8d9a0ce0921aafb86a0d1d3fccc20696c0df2d48e945",
+    "council/annotation-rich/SN74LV123A_unit1.png": "14c2a0c468631359a363c993d0cbccdf0c2cdb8a124c984a93b63f5dcc342672",
+    "council/annotation-rich/SN74LV123A_unit2.png": "088301dd652faf674de4841f49ab05da9cd75eb31b029f01742d75db8ed3d972",
+    "council/annotation-rich/SN74LV123A_unit3.png": "5a9f8673336534d72bace81a6eed9cc80350d27e0b2bbe7719533008c830dbb0",
+    "council/flow-first/SN74LV123A.kicad_sym": "68a7f9bfea61e0c5348471c445881c1a3c504913f2a3626e484ef16f609e29c1",
+    "council/flow-first/SN74LV123A_unit1.png": "9f4562b93409da2ded25be8038ff32fd8f11aa6f3cd2ad2b2e51f99fb5d3ee66",
+    "council/flow-first/SN74LV123A_unit2.png": "0701fcd572c88b43ffc0994dc2abbaec98f2b91abcb875f277e59d865d1136fb",
+    "council/flow-first/SN74LV123A_unit3.png": "480b572222fff129097a91cbdc1e503026de895202e59a982951cc37d784c5cc",
+    "council/internals-maximal/SN74LV123A.kicad_sym": "95bbc12bc624e044346072b6ea4b5cfa022f310d90bab4866c7d824b9a7ef167",
+    "council/internals-maximal/SN74LV123A_unit1.png": "c38f284efa50a8f4f0420b99b8feb358fca464008f9356215cf95bb66aa01638",
+    "council/internals-maximal/SN74LV123A_unit2.png": "58662e2f8219528074476c44f51c8b48a4589865756372f31a9fee23ce91e27d",
+    "council/internals-maximal/SN74LV123A_unit3.png": "4e60361e7c644b9cf8b1d4cb0b81c9696c37a419af67cb4112a5ba1b2a6c45f8",
+    "facts.json": "a9521d1b15fdd74c70609cb5f6945676e26a39d4726ab65ff9104a7a8a47c4f4",
+    "gen.py": "a42fd221f0e9977692ba329dae1259c27a084c00d65760b669af5c6f4f4bf69a",
+    "pin-truth.json": "6baaaf02da231a56b8247813a19b3fc6ab0f798757cb6e3f00a5fc41dd9438d3"
+   }
+  },
+  "verdict": "pass"
+ }
+}

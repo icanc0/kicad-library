@@ -1,0 +1,115 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "SN74LV123ADR",
+ "symbol": {
+  "asset_path": "SN74LV123A.kicad_sym",
+  "internal_name": "SN74LV123A",
+  "sha256": "9e4e243ab9979cd369edc8e2ce1140fdbfe182c66c9e697171ebce775af0f547"
+ },
+ "archetype": "identity-topology",
+ "units": [
+  {
+   "unit": 1,
+   "role": "channel 1 retriggerable monostable (SCLS393Q p3 pins 1, 2, 3, 4, 13, 14, 15; p12 Figure 6)",
+   "presentation": "identity-topology",
+   "identity_features": [
+    "1~{A} 1 through an input bubble into a Schmitt buffer, 1B 2 and 1~{CLR} 3 into Schmitt buffers, inputs on the left 5.08 mm apart in Figure 6 order (SCLS393Q p12 Figure 6; p1 Schmitt on A, B and CLR)",
+    "one 3-input AND of the three buffers into the one-shot's edge (dynamic) input on the B row (p1 'Edge Triggered'; p13 Table 1 rows 4-6)",
+    "CLR junction dot forks into the AND and into the one-shot's bubbled R (p1 'Overriding Clear Terminates Output Pulse'; Table 1 rows 1 and 6)",
+    "one-shot with the pulse mark labelled tw and 'retriggerable' (p12); 1Q 13 right, 1~{Q} 4 right through an output bubble, 5.08 mm apart, names with overbars and pin shapes 'line' (no double negation)",
+    "1Rext/Cext 15 above 1Cext 14 at the top of the right edge, both leads off the one-shot top (Figure 6); 'RT to VCC' (p3 timing-network sentence) and 'tw = K\u00b7RT\u00b7CT' / 'K = 1.0 for CT \u2265 1000 pF' (p15 Eq 1); timing pins passive"
+   ]
+  },
+  {
+   "unit": 2,
+   "role": "channel 2 retriggerable monostable (SCLS393Q p3 pins 9, 10, 11, 12, 5, 6, 7; p12 Figure 6)",
+   "presentation": "identity-topology",
+   "identity_features": [
+    "unit 1's drawing for channel 2: 2~{A} 9 (input bubble + Schmitt), 2B 10, 2~{CLR} 11 on the left (p3 channel-2 rows; p12 Figure 6 'Each Multivibrator')",
+    "3-input AND into the one-shot's edge input; CLR fork to the AND and the bubbled R (p1; Table 1)",
+    "one-shot with tw pulse mark and 'retriggerable'; 2Q 5 and 2~{Q} 12 on the right through the output bubble (not mirrored from channel 1: p3 rows 5 and 12)",
+    "2Rext/Cext 7 above 2Cext 6, leads off the one-shot top, 'RT to VCC' and the p15 tw law; pins passive"
+   ]
+  },
+  {
+   "unit": 3,
+   "role": "power: VCC 16 and GND 8 shared by both channels (SCLS393Q p3)",
+   "presentation": "pin-table",
+   "identity_features": [
+    "power unit: plain 15.24 x 10.16 mm box, VCC 16 at the top of the left edge, GND 8 at the bottom, both power_in (p3 rows 8 and 16); refdes off the body on the sheet",
+    "ki_locked: the two channel units and the power unit are not interchangeable"
+   ]
+  }
+ ],
+ "evidence": {
+  "comparable_ds": {
+   "path": "comparable_ds.json",
+   "sha256": "081a2cb9052be0e8f23d30aab6cfc25503900d9c6339a62d43ea7deb2db24f9d",
+   "own_sha256": "177536726ba54deecf3587441bf69be0a3f1bcf0fe0e67428caa79e15062e761",
+   "comparable_count": 4
+  },
+  "pin_truth": {
+   "path": "pin-truth.json",
+   "sha256": "6baaaf02da231a56b8247813a19b3fc6ab0f798757cb6e3f00a5fc41dd9438d3",
+   "coverage": "all"
+  }
+ },
+ "generator": {
+  "contract": "python-cli-output-v1",
+  "path": "gen.py",
+  "sha256": "a42fd221f0e9977692ba329dae1259c27a084c00d65760b669af5c6f4f4bf69a",
+  "inputs": [],
+  "expected_symbol_sha256": "9e4e243ab9979cd369edc8e2ce1140fdbfe182c66c9e697171ebce775af0f547"
+ },
+ "look": {
+  "receipt_path": "symbol-look.json",
+  "sha256": "4cb6a87f91c78c3f1f0dc12d99d32b960f0eb1bcc7871789e9030375d15e3f12"
+ },
+ "binding": {
+  "tool": "library-qa/council.py quality",
+  "by": "lead-main",
+  "agents": [
+   "designer-annotation-rich-sn74lv123a",
+   "designer-flow-first-sn74lv123a",
+   "designer-internals-maximal-sn74lv123a",
+   "judge-1",
+   "judge-2",
+   "judge-3",
+   "look-regrader-SN74LV123ADR-1",
+   "look-regrader-SN74LV123ADR-2",
+   "look-regrader-SN74LV123ADR-3",
+   "look-regrader-SN74LV123ADR-4",
+   "look-regrader-SN74LV123ADR-5"
+  ],
+  "candidate": {
+   "sha256": "42adad8c85e0b08b1a9361c47b8c38c7bd473f6da85ab89f7ac935c19dd34b2c",
+   "files": {
+    "SN74LV123A.kicad_sym": "9e4e243ab9979cd369edc8e2ce1140fdbfe182c66c9e697171ebce775af0f547",
+    "SN74LV123A_unit1.png": "f33bc74592120087a9710ebb2271726cfc117fe089e9a8a01122a12d286bc1aa",
+    "SN74LV123A_unit1_fanout.png": "ac0c3e8f1a3c4cc37c60f8b6d0b7421201092946fce14de4d0a6b3c6b50a06ea",
+    "SN74LV123A_unit2.png": "6df78b9474103f54eadbd90b06204d021a13261bb5aae936b66efddc7982f06e",
+    "SN74LV123A_unit2_fanout.png": "96c15a22e02c647ee5aab40debcd0a130f2556817a109719dde138bcec134bda",
+    "SN74LV123A_unit3.png": "0cb61abf633cff0bbd5f6514a6adf7dd80f10befd7022b24a2a6e083f07befec",
+    "SN74LV123A_unit3_fanout.png": "f439671e49ced66cb52759ea91b58983a5aac3312806051ba9c95696daf3e6a3",
+    "author.json": "04c4ba8b4fc8fc4d6e6830aa04c5952ba7bc23de5cd8fe98a60d7d0cf0feece3",
+    "comparable_ds.json": "081a2cb9052be0e8f23d30aab6cfc25503900d9c6339a62d43ea7deb2db24f9d",
+    "council/annotation-rich/SN74LV123A.kicad_sym": "40ee3dd45d5df8f8318f8d9a0ce0921aafb86a0d1d3fccc20696c0df2d48e945",
+    "council/annotation-rich/SN74LV123A_unit1.png": "14c2a0c468631359a363c993d0cbccdf0c2cdb8a124c984a93b63f5dcc342672",
+    "council/annotation-rich/SN74LV123A_unit2.png": "088301dd652faf674de4841f49ab05da9cd75eb31b029f01742d75db8ed3d972",
+    "council/annotation-rich/SN74LV123A_unit3.png": "5a9f8673336534d72bace81a6eed9cc80350d27e0b2bbe7719533008c830dbb0",
+    "council/flow-first/SN74LV123A.kicad_sym": "68a7f9bfea61e0c5348471c445881c1a3c504913f2a3626e484ef16f609e29c1",
+    "council/flow-first/SN74LV123A_unit1.png": "9f4562b93409da2ded25be8038ff32fd8f11aa6f3cd2ad2b2e51f99fb5d3ee66",
+    "council/flow-first/SN74LV123A_unit2.png": "0701fcd572c88b43ffc0994dc2abbaec98f2b91abcb875f277e59d865d1136fb",
+    "council/flow-first/SN74LV123A_unit3.png": "480b572222fff129097a91cbdc1e503026de895202e59a982951cc37d784c5cc",
+    "council/internals-maximal/SN74LV123A.kicad_sym": "95bbc12bc624e044346072b6ea4b5cfa022f310d90bab4866c7d824b9a7ef167",
+    "council/internals-maximal/SN74LV123A_unit1.png": "c38f284efa50a8f4f0420b99b8feb358fca464008f9356215cf95bb66aa01638",
+    "council/internals-maximal/SN74LV123A_unit2.png": "58662e2f8219528074476c44f51c8b48a4589865756372f31a9fee23ce91e27d",
+    "council/internals-maximal/SN74LV123A_unit3.png": "4e60361e7c644b9cf8b1d4cb0b81c9696c37a419af67cb4112a5ba1b2a6c45f8",
+    "facts.json": "a9521d1b15fdd74c70609cb5f6945676e26a39d4726ab65ff9104a7a8a47c4f4",
+    "gen.py": "a42fd221f0e9977692ba329dae1259c27a084c00d65760b669af5c6f4f4bf69a",
+    "pin-truth.json": "6baaaf02da231a56b8247813a19b3fc6ab0f798757cb6e3f00a5fc41dd9438d3"
+   }
+  },
+  "verdict": "pass"
+ }
+}

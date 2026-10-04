@@ -1,0 +1,110 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "sn74lv123adr",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Texas Instruments",
+      "normalized": "texas-instruments"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "SN74LV123ADR",
+      "canonical": "SN74LV123ADR",
+      "comparison_key": "SN74LV123ADR",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C134010"
+      }
+    ],
+    "description": "Central library symbol SN74LV123ADR promoted from truedepth-shim."
+  },
+  "names": {
+    "canonical": "SN74LV123ADR",
+    "aliases": [
+      "SN74LV123A"
+    ],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/SN74LV123A.kicad_sym",
+        "name": "SN74LV123A"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/SN74LV123A.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "9e4e243ab9979cd369edc8e2ce1140fdbfe182c66c9e697171ebce775af0f547",
+      "internal_name": "SN74LV123A"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "4233e20101e0ea3ddd822b080a12002aad570d0a",
+    "source_board": "truedepth-shim",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/SN74LV123A.kicad_sym",
+        "evidence": "First-import fit pass: SN74LV123ADR (TI SCLS393Q rev Q, D = SOIC-16 R-PDSO-G16 MS-012 AC, LCSC C134010): pins vision-confirmed on the p3 D top view and the p3 Pin Functions table = symbol 9e4e243a, the L24 council identity-topology glyph (3 designs, 9 judges, winner design-flow-first + grafts; 5 fresh regraders 4/4/3/3/4 on QA pages 599974d4/db37f7d1/ff909866). U1A channel 1: 1 1A-bar, 2 1B, 3 1CLR-bar enter left; 15 1Rext/Cext, 14 1Cext, 13 1Q, 4 1Q-bar leave right. U1B channel 2: 9/10/11 left, 7/6/5/12 right. U1C: 16 VCC, 8 GND. Internals show the Schmitt inputs, the 3-input trigger AND, CLR to the one-shot reset, retriggerable tw = K*RT*CT with K = 1.0 for CT >= 1000 pF (p15), so U13 (A = GND, B rising edge, CLR high: p13 Table 1 row 4) reads left to right. Pin facts 49/49 qualified single-printing (guide 73a461c0); the p3 table function conditions carry the TI erratum noted in f-38e5a4, not adopted as behaviour. Land = stock Package_SO:SOIC-16_3.9x9.9mm_P1.27mm (sha f9b50757) with its stock SOIC-16 STEP (d5eeddb4), named by the Footprint field; it fits p24 D 4040047 (e 1.27, pads 1-8 / 9-16 CCW, pad 1.95 x 0.6 vs b 0.31-0.51, toe +0.35 past the max tip, courtyard 7.4 x 10.4)."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "SN74LV123ADR (TI SCLS393Q rev Q, D = SOIC-16 R-PDSO-G16 MS-012 AC, LCSC C134010): pins vision-confirmed on the p3 D top view and the p3 Pin Functions table = symbol 9e4e243a, the L24 council identity-topology glyph (3 designs, 9 judges, winner design-flow-first + grafts; 5 fresh regraders 4/4/3/3/4 on QA pages 599974d4/db37f7d1/ff909866). U1A channel 1: 1 1A-bar, 2 1B, 3 1CLR-bar enter left; 15 1Rext/Cext, 14 1Cext, 13 1Q, 4 1Q-bar leave right. U1B channel 2: 9/10/11 left, 7/6/5/12 right. U1C: 16 VCC, 8 GND. Internals show the Schmitt inputs, the 3-input trigger AND, CLR to the one-shot reset, retriggerable tw = K*RT*CT with K = 1.0 for CT >= 1000 pF (p15), so U13 (A = GND, B rising edge, CLR high: p13 Table 1 row 4) reads left to right. Pin facts 49/49 qualified single-printing (guide 73a461c0); the p3 table function conditions carry the TI erratum noted in f-38e5a4, not adopted as behaviour. Land = stock Package_SO:SOIC-16_3.9x9.9mm_P1.27mm (sha f9b50757) with its stock SOIC-16 STEP (d5eeddb4), named by the Footprint field; it fits p24 D 4040047 (e 1.27, pads 1-8 / 9-16 CCW, pad 1.95 x 0.6 vs b 0.31-0.51, toe +0.35 past the max tip, courtyard 7.4 x 10.4).",
+      "note": "",
+      "pin_gate": {
+        "symbol": "SN74LV123A",
+        "lcsc": "C134010",
+        "facts_checked": true,
+        "source": "facts",
+        "board_context": null,
+        "state": "clean",
+        "gaps": [],
+        "allow_pin_gaps": null
+      }
+    },
+    "quality": {
+      "state": "council-graded",
+      "symbol_sha256": "9e4e243ab9979cd369edc8e2ce1140fdbfe182c66c9e697171ebce775af0f547",
+      "installed_symbol_sha256": "9e4e243ab9979cd369edc8e2ce1140fdbfe182c66c9e697171ebce775af0f547",
+      "footprint_sha256": null,
+      "installed_footprint_sha256": null,
+      "quality_receipt": {
+        "path": "quality/sn74lv123adr/symbol-quality.json",
+        "sha256": "8ecd6adf3b389516b1b2774c4bcf17b094e012d2bca225187751474fcd9fc316"
+      },
+      "look_receipt": {
+        "path": "quality/sn74lv123adr/symbol-look.json",
+        "sha256": "4cb6a87f91c78c3f1f0dc12d99d32b960f0eb1bcc7871789e9030375d15e3f12"
+      },
+      "arena_manifest": {
+        "path": "quality/sn74lv123adr/arena-manifest.json",
+        "sha256": "c03938fd147f14d9534142e4df096b607ecd19b7f380317869e7c5ed9f634b61"
+      },
+      "arena_manifest_mtime": "2026-10-03T00:04:52+00:00",
+      "arena_manifest_mtime_note": "st_mtime of QA's arena-manifest.json when promoted — the arena render's clock, reset by any cp/checkout; the receipts carry no audit clock and now() is never written",
+      "admission": {
+        "path": "quality/sn74lv123adr/admission.json",
+        "sha256": "607287beb855fc6f5bdf8d4b0501a103865fa2d3f1dfde80264ebd2d7dddc6c7"
+      }
+    }
+  }
+}

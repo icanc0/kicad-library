@@ -1,0 +1,43 @@
+{
+ "schema_version": "library-qa-arena-1",
+ "part_id": "SN74LV123ADR",
+ "symbol_sha256": "9e4e243ab9979cd369edc8e2ce1140fdbfe182c66c9e697171ebce775af0f547",
+ "units": [
+  1,
+  2,
+  3
+ ],
+ "verdict": "PASS",
+ "build_sha256": "27cb99a89004d92f8ecfc4dfe1a4a56bc74785a97422533b889c162b6bd120d7",
+ "sheets": {
+  "unit_1.kicad_sch": "4e69e0eec9063ce63b575306d30eb09ae0d483487a026307863c18e374e9419f",
+  "unit_2.kicad_sch": "8e96f8f85066b38d6c0272ddc76d33a087f7d84ab024f32fb5dae7bc02a2f09a",
+  "unit_3.kicad_sch": "7d259f21111eb42e0f87a343b80c32e2def2f006fa167ec5ed3baa718ce8f76e"
+ },
+ "pages": [
+  {
+   "unit": 1,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png",
+   "sha256": "599974d43c70c0b84806fbb7026aaf1dbec9102e934656d799860956eb4ae6e2",
+   "svg_fingerprint": "b974ea02a189e9c996263a19366998af27608dd2b9f3d15b7263a881d27746f6",
+   "nonce_sha256": "f83f520ca30eb88ebc4fa233877f5841660815a045584f93b39510fc47ccdcd8",
+   "background": "#f5f4ef"
+  },
+  {
+   "unit": 2,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U2-box1.png",
+   "sha256": "db37f7d1ca01da54564d87c136edcfeddcf153d7c825b9073ca48ab1aa53d66f",
+   "svg_fingerprint": "a9c5ff3d3c2f1e95ff954ee0dfacaa2372cc7f11cdd09e088fb78ff3308e556c",
+   "nonce_sha256": "98390774bab55155f8301d4faaddfc37b17cfb8ed49941769f6f6d7302b237c1",
+   "background": "#f5f4ef"
+  },
+  {
+   "unit": 3,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U3-box1.png",
+   "sha256": "ff909866960821c6a3b039267ca18d6b2b9e152322f9d69bcba6ffeb7b06284b",
+   "svg_fingerprint": "eb29b1f5a52a6ff3d0d0a45e5f0f1c16466dfb3910f3380e742faf40f89b2aed",
+   "nonce_sha256": "5c1812243845a2228d2dd642afbf841dbe0f556a0e77137362053f684cb662a9",
+   "background": "#f5f4ef"
+  }
+ ]
+}
