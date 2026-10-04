@@ -1,0 +1,34 @@
+{
+ "admitted_by": {
+  "agent": "library-inspector-ebd393",
+  "role": "library-inspector"
+ },
+ "author": {
+  "agent": "symbol-maker-7529a6",
+  "board": "truedepth-shim"
+ },
+ "candidate_symbol_sha256": "f2b35eaac4bc68c3e4fc3cb16d32630135aec28be0ffc90277a3b3b242af4118",
+ "decisions": {
+  "files": [],
+  "mode": "report"
+ },
+ "footprint_sha256": null,
+ "guide": {
+  "bind": "/guide",
+  "commit": "73a461c0fd2ec2bf61b0394581d4ef9690f4be4f",
+  "dirty": false
+ },
+ "land": {
+  "footprint": "Package_SO:TSSOP-14_4.4x5mm_P0.65mm",
+  "kind": "stock",
+  "sha256": "e4bf82cea6d3b3259ddf42469b1407628ad1181a28ae6f3f340190c0cca31ccd"
+ },
+ "part_id": "tlv9064ipwr",
+ "pinset": {
+  "lcsc": "C779410",
+  "result": "clean",
+  "rule": "SYM-PINSET-MATCH"
+ },
+ "schema": "kicad-agent-guide/admission@1",
+ "symbol_sha256": "f2b35eaac4bc68c3e4fc3cb16d32630135aec28be0ffc90277a3b3b242af4118"
+}

@@ -1,0 +1,1563 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "TLV9064IPWR",
+ "symbol_sha256": "f2b35eaac4bc68c3e4fc3cb16d32630135aec28be0ffc90277a3b3b242af4118",
+ "units": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "designs": [
+  {
+   "id": "design-internals-maximal",
+   "designer_id": "designer-internals-maximal-tlv9064ipwr",
+   "stance": "internals-maximal",
+   "symbol_path": "council/internals-maximal/TLV9064IPWR.kicad_sym",
+   "symbol_sha256": "2435f5029827c486bdc3c99c752e4978f81b1b5df1429f9ec6ca1b9b78221f04",
+   "renders": [
+    {
+     "id": "design:internals-maximal:u1",
+     "unit": 1,
+     "path": "council/internals-maximal/TLV9064IPWR_unit1.png",
+     "sha256": "2a209f7f50fba1043a4b5ae61c9a813024144fbe1a189dbe5f4071a964bee64b",
+     "background": "#ffffff",
+     "symbol_sha256": "2435f5029827c486bdc3c99c752e4978f81b1b5df1429f9ec6ca1b9b78221f04"
+    },
+    {
+     "id": "design:internals-maximal:u2",
+     "unit": 2,
+     "path": "council/internals-maximal/TLV9064IPWR_unit2.png",
+     "sha256": "2e8ede577ae2df9dfbb8adbaccb1cbc9bea5d32cc9809ecac27cf943dca8319f",
+     "background": "#ffffff",
+     "symbol_sha256": "2435f5029827c486bdc3c99c752e4978f81b1b5df1429f9ec6ca1b9b78221f04"
+    },
+    {
+     "id": "design:internals-maximal:u3",
+     "unit": 3,
+     "path": "council/internals-maximal/TLV9064IPWR_unit3.png",
+     "sha256": "c4b48307738e8fab5f6440f0e593d882ec2d6cf9876e6b266c6f511d3e8ef13b",
+     "background": "#ffffff",
+     "symbol_sha256": "2435f5029827c486bdc3c99c752e4978f81b1b5df1429f9ec6ca1b9b78221f04"
+    },
+    {
+     "id": "design:internals-maximal:u4",
+     "unit": 4,
+     "path": "council/internals-maximal/TLV9064IPWR_unit4.png",
+     "sha256": "7c0799a668d80a523aa135b142b0adec425d1f03e4265fd32fd3d53262cb8009",
+     "background": "#ffffff",
+     "symbol_sha256": "2435f5029827c486bdc3c99c752e4978f81b1b5df1429f9ec6ca1b9b78221f04"
+    },
+    {
+     "id": "design:internals-maximal:u5",
+     "unit": 5,
+     "path": "council/internals-maximal/TLV9064IPWR_unit5.png",
+     "sha256": "06e3597f59aca50d48a13ea29a5f38274083a46531da7a49e02c42b848831a47",
+     "background": "#ffffff",
+     "symbol_sha256": "2435f5029827c486bdc3c99c752e4978f81b1b5df1429f9ec6ca1b9b78221f04"
+    }
+   ]
+  },
+  {
+   "id": "design-flow-first",
+   "designer_id": "designer-flow-first-tlv9064ipwr",
+   "stance": "flow-first",
+   "symbol_path": "council/flow-first/TLV9064IPWR.kicad_sym",
+   "symbol_sha256": "c7d6cfdb811bced02af823332a1f4259a4a98406df346911f32ede3b9c72d833",
+   "renders": [
+    {
+     "id": "design:flow-first:u1",
+     "unit": 1,
+     "path": "council/flow-first/TLV9064IPWR_unit1.png",
+     "sha256": "fd2d1cbeb0029a7625f7bebbbde3d38473d2a18e1fc7a159a4571c4a18c4fed4",
+     "background": "#ffffff",
+     "symbol_sha256": "c7d6cfdb811bced02af823332a1f4259a4a98406df346911f32ede3b9c72d833"
+    },
+    {
+     "id": "design:flow-first:u2",
+     "unit": 2,
+     "path": "council/flow-first/TLV9064IPWR_unit2.png",
+     "sha256": "414ca031763a631dc1e6cfc805d29b4e90a11f9306e3aadf3537201abc82d616",
+     "background": "#ffffff",
+     "symbol_sha256": "c7d6cfdb811bced02af823332a1f4259a4a98406df346911f32ede3b9c72d833"
+    },
+    {
+     "id": "design:flow-first:u3",
+     "unit": 3,
+     "path": "council/flow-first/TLV9064IPWR_unit3.png",
+     "sha256": "b75bb612d8d03d8c08a248210de46467734fa1bfc0ebf345d9d0d925bed15bc4",
+     "background": "#ffffff",
+     "symbol_sha256": "c7d6cfdb811bced02af823332a1f4259a4a98406df346911f32ede3b9c72d833"
+    },
+    {
+     "id": "design:flow-first:u4",
+     "unit": 4,
+     "path": "council/flow-first/TLV9064IPWR_unit4.png",
+     "sha256": "8c2bcd975a20e5175c55a34d1bc86ecd2084c95d6cc655410e0056a82c426bb2",
+     "background": "#ffffff",
+     "symbol_sha256": "c7d6cfdb811bced02af823332a1f4259a4a98406df346911f32ede3b9c72d833"
+    },
+    {
+     "id": "design:flow-first:u5",
+     "unit": 5,
+     "path": "council/flow-first/TLV9064IPWR_unit5.png",
+     "sha256": "5dccb21e08220ab8d2872c95def95800b1dafa529c3e4fa1c3cf432c33f13cf4",
+     "background": "#ffffff",
+     "symbol_sha256": "c7d6cfdb811bced02af823332a1f4259a4a98406df346911f32ede3b9c72d833"
+    }
+   ]
+  },
+  {
+   "id": "design-annotation-rich",
+   "designer_id": "designer-annotation-rich-tlv9064ipwr",
+   "stance": "annotation-rich",
+   "symbol_path": "council/annotation-rich/TLV9064IPWR.kicad_sym",
+   "symbol_sha256": "8a43b851aabcf72b226914fd3df55545fa866be378604650599f0788dfb70bab",
+   "renders": [
+    {
+     "id": "design:annotation-rich:u1",
+     "unit": 1,
+     "path": "council/annotation-rich/TLV9064IPWR_unit1.png",
+     "sha256": "32338e0d8cef4691dd946d04b3f6cc17ac13c19438dbd578838d3245adecd8e5",
+     "background": "#ffffff",
+     "symbol_sha256": "8a43b851aabcf72b226914fd3df55545fa866be378604650599f0788dfb70bab"
+    },
+    {
+     "id": "design:annotation-rich:u2",
+     "unit": 2,
+     "path": "council/annotation-rich/TLV9064IPWR_unit2.png",
+     "sha256": "43921aa2bbb5dd4765050b594d31e7e4922f19a10e41db0c7f49266a215a8cae",
+     "background": "#ffffff",
+     "symbol_sha256": "8a43b851aabcf72b226914fd3df55545fa866be378604650599f0788dfb70bab"
+    },
+    {
+     "id": "design:annotation-rich:u3",
+     "unit": 3,
+     "path": "council/annotation-rich/TLV9064IPWR_unit3.png",
+     "sha256": "ffe2f57e163cc97c5c6a277e0adc660dbd7e95643e3e7fdd7b5aeed1fe431da5",
+     "background": "#ffffff",
+     "symbol_sha256": "8a43b851aabcf72b226914fd3df55545fa866be378604650599f0788dfb70bab"
+    },
+    {
+     "id": "design:annotation-rich:u4",
+     "unit": 4,
+     "path": "council/annotation-rich/TLV9064IPWR_unit4.png",
+     "sha256": "3001df39ebf9dd62b099aef218f3fe299ce6c3816179f2e74ff956f214f2df71",
+     "background": "#ffffff",
+     "symbol_sha256": "8a43b851aabcf72b226914fd3df55545fa866be378604650599f0788dfb70bab"
+    },
+    {
+     "id": "design:annotation-rich:u5",
+     "unit": 5,
+     "path": "council/annotation-rich/TLV9064IPWR_unit5.png",
+     "sha256": "f3ff46070164d92053e8382f4b1b75186d290781fa6f76d7df1895fbcbb44242",
+     "background": "#ffffff",
+     "symbol_sha256": "8a43b851aabcf72b226914fd3df55545fa866be378604650599f0788dfb70bab"
+    }
+   ]
+  }
+ ],
+ "judges": [
+  {
+   "reviewer_id": "judge-1",
+   "design_id": "design-internals-maximal",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "Units 1-4 (look/unit1-4.png): the triangle with drawn + over a dash and OUTn at the tip reads as an op amp right away. But the triangle fills only about 40% of a 30.48x15.24 mm box. Each unit also draws V+/V- leads with labels that go to no pin, and at a glance they look like unwired supply pins (the design's own known_limits admits these are ink, not pins). A lone 'RRI' floats above the IN1+ name. Unit 5's small triangle marked '1-4' (en dash) between V+ and V- is the clearest supply-unit reading of the three designs.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pins match Table 5-5's SOIC/TSSOP column on p8: 3/2/1, 5/6/7, 10/9/8, 12/13/14, and 4/11 on unit 5. Pins 2/6/9/13/11 use U+2013, checked in the bytes. Types are input/output/power_in, matching the I/O column. Every caption has a source: 'RRI' (p22 7.3.1 Rail-to-Rail Input), 'RRO class AB' (p22 7.3.2 'A class AB output stage ... full rail-to-rail output swing'), the V+ top / V- bottom rails and '(Ground)' (p21 'V- (Ground)'). No SHDN, NC or bubbles. No contradiction found.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "This is the heaviest design. Each amplifier body is 30.48x15.24 mm (464 mm2) with a 40.64 mm pin-tip span, about 1.8x flow-first's area, and the quad needs four of them. Each unit carries 10 polylines and 5 texts, with V+/V- leads that connect nothing. Unit 5 is a 20.32x15.24 box for 2 pins. The baked title 'TLV9064IPWR' equals Value. The engine's TITLE_HIDES_VALUE (config.py:33, builder_place.py:156) hides the Value on placement, so that duplicate does not reach the sheet.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "All 14 pin tips sit on the 2.54 grid (x=+/-20.32, y=+/-2.54/0; unit 5 at (-15.24,5.08) and (0,-12.7)). Inputs come in on the left and the output leaves on the right, aligned with the triangle tip. The 40.64 mm span and 15.24 mm height make every U10/U11 stage-to-stage and feedback wire longer and push the pass FET/2N7002 parts further away than they need to be.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "This design carries the most load-bearing facts. RRI at the inputs matters on this board: the SLAU502 high-side sources run stage-2 inputs near VRES. RRO class AB is at the output that drives the AO3401A gate. Unit 5's '1-4' says one supply feeds all four channels, and '(Ground)' marks single-supply V-.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "judge 1 datasheet check: Checked against SBOS839N p8 Table 5-5 (pdftotext of sha256 8b7077...), p21 'V- (Ground)', and p22 7.3.1/7.3.2. All three designs are pin-, name-, type- and unit-correct. Contradictions: none.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-1",
+   "design_id": "design-flow-first",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "TLV9064IPWR_unit1-4.png: a clean triangle (8.89 mm) with + over a dash, leads from the IN names to the corners and from the tip to OUTn, in a 25.4x10.16 box. It reads as op amp n instantly with nothing competing. Unit 5 (unit5.png) is a plain 10.16 mm square holding only 'V+' and a rotated 'V-'. That is adequate for a domain unit, but nothing says 'supply'.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "The pin map, en dashes (U+2013 on 2/6/9/11/13) and types are exactly Table 5-5 (p8), with no forbidden ink and no contradiction. But the drawing shows only the pin map. Nothing records the shared V+/V- of the four channels or the rail-to-rail silicon (p1, p21-22).",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "Amplifier bodies are 25.4x10.16 mm (258 mm2) with a 35.56 mm span and 8 primitives per unit, all functional. Unit 5 is the minimum 10.16 mm square. The baked title equals Value and auto-hides on placement (TITLE_HIDES_VALUE), so a placed unit prints one part line.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "Every pin tip is on the 2.54 grid (x=+/-17.78, y=+/-2.54/0; unit 5 V+ (-10.16,2.54), V- (0,-10.16)). INn+, INn- and OUTn sit on straight rows, and the output is centered between the inputs, so feedback and series parts drop in straight (generate.py docstring, architecture.md:152-156). Compact body height keeps stage-1/stage-2 pairs close.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 2,
+     "note": "There are no annotations at all. Two facts the packet lists as optional backed ink are missing: 'RRIO' and 'V- as ground for single supply'. The RRIO fact is load-bearing for these high-side V-I sources, whose inputs sit near the VRES rail. The symbol says no more than the stock triangle plus names.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "judge 1 datasheet check: Checked against SBOS839N p8 Table 5-5 (pdftotext of sha256 8b7077...), p21 'V- (Ground)', and p22 7.3.1/7.3.2. All three designs are pin-, name-, type- and unit-correct. Contradictions: none.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-1",
+   "design_id": "design-annotation-rich",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "look/unit1-4.png: the triangle with + over a dash reads instantly, and the 'RRIO' caption inside it does not cross the edges at 600 dpi. The 'TLV9064 CH1..CH4' titles tie each unit to TI's 'channel n' wording in Table 5-5. unit5.png titled 'TLV9064 SUPPLY' is the clearest name for unit 5 of the three designs. The + mark sits about 0.7 mm from the input lead at the triangle corner: tight, but legible.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "The pin map, U+2013 en dashes and types all match Table 5-5 (p8). 'RRIO' matches p1 'Rail-to-rail input and output'. The V- note 'or GND for single supply' paraphrases Table 5-5 'Negative (low) supply or ground (for single-supply operation)', which is closer to the table than a bare '(Ground)'. No forbidden ink. No contradiction found.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Amplifier bodies are the smallest of the three: 22.86x10.16 mm (232 mm2), 33.02 mm span, and the RRIO text sits inside the triangle at no area cost. Two costs: the 'TLV9064 CH1' title differs from Value, so a placed unit prints both (builder_place.py:150-157 keeps a family title over an orderable Value), adding one text line per unit. Unit 5 is a mostly empty 25.4x7.62 box.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "Inputs are on the left, the output on the right, and the output is centered, giving the same straight rows as flow-first. But every pin tip is off the 2.54 mm grid: amplifier pins at x=+/-16.51, unit 5 V+ at y=1.27, V- tip at y=-8.89. They sit on the guide's 1.27 working grid (engine/symbols.py:33 GRID=1.27; 35 of 58 arena-candidate pins are also off the 2.54 grid), so it wires on this board, but it breaks the 100 mil IC convention. It can be grafted with no visible change: pins to +/-17.78, unit 5 to y=2.54 and -10.16.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "Every annotation is load-bearing and none is decorative. RRIO in every amplifier matters for the near-VRES inputs and gate drive. 'or GND for single supply' tells the reader V- goes to GND on this board. CHn titles let a reader match U10A-D to TI's channel numbering without decoding pin numbers.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "judge 1 datasheet check: Checked against SBOS839N p8 Table 5-5 (pdftotext of sha256 8b7077...), p21 'V- (Ground)', and p22 7.3.1/7.3.2. All three designs are pin-, name-, type- and unit-correct. Contradictions: none.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "judge 1 recommended winner annotation-rich; ranking annotation-rich (18, every axis >= 3); flow-first (17, expressibility 2); internals-maximal (16, economy 2); recommended grafts: Move every pin tip onto the 2.54 grid: amplifier pins to x=+/-17.78 (body +/-12.7, as in flow-first) and unit 5 to V+ y=2.54, V- tip y=-10.16. Optional: flow-first's slightly larger + mark placement (x=-3.048) for corner clearance.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-2",
+   "design_id": "design-internals-maximal",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "look/unit1-4.png: the largest and clearest textbook op-amp of the three. 12.7 mm triangle, bold + above -, V+ lead from the top, V- lead from the bottom, OUTn at the tip, IN+ at y +2.54, IN- at -2.54. Unit 5 says '1-4' in a triangle between V+ and V- '(Ground)'.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "Every caption has a source. RRI comes from p22 7.3.1 Rail-to-Rail Input. 'RRO class AB' comes from p22 7.3.2 'A class AB output stage ... full rail-to-rail output swing'. The V+ top / V- '(Ground)' bottom leads match p21 7.2. Pins match Table 5-5 with en dashes. Marked down because unit5.png draws an amplifier triangle on the supply unit, which holds no amplifier (the packet's ki_locked note: 'unit 5 is the supply, not a fifth amplifier'). Also, the V+/V- labels on units 1-4 sit on leads that have no pins. Neither contradicts the datasheet.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "Amplifier body is 30.48 x 15.24 mm (464 mm2, tip-to-tip 40.64 mm) for 3 pins. That is about 1.8x the flow-first and 2x the annotation-rich area, repeated over 8 placed amplifier units (U10A-D, U11A-D). Pin-less V+/V- ink and labels repeat on all four units, and unit 5's triangle is decorative. The title equals the Value, so the Value auto-hides on placement (builder_place hoku 2104): no penalty there.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "All tips on the 2.54 grid (IN +/-2.54 at x=-20.32, OUT at y=0, x=+20.32), straight left-in/right-out. The body is 15.24 tall and 40.64 wide tip-to-tip, so every run to the 2N7002/AO3401A gates and RS sense nodes gets longer. Unit 5's V- tip sits 12.7 mm below centre.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "Most datasheet content of the three: RRI at the inputs, 'RRO class AB' at the output, supply leads per amplifier, '(Ground)' beside V- (p21, Table 5-5), '1-4' telling which channels unit 5 feeds. Minor: 'RRI' sits above IN+ alone, so it can read as applying to one input.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "judge 2 of 3, TLV9064IPWR council; all 15 unit renders viewed (3 designs x 5 units); read-only checks: pin map vs SBOS839N p8 Table 5-5 (pdftotext of sha 8b707789...), U+2013 bytes, pin-tip grid, engine.symbol_quality.audit_block(identity-topology, {5: domain}, authoring=True) = [] for all three, render sha256 = manifests (internals-maximal design.json, annotation-rich look/manifest.json), all render corners #ffffff. Datasheet contradictions: none in any design: all three carry the Table 5-5 SOIC/TSSOP map exactly (pdftotext p8 re-read), U+2013 in IN1-..IN4- and V-, no U+00B1, no ASCII hyphen, no SHDN/NC/thermal pad, no other maker's names.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-2",
+   "design_id": "design-flow-first",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "TLV9064IPWR_unit1-4.png: clear 8.89 mm triangle, drawn + (clear of the slope, about 0.26 mm) above -, OUTn at the tip. TLV9064IPWR_unit5.png is a plain 10.16 mm box that reads as the supply only from its pin names V+/V-. All five units carry the same title, so nothing says 'channel n' or 'supply'.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "Accurate and minimal: Table 5-5 names, numbers and types exact (1/2/3, 7/6/5, 8/9/10, 14/13/12, V+ 4, V- 11, all U+2013, power_in). No SHDN/NC/pad. It adds no silicon fact (no RRIO, no single-supply V- note), so faithful but thin.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Least ink of the three. Amplifier body 25.4 x 10.16 mm, tip-to-tip 35.56 mm; supply unit 10.16 mm square. The title equals the Value, so the Value auto-hides on placement. The body still holds about 5 mm of empty margin between the names and the triangle.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "Every tip on the 2.54 grid (x=+/-17.78; IN +/-2.54, OUT 0; V+ (-10.16, 2.54), V- (0, -10.16)). Straight rows, compact +/-5.08 body, and supply height matching the amplifier units. The generator asserts this (pitch=2.54).",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 2,
+     "note": "Shows nothing beyond the triangle and polarity marks. RRIO (p1 title and bullet), class AB (p21/p22) and 'V- = ground for single supply' (Table 5-5) are all absent, though the packet lists them as optional backed ink.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "judge 2 of 3, TLV9064IPWR council; all 15 unit renders viewed (3 designs x 5 units); read-only checks: pin map vs SBOS839N p8 Table 5-5 (pdftotext of sha 8b707789...), U+2013 bytes, pin-tip grid, engine.symbol_quality.audit_block(identity-topology, {5: domain}, authoring=True) = [] for all three, render sha256 = manifests (internals-maximal design.json, annotation-rich look/manifest.json), all render corners #ffffff. Datasheet contradictions: none in any design: all three carry the Table 5-5 SOIC/TSSOP map exactly (pdftotext p8 re-read), U+2013 in IN1-..IN4- and V-, no U+00B1, no ASCII hyphen, no SHDN/NC/thermal pad, no other maker's names.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-2",
+   "design_id": "design-annotation-rich",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "look/unit1-4.png titles 'TLV9064 CH1'..'CH4' and unit5.png 'TLV9064 SUPPLY' tie every unit to Table 5-5's 'channel n', and RRIO sits in the triangle. Marked down for an ink collision on all four amplifier units: the + stem top (-2.667, 2.9845) is 0.227 mm (perpendicular) from the slope (-3.81,3.81)->(3.81,0), less than the 0.254 mm of the two half-strokes, so the + fuses into the triangle edge. A close-up crop of unit1.png confirms it. The 7.62 mm triangle is the smallest of the three.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Every annotation is printed by TI: 'RRIO' (p1 title 'TLV906xS 10MHz, RRIO, CMOS...', bullet 'Rail-to-rail input and output'); 'or GND for single supply' beside V- (Table 5-5 'Negative (low) supply or ground (for single-supply operation)'); 'CHn' (Table 5-5 'channel n'). Pin map, U+2013 names and power_in types exact. No forbidden ink.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Smallest amplifier body: 22.86 x 10.16 mm, tip-to-tip 33.02 mm. Because the title 'TLV9064 CH1' differs from the Value, the Value stays visible on placement, giving three text lines above each unit (deliberate per builder_place 'family title over an orderable Value keeps both'). The supply unit is 25.4 mm wide for 2 pins, to fit the two-line note.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "Rows are as straight as flow-first's (IN +/-2.54, OUT 0, compact +/-5.08 body). But amplifier tips sit at x=+/-16.51 and supply tips at (-17.78, 1.27) and (0, -8.89): on the engine's 1.27 grid (engine/symbols.py GRID=1.27) but off the 100 mil grid (KLC S4.1) that the other two hold.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "The load-bearing notes a drafter needs: RRIO on every amplifier, per-channel titles that match the board's U10A/U10B pairing, and Table 5-5's single-supply V- reading where V- is wired (on this board V- = GND).",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "judge 2 of 3, TLV9064IPWR council; all 15 unit renders viewed (3 designs x 5 units); read-only checks: pin map vs SBOS839N p8 Table 5-5 (pdftotext of sha 8b707789...), U+2013 bytes, pin-tip grid, engine.symbol_quality.audit_block(identity-topology, {5: domain}, authoring=True) = [] for all three, render sha256 = manifests (internals-maximal design.json, annotation-rich look/manifest.json), all render corners #ffffff. Datasheet contradictions: none in any design: all three carry the Table 5-5 SOIC/TSSOP map exactly (pdftotext p8 re-read), U+2013 in IN1-..IN4- and V-, no U+00B1, no ASCII hyphen, no SHDN/NC/thermal pad, no other maker's names.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "judge 2 recommended winner annotation-rich; ranking annotation-rich (17, only design with every axis >= 3); internals-maximal (16, economy 2); flow-first (15, expressibility 2); recommended grafts: Clear the + mark from the triangle slope: take flow-first's triangle and marks (+/-4.445 triangle, mark centre x=-3.048, 0.635 mm arms; about 0.26 mm clear), or shift MARK_X right / enlarge the triangle so that clearance is >= 0.25 mm. RRIO still fits. Put every tip on the 2.54 grid: amplifier width 25.4 (tips at +/-17.78, as flow-first); supply V+ at y=2.54 and V- at x on the 2.54 grid. Optional: internals-maximal's 'class AB' (p22 7.3.2) only if the chair wants output-stage ink; not needed for the bar.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-3",
+   "design_id": "design-internals-maximal",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "Units 1-4 read at once: a 12.7 mm triangle with 1.27 mm + over \u2013, OUTn at the tip. Unit 5 draws a fifth triangle (marked '1\u20134') between V+ and V\u2013, which a skim reader can take for a fifth amplifier; the packet's ki_locked note says 'unit 5 is the supply, not a fifth amplifier'. In the unit 5 render the rotated V\u2013 name reads as \">'\" beside a horizontal '(Ground)'. The in-body V+/V\u2013 leads on units 1-4 are ink with no pin behind them.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Every caption traces to SBOS839N: 'RRI' to 7.3.1 Rail-to-Rail Input (p22); 'RRO class AB' to 7.3.2 'A class AB output stage ... full rail-to-rail output swing' (p22) and p21 'Class AB'; V+ above, 'V\u2013 (Ground)' below to 7.2 (p21). Pins exactly match Table 5-5.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "Units 1-4 have a 30.48 x 15.24 mm body around a 12.7 mm triangle, with pins 40.64 mm tip to tip. Each unit carries 5 texts (V+, V\u2013, title, RRI, 'RRO class AB'), repeated 4 times per part across U10 and U11. Unit 5 spends a triangle and 2 leads on a 2-pin supply.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "All pin tips are on 2.54 (\u00b120.32; inputs \u00b12.54, output 0; unit 5 at (-15.24, 5.08) and (0, -12.7)), with straight left-in and right-out. The cost is a 40.64 mm span and a 15.24 mm body per unit, so each of the 10 units takes the most sheet area.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "This is the most expressive design: rail-to-rail input, rail-to-rail class AB output, per-amp supply rails, a single-supply ground note, and a unit 5 that names its 1\u20134 fan-out.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "judge 3 common checks: All three match SBOS839N Table 5-5 p8 (SOIC/TSSOP column): pins 3/2/1, 5/6/7, 10/9/8, 12/13/14 on units 1-4, V+ 4 and V\u2013 11 on unit 5. Names 2/6/9/11/13 are U+2013 in the bytes. Types: input, output, power_in. None has SHDN, NC or a thermal pad. Re-ran engine.symbol_quality.audit_block(identity-topology, unit 5 domain, authoring=True): [] for all three. Measured ink (prims/flow span/body width): IM 9/12.70/30.48, FF 7/8.89/25.40, AR 7/7.62/22.86. The known gh#451 en-dash fact blocker is the same for all three. No datasheet contradiction found in any design.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-3",
+   "design_id": "design-flow-first",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Textbook op-amp: an 8.89 mm triangle with 1.27 mm + over \u2013 at y=\u00b12.54 and the tip lead on OUTn at y=0, inside a package box (the LM2902 p1 picture). Unit 5 is a plain V+/V\u2013 box, correct for the 'domain' declaration. The title equals the Value, so the Value auto-hides on placement (TITLE_HIDES_VALUE).",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "Names, numbers and types exactly match Table 5-5, with U+2013 on 2/6/9/11/13. Nothing false is drawn, but nothing is specific to TLV906x either (no RRIO, no V\u2013 ground role): the ink would fit any quad op amp.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "7 strokes per unit, all load-bearing (triangle, 3 leads, + and \u2013 marks), no captions, and the title hides the Value. The only slack is the 25.40 mm body around an 8.89 mm triangle.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "All tips are on 2.54: \u00b117.78; unit 5 at (-10.16, 2.54) and (0, -10.16). Each unit is 35.56 mm wide and 10.16 mm tall, and every pin enters straight.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 2,
+     "note": "It shows only topology and polarity. Unit 5 is a bare box with no single-supply ground note. None of the packet's optional backed ink appears (RRIO, class AB, V\u2013 as ground).",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "judge 3 common checks: All three match SBOS839N Table 5-5 p8 (SOIC/TSSOP column): pins 3/2/1, 5/6/7, 10/9/8, 12/13/14 on units 1-4, V+ 4 and V\u2013 11 on unit 5. Names 2/6/9/11/13 are U+2013 in the bytes. Types: input, output, power_in. None has SHDN, NC or a thermal pad. Re-ran engine.symbol_quality.audit_block(identity-topology, unit 5 domain, authoring=True): [] for all three. Measured ink (prims/flow span/body width): IM 9/12.70/30.48, FF 7/8.89/25.40, AR 7/7.62/22.86. The known gh#451 en-dash fact blocker is the same for all three. No datasheet contradiction found in any design.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-3",
+   "design_id": "design-annotation-rich",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "The triangle reads as an op amp and the 'TLV9064 CH1..4' and 'TLV9064 SUPPLY' titles tell the units apart. The triangle is only 7.62 mm, its + and \u2013 marks are 0.89 mm, and the in-triangle 'RRIO' crowds them: in the unit 1-4 renders the + nearly merges with the input lead at the triangle edge.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "'RRIO' matches p1 'Rail-to-rail input and output'. 'CHn' matches Table 5-5 'channel n'. The supply note paraphrases Table 5-5 'Negative (low) supply or ground (for single-supply operation)' but writes 'GND', which the packet's functional_ink.forbidden list bans 'anywhere' as another maker's name (LMV324, AS324 and LM2902 pin 11). SBOS839N says '(Ground)' for V\u2013 (p21) and uses 'GND' only for the layout plane. This is a packet-rule breach, not a datasheet contradiction.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "The body is the narrowest (22.86 x 10.16 mm, 33.02 mm span) with 7 strokes and one caption. However, the title 'TLV9064 CH1' differs from the Value, so builder_place keeps the Value visible: every placed unit prints both 'TLV9064IPWR' and 'TLV9064 CHn'. 'CHn' restates the digit already in INn+/INn\u2013/OUTn and the unit letter.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "Pin tips at x=\u00b116.51 on units 1-4, and unit 5's V+ y=1.27 and V\u2013 y=-8.89, are off the 2.54 grid. They are legal on the guide's 1.27 GRID (engine/symbols.py), so builder snaps still coincide. Entries are straight left-in and right-out, and the span is the most compact.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "RRIO on every amplifier, a single-supply ground note on unit 5, and named units carry the packet's load-bearing notes. Class AB is not shown (optional). The GND wording and redundant CH titles keep it at the bar.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "judge 3 common checks: All three match SBOS839N Table 5-5 p8 (SOIC/TSSOP column): pins 3/2/1, 5/6/7, 10/9/8, 12/13/14 on units 1-4, V+ 4 and V\u2013 11 on unit 5. Names 2/6/9/11/13 are U+2013 in the bytes. Types: input, output, power_in. None has SHDN, NC or a thermal pad. Re-ran engine.symbol_quality.audit_block(identity-topology, unit 5 domain, authoring=True): [] for all three. Measured ink (prims/flow span/body width): IM 9/12.70/30.48, FF 7/8.89/25.40, AR 7/7.62/22.86. The known gh#451 en-dash fact blocker is the same for all three. No datasheet contradiction found in any design.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "judge 3 bar check: Only annotation-rich is >=3 on every axis. internals-maximal fails economy (2). flow-first fails expressibility (2). Recommendation: Pick annotation-rich as winner, with grafts. (1) From flow-first: put the pin tips on the 2.54 grid (\u00b117.78; unit 5 V+ at y=2.54, V\u2013 at y=-10.16) and use 1.27 mm polarity marks. (2) Change the caption 'or GND for single supply' to TI's wording 'or ground (single supply)'. (3) Optionally make the unit title equal the Value, or drop the 'CH' title, so the engine auto-hides the Value. Do not graft internals-maximal's unit-5 triangle or its pinless V+/V\u2013 leads.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    }
+   ]
+  }
+ ],
+ "selection": {
+  "winner_design_id": "design-annotation-rich",
+  "grafts": [
+   {
+    "id": "G1",
+    "from": "flow-first",
+    "axis": "wiring ergonomics",
+    "closes": "annotation-rich pin ends off the 100-mil grid (judges 1-3 wiring 3: amplifier ends x -/+16.51, supply V+ y 1.27, V\u2013 end y -8.89); recommended by all three judges",
+    "change": "amplifier body width 22.86 -> 25.4 (pin ends x -/+17.78, as flow-first); supply unit gets a spacer row under V+ so its body is -/+5.08 like the amplifiers: V+ end (-17.78, +2.54), V\u2013 end (0, -10.16)",
+    "cost": "amplifier body 232 -> 258 mm2 (flow-first's size), tip span 33.02 -> 35.56 mm; supply body 25.4 x 7.62 -> 25.4 x 10.16, the amplifier units' outline, so U10A-E stack in one column of equal boxes"
+   },
+   {
+    "id": "G2",
+    "from": "flow-first",
+    "axis": "identity read",
+    "closes": "annotation-rich's + stem top (-2.667, 2.9845) sat 0.227 mm (centre line) from the triangle's upper edge, under the 0.254 mm of two half-strokes, so the + fused into the edge on all four amplifier units (judge 2 identity 3, judge 3 identity 3 'the + nearly merges'); judge 2 graft 1, judge 3 graft 1 '1.27 mm polarity marks', judge 1 optional graft",
+    "change": "flow-first's triangle (base x -4.445, half height 4.445, tip +4.445), leads from -/+6.35 and marks (bar x -3.683..-2.413, stem y 1.905..3.175 at x -3.048, - bar at y -2.54); 'RRIO' moved from x -0.635 to -0.762, the same 0.417 of the base-to-tip run it held in annotation-rich's triangle",
+    "result": "+ stem top 0.511 mm centre line / 0.257 mm ink from the edge (pixel profile 0.27 mm unstroked); + bar end 0.54 mm ink; RRIO ink 0.92 mm inside the slope and 1.2 mm under the + stem",
+    "cost": "none in area (the body width is G1's)"
+   },
+   {
+    "id": "G3",
+    "from": "judge 3 recommendation (2)",
+    "axis": "silicon faithfulness",
+    "closes": "annotation-rich's supply note 'or GND for / single supply' writes GND, which packet functional_ink.forbidden bans anywhere (another maker's pin-11 name: LMV324, AS324, LM2902); SBOS839N prints 'ground' (Table 5-5) and '(Ground)' (p21)",
+    "change": "note lines 'or ground for' / 'single supply', centred at x 6.604, y -1.905 / -3.175 beside the vertical V\u2013 name",
+    "source": "p8 Table 5-5 V\u2013 row 'Negative (low) supply or ground (for single-supply operation)'",
+    "scope_choices": [
+     "judge 3's exact 'or ground (single supply)' is 19.57 mm on one line; as two lines its '(single supply)' is 11.38 mm against about 10.9 mm between the V\u2013 name and the right wall. The winner's two-line wording with only GND -> ground fits (10.29 / 10.05 mm, 0.9 mm clear each side) and keeps Table 5-5's 'for'"
+    ]
+   },
+   {
+    "id": "G4",
+    "from": "judge 3 recommendation (3)",
+    "axis": "economy",
+    "closes": "annotation-rich's titles 'TLV9064 CH1'..'CH4' and 'TLV9064 SUPPLY' differ from Value, so every placed unit prints the family name twice (judges 1-3 economy 3, each citing it; judge 3 'CHn restates the digit already in INn+/INn\u2013/OUTn and the unit letter')",
+    "change": "every unit title is TLV9064IPWR, equal to Value, so builder_place hides the Value on placement (config.TITLE_HIDES_VALUE, builder_place.py:156); docs/02-symbols.md:92 'The unit title IS the part number'; every other council final on this board titles its units with the part name",
+    "cost": "judge 1 (identity 4, expressibility 4) and judge 2 (expressibility 4) credited the CHn titles. The channel stays in every pin name (IN1+/IN1\u2013/OUT1 = Table 5-5 'channel 1') and in the unit letter (A-D = channels 1-4); the supply unit says 'supply' in its note"
+   }
+  ],
+  "final_symbol_sha256": "f2b35eaac4bc68c3e4fc3cb16d32630135aec28be0ffc90277a3b3b242af4118"
+ },
+ "final_renders": [
+  {
+   "id": "qa:u1",
+   "unit": 1,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png",
+   "sha256": "b72641244cf79804408d27379bc7955c5123f208a25348ac297ffd3caf7870a6",
+   "background": "#f5f4ef",
+   "symbol_sha256": "f2b35eaac4bc68c3e4fc3cb16d32630135aec28be0ffc90277a3b3b242af4118",
+   "nonce": "LOOK-TDTUHA97TRQ7",
+   "nonce_sha256": "27440c1748e65219b1e1704c7b99dc2745ac7412afb906e818ae7156e3027458"
+  },
+  {
+   "id": "qa:u2",
+   "unit": 2,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U2-box1.png",
+   "sha256": "431d85a38a4b02cf6442a5adf26e58a6a74db1d541531f2b64fd5e67504a3717",
+   "background": "#f5f4ef",
+   "symbol_sha256": "f2b35eaac4bc68c3e4fc3cb16d32630135aec28be0ffc90277a3b3b242af4118",
+   "nonce": "LOOK-C7MTN3FATN74",
+   "nonce_sha256": "89b0bafec02c5feea0da39f8ba024670faa2a58ec884df9364095f123d33c8b2"
+  },
+  {
+   "id": "qa:u3",
+   "unit": 3,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U3-box1.png",
+   "sha256": "ba08889467fe8cdabe783e8b4c9ae56c9ba714081ac7a999b691c4b69b5f52bd",
+   "background": "#f5f4ef",
+   "symbol_sha256": "f2b35eaac4bc68c3e4fc3cb16d32630135aec28be0ffc90277a3b3b242af4118",
+   "nonce": "LOOK-YTYWQGTW3X3U",
+   "nonce_sha256": "b04acbf735ab5d10256e11e58cc98685d3ecef525fff141b1d5ee9ec6067fd95"
+  },
+  {
+   "id": "qa:u4",
+   "unit": 4,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U4-box1.png",
+   "sha256": "97b36363d8d30f0058785001160e22bc3d98e78b4c6b4913f630307b7cece0b5",
+   "background": "#f5f4ef",
+   "symbol_sha256": "f2b35eaac4bc68c3e4fc3cb16d32630135aec28be0ffc90277a3b3b242af4118",
+   "nonce": "LOOK-HCEU4CVPX9DP",
+   "nonce_sha256": "95ab78d746712fc3a1e2e0336f3ae15f4592681e6442e49893ac14d6930fc255"
+  },
+  {
+   "id": "qa:u5",
+   "unit": 5,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U5-box1.png",
+   "sha256": "f6e60c12fb556cfda7ebba4fd58dda064cce1327f942894f116a29fb9e299ddb",
+   "background": "#f5f4ef",
+   "symbol_sha256": "f2b35eaac4bc68c3e4fc3cb16d32630135aec28be0ffc90277a3b3b242af4118",
+   "nonce": "LOOK-T9NCPATE4G7W",
+   "nonce_sha256": "0bf9a2d5bde1af7d71128184a937ea2fab38435a1779a840b271644428fecd32"
+  }
+ ],
+ "regraders": [
+  {
+   "reviewer_id": "look-regrader-TLV9064IPWR-1",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "render_ids": [
+    "qa:u1",
+    "qa:u2",
+    "qa:u3",
+    "qa:u4",
+    "qa:u5"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: units U1A-U1D each show an op-amp triangle with + on the upper input and - on the lower input, a tip-to-OUTn lead and an 'RRIO' caption, so each reads as one op-amp channel at a glance. U1E reads plainly as the supply unit (V+ pin 4, V- pin 11).",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: I checked every pin against the cached datasheet text (ds.pdf sha 8b707789..., SBOS839N Table 5-5, SOIC/TSSOP column) rather than facts.json. Pins match: 3/2/1 = IN1+/IN1-/OUT1, 5/6/7 = IN2+/IN2-/OUT2, 10/9/8 = IN3+/IN3-/OUT3, 12/13/14 = IN4+/IN4-/OUT4, 4 = V+, 11 = V-. The table prints the minus as U+2013 and the symbol names use U+2013 (D-15). Types match the datasheet (I = input, O = output, V+/V- = power_in). 'RRIO' matches datasheet feature line 7, 'Rail-to-rail input and output'. The 'or ground for single supply' note matches the V- row, 'Negative (low) supply or ground (for single-supply operation)'.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: no decorative ink. However, the triangle sits inside a 25.4 mm box whose pin names repeat the +/- marks, and the U1E body is mostly empty for two pins.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "ERGONOMICS 3: pin ends are on the 2.54 grid (+/-17.78), the inputs are 5.08 apart on the left and OUTn is on the right in line with the tip, so signal flow is left to right. Two minor costs: the 35.56 mm span makes feedback loops long, and V+ enters from the left instead of the top (V- from the bottom suits a ground drop).",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "EXPRESSIBILITY 3: the RRIO caption and the single-supply V- note are the part's load-bearing facts and both are drawn. They are legible at full resolution, though RRIO is small (1.0 mm).",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Graded QA's own pages for TLV9064IPWR (symbol f2b35eaa...4118) from receipts/TLV9064IPWR/qa/arena-manifest.json (verdict PASS, build 6a80ec3b). Checks: all 5 page PNG sha256 values match the manifest. I viewed each page at full resolution (911x404/402, unit 5 671x672, measured background #f5f4ef). Each nonce read from the pixels hashes to the manifest nonce_sha256 (5/5). The candidate .kicad_sym rehashes to the manifest's symbol_sha256.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Nothing is open. No prompt injection found in the manifest, arena.log, symbol, facts.json or design/decisions.md. Nothing was written to any repo.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-TLV9064IPWR-2",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "render_ids": [
+    "qa:u1",
+    "qa:u2",
+    "qa:u3",
+    "qa:u4",
+    "qa:u5"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: units 1-4 (U1A-U1D) each draw a triangle with + and - marks on the inputs, the output at the tip and RRIO inside, so each reads as an op amp at a glance. Unit 5 (U1E) is plainly the supply unit (V+ and V-).",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: all 14 pins match SBOS839N Table 5-5 (p8, TSSOP column): OUT1=1 IN1-=2 IN1+=3 V+=4 IN2+=5 IN2-=6 OUT2=7 OUT3=8 IN3-=9 IN3+=10 V-=11 IN4+=12 IN4-=13 OUT4=14. Names use TI's en dash. Types are input/output/power_in, matching TYPE I/O. The V- note 'or ground for single supply' follows Table 5-5 ('Negative (low) supply or ground (for single-supply operation)'), and RRIO follows p1 'Rail-to-rail input and output'. Footprint is TSSOP-14 4.4x5mm P0.65. ki_locked matches stock LM2902.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: the rectangle around the triangle, plus pin names that repeat the triangle's +/- marks, is redundant ink, but D-15 requires the TI names. The unit-5 box is oversized for its two pins and mostly empty.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "ERGONOMICS 3: units 1-4 put inputs on the left, the output on the right, pins on a 2.54 pitch, and pin numbers and names never collide. Unit 5 is minor (non-blocking): V+ sits on the left while V- exits the bottom, which is asymmetric (V+ on top is the usual convention), and the small V- note sits tight against the rotated V- name without overlapping it.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: RRIO, the single-supply ground note and the per-channel numbering (IN1..IN4, OUT1..OUT4) are the facts that change wiring, with no decorative ink.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Graded QA's own arena pages from the latest arena-manifest.json (symbol_sha256 f2b35eaa..., which equals the sha256sum of candidates/TLV9064IPWR/TLV9064IPWR.kicad_sym; verdict PASS). All 5 page PNGs rehash to the manifest sha256. I viewed each page at native resolution (911x404 for units 1-4, 671x672 for unit 5) and zoomed 3x on U3 and U5. I read each LOOK nonce from the yellow banner pixels and hashed it: all five match the manifest nonce_sha256 (U1 27440c17, U2 89b0bafe, U3 b04acbf7, U4 95ab78d7, U5 0bf9a2d5).",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Arena-placed reference fields sit left of centre on units 1-4 (placement, not symbol). suspected_injection: none. The packet's decision_for_lead text addresses the Lead as normal workflow content, not this regrader. Nothing written to any repo; zoom crops only in the session scratchpad.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-TLV9064IPWR-3",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "render_ids": [
+    "qa:u1",
+    "qa:u2",
+    "qa:u3",
+    "qa:u4",
+    "qa:u5"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: units 1-4 (U1A-U1D) each show an op-amp triangle inside the package box, '+' on the INn+ row, a minus on the INn- row, OUTn at the tip, 'RRIO' inside the triangle and the bold TLV9064IPWR title, so they read at a glance as one amplifier of a quad. Unit 5 (U1E) reads as the supply domain: V+ pin 4 and V- pin 11.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: checked against the cached ds.txt of SBOS839N (sha 8b707789..., ds.pdf rehashes to it), Table 5-5, SOIC/TSSOP column. All 14 pins match: OUT1 1, IN1- 2, IN1+ 3, V+ 4, IN2+ 5, IN2- 6, OUT2 7, OUT3 8, IN3- 9, IN3+ 10, V- 11, IN4+ 12, IN4- 13, OUT4 14. Inverting-input and V- names use U+2013 as printed (D-15). Electrical types match TYPE: inputs are input, outputs are output, V+/V- are power_in. 'RRIO' is backed by the p1 title. The supply note 'or ground for / single supply' paraphrases the V- row: 'Negative (low) supply or ground (for single-supply operation)'. The polarity marks sit on the correct rows even where pin order flips (units 2 and 4: 5/6 and 12/13).",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: the box, the pin names and the triangle's +/- marks code polarity twice; the names are datasheet-mandated by D-15 and the ink is thin. Unit 5 uses the full 25.4x10.16 mm amplifier box for two pins, so it is mostly empty. Two non-blocking notes: the library Value field sits visible at y=8.89 above the in-body bold title at y=6.35. The arena build hides Value on placement, so the pages show it once, but a raw placement outside the engine would show the name twice. The static title would also not follow a changed Value.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "ERGONOMICS 3: on units 1-4 inputs enter on the left and the output leaves on the right. Pin ends sit at x=+-17.78 and y=+-2.54/0 on the 2.54 grid, and the + top / - bottom order is the same on every unit. The bottom minus input suits a conventional feedback loop under the box. A 3x zoom shows no name, lead or mark collisions (IN1+ to lead gap is clear, the OUT1 lead stops short of its name). Unit 5 puts V+ on the left but V- on the bottom, and the wide box costs sheet area.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: polarity, output at the tip, rail-to-rail I/O (RRIO) and V- as an optional single-supply ground (a note placed beside the V- name) all show in the ink. TLV9064 TSSOP has no SHDN or NC pin, so nothing load-bearing is missing.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Graded QA's own arena pages from /home/vincent/projects/pmic-test-arena/receipts/TLV9064IPWR/qa/arena-manifest.json (verdict PASS, symbol_sha256 f2b35eaa..., equal to the candidate .kicad_sym and to truedepth-shim symbol-council/TLV9064IPWR/final/TLV9064IPWR.kicad_sym). I sha256-checked all five pages against the manifest. I read each LOOK nonce from the yellow banner pixels; sha256 of each nonce string matches the manifest nonce_sha256 (5/5).",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Units seen 1-5, nothing open. suspected_injection: none found in any file or page read.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-TLV9064IPWR-4",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "render_ids": [
+    "qa:u1",
+    "qa:u2",
+    "qa:u3",
+    "qa:u4",
+    "qa:u5"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: units 1-4 (U1A-U1D) are an op-amp triangle inside the box. The INn+ row has a drawn '+', the INn- row a drawn bar, and OUTn sits at the tip. Each triangle carries an RRIO caption. Unit 5 (U1E) is a separate supply unit. It reads at a glance as a quad RRIO op amp.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: I checked all 14 pins against the cached datasheet text, SBOS839N Table 5-5 p8 (ds.pdf sha 8b707789, SOIC/TSSOP column). Pin numbers by unit: 3/2/1, 5/6/7, 10/9/8, 12/13/14, plus 4 (V+) and 11 (V-). This covers all 14 with no NC pin, which is correct because NC exists only on WQFN. Electrical types are input, output and power_in, matching the table's TYPE column. Names use U+2013, exactly as the table prints them; on the page this dash draws like a hyphen, which is a known KiCad font limit. The V- note 'or ground for single supply' follows the Table 5-5 description.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: the amplifier units carry no decorative ink. Two minor redundancies: the pin names repeat the triangle's polarity marks, and the box doubles the triangle's outline. Unit 5 reuses the 25.4x10.16 mm body for only two pins, which leaves a large empty upper-right area.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "ERGONOMICS 3: on units 1-4 the inputs enter on the left 5.08 mm apart and the output leaves on the right, level with the tip. Pin ends sit on the 2.54 grid at x=+/-17.78, and the arena wires run clean with no crossings. Unit 5 is less conventional: V+ enters from the left edge while V- drops from the bottom edge (pin end 0,-10.16). The rotated V- name sits about one character from the note text, tight but not overlapping.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: the RRIO caption (datasheet p1) and the single-supply note on V- carry facts that matter for wiring. The polarity marks make each input's role clear without reading pin names.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Regrader 4 of 5. Graded QA's own arena pages from the latest manifest at /home/vincent/projects/pmic-test-arena/receipts/TLV9064IPWR/qa/arena-manifest.json (verdict PASS, symbol_sha256 f2b35eaa, which matches candidates/TLV9064IPWR/TLV9064IPWR.kicad_sym). I viewed all 5 crop pages at native resolution (911x404, 911x402, 911x404, 911x402, 671x672) and zoomed into U3 and U5 for detail. Each PNG's sha256 matches the manifest. I read each LOOK nonce from the yellow banner pixels, and sha256 of each full string equals the manifest nonce_sha256 for that unit.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Non-blocking observations: (1) arena net labels derived from the en-dash names render as 'INn_', which comes from the harness, not the symbol; (2) unit 5's mixed left/bottom supply orientation and empty body space.\n\nNo suspected prompt injection found in any file read. Nothing written to any repo; my two zoom crops went to the session scratchpad.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-TLV9064IPWR-5",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "render_ids": [
+    "qa:u1",
+    "qa:u2",
+    "qa:u3",
+    "qa:u4",
+    "qa:u5"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: U1A-U1D each draw an op-amp triangle with the + mark on the top input and the bar mark on the bottom input. The output comes off the triangle tip at the right. The pins are captioned INn+/INn-/OUTn with RRIO inside the triangle and a bold TLV9064IPWR title. U1E is a clearly separate supply unit (V+, V-). The parts read instantly as one quad op-amp plus a power unit. Channel n matches unit letter A-D on every page.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: Checked against cached SBOS839N ds.pdf (sha 8b707789..., rehashes), Table 5-5 SOIC/TSSOP column, p8. U1: 3 IN1+, 2 IN1-, 1 OUT1. U2: 5 IN2+, 6 IN2-, 7 OUT2. U3: 10 IN3+, 9 IN3-, 8 OUT3. U4: 12 IN4+, 13 IN4-, 14 OUT4. U5: 4 V+, 11 V-. All 14 pins exact, with no NC or pad on PW. The symbol bytes carry U+2013 as Table 5-5 prints it. Types are input/output/power_in as Table 5-5 gives I/O. RRIO is true for TLV906x. The unit-5 note 'or ground for / single supply' paraphrases the V- row 'Negative (low) supply or ground (for single-supply operation)'.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: Ink is minimal: triangle, polarity marks, RRIO and title, with nothing decorative. But the 25.4x10.16 mm rectangle around a ~9 mm triangle is mostly empty, and the INn+/INn- captions partly repeat the +/- marks. U5 is a 25.4 mm box for two pins.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "ERGONOMICS 3: Inputs are on the left, output on the right, and all pin ends sit on the 2.54 grid (+/-17.78; y +/-2.54, 0). The output is centred between the inputs, which suits feedback wiring. Two costs: the tip span is 35.56 mm, so feedback loops run longer than with a stock op-amp glyph, and on U5 V+ enters from the left instead of the top (V- at the bottom is good for ground).",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "EXPRESSIBILITY 3: RRIO captures the rail-to-rail fact that matters on a single 3V3 rail, and the V- note gives the single-supply grounding. Polarity marks and channel-numbered names match the datasheet. No needless annotation. Supply range is not shown; not required.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Graded QA's own arena pages from /home/vincent/projects/pmic-test-arena/receipts/TLV9064IPWR/qa/arena-manifest.json (symbol f2b35eaa..., which equals the candidate and council final/TLV9064IPWR.kicad_sym; verdict PASS). Viewed all 5 crop pages at native resolution (U1-U4 911x402/404, U5 671x672). Every page sha256 matches the manifest. Each LOOK nonce read from the pixels, confirmed on 2x nearest-neighbour banner crops, hashes to the manifest nonce_sha256 (5/5 True). Measured background is #f5f4ef on all 5 pages, matching the manifest.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Non-blocking notes: (a) the IN1_/IN2_/IN3_/IN4_ and V_ net labels are QA build.py harness labels that turn the en-dash into an underscore; they are not symbol ink. (b) KiCad's stroke font draws U+2013 at hyphen length; this is a recorded known divergence and the bytes are correct. (c) selection.json open finding f-a82f5e/gh#451 (single-source en-dash pin facts in SYM-PINSET-MATCH) is a pin-fact qualification item that blocks the inspector's verdict, not a LOOK finding, so I did not list it as open here.\n\nNo suspected prompt injection in any file or page I read. Nothing written to any repo; temporary banner crops are in the session scratchpad only.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    }
+   ]
+  }
+ ],
+ "binding": {
+  "tool": "library-qa/council.py look",
+  "by": "lead-main",
+  "agents": [
+   "designer-annotation-rich-tlv9064ipwr",
+   "designer-flow-first-tlv9064ipwr",
+   "designer-internals-maximal-tlv9064ipwr",
+   "judge-1",
+   "judge-2",
+   "judge-3",
+   "look-regrader-TLV9064IPWR-1",
+   "look-regrader-TLV9064IPWR-2",
+   "look-regrader-TLV9064IPWR-3",
+   "look-regrader-TLV9064IPWR-4",
+   "look-regrader-TLV9064IPWR-5"
+  ],
+  "candidate": {
+   "sha256": "cf547a1d081525f0526f23194c136884863c3f5a68a24110dbb04a19e364c51b",
+   "files": {
+    "TLV9064IPWR.kicad_sym": "f2b35eaac4bc68c3e4fc3cb16d32630135aec28be0ffc90277a3b3b242af4118",
+    "TLV9064IPWR_unit1.png": "5a93131dcf41202dc4044c3a83b6104a0fc49a4113599f60713956e2c6d490c9",
+    "TLV9064IPWR_unit2.png": "79eee1eab54ea9673f67b81128af19a12038a8fcde5e69f2fc4431a3c756f4b1",
+    "TLV9064IPWR_unit3.png": "955f7e42f48c35c59a00633e0d76942a7256d47b0c78a2f8cec0f04443a7cf93",
+    "TLV9064IPWR_unit4.png": "f9210d2d0547cff9f15b0a3367af6a45fea4afd449f1ff1c6372fd191ffce3a0",
+    "TLV9064IPWR_unit5.png": "6aafcb18a75a1ece20e9e02e3e09e20d0f9eb6bfc2d3b2639b0bae991fe15a75",
+    "author.json": "b5165e04a2b378d6297fd82c97d94d9ea8407e7bc226397c8b28c0414ba799dc",
+    "comparable_ds.json": "31152e8432199829ed6abd200be1b8e82053309fc734d7ad087264ab2e2726b2",
+    "council/annotation-rich/TLV9064IPWR.kicad_sym": "8a43b851aabcf72b226914fd3df55545fa866be378604650599f0788dfb70bab",
+    "council/annotation-rich/TLV9064IPWR_unit1.png": "32338e0d8cef4691dd946d04b3f6cc17ac13c19438dbd578838d3245adecd8e5",
+    "council/annotation-rich/TLV9064IPWR_unit2.png": "43921aa2bbb5dd4765050b594d31e7e4922f19a10e41db0c7f49266a215a8cae",
+    "council/annotation-rich/TLV9064IPWR_unit3.png": "ffe2f57e163cc97c5c6a277e0adc660dbd7e95643e3e7fdd7b5aeed1fe431da5",
+    "council/annotation-rich/TLV9064IPWR_unit4.png": "3001df39ebf9dd62b099aef218f3fe299ce6c3816179f2e74ff956f214f2df71",
+    "council/annotation-rich/TLV9064IPWR_unit5.png": "f3ff46070164d92053e8382f4b1b75186d290781fa6f76d7df1895fbcbb44242",
+    "council/flow-first/TLV9064IPWR.kicad_sym": "c7d6cfdb811bced02af823332a1f4259a4a98406df346911f32ede3b9c72d833",
+    "council/flow-first/TLV9064IPWR_unit1.png": "fd2d1cbeb0029a7625f7bebbbde3d38473d2a18e1fc7a159a4571c4a18c4fed4",
+    "council/flow-first/TLV9064IPWR_unit2.png": "414ca031763a631dc1e6cfc805d29b4e90a11f9306e3aadf3537201abc82d616",
+    "council/flow-first/TLV9064IPWR_unit3.png": "b75bb612d8d03d8c08a248210de46467734fa1bfc0ebf345d9d0d925bed15bc4",
+    "council/flow-first/TLV9064IPWR_unit4.png": "8c2bcd975a20e5175c55a34d1bc86ecd2084c95d6cc655410e0056a82c426bb2",
+    "council/flow-first/TLV9064IPWR_unit5.png": "5dccb21e08220ab8d2872c95def95800b1dafa529c3e4fa1c3cf432c33f13cf4",
+    "council/internals-maximal/TLV9064IPWR.kicad_sym": "2435f5029827c486bdc3c99c752e4978f81b1b5df1429f9ec6ca1b9b78221f04",
+    "council/internals-maximal/TLV9064IPWR_unit1.png": "2a209f7f50fba1043a4b5ae61c9a813024144fbe1a189dbe5f4071a964bee64b",
+    "council/internals-maximal/TLV9064IPWR_unit2.png": "2e8ede577ae2df9dfbb8adbaccb1cbc9bea5d32cc9809ecac27cf943dca8319f",
+    "council/internals-maximal/TLV9064IPWR_unit3.png": "c4b48307738e8fab5f6440f0e593d882ec2d6cf9876e6b266c6f511d3e8ef13b",
+    "council/internals-maximal/TLV9064IPWR_unit4.png": "7c0799a668d80a523aa135b142b0adec425d1f03e4265fd32fd3d53262cb8009",
+    "council/internals-maximal/TLV9064IPWR_unit5.png": "06e3597f59aca50d48a13ea29a5f38274083a46531da7a49e02c42b848831a47",
+    "facts.json": "9ffeaaa67d68d948d1ad6136645c4962e8d21bf8da82d5914c7535491bf09551",
+    "generate.py": "b79e61fe3405f901a96fcfd7794a3cf89d4d4aca9887a982e3d7446519585a54",
+    "pin-truth.json": "222e52b7292156579f686661afedeb19a44d03171cd5c4d96f10e8be30f0bb2e"
+   }
+  },
+  "verdict": "pass"
+ }
+}

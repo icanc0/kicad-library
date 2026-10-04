@@ -1,0 +1,141 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "TLV9064IPWR",
+ "symbol": {
+  "asset_path": "TLV9064IPWR.kicad_sym",
+  "internal_name": "TLV9064IPWR",
+  "sha256": "f2b35eaac4bc68c3e4fc3cb16d32630135aec28be0ffc90277a3b3b242af4118"
+ },
+ "archetype": "identity-topology",
+ "units": [
+  {
+   "unit": 1,
+   "role": "amplifier 1 (channel 1): IN1+ pin 3 noninverting input, IN1\u2013 pin 2 inverting input, OUT1 pin 1 output (TI SBOS839N Rev. N p8 Table 5-5, SOIC/TSSOP column)",
+   "presentation": "identity-topology",
+   "identity_features": [
+    "op-amp triangle (base x -4.445, half height 4.445, tip x +4.445) inside a 25.4 x 10.16 mm box: IN1+ pin 3 at (-17.78, +2.54) and IN1\u2013 pin 2 at (-17.78, -2.54) on the left, OUT1 pin 1 at (+17.78, 0) on the tip row; leads run from the input rows into the base corners and from the tip to OUT1 (Table 5-5 rows 3/2/1; grafts G1, G2 from flow-first)",
+    "drawn 1.27 mm polarity marks: '+' on the IN1+ row, a bar on the IN1\u2013 row; pin names carry U+2013 as Table 5-5 prints them (lead decision D-15); inputs typed input, the output output",
+    "'RRIO' inside the triangle at (-0.762, 0) (SBOS839N p1 'Rail-to-rail input and output')",
+    "bold unit title TLV9064IPWR equal to Value (graft G4), so a placed unit prints the part number once; ki_locked (units not interchangeable: unit 5 is the supply, not a fifth amplifier)"
+   ]
+  },
+  {
+   "unit": 2,
+   "role": "amplifier 2 (channel 2): IN2+ pin 5 noninverting input, IN2\u2013 pin 6 inverting input, OUT2 pin 7 output (TI SBOS839N Rev. N p8 Table 5-5, SOIC/TSSOP column)",
+   "presentation": "identity-topology",
+   "identity_features": [
+    "op-amp triangle (base x -4.445, half height 4.445, tip x +4.445) inside a 25.4 x 10.16 mm box: IN2+ pin 5 at (-17.78, +2.54) and IN2\u2013 pin 6 at (-17.78, -2.54) on the left, OUT2 pin 7 at (+17.78, 0) on the tip row; leads run from the input rows into the base corners and from the tip to OUT2 (Table 5-5 rows 5/6/7; grafts G1, G2 from flow-first)",
+    "drawn 1.27 mm polarity marks: '+' on the IN2+ row, a bar on the IN2\u2013 row; pin names carry U+2013 as Table 5-5 prints them (lead decision D-15); inputs typed input, the output output",
+    "'RRIO' inside the triangle at (-0.762, 0) (SBOS839N p1 'Rail-to-rail input and output')",
+    "bold unit title TLV9064IPWR equal to Value (graft G4), so a placed unit prints the part number once; ki_locked (units not interchangeable: unit 5 is the supply, not a fifth amplifier)"
+   ]
+  },
+  {
+   "unit": 3,
+   "role": "amplifier 3 (channel 3): IN3+ pin 10 noninverting input, IN3\u2013 pin 9 inverting input, OUT3 pin 8 output (TI SBOS839N Rev. N p8 Table 5-5, SOIC/TSSOP column)",
+   "presentation": "identity-topology",
+   "identity_features": [
+    "op-amp triangle (base x -4.445, half height 4.445, tip x +4.445) inside a 25.4 x 10.16 mm box: IN3+ pin 10 at (-17.78, +2.54) and IN3\u2013 pin 9 at (-17.78, -2.54) on the left, OUT3 pin 8 at (+17.78, 0) on the tip row; leads run from the input rows into the base corners and from the tip to OUT3 (Table 5-5 rows 10/9/8; grafts G1, G2 from flow-first)",
+    "drawn 1.27 mm polarity marks: '+' on the IN3+ row, a bar on the IN3\u2013 row; pin names carry U+2013 as Table 5-5 prints them (lead decision D-15); inputs typed input, the output output",
+    "'RRIO' inside the triangle at (-0.762, 0) (SBOS839N p1 'Rail-to-rail input and output')",
+    "bold unit title TLV9064IPWR equal to Value (graft G4), so a placed unit prints the part number once; ki_locked (units not interchangeable: unit 5 is the supply, not a fifth amplifier)"
+   ]
+  },
+  {
+   "unit": 4,
+   "role": "amplifier 4 (channel 4): IN4+ pin 12 noninverting input, IN4\u2013 pin 13 inverting input, OUT4 pin 14 output (TI SBOS839N Rev. N p8 Table 5-5, SOIC/TSSOP column)",
+   "presentation": "identity-topology",
+   "identity_features": [
+    "op-amp triangle (base x -4.445, half height 4.445, tip x +4.445) inside a 25.4 x 10.16 mm box: IN4+ pin 12 at (-17.78, +2.54) and IN4\u2013 pin 13 at (-17.78, -2.54) on the left, OUT4 pin 14 at (+17.78, 0) on the tip row; leads run from the input rows into the base corners and from the tip to OUT4 (Table 5-5 rows 12/13/14; grafts G1, G2 from flow-first)",
+    "drawn 1.27 mm polarity marks: '+' on the IN4+ row, a bar on the IN4\u2013 row; pin names carry U+2013 as Table 5-5 prints them (lead decision D-15); inputs typed input, the output output",
+    "'RRIO' inside the triangle at (-0.762, 0) (SBOS839N p1 'Rail-to-rail input and output')",
+    "bold unit title TLV9064IPWR equal to Value (graft G4), so a placed unit prints the part number once; ki_locked (units not interchangeable: unit 5 is the supply, not a fifth amplifier)"
+   ]
+  },
+  {
+   "unit": 5,
+   "role": "supply: V+ pin 4 positive (high) supply and V\u2013 pin 11 negative (low) supply or ground, shared by amplifiers 1-4 (Table 5-5 rows 4, 11)",
+   "presentation": "domain",
+   "identity_features": [
+    "supply unit, presentation domain: 25.4 x 10.16 mm box (the amplifier outline, graft G1); V+ pin 4 at (-17.78, +2.54) on the left edge over a spacer row, V\u2013 pin 11 at (0, -10.16) on the bottom edge, both power_in",
+    "note 'or ground for' over 'single supply' beside the vertical V\u2013 name (graft G3; Table 5-5 V\u2013 row 'Negative (low) supply or ground (for single-supply operation)'); no GND ink, no NC or exposed-pad pin (TSSOP PW has none)"
+   ]
+  }
+ ],
+ "evidence": {
+  "comparable_ds": {
+   "path": "comparable_ds.json",
+   "sha256": "31152e8432199829ed6abd200be1b8e82053309fc734d7ad087264ab2e2726b2",
+   "own_sha256": "8b707789a11c350e9809ed787292705093172be3bfebc4b09466cfaa28f01312",
+   "comparable_count": 3
+  },
+  "pin_truth": {
+   "path": "pin-truth.json",
+   "sha256": "222e52b7292156579f686661afedeb19a44d03171cd5c4d96f10e8be30f0bb2e",
+   "coverage": "all"
+  }
+ },
+ "generator": {
+  "contract": "python-cli-output-v1",
+  "path": "generate.py",
+  "sha256": "b79e61fe3405f901a96fcfd7794a3cf89d4d4aca9887a982e3d7446519585a54",
+  "inputs": [],
+  "expected_symbol_sha256": "f2b35eaac4bc68c3e4fc3cb16d32630135aec28be0ffc90277a3b3b242af4118"
+ },
+ "look": {
+  "receipt_path": "symbol-look.json",
+  "sha256": "53ea252871c063b70b0683c3041d5eefa9700860f6a54554d7ea81fb4bc22d8e"
+ },
+ "binding": {
+  "tool": "library-qa/council.py quality",
+  "by": "lead-main",
+  "agents": [
+   "designer-annotation-rich-tlv9064ipwr",
+   "designer-flow-first-tlv9064ipwr",
+   "designer-internals-maximal-tlv9064ipwr",
+   "judge-1",
+   "judge-2",
+   "judge-3",
+   "look-regrader-TLV9064IPWR-1",
+   "look-regrader-TLV9064IPWR-2",
+   "look-regrader-TLV9064IPWR-3",
+   "look-regrader-TLV9064IPWR-4",
+   "look-regrader-TLV9064IPWR-5"
+  ],
+  "candidate": {
+   "sha256": "cf547a1d081525f0526f23194c136884863c3f5a68a24110dbb04a19e364c51b",
+   "files": {
+    "TLV9064IPWR.kicad_sym": "f2b35eaac4bc68c3e4fc3cb16d32630135aec28be0ffc90277a3b3b242af4118",
+    "TLV9064IPWR_unit1.png": "5a93131dcf41202dc4044c3a83b6104a0fc49a4113599f60713956e2c6d490c9",
+    "TLV9064IPWR_unit2.png": "79eee1eab54ea9673f67b81128af19a12038a8fcde5e69f2fc4431a3c756f4b1",
+    "TLV9064IPWR_unit3.png": "955f7e42f48c35c59a00633e0d76942a7256d47b0c78a2f8cec0f04443a7cf93",
+    "TLV9064IPWR_unit4.png": "f9210d2d0547cff9f15b0a3367af6a45fea4afd449f1ff1c6372fd191ffce3a0",
+    "TLV9064IPWR_unit5.png": "6aafcb18a75a1ece20e9e02e3e09e20d0f9eb6bfc2d3b2639b0bae991fe15a75",
+    "author.json": "b5165e04a2b378d6297fd82c97d94d9ea8407e7bc226397c8b28c0414ba799dc",
+    "comparable_ds.json": "31152e8432199829ed6abd200be1b8e82053309fc734d7ad087264ab2e2726b2",
+    "council/annotation-rich/TLV9064IPWR.kicad_sym": "8a43b851aabcf72b226914fd3df55545fa866be378604650599f0788dfb70bab",
+    "council/annotation-rich/TLV9064IPWR_unit1.png": "32338e0d8cef4691dd946d04b3f6cc17ac13c19438dbd578838d3245adecd8e5",
+    "council/annotation-rich/TLV9064IPWR_unit2.png": "43921aa2bbb5dd4765050b594d31e7e4922f19a10e41db0c7f49266a215a8cae",
+    "council/annotation-rich/TLV9064IPWR_unit3.png": "ffe2f57e163cc97c5c6a277e0adc660dbd7e95643e3e7fdd7b5aeed1fe431da5",
+    "council/annotation-rich/TLV9064IPWR_unit4.png": "3001df39ebf9dd62b099aef218f3fe299ce6c3816179f2e74ff956f214f2df71",
+    "council/annotation-rich/TLV9064IPWR_unit5.png": "f3ff46070164d92053e8382f4b1b75186d290781fa6f76d7df1895fbcbb44242",
+    "council/flow-first/TLV9064IPWR.kicad_sym": "c7d6cfdb811bced02af823332a1f4259a4a98406df346911f32ede3b9c72d833",
+    "council/flow-first/TLV9064IPWR_unit1.png": "fd2d1cbeb0029a7625f7bebbbde3d38473d2a18e1fc7a159a4571c4a18c4fed4",
+    "council/flow-first/TLV9064IPWR_unit2.png": "414ca031763a631dc1e6cfc805d29b4e90a11f9306e3aadf3537201abc82d616",
+    "council/flow-first/TLV9064IPWR_unit3.png": "b75bb612d8d03d8c08a248210de46467734fa1bfc0ebf345d9d0d925bed15bc4",
+    "council/flow-first/TLV9064IPWR_unit4.png": "8c2bcd975a20e5175c55a34d1bc86ecd2084c95d6cc655410e0056a82c426bb2",
+    "council/flow-first/TLV9064IPWR_unit5.png": "5dccb21e08220ab8d2872c95def95800b1dafa529c3e4fa1c3cf432c33f13cf4",
+    "council/internals-maximal/TLV9064IPWR.kicad_sym": "2435f5029827c486bdc3c99c752e4978f81b1b5df1429f9ec6ca1b9b78221f04",
+    "council/internals-maximal/TLV9064IPWR_unit1.png": "2a209f7f50fba1043a4b5ae61c9a813024144fbe1a189dbe5f4071a964bee64b",
+    "council/internals-maximal/TLV9064IPWR_unit2.png": "2e8ede577ae2df9dfbb8adbaccb1cbc9bea5d32cc9809ecac27cf943dca8319f",
+    "council/internals-maximal/TLV9064IPWR_unit3.png": "c4b48307738e8fab5f6440f0e593d882ec2d6cf9876e6b266c6f511d3e8ef13b",
+    "council/internals-maximal/TLV9064IPWR_unit4.png": "7c0799a668d80a523aa135b142b0adec425d1f03e4265fd32fd3d53262cb8009",
+    "council/internals-maximal/TLV9064IPWR_unit5.png": "06e3597f59aca50d48a13ea29a5f38274083a46531da7a49e02c42b848831a47",
+    "facts.json": "9ffeaaa67d68d948d1ad6136645c4962e8d21bf8da82d5914c7535491bf09551",
+    "generate.py": "b79e61fe3405f901a96fcfd7794a3cf89d4d4aca9887a982e3d7446519585a54",
+    "pin-truth.json": "222e52b7292156579f686661afedeb19a44d03171cd5c4d96f10e8be30f0bb2e"
+   }
+  },
+  "verdict": "pass"
+ }
+}

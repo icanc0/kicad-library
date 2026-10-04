@@ -1,0 +1,108 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "tlv9064ipwr",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Texas Instruments",
+      "normalized": "texas-instruments"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "TLV9064IPWR",
+      "canonical": "TLV9064IPWR",
+      "comparison_key": "TLV9064IPWR",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C779410"
+      }
+    ],
+    "description": "Central library symbol TLV9064IPWR promoted from truedepth-shim."
+  },
+  "names": {
+    "canonical": "TLV9064IPWR",
+    "aliases": [],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/TLV9064IPWR.kicad_sym",
+        "name": "TLV9064IPWR"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/TLV9064IPWR.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "f2b35eaac4bc68c3e4fc3cb16d32630135aec28be0ffc90277a3b3b242af4118",
+      "internal_name": "TLV9064IPWR"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "4233e20101e0ea3ddd822b080a12002aad570d0a",
+    "source_board": "truedepth-shim",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/TLV9064IPWR.kicad_sym",
+        "evidence": "First-import fit pass: council symbol f2b35eaa; 43/43 pin facts qualified (5 minus-glyph names confirmed by vision on SBOS839N p8 Fig 5-13, read_as +-); all 5 arena units read; stock TSSOP-14 land by lib:name"
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "council symbol f2b35eaa; 43/43 pin facts qualified (5 minus-glyph names confirmed by vision on SBOS839N p8 Fig 5-13, read_as +-); all 5 arena units read; stock TSSOP-14 land by lib:name",
+      "note": "",
+      "pin_gate": {
+        "symbol": "TLV9064IPWR",
+        "lcsc": "C779410",
+        "facts_checked": true,
+        "source": "facts",
+        "board_context": null,
+        "state": "clean",
+        "gaps": [],
+        "allow_pin_gaps": null
+      }
+    },
+    "quality": {
+      "state": "council-graded",
+      "symbol_sha256": "f2b35eaac4bc68c3e4fc3cb16d32630135aec28be0ffc90277a3b3b242af4118",
+      "installed_symbol_sha256": "f2b35eaac4bc68c3e4fc3cb16d32630135aec28be0ffc90277a3b3b242af4118",
+      "footprint_sha256": null,
+      "installed_footprint_sha256": null,
+      "quality_receipt": {
+        "path": "quality/tlv9064ipwr/symbol-quality.json",
+        "sha256": "8ff7d9f4524451bce18cdc04fb1eadb4e008ead5dfd8fa2906c7793f001b3f75"
+      },
+      "look_receipt": {
+        "path": "quality/tlv9064ipwr/symbol-look.json",
+        "sha256": "53ea252871c063b70b0683c3041d5eefa9700860f6a54554d7ea81fb4bc22d8e"
+      },
+      "arena_manifest": {
+        "path": "quality/tlv9064ipwr/arena-manifest.json",
+        "sha256": "07a4be1f4b5d1d77208617b4216114626ad91726c5402d4b582a0f5a5c113f63"
+      },
+      "arena_manifest_mtime": "2026-10-04T10:41:04+00:00",
+      "arena_manifest_mtime_note": "st_mtime of QA's arena-manifest.json when promoted — the arena render's clock, reset by any cp/checkout; the receipts carry no audit clock and now() is never written",
+      "admission": {
+        "path": "quality/tlv9064ipwr/admission.json",
+        "sha256": "90df48b0aaf8d02461479923af56c62a3d27e02b024c1849ab99f383f1741c91"
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+ "schema_version": "library-qa-arena-1",
+ "part_id": "TLV9064IPWR",
+ "symbol_sha256": "f2b35eaac4bc68c3e4fc3cb16d32630135aec28be0ffc90277a3b3b242af4118",
+ "units": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "verdict": "PASS",
+ "build_sha256": "6a80ec3beffebc0fb8179439e285999c131442bffe1ec3a7460716e200231a38",
+ "sheets": {
+  "unit_1.kicad_sch": "2710d8978cbb5c922d089e04d85bb13fc36ddd0d6601d576402239b4abe269e7",
+  "unit_2.kicad_sch": "440542a0820de30e8d9e9e5c5a69f2da82f7dc6dee6b296558c720ed6a5d686a",
+  "unit_3.kicad_sch": "70a3ee18e6ff9bdf954971ef2ada4cf166ed342d05aa86799374fa143df4c310",
+  "unit_4.kicad_sch": "6843d04631ddb1eabb0cfb1fe8a3641bfd903a2aeec160bbc5b7166de790e01c",
+  "unit_5.kicad_sch": "4fb473ce9d8350a5722e72eed764b917b32ae3c53098ec3bd47fb8e4dc7c2a78"
+ },
+ "pages": [
+  {
+   "unit": 1,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png",
+   "sha256": "b72641244cf79804408d27379bc7955c5123f208a25348ac297ffd3caf7870a6",
+   "svg_fingerprint": "c32c2290dd88311970226f31ebb018ac5c8fc382685c1a2db95da3257736e455",
+   "nonce_sha256": "27440c1748e65219b1e1704c7b99dc2745ac7412afb906e818ae7156e3027458",
+   "background": "#f5f4ef"
+  },
+  {
+   "unit": 2,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U2-box1.png",
+   "sha256": "431d85a38a4b02cf6442a5adf26e58a6a74db1d541531f2b64fd5e67504a3717",
+   "svg_fingerprint": "1f38e23378993a214b29e54c7fc04e3d1e67513b286fbdce9e8eb409ccda4a48",
+   "nonce_sha256": "89b0bafec02c5feea0da39f8ba024670faa2a58ec884df9364095f123d33c8b2",
+   "background": "#f5f4ef"
+  },
+  {
+   "unit": 3,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U3-box1.png",
+   "sha256": "ba08889467fe8cdabe783e8b4c9ae56c9ba714081ac7a999b691c4b69b5f52bd",
+   "svg_fingerprint": "d3f673cb7f7cda13e326d491f3c092174b34f8e8cb160291a36076a95cc79b5a",
+   "nonce_sha256": "b04acbf735ab5d10256e11e58cc98685d3ecef525fff141b1d5ee9ec6067fd95",
+   "background": "#f5f4ef"
+  },
+  {
+   "unit": 4,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U4-box1.png",
+   "sha256": "97b36363d8d30f0058785001160e22bc3d98e78b4c6b4913f630307b7cece0b5",
+   "svg_fingerprint": "4c792d3f8b33bad1cc25bb979e4dbf9f3cf3ca460d2f812e8a3175d177d4887c",
+   "nonce_sha256": "95ab78d746712fc3a1e2e0336f3ae15f4592681e6442e49893ac14d6930fc255",
+   "background": "#f5f4ef"
+  },
+  {
+   "unit": 5,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U5-box1.png",
+   "sha256": "f6e60c12fb556cfda7ebba4fd58dda064cce1327f942894f116a29fb9e299ddb",
+   "svg_fingerprint": "486657e9a857c9d30787751dce435cf28cde66d84519c3f972b3a1e06b284754",
+   "nonce_sha256": "0bf9a2d5bde1af7d71128184a937ea2fab38435a1779a840b271644428fecd32",
+   "background": "#f5f4ef"
+  }
+ ]
+}
