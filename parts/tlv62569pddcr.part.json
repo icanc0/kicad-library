@@ -100,7 +100,7 @@
       "arena_manifest_mtime_note": "st_mtime of QA's arena-manifest.json when promoted — the arena render's clock, reset by any cp/checkout; the receipts carry no audit clock and now() is never written",
       "admission": {
         "path": "quality/tlv62569pddcr/admission.json",
-        "sha256": "cad6c2e913d4b09250494c6f487a71ea3e1a920be838111af82538afebe15c16"
+        "sha256": "621a8ff55061a9683dd471228c4990c432209549688228b02aab4f7fef2bc5b1"
       }
     }
   }
