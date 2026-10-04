@@ -4,18 +4,29 @@
   "part_id": "tlv62569pddcr",
   "record_state": "symbol-only",
   "identity": {
-    "type": "utility",
-    "manufacturer": null,
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Texas Instruments",
+      "normalized": "texas-instruments"
+    },
     "mpn": {
-      "status": "not-applicable",
-      "raw": null,
-      "canonical": null,
-      "comparison_key": null,
-      "normalization": [],
+      "status": "exact",
+      "raw": "TLV62569PDDCR",
+      "canonical": "TLV62569PDDCR",
+      "comparison_key": "TLV62569PDDCR",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
       "significant_characters": []
     },
-    "identifiers": [],
-    "description": "Central library symbol TLV62569PDDCR promoted from an unspecified board."
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C398365"
+      }
+    ],
+    "description": "Central library symbol TLV62569PDDCR promoted from truedepth-shim."
   },
   "names": {
     "canonical": "TLV62569PDDCR",
@@ -42,27 +53,27 @@
   ],
   "relationships": [],
   "provenance": {
-    "repository_commit": "8c9e1f872c1fb992558b2ed3c93cf5960a0207f9",
-    "source_board": null,
+    "repository_commit": "b80bebc58bc55f236dec4ec2fb34b857ef3123ef",
+    "source_board": "truedepth-shim",
     "entries": [
       {
         "kind": "manifest",
         "path": "MANIFEST.md",
         "locator": "promotion entry for symbols/TLV62569PDDCR.kicad_sym",
-        "evidence": "First-import fit pass: TLV62569PDDCR (TI SLVSDG1C, DDC = TSOT-23-6 MO-193, LCSC C398365): pins vision-confirmed on p3 DDC top view and the p24 DDC0006A numbering (1 EN, 2 GND, 3 SW, 4 VIN, 5 PG open-drain, 6 FB) = symbol c9d15405, the L24 council converter glyph (D-10: flow-first + grafts G1-G6; 5 fresh regraders 4/4/3/4/4 x4 and 4/4/3/3/4 on QA page 12f73256). VIN/EN enter left, SW/FB/PG leave right with FB directly under SW (L25, no BST), GND at the bottom, so U3 (VIN->3V3) and U4 (3V3->1V8, EN sequencing, PG open-drain to STATUS_3V3) read left to right; internals show the P/N synchronous stage, DRV, 0.6V comparator and the PG open-drain FET. Land = stock Package_TO_SOT_SMD:TSOT-23-6 (sha 2b3e0975) with its stock TSOT-23-6.step; it fits DDC0006A p24/p25 (pitch 0.95, pads 1-3 / 4-6, no EP). Known open: pin.3.type / pin.6.type are single-source (guide #451, owner call); SYM-PINSET-MATCH is clean."
+        "evidence": "First-import fit pass: TLV62569PDDCR (TI SLVSDG1C, DDC = TSOT-23-6 MO-193, LCSC C398365): pins vision-confirmed on p3 DDC top view and the p24 DDC0006A numbering (1 EN, 2 GND, 3 SW, 4 VIN, 5 PG open-drain, 6 FB) = symbol c9d15405, the L24 council converter glyph (D-10: flow-first + grafts G1-G6; 5 fresh regraders 4/4/3/4/4 x4 and 4/4/3/3/4 on QA page 12f73256). VIN/EN enter left, SW/FB/PG leave right with FB directly under SW (L25, no BST), GND at the bottom, so U3 (VIN->3V3) and U4 (3V3->1V8, EN sequencing, PG open-drain to STATUS_3V3) read left to right; internals show the P/N synchronous stage, DRV, 0.6V comparator and the PG open-drain FET. Land = stock Package_TO_SOT_SMD:TSOT-23-6 (sha 2b3e0975) with its stock TSOT-23-6.step; it fits DDC0006A p24/p25 (pitch 0.95, pads 1-3 / 4-6, no EP). ds_pin_ready C398365 True: 12 pin facts qualified, pin.5.type open_collector second-sourced by vision on p7 7.4.2, pin.3.type / pin.6.type single printing (gh#451); SYM-PINSET-MATCH clean."
       }
     ]
   },
   "extensions": {
     "promotion": {
-      "fit_note": "TLV62569PDDCR (TI SLVSDG1C, DDC = TSOT-23-6 MO-193, LCSC C398365): pins vision-confirmed on p3 DDC top view and the p24 DDC0006A numbering (1 EN, 2 GND, 3 SW, 4 VIN, 5 PG open-drain, 6 FB) = symbol c9d15405, the L24 council converter glyph (D-10: flow-first + grafts G1-G6; 5 fresh regraders 4/4/3/4/4 x4 and 4/4/3/3/4 on QA page 12f73256). VIN/EN enter left, SW/FB/PG leave right with FB directly under SW (L25, no BST), GND at the bottom, so U3 (VIN->3V3) and U4 (3V3->1V8, EN sequencing, PG open-drain to STATUS_3V3) read left to right; internals show the P/N synchronous stage, DRV, 0.6V comparator and the PG open-drain FET. Land = stock Package_TO_SOT_SMD:TSOT-23-6 (sha 2b3e0975) with its stock TSOT-23-6.step; it fits DDC0006A p24/p25 (pitch 0.95, pads 1-3 / 4-6, no EP). Known open: pin.3.type / pin.6.type are single-source (guide #451, owner call); SYM-PINSET-MATCH is clean.",
+      "fit_note": "TLV62569PDDCR (TI SLVSDG1C, DDC = TSOT-23-6 MO-193, LCSC C398365): pins vision-confirmed on p3 DDC top view and the p24 DDC0006A numbering (1 EN, 2 GND, 3 SW, 4 VIN, 5 PG open-drain, 6 FB) = symbol c9d15405, the L24 council converter glyph (D-10: flow-first + grafts G1-G6; 5 fresh regraders 4/4/3/4/4 x4 and 4/4/3/3/4 on QA page 12f73256). VIN/EN enter left, SW/FB/PG leave right with FB directly under SW (L25, no BST), GND at the bottom, so U3 (VIN->3V3) and U4 (3V3->1V8, EN sequencing, PG open-drain to STATUS_3V3) read left to right; internals show the P/N synchronous stage, DRV, 0.6V comparator and the PG open-drain FET. Land = stock Package_TO_SOT_SMD:TSOT-23-6 (sha 2b3e0975) with its stock TSOT-23-6.step; it fits DDC0006A p24/p25 (pitch 0.95, pads 1-3 / 4-6, no EP). ds_pin_ready C398365 True: 12 pin facts qualified, pin.5.type open_collector second-sourced by vision on p7 7.4.2, pin.3.type / pin.6.type single printing (gh#451); SYM-PINSET-MATCH clean.",
       "note": "",
       "pin_gate": {
         "symbol": "TLV62569PDDCR",
-        "lcsc": null,
-        "facts_checked": false,
+        "lcsc": "C398365",
+        "facts_checked": true,
         "board_context": null,
-        "state": "unverified",
+        "state": "clean",
         "gaps": [],
         "allow_pin_gaps": null
       }
@@ -89,7 +100,7 @@
       "arena_manifest_mtime_note": "st_mtime of QA's arena-manifest.json when promoted — the arena render's clock, reset by any cp/checkout; the receipts carry no audit clock and now() is never written",
       "admission": {
         "path": "quality/tlv62569pddcr/admission.json",
-        "sha256": "0036c87936fe88c19b185078d8858a2bf918cf0c3073355bfd236ee4b2bfad9e"
+        "sha256": "cad6c2e913d4b09250494c6f487a71ea3e1a920be838111af82538afebe15c16"
       }
     }
   }

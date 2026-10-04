@@ -1,6 +1,6 @@
 {
  "admitted_by": {
-  "agent": "library-inspector-c8e099",
+  "agent": "library-inspector-8555fe",
   "role": "library-inspector"
  },
  "author": {
@@ -15,7 +15,7 @@
  "footprint_sha256": null,
  "guide": {
   "bind": "/guide",
-  "commit": "2686f9345637f1b4b02ab6e255fa1b6f6be3f4ca",
+  "commit": "13e50b1c62df5da9b2ff6eb875d6477626d59bcc",
   "dirty": false
  },
  "land": {
