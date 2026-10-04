@@ -1,0 +1,253 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "AFA07-S15FCC-00",
+ "symbol_sha256": "0e2f80ab296e2301c320c26e9a92573cb7ccb7f5d60905d03f4b1896148c259c",
+ "units": [
+  1
+ ],
+ "designs": [
+  {
+   "id": "stock-reference",
+   "designer_id": "stock Connector_Generic_MountingPin:Conn_01x15_MountingPin",
+   "stance": "stock-reference",
+   "symbol_path": "Conn_01x15_MountingPin.kicad_sym",
+   "symbol_sha256": "0e2f80ab296e2301c320c26e9a92573cb7ccb7f5d60905d03f4b1896148c259c",
+   "renders": [
+    {
+     "id": "stock-reference-unit1",
+     "unit": 1,
+     "path": "Conn_01x15_MountingPin_unit1.png",
+     "sha256": "2e7415cad15c289f65160c9806b6e587fc9abaa0dad4fb6b49dd298d9000bdf1",
+     "background": "#ffffff",
+     "symbol_sha256": "0e2f80ab296e2301c320c26e9a92573cb7ccb7f5d60905d03f4b1896148c259c"
+    }
+   ],
+   "overlay": {
+    "Footprint": "central-agent:JUSHUO_AFA07-S15FCA-00_1x15-1MP_P1.0mm_Horizontal"
+   }
+  }
+ ],
+ "judges": [],
+ "selection": {
+  "winner_design_id": "stock-reference",
+  "grafts": [],
+  "final_symbol_sha256": "0e2f80ab296e2301c320c26e9a92573cb7ccb7f5d60905d03f4b1896148c259c"
+ },
+ "final_renders": [
+  {
+   "id": "qa-arena-unit1",
+   "unit": 1,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png",
+   "sha256": "1eaa924850ff7dc2395303a78fa15a24d34f2553348b1069581eeed417d23316",
+   "background": "#f5f4ef",
+   "symbol_sha256": "0e2f80ab296e2301c320c26e9a92573cb7ccb7f5d60905d03f4b1896148c259c",
+   "nonce": "LOOK-3JJ9PMVYMLQD",
+   "nonce_sha256": "ae3ad7850499ed9c5de3d867d02b128de7d22770d6c7fa01dbe25d2808298203"
+  }
+ ],
+ "regraders": [
+  {
+   "reviewer_id": "look-regrader-AFA07-S15FCC-00-overlay-1",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa-arena-unit1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "identity-read = 3: The page reads at once as a single-row 15-way connector with a mounting pin. There is one tall pale-yellow body with 15 pin stubs numbered 1-15 down its left side, an MP stub out the bottom, and the Value 'Conn_01x15_MountingPin' printed above. The arena designator is U1, but the symbol's own Reference is 'J' (unit_1.kicad_sch line 23), so that is an arena annotation convention and not a symbol defect. The Value is the generic stock name and does not name the JUSHUO AFA07 FPC, so a reader learns the part only from the Footprint field or the board-level Value. That is expected for a standard-glyph adoption and meets the bar, which is why the score is not 4.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "silicon-faithfulness = 4: Checked against JUSHUO drawing 0696f4b8 p2 (rendered from ~/.cache/kicad-agent-guide/datasheets/0696f4b8.../ds.pdf). The drawing shows 15 contacts in a row (CKTS 15, DIM A 14.00) with 'Circuit 1' at the left, plus two 'Fitting Nail' tabs. The glyph has pins 1-15 in strict numerical order, top to bottom, all passive, which is correct for bare FPC contacts that carry no functional names. Both fitting nails collapse onto one passive MP pin, matching the footprint's two pads both numbered 'MP'. The pin set {1..15, MP} equals the footprint pad set exactly, and design-facts.json shows all 16 nets landing on U1. Nothing is missing, extra or misnumbered.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "economy = 4: The glyph is minimal. It has one column on the 2.54 mm grid, a body exactly 15 pitches tall, no decorative graphics, a single MP stub, and visible pin numbers only, with no redundant names. The arena ran unit_1 at 14% fill (above the 12% floor), and the page has no wasted symbol area.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "wiring ergonomics = 4: All 15 signal pins exit one side at a uniform 2.54 mm pitch, so the 15 green wires to PIN_1..PIN_15 run dead straight and parallel with aligned labels. MP exits the bottom, away from the signal column, so a GND or shield tie never crosses a signal wire. The arena verdict is PASS with ERC=0, legibility=0 and off-page=0.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "expressibility = 3: The glyph expresses everything the drawing defines, which is contact number, passive type and the mounting nail. Functional meaning (camera lanes, I2C, power) belongs in board-level net labels, which this one-sided layout takes cleanly. The stock 'Mounting' micro-text under the body is barely legible at page scale, though the MP pin number is clear. Generic Pin_N names are hidden, which is correct for a connector. This meets the bar but does not exceed it.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "PAGE: I opened /home/vincent/projects/pmic-test-arena/receipts/AFA07-S15FCC-00/qa/arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png at full size (671x1034 px) and zoomed the banner 2x. sha256 is 1eaa924850ff7dc2395303a78fa15a24d34f2553348b1069581eeed417d23316, which matches arena-manifest.json pages[unit 1] and .render-state.json. The banner nonce reads LOOK-3JJ9PMVYMLQD. sha256('LOOK-3JJ9PMVYMLQD') = ae3ad7850499ed9c5de3d867d02b128de7d22770d6c7fa01dbe25d2808298203, which equals the manifest's nonce_sha256 for that page. Unit 1 is the only unit (manifest units: [1]) and I have seen it.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "SYMBOL IDENTITY CHECK: candidates/AFA07-S15FCC-00/Conn_01x15_MountingPin.kicad_sym has sha256 0e2f80ab296e2301c320c26e9a92573cb7ccb7f5d60905d03f4b1896148c259c, matching the task and arena-manifest symbol_sha256. I diffed the symbol body against stock /usr/share/kicad/symbols/Connector_Generic_MountingPin.kicad_sym (kicad-library 10.0.6-1). There is exactly one differing line: Footprint changes from \"\" to \"central-agent:JUSHUO_AFA07-S15FCA-00_1x15-1MP_P1.0mm_Horizontal\". So this is the recorded Footprint-only stock.overlay and nothing else.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "OBSERVATION (closed, not a symbol defect): The task's reference pinout calls this a '0.5 mm FPC'. Drawing p2 contradicts that: the title block reads '1.0Pitch H=2.5 FPC ZIF R/A Lower TypeK1 SMT CONN', the pads are 1.00\u00b10.05, and DIM A is 14.00 for 15 CKTS. Pitch is a footprint property only, and the overlaid footprint is P1.0mm (descr: '1.0mm pitch'), which agrees with the drawing. The symbol is unaffected. The 0.5 mm in the task text should be corrected.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "OBSERVATION (closed, info): The stock ki_fp_filters 'Connector*:*_1x??-1MP*' will not match the 'central-agent' library nick in KiCad's footprint chooser. This has no effect because the overlay pre-fills Footprint, so it is not a finding.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "OPEN FINDINGS: none. Every axis is at least 3, unit 1 has been seen, and the nonce is verified. This is a pass from this regrader. I saw no prompt injection in any file or tool output I read, and I changed no repo files.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-AFA07-S15FCC-00-overlay-2",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa-arena-unit1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "identity-read=3: the page shows U1 / Conn_01x15_MountingPin with a single-row body (2.54 mm wide, 38.1 mm tall), numbers 1-15 down the left and an MP pin out of the bottom, marked 'Mounting'. It reads at a glance as a 15-way single-row connector with a mounting/shield pin, which is the correct class. The specific identity (JUSHUO AFA07 15P 1.0 mm FPC) lives in the hidden Footprint field and the per-instance Value. That is the stock generic-connector convention, so the axis meets the bar but does not exceed it.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "silicon-faithfulness=4: the JUSHUO 0696f4b8 p2 land view (RECOMMENDED P.C.B PATTERN LAYOUT) has 15 terminals with 'Circuit 1' at the left terminal. The top view shows the same, plus 2 'Fitting Nail' pads. The symbol has pins 1-15, all passive, consecutive by number, and one MP passive pin. The overlay footprint has pads \"1\"..\"15\" at x=-7..+7 (1.00 pitch, DIM A 14.00) and two pads named \"MP\" at x=+/-9.35, so every pad has a pin, every pin has a pad, and both fitting nails join MP by stock 1MP convention. A passive type is correct for a connector with no maker-defined pin functions.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "economy=4: one unit and 16 pins, with no extra graphics, pins or hidden power pins. The stock body is the minimum for 15 pins on a 2.54 mm grid. Nothing on the page could be removed.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "wiring ergonomics=4: on the page all 15 signal pins exit left on a 2.54 mm grid in strict 1-to-15 top-to-bottom order. The net labels PIN_1..PIN_15 attach on straight horizontal wires with no crossings or text collisions. MP exits downward, separate from the signal column, and its wire runs cleanly to the MOUNTPIN label. The earlier LEG-INK failure (31 collisions, finding library-qa-AFA07-S15FCC-00-1 item 2) does not show on this page, and the arena reports legibility=0.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "expressibility=3: the glyph shows everything drawing p2 defines: circuit numbers 1-15, the mounting nails, and passive contacts. Pin names (Pin_k) are hidden, as in stock, so camera-port signal meaning (CSI lanes, GND, I2C) has to come from net labels at the instance. That is appropriate because the drawing defines no signal names, but nothing on the page goes beyond the drawing.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "PAGE CHECK: I opened /home/vincent/projects/pmic-test-arena/receipts/AFA07-S15FCC-00/qa/arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png at full size (671x1034). Its sha256 is 1eaa924850ff7dc2395303a78fa15a24d34f2553348b1069581eeed417d23316, which matches arena-manifest.json pages[unit 1] and .render-state.json. The banner reads LOOK-3JJ9PMVYMLQD. sha256('LOOK-3JJ9PMVYMLQD') = ae3ad785...8203, which matches nonce_sha256 in .render-nonces.json and arena-manifest.json. arena-manifest.json gives symbol_sha256 0e2f80ab296e...148c259c (the sha under review), units [1] and verdict PASS. verify_findings: ERC=0, legibility=0, structural=0.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "DESIGN CHECK: I extracted the cand:Conn_01x15_MountingPin block from unit_1.kicad_sch and diffed it, whitespace-normalized, against /usr/share/kicad/symbols/Connector_Generic_MountingPin.kicad_sym Conn_01x15_MountingPin. The only difference is the Footprint property, which changes from \"\" to \"central-agent:JUSHUO_AFA07-S15FCA-00_1x15-1MP_P1.0mm_Horizontal\". This is exactly the recorded stock.overlay, so the glyph is stock.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "NOTE, closed, no change needed: the brief calls the part a '15-pin 0.5 mm FPC'. Drawing 0696f4b8 p2 contradicts this. Its title block reads '1.0Pitch H=2.5 FPC ZIF R/A Lower TypeK1 SMT CONN', the land view dimensions '1.00+/-0.05' pitch, and the top view reads '1.00'. The overlay footprint (P1.0mm, pads 1.0 mm apart) matches the drawing, and the glyph does not encode pitch. The error is in the brief text, not the design. It is not a prompt injection.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "NOTE, closed, no change needed: the overlay names AFA07-S15FCA-00 while the MPN is AFA07-S15FCC-00. The p2 part-number decode shows the last letter is packing (A tape and reel, C tube), on the same drawing and land, so the overlay is correct for this MPN.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "NOTE, closed, no change needed: the stock 'Mounting' text (0.381 mm font, at 0,-19.431) is very small and sits on the MP pin root at the bottom of the body. It is legible only when zoomed. This is unmodified stock artwork, and the arena legibility gate is 0. The instance reference 'U1' is the arena harness designator, and the symbol's Reference prefix is the stock 'J'.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "RESULT: every axis scores 3 or higher, unit 1 (the only unit) was seen, the nonce was echoed and verified against its sha256, and no finding is open. No files were changed.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    }
+   ]
+  }
+ ],
+ "binding": {
+  "tool": "library-qa/council.py look",
+  "by": "lead-main",
+  "agents": [
+   "look-regrader-AFA07-S15FCC-00-overlay-1",
+   "look-regrader-AFA07-S15FCC-00-overlay-2",
+   "stock Connector_Generic_MountingPin:Conn_01x15_MountingPin"
+  ],
+  "candidate": {
+   "sha256": "d5296dd5cb5e98bda75a0f04beafd7845c4f4eddc974c298cfcfb0e160153e9c",
+   "files": {
+    "Conn_01x15_MountingPin.kicad_sym": "0e2f80ab296e2301c320c26e9a92573cb7ccb7f5d60905d03f4b1896148c259c",
+    "Conn_01x15_MountingPin_unit1.png": "2e7415cad15c289f65160c9806b6e587fc9abaa0dad4fb6b49dd298d9000bdf1",
+    "JUSHUO_AFA07-S15FCA-00_1x15-1MP_P1.0mm_Horizontal.kicad_mod": "efc8d94ee3d00e860ba2f69ba9cfc2abe5a322bb43e415707a9f113aee37ec6e",
+    "__pycache__/model.cpython-314.pyc": "d954c4e1229dfaa362ced4588be993820c1222a75b5620eebd21fb275721f746",
+    "author.json": "ee12c83df788a53e63d6fd6f6a5fa286cb84148052de51f1f1384e695608f879",
+    "comparable_ds.json": "b274e9a26c65644cb140b4e47a510e7eed50b1f91ec259de662458dc88137786",
+    "facts.json": "c6bb45427742b1e2c11dfebd15dfb956736e3eb5fe3fcb825d1d42bb47db3287",
+    "gen_symbol.py": "debc86d5a9151eaf2bcbdecf7dd1d066602866779d7de5f94d2ab6d47a2afd22",
+    "generate.py": "6643764f504de821a5fd51b1f7e4cb347e85eefdf0ecfbdb637ba331faa4d794",
+    "kicad-library/3dmodels/JUSHUO_AFA07-S15FCA-00_1x15-1MP_P1.0mm_Horizontal.step": "65eff5117b5f06b51ff64b1a0581a3c0d11597c87b9080518d9d6d8bffa1528a",
+    "kicad-library/3dmodels/JUSHUO_AFA07-S15FCA-00_1x15-1MP_P1.0mm_Horizontal.wrl": "2e4c8b0914e79e69aa010852d36d3af1cbca010e0549c64ffe62cfb98dc4a16d",
+    "model.json": "01b8b527a39e0e137e8659106628f62412b9a0a5349fd3c33f9838104b49007d",
+    "model.py": "077a38f74a75b2d9948d74830d5934b91fd464086a4f15f4d696218eb3f977c4",
+    "pin-truth.json": "94a400c176b97961399c5b75026dd84c2f2cdfe7c7a3302473cbc70c4bffb8f6",
+    "render.sh": "cabd4f5d6b04fc9a5eba5bf631d4b99ae2ecda65b6c2d1d2c61258094563747f"
+   }
+  },
+  "verdict": "pass"
+ }
+}

@@ -1,0 +1,142 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "afa07-s15fcc-00",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "JUSHUO",
+      "normalized": "jushuo"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "AFA07-S15FCC-00",
+      "canonical": "AFA07-S15FCC-00",
+      "comparison_key": "AFA07-S15FCC-00",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C262349"
+      }
+    ],
+    "description": "Central library symbol AFA07-S15FCC-00 promoted from truedepth-shim."
+  },
+  "names": {
+    "canonical": "AFA07-S15FCC-00",
+    "aliases": [
+      "Conn_01x15_MountingPin"
+    ],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/Conn_01x15_MountingPin.kicad_sym",
+        "name": "Conn_01x15_MountingPin"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/Conn_01x15_MountingPin.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "0e2f80ab296e2301c320c26e9a92573cb7ccb7f5d60905d03f4b1896148c259c",
+      "internal_name": "Conn_01x15_MountingPin"
+    },
+    {
+      "path": "footprints/central-agent.pretty/JUSHUO_AFA07-S15FCA-00_1x15-1MP_P1.0mm_Horizontal.kicad_mod",
+      "kind": "footprint",
+      "qualification": "unqualified-candidate",
+      "sha256": "7db7d3f5ffe695c4a273066edec64244094fc557933fbc09853768e66caa1a51",
+      "internal_name": "JUSHUO_AFA07-S15FCA-00_1x15-1MP_P1.0mm_Horizontal"
+    },
+    {
+      "path": "3dmodels/JUSHUO_AFA07-S15FCA-00_1x15-1MP_P1.0mm_Horizontal.step",
+      "kind": "model",
+      "qualification": "unqualified-candidate",
+      "sha256": "65eff5117b5f06b51ff64b1a0581a3c0d11597c87b9080518d9d6d8bffa1528a"
+    }
+  ],
+  "relationships": [
+    {
+      "kind": "declares-footprint",
+      "source_asset": "symbols/Conn_01x15_MountingPin.kicad_sym",
+      "target": {
+        "asset_path": "footprints/central-agent.pretty/JUSHUO_AFA07-S15FCA-00_1x15-1MP_P1.0mm_Horizontal.kicad_mod"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "Promotion supplied this footprint as a candidate; it is not qualified by a symbol-only draft."
+    },
+    {
+      "kind": "declares-model",
+      "source_asset": "footprints/central-agent.pretty/JUSHUO_AFA07-S15FCA-00_1x15-1MP_P1.0mm_Horizontal.kicad_mod",
+      "target": {
+        "asset_path": "3dmodels/JUSHUO_AFA07-S15FCA-00_1x15-1MP_P1.0mm_Horizontal.step"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "Promotion supplied this model as an unqualified candidate."
+    }
+  ],
+  "provenance": {
+    "repository_commit": "c98f88be1edcdba13627f014d31047873ed9e998",
+    "source_board": "truedepth-shim",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/Conn_01x15_MountingPin.kicad_sym",
+        "evidence": "First-import fit pass: AFA07-S15FCC-00 (J2/J3, D-7, Pi 15-pin CSI): land provenance = the JUSHUO AFA07 maker drawing (datasheet 0696f4b8 p2): stock land JUSHUO_AFA07-S15FCA-00 (same drawing, tape-and-reel twin) pads 0.60x1.80 P1.00, MP 2.60x3.00 at +-9.35, Circuit 1 = left pad, vision-measured; symbol = stock Connector_Generic_MountingPin:Conn_01x15_MountingPin unchanged but for the Footprint-only overlay naming the held land central-agent:JUSHUO_AFA07-S15FCA-00_1x15-1MP_P1.0mm_Horizontal (0e2f80ab, stock designer, guide train 53), pins 1-15 = circuits 1-15 by number, MP = Fitting Nail; 3D JUSHUO STEP 65eff511 from model.py."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "AFA07-S15FCC-00 (J2/J3, D-7, Pi 15-pin CSI): land provenance = the JUSHUO AFA07 maker drawing (datasheet 0696f4b8 p2): stock land JUSHUO_AFA07-S15FCA-00 (same drawing, tape-and-reel twin) pads 0.60x1.80 P1.00, MP 2.60x3.00 at +-9.35, Circuit 1 = left pad, vision-measured; symbol = stock Connector_Generic_MountingPin:Conn_01x15_MountingPin unchanged but for the Footprint-only overlay naming the held land central-agent:JUSHUO_AFA07-S15FCA-00_1x15-1MP_P1.0mm_Horizontal (0e2f80ab, stock designer, guide train 53), pins 1-15 = circuits 1-15 by number, MP = Fitting Nail; 3D JUSHUO STEP 65eff511 from model.py.",
+      "note": "",
+      "pin_gate": {
+        "symbol": "Conn_01x15_MountingPin",
+        "lcsc": "C262349",
+        "facts_checked": false,
+        "source": "connector-by-number",
+        "board_context": null,
+        "state": "clean",
+        "gaps": [],
+        "allow_pin_gaps": null
+      }
+    },
+    "quality": {
+      "state": "council-graded",
+      "symbol_sha256": "0e2f80ab296e2301c320c26e9a92573cb7ccb7f5d60905d03f4b1896148c259c",
+      "installed_symbol_sha256": "0e2f80ab296e2301c320c26e9a92573cb7ccb7f5d60905d03f4b1896148c259c",
+      "footprint_sha256": "efc8d94ee3d00e860ba2f69ba9cfc2abe5a322bb43e415707a9f113aee37ec6e",
+      "installed_footprint_sha256": "7db7d3f5ffe695c4a273066edec64244094fc557933fbc09853768e66caa1a51",
+      "quality_receipt": {
+        "path": "quality/afa07-s15fcc-00/symbol-quality.json",
+        "sha256": "1c62fb0b1fac04d927c5c033d54d9edef4ddef6ea6d5a9db4beff8fa8c199986"
+      },
+      "look_receipt": {
+        "path": "quality/afa07-s15fcc-00/symbol-look.json",
+        "sha256": "b8a6f6247836a041c2985f1dbfbc88c3a29e48132746fc14339dc478e69f3dac"
+      },
+      "arena_manifest": {
+        "path": "quality/afa07-s15fcc-00/arena-manifest.json",
+        "sha256": "6222230c695bb5c30224bcb7e5c9c36b76b2c7ed46fec4c350d0d91ac8828395"
+      },
+      "arena_manifest_mtime": "2026-10-04T17:54:00+00:00",
+      "arena_manifest_mtime_note": "st_mtime of QA's arena-manifest.json when promoted — the arena render's clock, reset by any cp/checkout; the receipts carry no audit clock and now() is never written",
+      "admission": {
+        "path": "quality/afa07-s15fcc-00/admission.json",
+        "sha256": "b041c2fca41f877f44a963390cf362591ef2d4b28f8581526079a393368ab666"
+      }
+    }
+  }
+}

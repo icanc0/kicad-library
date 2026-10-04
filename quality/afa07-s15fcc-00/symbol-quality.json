@@ -1,0 +1,78 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "AFA07-S15FCC-00",
+ "symbol": {
+  "asset_path": "Conn_01x15_MountingPin.kicad_sym",
+  "internal_name": "Conn_01x15_MountingPin",
+  "sha256": "0e2f80ab296e2301c320c26e9a92573cb7ccb7f5d60905d03f4b1896148c259c"
+ },
+ "archetype": "connector",
+ "units": [
+  {
+   "unit": 1,
+   "role": "15-way FPC connector J2/J3: circuits 1-15 as Pin_1..Pin_15 down the left side, the two fitting nails as one MP pin at the bottom (stock Connector_Generic_MountingPin:Conn_01x15_MountingPin, unchanged but for its empty Footprint filled with the held land)",
+   "presentation": "standard-glyph",
+   "identity_features": [
+    "stock 1x15 connector body, pins 1..15 at 2.54 mm in circuit order, circuit 1 on top (JUSHUO drawing 0696f4b8 p2: 'Circuit 1' leader on the left end pad of the land and top views, CKTS 15, DIM A 14.00)",
+    "MP mounting pin below the body for both fitting-nail pads (p2 'Fitting Nail', land MP pads 2.60 x 3.00 at x +-9.35)",
+    "Reference J and all 16 pins passive: a positional FPC contact has no direction of its own, so the passive-connector focused review applies (connector.py)",
+    "Footprint-only overlay {Footprint: 'central-agent:JUSHUO_AFA07-S15FCA-00_1x15-1MP_P1.0mm_Horizontal'}: the installed glyph's empty Footprint filled with the candidate's one held land (guide train 53, f-0f16c4; the maker's facts.json symbol.overlay and author.json stock.overlay); for the connector archetype the tool records it on the LOOK stock-reference design row (connector.py stock_designer_findings), since this receipt's closed keys hold no stock block; ki_fp_filters stays the stock 'Connector*:*_1x??-1MP*'; nothing else differs from the stock bytes, so the graded candidate 0e2f80ab is the final"
+   ]
+  }
+ ],
+ "evidence": {
+  "comparable_ds": {
+   "path": "comparable_ds.json",
+   "sha256": "b274e9a26c65644cb140b4e47a510e7eed50b1f91ec259de662458dc88137786",
+   "own_sha256": "0696f4b83238d1309b40d293da8bec23e3370174d180c7ff09307c4cb0cf7aaf",
+   "comparable_count": 0
+  },
+  "land_provenance": {
+   "drawing": {
+    "document_sha256": "0696f4b83238d1309b40d293da8bec23e3370174d180c7ff09307c4cb0cf7aaf",
+    "page": 2
+   }
+  }
+ },
+ "generator": {
+  "contract": "python-cli-output-v1",
+  "path": "gen_symbol.py",
+  "sha256": "debc86d5a9151eaf2bcbdecf7dd1d066602866779d7de5f94d2ab6d47a2afd22",
+  "inputs": [],
+  "expected_symbol_sha256": "0e2f80ab296e2301c320c26e9a92573cb7ccb7f5d60905d03f4b1896148c259c"
+ },
+ "look": {
+  "receipt_path": "symbol-look.json",
+  "sha256": "b8a6f6247836a041c2985f1dbfbc88c3a29e48132746fc14339dc478e69f3dac"
+ },
+ "binding": {
+  "tool": "library-qa/council.py quality",
+  "by": "lead-main",
+  "agents": [
+   "look-regrader-AFA07-S15FCC-00-overlay-1",
+   "look-regrader-AFA07-S15FCC-00-overlay-2",
+   "stock Connector_Generic_MountingPin:Conn_01x15_MountingPin"
+  ],
+  "candidate": {
+   "sha256": "d5296dd5cb5e98bda75a0f04beafd7845c4f4eddc974c298cfcfb0e160153e9c",
+   "files": {
+    "Conn_01x15_MountingPin.kicad_sym": "0e2f80ab296e2301c320c26e9a92573cb7ccb7f5d60905d03f4b1896148c259c",
+    "Conn_01x15_MountingPin_unit1.png": "2e7415cad15c289f65160c9806b6e587fc9abaa0dad4fb6b49dd298d9000bdf1",
+    "JUSHUO_AFA07-S15FCA-00_1x15-1MP_P1.0mm_Horizontal.kicad_mod": "efc8d94ee3d00e860ba2f69ba9cfc2abe5a322bb43e415707a9f113aee37ec6e",
+    "__pycache__/model.cpython-314.pyc": "d954c4e1229dfaa362ced4588be993820c1222a75b5620eebd21fb275721f746",
+    "author.json": "ee12c83df788a53e63d6fd6f6a5fa286cb84148052de51f1f1384e695608f879",
+    "comparable_ds.json": "b274e9a26c65644cb140b4e47a510e7eed50b1f91ec259de662458dc88137786",
+    "facts.json": "c6bb45427742b1e2c11dfebd15dfb956736e3eb5fe3fcb825d1d42bb47db3287",
+    "gen_symbol.py": "debc86d5a9151eaf2bcbdecf7dd1d066602866779d7de5f94d2ab6d47a2afd22",
+    "generate.py": "6643764f504de821a5fd51b1f7e4cb347e85eefdf0ecfbdb637ba331faa4d794",
+    "kicad-library/3dmodels/JUSHUO_AFA07-S15FCA-00_1x15-1MP_P1.0mm_Horizontal.step": "65eff5117b5f06b51ff64b1a0581a3c0d11597c87b9080518d9d6d8bffa1528a",
+    "kicad-library/3dmodels/JUSHUO_AFA07-S15FCA-00_1x15-1MP_P1.0mm_Horizontal.wrl": "2e4c8b0914e79e69aa010852d36d3af1cbca010e0549c64ffe62cfb98dc4a16d",
+    "model.json": "01b8b527a39e0e137e8659106628f62412b9a0a5349fd3c33f9838104b49007d",
+    "model.py": "077a38f74a75b2d9948d74830d5934b91fd464086a4f15f4d696218eb3f977c4",
+    "pin-truth.json": "94a400c176b97961399c5b75026dd84c2f2cdfe7c7a3302473cbc70c4bffb8f6",
+    "render.sh": "cabd4f5d6b04fc9a5eba5bf631d4b99ae2ecda65b6c2d1d2c61258094563747f"
+   }
+  },
+  "verdict": "pass"
+ }
+}

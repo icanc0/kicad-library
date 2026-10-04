@@ -1,0 +1,37 @@
+{
+ "admitted_by": {
+  "agent": "library-inspector-68dcd4",
+  "role": "library-inspector"
+ },
+ "author": {
+  "agent": "footprint-maker-afa07",
+  "board": "truedepth-shim"
+ },
+ "candidate_footprint_sha256": "efc8d94ee3d00e860ba2f69ba9cfc2abe5a322bb43e415707a9f113aee37ec6e",
+ "candidate_symbol_sha256": "0e2f80ab296e2301c320c26e9a92573cb7ccb7f5d60905d03f4b1896148c259c",
+ "decisions": {
+  "files": [],
+  "mode": "report"
+ },
+ "footprint_sha256": "7db7d3f5ffe695c4a273066edec64244094fc557933fbc09853768e66caa1a51",
+ "guide": {
+  "bind": "/guide",
+  "commit": "7cf200d1def4f456b418a5662340f9d15ae811de",
+  "dirty": false
+ },
+ "part_id": "afa07-s15fcc-00",
+ "pinset": {
+  "lcsc": "C262349",
+  "provenance": {
+   "drawing": {
+    "document_sha256": "0696f4b83238d1309b40d293da8bec23e3370174d180c7ff09307c4cb0cf7aaf",
+    "page": 2
+   }
+  },
+  "result": "clean",
+  "rule": "SYM-PINSET-MATCH",
+  "source": "connector-by-number"
+ },
+ "schema": "kicad-agent-guide/admission@1",
+ "symbol_sha256": "0e2f80ab296e2301c320c26e9a92573cb7ccb7f5d60905d03f4b1896148c259c"
+}
