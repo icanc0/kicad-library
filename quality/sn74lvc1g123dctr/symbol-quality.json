@@ -1,0 +1,91 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "SN74LVC1G123DCTR",
+ "symbol": {
+  "asset_path": "SN74LVC1G123DCTR.kicad_sym",
+  "internal_name": "SN74LVC1G123DCTR",
+  "sha256": "7f99c0d6f6a26e710c3220ef39d2234dd8bf3bb0167635b37cb6a3cc6dc30487"
+ },
+ "archetype": "identity-topology",
+ "units": [
+  {
+   "unit": 1,
+   "role": "the whole part: one retriggerable monostable multivibrator (SCES586E p1, p12 7.2), all 8 pins",
+   "presentation": "identity-topology",
+   "identity_features": [
+    "~A 1 through TI's input bubble into a Schmitt buffer and B 2 into a Schmitt buffer; ~CLR 3 through a PLAIN buffer (p1 Features: Schmitt on A and B only; p1 Logic Diagram, p12 7.2)",
+    "3-input AND of the A, B and CLR paths into the one-shot's edge (dynamic) input (p12 'edge triggered from active-high or active-low gated logic inputs')",
+    "CLR junction: riser into the AND (p13 Table 7-1 row 6, CLR rising fires) and the run to the one-shot's active-low R bubble (p12 'CLR can be used to override A or B inputs')",
+    "one-shot box with the monostable pulse mark and 'retriggerable' (p12; 74HC123 p3 Fig. 2/3); Q 5 leaves its right edge level with B; no Q-bar",
+    "Rext/Cext 7 above Cext 6 on the VCC row, both dropping into the one-shot's top edge; '+' at the Rext/Cext drop and 'Rext to VCC' (p12 timing-network sentence); pins 6/7 passive"
+   ]
+  }
+ ],
+ "evidence": {
+  "comparable_ds": {
+   "path": "comparable_ds.json",
+   "sha256": "131e83b9afc88a06edb9140cf19d7591765e06d892d4cd8922d07d52f20a8823",
+   "own_sha256": "7248ef0ff62af4d2da172bb2900f0f1f136a6ae90109a6485228e01269fa1c1d",
+   "comparable_count": 3
+  },
+  "pin_truth": {
+   "path": "pin-truth.json",
+   "sha256": "3b085d4b6244f7a9ef77850f2cdf16ef3c5d7e095ab422d661c1583264ad8db1",
+   "coverage": "all"
+  }
+ },
+ "generator": {
+  "contract": "python-cli-output-v1",
+  "path": "gen.py",
+  "sha256": "76a8aa793ce512f4b27e37696be2540e0a4ac7260ecdebe7d66c4c51128c1349",
+  "inputs": [],
+  "expected_symbol_sha256": "7f99c0d6f6a26e710c3220ef39d2234dd8bf3bb0167635b37cb6a3cc6dc30487"
+ },
+ "look": {
+  "receipt_path": "symbol-look.json",
+  "sha256": "1e04ff7bdb4d24a195581e52b2bca16f8add65f5096800ec2c5c921ffbe886e1"
+ },
+ "binding": {
+  "tool": "library-qa/council.py quality",
+  "by": "lead-main",
+  "agents": [
+   "council-designer-flow-first-lvc1g123",
+   "designer-internals-maximal-lvc1g123",
+   "judge-1",
+   "judge-2",
+   "judge-3",
+   "look-regrader-SN74LVC1G123DCTR-1",
+   "look-regrader-SN74LVC1G123DCTR-2",
+   "look-regrader-SN74LVC1G123DCTR-3",
+   "look-regrader-SN74LVC1G123DCTR-4",
+   "look-regrader-SN74LVC1G123DCTR-5",
+   "symbol-designer-annorich-5d29c4"
+  ],
+  "candidate": {
+   "sha256": "2721bc6977edbd2f6960f6bbb6730c29cf75d6c9d3476c094573a9eed815da80",
+   "files": {
+    "SN74LVC1G123DCTR.kicad_sym": "7f99c0d6f6a26e710c3220ef39d2234dd8bf3bb0167635b37cb6a3cc6dc30487",
+    "SN74LVC1G123DCTR_unit1.png": "7ab2324f8424123c85f2e490f878fd1e23a91a3bf8dcbc0f5fd54e1c50687c08",
+    "SN74LVC1G123DCTR_unit1_fanout.png": "7e6db714ef858fe81f4be96cd6b728dea756184c314fce6a53c6d3820dd13cbf",
+    "Texas_DCT0008A_SSOP-8_3x3mm_P0.65mm.kicad_mod": "931840bcb4530cdde199c2dcde7a226f9a95d40ea490f45d35eeb97328ca3074",
+    "Texas_DCT0008A_SSOP-8_3x3mm_P0.65mm.step": "e7cbd7e51c44acd5cdc1d6f4940f6f82cbf0e4a01bfd37b12c6f16bcc23691f9",
+    "Texas_DCT0008A_SSOP-8_3x3mm_P0.65mm.wrl": "bfd6059d36ae0ade55cf9a6c092048ee7f14f6074b76dd030553cb83144875a5",
+    "__pycache__/model.cpython-314.pyc": "3391fc06e11b80dc6498bd3ec52a0d337df5cc052a0d0b77da4a996a2768bdf9",
+    "author.json": "c01d042b61da289d0e5f0cbe24a274997365dff0aaa64389679db074303fe3ff",
+    "comparable_ds.json": "131e83b9afc88a06edb9140cf19d7591765e06d892d4cd8922d07d52f20a8823",
+    "council/annotation-rich/SN74LVC1G123DCTR.kicad_sym": "860bb27ce3f79cf8c0b98534b1ae5f9fc47aeb294a6240e1f3cf9c7b15222511",
+    "council/annotation-rich/SN74LVC1G123DCTR_unit1.png": "cd4afa249919cb79105e9a92d92804b17c11c4ea8898a1fab354811a5fa67d01",
+    "council/flow-first/SN74LVC1G123DCTR.kicad_sym": "67dead161bd0699aa1b69410479f7fa99c7dbfd7ffecc3c0cddbdf011c9605ec",
+    "council/flow-first/SN74LVC1G123DCTR_unit1.png": "e171910559ea29331b885ff2de724d1f8bb7daf6f001e6f557a391f0bc66bf97",
+    "council/internals-maximal/SN74LVC1G123DCTR.kicad_sym": "928e8f939fc2aa3e39f6fbda2dd2a337d40b7903885e262009b29ad74657545c",
+    "council/internals-maximal/SN74LVC1G123DCTR_unit1.png": "6466302d478ac46e693ed7d864fe25d21920126c172ab072863bd2a803bf8aab",
+    "facts.json": "201fea7d1489d1a84137ecaa50ba5055eec78632fd7542f40663c91839fc9d56",
+    "footprint.py": "73807624cbc80182d9005fc24a43a08b55a4c5a3d1317fcd745fd9710e6f2da0",
+    "gen.py": "76a8aa793ce512f4b27e37696be2540e0a4ac7260ecdebe7d66c4c51128c1349",
+    "model.py": "10d7e12db79394dba25ed6b85a106ec4e62c615b43a305b5d67a716973bcebf4",
+    "pin-truth.json": "3b085d4b6244f7a9ef77850f2cdf16ef3c5d7e095ab422d661c1583264ad8db1"
+   }
+  },
+  "verdict": "pass"
+ }
+}

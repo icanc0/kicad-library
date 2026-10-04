@@ -1,0 +1,23 @@
+{
+ "schema_version": "library-qa-arena-1",
+ "part_id": "SN74LVC1G123DCTR",
+ "symbol_sha256": "7f99c0d6f6a26e710c3220ef39d2234dd8bf3bb0167635b37cb6a3cc6dc30487",
+ "units": [
+  1
+ ],
+ "verdict": "PASS",
+ "build_sha256": "ef4e77a4dce379ea9931c107aec064727fbb9fce79eb689e68dec53e423f67bc",
+ "sheets": {
+  "unit_1.kicad_sch": "28cf21a4744fbc67d6b1ebd69104faa72d0f73d042fb94c6a6bbd7412bc132b0"
+ },
+ "pages": [
+  {
+   "unit": 1,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png",
+   "sha256": "1b7a61420f1167812e5c40e186294fc384a391515afba6b98cfab67cb8200908",
+   "svg_fingerprint": "b8cfe6f5c5fb0764e95b463437336d03fc0e7a195098f463ceb157e1b71f196b",
+   "nonce_sha256": "636aa14167530d64e92c904918422865f3e99be96071e813a0717818cbbdbe7a",
+   "background": "#f5f4ef"
+  }
+ ]
+}

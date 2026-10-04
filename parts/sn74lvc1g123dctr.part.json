@@ -1,0 +1,140 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "sn74lvc1g123dctr",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Texas Instruments",
+      "normalized": "texas-instruments"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "SN74LVC1G123DCTR",
+      "canonical": "SN74LVC1G123DCTR",
+      "comparison_key": "SN74LVC1G123DCTR",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C123302"
+      }
+    ],
+    "description": "Central library symbol SN74LVC1G123DCTR promoted from truedepth-shim."
+  },
+  "names": {
+    "canonical": "SN74LVC1G123DCTR",
+    "aliases": [],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/SN74LVC1G123DCTR.kicad_sym",
+        "name": "SN74LVC1G123DCTR"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/SN74LVC1G123DCTR.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "7f99c0d6f6a26e710c3220ef39d2234dd8bf3bb0167635b37cb6a3cc6dc30487",
+      "internal_name": "SN74LVC1G123DCTR"
+    },
+    {
+      "path": "footprints/central-agent.pretty/Texas_DCT0008A_SSOP-8_3x3mm_P0.65mm.kicad_mod",
+      "kind": "footprint",
+      "qualification": "unqualified-candidate",
+      "sha256": "3155243f44128cb5d3f6f0569d35b79864e577d466af762bdf8a44935268b4cf",
+      "internal_name": "Texas_DCT0008A_SSOP-8_3x3mm_P0.65mm"
+    },
+    {
+      "path": "3dmodels/Texas_DCT0008A_SSOP-8_3x3mm_P0.65mm.step",
+      "kind": "model",
+      "qualification": "unqualified-candidate",
+      "sha256": "e7cbd7e51c44acd5cdc1d6f4940f6f82cbf0e4a01bfd37b12c6f16bcc23691f9"
+    }
+  ],
+  "relationships": [
+    {
+      "kind": "declares-footprint",
+      "source_asset": "symbols/SN74LVC1G123DCTR.kicad_sym",
+      "target": {
+        "asset_path": "footprints/central-agent.pretty/Texas_DCT0008A_SSOP-8_3x3mm_P0.65mm.kicad_mod"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "Promotion supplied this footprint as a candidate; it is not qualified by a symbol-only draft."
+    },
+    {
+      "kind": "declares-model",
+      "source_asset": "footprints/central-agent.pretty/Texas_DCT0008A_SSOP-8_3x3mm_P0.65mm.kicad_mod",
+      "target": {
+        "asset_path": "3dmodels/Texas_DCT0008A_SSOP-8_3x3mm_P0.65mm.step"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "Promotion supplied this model as an unqualified candidate."
+    }
+  ],
+  "provenance": {
+    "repository_commit": "4233e20101e0ea3ddd822b080a12002aad570d0a",
+    "source_board": "truedepth-shim",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/SN74LVC1G123DCTR.kicad_sym",
+        "evidence": "First-import fit pass: U12 SN74LVC1G123DCTR (C123302, TI SCES586E sha 7248ef0f) on truedepth-shim: the WIN retriggerable one-shot (REQ to B, STATUS_3V3 to CLR, Q = WIN, Rext 10k / Cext 0.1uF at 3.3 V). Council identity-topology symbol 7f99c0d6, 1 unit, pins = p3 DCT Fig 4-1 / Table 4-1 (1 ~A, 2 B, 3 ~CLR, 4 GND, 5 Q, 6 Cext, 7 Rext/Cext, 8 VCC; 6/7 passive), internals = p12 7.2. Land Texas_DCT0008A 931840bc = p24 (8X 1.1x0.4, (3.8) row, 0.65 pitch, R0.05) and p23 4220784/D; 3D feet on the pads, pin-1 dimple at pad 1."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "U12 SN74LVC1G123DCTR (C123302, TI SCES586E sha 7248ef0f) on truedepth-shim: the WIN retriggerable one-shot (REQ to B, STATUS_3V3 to CLR, Q = WIN, Rext 10k / Cext 0.1uF at 3.3 V). Council identity-topology symbol 7f99c0d6, 1 unit, pins = p3 DCT Fig 4-1 / Table 4-1 (1 ~A, 2 B, 3 ~CLR, 4 GND, 5 Q, 6 Cext, 7 Rext/Cext, 8 VCC; 6/7 passive), internals = p12 7.2. Land Texas_DCT0008A 931840bc = p24 (8X 1.1x0.4, (3.8) row, 0.65 pitch, R0.05) and p23 4220784/D; 3D feet on the pads, pin-1 dimple at pad 1.",
+      "note": "",
+      "pin_gate": {
+        "symbol": "SN74LVC1G123DCTR",
+        "lcsc": "C123302",
+        "facts_checked": true,
+        "source": "facts",
+        "board_context": null,
+        "state": "clean",
+        "gaps": [],
+        "allow_pin_gaps": null
+      }
+    },
+    "quality": {
+      "state": "council-graded",
+      "symbol_sha256": "7f99c0d6f6a26e710c3220ef39d2234dd8bf3bb0167635b37cb6a3cc6dc30487",
+      "installed_symbol_sha256": "7f99c0d6f6a26e710c3220ef39d2234dd8bf3bb0167635b37cb6a3cc6dc30487",
+      "footprint_sha256": "931840bcb4530cdde199c2dcde7a226f9a95d40ea490f45d35eeb97328ca3074",
+      "installed_footprint_sha256": "3155243f44128cb5d3f6f0569d35b79864e577d466af762bdf8a44935268b4cf",
+      "quality_receipt": {
+        "path": "quality/sn74lvc1g123dctr/symbol-quality.json",
+        "sha256": "cf8a400fc6c5402ecdbaad17af007137558dc66dbb8d258479ea12f8254acc50"
+      },
+      "look_receipt": {
+        "path": "quality/sn74lvc1g123dctr/symbol-look.json",
+        "sha256": "1e04ff7bdb4d24a195581e52b2bca16f8add65f5096800ec2c5c921ffbe886e1"
+      },
+      "arena_manifest": {
+        "path": "quality/sn74lvc1g123dctr/arena-manifest.json",
+        "sha256": "a9732fdde213e904e3087635da1c8548ee66bc3a1ed8e0f726d1c4d8fe74c862"
+      },
+      "arena_manifest_mtime": "2026-10-02T23:40:32+00:00",
+      "arena_manifest_mtime_note": "st_mtime of QA's arena-manifest.json when promoted — the arena render's clock, reset by any cp/checkout; the receipts carry no audit clock and now() is never written",
+      "admission": {
+        "path": "quality/sn74lvc1g123dctr/admission.json",
+        "sha256": "0821cddee2e6dcb8d8d65c8beaef92a55ab2379cf91b3f49c59541efb2e1c5d9"
+      }
+    }
+  }
+}
