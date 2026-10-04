@@ -1,0 +1,887 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "GD25Q16ESIG",
+ "symbol_sha256": "2856697657250a0a33e50ab7ae07fc9b566868cc08ad77335a41f792826a6f03",
+ "units": [
+  1
+ ],
+ "designs": [
+  {
+   "id": "internals-maximal",
+   "designer_id": "council-designer-internals-maximal",
+   "stance": "internals-maximal",
+   "symbol_path": "council/internals-maximal/GD25Q16ESIG.kicad_sym",
+   "symbol_sha256": "a279a8854649bed0d617e2bbdbdc1360e4297799174879d80173fda3f01c3356",
+   "renders": [
+    {
+     "id": "design:internals-maximal:u1",
+     "unit": 1,
+     "path": "council/internals-maximal/GD25Q16ESIG_unit1.png",
+     "sha256": "897f291b8dffaef5e64a9911659bd2d3c307c3dfcadc8fa98be466ebe62ef21e",
+     "background": "#ffffff",
+     "symbol_sha256": "a279a8854649bed0d617e2bbdbdc1360e4297799174879d80173fda3f01c3356"
+    }
+   ]
+  },
+  {
+   "id": "flow-first",
+   "designer_id": "council-designer-flow-first",
+   "stance": "flow-first",
+   "symbol_path": "council/flow-first/GD25Q16ESIG.kicad_sym",
+   "symbol_sha256": "48cee1f60d1ea8bd8db85090e9df93fbc2916aa8a1fafb4a4e3dd5c8f6cf11dc",
+   "renders": [
+    {
+     "id": "design:flow-first:u1",
+     "unit": 1,
+     "path": "council/flow-first/GD25Q16ESIG_unit1.png",
+     "sha256": "92ad87334f79b3ccf7c61b9f94e73c78580259eb24a9a3a3c4b08ed79f707df9",
+     "background": "#ffffff",
+     "symbol_sha256": "48cee1f60d1ea8bd8db85090e9df93fbc2916aa8a1fafb4a4e3dd5c8f6cf11dc"
+    }
+   ]
+  },
+  {
+   "id": "annotation-rich",
+   "designer_id": "council-designer-annotation-rich",
+   "stance": "annotation-rich",
+   "symbol_path": "council/annotation-rich/GD25Q16ESIG.kicad_sym",
+   "symbol_sha256": "fa05bd8c426e64c3d2feed579bed8f01c667a22839de2621552772457700425c",
+   "renders": [
+    {
+     "id": "design:annotation-rich:u1",
+     "unit": 1,
+     "path": "council/annotation-rich/GD25Q16ESIG_unit1.png",
+     "sha256": "08decbac859bf2f95e37b0df5405a6845aa06dccbbb252683fcbb75a67cb3212",
+     "background": "#ffffff",
+     "symbol_sha256": "fa05bd8c426e64c3d2feed579bed8f01c667a22839de2621552772457700425c"
+    }
+   ]
+  }
+ ],
+ "judges": [
+  {
+   "reviewer_id": "council-judge-1",
+   "design_id": "internals-maximal",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "the body shows SPI CTRL, STATUS REG, '16M-bit NOR / 2048 KB / 4 KB SECTORS' and 'PAGE BUFFER 256 BYTES' blocks, so it reads as a serial NOR flash at a glance. This follows the DS p6 block diagram (SPI Command & Control Logic, Status Register, 256-Byte Page Buffer, Flash Memory).",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "pins 1-8 match DS p5 Table 1 in names, numbers and etypes (CS/SCLK input, IOs bidirectional, VCC/VSS power_in). 'WP#=0 LOCKS SR (SRP=01)' matches the p12 SRP table (0,1,WP#=0 = Hardware Protected). The QE arrow from SR to SPI CTRL matches p8 4.1/p12, and 2048K-Byte, 4K sector and 256-byte page match p4. Its one abstraction: the WP# QE=0 branch goes straight to STATUS REG and skips the p6 'Write Control Logic'. Description '133 MHz' (p4) and 'WRSR 01h clears QE' (p18) are correct.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "economy": {
+     "score": 1,
+     "note": "the body is 38.10x35.56 mm (about 2.7x flow-first's area) for 8 pins. It holds 4 internal boxes, 8 arrowed lines, a filled junction dot and about 20 texts at 1.0 mm. The memory-organisation ink (16M-bit NOR, 2048 KB, 4 KB SECTORS, PAGE BUFFER, ADDR, DATA, BP, CMP) serves firmware, not wiring, and repeats the Description. The packet classes the part as domain, not identity-topology. Prior art: body ink was removed from the central W25Q128 symbol on 2026-09-01.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 2,
+     "note": "the left-edge order is WP/IO2, HOLD/IO3, CS, SCLK, SI/IO0, SO/IO1. That splits the quad bus around CS/SCLK and puts IO2/IO3 above IO0/IO1. A direct bus to a host in SS, SCLK, SD0..SD3 order would cross wires (stock MCU_RaspberryPi:RP2040 left edge, checked: SS 5.08, SCLK 2.54, SD0 0, SD1 -2.54, SD2 -5.08, SD3 -7.62). Internal stubs start right at the pin-name ends, and a filled junction dot sits at (-3.81,10.16); both look like schematic nets. The body is 38 mm wide.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "the pin-3 dual role is drawn as a QE junction (QE=0 to STATUS REG, QE=1 to SPI CTRL), QE comes back from the SR, a 'QE=0 | QE=1' header sits over pins 3/7, and the SRP=01 lock condition is stated. Gaps: pin 7's split shows only through the header, and the header's '|' does not line up with the '/' in the names.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "council-judge-1",
+   "design_id": "flow-first",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "a plain box with VCC, CS, SCLK, SI/IO0, SO/IO1, WP/IO2, HOLD/IO3 and a 'DUAL/QUAD SPI' caption. With the title, the WP/HOLD pin set reads as a QSPI flash in the familiar Memory_Flash:W25Q32JVSS layout, but nothing on the glyph says flash, NOR or a capacity.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "all 8 names, numbers and etypes match DS p5 Table 1. The one caption is true (Dual/Quad per p8 4.1), and the glyph makes no other claim that could be wrong.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "smallest body (17.78x27.94 mm), one 13-char caption, no other body ink.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "the six bus pins form one run at 2.54 in host order CS, SCLK, IO0, IO1, IO2, IO3. That is the same order and pitch as the stock RP2040 QSPI edge (verified), so a mirrored instance wires with six straight lines. The fanout render shows clean, non-overlapping hung labels, VCC routed up and VSS down to GND. Caveat: 2.54 pitch differs from the 3.81 hung-label pitch in guide docs/02-symbols.md, but the fanout shows no stacking.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 2,
+     "note": "the dual role of pins 3/7 shows only in the slash names (~{WP}/IO2, ~{HOLD}/IO3). The glyph does not say which role is the default or that QE flips it, and it does not separate control (CS/SCLK) from data (IO0-3): one undivided run sits under 'DUAL/QUAD SPI'. The QE rule appears only in the hidden Description.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "council-judge-1",
+   "design_id": "annotation-rich",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "the title, CONTROL/DATA captions and the 'SPI | DUAL/QUAD' and 'QE=0 default | QE=1' tables read as a quad-SPI flash, but there is no flash, NOR or capacity cue.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "pin truth matches DS p5 Table 1. 'high = deselect; never float' matches the p5 note, '2.7-3.6 V' matches p4, 'SI in / SO out | IO0 / IO1' matches p8 4.1, and 'QE=0 default ... QE=1 IO2/IO3' matches p8 4.2/p12. One annotation is under-qualified: '~{WP} SR lock' sits in the 'QE=0 default' column, but at the factory default (SRP1,SRP0 = 0,0, 'Software Protected (Default)', p12 table) WP# is ignored; the SR locks only at SRP=01. This is not a contradiction (the p9 summary says WP# low protects the BP/SRP bits), but a reader could misjudge the default state. internals-maximal carries the SRP=01 qualifier.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "the largest body (38.10x45.72 mm) for 8 pins. The DUAL/QUAD column (IO0, IO1, IO2, IO3) and 'SI in / SO out' repeat the pin names' own aliases, and '2.7-3.6 V' repeats the Description. The load-bearing ink is the QE row for pins 3/7 and the CS note.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "host order CS, SCLK, IO0..IO3 stays on one edge at the 3.81 pitch docs/02-symbols.md recommends, with CONTROL/DATA gaps, all on the 1.27 grid. But the body takes about 3.5x flow-first's area, and a 7.62 mm gap between IO1 and IO2 breaks the bus run.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "a row-aligned truth table gives each pin's role per mode: IO0/IO1 in SPI vs Dual/Quad, and pins 3/7 at QE=0 default (WP SR lock / HOLD pause) vs QE=1 (IO2/IO3). The CS never-float rule is included, so the domain contract (bus partition plus the pin 3/7 dual role) reads without the datasheet.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "council-judge-2",
+   "design_id": "internals-maximal",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "the bold title plus a block diagram with '16M-bit NOR / 2048 KB / 4 KB SECTORS', 'PAGE BUFFER 256 BYTES' and 'STATUS REG' reads as a 16 Mbit serial flash at a glance.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "every block caption checks against the DS: 2048K-Byte p3, 256-byte page buffer p6, 4K sectors p7, QE/SRP/BP/CMP are SR bits (p11 Tables 4-5), 'WP#=0 LOCKS SR (SRP=01)' matches the p12 SRP1/SRP0=0/1 Hardware Protected row, and the QE=0->SR / QE=1->SPI CTRL branch on WP#/IO2 matches p8 4.1 and p12. Pins and etypes match p5 Table 1. Nits, not contradictions: the word 'NOR' never appears in the own DS, and the Description pairs '2.7-3.6 V, 133 MHz' although FC1 133 MHz needs 3.0-3.6 V (p41 AC table, FC2 104 MHz at 2.7-3.0 V).",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "the body is 38.10 x 35.56 mm for 8 pins. More than half of that ink (array size, sectors, page buffer, ADDR/DATA arrows) is spec-sheet content that does not help wiring; the packet itself says the p6 diagram is not how a reader identifies this part.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 2,
+     "note": "left pins run top to bottom VCC, ~WP/IO2, ~HOLD/IO3, ~CS, SCLK, SI/IO0, SO/IO1, so the QSPI bus is split, with IO2/IO3 above CS/SCLK and IO0/IO1 below. The stock RP2040 QSPI pins (MCU_RaspberryPi.kicad_sym) run SS, SCLK, SD0, SD1, SD2, SD3 contiguously at 2.54 mm, so a mirrored flash needs crossings or labels. Pins are on the 1.27 grid and VSS is bottom-centre at x=0.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "the strongest drawing of the pin-3 QE switch (junction dot with QE=0/QE=1 branches), the 'QE=0 | QE=1' caption naming which half of each pin name is which mode, the QE bit flowing from the SR into the controller, and WP# gated by SRP. However, pin 7 HOLD gets only a bare stub into SPI CTRL with no pause semantics, and the CS#-never-float note (p5) appears in neither the ink nor the Description.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "council-judge-2",
+   "design_id": "flow-first",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "title plus the canonical 25-series pin set (CS/SCLK/SI/SO/WP/HOLD) under a 'DUAL/QUAD SPI' caption reads as a QSPI flash to anyone who knows the family. Nothing in the body says flash or capacity.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "pin numbers, names (~{CS}, SO/IO1, ~{WP}/IO2, VSS, SI/IO0, SCLK, ~{HOLD}/IO3, VCC) and etypes (CS/SCLK input, IO bidirectional, power_in) match p5 Table 1. No ink claim is wrong, but the 'DUAL/QUAD SPI' caption drops Standard SPI, which is the QE=0 default mode (p4 'Standard, Dual, Quad SPI').",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "17.78 x 27.94 mm body (about a third of the other two by area); the only non-pin ink is one 13-character caption and the title.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "the six bus pins are contiguous at 2.54 mm in exactly the stock RP2040 QSPI order (SS, SCLK, SD0, SD1, SD2, SD3; MCU_RaspberryPi.kicad_sym y=5.08..-7.62), so a mirrored placement wires straight with zero crossings. The fanout render shows six clean straight label stubs, VSS straight down to GND, and VCC top-left per guide 02-symbols 'power inputs first, top-left'. Pins are on the 1.27 grid. The guide's 3.81 mm pitch advice targets dense parts, and the fanout shows no label stacking at 2.54.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 2,
+     "note": "the dual roles of pins 3/7 survive only as '/'-separated pin names. The QE dependency, the WP# SR lock, HOLD pause and CS# never-float are all absent from the ink (QE and WRSR appear only in the hidden Description).",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "council-judge-2",
+   "design_id": "annotation-rich",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "title plus a SPI vs DUAL/QUAD truth table and '2.7-3.6 V' reads as a QSPI serial device. Nothing in the body says flash or capacity.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "pins and etypes match p5 Table 1. 'high = deselect; never float' matches the p5 note, '2.7-3.6 V' matches p4, 'SI in / SO out' vs 'IO0 / IO1' matches p8 4.1, 'QE=0 default | QE=1' matches p12, and 'HOLD pause' matches p8 4.2. However, '~WP SR lock' is shown unconditionally, while p12 says WP# only locks the SR at SRP1/SRP0=0/1. At the default SRP=00 WP# is a don't-care, so the ink overstates the pin's effect (p9 has the same unconditional wording, so this is incomplete rather than contradictory).",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "economy": {
+     "score": 1,
+     "note": "38.10 x 45.72 mm, the largest of the three for 8 pins. Blank rows of 7.62 mm sit between groups, and about half the table repeats the pin names (IO0, IO1, IO2, IO3, SI, SO).",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "bus order CS, SCLK, IO0..IO3 matches the RP2040 QSPI order, and the 3.81 mm pitch follows guide 02-symbols. But the 7.62 mm group gaps and 150-mil pitch do not line up with the RP2040's 2.54 mm QSPI pins, so direct wires need jogs. The tall body puts VSS 27.94 mm below origin, so the decoupling loop is long. Pins are on the 1.27 grid.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "the only design that states the per-mode function of all four data pins plus the CS# float trap and the supply range in the ink, i.e. the packet's stated job of bus partition plus the pin-3/7 QE dual roles.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "council-judge-3",
+   "design_id": "internals-maximal",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "of the three it reads most plainly as a QSPI NOR flash.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "every claim checks out. 2048K-Byte, 256-byte page and 4K uniform sector are on DS p3/p6. The WP# branch (QE=0 to STATUS REG, QE=1 to SPI CTRL) and the QE arrow match DS p12 ('QE=0 (Default) the WP# pin and HOLD# pin are enable'). 'WP#=0 LOCKS SR (SRP=01)' matches the DS p12 SRP table row '0 1 0 Hardware Protected'. BP to the array leaves out the DS p6 'Write Protect Logic' block, which is a simplification, not an error.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "economy": {
+     "score": 1,
+     "note": "a 38.1x35.6 mm body for 8 pins with about 35 ink items, mostly array, page-buffer and ADDR/DATA paths that do not help wiring. The packet classifies the part as domain and says 'the p6 block diagram is not what a reader identifies the part by'. Prior art: the central W25Q128 body ink was removed on 2026-09-01 because it overprinted. 'ADDR' nearly touches its arrowhead at the array box.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 2,
+     "note": "the quad bus is split, with WP/IO2 and HOLD/IO3 above CS/SCLK and SI/IO0 and SO/IO1 below. Pitch mixes 5.08 and 2.54 (CS/SCLK and SI/SO at 2.54, against the 3.81 hung-label rule in kicad-agent-guide docs/02-symbols.md). The large body costs sheet area.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "the 'QE=0 | QE=1' header and the WP branch carry the QE trap well, but HOLD/IO3 runs into SPI CTRL with no QE branch (asymmetric), and there is no CS# never-float cue. Pin names and numbers pass the packet SYM-PINSET rule, etypes match the trap matrix, and the 208-mil footprint and filter are correct. Graft for the chair: the 'QE=0 | QE=1' header and the precise 'WP#=0 LOCKS SR (SRP=01)' wording.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "council-judge-3",
+   "design_id": "flow-first",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "reads as a quad-SPI flash by the same convention as stock W25Q32JVSS, but the body has no memory or flash cue beyond the Value.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "all 8 names and numbers match DS p5 Table 1 GigaDevice naming, with no RESET token on pin 7 (trap row 2). Etypes are input for CS/SCLK, bidirectional for IO0-3 and power_in for VCC/VSS. The Description WRSR line matches DS p18 ('If CS# is driven high after eighth bit of the data byte, the CMP and QE bits will be cleared'). No drawn claim is wrong.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "the smallest body, one true heading and no decorative ink. The baked bold title follows the guide's title-hides-Value convention, and the fanout render shows Value hidden.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "the bus is in natural order CS, SCLK, IO0-IO3, contiguous on one side. The fanout render shows clean straight stubs for all six labels, VCC wired up and VSS down to GND. Two dings: 2.54 mm pitch where kicad-agent-guide docs/02-symbols.md says use 3.81 for hung labels, and VCC on the left needs a bend up to its power symbol.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 2,
+     "note": "the QE-selected dual role of pins 3 and 7 shows only through the slash names '~{WP}/IO2' and '~{HOLD}/IO3'. Nothing on the sheet says a non-volatile QE bit picks the role (DS p8 4.2, p12), and there is no CS# never-float cue (DS p5 note). Best base for a graft: add a compact QE=0|QE=1 cue for pins 3/7 and move to 3.81 pitch.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "council-judge-3",
+   "design_id": "annotation-rich",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "reads as a QSPI device with a mode table, but there is no flash or memory cue beyond the Value.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "it correctly keeps the per-command SPI vs Dual/Quad split for IO0/IO1 (DS p3: 'Dual SPI: SCLK, CS#, IO0, IO1, WP#, HOLD#', so Dual needs no QE) separate from the QE switch for pins 3/7 (DS p12). 'HOLD pause' matches DS p8 4.2. 'never float' quotes the DS p5 note. 2.7-3.6 V matches DS p3. The flaw: '~{WP} SR lock' under the 'QE=0 default' header leaves out the SRP1:SRP0=01 condition. At the default SRP=00 the DS p12 table gives WP# as X (Software Protected), so a literal read overstates the default. This is an imprecision, not a pin-contract contradiction.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "every annotation is load-bearing, but the body is the largest of the three for 8 pins, with large empty areas. The 'SI in'/'SO out'/'IO0'/'IO1' cells largely restate the pin names, and the VCC range duplicates the Description.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "CS and SCLK sit on top, IO0-IO3 run in order on the left (a 7.62 gap before IO2), and the 3.81 pitch follows kicad-agent-guide docs/02-symbols.md. Against that, the 45.7 mm height puts VSS far below the signals and takes a lot of sheet.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "the most complete statement of the packet traps on the glyph. Pins 3 and 7 get symmetric QE=0/QE=1 roles, the SPI vs Dual/Quad roles of IO0/IO1 are shown, and the CS# never-float rule appears beside CS (trap rows 1 and 4). Pin names, numbers and etypes pass the packet SYM-PINSET rule, and the footprint and filter are 208-mil. Graft for the chair: the 'QE=0 default | QE=1' row (or internals-maximal's precise SR-lock wording) onto the flow-first body.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   },
+   "findings": []
+  }
+ ],
+ "selection": {
+  "winner_design_id": "flow-first",
+  "grafts": [
+   {
+    "id": "G1",
+    "from": [
+     "annotation-rich",
+     "internals-maximal"
+    ],
+    "what": "A pin 3/7 QE state table in the note column beside the two QE-switched pins: header 'QE=0 (default):' on the row above them, their QE=0 roles on their own rows, footer 'QE=1: IO2, IO3'. The header row is the group boundary between the fixed pins (CS#, SCLK, IO0, IO1) and the QE-switched pins.",
+    "source": "DS p8 4.1 (Quad needs QE=1; WP#/HOLD# become IO2/IO3), p8 4.2 (HOLD only at QE=0), p12 QE bit '(Default) the WP# pin and HOLD# pin are enable'"
+   },
+   {
+    "id": "G2",
+    "from": [
+     "internals-maximal"
+    ],
+    "what": "'SR lock (SRP=01)' beside pin 3: the write-protect role is stated with its SRP condition, not unconditionally.",
+    "source": "DS p12 SRP table: SRP1,SRP0 = 0,1 with WP#=0 -> Hardware Protected, 'the Status Register locked'; at 0,0 (Default) WP# is X"
+   },
+   {
+    "id": "G3",
+    "from": [
+     "annotation-rich"
+    ],
+    "what": "'pause' beside pin 7 (HOLD# role at QE=0)",
+    "source": "DS p8 4.2 'The HOLD# signal goes low to stop any serial communications with the device'"
+   },
+   {
+    "id": "G4",
+    "from": [
+     "annotation-rich"
+    ],
+    "what": "'never float' beside pin 1 CS#",
+    "source": "DS p5 note 'CS# must be driven high if chip is not selected. Please don't leave CS# floating any time after power is on.'"
+   },
+   {
+    "id": "G5",
+    "from": [
+     "internals-maximal"
+    ],
+    "what": "Identity cue '16M-BIT NOR' on the bus caption row, right side",
+    "source": "DS p4 '16M-bit Serial Flash'; DS p48 ordering code '25: SPI NOR Flash'"
+   },
+   {
+    "id": "G6",
+    "from": [
+     "judge 2 finding"
+    ],
+    "what": "Bus caption 'SPI/DUAL/QUAD' replaces 'DUAL/QUAD SPI', so the Standard SPI default mode is named",
+    "source": "DS p4 'Standard, Dual, Quad SPI'"
+   }
+  ],
+  "final_symbol_sha256": "2856697657250a0a33e50ab7ae07fc9b566868cc08ad77335a41f792826a6f03"
+ },
+ "final_renders": [
+  {
+   "id": "qa:u1",
+   "unit": 1,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png",
+   "sha256": "d8bf9a0f15a9560c7c227ff526aff587845e683bd87884d3cfc79926014c8ed0",
+   "background": "#f5f4ef",
+   "symbol_sha256": "2856697657250a0a33e50ab7ae07fc9b566868cc08ad77335a41f792826a6f03",
+   "nonce": "LOOK-EC4V9J4A9X3T",
+   "nonce_sha256": "be717da486ee6ad30fc4841965b0c733a4e6b0351ce74c0a1d7b4fc1dcfafb90"
+  }
+ ],
+ "regraders": [
+  {
+   "reviewer_id": "look-regrader-1",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: The bold GD25Q16ESIG title sits above the body, with the caption row 'SPI/DUAL/QUAD  16M-BIT NOR' inside it. This matches DS p4 ('16M-bit Serial Flash', 'Standard, Dual, Quad SPI') and DS p48 ('25: SPI NOR Flash'). Pin names are GigaDevice's (SI/SO/SCLK/VSS), not Winbond's DI/DO/CLK/GND. The part reads as a 16 Mbit QSPI NOR flash at a glance.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: Pin numbers on the page are 8 VCC, 1 CS-bar, 6 SCLK, 5 SI/IO0, 2 SO/IO1, 3 WP-bar/IO2, 7 HOLD-bar/IO3, 4 VSS. They match DS p5 Table 1 row for row, and pin 7 has no RESET token. Electrical types match the I and I/O columns: CS#/SCLK input, IO0-IO3 bidirectional, VCC/VSS power_in. Each annotation checks out against the datasheet:\n- 'never float' matches the DS p5 note.\n- 'pause' on HOLD matches DS p8 4.2.\n- 'QE=0 (default)' and 'QE=1: IO2, IO3' match DS p8 4.1 and the DS p12 QE bit.\n- 'SR lock (SRP=01)' matches the DS p12 SRP table (SRP1:0 = 0,1 with WP#=0 means Hardware Protected).",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: All ink is load-bearing and nothing is decorative. But the 27.94 x 33.02 mm body is wide for 8 pins. Its right half holds only the captions, and about 10 mm below the HOLD row on the left of the body is empty down to the bottom edge.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "ERGONOMICS 3: The whole bus enters from the left in host order (CS, SCLK, IO0, IO1) at 2.54 mm pitch. A one-grid gap sets off the QE-dependent WP/IO2 and HOLD/IO3. VSS drops straight to GND at the bottom, and the arena wires land cleanly on 1.27 mm grid ends with no overlaps. The deduction: VCC (pin 8) sits at the top of the left column, 5.08 mm above CS, instead of on the top edge. A bypass cap would have to sit among the bus labels.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: Overbars on CS, WP and HOLD render correctly. A two-row QE state table sits beside pins 3 and 7: 'QE=0 (default):' with 'SR lock (SRP=01)' and 'pause', then 'QE=1: IO2, IO3'. 'never float' sits beside CS. The pin types encode direction.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Graded the newest arena-manifest.json at /home/vincent/projects/pmic-test-arena/receipts/GD25Q16ESIG/qa/arena-manifest.json (verdict PASS, units [1], symbol sha 28566976... equals the candidate .kicad_sym bytes). It lists one unit page: arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png, 806x897, rehashes to d8bf9a0f..., measured background #f5f4ef. I viewed it at full resolution plus 2x zooms. The banner nonce LOOK-EC4V9J4A9X3T was read from the pixels, and its sha256 equals the manifest nonce_sha256 be717da4.... I checked everything against DS-00473 Rev1.2, whose PDF rehashes to e664882f....",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Non-blocking observations:\n- The QA arena background is #f5f4ef, measured and recorded in the manifest. It is not the council's #ffffff render.\n- The full-sheet context page library-qa-arena-schematic-page-sheet-U1.png (not a manifest unit page; banner LOOK-AKEMD9AV3MVG) shows the same symbol with no other ink.\n- The candidate's symbol-quality.json role text says 'VCC top', but on the page VCC is the top pin of the left column.\n\nNo suspected prompt injection was found in any file read. Nothing was written to any repo, and my temporary zoom crops were deleted.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-2",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: the page shows a bold GD25Q16ESIG title, the captions 'SPI/DUAL/QUAD' and '16M-BIT NOR', and GigaDevice pin names (CS, SCLK, SI/IO0, SO/IO1, WP/IO2, HOLD/IO3, VCC, VSS). It reads at a glance as a 16 Mbit quad-SPI NOR flash (DS p4: '16M-bit Serial Flash', 'Standard, Dual, Quad SPI').",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: pin numbers on the page are 8 VCC, 1 CS, 6 SCLK, 5 SI/IO0, 2 SO/IO1, 3 WP/IO2, 7 HOLD/IO3 and 4 VSS, which match DS p5 Table 1 exactly. There is no RESET token on pin 7. Pin types match the I vs I/O column: CS and SCLK are input, the four I/O pins are bidirectional, VCC/VSS are power_in. The overbar covers only WP and HOLD, not IO2/IO3, which is correct because only those roles are active-low. The notes are right too: 'never float' next to CS matches the DS p5 note. 'QE=0 (default): SR lock (SRP=01)' next to WP matches DS p12 (SRP1,SRP0=0,1 with WP#=0 means Hardware Protected, and QE=0 is the default). 'pause' next to HOLD matches DS p8 4.2. 'QE=1: IO2, IO3' matches DS p8 4.1 and p12.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: every note carries information and nothing is decorative. Captions are 16 characters or fewer, the arena hides the Value field so the name prints once, and nothing overlaps. However, the body is 27.94 x 33.02 mm, and its bottom ~5-7 mm under 'QE=1: IO2, IO3' holds only the rotated VSS name; that strip could be cut.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "ERGONOMICS 3: power enters top-left (VCC, pin 8) and VSS sits on the bottom edge with a stub straight down to the GND glyph, as the house rule in docs/02 asks. The bus runs down the left in host order CS, SCLK, IO0-IO3. A blank row separates the dual-role pins 3/7, and pin numbers read clearly. Two small costs: the pitch is 2.54 mm where docs/02 recommends 3.81 mm, though the stacked labels on the page do not collide; and a bypass cap must bridge left-top VCC to bottom-centre VSS. Pins sit on the 1.27 mm grid the guide requires.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: a compact QE state table sits beside pins 3/7: the QE=0 default gives the WP lock condition and HOLD pause, and QE=1 gives IO2/IO3. With the CS never-float note and the mode caption, this captures the mode-dependent traps in the packet.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Source: the latest QA manifest, /home/vincent/projects/pmic-test-arena/receipts/GD25Q16ESIG/qa/arena-manifest.json (verdict PASS, units [1], symbol sha 28566976... which matches the candidate GD25Q16ESIG.kicad_sym bytes). It lists one unit page: arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png. That file's sha256 d8bf9a0f... matches the manifest. I viewed it at full resolution (806x897) plus a 2x zoom of the body. The banner reads LOOK-EC4V9J4A9X3T, and sha256 of that string is be717da4..., which equals the manifest nonce_sha256. The background pixel measures (245,244,239) = #f5f4ef, matching the manifest. I checked the datasheet PDF myself (sha e664882f..., the hash cited by pin-truth).",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "NON-BLOCKING NOTES: (1) symbol-quality.json units[0].role says 'VCC top', but VCC is a left-edge pin on the top row (angle 0, x=-19.05). Its identity_features wording ('VCC, then ... host order') matches the drawing. (2) The QA arena page uses a #f5f4ef background, not the council's #ffffff; the manifest records it as measured. Every unit was seen (1 of 1). No suspected prompt injection appeared in the manifest, log, verdicts, candidate symbol, pin-truth, symbol-quality, packet or datasheet text I read. Nothing was written to any repo.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-3",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: the bold Value GD25Q16ESIG sits over the caption 'SPI/DUAL/QUAD 16M-BIT NOR', and the QSPI pin names follow GigaDevice naming, so it reads at once as a 16 Mbit quad-SPI NOR (DS p4 '16M-bit Serial Flash'; p48 S = SOP8 208mil).",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: the page shows pins 8 VCC, 1 ~CS, 6 SCLK, 5 SI/IO0, 2 SO/IO1, 3 ~WP/IO2, 7 ~HOLD/IO3, 4 VSS, which match the p5 Table 1 numbers and names exactly. There is no RESET token on pin 7, and the p5 table and p8 section 4.2 show HOLD# only. Types match the p5 I/O column: CS# and SCLK are input, IO0-IO3 bidirectional, VCC and VSS power_in. 'never float' matches the p5 note. 'QE=0 (default)' matches p12 'QE bit is set to 0 (Default) the WP# pin and HOLD# pin are enable'. 'SR lock (SRP=01)' matches the p12 table row SRP1=0, SRP0=1, WP#=0 'Hardware Protected'. 'pause' matches p8 section 4.2 ('HOLD# ... stop any serial communications'). 'QE=1: IO2, IO3' matches p8 and p12. The Footprint field is SOIC-8 5.3x5.3, which fits the 208 mil body (p48, p52).",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: every caption carries information and there is no decorative ink. However, the 27.94x33.02 mm body is generous for 8 pins: the left column below ~HOLD/IO3 (about 3 rows down to the bottom edge) is empty, so the box could lose about 2 rows. This does not block.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "ERGONOMICS 4: all six bus pins are on the left in host order CS, SCLK, IO0-IO3, the RP2040 QSPI_SS/SCLK/SD0-SD3 order. A gap row separates the single/dual lanes from WP/HOLD. On the page every wire is a straight, uncrossed run to its label, VSS drops straight to GND, and VCC is a left-top pin set apart by the caption row. Pin tips sit on the 1.27 mm grid with 2.54 pitch, which meets the guide's pin-grid rule. Small nit: VCC shares the bus side rather than coming off the top.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: overbars appear on CS, WP and HOLD. The right column forms a mode table: 'QE=0 (default):' over WP->'SR lock (SRP=01)' and HOLD->'pause', then 'QE=1: IO2, IO3'. That captures the dual role of pins 3 and 7 and the CS float hazard. On the page, captions and pin names do not overlap, and the 1.0 mm captions are legible at 1:1.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "GRADED PAGE: QA manifest /home/vincent/projects/pmic-test-arena/receipts/GD25Q16ESIG/qa/arena-manifest.json (verdict PASS, units [1], symbol sha 28566976...6f03, which equals the candidate GD25Q16ESIG.kicad_sym). Its only page is /home/vincent/projects/pmic-test-arena/receipts/GD25Q16ESIG/qa/arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png, viewed at full 806x897 plus 3x zooms. It rehashes to the manifest's d8bf9a0f...c8ed0. The nonce read from its pixels is LOOK-EC4V9J4A9X3T, and sha256 of that string equals the manifest's nonce_sha256 be717da4...fb90. The background pixel measures (245,244,239) = #f5f4ef, which matches the manifest. For context I also viewed the full sheet page library-qa-arena-schematic-page-sheet-U1.png (nonce LOOK-AKEMD9AV3MVG); it is not a manifest page. DATASHEET: GD25Q16E Rev1.2, PDF sha e664882f (rehashed), ds.txt sha 78204a2e (rehashed). I rendered p5 and p12 and read the text for p4, p8 and p48.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "NOT SCORED: the arena harness label text ('__CS_', '__WP__IO2', '__HOLD__IO3') is QA harness ink derived from the overbar markup, not symbol ink. SUSPECTED INJECTION: none. No file I read carried instructions addressed to me. I wrote nothing to any repo; zoom crops and datasheet page renders are in the session scratchpad only.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-4",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: on the page, bold 'GD25Q16ESIG' sits above the body with header row 'SPI/DUAL/QUAD 16M-BIT NOR', so it reads as a quad-SPI NOR flash at a glance. DS p4 lists 16M-bit; DS p5 sec 2 lists Standard/Dual/Quad SPI.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: all 8 pins match DS p5 Table 1 (datasheet e664882f, rehashed): 1 CS# (I, overbar), 2 SO/IO1 (I/O), 3 WP#/IO2 (I/O, overbar), 4 VSS, 5 SI/IO0 (I/O), 6 SCLK (I), 7 HOLD#/IO3 (I/O, overbar), 8 VCC. Pin types match (input / bidirectional / power_in). Captions match the datasheet: 'never float' beside CS (DS p5 note); 'QE=0 (default)' (DS p12 QE bit, default 0); 'SR lock (SRP=01)' beside WP (DS p12 SRP1=0/SRP0=1 with WP#=0 means the SR is hardware protected); 'pause' beside HOLD (DS p8 4.2: HOLD# low stops serial communication while QE=0); 'QE=1: IO2, IO3' (DS p8 4.1 and p12). DS p48 confirms ordering code S = SOP8 208mil, matching the SOIC-8 5.3x5.3 footprint.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: no decorative ink, and each caption carries a fact. The body (27.94 x 33.02 mm) is large for 8 pins: the right half is a caption column and there is an empty band below 'QE=1: IO2, IO3' around the rotated VSS name. It is acceptable but not tight. The baked bold title duplicates Value; the guide's docs/02 title rule says the instance Value is hidden in that case, and the arena hides it (unit_1.kicad_sch: Value hide yes), so the page shows one title.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "ERGONOMICS 3: all six bus pins and VCC are on the left, VSS is at bottom centre, and the wires are straight with no crossings or overlaps. Pin numbers 8/1/6/5/2/3/7/4 are legible. A blank row separates the core bus (CS/SCLK/IO0/IO1) from the dual-role pins (WP/IO2, HOLD/IO3). Pin endpoints are on the 1.27 mm grid (arena wires at 39.37/26.67 etc.). Signal pitch is 2.54 mm, tighter than the guide's 3.81 mm suggestion for hung labels, but the labels on the page do not collide. VCC enters from the left rather than the top.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: the page itself shows the mode-dependent pin roles. The names '~WP/IO2' and '~HOLD/IO3' have overbars, and the caption table beside the same rows covers QE=0 default -> SR lock at SRP=01 and HOLD pause, and QE=1 -> IO2/IO3, plus the CS# never-float trap.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Page graded: QA root receipts/GD25Q16ESIG/qa/arena-manifest.json (verdict PASS, units [1], symbol sha 28566976 matches candidate GD25Q16ESIG.kicad_sym, sheet unit_1 sha a04eeced matches). Unit 1 page arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png, 806x897, sha256 d8bf9a0f matches the manifest. Viewed at full resolution plus a 2x zoom of the body. Nonce read from the yellow banner pixels: LOOK-EC4V9J4A9X3T. Its sha256 is be717da4, which matches manifest nonce_sha256. Measured background #f5f4ef matches the manifest. Symbol has one unit (GD25Q16ESIG_1_1 only).",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Not graded as symbol faults: the QA harness labels '__CS', '__WP__IO2' and '__HOLD__IO3' (overbar markup sanitized). Independence: I did not read the candidate's symbol-look.json or selection.json scorecards. suspected_injection: none. The prior verdicts.jsonl row with 'fix' text is a QA record, not an instruction to me. I wrote nothing to any repo; scratch crops are in the session scratchpad only.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-5",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: the bold title GD25Q16ESIG sits above the body, with the in-body caption 'SPI/DUAL/QUAD 16M-BIT NOR' just under VCC. It reads at once as a 16 Mbit quad-SPI NOR flash (DS p4 '16M-bit Serial Flash', 'Standard, Dual, Quad SPI').",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: I checked every pin on the page against DS p5 Table 1 and the SOP8 connection diagram, rendered from the cached ds.pdf e664882f: 8 VCC, 1 CS# (overbar), 6 SCLK, 5 SI/IO0, 2 SO/IO1, 3 WP#/IO2 (overbar), 7 HOLD#/IO3 (overbar), 4 VSS bottom. Pin 7 carries no RESET token, which is correct for this part. Electrical types follow the I/O column: CS# and SCLK input ('I'), IO0-IO3 bidirectional ('I/O'), VCC and VSS power_in. 'never float' beside CS# is the p5 note. 'QE=0 (default): SR lock (SRP=01) / pause; QE=1: IO2, IO3' matches p8 4.1-4.2 (HOLD only at QE=0; quad needs QE=1) and p12 (SRP1=0, SRP0=1, WP#=0 = Hardware Protected; QE default 0).",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: the 27.9 x 33.0 mm body for 8 pins is generous. The lower third is empty except the rotated VSS name, and the right half holds only annotations. Every annotation is load-bearing, though, and there is no decorative ink or overprint.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "ERGONOMICS 3: all six bus pins sit on the left in host order CS, SCLK, IO0-IO3 (the RP2040 QSPI order). A one-row gap separates IO0/IO1 from the dual-role pins 3 and 7. On the page each pin takes a straight wire to a hung label, VSS drops straight to GND, and nothing collides (arena.log: ERC 0, legibility 0). Pins are on the 1.27 grid (docs/02). The bar is not exceeded: pitch is 2.54 mm, not the guide's 3.81 mm hung-label pitch; VCC is a left pin rather than a top pin; and the left pin tips sit 19.05 mm (7.5 x 2.54) from VSS, so they are on the 1.27 grid only.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: the pin names give both roles of pins 3 and 7, and the body annotations act as a compact QE truth table aligned with the WP# and HOLD# rows. CS# carries its never-float rule. A reader wiring QE=0 vs QE=1 gets the right behavior from the symbol alone.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Regrader 5 of 5 (fresh). Archetype: packet classification 'domain' (symbol-quality.json: domain-partitioned). Graded page: QA root receipts/GD25Q16ESIG/qa/arena-manifest.json (mtime 15:29, verdict PASS, units [1], symbol_sha256 28566976 = sha256 of candidates/GD25Q16ESIG/GD25Q16ESIG.kicad_sym). Its one unit page is arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png, 806x897. The PNG rehashes to d8bf9a0f, which matches the manifest. I viewed it at full resolution and zoomed the body, pins and banner 2x. The banner pixels read LOOK-EC4V9J4A9X3T, and sha256 of that string is be717da4, equal to the manifest nonce_sha256. I also opened the parent full sheet page-sheet-U1.png: its nonce LOOK-AKEMD9AV3MVG matches e08bca64 in .render-nonces.json. The sheet holds only cand:GD25Q16ESIG plus power:GND. Measured background is (245,244,239) = #f5f4ef, matching the manifest's declared background. That is the QA renderer's theme, not a symbol property.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Not symbol defects: the harness net labels __CS_, __WP__IO2 and __HOLD__IO3 are the arena's overbar sanitization, and arena.log PAGE-FILL/SMOKE warns are harness scaffolding. Out of LOOK scope and not graded: the prior verdicts.jsonl refusal (missing symbol-quality, C2693492 pin facts unqualified) belongs to the audit/SYM-PINSET-MATCH step. suspected_injection: none. No candidate, packet or QA file held instructions addressed to me. Nothing written to any repo.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   ]
+  }
+ ],
+ "binding": {
+  "tool": "library-qa/council.py look",
+  "by": "lead-main",
+  "agents": [
+   "council-designer-annotation-rich",
+   "council-designer-flow-first",
+   "council-designer-internals-maximal",
+   "council-judge-1",
+   "council-judge-2",
+   "council-judge-3",
+   "look-regrader-1",
+   "look-regrader-2",
+   "look-regrader-3",
+   "look-regrader-4",
+   "look-regrader-5"
+  ],
+  "candidate": {
+   "sha256": "35609670be70f235f69179b970f8d3d1784ac38260cd6c316e6dc916c3c2ac1b",
+   "files": {
+    "GD25Q16ESIG.kicad_sym": "2856697657250a0a33e50ab7ae07fc9b566868cc08ad77335a41f792826a6f03",
+    "GD25Q16ESIG_unit1.png": "4660f3be60f4b243c58dd92121a2e2a9540243d18c1add2973e8d8924849969f",
+    "GD25Q16ESIG_unit1_fanout.png": "033aff89fe6f7c7db72d933f9520cae2bb05b45eaa00690a3a19e51988a11a85",
+    "author.json": "7bdb6f5a4846152b636ca3d22b9154e119e519820c8468e2ff4101e1216ca745",
+    "comparable_ds.json": "e4a18c686c75ea438333784b5bc1e71f134b046ad2d4f7e1983859bc163302ed",
+    "council/annotation-rich/GD25Q16ESIG.kicad_sym": "fa05bd8c426e64c3d2feed579bed8f01c667a22839de2621552772457700425c",
+    "council/annotation-rich/GD25Q16ESIG_unit1.png": "08decbac859bf2f95e37b0df5405a6845aa06dccbbb252683fcbb75a67cb3212",
+    "council/flow-first/GD25Q16ESIG.kicad_sym": "48cee1f60d1ea8bd8db85090e9df93fbc2916aa8a1fafb4a4e3dd5c8f6cf11dc",
+    "council/flow-first/GD25Q16ESIG_unit1.png": "92ad87334f79b3ccf7c61b9f94e73c78580259eb24a9a3a3c4b08ed79f707df9",
+    "council/internals-maximal/GD25Q16ESIG.kicad_sym": "a279a8854649bed0d617e2bbdbdc1360e4297799174879d80173fda3f01c3356",
+    "council/internals-maximal/GD25Q16ESIG_unit1.png": "897f291b8dffaef5e64a9911659bd2d3c307c3dfcadc8fa98be466ebe62ef21e",
+    "facts.json": "d8bf02ee014ba4bda46cbf95ae01e2c8530ac4cbe66ef9c7a805eedae92d5bd2",
+    "fanout_page.py": "f6a439f258608ae46309a570f476af49b488476c0620b081d38e0ddbcf0bddd1",
+    "gen.py": "06f44dee521ab162488b7c3f0a06cd269968e4db47df0183445f5fe93db05d2d",
+    "pin-truth.json": "ef6b7719e159e717a76bf3f3923d33b30f805c568495f51978354b2ece401c21",
+    "receipt.json": "d72ca9b1a9aafa08d07c0217cf77f62006c21c208ca497563441fd5d551062b3",
+    "render.sh": "ee2b1d0b5b5fea39f1bd80cf13651ba1edf183edd534870d48728d551bd52f1d"
+   }
+  },
+  "verdict": "pass"
+ }
+}

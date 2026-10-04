@@ -1,0 +1,86 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "GD25Q16ESIG",
+ "symbol": {
+  "asset_path": "GD25Q16ESIG.kicad_sym",
+  "internal_name": "GD25Q16ESIG",
+  "sha256": "2856697657250a0a33e50ab7ae07fc9b566868cc08ad77335a41f792826a6f03"
+ },
+ "archetype": "domain-partitioned",
+ "units": [
+  {
+   "unit": 1,
+   "role": "QSPI NOR flash: VCC top of the left edge, then the bus (CS#, SCLK, IO0-IO3) down the left in host order, VSS bottom",
+   "presentation": "domain",
+   "identity_features": [
+    "bus partition: VCC, then SPI/DUAL/QUAD control+data run in host order CS, SCLK, IO0..IO3 (DS p5 Table 1)",
+    "QE state table for pins 3/7: QE=0 (default) WP#/HOLD#, QE=1 IO2/IO3 (DS p8 4.1-4.2, p12)",
+    "identity caption 16M-BIT NOR (DS p4)"
+   ]
+  }
+ ],
+ "evidence": {
+  "comparable_ds": {
+   "path": "comparable_ds.json",
+   "sha256": "e4a18c686c75ea438333784b5bc1e71f134b046ad2d4f7e1983859bc163302ed",
+   "own_sha256": "e664882f90d940a273ba712d7552c49a1546f7e8fddc80ef6f064bd6c1feceaa",
+   "comparable_count": 4
+  },
+  "pin_truth": {
+   "path": "pin-truth.json",
+   "sha256": "ef6b7719e159e717a76bf3f3923d33b30f805c568495f51978354b2ece401c21",
+   "coverage": "all"
+  }
+ },
+ "generator": {
+  "contract": "python-cli-output-v1",
+  "path": "gen.py",
+  "sha256": "06f44dee521ab162488b7c3f0a06cd269968e4db47df0183445f5fe93db05d2d",
+  "inputs": [],
+  "expected_symbol_sha256": "2856697657250a0a33e50ab7ae07fc9b566868cc08ad77335a41f792826a6f03"
+ },
+ "look": {
+  "receipt_path": "symbol-look.json",
+  "sha256": "e30292b26fe38d24aa8f8204fa647705d9b42b2660d5b3c9f453113cec0cf674"
+ },
+ "binding": {
+  "tool": "library-qa/council.py quality",
+  "by": "lead-main",
+  "agents": [
+   "council-designer-annotation-rich",
+   "council-designer-flow-first",
+   "council-designer-internals-maximal",
+   "council-judge-1",
+   "council-judge-2",
+   "council-judge-3",
+   "look-regrader-1",
+   "look-regrader-2",
+   "look-regrader-3",
+   "look-regrader-4",
+   "look-regrader-5"
+  ],
+  "candidate": {
+   "sha256": "35609670be70f235f69179b970f8d3d1784ac38260cd6c316e6dc916c3c2ac1b",
+   "files": {
+    "GD25Q16ESIG.kicad_sym": "2856697657250a0a33e50ab7ae07fc9b566868cc08ad77335a41f792826a6f03",
+    "GD25Q16ESIG_unit1.png": "4660f3be60f4b243c58dd92121a2e2a9540243d18c1add2973e8d8924849969f",
+    "GD25Q16ESIG_unit1_fanout.png": "033aff89fe6f7c7db72d933f9520cae2bb05b45eaa00690a3a19e51988a11a85",
+    "author.json": "7bdb6f5a4846152b636ca3d22b9154e119e519820c8468e2ff4101e1216ca745",
+    "comparable_ds.json": "e4a18c686c75ea438333784b5bc1e71f134b046ad2d4f7e1983859bc163302ed",
+    "council/annotation-rich/GD25Q16ESIG.kicad_sym": "fa05bd8c426e64c3d2feed579bed8f01c667a22839de2621552772457700425c",
+    "council/annotation-rich/GD25Q16ESIG_unit1.png": "08decbac859bf2f95e37b0df5405a6845aa06dccbbb252683fcbb75a67cb3212",
+    "council/flow-first/GD25Q16ESIG.kicad_sym": "48cee1f60d1ea8bd8db85090e9df93fbc2916aa8a1fafb4a4e3dd5c8f6cf11dc",
+    "council/flow-first/GD25Q16ESIG_unit1.png": "92ad87334f79b3ccf7c61b9f94e73c78580259eb24a9a3a3c4b08ed79f707df9",
+    "council/internals-maximal/GD25Q16ESIG.kicad_sym": "a279a8854649bed0d617e2bbdbdc1360e4297799174879d80173fda3f01c3356",
+    "council/internals-maximal/GD25Q16ESIG_unit1.png": "897f291b8dffaef5e64a9911659bd2d3c307c3dfcadc8fa98be466ebe62ef21e",
+    "facts.json": "d8bf02ee014ba4bda46cbf95ae01e2c8530ac4cbe66ef9c7a805eedae92d5bd2",
+    "fanout_page.py": "f6a439f258608ae46309a570f476af49b488476c0620b081d38e0ddbcf0bddd1",
+    "gen.py": "06f44dee521ab162488b7c3f0a06cd269968e4db47df0183445f5fe93db05d2d",
+    "pin-truth.json": "ef6b7719e159e717a76bf3f3923d33b30f805c568495f51978354b2ece401c21",
+    "receipt.json": "d72ca9b1a9aafa08d07c0217cf77f62006c21c208ca497563441fd5d551062b3",
+    "render.sh": "ee2b1d0b5b5fea39f1bd80cf13651ba1edf183edd534870d48728d551bd52f1d"
+   }
+  },
+  "verdict": "pass"
+ }
+}

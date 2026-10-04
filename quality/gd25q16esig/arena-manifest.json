@@ -1,0 +1,23 @@
+{
+ "schema_version": "library-qa-arena-1",
+ "part_id": "GD25Q16ESIG",
+ "symbol_sha256": "2856697657250a0a33e50ab7ae07fc9b566868cc08ad77335a41f792826a6f03",
+ "units": [
+  1
+ ],
+ "verdict": "PASS",
+ "build_sha256": "7ebdb624b103a8d9d66eebf128ed84e1d5c6f62c1e067997e19fbaf10a36734e",
+ "sheets": {
+  "unit_1.kicad_sch": "a04eeced93d45b71c77ef95cff06fb925d5e90caa815f027475ca66a8c0971ae"
+ },
+ "pages": [
+  {
+   "unit": 1,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png",
+   "sha256": "d8bf9a0f15a9560c7c227ff526aff587845e683bd87884d3cfc79926014c8ed0",
+   "svg_fingerprint": "b709f027d667b7b31fbd4bc3213792ab0632431fd53ae7709f91be17006b7223",
+   "nonce_sha256": "be717da486ee6ad30fc4841965b0c733a4e6b0351ce74c0a1d7b4fc1dcfafb90",
+   "background": "#f5f4ef"
+  }
+ ]
+}

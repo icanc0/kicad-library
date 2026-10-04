@@ -1,0 +1,108 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "gd25q16esig",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "GigaDevice",
+      "normalized": "gigadevice"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "GD25Q16ESIG",
+      "canonical": "GD25Q16ESIG",
+      "comparison_key": "GD25Q16ESIG",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C2693492"
+      }
+    ],
+    "description": "Central library symbol GD25Q16ESIG promoted from truedepth-shim."
+  },
+  "names": {
+    "canonical": "GD25Q16ESIG",
+    "aliases": [],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/GD25Q16ESIG.kicad_sym",
+        "name": "GD25Q16ESIG"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/GD25Q16ESIG.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "2856697657250a0a33e50ab7ae07fc9b566868cc08ad77335a41f792826a6f03",
+      "internal_name": "GD25Q16ESIG"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "4233e20101e0ea3ddd822b080a12002aad570d0a",
+    "source_board": "truedepth-shim",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/GD25Q16ESIG.kicad_sym",
+        "evidence": "First-import fit pass: GD25Q16ESIG (U2, SPI boot flash): symbol pins 1-8 = GD25Q16E Rev1.2 p5 SOP8 map (vision-confirmed), SYM-PINSET-MATCH clean on the qualified C2693492 pin facts (ready=True, train 50); land = stock Package_SO:SOIC-8_5.3x5.3mm_P1.27mm (cc86a708) fits p52 SOP8 208MIL (E 7.70-8.10, L 0.50-0.85, b 0.31-0.51, e 1.27), 3D stock SOIC-8_5.3x5.3mm step."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "GD25Q16ESIG (U2, SPI boot flash): symbol pins 1-8 = GD25Q16E Rev1.2 p5 SOP8 map (vision-confirmed), SYM-PINSET-MATCH clean on the qualified C2693492 pin facts (ready=True, train 50); land = stock Package_SO:SOIC-8_5.3x5.3mm_P1.27mm (cc86a708) fits p52 SOP8 208MIL (E 7.70-8.10, L 0.50-0.85, b 0.31-0.51, e 1.27), 3D stock SOIC-8_5.3x5.3mm step.",
+      "note": "",
+      "pin_gate": {
+        "symbol": "GD25Q16ESIG",
+        "lcsc": "C2693492",
+        "facts_checked": true,
+        "source": "facts",
+        "board_context": null,
+        "state": "clean",
+        "gaps": [],
+        "allow_pin_gaps": null
+      }
+    },
+    "quality": {
+      "state": "council-graded",
+      "symbol_sha256": "2856697657250a0a33e50ab7ae07fc9b566868cc08ad77335a41f792826a6f03",
+      "installed_symbol_sha256": "2856697657250a0a33e50ab7ae07fc9b566868cc08ad77335a41f792826a6f03",
+      "footprint_sha256": null,
+      "installed_footprint_sha256": null,
+      "quality_receipt": {
+        "path": "quality/gd25q16esig/symbol-quality.json",
+        "sha256": "b730441abf96f1c098de47697ca9a32ffca0eb84a31c30fc18fd4e7c788ae860"
+      },
+      "look_receipt": {
+        "path": "quality/gd25q16esig/symbol-look.json",
+        "sha256": "e30292b26fe38d24aa8f8204fa647705d9b42b2660d5b3c9f453113cec0cf674"
+      },
+      "arena_manifest": {
+        "path": "quality/gd25q16esig/arena-manifest.json",
+        "sha256": "7632275de554451bfe151fffbe79f31cfe1054a64c215dc6970ab5170a7ebc39"
+      },
+      "arena_manifest_mtime": "2026-10-02T19:29:08+00:00",
+      "arena_manifest_mtime_note": "st_mtime of QA's arena-manifest.json when promoted — the arena render's clock, reset by any cp/checkout; the receipts carry no audit clock and now() is never written",
+      "admission": {
+        "path": "quality/gd25q16esig/admission.json",
+        "sha256": "98beb9529445e115f2c9f1e7a72aad115fa2b4ed59c0cf04ee5b3202f4f5400a"
+      }
+    }
+  }
+}
