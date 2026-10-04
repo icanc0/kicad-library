@@ -1,0 +1,1426 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "74LVC125AD_118",
+ "symbol_sha256": "4c51b0b0a27ac7154765fb101e4ea6f14ade926fc9f5198aff32b56901aa046e",
+ "units": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "designs": [
+  {
+   "id": "design-flow-first",
+   "designer_id": "designer-flow-first-74lvc125a",
+   "stance": "flow-first",
+   "symbol_path": "council/flow-first/74LVC125A.kicad_sym",
+   "symbol_sha256": "a5b512cb3d848115c4be5fd9f56e0624cadf46beb0d45577710666bd34de56e3",
+   "renders": [
+    {
+     "id": "design:flow-first:u1",
+     "unit": 1,
+     "path": "council/flow-first/74LVC125A_unit1.png",
+     "sha256": "5493126597c623eb737ed3893b761084bb1ecaedd8744d570b51c3ec04ae0452",
+     "background": "#ffffff",
+     "symbol_sha256": "a5b512cb3d848115c4be5fd9f56e0624cadf46beb0d45577710666bd34de56e3"
+    },
+    {
+     "id": "design:flow-first:u2",
+     "unit": 2,
+     "path": "council/flow-first/74LVC125A_unit2.png",
+     "sha256": "3d826c05c6cbbb6106e9905dbb12f3540e60ce5db9d3f276b0e85d565575358e",
+     "background": "#ffffff",
+     "symbol_sha256": "a5b512cb3d848115c4be5fd9f56e0624cadf46beb0d45577710666bd34de56e3"
+    },
+    {
+     "id": "design:flow-first:u3",
+     "unit": 3,
+     "path": "council/flow-first/74LVC125A_unit3.png",
+     "sha256": "e28927da1b6777238521e70df30f1d35ab65dee438a1ad24b568c40c8eeeb2af",
+     "background": "#ffffff",
+     "symbol_sha256": "a5b512cb3d848115c4be5fd9f56e0624cadf46beb0d45577710666bd34de56e3"
+    },
+    {
+     "id": "design:flow-first:u4",
+     "unit": 4,
+     "path": "council/flow-first/74LVC125A_unit4.png",
+     "sha256": "4b8f3e8dcd502c9daa83d6a9ded64993c9f162327f4f0919f9aa66dc8807c16c",
+     "background": "#ffffff",
+     "symbol_sha256": "a5b512cb3d848115c4be5fd9f56e0624cadf46beb0d45577710666bd34de56e3"
+    },
+    {
+     "id": "design:flow-first:u5",
+     "unit": 5,
+     "path": "council/flow-first/74LVC125A_unit5.png",
+     "sha256": "2fe6554a5cb3efc380bb9e99b92e459dafe6c8e2b2da8a2208ff126603729288",
+     "background": "#ffffff",
+     "symbol_sha256": "a5b512cb3d848115c4be5fd9f56e0624cadf46beb0d45577710666bd34de56e3"
+    }
+   ]
+  },
+  {
+   "id": "design-annotation-rich",
+   "designer_id": "designer-annotation-rich-74lvc125a",
+   "stance": "annotation-rich",
+   "symbol_path": "council/annotation-rich/74LVC125A.kicad_sym",
+   "symbol_sha256": "9657dccad4de01591d165b62297df9a1e90b7814da126a655540216c0dd80ed5",
+   "renders": [
+    {
+     "id": "design:annotation-rich:u1",
+     "unit": 1,
+     "path": "council/annotation-rich/74LVC125A_unit1.png",
+     "sha256": "70b43a6cab49ec1c15b3977f35ab3c298325ed4eb859f8d076d631167b58c7d7",
+     "background": "#ffffff",
+     "symbol_sha256": "9657dccad4de01591d165b62297df9a1e90b7814da126a655540216c0dd80ed5"
+    },
+    {
+     "id": "design:annotation-rich:u2",
+     "unit": 2,
+     "path": "council/annotation-rich/74LVC125A_unit2.png",
+     "sha256": "4f746511fe67ad192facc25858c53ef9225b252f120d87f5cb8854821fa14506",
+     "background": "#ffffff",
+     "symbol_sha256": "9657dccad4de01591d165b62297df9a1e90b7814da126a655540216c0dd80ed5"
+    },
+    {
+     "id": "design:annotation-rich:u3",
+     "unit": 3,
+     "path": "council/annotation-rich/74LVC125A_unit3.png",
+     "sha256": "2681438dc74de1fbc6a6ea4806577ea41b0e1354e71b5bd474ea3f5a792ab86b",
+     "background": "#ffffff",
+     "symbol_sha256": "9657dccad4de01591d165b62297df9a1e90b7814da126a655540216c0dd80ed5"
+    },
+    {
+     "id": "design:annotation-rich:u4",
+     "unit": 4,
+     "path": "council/annotation-rich/74LVC125A_unit4.png",
+     "sha256": "b303a628a9237d74d9b140d7d236db93a45f002559067e3bf89b0dcc8a6826f5",
+     "background": "#ffffff",
+     "symbol_sha256": "9657dccad4de01591d165b62297df9a1e90b7814da126a655540216c0dd80ed5"
+    },
+    {
+     "id": "design:annotation-rich:u5",
+     "unit": 5,
+     "path": "council/annotation-rich/74LVC125A_unit5.png",
+     "sha256": "30f583ddc6179c55e7a336d0896a36f8d32f5c57dec8abc62cd6722342772f7f",
+     "background": "#ffffff",
+     "symbol_sha256": "9657dccad4de01591d165b62297df9a1e90b7814da126a655540216c0dd80ed5"
+    }
+   ]
+  },
+  {
+   "id": "design-internals-maximal",
+   "designer_id": "designer-internals-maximal-74lvc125a",
+   "stance": "internals-maximal",
+   "symbol_path": "council/internals-maximal/74LVC125A.kicad_sym",
+   "symbol_sha256": "51b24ffe895b7ef6ca3130805dd6ff71888aecd80eff0938d51730d353fa9489",
+   "renders": [
+    {
+     "id": "design:internals-maximal:u1",
+     "unit": 1,
+     "path": "council/internals-maximal/74LVC125A_unit1.png",
+     "sha256": "2167a9e2dcbd2bee6d114062224c8ebb63d2ac2bcf551fd5bed4e78df501bad0",
+     "background": "#ffffff",
+     "symbol_sha256": "51b24ffe895b7ef6ca3130805dd6ff71888aecd80eff0938d51730d353fa9489"
+    },
+    {
+     "id": "design:internals-maximal:u2",
+     "unit": 2,
+     "path": "council/internals-maximal/74LVC125A_unit2.png",
+     "sha256": "a1212211c9e8af8560676eb22923151fbd32b0c5efa6c2986a9f1fa4f30a2298",
+     "background": "#ffffff",
+     "symbol_sha256": "51b24ffe895b7ef6ca3130805dd6ff71888aecd80eff0938d51730d353fa9489"
+    },
+    {
+     "id": "design:internals-maximal:u3",
+     "unit": 3,
+     "path": "council/internals-maximal/74LVC125A_unit3.png",
+     "sha256": "de1b366ad10375677eea02c18e6905201566b00a9a1a169a977d6cc317a93d7a",
+     "background": "#ffffff",
+     "symbol_sha256": "51b24ffe895b7ef6ca3130805dd6ff71888aecd80eff0938d51730d353fa9489"
+    },
+    {
+     "id": "design:internals-maximal:u4",
+     "unit": 4,
+     "path": "council/internals-maximal/74LVC125A_unit4.png",
+     "sha256": "1d3e29c2efc78144e6cb8ea1fbc28c472587d0fb7b905f2f9ed716b6d93579e2",
+     "background": "#ffffff",
+     "symbol_sha256": "51b24ffe895b7ef6ca3130805dd6ff71888aecd80eff0938d51730d353fa9489"
+    },
+    {
+     "id": "design:internals-maximal:u5",
+     "unit": 5,
+     "path": "council/internals-maximal/74LVC125A_unit5.png",
+     "sha256": "6a43cd23e9f2f5082b329cfb79a306cd5b8a5bf2f315aa2de0d0b00c36f6b149",
+     "background": "#ffffff",
+     "symbol_sha256": "51b24ffe895b7ef6ca3130805dd6ff71888aecd80eff0938d51730d353fa9489"
+    }
+   ]
+  }
+ ],
+ "judges": [
+  {
+   "reviewer_id": "judge-1",
+   "design_id": "design-flow-first",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Units 1-4 (74LVC125A_unit1-4.png): the classic tri-state buffer read. Triangle on the A-Y row, enable rising from below into a bubble under the triangle, 3-state mark above nY. The vertical n~{OE} name under the triangle is legible.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Function matches p2 Fig. 1, p4 Table 3 and Fig. 2. The enable enters the triangle's lower edge through a bubble, tangent at 0.635 mm = r. There is no output bubble. It drops Fig. 1's arrowhead and left-side elbow for a bottom pin, which the packet side_hint allows (stock is bottom). That is a layout choice, not a silicon fact. Pins: 2/1/3, 5/4/6, 9/10/8, 12/13/11 (gate 4 enable 13 at the bottom, 4A 12 on the left). Types match the other two designs.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "Smallest gate body (15.24 x 15.24 mm). Ink is only triangle, short leads, bubble, enable stub and 3-state mark: no captions, no EN text. Power box 10.16 x 10.16 mm. Height is set by the vertical enable name, which keeps the bottom pin on the 100-mil grid (design.json). One nit: in the bare library export, Reference and Value float well above the small unit-5 box (unit5.png). The design notes this is export-only.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "nA (-12.70, 2.54) and nY (12.70, 2.54) share one row, a straight run for gate 1's 12 MHz clock. The enable is a full 5.08 mm bottom pin at (0, -12.70) on the 100-mil grid (trap rows 6 and 9), a direct vertical entry for gate 4's STATUS signal. Numbers 10 and 13 sit beside the stub below the body, clear of the triangle and bubble (unit3/unit4.png).",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "Same expressive set as internals-maximal: bar over OE only, enable bubble and Fig. 2 3-state mark. Table 3 is left implicit in standard notation.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Not a datasheet contradiction, but shared by all three designs: unit 5 puts VCC 14 on the left side at y = +2.54, not on top as the packet pin-14 side_hint asks. GND 7 is on the bottom as hinted. Likely the engine's power-unit emitter.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "None of the three uses a KiCad 'inverted' pin shape under the barred name. Each marks the inversion once, as gate-ink bubble (trap row 3).",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-1",
+   "design_id": "design-annotation-rich",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Units 1-4 (74LVC125A_unit1-4.png): the Fig. 1 gate (triangle, bubbled enable elbow, 3-state mark), plus two state lines in the lower right. The gate is still the dominant read.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "The captions '~{OE}=L: Y=A' and '~{OE}=H: Y=Z' are exactly p4 Table 3 (rows L L L, L H H, H X Z). The bubble is tangent (0.5075 mm vs r = 0.508 mm). Enable layout follows Fig. 1 (left row, elbow) but drops its arrowhead, which carries no silicon fact. Pins and types are correct and identical to the other two designs.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Packet-backed text ink, but partly redundant. The bar, bubble and 3-state mark already say what the two caption lines say, and the design's own reason for omitting EN (bar + bubble carry it) applies equally to the '~{OE}=L: Y=A' line. Captions are 1.0 mm text, below the 1.27 mm used everywhere else on the unit. Body is 20.32 x 10.16 mm like internals-maximal; here the captions fill the lower-right quadrant.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "Same pin geometry as internals-maximal: A and Y straight through on y = 2.54, enable at (-15.24, -2.54), all on the 2.54 mm grid. Numbers 10, 12 and 13 sit clear on their stubs. The captions stay inside the body, away from the pin names and leads.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "Most explicit of the three. Besides the bar, bubble and 3-state mark, it states the Z condition in words, so a reader who does not know the IEC down-triangle still learns that nOE = H tri-states nY.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Not a datasheet contradiction, but shared by all three designs: unit 5 puts VCC 14 on the left side at y = +2.54, not on top as the packet pin-14 side_hint asks. GND 7 is on the bottom as hinted. Likely the engine's power-unit emitter.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "None of the three uses a KiCad 'inverted' pin shape under the barred name. Each marks the inversion once, as gate-ink bubble (trap row 3).",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-1",
+   "design_id": "design-internals-maximal",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Units 1-4 (render/74LVC125A_unit1-4.png): the Fig. 1 mna228 gate, ink for ink. Buffer triangle from nA to nY with no output bubble, the n~{OE} lead elbowing up to a bubble on the triangle's lower edge, and the Fig. 2 down-triangle 3-state mark over nY. It reads as a 125 gate at a glance.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Matches p2 Fig. 1, checked on a 400 dpi crop. The enable sits on the left row below nA, its lead runs right then up with an arrowhead into the bubble, and the names sit inside the box edge. The bubble is tangent to the lower edge (centre-to-edge 0.4997 mm vs r = 0.5 mm). Pins are 2/1/3, 5/4/6, 9/10/8 and 12/13/11, matching p3 Table 2. Y is tri_state, A and OE are input with line shape (the inversion is marked once), VCC 14 and GND 7 are power_in.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Gate body is 20.32 x 10.16 mm around a 4.06 mm triangle. The lower-right quadrant under the nY lead is empty, and pin-end span is 30.48 mm. Flow-first fits the same gate content in 15.24 mm. The power box (15.24 x 10.16 mm) is also larger than the others' 10.16 x 10.16 mm. All ink is datasheet-backed, nothing decorative.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "nA (-15.24, 2.54) and nY (15.24, 2.54) share one row, so a net passes straight through. n~{OE} (-15.24, -2.54) is a full 5.08 mm pin, two pitches lower on the left. Every pin end is on the 2.54 mm grid, which fixes the stock -6.35 enable. Two-digit numbers 10, 12 and 13 sit on their stubs, clear of all ink (unit3/unit4 renders).",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "Bar over OE only, enable bubble and Fig. 2 3-state mark: it carries both items the stock regraders docked (3-state mark, names). Table 3 is left implicit in standard notation.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Not a datasheet contradiction, but shared by all three designs: unit 5 puts VCC 14 on the left side at y = +2.54, not on top as the packet pin-14 side_hint asks. GND 7 is on the bottom as hinted. Likely the engine's power-unit emitter.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "None of the three uses a KiCad 'inverted' pin shape under the barred name. Each marks the inversion once, as gate-ink bubble (trap row 3).",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-2",
+   "design_id": "design-flow-first",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "The classic gate read: a centred triangle from 1A to 1Y, the enable entering from below into a bubble tangent to the lower edge, and the 3-state mark above 1Y. All four gate units are identical; unit 5 is a plain power box.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pin truth and types are as verified above. The enable pin moves from Fig. 1's left column to the bottom, as the stock 74LS125 glyph and the Diodes logic diagram draw it; that is a layout choice, not a contradiction. The 3-state mark sits over the 1Y name at the corner rather than over the output lead, which matches Fig. 2's placement at the output.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "The leanest ink: no arrowhead and no caption. But the body is 15.24 x 15.24 mm plus a 5.08 mm bottom pin, for a 25.4 x 20.32 mm extent: about 516 mm2, 1.67 times the other two. design.json admits a spacer row added only to put half_h at 7.62. The lower half of the body holds only the vertical name. In the unit 5 export, Reference and Value float about 3.8 mm above the bold title (fields at y 13.97 / 11.43 over a box topped at 5.08).",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "Pin ends are on the grid (x -12.70 / +12.70 at y 2.54; enable at 0, -12.70). A and Y share a straight row. The bottom enable lets a tie-low enable take a GND symbol right at the pin end. Gate 4's STATUS signal comes in from below and turns the corner to 4Y on the right, so it does not flow left to right; 4A's GND tie sits free on the left. Pin numbers 10 and 13 are rotated beside their stubs, clear of the ink.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "Names as printed with OE barred only, plus the bubble and the 3-state mark: both stock deductions are fixed. The Z rule is left to drawing convention.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "judge-2",
+   "design_id": "design-annotation-rich",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "The Fig. 1 read with a larger 5.59 x 4.06 mm triangle, the bubble on its lower edge, the 3-state mark on the output lead, and the enable lead rising from the left. The caption reinforces the read.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pin truth and types are as verified above. The caption lines '~{OE}=L: Y=A' and '~{OE}=H: Y=Z' match p4 Table 3 rows L L L, L H H and H X Z exactly. Fig. 1's arrowhead is omitted, which is not a contradiction.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Same compact 30.48 x 10.16 mm footprint as internals-maximal (identical pin geometry in the .kicad_sym), without the arrowhead. The caption fills the otherwise empty lower-right quadrant, so the body does not grow, and IOFF and electrical limits stay off the body ink. Deductions: on gates 1-3 the caption is a third way of stating the Z rule (after the bar, bubble and 3-state mark), and it is 1.0 mm text, smaller than the 1.27 mm pin names.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "Same on-grid pin ends as internals-maximal. The caption sits about 1.6 mm clear of the enable lead, the pins and the numbers 10, 12 and 13. Gate 4's STATUS enters left and leaves right as 4Y.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "The only design whose ink states the Z rule. On this board that makes gate 4 readable straight off the unit (architecture.md: A = GND, nOE = STATUS). STATUS low gives 4Y = GND and pulls STATUS_3V3 low; STATUS high gives Z, and the 10 kOhm pulls it up.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "judge-2",
+   "design_id": "design-internals-maximal",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Units 1-4 copy Fig. 1 per gate: 1A to 1Y on one row through a triangle with no output bubble, a bubble on the triangle's lower edge, and 1~{OE} rising into it with an arrowhead. The Fig. 2 down-pointing 3-state mark sits over the output lead. Unit 5 is a plain VCC 14 / GND 7 box.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "The most literal copy of Fig. 1. The zoomed p2 shows the enable pin on the left below nA, its lead running right under the triangle, then rising with an arrowhead to the bubble; this design inks exactly that, plus the Fig. 2 3-state mark. Pin truth and types are as verified above.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "The footprint is compact: 30.48 x 10.16 mm per gate, about 310 mm2. Two deductions: the arrowhead is a second mark for what the bubble already says, and the lower-right body quadrant (x 0 to 10.16, y -5.08 to 0) is empty. The 4.06 x 3.81 mm triangle sits in a 20.32 mm wide body.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "Every pin end is on the 2.54 mm grid (x -15.24 / +15.24, y 2.54 / -2.54). A and Y share a row, so gate 1's 12 MHz clock runs straight through. Gate 4's real signal, STATUS on pin 13, enters left and leaves right as 4Y. Pin numbers 10, 12 and 13 sit on their stubs, clear of the ink. Minor: gate 4's GND tie on 4A lands on the same side, 5.08 mm above the STATUS wire.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "Pin names are as printed, with the active-low bubble and the 3-state mark. That fixes both stock-baseline deductions (names missing, 3-state mark missing). The Table 3 Z rule is left to drawing convention.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "No graft needed. If the chair prefers internals-maximal, grafting annotation-rich's Table 3 caption into its empty quadrant costs no area.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-3",
+   "design_id": "design-flow-first",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "74LVC125A_unit1-4.png use the classic 3-state buffer glyph. nA runs into the triangle and out to nY on one row. n~{OE} rises from a bottom pin to a bubble tangent to the triangle's lower edge, and a down-pointing 3-state mark sits over nY. This is the same read the stock-review regraders scored identity 4.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pin numbers, names and tri_state types follow Table 2 and p1/Table 3, with the bar plus one bubble and a non-inverting triangle. The enable enters from below instead of Fig. 1's left-side lead with arrowhead. That is a placement choice the packet side_hint allows ('stock: bottom'), not a datasheet contradiction. There is no forbidden ink.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "The only ink is the triangle, two 1.27 mm stubs, the enable lead, the bubble and the 3-state mark. The 15.24 x 15.24 body is the narrowest multiple of 5.08 that holds the names, and its height is set by the vertical n~{OE} name reserve. Nothing drawn lacks a datasheet basis.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "nA (-12.70,+2.54) and nY (+12.70,+2.54) pass straight through. The enable is a full 5.08 mm bottom pin at (0,-12.70) on the 100-mil grid, so control and data sit on separate axes: a GND tie or gate 4's STATUS net drops in from below without crossing the data row (stance note, board_refs gate 4). It has the narrowest pin-tip span (25.4 mm), and numbers 10 and 13 clear below the body. Minor: in the library export, unit 5's Ref/Value float about 2.5 mm above its title because the properties are placed for the taller gate units. The bottom pin also adds 5.08 mm under each unit when stacking.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "Built by author_symbol Unit(gfx=) poly/circle entries, with QA's bwrap rebuild recorded. It carries the same meaning as internals-maximal (bubble, bar, 3-state mark, names) but no state rule. The 3-state mark sits over the 1Y name rather than over an output lead (the stub is only 1.27 mm), so it ties to the output by proximity only.",
+     "evidence": [
+      "design:flow-first:u1",
+      "design:flow-first:u2",
+      "design:flow-first:u3",
+      "design:flow-first:u4",
+      "design:flow-first:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Best wiring ergonomics. Re-rendered from the current symbol bytes (a5b512cb): all 5 PNG hashes match even though the PNGs are 3 minutes older than the .kicad_sym, so the generator rewrote identical bytes.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-3",
+   "design_id": "design-annotation-rich",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "74LVC125A_unit1-4.png use the Fig. 1 slice: a large triangle, the n~{OE} lead entering on the left and turning up into the bubble on the lower edge, and the 3-state mark over the nY lead. The Table 3 caption sits in the otherwise empty lower-right quadrant and does not crowd the gate.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "The captions match p4 Table 3 exactly: '~{OE}=L: Y=A' covers rows 'L L L' and 'L H H', and '~{OE}=H: Y=Z' covers row 'H X Z'. Fig. 1 topology is kept without the arrowhead. Numbers, names and types match Table 2 and p1. There is no output bubble or hysteresis mark.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Both caption lines repeat on all four gate units, so one package carries 8 lines of identical text. They are load-bearing on gate 4, where the enable carries STATUS, but mostly duplicate the bubble and 3-state mark on gates 1-3. The captions use 1.0 mm text against 1.27 mm text everywhere else.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "Pin geometry is the same as internals-maximal: +-15.24, enable on the left 5.08 mm under nA, 30.48 mm span, all ends on the 2.54 grid. The captions stay clear of every pin, name and number, including 10 and 13 on their stubs. Unit 5 is a 10.16 box with VCC at -10.16,+2.54 and GND at 0,-10.16.",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "The only design that states the state behaviour on the body: the Z condition reads without the datasheet. It is drawn through Unit(gfx=), including ('text', ...) entries. Caveat for the chair: design.json records the rebuild only as a local 'generate.py --check', not QA's bwrap verify_generator. Its render PNGs are 1000 dpi; they re-render byte-identically from the current bytes (9657dccad).",
+     "evidence": [
+      "design:annotation-rich:u1",
+      "design:annotation-rich:u2",
+      "design:annotation-rich:u3",
+      "design:annotation-rich:u4",
+      "design:annotation-rich:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Its Table 3 caption is the best graft candidate for a flow-first winner, scoped to gate 4 or made smaller. No suspected prompt injection was found in any design file, generator, packet or render.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-3",
+   "design_id": "design-internals-maximal",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "render/74LVC125A_unit1-4.png: each gate is one slice of the p2 Fig. 1 (mna228) box. nA runs into the triangle and out to nY on one row, the n~{OE} lead turns up with an arrowhead into a bubble on the triangle's lower edge, and a down-pointing 3-state mark sits over the nY lead. It reads at once as a non-inverting 3-state buffer with an active-LOW enable. Unit 5 is a plain VCC/GND box.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Matches Fig. 1 piece for piece, including the enable pin on the left under nA and the arrowhead into the bubble. The 3-state mark comes from Fig. 2. Pin numbers follow Table 2 p3 (1/2/3, 4/5/6, 10/9/8, 13/12/11) and the names are printed as n~{OE}, nA, nY. The Y pins are tri_state (p1, Table 3 'H X Z'). The enable uses pin shape 'line' with one bubble (trap 3). There is no output bubble and no hysteresis mark.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "The 20.32 x 10.16 mm body leaves about the lower-right 40% of every gate unit empty, because nothing sits under the nY lead. The arrowhead is Fig. 1-backed, but it is a second mark on an enable path the bubble already marks. No other ink is undocumented.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "Every pin end is on the 2.54 grid (gates +-15.24 / +2.54 and -2.54; power -12.70,+2.54 and 0,-10.16). nA to nY is straight on one row, and the 10.16 mm tall units stack tightly. The enable shares the left edge 5.08 mm below nA, so on gate 4 the STATUS net and the A=GND tie both arrive on the same edge. The 30.48 mm pin-tip span is the widest of the three designs.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "Built entirely by engine author_symbol Unit(gfx=) poly/circle entries (generate.py _gate_gfx), with QA's bwrap verify_generator rebuild recorded. It conveys the bubble, the bar, the 3-state mark and named pins, which closes the two stock-review gaps. It states no state rule, so the reader must know what the 3-state mark means.",
+     "evidence": [
+      "design:internals-maximal:u1",
+      "design:internals-maximal:u2",
+      "design:internals-maximal:u3",
+      "design:internals-maximal:u4",
+      "design:internals-maximal:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Most literal Fig. 1 reproduction. Re-rendered from the current symbol bytes (51b24ffe), all 5 PNG hashes match design.json.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   ]
+  }
+ ],
+ "selection": {
+  "winner_design_id": "design-flow-first",
+  "grafts": [
+   {
+    "id": "G1",
+    "from": "annotation-rich",
+    "axis": "expressibility (economy held)",
+    "closes": "flow-first leaves Table 3's Z rule to drawing convention (judge 3 expressibility 3; judge 2 lean: the state readout is load-bearing for gate 4, where nOE carries STATUS; judge 1 graft note; judge 3 'best graft candidate for a flow-first winner, scoped to gate 4 or made smaller')",
+    "change": "gate ink '~{OE}=H:' over 'Y=Z' on every gate unit, left-aligned at x 1.778 in the lower-right quadrant beside the vertical n~{OE} name, lines at y -3.81 / -5.21 (1.4 mm pitch); anchors = left edge + text_ink.text_w/2 because gfx text is centre-justified",
+    "source": "p4 'Table 3. Function selection' row 'H X Z', 'Z = high-impedance OFF-state'",
+    "scope_choices": [
+     "only the Z row: the triangle already states Y=A while ~{OE}=L, so annotation-rich's L line is the redundancy judges 1-3 docked under economy; 4 caption lines per package instead of 8",
+     "on all four gate units, not gate 4 only: the gate units are one package's identical gates in a library symbol; tying ink to this board's gate-4 wiring would make units differ for one board's role",
+     "two lines, not one: '~{OE}=H: Y=Z' is 8.5 mm at 1.0 mm text and the quadrant is 6.4 mm wide; a one-line caption would need a 20.32 mm body (+77 mm2 per gate unit), giving back the economy that won",
+     "1.0 mm text, not judge 1's 1.27 mm: the emitter writes every gfx text at size 1.0 (templates/symbol_emitter.py _emit_gfx), and the final stays engine-built"
+    ],
+    "cost": "none in area: the quadrant judge 2 called empty ('the lower half of the body holds only the vertical name') now carries the caption; body, pins and every other primitive are byte-identical to flow-first (diff = 2 text lines per gate unit)"
+   }
+  ],
+  "final_symbol_sha256": "4c51b0b0a27ac7154765fb101e4ea6f14ade926fc9f5198aff32b56901aa046e"
+ },
+ "final_renders": [
+  {
+   "id": "qa:u1",
+   "unit": 1,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png",
+   "sha256": "340c349cc0533d02e0b90cad3d8844b752008a808ad93dfdef36f10574db37b7",
+   "background": "#f5f4ef",
+   "symbol_sha256": "4c51b0b0a27ac7154765fb101e4ea6f14ade926fc9f5198aff32b56901aa046e",
+   "nonce": "LOOK-WQCW9DMLEUVN",
+   "nonce_sha256": "42a08c7fea99d94b33990d9957b15ed76499f819e13416c0e26fff3237d4c4b3"
+  },
+  {
+   "id": "qa:u2",
+   "unit": 2,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U2-box1.png",
+   "sha256": "0e91986941432c4f6b85b4c1768e5a59bb7531681656b90e54e822f7854a5eaf",
+   "background": "#f5f4ef",
+   "symbol_sha256": "4c51b0b0a27ac7154765fb101e4ea6f14ade926fc9f5198aff32b56901aa046e",
+   "nonce": "LOOK-FRALYM3K9TWL",
+   "nonce_sha256": "8abef7c2c022ad82c847c33a511041df9e769d2bcb6ccfc60629fb6bf5f3800b"
+  },
+  {
+   "id": "qa:u3",
+   "unit": 3,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U3-box1.png",
+   "sha256": "e9bdbc993b4bc2296113aad1470e94c5d605e47997f4b2b88f17dc426116eb2a",
+   "background": "#f5f4ef",
+   "symbol_sha256": "4c51b0b0a27ac7154765fb101e4ea6f14ade926fc9f5198aff32b56901aa046e",
+   "nonce": "LOOK-AY3CLJQU4NXL",
+   "nonce_sha256": "099ef8b9bcad2fae6440ed3d024dd0dfb74901309eda7f9827909d44211cee80"
+  },
+  {
+   "id": "qa:u4",
+   "unit": 4,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U4-box1.png",
+   "sha256": "5356218f70c4b0f2842839e43119b278417ae9d14ad6d9bc473576c1edd38e3d",
+   "background": "#f5f4ef",
+   "symbol_sha256": "4c51b0b0a27ac7154765fb101e4ea6f14ade926fc9f5198aff32b56901aa046e",
+   "nonce": "LOOK-HCEW7PUWUPE9",
+   "nonce_sha256": "3053e41302c6d4449c021806eb3cd1f11563c7010e0e27f7017a8dd85319ef25"
+  },
+  {
+   "id": "qa:u5",
+   "unit": 5,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U5-box1.png",
+   "sha256": "362a5a5cd79bc031d7973d4cd0f0d4cb36d5ce5e09fea1dee25ecd86f3a44b73",
+   "background": "#f5f4ef",
+   "symbol_sha256": "4c51b0b0a27ac7154765fb101e4ea6f14ade926fc9f5198aff32b56901aa046e",
+   "nonce": "LOOK-3FTCCQQ4QTVC",
+   "nonce_sha256": "d86e3af3a169618cb6c0d67f9083df2bc163c05e6ea5a75fb2a26e7cc983994d"
+  }
+ ],
+ "regraders": [
+  {
+   "reviewer_id": "look-regrader-74LVC125AD_118-1",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "render_ids": [
+    "qa:u1",
+    "qa:u2",
+    "qa:u3",
+    "qa:u4",
+    "qa:u5"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: on units 1-4 the bold title 74LVC125A sits over a non-inverting buffer triangle. The enable lead enters the lower slant with a bubble, the IEEE 3-state mark (a down-pointing triangle) sits beside nY, and the pin names nA, nY and n-overbar-OE make each unit read at a glance as a 3-state buffer with active-low enable. Unit 5 is a separate power box (VCC 14, GND 7).",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: I checked the pins against Nexperia 74LVC125A Rev.12 p3 (SO14) and Table 2, pdf sha 49d64a9b. Rendered pins: U1A 1OE=1, 1A=2, 1Y=3; U1B 4/5/6; U1C 3OE=10, 3A=9, 3Y=8; U1D 4OE=13, 4A=12, 4Y=11; U1E VCC=14, GND=7. All match the datasheet. In the symbol bytes the Y pins are tri_state, A and OE are input, and VCC and GND are power_in. The bar covers OE only, as the datasheet prints it. The caption 'OE-bar=H: Y=Z' matches the p4 function-table row 'H X Z'. There is no output bubble (correct for a '125, not a '126).",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: the ink is compact and each unit has one buffer. Each gate unit also repeats a two-line caption that the bubble plus 3-state mark already imply, and a bold title that duplicates Value. The sheet hides Value (TITLE_HIDES_VALUE, a recorded known divergence), so the duplicate does not show. The 600x600 mil box is generous for a single buffer, though it carries the pin names that D-14 requires.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "ERGONOMICS 3: A (left) and Y (right) share row y=2.54, so wiring runs straight through. OE enters from the bottom as in datasheet Fig. 1. Every pin end is on the 100 mil grid, and the two-digit numbers 10 and 13 clear the bubble. One deduction: unit 5 puts VCC at the top of the left edge instead of on a top edge (recorded known divergence).",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: the bubble, overbar, 3-state mark, tri_state pin type and the function-table caption together state the whole behaviour (nOE low passes nA to nY, nOE high gives Z) with no truth-table clutter. No text collides on any page: the vertical nOE name and the caption sit side by side and both stay readable.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Graded QA's arena pages from receipts/74LVC125AD_118/qa/arena-manifest.json (symbol 4c51b0b0, verdict PASS). I checked all 5 crop PNGs against the manifest sha256 values and viewed each one at full resolution (731x734, 731x732, 731x734, 731x732, 671x629; background #f5f4ef). I read each LOOK nonce from the yellow banner, and sha256 of each nonce equals the manifest's nonce_sha256 for all 5 units.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Non-blocking notes only, so nothing is open. suspected_injection: none; no file I read held instructions addressed to me. Nothing was written to any repo.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-74LVC125AD_118-2",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "render_ids": [
+    "qa:u1",
+    "qa:u2",
+    "qa:u3",
+    "qa:u4",
+    "qa:u5"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: Units 1-4 each draw one buffer triangle with an inversion bubble on the control input and the IEC 3-state marker beside Y, under the value 74LVC125A. Any reader sees a quad 3-state buffer, one gate per unit (U1A-U1D). Unit 5 (U1E) is a separate VCC/GND power unit.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: The page pins match the Nexperia 74LVC125A Rev.12 p3 SO14 table in facts.json. U1: 1A=2, 1Y=3, 1OE=1. U2: 2A=5, 2Y=6, 2OE=4. U3: 3A=9, 3Y=8, 3OE=10. U4: 4A=12, 4Y=11, 4OE=13. U5: VCC=14, GND=7. Pin types in the symbol match the silicon: A and OE are input, Y is tri_state, VCC and GND are power_in. OE is active LOW, shown by the bubble plus the overbar, and the overbar covers OE only, as printed. The annotation 'OE=H: Y=Z' matches the p4 function table (nOE=H gives nY=Z).",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: Each gate unit has just the glyph, three pins and a two-line annotation, with no decorative ink. The body is a little tall for one buffer: the lower-left quarter is empty. The power unit is compact.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "ERGONOMICS 3: A enters left and Y leaves right on the same 2.54 mm row, so wires run straight through. OE drops from the bottom, which suits a shared enable net. Pins sit on the 2.54 grid with 5.08 mm length. Two nits on unit 5: VCC enters from the left instead of the top, and the U1E refdes sits right of the body while U1A-D sit above-left. Neither blocks.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: Pin names 1A/1Y/1~{OE} carry the gate index and the active-low state. The 3-state marker and the OE=H:Y=Z note state the Z condition right where the wiring happens, and the annotation is legible at full resolution.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Graded QA's arena pages from the latest arena-manifest.json (verdict PASS, symbol_sha256 4c51b0b0...046e). That hash equals the candidate 74LVC125A.kicad_sym. All 5 page PNG sha256 values match the manifest. I viewed each page at native resolution (731x734, 731x732, 731x734, 731x732, 671x629) and read the nonces from the yellow banners. Each one sha256-matches the manifest nonce_sha256.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Non-symbol observations: the harness net labels render as '1__OE_' (the harness sanitises ~{OE}), and each crop shows sheet-frame border ticks ('1', 'A'). Both are arena-harness artifacts and are not counted against the symbol. No suspected prompt injection in any file read (manifest, arena.log, facts.json, author.json, pin-truth.json). I wrote nothing to any repo.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-74LVC125AD_118-3",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "render_ids": [
+    "qa:u1",
+    "qa:u2",
+    "qa:u3",
+    "qa:u4",
+    "qa:u5"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: U1-U4 each read at a glance as one 3-state buffer, nA -> non-inverting triangle -> nY on one row, with n~OE rising from the bottom pin to an inversion bubble on the triangle's lower edge. U5 is a clean VCC/GND power unit.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: pins match Nexperia 74LVC125A Rev.12 SO14 (U1 2/3/1, U2 5/6/4, U3 9/8/10, U4 12/11/13, U5 VCC 14 / GND 7). Types are input / tri_state / power_in. The bar sits over OE only, as printed. The caption 'OE=H: Y=Z' equals Table 3 row 'H X Z', and the down-pointing 3-state mark above nY follows the Fig. 2 IEC symbol. No contradictions found.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: the ink is purposeful, with no decorative lines and only one caption (the Z row; the L row is implied by the triangle). Docked because a 15.24 mm boxed body for a 3-pin gate is larger than a bare gate glyph. The bold '74LVC125A' unit title repeats Value in the library export; the arena hides Value on the sheet.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "ERGONOMICS 3: inputs enter left, outputs leave right and the enable comes from below, all on the 2.54 grid. Wires land straight in every arena page. Docked because U5 puts VCC on the left edge rather than the top (a recorded known divergence). The arena net label '1__OE_' is a harness artifact of the ~{OE} markup, not symbol ink.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: the bubble, 3-state mark, tri_state typing and Z-state caption together show the active-LOW high-Z behaviour without the datasheet. The 1.0 mm caption is still legible at page resolution, and it clears the vertical n~OE name and the box edge.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Graded QA's latest arena-manifest.json (verdict PASS, symbol_sha256 4c51b0b0 = candidate 74LVC125A.kicad_sym). Viewed all 5 crop pages at native resolution (731x734/732, U5 671x629), plus 3x zooms of U1, U3 and U5. The 5 page sha256s match the manifest. Each LOOK nonce was read from the yellow banner, and its sha256 equals the manifest nonce_sha256 for that unit.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Nothing open; no unit unseen. Suspected prompt injection: none found in the manifest, arena.log, facts.json, symbol-look.json, author.json or VERDICT.md. Wrote nothing to any repo; zooms only in the session scratchpad.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-74LVC125AD_118-4",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "render_ids": [
+    "qa:u1",
+    "qa:u2",
+    "qa:u3",
+    "qa:u4",
+    "qa:u5"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: units 1-4 (U1A-U1D) each read at a glance as a non-inverting 3-state buffer. Each shows a bold 74LVC125A title, a buffer triangle running nA to nY, an enable stem rising into the triangle's lower edge and ending in a bubble, and a 3-state down-triangle above nY. Unit 5 (U1E) is a plain VCC/GND box with its refdes outside the body.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: pin numbers match p3 SO14 / Table 2 on every page: U1 2=1A, 3=1Y, 1=1OE; U2 5/6/4; U3 9/8/10 and U4 12/11/13 (the right side counts downward, trap row 5); U5 14=VCC, 7=GND. The overbar covers only OE, never the channel digit (trap 1). Each barred name is paired with exactly one bubble and the pin shape is line (trap 3), not a double inversion. Y pins are tri_state, A and OE are input, VCC/GND are power_in. There is no output bubble and no hysteresis mark (functional_ink.forbidden is respected). The caption 'OE-bar=H: Y=Z' matches the H X Z row of p4 Table 3.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: every mark carries meaning (triangle, bubble, 3-state mark, a two-line Z caption, short lead stubs, and a title the engine de-dupes against Value via TITLE_HIDES_VALUE; the arena sheet shows Value hidden). The 15.24 mm square body for one gate leaves its lower-left quarter empty, so it is roomier than needed. That costs a point but stays at the bar.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "ERGONOMICS 4: A enters left and Y leaves right on the same row (y=+2.54), so arena wires run straight through. nOE drops from the bottom centre as a full-length pin on the 100-mil grid (trap 6). All pin ends sit at +/-12.7 or -10.16. Two-digit numbers 10 and 13 sit clear of the lead and body (trap 9). On unit 5, VCC on the left and GND at the bottom both wire cleanly to the rail labels.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: the 3-state mark (Fig. 2), the active-low bubble and bar (Fig. 1) and the Z-state caption (Table 3) state the whole function table without opening the datasheet. The A to Y direction gives nY = nA, and the channel digits keep the four gates apart.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Graded QA's arena pages from arena-manifest.json (verdict PASS, symbol_sha256 4c51b0b0 = sha256 of candidates/74LVC125AD_118/74LVC125A.kicad_sym). All 5 page PNGs rehash to the manifest. Each nonce was read from the yellow banner and sha256(nonce) matches the manifest's nonce_sha256 for that page. Measured background is (245,244,239) = #f5f4ef, as the manifest records.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Notes, not blocking: the vertical nOE name fills the gap between the body edge and the enable stem, so no line is drawn there (the KiCad norm). The '1__OE_' style hierarchical labels are sanitised net names from the arena harness, not symbol ink. Suspected injection: none found in any file read (verdicts.jsonl, packet.json, the symbol, the arena sheet and log, the guide skills).",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-74LVC125AD_118-5",
+   "seen_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "render_ids": [
+    "qa:u1",
+    "qa:u2",
+    "qa:u3",
+    "qa:u4",
+    "qa:u5"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: every gate page (U1A-U1D) reads at a glance as a 3-state buffer with an active-low enable. It shows a buffer triangle with A->Y flow, a bubble where the nOE line meets the triangle, the IEC 3-state mark beside nY, and the bold 74LVC125A title. U1E is clearly the power unit.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: every pin matches the datasheet SO14 pinout and Table 2 (Nexperia Rev.12 p3, sha 49d64a9b...). 1OE/1A/1Y=1/2/3, 2OE/2A/2Y=4/5/6, 3Y/3A/3OE=8/9/10, 4Y/4A/4OE=11/12/13, GND=7, VCC=14. Pin types are right: A and nOE are input, Y is tri_state, VCC and GND are power_in. The overbar covers only OE. The 'OE=H: Y=Z' note matches the p1 text 'A HIGH on nOE causes the outputs to assume a high impedance OFF-state'. D-14 is respected: every pin is named.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: the ink is purposeful and the enable note earns its place. Two nits keep it at 3. The 15.24 mm gate body leaves the left and lower-left of the box empty. The bold '74LVC125A' body text repeats the Value field, which the arena hides, so on a board sheet the name shows twice unless Value is hidden.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "ERGONOMICS 3: A (left) and Y (right) share one row, so wires run straight through. nOE drops straight down from the body bottom. All pin ends sit on the 2.54 grid with 5.08 mm pins, and the labels attach cleanly on every page. Nit: U1E puts VCC on the left instead of the usual top, though it still wires cleanly to its label and to the GND symbol below.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: each gate unit shows direction, the active-low enable, the 3-state output and the Z condition. That is the whole function table except the pass-through rows, which the triangle implies. All 14 pins appear across the 5 pages.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Graded QA's arena pages from the latest manifest (arena-manifest.json, symbol 4c51b0b0..., verdict PASS). I checked all 5 page sha256s against the manifest. Each nonce I read from the yellow banner hashes to the manifest's nonce_sha256 (U1 LOOK-WQCW9DMLEUVN, U2 LOOK-FRALYM3K9TWL, U3 LOOK-AY3CLJQU4NXL, U4 LOOK-HCEW7PUWUPE9, U5 LOOK-3FTCCQQ4QTVC). The candidate .kicad_sym rehashes to the manifest symbol_sha256.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Non-blocking notes only, nothing open. The '1__OE_' style net labels come from the arena harness, not the symbol. Suspected injection: none found in the manifest, log, symbol, pin-truth.json or packet fields I read.",
+     "evidence": [
+      "qa:u1",
+      "qa:u2",
+      "qa:u3",
+      "qa:u4",
+      "qa:u5"
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,89 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "74LVC125AD_118",
+ "symbol": {
+  "asset_path": "74LVC125A.kicad_sym",
+  "internal_name": "74LVC125A",
+  "sha256": "4c51b0b0a27ac7154765fb101e4ea6f14ade926fc9f5198aff32b56901aa046e"
+ },
+ "archetype": "identity-topology",
+ "units": [
+  {
+   "unit": 1,
+   "role": "gate 1: 1A pin 2 in, 1Y pin 3 3-state out, 1~{OE} pin 1 active-LOW enable (Rev. 12 p3 Table 2)",
+   "presentation": "identity-topology",
+   "identity_features": [
+    "1A pin 2 left and 1Y pin 3 right on one row (pin ends -/+12.70, +2.54), joined by a non-inverting buffer triangle, no output bubble (Nexperia 74LVC125A Rev. 12 p2 Fig. 1; p4 Table 3)",
+    "1~{OE} pin 1 a full bottom pin at (0, -12.70), its lead rising to the active-LOW inversion bubble tangent to the triangle's lower edge; bar over OE only, pin shape line (p2 Fig. 1; p3 Table 2 'data enable input (active LOW)')",
+    "3-state mark at the output edge above 1Y, 1Y typed tri_state (p2 Fig. 2; p1 3-state outputs)",
+    "caption '~{OE}=H:' over 'Y=Z' beside the vertical enable name (graft G1: p4 Table 3 row 'H X Z', 'Z = high-impedance OFF-state')"
+   ]
+  },
+  {
+   "unit": 2,
+   "role": "gate 2: 2A pin 5 in, 2Y pin 6 3-state out, 2~{OE} pin 4 active-LOW enable (Rev. 12 p3 Table 2)",
+   "presentation": "identity-topology",
+   "identity_features": [
+    "2A pin 5 left and 2Y pin 6 right on one row (pin ends -/+12.70, +2.54), joined by a non-inverting buffer triangle, no output bubble (Nexperia 74LVC125A Rev. 12 p2 Fig. 1; p4 Table 3)",
+    "2~{OE} pin 4 a full bottom pin at (0, -12.70), its lead rising to the active-LOW inversion bubble tangent to the triangle's lower edge; bar over OE only, pin shape line (p2 Fig. 1; p3 Table 2 'data enable input (active LOW)')",
+    "3-state mark at the output edge above 2Y, 2Y typed tri_state (p2 Fig. 2; p1 3-state outputs)",
+    "caption '~{OE}=H:' over 'Y=Z' beside the vertical enable name (graft G1: p4 Table 3 row 'H X Z', 'Z = high-impedance OFF-state')"
+   ]
+  },
+  {
+   "unit": 3,
+   "role": "gate 3: 3A pin 9 in, 3Y pin 8 3-state out, 3~{OE} pin 10 active-LOW enable (Rev. 12 p3 Table 2)",
+   "presentation": "identity-topology",
+   "identity_features": [
+    "3A pin 9 left and 3Y pin 8 right on one row (pin ends -/+12.70, +2.54), joined by a non-inverting buffer triangle, no output bubble (Nexperia 74LVC125A Rev. 12 p2 Fig. 1; p4 Table 3)",
+    "3~{OE} pin 10 a full bottom pin at (0, -12.70), its lead rising to the active-LOW inversion bubble tangent to the triangle's lower edge; bar over OE only, pin shape line (p2 Fig. 1; p3 Table 2 'data enable input (active LOW)')",
+    "3-state mark at the output edge above 3Y, 3Y typed tri_state (p2 Fig. 2; p1 3-state outputs)",
+    "caption '~{OE}=H:' over 'Y=Z' beside the vertical enable name (graft G1: p4 Table 3 row 'H X Z', 'Z = high-impedance OFF-state')"
+   ]
+  },
+  {
+   "unit": 4,
+   "role": "gate 4: 4A pin 12 in, 4Y pin 11 3-state out, 4~{OE} pin 13 active-LOW enable (Rev. 12 p3 Table 2)",
+   "presentation": "identity-topology",
+   "identity_features": [
+    "4A pin 12 left and 4Y pin 11 right on one row (pin ends -/+12.70, +2.54), joined by a non-inverting buffer triangle, no output bubble (Nexperia 74LVC125A Rev. 12 p2 Fig. 1; p4 Table 3)",
+    "4~{OE} pin 13 a full bottom pin at (0, -12.70), its lead rising to the active-LOW inversion bubble tangent to the triangle's lower edge; bar over OE only, pin shape line (p2 Fig. 1; p3 Table 2 'data enable input (active LOW)')",
+    "3-state mark at the output edge above 4Y, 4Y typed tri_state (p2 Fig. 2; p1 3-state outputs)",
+    "caption '~{OE}=H:' over 'Y=Z' beside the vertical enable name (graft G1: p4 Table 3 row 'H X Z', 'Z = high-impedance OFF-state')"
+   ]
+  },
+  {
+   "unit": 5,
+   "role": "power: VCC 14 and GND 7 shared by the four gates (Rev. 12 p3 Table 2)",
+   "presentation": "domain",
+   "identity_features": [
+    "power unit, presentation domain: plain 10.16 x 10.16 mm box, VCC 14 at the top of the left edge (-10.16, +2.54), GND 7 on the bottom edge (0, -10.16), both power_in (Rev. 12 p3 Table 2 rows 7, 14)",
+    "no functional ink, no exposed-pad pin (SO14 has none); ki_locked present"
+   ]
+  }
+ ],
+ "evidence": {
+  "comparable_ds": {
+   "path": "comparable_ds.json",
+   "sha256": "0840710c88a3f279267c7fa32d2f38059a3c4647d441f07a5d149020d83e811d",
+   "own_sha256": "49d64a9b9d253b9587093dbcb8b93f1cb4033686e52957842dd347920cf87930",
+   "comparable_count": 3
+  },
+  "pin_truth": {
+   "path": "pin-truth.json",
+   "sha256": "d1209e8c5ceca5e6298faead5c122b237b557d597c8382d8503f95a0cc5cf3a1",
+   "coverage": "all"
+  }
+ },
+ "generator": {
+  "contract": "python-cli-output-v1",
+  "path": "generate.py",
+  "sha256": "c2c3e150af7c2484da6430ff6b584f8301241e594a5157822197f82305eed2b5",
+  "inputs": [],
+  "expected_symbol_sha256": "4c51b0b0a27ac7154765fb101e4ea6f14ade926fc9f5198aff32b56901aa046e"
+ },
+ "look": {
+  "receipt_path": "symbol-look.json",
+  "sha256": "08bbf7d49855822f6ea37988cd14ebfcd1996172081f511b1f5bdfd00468fee3"
+ }
+}

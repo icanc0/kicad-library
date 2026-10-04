@@ -1,0 +1,109 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "74lvc125ad-118",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Nexperia",
+      "normalized": "nexperia"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "74LVC125AD,118",
+      "canonical": "74LVC125AD,118",
+      "comparison_key": "74LVC125AD,118",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C6057"
+      }
+    ],
+    "description": "Central library symbol 74LVC125AD,118 promoted from truedepth-shim."
+  },
+  "names": {
+    "canonical": "74LVC125AD,118",
+    "aliases": [
+      "74LVC125A"
+    ],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/74LVC125A.kicad_sym",
+        "name": "74LVC125A"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/74LVC125A.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "4c51b0b0a27ac7154765fb101e4ea6f14ade926fc9f5198aff32b56901aa046e",
+      "internal_name": "74LVC125A"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "b80bebc58bc55f236dec4ec2fb34b857ef3123ef",
+    "source_board": "truedepth-shim",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/74LVC125A.kicad_sym",
+        "evidence": "First-import fit pass: 74LVC125AD,118 (Nexperia 74LVC125A Rev. 12, SO14 SOT108-1): all 14 pins vision-confirmed on the p3 D-package pinout (1 1OE, 2 1A, 3 1Y, 4 2OE, 5 2A, 6 2Y, 7 GND, 8 3Y, 9 3A, 10 3OE, 11 4Y, 12 4A, 13 4OE, 14 VCC) = council symbol 74LVC125A 4c51b0b0 (D-14): four gate units nA input left, nY tri_state right through a buffer with the active-LOW nOE bubble (p4 Table 3, OE=H gives Z), unit 5 VCC 14 / GND 7 power_in; land = stock Package_SO:SOIC-14_3.9x8.7mm_P1.27mm (a885b619, stock STEP), which fits SOT108-1 p9 (e 1.27, E 3.8-4.0, HE 5.8-6.2, pads cover the 0.4-1.27 lead foot)."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "74LVC125AD,118 (Nexperia 74LVC125A Rev. 12, SO14 SOT108-1): all 14 pins vision-confirmed on the p3 D-package pinout (1 1OE, 2 1A, 3 1Y, 4 2OE, 5 2A, 6 2Y, 7 GND, 8 3Y, 9 3A, 10 3OE, 11 4Y, 12 4A, 13 4OE, 14 VCC) = council symbol 74LVC125A 4c51b0b0 (D-14): four gate units nA input left, nY tri_state right through a buffer with the active-LOW nOE bubble (p4 Table 3, OE=H gives Z), unit 5 VCC 14 / GND 7 power_in; land = stock Package_SO:SOIC-14_3.9x8.7mm_P1.27mm (a885b619, stock STEP), which fits SOT108-1 p9 (e 1.27, E 3.8-4.0, HE 5.8-6.2, pads cover the 0.4-1.27 lead foot).",
+      "note": "",
+      "pin_gate": {
+        "symbol": "74LVC125A",
+        "lcsc": "C6057",
+        "facts_checked": true,
+        "board_context": null,
+        "state": "clean",
+        "gaps": [],
+        "allow_pin_gaps": null
+      }
+    },
+    "quality": {
+      "state": "council-graded",
+      "symbol_sha256": "4c51b0b0a27ac7154765fb101e4ea6f14ade926fc9f5198aff32b56901aa046e",
+      "installed_symbol_sha256": "4c51b0b0a27ac7154765fb101e4ea6f14ade926fc9f5198aff32b56901aa046e",
+      "footprint_sha256": null,
+      "installed_footprint_sha256": null,
+      "quality_receipt": {
+        "path": "quality/74lvc125ad-118/symbol-quality.json",
+        "sha256": "bbdaf28d5aaeca8cb6fb5f481e5d3c83414cc064869c0e53371f7ecc47231765"
+      },
+      "look_receipt": {
+        "path": "quality/74lvc125ad-118/symbol-look.json",
+        "sha256": "08bbf7d49855822f6ea37988cd14ebfcd1996172081f511b1f5bdfd00468fee3"
+      },
+      "arena_manifest": {
+        "path": "quality/74lvc125ad-118/arena-manifest.json",
+        "sha256": "af8b82bfb802665153f64eac5b0fd43c601cc674ffb79c5274bf4d3151a31066"
+      },
+      "arena_manifest_mtime": "2026-10-03T01:55:21+00:00",
+      "arena_manifest_mtime_note": "st_mtime of QA's arena-manifest.json when promoted — the arena render's clock, reset by any cp/checkout; the receipts carry no audit clock and now() is never written",
+      "admission": {
+        "path": "quality/74lvc125ad-118/admission.json",
+        "sha256": "e0a9d6a92c77463c6b69106b8ba2c5c675e51b060feb22d489f69962247562a8"
+      }
+    }
+  }
+}
