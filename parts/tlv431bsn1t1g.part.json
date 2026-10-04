@@ -1,0 +1,107 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "tlv431bsn1t1g",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "onsemi",
+      "normalized": "onsemi"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "TLV431BSN1T1G",
+      "canonical": "TLV431BSN1T1G",
+      "comparison_key": "TLV431BSN1T1G",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C91075"
+      }
+    ],
+    "description": "Central library symbol TLV431BSN1T1G promoted from truedepth-shim."
+  },
+  "names": {
+    "canonical": "TLV431BSN1T1G",
+    "aliases": [],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/TLV431BSN1T1G.kicad_sym",
+        "name": "TLV431BSN1T1G"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/TLV431BSN1T1G.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "9cc53a23d23e5c3214d1c141e311201348d895154b6c95e658a276cf3a745309",
+      "internal_name": "TLV431BSN1T1G"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "b80bebc58bc55f236dec4ec2fb34b857ef3123ef",
+    "source_board": "truedepth-shim",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/TLV431BSN1T1G.kicad_sym",
+        "evidence": "First-import fit pass: Fits U9/U16 on truedepth-shim: onsemi TLV431BSN1T1G 1.24 V shunt reference (C91075), SOT-23-3 SN1 CASE 318. D-15 council symbol 9cc53a23: pin 1 Reference, 2 Cathode, 3 Anode, all passive, names as onsemi TLV431A/D prints them (p1 SN1 panel, p13 SOT-23-3 top view, qualified 4/4); glyph matches p2 Figure 2 (Anode up through the triangle to the cathode bar, Reference into the side); Reference and Cathode 2.54 mm apart on the left edge for the U9/U16 R-K tie. Land stock Package_TO_SOT_SMD:SOT-23 by lib:name: pads 1/2 on one side, 3 opposite, a proper rotation of p18 CASE 318-08 with no mirror; onsemi recommended pad inside the stock pad; SOT-23.step installed."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "Fits U9/U16 on truedepth-shim: onsemi TLV431BSN1T1G 1.24 V shunt reference (C91075), SOT-23-3 SN1 CASE 318. D-15 council symbol 9cc53a23: pin 1 Reference, 2 Cathode, 3 Anode, all passive, names as onsemi TLV431A/D prints them (p1 SN1 panel, p13 SOT-23-3 top view, qualified 4/4); glyph matches p2 Figure 2 (Anode up through the triangle to the cathode bar, Reference into the side); Reference and Cathode 2.54 mm apart on the left edge for the U9/U16 R-K tie. Land stock Package_TO_SOT_SMD:SOT-23 by lib:name: pads 1/2 on one side, 3 opposite, a proper rotation of p18 CASE 318-08 with no mirror; onsemi recommended pad inside the stock pad; SOT-23.step installed.",
+      "note": "",
+      "pin_gate": {
+        "symbol": "TLV431BSN1T1G",
+        "lcsc": "C91075",
+        "facts_checked": true,
+        "board_context": null,
+        "state": "clean",
+        "gaps": [],
+        "allow_pin_gaps": null
+      }
+    },
+    "quality": {
+      "state": "council-graded",
+      "symbol_sha256": "9cc53a23d23e5c3214d1c141e311201348d895154b6c95e658a276cf3a745309",
+      "installed_symbol_sha256": "9cc53a23d23e5c3214d1c141e311201348d895154b6c95e658a276cf3a745309",
+      "footprint_sha256": null,
+      "installed_footprint_sha256": null,
+      "quality_receipt": {
+        "path": "quality/tlv431bsn1t1g/symbol-quality.json",
+        "sha256": "a30eb4adaab82a3641a58f19ba6d7a058d7c3358a768524da8c6fd135dc26001"
+      },
+      "look_receipt": {
+        "path": "quality/tlv431bsn1t1g/symbol-look.json",
+        "sha256": "9b6847fdd2b852e1a54e08a86f4a13c28dffb73ee4297eb98fb6566cfe30f9c9"
+      },
+      "arena_manifest": {
+        "path": "quality/tlv431bsn1t1g/arena-manifest.json",
+        "sha256": "5cfbe2a4ef4cdf0b4d32e9ee47357945f5d7fa8f6b8fe1977288c7e6e4b4aa62"
+      },
+      "arena_manifest_mtime": "2026-10-04T10:41:04+00:00",
+      "arena_manifest_mtime_note": "st_mtime of QA's arena-manifest.json when promoted — the arena render's clock, reset by any cp/checkout; the receipts carry no audit clock and now() is never written",
+      "admission": {
+        "path": "quality/tlv431bsn1t1g/admission.json",
+        "sha256": "964fc7fb5297d53e8b0c125b9ca8fdcde5972646edd2d383246139f154b155dd"
+      }
+    }
+  }
+}

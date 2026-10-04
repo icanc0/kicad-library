@@ -1,0 +1,48 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "TLV431BSN1T1G",
+ "symbol": {
+  "asset_path": "TLV431BSN1T1G.kicad_sym",
+  "internal_name": "TLV431BSN1T1G",
+  "sha256": "9cc53a23d23e5c3214d1c141e311201348d895154b6c95e658a276cf3a745309"
+ },
+ "archetype": "identity-topology",
+ "units": [
+  {
+   "unit": 1,
+   "role": "shunt regulator: the device sinks Cathode 2 current so Reference 1 sits at Vref = 1.24 V above Anode 3 (Rev. 27 p1 Figure 1, p2 Figure 2, p3)",
+   "presentation": "identity-topology",
+   "identity_features": [
+    "onsemi TLV431A/D Rev. 27 p2 Figure 2 device symbol upright inside a 20.32 x 15.24 mm body: a filled triangle (22-vertex serpentine under the 0.254 stroke) pointing up from the Anode lead to the shunt-regulator bar, bar ticks left down / right up",
+    "Cathode 2 at the top of the left edge (-15.24, 5.08), its lead running right and dropping onto the bar centre; Reference 1 directly below (-15.24, 2.54), its lead ending on the triangle's left side at mid-height, so the U9/U16 Reference-to-Cathode tie is one 2.54 mm wire",
+    "Anode 3 a bottom pin (0, -12.70), its lead leaving the triangle base, running left at y 0 and dropping to the pin",
+    "graft G1: 'V_{ref} =' over '1.24 V' in the lower-right quadrant (p1 Figure 1 '1.24 Vref'; p3 TLV431B Vref)",
+    "all three pins passive, named in full as onsemi prints them (Reference, Cathode, Anode), names and numbers shown"
+   ]
+  }
+ ],
+ "evidence": {
+  "comparable_ds": {
+   "path": "comparable_ds.json",
+   "sha256": "e2851368922593ce9c91156b7923552686b4443aa156f2ec1752012cca087b5d",
+   "own_sha256": "63404349c360766556eedf8a605850e34f589c182640ff673eac74fbff3b6483",
+   "comparable_count": 3
+  },
+  "pin_truth": {
+   "path": "pin-truth.json",
+   "sha256": "6eb4bd41047128ca4f6f2919e527f06d2010ddf79db997f26cbb2a86a3e5e457",
+   "coverage": "all"
+  }
+ },
+ "generator": {
+  "contract": "python-cli-output-v1",
+  "path": "generate.py",
+  "sha256": "34a0e6580b7bb5aa9ef01d80497f2b5964572847c4082b53bfb32993bf5a9e3d",
+  "inputs": [],
+  "expected_symbol_sha256": "9cc53a23d23e5c3214d1c141e311201348d895154b6c95e658a276cf3a745309"
+ },
+ "look": {
+  "receipt_path": "symbol-look.json",
+  "sha256": "9b6847fdd2b852e1a54e08a86f4a13c28dffb73ee4297eb98fb6566cfe30f9c9"
+ }
+}

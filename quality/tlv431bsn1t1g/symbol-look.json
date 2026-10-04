@@ -1,0 +1,920 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "TLV431BSN1T1G",
+ "symbol_sha256": "9cc53a23d23e5c3214d1c141e311201348d895154b6c95e658a276cf3a745309",
+ "units": [
+  1
+ ],
+ "designs": [
+  {
+   "id": "design-flow-first",
+   "designer_id": "designer-flow-first-tlv431",
+   "stance": "flow-first",
+   "symbol_path": "council/flow-first/TLV431BSN1T1G.kicad_sym",
+   "symbol_sha256": "43f16e5dad293c7841c90123f12c2be305782a2fe5d7ae752a8bd95df52929ed",
+   "renders": [
+    {
+     "id": "design:flow-first:u1",
+     "unit": 1,
+     "path": "council/flow-first/TLV431BSN1T1G_unit1.png",
+     "sha256": "00bae9cbf6f91b58c660957470e68e7258f83af6cce33a181a21d7779d0be47c",
+     "background": "#ffffff",
+     "symbol_sha256": "43f16e5dad293c7841c90123f12c2be305782a2fe5d7ae752a8bd95df52929ed"
+    }
+   ]
+  },
+  {
+   "id": "design-annotation-rich",
+   "designer_id": "designer-annotation-rich-tlv431",
+   "stance": "annotation-rich",
+   "symbol_path": "council/annotation-rich/TLV431BSN1T1G.kicad_sym",
+   "symbol_sha256": "a40c32868971c04747b28f006a9e45f861d5ce6551f25fe0d86fa3d131ee2a44",
+   "renders": [
+    {
+     "id": "design:annotation-rich:u1",
+     "unit": 1,
+     "path": "council/annotation-rich/TLV431BSN1T1G_unit1.png",
+     "sha256": "2f1850fe14886e9ef08f55e92d23257f9575f16e65c82ef47588ede746ec4b8d",
+     "background": "#ffffff",
+     "symbol_sha256": "a40c32868971c04747b28f006a9e45f861d5ce6551f25fe0d86fa3d131ee2a44"
+    }
+   ]
+  },
+  {
+   "id": "design-internals-maximal",
+   "designer_id": "designer-internals-maximal-tlv431",
+   "stance": "internals-maximal",
+   "symbol_path": "council/internals-maximal/TLV431BSN1T1G.kicad_sym",
+   "symbol_sha256": "a5aaf591dc2452c141cc10f3796ee54664daf6df00da44a05097f3094d752956",
+   "renders": [
+    {
+     "id": "design:internals-maximal:u1",
+     "unit": 1,
+     "path": "council/internals-maximal/TLV431BSN1T1G_unit1.png",
+     "sha256": "2cebb019860d2a2dfa63d7fbc365dad873ad070fe8421317e6602d6bbdb871f2",
+     "background": "#ffffff",
+     "symbol_sha256": "a5aaf591dc2452c141cc10f3796ee54664daf6df00da44a05097f3094d752956"
+    }
+   ]
+  }
+ ],
+ "judges": [
+  {
+   "reviewer_id": "judge-1",
+   "design_id": "design-flow-first",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "This is the exact Figure 2 device symbol: a filled triangle pointing up, the bar's left tick down at (4.572,3.302) and right tick up at (8.128,4.318), and the Reference lead ending on the triangle's side at mid-height (5.715,2.54). It reads instantly as a TL431-class shunt. Against that, the 2.54 mm glyph is pushed to x=6.35 in a 20.32 mm box, and the Anode lead jogs 6.35 mm left ((6.35,0)->(0,0)) to reach pin 3, so the pin axes do not follow the glyph axes.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "It matches Figure 2 most closely, fill included (a 0.2 mm serpentine under the stroke reads solid in the 1800 dpi close-up), with Cathode above the bar and Anode below. It is faithful but abstract: nothing from Figure 1 (no Vref) appears.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "The body is 20.32 x 15.24, the most compact of the three, with 6 polylines. Costs: the fake fill is a 22-vertex polyline, the lower-right quadrant is empty, and the Anode jog is ink that exists only because the glyph sits off-axis.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "Cathode (pin 2, tip -15.24,5.08) and Reference (pin 1, tip -15.24,2.54) share the left edge 2.54 mm apart. The U9/U16 Reference-to-Cathode tie (VKA = Vref, packet) is therefore one 2.54 mm wire, and a divider or compensation cap can hang off that edge as a ladder. Anode drops straight to GND. All tips are on 2.54. This beats the stock floor.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 2,
+     "note": "The printed names give each pin's role, but nothing on the sheet says Vref = 1.24 V. That number is what separates this part from TL431's 2.5 V (packet trap) and is backed by Figure 1's '1.24 Vref'. It lives only in the hidden Description.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "No design clears 3 on every axis: internals-maximal falls short on economy and wiring, flow-first on expressibility, annotation-rich on wiring.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Take flow-first as the base, since its one sub-bar axis is fixable with ink alone. Graft 1: annotation-rich's 'V_{ref} = 1.24 V' text into flow-first's empty lower-right, between the Reference lead and the Anode lead (expressibility 2->4). Graft 2: put the glyph axis on the Anode pin's x, for example XD=7.62 with pin 3 at x=7.62 (still inside HW=10.16, on 2.54), to remove the 6.35 mm Anode jog (identity 3->4, economy +). Optional: fill the triangle as flow-first already does. Fixing annotation-rich's wiring instead would mean moving Cathode to the left edge, which turns it into flow-first. Internals-maximal's Figure 1 ink is faithful but its 48 mm footprint and split R/K tie make it a poor fit for U9/U16.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-1",
+   "design_id": "design-annotation-rich",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Figure 2 is drawn centred with its leads on Figure 2's own axes. The Cathode rises from the bar centre and turns right to the K pin, Reference enters from the left and stops on the triangle's side at (-0.635,2.54), and Anode runs straight down the glyph axis to pin 3 at x=0. The bar ticks match (left down to (-1.905,3.175), right up to (1.905,4.445)). It reads at a glance.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "The Figure 2 topology is correct and 'V_ref = 1.24 V' agrees with p3's TLV431B typical of 1.240 V. Deviation: the triangle is an outline polyline (fill none) where Figure 2 fills it. Flow-first shows the engine can do the fill.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Minimal ink: 5 polylines and one annotation. But the body is 30.48 x 15.24 to hold the R-left and K-right names, and the lower-right quadrant is empty (design.json admits this).",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 2,
+     "note": "Reference tip (-20.32,2.54) and Cathode tip (20.32,5.08) are on opposite edges. The U9/U16 Reference-to-Cathode tie wraps about 41 mm across plus the rise over the Reference/Value fields, or needs two labels. That is below the stock floor, where REF-up/K-right gives a short L. Tips are on 2.54, and the divider-left / K-right generic use stays conventional.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "The one 'V_{ref} = 1.24 V' note (subscript renders) sits between the Reference lead and the Anode lead, which shows that the voltage is Reference-to-Anode. It is load-bearing (Figure 1 '1.24 Vref'; it defuses the TL431 2.5 V trap). It does not repeat the R/K/A letters, and no limits are inked.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "No design clears 3 on every axis: internals-maximal falls short on economy and wiring, flow-first on expressibility, annotation-rich on wiring.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-1",
+   "design_id": "design-internals-maximal",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "This is onsemi's Figure 1 block diagram: an op-amp with Reference on '+' and a '1.24 V' box on '-', an NPN sink, and the two diodes. It names the device for an analog reader, but the adjustable-zener glyph (Figure 2), which is what readers look for on a sheet, is missing. On a 38 mm box the op-amp could be glanced at as a comparator or LDO.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Every Figure 1 element is present, in the right direction. Reference reaches the '+' input at y=3.81. The '-' input goes to the 1.24 V box, which returns to the Anode rail at y=-1.905. Collector (4.445,3.175)->(6.35,5.08) goes to the Cathode node and emitter ->(6.35,-1.905) to the rail. The arrow tip (6.064,0.286) lies on the emitter leg pointing out, so it is an NPN. The right diode's triangle points up at a bar at 2.35 (Anode->Cathode). The onsemi-only top diode has its triangle (-0.762..0.762) pointing right at a bar at x=0.762 (Reference->Cathode). Nits: both diodes and the emitter arrow are outlines where Figure 1 fills them, and the label reads '1.24 V' where Figure 1 prints '1.24 Vref'.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "The body is 38.1 x 20.32 mm, and pin tip to pin tip is 48.26 mm, for a 3-pin SOT-23. Below the rail (y -3..-10) there is only the vertical 'Anode' name. The R, K and A letters at (-17.05,7.62), (17.05,7.62) and (1.651,-8.382) repeat names that are already printed in full.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 2,
+     "note": "Reference tip (-24.13,5.08) and Cathode tip (24.13,5.08) sit on opposite sides. On U9/U16, where Reference ties to Cathode (packet pin 1 function), that tie must wrap about 48 mm over the Reference/Value fields or use two labels. The stock floor has REF up and K right. The ±24.13 tips are on the engine's 1.27 grid but off 2.54; Anode on the bottom is fine.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "The reader sees how the part regulates: Reference is held at 1.24 V above Anode by the amplifier, the Cathode sinks through the NPN, and the protection diodes are shown. That is the most load-bearing ink of the three. The only cost is the redundant letters.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "No design clears 3 on every axis: internals-maximal falls short on economy and wiring, flow-first on expressibility, annotation-rich on wiring.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-2",
+   "design_id": "design-flow-first",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "Draws the Figure 2 device symbol in Figure 2's own orientation: filled triangle pointing up from Anode to the bar, bar ticks left-down and right-up, Reference entering the triangle's side at (5.715,2.54) without crossing it. It is the same size as the stock glyph (2.54 mm triangle), so it reads instantly. The cost is that it sits as a small inset in the upper-right of a 20.32 x 15.24 mm box. The pin positions (Cathode and Reference both on the left wall) do not mirror the glyph's K-up / R-left, so the reader follows the names and leads instead.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "This is the closest copy of p2 Figure 2 of the three: it is the only design whose triangle is solid like the datasheet's, done with a 22-vertex serpentine fill. The leads are true: Cathode drops onto the bar, Reference stops at the triangle side, Anode leaves the base. It carries no 1.24 V, which is the one value that separates this die from TL431's 2.495 V, so it shows nothing of the silicon beyond the generic glyph.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Smallest body of the three: 20.32 x 15.24 mm (310 mm2), 6 primitives. The ink is limited to the glyph and three leads. Costs: the lower-right of the body is empty, and the Anode lead jogs 6.35 mm left from (6.35,0) to (0,0) to reach the centred pin. The fill polyline adds 22 vertices of non-native ink.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "Cathode (-15.24,5.08) and Reference (-15.24,2.54) are adjacent on one wall, 2.54 mm apart. The U9/U16 Reference-Cathode tie is a single 2.54 mm wire, as the packet's flow-first stance note asks. A divider or compensation cap hangs off that edge as a vertical ladder. Anode at (0,-12.7) falls straight to GND. All tips are on the 2.54 grid and the centred pin is on a 5.08 multiple, per guide docs/02 and 06.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "Glyph plus full printed names say what the part is and which pin is which, and the generator documents the reason for each placement. It adds no annotation (no 1.24 V). The filled triangle is approximated with a scan polyline because author_symbol has no fill. It renders solid at 600 and 1600 dpi but is not a native fill.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "none found. Every design has 1 Reference, 2 Cathode, 3 Anode, all passive, which matches the p1 SN1 panel and p13. Every diode polarity, the NPN emitter arrow, the +/- inputs and the 1.24 V value agree with p1 Figure 1 and p2 Figure 2.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "flow-first has no design.json: no LOOK note, ink-source table or render hash record beside its render.py. The chair must get that receipt before handoff (SKILL section 3/4: a blank LOOK note blocks handoff).",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Add annotation-rich's 'V_{ref} = 1.24 V' caption (p1 Figure 1 '1.24 Vref', p3; Description already contains 'Vref 1.24 V') into flow-first's empty lower-right quadrant, clear of the Anode lead.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Keep flow-first's filled triangle: the serpentine is the only design matching Figure 2's fill. Re-check after the graft that it still renders solid in QA's arena page.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-2",
+   "design_id": "design-annotation-rich",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "The Figure 2 adjustable-zener glyph is centred: triangle pointing up, bar ticks left-down and right-up, Reference ending on the triangle side at (-0.635,2.54). Under the Reference lead sits 'V_ref = 1.24 V'. Together with the full names, this is the only design that identifies both the device class and the 1.24 V variant (not a 2.5 V TL431) at a glance.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "Glyph geometry matches Figure 2, and 'Vref = 1.24 V' is backed by p1 Figure 1 '1.24 Vref' and p3 TLV431B typ 1.240 V. Two departures from Figure 2: the triangle is an outline where the datasheet fills it (design.json blames the emitter's lack of fill), and Cathode exits right instead of straight up. Neither is a contradiction.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "30.48 x 15.24 mm body (464 mm2) for 5 primitives and one caption. The Cathode lead runs 5 mm right to a far-right name, and design.json concedes that the lower-right quadrant is empty. The body is 10 mm wider than flow-first's for the same glyph.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 2,
+     "note": "Reference at (-20.32,2.54) and Cathode at (20.32,5.08) sit on opposite walls, 40.64 mm apart. The U9/U16 Reference-Cathode tie needs about 53 mm of wire over the body top (7.62), the baked title (8.89) and the Value field. It cannot go under, because that crosses the Anode/GND drop at (0,-12.7). For general TL431 use the left-R / right-K / bottom-A layout is conventional, and all tips are on the 2.54 grid.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "The one load-bearing annotation the packet allows is present and correct, with a real subscript. It deliberately leaves off the R/K/A letters and the limits, and its design.json justifies each ink element by page. The outline triangle is the engine-limited form of Figure 2's filled glyph.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "none found. Every design has 1 Reference, 2 Cathode, 3 Anode, all passive, which matches the p1 SN1 panel and p13. Every diode polarity, the NPN emitter arrow, the +/- inputs and the 1.24 V value agree with p1 Figure 1 and p2 Figure 2.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-2",
+   "design_id": "design-internals-maximal",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "Draws onsemi p1 Figure 1 as a block diagram inside a 38.1 x 20.32 mm rectangle: op-amp, a '1.24 V' box, an NPN and the K-A diode. An analog reader recognises the TL431 model, but the familiar Figure 2 adjustable-zener glyph is missing, so identifying the part takes study rather than a glance. The names Reference, Cathode and Anode print in full, plus the R/K/A letters.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Every element matches Figure 1. Reference meets a junction dot that feeds '+' (at y 3.81). The 1.24 V box connects '-' to the Anode rail. The op-amp drives the NPN base. The collector goes to the Cathode node and the emitter to the rail, with the arrow pointing outward. The K-A diode triangle (7.239,0.8255)-(9.271,0.8255)-(8.255,2.3495) points up to its bar. It also keeps onsemi's own R->K diode across the top, oriented correctly (anode at Reference, bar at 0.762 toward Cathode), which TI and Nexperia omit. Minor differences: the arrowheads are outlines (Figure 1 fills them) and the box reads '1.24 V', not '1.24 Vref'.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "economy": {
+     "score": 1,
+     "note": "38.1 x 20.32 mm body (774 mm2), 23 non-frame primitives and 5 junction dots, for a 3-pin SOT-23 that appears twice on the sheet (U9, U16). The R/K/A letters repeat the full printed names. The body below the Anode rail (y -1.9 to -10.16) holds only the vertical 'Anode' name; design.json admits this under known_costs.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 1,
+     "note": "Reference tip at (-24.13,5.08) and Cathode tip at (24.13,5.08) are 48.26 mm apart on opposite walls. On this board Reference ties to Cathode (packet pin 1 function: VKA = Vref, U9 and U16 in parallel), so each instance needs a wire of roughly 63 mm. It has to climb over the 20.32 mm body, the bold title at 11.43, Value at 13.97 and Reference at 16.51. The tips sit on the 1.27 grid, which the guide accepts, but not on the 2.54 grid. Anode at (0,-15.24) drops cleanly to GND.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "Shows the whole regulation loop: Reference is compared against an internal 1.24 V source, which drives a Darlington-like NPN sink from Cathode to Anode, plus both protection diodes. This is the most information any design carries. The engine's no-fill limit only affects the arrowheads.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "none found. Every design has 1 Reference, 2 Cathode, 3 Anode, all passive, which matches the p1 SN1 panel and p13. Every diode polarity, the NPN emitter arrow, the +/- inputs and the 1.24 V value agree with p1 Figure 1 and p2 Figure 2.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-3",
+   "design_id": "design-flow-first",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "render-u1.png: onsemi p2 Figure 2 device symbol. The triangle points up from Anode to the bar and is drawn filled; a 22-vertex serpentine fill reads solid in a 4000 px close-up. The bar ticks go left-down and right-up. All three printed names show in full, so R, K and A are told apart by name, not by position.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Matches p2 Figure 2: Cathode lead lands on the bar centre from above, Anode lead leaves the triangle base. The Reference lead (0.865 to 5.715, y=2.54) stops exactly on the triangle's left side (side x = 5.08 + 0.635 = 5.715), so there is no stub through the body. Pins 1 Reference, 2 Cathode, 3 Anode match the p1 SN1 panel and p13, all passive. pinset_for(C91075) = []. No datasheet contradiction.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "Smallest body that still prints all three names: 20.32 x 15.24 mm (310 mm2), 6 primitives, no redundant letters or limits. Costs: the lower-right quadrant is empty, and the Anode lead takes a 6.35 mm dogleg so the Anode pin stays on the 2.54 grid at x=0.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "Cathode (pin 2) at (-15.24, 5.08) and Reference (pin 1) at (-15.24, 2.54) share the left edge, 2.54 mm apart. The Reference-to-Cathode tie that U9 and U16 both need (architecture.md:555) is one 2.54 mm wire, and a divider or compensation cap hangs off the same edge. Anode (0, -12.7) drops straight to GND. Every pin tip is on the 2.54 grid.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "Shows the identity glyph and every pin role by full name. Nothing on the glyph says 1.24 V, so telling a TLV431 (1.24 V) from a TL431 (2.5 V), a trap the packet lists, rests on the Value field alone. That still meets the bar because the packet makes '1.24 V' optional ink.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Read-only: hashes of all 3 .kicad_sym and PNG files match design.json. Every render's corner pixel is #ffffff. Each design has one unit (_1_1), and that render was viewed full-size and in an SVG close-up. pinset_for(C91075) = [] for all three. audit_block(identity-topology, authoring=True) = [] for all three. Datasheet 63404349 p1 Figure 1 and p2 Figure 2 were rendered and compared against the ink.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Winner: flow-first. Graft: annotation-rich's 'V_{ref} = 1.24 V' caption into flow-first's empty lower-right quadrant (below the triangle, right of the Anode dogleg, >= 1.5 mm off other ink; Description already carries 'Vref 1.24 V'). This lifts expressibility to 4 without touching flow-first's R/K adjacency or footprint. Do not graft internals-maximal's Figure 1 ink (economy and wiring cost).",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-3",
+   "design_id": "design-annotation-rich",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "TLV431BSN1T1G-u1.png: the Figure 2 adjustable-zener glyph with ticks left-down and right-up, the Reference lead entering at mid-triangle, full printed names, and 'Vref = 1.24 V' beside Reference. It reads at a glance as a 1.24 V shunt reference.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "The geometry matches p2 Figure 2: the Reference lead (-3.81 to -0.635, y=2.54) ends on the triangle side (-0.635), the bar leads to Cathode, and the base leads to Anode. 'V_{ref} = 1.24 V' matches p1 Figure 1 '1.24 Vref' and the p3 TLV431B 1.240 V typ, so it is not a contradiction. One deviation: the triangle is an outline (fill none) where Figure 2 draws it solid. flow-first shows the engine limit can be worked around. pinset_for = [].",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Ink is lean: 5 primitives and one caption, with letters and limits left out on purpose. The body is 30.48 x 15.24 mm (464 mm2), 1.5x flow-first's area for one extra caption, and the lower-right quadrant is empty (design.json says so). The width follows from putting Reference and Cathode on opposite sides.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 2,
+     "note": "Reference sits at (-20.32, 2.54) and Cathode at (20.32, 5.08), 40.64 mm apart on opposite sides. On this board U9 and U16 both tie Reference to Cathode, so each instance needs a wire looping over the body (through the Reference/Value fields) or under it past the Anode pin. Tips are on the 2.54 grid, but the one connection this board uses twice is the longest wire on the symbol.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "'V_{ref} = 1.24 V' sits between the Reference lead and the Anode lead. It is the one load-bearing number: it separates this part from the 2.5 V TL431 family and it is the laser-reference node voltage on this board (architecture.md:162, :555).",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Read-only: hashes of all 3 .kicad_sym and PNG files match design.json. Every render's corner pixel is #ffffff. Each design has one unit (_1_1), and that render was viewed full-size and in an SVG close-up. pinset_for(C91075) = [] for all three. audit_block(identity-topology, authoring=True) = [] for all three. Datasheet 63404349 p1 Figure 1 and p2 Figure 2 were rendered and compared against the ink.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "judge-3",
+   "design_id": "design-internals-maximal",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "TLV431BSN1T1G_unit1.png is onsemi p1 Figure 1 (amplifier, NPN, '1.24 V' box, two diodes). An analog reader recognises the textbook TL431 block, but the adjustable-zener glyph the packet calls 'the identity a reader looks for' is missing. At sheet zoom it reads first as a generic analog IC box, and the reader has to parse amp + NPN to place it.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Every p1 Figure 1 element is present with correct polarity. The Reference node goes to '+'. The '-' input goes to the 1.24 V box, which returns to the Anode rail at x=-8.255. The amplifier drives the NPN base; the collector goes to Cathode and the emitter arrow points outward to the rail (NPN). The right-hand diode points up from Anode to Cathode. The onsemi-only Reference-to-Cathode diode runs across the top, anode at the Reference node and bar at the Cathode side, as Figure 1 draws it. Only nit: arrowheads are outlines where Figure 1 fills them. pinset_for = [].",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "economy": {
+     "score": 1,
+     "note": "Body is 38.1 x 20.32 mm (774 mm2, 2.5x flow-first) with 23 non-frame primitives and 5 junction dots for a 3-pin part. The R, K and A letters at (-17.05, 7.62), (17.05, 7.62) and (1.651, -8.382) repeat pin names that already print in full. The lower ~7 mm of the body holds only the vertical Anode name (known_costs admits it).",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 1,
+     "note": "Reference at (-24.13, 5.08) and Cathode at (24.13, 5.08) are 48.26 mm apart, so the R-K tie on U9 and U16 loops around the largest body of the three. +/-24.13 = 9.5 x 2.54: these tips sit on the guide's 1.27 grid but off the 2.54 schematic grid that the other two designs and the flow-first stance use.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "Shows how the part works: Reference is compared against an internal 1.24 V on the amplifier, an NPN sinks the cathode current, and protection diodes run Anode to Cathode and Reference to Cathode. Most expressive of the three.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Read-only: hashes of all 3 .kicad_sym and PNG files match design.json. Every render's corner pixel is #ffffff. Each design has one unit (_1_1), and that render was viewed full-size and in an SVG close-up. pinset_for(C91075) = [] for all three. audit_block(identity-topology, authoring=True) = [] for all three. Datasheet 63404349 p1 Figure 1 and p2 Figure 2 were rendered and compared against the ink.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   ]
+  }
+ ],
+ "selection": {
+  "winner_design_id": "design-flow-first",
+  "grafts": [
+   {
+    "id": "G1",
+    "from": "annotation-rich",
+    "axis": "expressibility (economy held: body, pins and every winner primitive unchanged)",
+    "closes": "flow-first carries no 1.24 V on the glyph (judge 1 expressibility 2, judges 2-3 expressibility 3; packet trap 'Vref 1.24 V, not TL431's 2.495 V'); all three judges recommend this graft into the empty lower-right quadrant (judge 3 'below the triangle, right of the Anode dogleg, >= 1.5 mm off other ink')",
+    "change": "two gfx text lines 'V_{ref} =' over '1.24 V', centred at x 5.461 (midpoint between the vertical Anode name's ink box, right edge 0.889, and the right wall's inner edge 10.033 on engine.text_ink), y -2.54 and -3.94 (1.4 mm pitch = text_ink LINE_H at the emitter's 1.0 mm gfx text size)",
+    "source": "onsemi TLV431A/D Rev. 27 p1 Figure 1 '1.24 Vref' (the source between the amplifier '-' input and the Anode rail); p3 Reference Voltage TLV431B 1.234 / 1.240 / 1.246 V at 25 C; the Description already carries 'Vref 1.24 V'",
+    "scope_choices": [
+     "annotation-rich's own string with its subscript markup V_{ref} (judge 1: 'subscript renders'), so the graft is its ink, not a rewrite",
+     "two lines, not one: 'Vref = 1.24 V' is 10.62 mm on the text-ink model and the quadrant between the Anode name box and the wall is 9.14 mm; a one-line caption would need the body widened to 25.4 mm, giving back the economy that won (judge 3: 'without touching flow-first's R/K adjacency or footprint'). Split at the '=' so each line reads as a unit (4.9 mm / 4.95 mm)",
+     "lower-right, as judges 1-3 place it: under the glyph and beside the Anode run, so the number sits between the Reference lead above and the Anode lead below (judge 1's 'between the Reference lead and the Anode lead')",
+     "no letters, no limits: the packet's not_ink rows and annotation-rich's own omissions stand"
+    ],
+    "cost": "two text lines in a quadrant every judge called empty; no new primitive, no area"
+   }
+  ],
+  "final_symbol_sha256": "9cc53a23d23e5c3214d1c141e311201348d895154b6c95e658a276cf3a745309"
+ },
+ "final_renders": [
+  {
+   "id": "qa:u1",
+   "unit": 1,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png",
+   "sha256": "2a333b93dea1c11469b1fdb18c4e4201e40451d23888fc7fdc3ea8d5bb222bfa",
+   "background": "#f5f4ef",
+   "symbol_sha256": "9cc53a23d23e5c3214d1c141e311201348d895154b6c95e658a276cf3a745309",
+   "nonce": "LOOK-XHHXEVTCWWJW",
+   "nonce_sha256": "0bbe621a6e64a5107a82cb103eae064d873ef1e6b0f3177a87d29817a0aa98e1"
+  }
+ ],
+ "regraders": [
+  {
+   "reviewer_id": "look-regrader-TLV431BSN1T1G-1",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: the upright shunt-regulator glyph is in the box's upper right with a filled triangle and the bent-tick bar. Reference meets the triangle's side, and the caption reads 'Vref = 1.24 V'. The bold MPN sits over the box. It reads as a TL431-class adjustable shunt reference at a glance.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: on the page, pin 1 is Reference, pin 2 Cathode and pin 3 Anode. That matches the TLV431A/D Rev.27 (sha 63404349) p1 'SOT-23 SN1 SUFFIX CASE 318: 1. Reference 2. Cathode 3. Anode', which I checked by rendering the page. The names are exactly what onsemi prints. The glyph matches the p2 Figure 2 Device Symbol, re-rendered at 400 dpi: Cathode comes onto the bar from above, Reference enters the triangle's side at mid-height (lead ends at x=5.715 = triangle edge at y=2.54), and Anode comes from the triangle base. The bar's left tick goes down and its right tick goes up, as in the datasheet. Vref 1.24 V matches p1. Pins are passive, which does not contradict the datasheet.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: there is no decorative ink, and every internal lead joins a pin name to its glyph terminal. Two dings. First, the 20.32x15.24 mm box is generous for 3 pins, leaving the lower-left quadrant empty. Second, the body text repeats the MPN, so the arena hides the Value field.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "ERGONOMICS 3: all pins sit on the 2.54 grid. Cathode and Reference are adjacent on the left at 2.54 pitch, so tying REF to K (the board's 1.24 V mode for U9/U16) or adding a divider takes short wires. Anode exits the bottom toward GND. The page shows no label or ink collisions. Ding: Cathode exits left rather than top, unlike the usual vertical K-up/A-down shunt wiring.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: full datasheet pin names and numbers are shown, the inner leads keep the order K/REF/A top to bottom without crossings, and the key parameter (Vref 1.24 V) is printed.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Page binding: Graded QA's page from the latest arena-manifest.json (symbol 9cc53a23, units [1], verdict PASS): receipts/TLV431BSN1T1G/qa/arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png. Viewed at native 686x717 plus a 3x body zoom. The file's sha256 2a333b93 matches the manifest. Background measured at pixel (2,2) is (245,244,239) = #f5f4ef, which matches the manifest. I read the banner nonce from the pixels as LOOK-XHHXEVTCWWJW. sha256 of that string = 0bbe621a..., which equals the manifest nonce_sha256 and the .render-nonces.json row.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Open findings: none, all minor nits above. suspected_injection: none; no file read held instructions addressed to me. Wrote nothing to any repo.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-TLV431BSN1T1G-2",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "IDENTITY 3: onsemi's shunt-regulator device symbol is drawn upright on the page: a filled triangle pointing up onto a bar with the left tick down and the right tick up, the Reference lead entering the triangle's side, and a bold TLV431BSN1T1G title. It reads at once as a TL431-class programmable reference. Two things cost a point. The glyph is about 3.5 mm in a 20.32x15.24 mm body and sits in the upper-right corner. The Anode lead leaves the triangle base, runs left at y=0 and drops to the pin at x=0, which breaks the straight vertical A-K axis (the council recorded this as a known cost).",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: the cached ds.pdf (sha 63404349) page 1 'SOT-23 SN1 SUFFIX CASE 318' lists '1. Reference 2. Cathode 3. Anode'. The page shows Reference=1, Cathode=2, Anode=3, named exactly as onsemi prints them. The glyph matches p2 Figure 2 Device Symbol: triangle up from Anode, bar at the Cathode, and the left-tick-down/right-tick-up bar. The symbol bytes end the Reference lead at (5.715, 2.54), which lies exactly on the triangle's left edge at mid-height, so it touches as in Fig 2. The triangle pixels read fully solid with no light holes (the council asked regraders to check this). The 'Vref = 1.24 V' caption matches p3: TLV431B typical 1.240 V. All pins are passive, since onsemi prints no type column.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: a 20.32x15.24 mm body is large for 3 pins. The lower-left of the body is empty apart from the vertical 'Anode' name, and full pin-name text repeats what the glyph already shows. The serpentine fill adds no visible clutter. The bold MPN title stands in for the Value field, which the arena instance hides, so the page shows no duplicate.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "ERGONOMICS 4: Cathode (2) and Reference (1) sit next to each other on the left edge at 2.54 mm pitch, so this board's Reference-to-Cathode tie (VKA=Vref) is one short wire. Anode exits at the bottom for GND. The CATHODE, REFERENCE and ANODE label stubs attach cleanly on grid. Pin numbers are readable, with no ink collisions, overlaps or off-grid ends on the page.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "EXPRESSIBILITY 3: the caption 'Vref = 1.24 V' is the one load-bearing number, with a real subscript, set in the lower-right quadrant. With the full pin names and the glyph, the reference-into-shunt function is clear. The caption uses 1.0 mm text, smaller than the 1.27 mm pin text; it is legible on the page but small, so 3 rather than 4.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Page binding: Graded QA's unit 1 page from the latest arena-manifest.json: receipts/TLV431BSN1T1G/qa/arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png, 686x717, viewed at full resolution plus 3x crops of the body and the nonce banner. The file's sha256 2a333b93... matches the manifest. The nonce read from the pixels is LOOK-XHHXEVTCWWJW, and its sha256 0bbe621a... equals the manifest nonce_sha256. The symbol on the page is 9cc53a23..., the same as the manifest symbol_sha256 and the candidate .kicad_sym. The manifest has one unit and one page.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "The unit page shows no blocking defect. Suspected injection: none. I scanned facts.json, author.json, symbol-quality.json, pin-truth.json and the symbol-look.json grep hits, and none holds an instruction addressed to a regrader beyond the council's recorded 'regraders re-check that it reads solid', which is a legitimate check that I did. I wrote nothing to any repo; only scratch crops in the session scratchpad.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-TLV431BSN1T1G-3",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: the body carries onsemi's Fig. 2 shunt-regulator glyph (datasheet p2, the device symbol I rendered from the cached ds.pdf at sha256 63404349...). It has a solid filled triangle pointing up into a bar whose left tick goes down and right tick goes up. Cathode drops onto the bar, Reference ends on the triangle side at mid-height, and Anode leaves from the base. With the bold TLV431BSN1T1G title and the 'Vref = 1.24 V' caption, the page reads at a glance as a 431-class adjustable shunt with a 1.24 V reference. The Anode dogleg (glyph at x 6.35, pin 3 at x 0) is a small recorded cost but does not blur the reading.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: pin 1 Reference, pin 2 Cathode, pin 3 Anode match the p1 SN1 SUFFIX CASE 318 panel ('Pin 1. Reference / 2. Cathode / 3. Anode') and the p13 SOT-23-3 top view ('Reference 1', 'Cathode 2', 'Anode 3'). The pins are not the TO-92 or TSOP-5 orders. Glyph orientation and ticks match Fig. 2. 1.24 V matches p3 TLV431B Vref 1.234/1.240/1.246 V and the p1 Fig. 1 '1.24 Vref'. All pins are passive, which suits a two-terminal shunt plus its reference input.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: there is no decorative ink and the caption uses the lower-right quadrant. But the body is 20.32 x 15.24 mm for 3 pins, the lower-left quarter is empty, and the dogleg adds ink. Minor: the library Value field at (0, 11.43) is visible by default, so on a board that does not hide Value it would duplicate the bold MPN title. The arena hid Value, so this page shows no duplication.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "ERGONOMICS 3: Cathode (2) and Reference (1) sit adjacent on the left at 2.54 mm, so the common K-R tie or a divider tap is a short wire. Anode (3) exits the bottom toward GND. Pin numbers are outside the body, labels do not collide, wires are on grid, and arena ERC is 0. The cathode exits left beside Reference rather than at the top as in Fig. 2, so a rail or optocoupler column above has to come in from the side. That is acceptable.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "EXPRESSIBILITY 4: full onsemi pin names (Cathode/Reference/Anode, not REF/K/A), a functional glyph instead of a bare box, and graft G1's 'Vref = 1.24 V' with the subscript rendering correctly. The caption is load-bearing because it closes the trap of assuming TL431's 2.5 V.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Page binding: Page graded: QA's own unit page from the latest manifest, /home/vincent/projects/pmic-test-arena/receipts/TLV431BSN1T1G/qa/arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png. I viewed it at native 686x717 and again as 4x crops of the glyph and the banner. Its sha256 is 2a333b93...bfa, which matches the manifest. The banner nonce reads LOOK-XHHXEVTCWWJW, and sha256 of that string is 0bbe621a...98e1, equal to the manifest's nonce_sha256. The candidate symbol rehashes to 9cc53a23...5309, equal to the manifest's symbol_sha256. The manifest lists one unit, and I saw it.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Known divergences: judge 2 asked regraders to recheck the serpentine triangle fill, and at 4x it reads solid on QA's page, so that item is closed. The dogleg stays a recorded identity cost, not an open finding. Suspected injection: none found in any file or page read. I wrote nothing to any repo; scratch crops are in the session scratchpad only.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-TLV431BSN1T1G-4",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: the value TLV431BSN1T1G sits over onsemi's Figure 2 shunt-regulator glyph. The filled triangle points up to a bar whose left tick bends down and right tick bends up. The Reference lead lands on the triangle's side and a 'Vref = 1.24 V' caption sits below, so it reads at once as a TL431-family adjustable shunt reference.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: pin 1 Reference, pin 2 Cathode and pin 3 Anode match the ds p1 SOT-23 SN1 CASE 318 panel ('Pin 1. Reference 2. Cathode 3. Anode'), not the TO-92 or TSOP-5 pinouts. Glyph orientation matches the p2 Figure 2 device symbol I rendered from the hash-verified PDF: Cathode up, Anode down, Reference into the triangle. The caption matches p3 TLV431B Vref 1.234/1.240/1.246 V typ 1.240.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: one compact box with no decorative ink. However, the lower-left quadrant is dead space. The Anode lead also detours: the pin enters at the symbol's center x, left of the glyph, so the lead runs up and then right under the triangle.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "ERGONOMICS 4: Cathode (2) and Reference (1) sit next to each other on the left at 2.54 mm pitch, so the K-R-GND feedback divider and supply resistor come in from one side. Anode (3) drops straight down to ground. Pins are on the 2.54 grid, and all three are passive, so ERC sees no driver conflict. Pin names are spelled as the datasheet prints them (Cathode/Reference/Anode).",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "EXPRESSIBILITY 3: the Vref = 1.24 V caption carries real information (it sets Vout = 1.24(1+R1/R2)), and the glyph shows the shunt function. It is complete but minimal: the B-grade +-0.5% tolerance and the Vka 16 V / Ik 0.1-20 mA limits appear only in the hidden Description, not on the symbol face.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Page binding: Graded QA's own arena page: arena-manifest.json (symbol 9cc53a23..., verdict PASS, units [1]) page 1 = /home/vincent/projects/pmic-test-arena/receipts/TLV431BSN1T1G/qa/arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png, viewed at its native 686x717 size, plus a 3x zoom of the body. The file's sha256 2a333b93... matches the manifest, and the candidate .kicad_sym rehashes to 9cc53a23..., also matching. The nonce LOOK-XHHXEVTCWWJW, read from the yellow banner pixels, hashes to the manifest nonce_sha256 0bbe621a.... Datasheet ds.pdf rehashes to 63404349....",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "The symbol has one unit (TLV431BSN1T1G_1_1), and I saw it. No open findings. No suspected prompt injection in any file or page read. Nothing written to any repo.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-TLV431BSN1T1G-5",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: the symbol reads at once as a TL431-family adjustable shunt. It has a filled triangle under a cathode bar with opposite end ticks. The Reference lead enters the triangle's left side, and the Cathode, Reference and Anode leads are named. A 'Vref = 1.24 V' caption and the TLV431BSN1T1G title complete it. Cost, not blocking: the glyph sits right of centre and the Anode lead doglegs to the centred bottom pin.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "SILICON 4: I checked the datasheet sha 63404349 myself (rehashed; pdftotext of p1, plus p2 rendered at 600 dpi). The p1 SOT-23 panel ('SN1 SUFFIX, CASE 318') reads '1. Reference 2. Cathode 3. Anode', and the symbol has pin 1 Reference, pin 2 Cathode, pin 3 Anode. It does not use the TO-92 row (1 Ref, 2 Anode, 3 Cathode) or the TSOP-5 row. p14 lists 'TLV431BSN1T1G RAG SOT-23-3'. The glyph matches the p2 Figure 2 'Device Symbol': the triangle points up from Anode to Cathode, and the bar ticks go down-left and up-right. In the pixel zoom the Reference lead ends exactly on the triangle's left edge (x 5.715 at y 2.54 in the symbol file) and does not cross it. The 22-vertex serpentine fill reads solid, which closes judge 2's check. The 1.24 V value matches p1 Figure 1 '1.24 Vref' and p3 TLV431B 1.234/1.240/1.246 V. Passive pin types are justified because onsemi prints no type column.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "ECONOMY 3: the body is 20.32 x 15.24 mm for 3 pins, and the glyph fills only the right third. The bold TLV431BSN1T1G graphic text at y 8.89 repeats the Value field at y 11.43. QA hides Value on the arena instance, so only one copy shows on this page. On a board sheet that shows Value, the MPN would print twice (minor, not open).",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "ERGONOMICS 4: Cathode (2) and Reference (1) sit side by side on the left at (-15.24, 5.08) and (-15.24, 2.54), 2.54 mm apart and on grid. That suits this board's Reference-tied-to-Cathode Vref use and a divider feeding Reference. Anode (3) is at (0, -12.7) at the bottom, ready for GND. The arena wires are straight, uncrossed stubs with ERC 0.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "EXPRESSIBILITY 3: 'Vref = 1.24 V' carries the one load-bearing number, and it is correct for TLV431, not TL431's 2.5 V. Pin names use onsemi's own words. The 1.0 mm two-line caption is legible but small. The B-grade +-0.5% appears only in Description.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Page binding: Graded page: QA arena manifest (latest, verdict PASS, symbol_sha256 9cc53a23..., units [1]). The single unit page is arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png. Its file rehashes to 2a333b93..., the same value the manifest records. I viewed it at native 686x717, then pixel-zoomed it with nearest-neighbour scaling. LOOK nonce read from the pixels: LOOK-XHHXEVTCWWJW. sha256 of that string is 0bbe621a..., which equals manifest nonce_sha256. The candidate .kicad_sym and council final/ both hash to 9cc53a23, the same as the manifest.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Nothing open. suspected_injection: none. Candidate and council files hold only process notes asking regraders to check the fill, and no instructions addressed to me. Nothing was written to any repo; zoom crops went to the session scratchpad only.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   ]
+  }
+ ]
+}
