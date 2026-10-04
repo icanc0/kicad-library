@@ -1,0 +1,69 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "TYPE-C_16PIN_2MD_073",
+ "symbol": {
+  "asset_path": "USB_C_Receptacle_USB2.0_16P.kicad_sym",
+  "internal_name": "USB_C_Receptacle_USB2.0_16P",
+  "sha256": "c60ed80d63c0160c8bcb41c178e713edd1da32a093de8bb1e6880465f932283a"
+ },
+ "archetype": "standard-glyph",
+ "units": [
+  {
+   "unit": 1,
+   "role": "USB-C 2.0 receptacle J1 (SHOU HAN TYPE-C 16PIN 2MD(073), C2765186): VBUS, CC1/CC2, D-/D+ pairs and SBU1/SBU2 on the right edge, SHIELD and GND on the bottom (stock Connector:USB_C_Receptacle_USB2.0_16P, unchanged but for its empty Footprint filled with the held land)",
+   "presentation": "standard-glyph",
+   "identity_features": [
+    "stock receptacle-slot outline and USB trident inside the body, Value USB_C_Receptacle_USB2.0_16P, Reference J",
+    "all 16 contacts of the own PIN ASSIGNMENTS table (SHOU HAN drawing fe10da58 p1) plus SH: A4 VBUS with A9/B4/B9 hidden and stacked on it, A1 GND with A12/B1/B12 hidden and stacked on it, A5 CC1, B5 CC2, A7/B7 D- (DN1/DN2), A6/B6 D+ (DP1/DP2), A8 SBU1, B8 SBU2, SH SHIELD (the four slotted shell pads)",
+    "stock electrical types kept: VBUS/GND/SHIELD passive, CC/D/SBU bidirectional; symbol pin numbers equal the land pad numbers of USB_C_Receptacle_SHOU-HAN_TYPE-C-16PIN-2MD-073",
+    "stock.overlay {Footprint: 'central-agent:USB_C_Receptacle_SHOU-HAN_TYPE-C-16PIN-2MD-073'}: the installed glyph's empty Footprint filled with the held land USB_C_Receptacle_SHOU-HAN_TYPE-C-16PIN-2MD-073 (guide train 53, f-0f16c4; the maker's facts.json symbol.overlay and author.json stock.symbol.overlay), hidden; ki_fp_filters stays the stock 'USB*C*Receptacle*'; nothing else differs from the stock bytes, so the graded candidate c60ed80d is the final"
+   ]
+  }
+ ],
+ "stock": {
+  "library_id": "Connector:USB_C_Receptacle_USB2.0_16P",
+  "library_version": "kicad-library 10.0.6-1 (KiCad 10.0.6)",
+  "asset_path": "USB_C_Receptacle_USB2.0_16P.kicad_sym",
+  "sha256": "c60ed80d63c0160c8bcb41c178e713edd1da32a093de8bb1e6880465f932283a",
+  "overlay": {
+   "Footprint": "central-agent:USB_C_Receptacle_SHOU-HAN_TYPE-C-16PIN-2MD-073"
+  },
+  "pin_source": "standard usb-type-c R2.5 Table 3-5",
+  "land_provenance": {
+   "drawing": {
+    "document_sha256": "fe10da58945c9782ffe489b2079893a9baf90ff234efa4906e5e02744735e8f5",
+    "page": 1
+   }
+  }
+ },
+ "look": {
+  "receipt_path": "symbol-look.json",
+  "sha256": "a5c26ab07f7ea5bfe23a0d0cb6ab71b45a7e30e84dc2bdb2a7311b4ed978b3de"
+ },
+ "binding": {
+  "tool": "library-qa/council.py quality",
+  "by": "lead-main",
+  "agents": [
+   "look-regrader-TYPE-C_16PIN_2MD_073-overlay-1",
+   "look-regrader-TYPE-C_16PIN_2MD_073-overlay-2",
+   "stock Connector:USB_C_Receptacle_USB2.0_16P"
+  ],
+  "candidate": {
+   "sha256": "dbc4d1ac9a013444e0d1e0e59915c8a17d2138b0a074116992ffa9f56323875c",
+   "files": {
+    "USB_C_Receptacle_SHOU-HAN_TYPE-C-16PIN-2MD-073.kicad_mod": "067e04fa4f4ffc790fa2c8895dc09ca2a730d93d07d6fdcaf921ebfb5399d9ea",
+    "USB_C_Receptacle_SHOU-HAN_TYPE-C-16PIN-2MD-073.step": "042158bc09d0e2da800c33de103a4249ff23aabb3e51a98f51c9a69a9deb7f1c",
+    "USB_C_Receptacle_SHOU-HAN_TYPE-C-16PIN-2MD-073.wrl": "6c3c11796e35f575e5befc84b148071e3fd14f2666bc2cf38ab552d35ebbe44c",
+    "USB_C_Receptacle_USB2.0_16P.kicad_sym": "c60ed80d63c0160c8bcb41c178e713edd1da32a093de8bb1e6880465f932283a",
+    "USB_C_Receptacle_USB2.0_16P_unit1.png": "795a523263075d4669e66808567dd525febb0aa94b9490026204e4a929bf1d41",
+    "__pycache__/model.cpython-314.pyc": "bd1145a62cbfa4330484ec9900496a426b7bb04c8be0b7f783400bef431726b1",
+    "author.json": "1c5a590b14d38c45bdf26bff9ceb8d05492bf36063d6bbc1bc7f673ee507fdad",
+    "facts.json": "ee57703fa683d85688e971a3f924d9c1cffced139a9d5a574c37689714815c1c",
+    "generate.py": "8630b1da704c8060a8864ed40e2f22a5007a8ca3f85c97ce97b9fee39a78f88a",
+    "model.py": "d509bf64d1b5414e0a859672fa0d2432d7675ba0039a865c041e9002efea071d",
+    "render.sh": "2d81cc079eb1fa00e5db839ea4e80cddd60c5a9e82c7233c30122a6317cb7f1d"
+   }
+  },
+  "verdict": "pass"
+ }
+}

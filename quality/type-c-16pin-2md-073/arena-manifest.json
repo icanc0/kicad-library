@@ -1,0 +1,23 @@
+{
+ "schema_version": "library-qa-arena-1",
+ "part_id": "TYPE-C_16PIN_2MD_073",
+ "symbol_sha256": "c60ed80d63c0160c8bcb41c178e713edd1da32a093de8bb1e6880465f932283a",
+ "units": [
+  1
+ ],
+ "verdict": "PASS",
+ "build_sha256": "3628265739cbbd0f50dce7128e3c5045c8a09782290ee023a309e722ad2f2f4b",
+ "sheets": {
+  "unit_1.kicad_sch": "3d3eb98459ca7b43d9602def542246b4facb6e62769f4b05ce6e4d89b64df739"
+ },
+ "pages": [
+  {
+   "unit": 1,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png",
+   "sha256": "d7ff60f575b93b46f7d720ec286c718b76f1fe4699d5cd74dffccec47ff82616",
+   "svg_fingerprint": "179612170fdc10daed6afa1e787424481eb99e99e9c1b82a4a2040d7c9031ab4",
+   "nonce_sha256": "8a9c72ca9375487f1558c2e4378d114024058f7cdc64925a393d35a9e27284f2",
+   "background": "#f5f4ef"
+  }
+ ]
+}

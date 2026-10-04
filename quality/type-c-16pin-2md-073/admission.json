@@ -1,0 +1,38 @@
+{
+ "admitted_by": {
+  "agent": "library-inspector-034b5a",
+  "role": "library-inspector"
+ },
+ "author": {
+  "agent": "footprint-maker-ecbc4d",
+  "board": "truedepth-shim"
+ },
+ "candidate_footprint_sha256": "067e04fa4f4ffc790fa2c8895dc09ca2a730d93d07d6fdcaf921ebfb5399d9ea",
+ "candidate_symbol_sha256": "c60ed80d63c0160c8bcb41c178e713edd1da32a093de8bb1e6880465f932283a",
+ "decisions": {
+  "files": [],
+  "mode": "report"
+ },
+ "footprint_sha256": "6add4e0cf70ba2c5a057311efc29528c73ee482c62ed4940c0d80d4d230e6533",
+ "guide": {
+  "bind": "/guide",
+  "commit": "a1b7e20cc54de45bb77ca0611cf2766e2a403446",
+  "dirty": false
+ },
+ "part_id": "type-c-16pin-2md-073",
+ "pinset": {
+  "lcsc": "C2765186",
+  "pin_source": "standard usb-type-c R2.5 Table 3-5",
+  "provenance": {
+   "drawing": {
+    "document_sha256": "fe10da58945c9782ffe489b2079893a9baf90ff234efa4906e5e02744735e8f5",
+    "page": 1
+   }
+  },
+  "result": "clean",
+  "rule": "SYM-PINSET-MATCH",
+  "source": "standard-pin-map"
+ },
+ "schema": "kicad-agent-guide/admission@1",
+ "symbol_sha256": "c60ed80d63c0160c8bcb41c178e713edd1da32a093de8bb1e6880465f932283a"
+}

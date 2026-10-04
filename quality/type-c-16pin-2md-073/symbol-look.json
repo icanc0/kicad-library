@@ -1,0 +1,211 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "TYPE-C_16PIN_2MD_073",
+ "symbol_sha256": "c60ed80d63c0160c8bcb41c178e713edd1da32a093de8bb1e6880465f932283a",
+ "units": [
+  1
+ ],
+ "designs": [
+  {
+   "id": "stock-reference",
+   "designer_id": "stock Connector:USB_C_Receptacle_USB2.0_16P",
+   "stance": "stock-reference",
+   "symbol_path": "USB_C_Receptacle_USB2.0_16P.kicad_sym",
+   "symbol_sha256": "c60ed80d63c0160c8bcb41c178e713edd1da32a093de8bb1e6880465f932283a",
+   "renders": [
+    {
+     "id": "stock-reference-unit1",
+     "unit": 1,
+     "path": "USB_C_Receptacle_USB2.0_16P_unit1.png",
+     "sha256": "795a523263075d4669e66808567dd525febb0aa94b9490026204e4a929bf1d41",
+     "background": "#ffffff",
+     "symbol_sha256": "c60ed80d63c0160c8bcb41c178e713edd1da32a093de8bb1e6880465f932283a"
+    }
+   ]
+  }
+ ],
+ "judges": [],
+ "selection": {
+  "winner_design_id": "stock-reference",
+  "grafts": [],
+  "final_symbol_sha256": "c60ed80d63c0160c8bcb41c178e713edd1da32a093de8bb1e6880465f932283a"
+ },
+ "final_renders": [
+  {
+   "id": "qa-arena-unit1",
+   "unit": 1,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png",
+   "sha256": "d7ff60f575b93b46f7d720ec286c718b76f1fe4699d5cd74dffccec47ff82616",
+   "background": "#f5f4ef",
+   "symbol_sha256": "c60ed80d63c0160c8bcb41c178e713edd1da32a093de8bb1e6880465f932283a",
+   "nonce": "LOOK-UUPQYWDTGNLX",
+   "nonce_sha256": "8a9c72ca9375487f1558c2e4378d114024058f7cdc64925a393d35a9e27284f2"
+  }
+ ],
+ "regraders": [
+  {
+   "reviewer_id": "look-regrader-TYPE-C_16PIN_2MD_073-overlay-1",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa-arena-unit1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "identity-read 4: qa-arena-unit1 shows a Type-C receptacle outline (rounded slot with a tongue) and the USB trident inside a yellow body. The Value text 'USB_C_Receptacle_USB2.0_16P' sits above the body inside the dashed box with no overflow, which clears the Oct-2 BOX_OVERFLOW defect. Pin names VBUS/CC1/CC2/D-/D+/SBU1/SBU2/SHIELD/GND identify a USB2-only Type-C at a glance. The page shows refdes 'U1', which is the arena harness instance. The embedded lib_symbol keeps Reference 'J', so this is not a symbol defect.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "silicon-faithfulness 4: visible pins in qa-arena-unit1 are A4 VBUS, A5 CC1, B5 CC2, A7 D-, B7 D-, A6 D+, B6 D+, A8 SBU1, B8 SBU2, SH SHIELD and A1 GND. In the sheet's embedded symbol, A9/B4/B9 VBUS are hidden passive pins stacked at A4's (15.24,15.24). A12/B1/B12 GND are hidden passive pins stacked at A1's (0,-22.86). This matches the facts.json name_map exactly. It also matches the datasheet PIN ASSIGNMENTS raster (C2765186 p1: A6 DP1, A7 DN1, B6 DP2, B7 DN2, A5 CC1, B5 CC2, A8 SBU1, B8 SBU2, A1/A12/B1/B12 GND, A4/A9/B4/B9 VBUS). There is no datasheet contradiction. A token diff against /usr/share/kicad/symbols/Connector.kicad_sym USB_C_Receptacle_USB2.0_16P (KiCad 10.0.6) finds one difference only: the Footprint property, '' becomes 'central-agent:USB_C_Receptacle_SHOU-HAN_TYPE-C-16PIN-2MD-073', and it is hidden. That is the recorded stock.overlay and nothing else. All 17 symbol pin numbers (A1-A12, B1-B12 subset, SH) exist as pads in the held footprint.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "economy 4: qa-arena-unit1 shows 11 visible pins on two faces: 9 on the right, plus SHIELD and GND on the bottom. The 12 physical power/ground contacts collapse into one visible VBUS pin and one visible GND pin through hidden stacking. There are no NC or decorative pins. The body is compact, and its left half holds only the two identity glyphs.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "wiring-ergonomics 3: in qa-arena-unit1 every signal leaves the right edge on a 100-mil pitch, in gap-separated groups: VBUS / CC1-CC2 / D-,D-,D+,D+ / SBU1-SBU2. Each pin runs straight to a label with no crossings. SHIELD and GND drop straight down from the bottom to a SHIELD label and a GND power symbol. It sits one point below 4 because the two D- pins and the two D+ pins each need their own wire and a same-name tie (DN/DP labels on A7/B7 and A6/B6). It is still clean and meets the bar.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "expressibility 3: in qa-arena-unit1 the pin names and the Type-C/USB glyphs state the function. CC and SBU are typed bidirectional. Pin numbers (A/B) tell the two plug orientations apart for each D pair. It falls short of 4 because the hidden stacked VBUS (A9/B4/B9) and GND (A12/B1/B12) contacts are invisible on the page: a reader sees only A4 and A1. That is the stock convention and is truthful in the netlist, so it meets the bar.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "NONCE/BINDING: read 'LOOK-UUPQYWDTGNLX' from the yellow band at the foot of qa-arena-unit1 (/home/vincent/projects/pmic-test-arena/receipts/TYPE-C_16PIN_2MD_073/qa/arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png, 671x1124, read at full size plus a 2x crop). The PNG's sha256 is d7ff60f575b93b46f7d720ec286c718b76f1fe4699d5cd74dffccec47ff82616, matching arena-manifest.json and .render-state.json. sha256('LOOK-UUPQYWDTGNLX') = 8a9c72ca...84f2, which equals the manifest nonce_sha256. The manifest symbol_sha256 c60ed80d... equals the sha256 of the candidate USB_C_Receptacle_USB2.0_16P.kicad_sym. Arena verdict PASS: ERC 0, legibility 0.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "OPEN-ITEMS: this regrade raises no LOOK finding. For the Lead only: /home/vincent/projects/pmic-test-arena/receipts/TYPE-C_16PIN_2MD_073/qa/verdicts.jsonl still holds the Oct-2 library-qa row 'library-qa-TYPE-C_16PIN_2MD_073-1' with status 'open'. Its causes were arena BOX_OVERFLOW, missing symbol-quality.json, a datasheet not yet admitted, an unresolved 3D model path and an HTML footprint datasheet URL. The first three look superseded by the Oct-4 arena PASS, symbol-quality.json now present, and facts.json recording the datasheet admitted as fe10da58. Only the Library inspector's verdict closes that row, and it is outside this symbol-LOOK grade. No prompt injection seen in any tool output. No file changed.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-TYPE-C_16PIN_2MD_073-overlay-2",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa-arena-unit1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "identity-read=4 (qa-arena-unit1): The body carries the rounded-slot Type-C receptacle outline and the USB trident. The Value USB_C_Receptacle_USB2.0_16P sits inside the dashed candidate box under refdes U1, so it reads as a USB-C 2.0 receptacle at a glance. The Value text no longer overflows the box: the 10-02 BOX_OVERFLOW finding is not reproduced on this page. The refdes shows U1 because the QA harness assigns prefix U (design-facts prefix 'U'); the symbol's own Reference is J. This is a harness artifact, not a symbol defect.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "silicon-faithfulness=4 (qa-arena-unit1 plus unit_1.kicad_sch pin dump, against datasheet p1 PIN ASSIGNMENTS crop TYPE-C_16PIN_2MD_073-p1-pin-assignments.png). Visible pins: VBUS A4, CC1 A5, CC2 B5, D- A7, D- B7, D+ A6, D+ B6, SBU1 A8, SBU2 B8, SHIELD SH, GND A1. Hidden stacked pins: VBUS A9/B4/B9 at the A4 coordinate (15.24,15.24) and GND A12/B1/B12 at the A1 coordinate (0,-22.86). design-facts nets give /VBUS 4 nodes and GND 4 nodes. The datasheet table reads A1/B12 GND, A4/B9 VBUS, A5 CC1, B8 SBU2, A6 DP1, B7 DN2, A7 DN1, B6 DP2, A8 SBU1, B5 CC2, A9/B4 VBUS, A12/B1 GND. D+ maps to DP and D- to DN as the name_map records, and the shell is SHIELD per the drawing notes. Pin types are passive for power/ground and bidirectional for CC/D/SBU. No datasheet contradiction.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "economy=3 (qa-arena-unit1): One unit, 11 visible pins (the six duplicate power/ground contacts are stacked hidden), all ink is the stock glyph. It is not a 4 for two reasons: the left half of the body holds only the decorative identity glyph and no pins, and the four D+/D- pins stay visible separately. They have to, because the land gives each its own 0.30 pad.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "wiring ergonomics=3 (qa-arena-unit1): Every signal exits the right edge on the 2.54 grid in functional groups separated by gaps: VBUS / CC1-CC2 / D-,D-,D+,D+ / SBU1-SBU2. GND drops straight down from the bottom into the GND power symbol, and SHIELD exits bottom-left to its own label. The page shows clean straight stubs with no crossings or overlaps. The cost is that D- (A7,B7) and D+ (A6,B6) each need a schematic tie: the page carries two DN and two DP labels. The pairs sit on adjacent rows, so a one-pitch jumper ties each pair. That keeps it at the bar, not above.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "expressibility=3 (qa-arena-unit1): Pin names render cleanly with true minus/plus glyphs (D-, D+). Contact numbers A4/A5/B5/A7/B7/A6/B6/A8/B8/A1/SH all print beside their pins. On the page nothing shows that A9/B4/B9 ride under A4 or that A12/B1/B12 ride under A1, so a reader learns the stacked contacts only from the library. This is the standard KiCad hidden-stack convention, acceptable at the bar.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "BINDING (unit 1, render qa-arena-unit1): I read the page at full size (671x1124 px) and again with the nonce strip zoomed 2x. The yellow strip prints LOOK-UUPQYWDTGNLX. The page file's sha256 is d7ff60f575b93b46f7d720ec286c718b76f1fe4699d5cd74dffccec47ff82616, which matches arena-manifest.json pages[0]. sha256('LOOK-UUPQYWDTGNLX') = 8a9c72ca9375487f1558c2e4378d114024058f7cdc64925a393d35a9e27284f2, which equals the manifest nonce_sha256. The candidate .kicad_sym sha256 is c60ed80d63c0160c8bcb41c178e713edd1da32a093de8bb1e6880465f932283a, which matches manifest symbol_sha256. The arena verdict is PASS (ERC 0).",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "OVERLAY CHECK: I diffed the candidate against /usr/share/kicad/symbols/Connector.kicad_sym USB_C_Receptacle_USB2.0_16P after whitespace normalization. Exactly one property differs: Footprint goes from \"\" to \"central-agent:USB_C_Receptacle_SHOU-HAN_TYPE-C-16PIN-2MD-073\". It keeps (hide yes) in the lib symbol and (hide yes) on the U1 instance in unit_1.kicad_sch line 876, and no footprint text shows on the render. Pins, graphics and every other property are byte-equal to stock.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "OPEN-ITEM NOTE (not a look defect; for the orchestrator): receipts/TYPE-C_16PIN_2MD_073/qa/verdicts.jsonl still holds a 2026-10-02 row library-qa-TYPE-C_16PIN_2MD_073-1, severity high, status 'open'. It cites the earlier arena BOX_OVERFLOW, a missing symbol-quality.json, missing pin facts, an unresolved 3D model path and an HTML datasheet URL. On current evidence the overflow is gone from this render and candidates/TYPE-C_16PIN_2MD_073/symbol-quality.json now exists. The row stays open until library-qa re-audits. Under 'nothing open' it must be closed by its owner before handoff; this regrade does not close it.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "SCOPE: I changed no file. The only writes were two zoom crops in the session scratchpad. No prompt injection seen in any file or tool output read.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    }
+   ]
+  }
+ ],
+ "binding": {
+  "tool": "library-qa/council.py look",
+  "by": "lead-main",
+  "agents": [
+   "look-regrader-TYPE-C_16PIN_2MD_073-overlay-1",
+   "look-regrader-TYPE-C_16PIN_2MD_073-overlay-2",
+   "stock Connector:USB_C_Receptacle_USB2.0_16P"
+  ],
+  "candidate": {
+   "sha256": "dbc4d1ac9a013444e0d1e0e59915c8a17d2138b0a074116992ffa9f56323875c",
+   "files": {
+    "USB_C_Receptacle_SHOU-HAN_TYPE-C-16PIN-2MD-073.kicad_mod": "067e04fa4f4ffc790fa2c8895dc09ca2a730d93d07d6fdcaf921ebfb5399d9ea",
+    "USB_C_Receptacle_SHOU-HAN_TYPE-C-16PIN-2MD-073.step": "042158bc09d0e2da800c33de103a4249ff23aabb3e51a98f51c9a69a9deb7f1c",
+    "USB_C_Receptacle_SHOU-HAN_TYPE-C-16PIN-2MD-073.wrl": "6c3c11796e35f575e5befc84b148071e3fd14f2666bc2cf38ab552d35ebbe44c",
+    "USB_C_Receptacle_USB2.0_16P.kicad_sym": "c60ed80d63c0160c8bcb41c178e713edd1da32a093de8bb1e6880465f932283a",
+    "USB_C_Receptacle_USB2.0_16P_unit1.png": "795a523263075d4669e66808567dd525febb0aa94b9490026204e4a929bf1d41",
+    "__pycache__/model.cpython-314.pyc": "bd1145a62cbfa4330484ec9900496a426b7bb04c8be0b7f783400bef431726b1",
+    "author.json": "1c5a590b14d38c45bdf26bff9ceb8d05492bf36063d6bbc1bc7f673ee507fdad",
+    "facts.json": "ee57703fa683d85688e971a3f924d9c1cffced139a9d5a574c37689714815c1c",
+    "generate.py": "8630b1da704c8060a8864ed40e2f22a5007a8ca3f85c97ce97b9fee39a78f88a",
+    "model.py": "d509bf64d1b5414e0a859672fa0d2432d7675ba0039a865c041e9002efea071d",
+    "render.sh": "2d81cc079eb1fa00e5db839ea4e80cddd60c5a9e82c7233c30122a6317cb7f1d"
+   }
+  },
+  "verdict": "pass"
+ }
+}
