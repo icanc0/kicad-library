@@ -1,0 +1,137 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "bb35k-ra18-3a",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Fujikura",
+      "normalized": "fujikura"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "BB35K-RA18-3A",
+      "canonical": "BB35K-RA18-3A",
+      "comparison_key": "BB35K-RA18-3A",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [],
+    "description": "Central library symbol BB35K-RA18-3A promoted from truedepth-shim."
+  },
+  "names": {
+    "canonical": "BB35K-RA18-3A",
+    "aliases": [
+      "Conn_BB35K_RA18"
+    ],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/BB35K-RA18-3A.kicad_sym",
+        "name": "Conn_BB35K_RA18"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/BB35K-RA18-3A.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "56651ca89c60732cbb9ccd063695b064ebb65d5959a1a71a32ff8d9f888a1433",
+      "internal_name": "Conn_BB35K_RA18"
+    },
+    {
+      "path": "footprints/central-agent.pretty/DDK_BB35K-RA18-3A_2x09_P0.35mm_PowerPin2_Vertical.kicad_mod",
+      "kind": "footprint",
+      "qualification": "unqualified-candidate",
+      "sha256": "47d73902f84d88a40b3e46f267a0ae9f906167a8f8fb9acd58306bd13f8f702e",
+      "internal_name": "DDK_BB35K-RA18-3A_2x09_P0.35mm_PowerPin2_Vertical"
+    },
+    {
+      "path": "3dmodels/BB35K-RA18-3A.step",
+      "kind": "model",
+      "qualification": "unqualified-candidate",
+      "sha256": "f66235050ebe01ac869908b0b905d6e0a0d354fd47722834d90785dd3c1847a6"
+    }
+  ],
+  "relationships": [
+    {
+      "kind": "declares-footprint",
+      "source_asset": "symbols/BB35K-RA18-3A.kicad_sym",
+      "target": {
+        "asset_path": "footprints/central-agent.pretty/DDK_BB35K-RA18-3A_2x09_P0.35mm_PowerPin2_Vertical.kicad_mod"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "Promotion supplied this footprint as a candidate; it is not qualified by a symbol-only draft."
+    },
+    {
+      "kind": "declares-model",
+      "source_asset": "footprints/central-agent.pretty/DDK_BB35K-RA18-3A_2x09_P0.35mm_PowerPin2_Vertical.kicad_mod",
+      "target": {
+        "asset_path": "3dmodels/BB35K-RA18-3A.step"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "Promotion supplied this model as an unqualified candidate."
+    }
+  ],
+  "provenance": {
+    "repository_commit": "b80bebc58bc55f236dec4ec2fb34b857ef3123ef",
+    "source_board": "truedepth-shim",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/BB35K-RA18-3A.kicad_sym",
+        "evidence": "First-import fit pass: Fit pass, connector-by-number, land provenance D-9: Vincent hand-drawn symbol Conn_BB35K_RA18 and land DDK_BB35K-RA18-3A_2x09_P0.35mm_PowerPin2_Vertical, iphone-x-shim 82bdf4d (designer: owner). Symbol bytes unchanged (70e4a505); land = his 63c8328d with only the 3D model path changed (04c19c07). 20 passive pins = the land's 20 electrical pad numbers: 1-18 odd/even rows, 19 = DVDD tab at the 1/2 end (Apple legs 19/20/23), 20 = GND tab at the 17/18 end (Apple 21/22/24), D-12 (2). Land meets FB35K catalogue p4; 24/24 STEP feet on their own pads; pin 1 on Apple art-film + (D-12 (3)). QA unit 1 page c0e933f1 read: numbers and labels clear. Promotion rewrites the Footprint nick iPhoneX: to central-agent:. Legacy central symbols/Conn_BB35K_RA18.kicad_sym (agent rewrite 563eac9f, no part record) shares the internal name, f-020a65, owner action."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "Fit pass, connector-by-number, land provenance D-9: Vincent hand-drawn symbol Conn_BB35K_RA18 and land DDK_BB35K-RA18-3A_2x09_P0.35mm_PowerPin2_Vertical, iphone-x-shim 82bdf4d (designer: owner). Symbol bytes unchanged (70e4a505); land = his 63c8328d with only the 3D model path changed (04c19c07). 20 passive pins = the land's 20 electrical pad numbers: 1-18 odd/even rows, 19 = DVDD tab at the 1/2 end (Apple legs 19/20/23), 20 = GND tab at the 17/18 end (Apple 21/22/24), D-12 (2). Land meets FB35K catalogue p4; 24/24 STEP feet on their own pads; pin 1 on Apple art-film + (D-12 (3)). QA unit 1 page c0e933f1 read: numbers and labels clear. Promotion rewrites the Footprint nick iPhoneX: to central-agent:. Legacy central symbols/Conn_BB35K_RA18.kicad_sym (agent rewrite 563eac9f, no part record) shares the internal name, f-020a65, owner action.",
+      "note": "",
+      "pin_gate": {
+        "symbol": "Conn_BB35K_RA18",
+        "lcsc": "Fujikura|BB35K-RA18-3A",
+        "facts_checked": false,
+        "source": "connector-by-number",
+        "board_context": null,
+        "state": "clean",
+        "gaps": [],
+        "allow_pin_gaps": null
+      }
+    },
+    "quality": {
+      "state": "council-graded",
+      "symbol_sha256": "70e4a5058b53589ac62537347849421bdcbeccdbdde0a63bba006decc3c6bf03",
+      "installed_symbol_sha256": "56651ca89c60732cbb9ccd063695b064ebb65d5959a1a71a32ff8d9f888a1433",
+      "footprint_sha256": "04c19c079c68321f2f52899de727c908d9d61321cc79c719422fb18c008fb794",
+      "installed_footprint_sha256": "47d73902f84d88a40b3e46f267a0ae9f906167a8f8fb9acd58306bd13f8f702e",
+      "quality_receipt": {
+        "path": "quality/bb35k-ra18-3a/symbol-quality.json",
+        "sha256": "7e1b52d420a63397a36a6b37392c80e8c6ca3fc0ecf34e89d611da76ca6ee64f"
+      },
+      "look_receipt": {
+        "path": "quality/bb35k-ra18-3a/symbol-look.json",
+        "sha256": "622e5d39f2f1393dc0710ac2cd6e67e10926098c4cd216eba8206c021c03ac23"
+      },
+      "arena_manifest": {
+        "path": "quality/bb35k-ra18-3a/arena-manifest.json",
+        "sha256": "834eb1846b6d82e5cd51760d0c9a9a7cd4ee5860b7bb810cdbe15bf3b5391248"
+      },
+      "arena_manifest_mtime": "2026-10-04T11:56:47+00:00",
+      "arena_manifest_mtime_note": "st_mtime of QA's arena-manifest.json when promoted — the arena render's clock, reset by any cp/checkout; the receipts carry no audit clock and now() is never written",
+      "admission": {
+        "path": "quality/bb35k-ra18-3a/admission.json",
+        "sha256": "0cff4d4ddc3ccd3b9b13e850661f2de5e338cd3daec46d6a8873637e6caf2700"
+      }
+    }
+  }
+}

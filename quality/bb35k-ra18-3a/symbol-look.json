@@ -1,0 +1,233 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "BB35K-RA18-3A",
+ "symbol_sha256": "70e4a5058b53589ac62537347849421bdcbeccdbdde0a63bba006decc3c6bf03",
+ "units": [
+  1
+ ],
+ "designs": [
+  {
+   "id": "owner-drawn",
+   "designer_id": "owner",
+   "stance": "owner-drawn",
+   "decision": "D-9",
+   "symbol_path": "BB35K-RA18-3A.kicad_sym",
+   "symbol_sha256": "70e4a5058b53589ac62537347849421bdcbeccdbdde0a63bba006decc3c6bf03",
+   "renders": [
+    {
+     "id": "owner-drawn-unit1",
+     "unit": 1,
+     "path": "BB35K-RA18-3A_unit1.png",
+     "sha256": "e894d4b8008a4de5228295691a04dd50751e9b9e35cbc646cad999431c34d8b7",
+     "background": "#ffffff",
+     "symbol_sha256": "70e4a5058b53589ac62537347849421bdcbeccdbdde0a63bba006decc3c6bf03"
+    }
+   ]
+  }
+ ],
+ "judges": [],
+ "selection": {
+  "winner_design_id": "owner-drawn",
+  "grafts": [],
+  "final_symbol_sha256": "70e4a5058b53589ac62537347849421bdcbeccdbdde0a63bba006decc3c6bf03"
+ },
+ "final_renders": [
+  {
+   "id": "qa-arena-unit1",
+   "unit": 1,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png",
+   "sha256": "c0e933f1f89326bf309e236ae0a7d5433f0a23d326125f9115a894fef19aa25d",
+   "background": "#f5f4ef",
+   "symbol_sha256": "70e4a5058b53589ac62537347849421bdcbeccdbdde0a63bba006decc3c6bf03",
+   "nonce": "LOOK-HGT9UK3XVWFF",
+   "nonce_sha256": "eb1f7e51e3d2a51046fd486fd5ca3a0ebe7125f64c665697797eff7c8ca1bf53"
+  }
+ ],
+ "regraders": [
+  {
+   "reviewer_id": "look-regrader-BB35K-RA18-3A-focused-1",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa-arena-unit1"
+   ],
+   "axes": {
+    "economy": {
+     "score": 4,
+     "note": "ECONOMY 4: The ink is the body rectangle, 18 stock contact marks, two r1.016 circles and two 0.254 mm stubs. Pin names are hidden and there is no baked or decorative text.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "EXPRESSIBILITY 3: The glyph uses only KiCad-native rectangles, circles and polylines, and QA's arena drew it cleanly. Why not 4: the tab circles sit outside the body rectangle, and docs/02 says Unit(gfx=) points must be inside the body, so the engine could not re-author it one-to-one. This does not affect this review, because the generator carries the owner's bytes verbatim.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    "identity_read": {
+     "score": 3,
+     "note": "IDENTITY 3: The glyph is a 2x9 dual-row body with stock Connector_Generic contact marks, pin numbers 1|2 at the top down to 17|18, and one tab circle on the centreline above (19) and one below (20). This is Apple's own glyph language for J4200 (051-02221 p39, which I re-rendered from the PDF, sha 2854feea) and J4530 (p42). The Value 'Conn_BB35K_RA18' names the series. Why not 4: the tabs have empty, hidden names and no TAB/power caption, so their 3 A power-contact role cannot be read from the page. The 'U1' on the page comes from the arena (build.py places every candidate as U1), not from the symbol.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "SILICON 3: Pin truth is exact. Odd pins 1-17 are on the left and even 2-18 on the right, with 1|2 at the top. Tab 19 sits at the 1/2 end and tab 20 at the 17/18 end. My bbox read of p42 gives 23/19/20 above 1|2 and 21/22/24 below 17|18, the same as p39. The land agrees: three pad-19s at x -2/-2.875 beside pads 1/2 at x -1.4, and three pad-20s at the 17/18 end. One pin per tab follows D-12(2). Why not 4: the hidden Description says 'counter clockwise pin numbering scheme (similar to DIP package numbering), script generated', which is stale stock Counter_Clockwise text and contradicts the odd/even numbering actually drawn. The Datasheet field is '~'.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "ERGONOMICS 3: Signal leads exit left and right on a 2.54 pitch, with every number above its lead and no label collisions. The DVDD tab exits up and the GND tab exits down. Arena results: all 20 wires attach, ERC 0, legibility 0, all on-page. Why not 4: signal pins sit at x=+-6.35 and tab pins at x=0, so the two sets can never share a 100-mil grid (half-pitch offset). Wiring is clean only on the 50-mil grid.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Page checked: /home/vincent/projects/pmic-test-arena/receipts/BB35K-RA18-3A/qa/arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png (unit 1). Viewed at full 701x1002 resolution, then at 2x zoom in three bands. Its sha256 c0e933f1... matches arena-manifest.json. The banner reads LOOK-HGT9UK3XVWFF, and sha256('LOOK-HGT9UK3XVWFF') = eb1f7e51..., which equals the manifest nonce_sha256. The unbannered RGB hash ad8177c7... matches .render-state.json and the parent page crop at (129,129,830,1070). The measured background is (245,244,239) = #f5f4ef. The rendered symbol is 70e4a505, the candidate's bytes, and it is byte-identical to Vincent's iphone-x-shim 82bdf4d:conn_bb35k_ra18.kicad_sym (D-9, owner-drawn). Focused connector review: Reference J, all 20 pins passive.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    {
+     "severity": "minor",
+     "summary": "Non-blocking finding (1) MINOR, for the owner per D-12(4): the Description's numbering scheme and provenance are wrong (see SILICON).",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Non-blocking finding (2) NOTE: ki_fp_filters 'Connector*:*_2x??_*' does not admit the symbol's own Footprint 'iPhoneX:DDK_...', and promotion installs the land under a different library (Library inspector's domain).",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Non-blocking finding (3) NOTE: the half-grid pin mix (see ERGONOMICS).",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Non-blocking finding (4) NOTE: the candidate's symbol-look.json is stale. It binds council symbol 9922441b, page 962a10e3 and nonce LOOK-DGARE3L77RXL, and symbol-quality.json has look sha 'pending-look'. The receipt must be rebuilt for 70e4a505 on this page.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "Guide checkout HEAD is 185e6004 (224bf6dc is an ancestor). Nothing was written to any repo. No suspected prompt injection was found.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-BB35K-RA18-3A-focused-2",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa-arena-unit1"
+   ],
+   "axes": {
+    "economy": {
+     "score": 4,
+     "note": "ECONOMY 4: Every stroke is a physical feature: the body, 18 contact marks and two tab circles with 0.254 mm joining stubs. The body is compact (5.08 x 22.86 mm), with no captions, no decoration and no duplicated text.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "EXPRESSIBILITY 3: The glyph shows what matters for wiring: two independently numbered end tabs distinct from the 18 signal contacts, at their true physical ends, carrying different nets. Nothing on the glyph says the tabs are 3 A power contacts rather than mechanical retention or a shield (tabs unnamed, circles only). The three pads behind each tab number are not shown. Both are acceptable for a passive connector, so the score is 3.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    "identity_read": {
+     "score": 4,
+     "note": "IDENTITY 4: The page reads at once as a 2x9 dual-row board-to-board connector: a stock Connector_Generic-style body with contact marks at both edges and one tab circle at each end. Value is Conn_BB35K_RA18. The topology is the same as Apple's own J4200 glyph (051-02221 p39, rendered at 300 dpi): a 2x9 column with a tab circle above (19/20/23) and below (21/22/24). The 'U1' on the page is hard-coded by the arena (build.py b.place(sym,'U1',...)). The library symbol's Reference is J.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "SILICON 3: Pin truth checked against Apple p39 via pdftotext -bbox on the SHA-matching PDF (2854feea): odd pins on the left, even on the right, 1|2 at the top; pin 19 is the tab at the 1/2 end (Apple 19/20/23, PP1V1_FCAM_DVDD_CONN) and pin 20 is the tab at the 17/18 end (Apple 21/22/24). Keeping the two tabs as separate pins is correct (DVDD vs GND on the phone, D-12(2); FB35K catalogue p1: 'two retention tabs that also serve as power contacts'). All pins are passive. Held at 3, not 4, by two hidden-metadata errors in the owner bytes, neither visible on the page. (a) The Description is the stock Counter_Clockwise text ('counter clockwise pin numbering scheme (similar to DIP package numbering)'), but the glyph and Apple both number odd/even. (b) ki_fp_filters 'Connector*:*_2x??_*' does not admit the symbol's own iPhoneX: land. Both are advisory notes for the owner, not open blockers (facts.json already records (a); D-12(4) rules out a redesign).",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "ERGONOMICS 4: Pin ends sit on the 1.27/2.54 grid at x +-6.35 with 2.54 pitch. The left column keeps Apple's MIPI P/N pairs adjacent (3/5, 9/11, 15/17). The DVDD tab exits upward on the centre line and the ground tab downward, at symmetric 8.89 mm offsets, so power is up and ground is down. The arena labels sit cleanly with no collisions.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "note",
+     "summary": "Graded page: QA arena page for unit 1, the latest manifest /home/vincent/projects/pmic-test-arena/receipts/BB35K-RA18-3A/qa/arena-manifest.json (verdict PASS, units [1]). Page path: arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png, 701x1002, viewed at native size plus 2-3x zooms of the body, the top tab and the bottom tab. The PNG sha256 c0e933f1... matches the manifest. build.py 170c93b9, unit_1.kicad_sch f0cd351d and symbol 70e4a505 all match the manifest. The symbol is byte-identical to Vincent's iphone-x-shim 82bdf4d conn_bb35k_ra18.kicad_sym (empty diff). That makes it the owner-drawn design under D-9/D-12(4). Measured background #f5f4ef, matching the manifest. LOOK nonce read from the banner pixels: LOOK-HGT9UK3XVWFF. Its sha256 eb1f7e51... equals the manifest nonce_sha256. The full A5 sheet carries its own banner, LOOK-KAPJDP3CCML3, but it is not a manifest unit page. All 20 pins land on 20 hierarchical labels. Pins 1-17 have labels on the left, 2-18 on the right, P19 above and P20 below, with no overlaps.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    },
+    {
+     "severity": "note",
+     "summary": "No suspected prompt injection found in the files read. I wrote nothing to any repo; scratch crops are in the session scratchpad only.",
+     "evidence": [
+      "qa-arena-unit1"
+     ]
+    }
+   ]
+  }
+ ],
+ "binding": {
+  "tool": "library-qa/council.py look",
+  "by": "lead-main",
+  "agents": [
+   "look-regrader-BB35K-RA18-3A-focused-1",
+   "look-regrader-BB35K-RA18-3A-focused-2",
+   "owner"
+  ],
+  "candidate": {
+   "sha256": "966670ede0623823dd20cd2657b38f1d4466531fad966707668f04ba6385fb12",
+   "files": {
+    "BB35K-RA18-3A.kicad_sym": "70e4a5058b53589ac62537347849421bdcbeccdbdde0a63bba006decc3c6bf03",
+    "BB35K-RA18-3A_unit1.png": "e894d4b8008a4de5228295691a04dd50751e9b9e35cbc646cad999431c34d8b7",
+    "DDK_BB35K-RA18-3A_2x09_P0.35mm_PowerPin2_Vertical.kicad_mod": "04c19c079c68321f2f52899de727c908d9d61321cc79c719422fb18c008fb794",
+    "author.json": "b4c009ad01b2bae7bbf73fcbb5db16110cc04b3a560a1ff667a6fc10f7fa5751",
+    "comparable_ds.json": "d202e910faaa6ba4826119f9b331d1f4326cd33fdf175220870037c0aa17f8f7",
+    "designs/annotation-rich/BB35K-RA18-3A.kicad_sym": "de807e5384b8ac9fe3058db3fc118f061b4dbe018024cf41cdd02792bfa36df1",
+    "designs/annotation-rich/BB35K-RA18-3A_unit1.png": "da851868afc9cb66a4050fdb7b7dfd930ef069d6634ba70c389c91ca50b7205e",
+    "designs/flow-first/BB35K-RA18-3A.kicad_sym": "1e0bdcec892d37185e4a004783769026d1b6540c331f9882f5326b178fdb1bd5",
+    "designs/flow-first/BB35K-RA18-3A_unit1.png": "f796b832d4d868ae3cb05231807b80536f285f55a00865e8d34c9e2b225df434",
+    "designs/internals-maximal/BB35K-RA18-3A.kicad_sym": "d182044a7ff0e591f59b51668c6aeebdc329cebed4bbc390ee04a509d6fbc4cf",
+    "designs/internals-maximal/BB35K-RA18-3A_unit1.png": "ebb081149ce8b1a819df88dfdc746ec41dc55e407787b15ccc675c8bc49bd797",
+    "facts.json": "6eff4031dd304e52983f8d293139c3dbd34e56bb1e22f0c57e8cd5343098c26a",
+    "gen_land.py": "a63fb9a9534d8643de2cbec237bc26967df06141ab6b8f0e5666a56e83983cb1",
+    "gen_symbol.py": "63e6544e5aa8375d98d299e7b4a5d7b8e9e371e35310fcaf09d75b61b2138e01",
+    "generate.py": "819e3f622fa385db7e134e527626486ea4e381252d83c8f40a9f48cc39e34728",
+    "kicad-library/3dmodels/BB35K-RA18-3A.step": "f66235050ebe01ac869908b0b905d6e0a0d354fd47722834d90785dd3c1847a6",
+    "kicad-library/3dmodels/BB35K-RA18-3A.wrl": "bf5249ac2a73f36518f77fe2907124335cae94ca9c162ce6411af3b246635bb0",
+    "pin-truth.json": "1993525a83db42fbe92d53dd55f20fa075bb68585761fba65d603c8086d00eb3"
+   }
+  },
+  "verdict": "pass"
+ }
+}

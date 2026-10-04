@@ -1,0 +1,23 @@
+{
+ "schema_version": "library-qa-arena-1",
+ "part_id": "BB35K-RA18-3A",
+ "symbol_sha256": "70e4a5058b53589ac62537347849421bdcbeccdbdde0a63bba006decc3c6bf03",
+ "units": [
+  1
+ ],
+ "verdict": "PASS",
+ "build_sha256": "170c93b90119e2fcc125ccd4f5a955a1e98988504c069548fda046e4e67528b0",
+ "sheets": {
+  "unit_1.kicad_sch": "f0cd351dd744afa8d72a7e7265795fafdb7e9a28c8abc2e6754e8820932beec4"
+ },
+ "pages": [
+  {
+   "unit": 1,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png",
+   "sha256": "c0e933f1f89326bf309e236ae0a7d5433f0a23d326125f9115a894fef19aa25d",
+   "svg_fingerprint": "1c985c696a4fb0a65867a4647096da98f6b8c735e984f01ee21f82fb9910c27c",
+   "nonce_sha256": "eb1f7e51e3d2a51046fd486fd5ca3a0ebe7125f64c665697797eff7c8ca1bf53",
+   "background": "#f5f4ef"
+  }
+ ]
+}

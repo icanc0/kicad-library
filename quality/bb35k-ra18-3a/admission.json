@@ -1,0 +1,35 @@
+{
+ "admitted_by": {
+  "agent": "library-inspector-af3c7c",
+  "role": "library-inspector"
+ },
+ "author": {
+  "agent": "footprint-maker-bb35k",
+  "board": "truedepth-shim"
+ },
+ "candidate_footprint_sha256": "04c19c079c68321f2f52899de727c908d9d61321cc79c719422fb18c008fb794",
+ "candidate_symbol_sha256": "70e4a5058b53589ac62537347849421bdcbeccdbdde0a63bba006decc3c6bf03",
+ "decisions": {
+  "files": [],
+  "mode": "report"
+ },
+ "footprint_sha256": "47d73902f84d88a40b3e46f267a0ae9f906167a8f8fb9acd58306bd13f8f702e",
+ "guide": {
+  "bind": "/guide",
+  "commit": "fe4de2590c94abe684b395334e03dc8335308233",
+  "dirty": false
+ },
+ "part_id": "bb35k-ra18-3a",
+ "pinset": {
+  "manufacturer": "Fujikura",
+  "mpn": "BB35K-RA18-3A",
+  "provenance": {
+   "decision": "D-9"
+  },
+  "result": "clean",
+  "rule": "SYM-PINSET-MATCH",
+  "source": "connector-by-number"
+ },
+ "schema": "kicad-agent-guide/admission@1",
+ "symbol_sha256": "56651ca89c60732cbb9ccd063695b064ebb65d5959a1a71a32ff8d9f888a1433"
+}

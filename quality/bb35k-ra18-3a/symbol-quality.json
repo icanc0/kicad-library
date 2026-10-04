@@ -1,0 +1,78 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "BB35K-RA18-3A",
+ "symbol": {
+  "asset_path": "BB35K-RA18-3A.kicad_sym",
+  "internal_name": "Conn_BB35K_RA18",
+  "sha256": "70e4a5058b53589ac62537347849421bdcbeccdbdde0a63bba006decc3c6bf03"
+ },
+ "archetype": "connector",
+ "units": [
+  {
+   "unit": 1,
+   "role": "board-to-FPC receptacle, 2x9 signal contacts + 2 power tabs (whole part)",
+   "presentation": "standard-glyph",
+   "identity_features": [
+    "Vincent's hand-drawn glyph (D-9, iphone-x-shim 82bdf4d): a stock Connector_Generic-style 2x9 body with the contact marks at both edges, odd pins 1-17 on the left and even pins 2-18 on the right, 1|2 at the top, the same columns and order as Apple's J4200/J4530 glyph (051-02221 p39/p42)",
+    "pin 19: a tab circle above the body on the centre line, its pin leaving upward: the retention tab at the 1/2 end (FB35K catalogue p1 power-contact tab; Apple pads 19/20/23)",
+    "pin 20: the mirrored tab circle below the body: the tab at the 17/18 end (Apple pads 21/22/24), apart from pin 19 (a different net on the phone: 1.1 V DVDD on 19, ground on 20)",
+    "Reference J and all 20 pins passive, names hidden (Pin_1..Pin_18, tabs unnamed) as on the stock Connector_Generic glyphs: a positional board-to-FPC contact has no direction of its own, so the passive-connector focused review applies (connector.py, D-16 (2))"
+   ]
+  }
+ ],
+ "evidence": {
+  "comparable_ds": {
+   "path": "comparable_ds.json",
+   "sha256": "d202e910faaa6ba4826119f9b331d1f4326cd33fdf175220870037c0aa17f8f7",
+   "own_sha256": "2854feea30a8072ef7630af31edef0ac8ccdb78332d3bfca0c13a1834806c305",
+   "comparable_count": 0
+  },
+  "land_provenance": {
+   "decision": "D-9"
+  }
+ },
+ "generator": {
+  "contract": "python-cli-output-v1",
+  "path": "gen_symbol.py",
+  "sha256": "63e6544e5aa8375d98d299e7b4a5d7b8e9e371e35310fcaf09d75b61b2138e01",
+  "inputs": [],
+  "expected_symbol_sha256": "70e4a5058b53589ac62537347849421bdcbeccdbdde0a63bba006decc3c6bf03"
+ },
+ "look": {
+  "receipt_path": "symbol-look.json",
+  "sha256": "622e5d39f2f1393dc0710ac2cd6e67e10926098c4cd216eba8206c021c03ac23"
+ },
+ "binding": {
+  "tool": "library-qa/council.py quality",
+  "by": "lead-main",
+  "agents": [
+   "look-regrader-BB35K-RA18-3A-focused-1",
+   "look-regrader-BB35K-RA18-3A-focused-2",
+   "owner"
+  ],
+  "candidate": {
+   "sha256": "966670ede0623823dd20cd2657b38f1d4466531fad966707668f04ba6385fb12",
+   "files": {
+    "BB35K-RA18-3A.kicad_sym": "70e4a5058b53589ac62537347849421bdcbeccdbdde0a63bba006decc3c6bf03",
+    "BB35K-RA18-3A_unit1.png": "e894d4b8008a4de5228295691a04dd50751e9b9e35cbc646cad999431c34d8b7",
+    "DDK_BB35K-RA18-3A_2x09_P0.35mm_PowerPin2_Vertical.kicad_mod": "04c19c079c68321f2f52899de727c908d9d61321cc79c719422fb18c008fb794",
+    "author.json": "b4c009ad01b2bae7bbf73fcbb5db16110cc04b3a560a1ff667a6fc10f7fa5751",
+    "comparable_ds.json": "d202e910faaa6ba4826119f9b331d1f4326cd33fdf175220870037c0aa17f8f7",
+    "designs/annotation-rich/BB35K-RA18-3A.kicad_sym": "de807e5384b8ac9fe3058db3fc118f061b4dbe018024cf41cdd02792bfa36df1",
+    "designs/annotation-rich/BB35K-RA18-3A_unit1.png": "da851868afc9cb66a4050fdb7b7dfd930ef069d6634ba70c389c91ca50b7205e",
+    "designs/flow-first/BB35K-RA18-3A.kicad_sym": "1e0bdcec892d37185e4a004783769026d1b6540c331f9882f5326b178fdb1bd5",
+    "designs/flow-first/BB35K-RA18-3A_unit1.png": "f796b832d4d868ae3cb05231807b80536f285f55a00865e8d34c9e2b225df434",
+    "designs/internals-maximal/BB35K-RA18-3A.kicad_sym": "d182044a7ff0e591f59b51668c6aeebdc329cebed4bbc390ee04a509d6fbc4cf",
+    "designs/internals-maximal/BB35K-RA18-3A_unit1.png": "ebb081149ce8b1a819df88dfdc746ec41dc55e407787b15ccc675c8bc49bd797",
+    "facts.json": "6eff4031dd304e52983f8d293139c3dbd34e56bb1e22f0c57e8cd5343098c26a",
+    "gen_land.py": "a63fb9a9534d8643de2cbec237bc26967df06141ab6b8f0e5666a56e83983cb1",
+    "gen_symbol.py": "63e6544e5aa8375d98d299e7b4a5d7b8e9e371e35310fcaf09d75b61b2138e01",
+    "generate.py": "819e3f622fa385db7e134e527626486ea4e381252d83c8f40a9f48cc39e34728",
+    "kicad-library/3dmodels/BB35K-RA18-3A.step": "f66235050ebe01ac869908b0b905d6e0a0d354fd47722834d90785dd3c1847a6",
+    "kicad-library/3dmodels/BB35K-RA18-3A.wrl": "bf5249ac2a73f36518f77fe2907124335cae94ca9c162ce6411af3b246635bb0",
+    "pin-truth.json": "1993525a83db42fbe92d53dd55f20fa075bb68585761fba65d603c8086d00eb3"
+   }
+  },
+  "verdict": "pass"
+ }
+}
