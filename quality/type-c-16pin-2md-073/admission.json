@@ -1,22 +1,22 @@
 {
  "admitted_by": {
-  "agent": "library-inspector-034b5a",
+  "agent": "library-inspector-483ec8",
   "role": "library-inspector"
  },
  "author": {
   "agent": "footprint-maker-ecbc4d",
   "board": "truedepth-shim"
  },
- "candidate_footprint_sha256": "067e04fa4f4ffc790fa2c8895dc09ca2a730d93d07d6fdcaf921ebfb5399d9ea",
+ "candidate_footprint_sha256": "dbc0bf77b154b700e69c49b129f6d4782f9b5fc3d05f88f489f64432b97c1c46",
  "candidate_symbol_sha256": "c60ed80d63c0160c8bcb41c178e713edd1da32a093de8bb1e6880465f932283a",
  "decisions": {
   "files": [],
   "mode": "report"
  },
- "footprint_sha256": "6add4e0cf70ba2c5a057311efc29528c73ee482c62ed4940c0d80d4d230e6533",
+ "footprint_sha256": "533f4277a65ab1e21d2eb313783712c783094ca7e0632cdcdeb0be9cdc8873d3",
  "guide": {
   "bind": "/guide",
-  "commit": "a1b7e20cc54de45bb77ca0611cf2766e2a403446",
+  "commit": "5f837f02a482f57e730888568a9f3948cdf8cfb6",
   "dirty": false
  },
  "part_id": "type-c-16pin-2md-073",

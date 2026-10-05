@@ -56,7 +56,7 @@
       "path": "footprints/central-agent.pretty/USB_C_Receptacle_SHOU-HAN_TYPE-C-16PIN-2MD-073.kicad_mod",
       "kind": "footprint",
       "qualification": "unqualified-candidate",
-      "sha256": "6add4e0cf70ba2c5a057311efc29528c73ee482c62ed4940c0d80d4d230e6533",
+      "sha256": "533f4277a65ab1e21d2eb313783712c783094ca7e0632cdcdeb0be9cdc8873d3",
       "internal_name": "USB_C_Receptacle_SHOU-HAN_TYPE-C-16PIN-2MD-073"
     },
     {
@@ -94,13 +94,13 @@
         "kind": "manifest",
         "path": "MANIFEST.md",
         "locator": "promotion entry for symbols/USB_C_Receptacle_USB2.0_16P.kicad_sym",
-        "evidence": "First-import fit pass: First import (fit pass): stock Connector:USB_C_Receptacle_USB2.0_16P (KiCad 10.0.6) unchanged but its empty Footprint filled with central-agent:USB_C_Receptacle_SHOU-HAN_TYPE-C-16PIN-2MD-073. Pins = USB Type-C R2.5 Table 3-5 (p77) + shell SH (3.2.1 item 11), checked by the inspector against the release PDF 6636cd61; land = stock GCT USB4105-xx-A geometry, matches SHOU HAN drawing fe10da58 p1 RECOMMENDED PCB LAYOUT within 0.01 mm; 4 plated SH shell slots + 2 NPTH posts; 3D = SHOU HAN body 8.94 x 7.35 x 3.16 mm. Fit: D+ A6/B6 and D- A7/B7 are separate visible pins, tie each pair at the receptacle (Table 3-5 note 2); SBU1/SBU2 unconnected unless needed (note 3); layout drawn for a 0.80 mm PCB, shell legs 1.00 mm below the seat."
+        "evidence": "First-import fit pass: J1 re-admission after the D-22 peg trim (t-91e2ff): land dbc0bf77 differs from the admitted 6add4e0c only in pads A1/B12/A12/B1 (at y -3.683, size 0.6x1.144, the peg-end edge cut 0.006 mm), the descr deviation and the model path; kicad-cli DRC at min_hole_clearance 0.2 clean (exact gap 0.20023 mm vs stock 0.19440); generate.py and model.py rebuild byte-identical; symbol c60ed80d, STEP 042158bc, WRL 6c3c1179 and pin map (USB Type-C R2.5 Table 3-5 + SH) unchanged; council look+quality re-sealed on these bytes, audit PASS; arena unit 1 read at full size."
       }
     ]
   },
   "extensions": {
     "promotion": {
-      "fit_note": "First import (fit pass): stock Connector:USB_C_Receptacle_USB2.0_16P (KiCad 10.0.6) unchanged but its empty Footprint filled with central-agent:USB_C_Receptacle_SHOU-HAN_TYPE-C-16PIN-2MD-073. Pins = USB Type-C R2.5 Table 3-5 (p77) + shell SH (3.2.1 item 11), checked by the inspector against the release PDF 6636cd61; land = stock GCT USB4105-xx-A geometry, matches SHOU HAN drawing fe10da58 p1 RECOMMENDED PCB LAYOUT within 0.01 mm; 4 plated SH shell slots + 2 NPTH posts; 3D = SHOU HAN body 8.94 x 7.35 x 3.16 mm. Fit: D+ A6/B6 and D- A7/B7 are separate visible pins, tie each pair at the receptacle (Table 3-5 note 2); SBU1/SBU2 unconnected unless needed (note 3); layout drawn for a 0.80 mm PCB, shell legs 1.00 mm below the seat.",
+      "fit_note": "J1 re-admission after the D-22 peg trim (t-91e2ff): land dbc0bf77 differs from the admitted 6add4e0c only in pads A1/B12/A12/B1 (at y -3.683, size 0.6x1.144, the peg-end edge cut 0.006 mm), the descr deviation and the model path; kicad-cli DRC at min_hole_clearance 0.2 clean (exact gap 0.20023 mm vs stock 0.19440); generate.py and model.py rebuild byte-identical; symbol c60ed80d, STEP 042158bc, WRL 6c3c1179 and pin map (USB Type-C R2.5 Table 3-5 + SH) unchanged; council look+quality re-sealed on these bytes, audit PASS; arena unit 1 read at full size.",
       "note": "",
       "pin_gate": {
         "symbol": "USB_C_Receptacle_USB2.0_16P",
@@ -118,15 +118,15 @@
       "state": "council-graded",
       "symbol_sha256": "c60ed80d63c0160c8bcb41c178e713edd1da32a093de8bb1e6880465f932283a",
       "installed_symbol_sha256": "c60ed80d63c0160c8bcb41c178e713edd1da32a093de8bb1e6880465f932283a",
-      "footprint_sha256": "067e04fa4f4ffc790fa2c8895dc09ca2a730d93d07d6fdcaf921ebfb5399d9ea",
-      "installed_footprint_sha256": "6add4e0cf70ba2c5a057311efc29528c73ee482c62ed4940c0d80d4d230e6533",
+      "footprint_sha256": "dbc0bf77b154b700e69c49b129f6d4782f9b5fc3d05f88f489f64432b97c1c46",
+      "installed_footprint_sha256": "533f4277a65ab1e21d2eb313783712c783094ca7e0632cdcdeb0be9cdc8873d3",
       "quality_receipt": {
         "path": "quality/type-c-16pin-2md-073/symbol-quality.json",
-        "sha256": "172ee358cf776ac349b7240f90e8a70f02bde982f2b76bcc5fc85c2639e24c7b"
+        "sha256": "41459780264e3e2b2b32873e30be99e0db850cb17277c747077bd7ee0b392e4f"
       },
       "look_receipt": {
         "path": "quality/type-c-16pin-2md-073/symbol-look.json",
-        "sha256": "a5c26ab07f7ea5bfe23a0d0cb6ab71b45a7e30e84dc2bdb2a7311b4ed978b3de"
+        "sha256": "b362f6086e207332827678415806dab47691837c44fcbe3e2b3dd736688b3d0f"
       },
       "arena_manifest": {
         "path": "quality/type-c-16pin-2md-073/arena-manifest.json",
@@ -136,7 +136,7 @@
       "arena_manifest_mtime_note": "st_mtime of QA's arena-manifest.json when promoted — the arena render's clock, reset by any cp/checkout; the receipts carry no audit clock and now() is never written",
       "admission": {
         "path": "quality/type-c-16pin-2md-073/admission.json",
-        "sha256": "573b7fad1a1dcba7b2dca1fa9eea0ef6294359cea7329c7d9697baecdd4e6e37"
+        "sha256": "35775de35ffc7f356e8671aff259672b683eb9f87447f58213e50b3b7a451cc6"
       }
     }
   }

@@ -191,17 +191,17 @@
    "stock Connector:USB_C_Receptacle_USB2.0_16P"
   ],
   "candidate": {
-   "sha256": "dbc4d1ac9a013444e0d1e0e59915c8a17d2138b0a074116992ffa9f56323875c",
+   "sha256": "4dee3975cfa1c5ca9523613152260a96b26a837d28df5990d03a8bbf44d81f69",
    "files": {
-    "USB_C_Receptacle_SHOU-HAN_TYPE-C-16PIN-2MD-073.kicad_mod": "067e04fa4f4ffc790fa2c8895dc09ca2a730d93d07d6fdcaf921ebfb5399d9ea",
+    "USB_C_Receptacle_SHOU-HAN_TYPE-C-16PIN-2MD-073.kicad_mod": "dbc0bf77b154b700e69c49b129f6d4782f9b5fc3d05f88f489f64432b97c1c46",
     "USB_C_Receptacle_SHOU-HAN_TYPE-C-16PIN-2MD-073.step": "042158bc09d0e2da800c33de103a4249ff23aabb3e51a98f51c9a69a9deb7f1c",
     "USB_C_Receptacle_SHOU-HAN_TYPE-C-16PIN-2MD-073.wrl": "6c3c11796e35f575e5befc84b148071e3fd14f2666bc2cf38ab552d35ebbe44c",
     "USB_C_Receptacle_USB2.0_16P.kicad_sym": "c60ed80d63c0160c8bcb41c178e713edd1da32a093de8bb1e6880465f932283a",
     "USB_C_Receptacle_USB2.0_16P_unit1.png": "795a523263075d4669e66808567dd525febb0aa94b9490026204e4a929bf1d41",
     "__pycache__/model.cpython-314.pyc": "bd1145a62cbfa4330484ec9900496a426b7bb04c8be0b7f783400bef431726b1",
-    "author.json": "1c5a590b14d38c45bdf26bff9ceb8d05492bf36063d6bbc1bc7f673ee507fdad",
-    "facts.json": "ee57703fa683d85688e971a3f924d9c1cffced139a9d5a574c37689714815c1c",
-    "generate.py": "8630b1da704c8060a8864ed40e2f22a5007a8ca3f85c97ce97b9fee39a78f88a",
+    "author.json": "340efd960103962da96d6aaeb00219e84201e5b8bee54cdeb957b1b0c08da570",
+    "facts.json": "c2ad47ef266fdef48426c28692ad3576b1844ecd50fb50bd250a65397413c813",
+    "generate.py": "3c365821ef4fffebf6d92cc13dcb1a2459711aeeae1c6eacafc0caf41845d119",
     "model.py": "d509bf64d1b5414e0a859672fa0d2432d7675ba0039a865c041e9002efea071d",
     "render.sh": "2d81cc079eb1fa00e5db839ea4e80cddd60c5a9e82c7233c30122a6317cb7f1d"
    }
