@@ -40,7 +40,7 @@
  },
  "look": {
   "receipt_path": "symbol-look.json",
-  "sha256": "4a0fb01ccba81a7a92d760c056a93970c135e1acbe7b344582f980edde66a837"
+  "sha256": "97aea5b622599871328c8026ff69dd6885690c9a113ff6e7958db551820331ba"
  },
  "binding": {
   "tool": "library-qa/council.py quality",
@@ -51,12 +51,12 @@
    "owner"
   ],
   "candidate": {
-   "sha256": "5bf9312b8232234fc5350a43aa589cd433188ceaf3972b3fd9f9b76df3cea479",
+   "sha256": "b08d6c0851afb0987ef0c259c671b7bea3c0a32c1ddf8f1102aefafa405e46db",
    "files": {
     "AA36D-S010VA1.kicad_sym": "937195dd2dbd52f9c5af9c6da8c1160571c32309a68dda574469bc27ec16287d",
     "AA36D-S010VA1_unit1.png": "a4b8c8c2340281f17d457d8d0824321b642445451dac81dfbe9eebe11766e60d",
-    "JAE_AA36D-S010VA1_2x05_P0.35mm_PowerPin4_Vertical.kicad_mod": "32f3c4c1ba48c656e8a8ff1d399d3656d7fb9270f4370ae98eac14821ec19654",
-    "author.json": "4d3d8abdc4a51b01f28de6e5bc8864c2010d2168af2b417fc94523d662475cbe",
+    "JAE_AA36D-S010VA1_2x05_P0.35mm_PowerPin4_Vertical.kicad_mod": "65a72dd7aedaf0a98156aa6e91f50d0045529ee5025227ef15010dc1a1f9c302",
+    "author.json": "67fe162b6ee848f692deb167237e2f6cbd246a3a19bbe4ee6460b492d967d134",
     "comparable_ds.json": "134dceb77e8fb8a652676f68aaea11e617beb38f78e1f4ef7cb264ee0d1f56af",
     "council/annotation-rich/AA36D-S010VA1.kicad_sym": "48227fce7a64fc2dd6ab2535db25267c4159c4000354a6466fbec3adca753337",
     "council/annotation-rich/AA36D-S010VA1_unit1.png": "e52836fc9a2199ee4b122b6d2f2a42984f5010ceef70903925a7f6718258b457",
@@ -64,9 +64,9 @@
     "council/flow-first/AA36D-S010VA1_unit1.png": "5e6e53e268b3e1f91a967afe55554a315b38149cc02d3c48094c6181831b8b68",
     "council/internals-maximal/AA36D-S010VA1.kicad_sym": "8d1f473d58688f226ddfd4f888aa2b923b878f2d99f7c0647fb4d195e6fcf47a",
     "council/internals-maximal/AA36D-S010VA1_unit1.png": "c8e889ae922214fe519ce871f30c3f1563e7026f9c9ddae7ce281f1d5351bb36",
-    "facts.json": "6611d291a89ec1d52ee97f87ff728bdcde49d176c26c67888fecc96945cd2b36",
+    "facts.json": "be99ecbb8f069990930bdd29f4271a098e45c949b4593edf55bc6b62c137c764",
     "gen_symbol.py": "648a370ed6856cc35a15b20eb34450fc5b42f7039e0e0b29af26f1ce0a5a6109",
-    "generate.py": "0beef7b81137a0af88e969c4d94b501ba089cdbb1dbba5fd33fd2ff9f1aaabae",
+    "generate.py": "424bebc0058191b4c5de1d654fe7eda9c5516e9c0cee706f3fdc4317d53ed9e0",
     "kicad-library/3dmodels/JAE_AA36D-S010VA1_2x05_P0.35mm_PowerPin4_Vertical.step": "3234a2beb15f2794cebf6568d48aa7426d706088df9e1f9b71d30a0136616d7b",
     "kicad-library/3dmodels/JAE_AA36D-S010VA1_2x05_P0.35mm_PowerPin4_Vertical.wrl": "f41a34ce5178b7f829310548c607c288a2480cd883f61e623e651510f43ef06b",
     "pin-truth.json": "8b04ccb6479e1fcc8cb9586a70fc019b0899d0ff5f021316139e0b649e9af4b4",

@@ -51,7 +51,7 @@
       "path": "footprints/central-agent.pretty/JAE_AA36D-S010VA1_2x05_P0.35mm_PowerPin4_Vertical.kicad_mod",
       "kind": "footprint",
       "qualification": "unqualified-candidate",
-      "sha256": "8713dcc9261b7983da59467fa8c763f15556f935745c0f1526f62cd715e3c83d",
+      "sha256": "25a004c4c5455227576a19a00fb3a5ef22beb43a364260877463832a719703c9",
       "internal_name": "JAE_AA36D-S010VA1_2x05_P0.35mm_PowerPin4_Vertical"
     },
     {
@@ -82,20 +82,20 @@
     }
   ],
   "provenance": {
-    "repository_commit": "b80bebc58bc55f236dec4ec2fb34b857ef3123ef",
+    "repository_commit": "ab146d9397053763d0cd00ff40eb7933fd7d4146",
     "source_board": "truedepth-shim",
     "entries": [
       {
         "kind": "manifest",
         "path": "MANIFEST.md",
         "locator": "promotion entry for symbols/AA36D-S010VA1.kicad_sym",
-        "evidence": "First-import fit pass: connector-by-number fit pass (gh#440, D-17 (2)): 16 passive pins = the land's 16 electrical pads (1-14 once, posts 15 and 16 two pads each), SYM-PINSET-MATCH clean; land provenance D-9 (Vincent's hand-drawn symbol and land, iphone-x-shim 82bdf4d, with the D-12 (1) post-pad x +-2.26 and pin-1 silk-tick corrections; designer: owner); his 15 = Apple 820-00863 p42 DENSE post (legs 15+16), 16 = SPARSE post (legs 17+18), 1-14 as Apple (D-11); focused review 2 regraders pass on QA page 7c9d160d (look 4a0fb01c, quality a10d9e64); unit 1 looked at, every number readable; 3D model aligned to his land (D-7, D-12 photo dimensions). J4500 on truedepth-shim."
+        "evidence": "First-import fit pass: connector-by-number fit pass (gh#440, D-17 (2)): 16 passive pins = the land's 16 electrical pads (1-14 once, posts 15 and 16 two pads each), SYM-PINSET-MATCH clean; land provenance D-9 (Vincent's hand-drawn symbol and land, iphone-x-shim 82bdf4d, with the D-12 (1) post-pad x +-2.26 and pin-1 silk-tick corrections; designer: owner), re-admitted for D-23 (he hand-solders it: 'hand solder so make the pads longer slightly...'): land 65a72dd7, every pad 0.2 mm longer at its outer end (signal and PWR 0.44 -> 0.64, posts 0.375 -> 0.575; inner ends, pitch, widths, numbers and x kept), courtyard y +-1.2 -> +-1.4, pin-1 silk tick 0.2 mm out, descr records the deviation; neighbour gaps stay his 0.18 mm (identical on the D-12 land, above the jlcpcb_6l floor), no holes; his 15 = Apple 820-00863 p42 DENSE post (legs 15+16), 16 = SPARSE post (legs 17+18), 1-14 as Apple (D-11); focused review 2 regraders pass on QA page 7c9d160d (look 97aea5b6, quality 7c91234f, re-sealed by the Lead on the D-23 land); unit 1 looked at, every number readable; symbol 937195dd and 3D model 3234a2be unchanged, aligned to his land (D-7, D-12 photo dimensions). J4500 on truedepth-shim."
       }
     ]
   },
   "extensions": {
     "promotion": {
-      "fit_note": "connector-by-number fit pass (gh#440, D-17 (2)): 16 passive pins = the land's 16 electrical pads (1-14 once, posts 15 and 16 two pads each), SYM-PINSET-MATCH clean; land provenance D-9 (Vincent's hand-drawn symbol and land, iphone-x-shim 82bdf4d, with the D-12 (1) post-pad x +-2.26 and pin-1 silk-tick corrections; designer: owner); his 15 = Apple 820-00863 p42 DENSE post (legs 15+16), 16 = SPARSE post (legs 17+18), 1-14 as Apple (D-11); focused review 2 regraders pass on QA page 7c9d160d (look 4a0fb01c, quality a10d9e64); unit 1 looked at, every number readable; 3D model aligned to his land (D-7, D-12 photo dimensions). J4500 on truedepth-shim.",
+      "fit_note": "connector-by-number fit pass (gh#440, D-17 (2)): 16 passive pins = the land's 16 electrical pads (1-14 once, posts 15 and 16 two pads each), SYM-PINSET-MATCH clean; land provenance D-9 (Vincent's hand-drawn symbol and land, iphone-x-shim 82bdf4d, with the D-12 (1) post-pad x +-2.26 and pin-1 silk-tick corrections; designer: owner), re-admitted for D-23 (he hand-solders it: 'hand solder so make the pads longer slightly...'): land 65a72dd7, every pad 0.2 mm longer at its outer end (signal and PWR 0.44 -> 0.64, posts 0.375 -> 0.575; inner ends, pitch, widths, numbers and x kept), courtyard y +-1.2 -> +-1.4, pin-1 silk tick 0.2 mm out, descr records the deviation; neighbour gaps stay his 0.18 mm (identical on the D-12 land, above the jlcpcb_6l floor), no holes; his 15 = Apple 820-00863 p42 DENSE post (legs 15+16), 16 = SPARSE post (legs 17+18), 1-14 as Apple (D-11); focused review 2 regraders pass on QA page 7c9d160d (look 97aea5b6, quality 7c91234f, re-sealed by the Lead on the D-23 land); unit 1 looked at, every number readable; symbol 937195dd and 3D model 3234a2be unchanged, aligned to his land (D-7, D-12 photo dimensions). J4500 on truedepth-shim.",
       "note": "",
       "pin_gate": {
         "symbol": "Conn_AA36D_S010VA1",
@@ -112,15 +112,15 @@
       "state": "council-graded",
       "symbol_sha256": "937195dd2dbd52f9c5af9c6da8c1160571c32309a68dda574469bc27ec16287d",
       "installed_symbol_sha256": "6b723c65f57f9613b8338a5c55250a4ef2516ea0199b546a8f36a53776771d84",
-      "footprint_sha256": "32f3c4c1ba48c656e8a8ff1d399d3656d7fb9270f4370ae98eac14821ec19654",
-      "installed_footprint_sha256": "8713dcc9261b7983da59467fa8c763f15556f935745c0f1526f62cd715e3c83d",
+      "footprint_sha256": "65a72dd7aedaf0a98156aa6e91f50d0045529ee5025227ef15010dc1a1f9c302",
+      "installed_footprint_sha256": "25a004c4c5455227576a19a00fb3a5ef22beb43a364260877463832a719703c9",
       "quality_receipt": {
         "path": "quality/aa36d-s010va1/symbol-quality.json",
-        "sha256": "a10d9e6463a7c769f8f3176e16c9b0ce937b24ea761b62d1093d2287075476e3"
+        "sha256": "7c91234f2b530e2f540c04b6a18b70b8f628659ecf20aa84446857a2b2867fbd"
       },
       "look_receipt": {
         "path": "quality/aa36d-s010va1/symbol-look.json",
-        "sha256": "4a0fb01ccba81a7a92d760c056a93970c135e1acbe7b344582f980edde66a837"
+        "sha256": "97aea5b622599871328c8026ff69dd6885690c9a113ff6e7958db551820331ba"
       },
       "arena_manifest": {
         "path": "quality/aa36d-s010va1/arena-manifest.json",
@@ -130,7 +130,7 @@
       "arena_manifest_mtime_note": "st_mtime of QA's arena-manifest.json when promoted — the arena render's clock, reset by any cp/checkout; the receipts carry no audit clock and now() is never written",
       "admission": {
         "path": "quality/aa36d-s010va1/admission.json",
-        "sha256": "28a2f0af55db265514034b47ded4af31fb5641f35e3e4d8c66aca7a58cc14b30"
+        "sha256": "4375303e65ed09d4f58448d0da292b3f8210357efb4e564eb80779c916aa271a"
       }
     }
   }

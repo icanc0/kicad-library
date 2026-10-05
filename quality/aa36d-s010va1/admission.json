@@ -1,22 +1,22 @@
 {
  "admitted_by": {
-  "agent": "library-inspector-3bd738",
+  "agent": "library-inspector-a5eac7",
   "role": "library-inspector"
  },
  "author": {
   "agent": "symbol-maker-8ad793",
   "board": "truedepth-shim"
  },
- "candidate_footprint_sha256": "32f3c4c1ba48c656e8a8ff1d399d3656d7fb9270f4370ae98eac14821ec19654",
+ "candidate_footprint_sha256": "65a72dd7aedaf0a98156aa6e91f50d0045529ee5025227ef15010dc1a1f9c302",
  "candidate_symbol_sha256": "937195dd2dbd52f9c5af9c6da8c1160571c32309a68dda574469bc27ec16287d",
  "decisions": {
   "files": [],
   "mode": "report"
  },
- "footprint_sha256": "8713dcc9261b7983da59467fa8c763f15556f935745c0f1526f62cd715e3c83d",
+ "footprint_sha256": "25a004c4c5455227576a19a00fb3a5ef22beb43a364260877463832a719703c9",
  "guide": {
   "bind": "/guide",
-  "commit": "fe4de2590c94abe684b395334e03dc8335308233",
+  "commit": "5f837f02a482f57e730888568a9f3948cdf8cfb6",
   "dirty": false
  },
  "part_id": "aa36d-s010va1",
