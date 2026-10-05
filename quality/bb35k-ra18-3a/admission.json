@@ -1,22 +1,22 @@
 {
  "admitted_by": {
-  "agent": "library-inspector-af3c7c",
+  "agent": "library-inspector-41b1e4",
   "role": "library-inspector"
  },
  "author": {
   "agent": "footprint-maker-bb35k",
   "board": "truedepth-shim"
  },
- "candidate_footprint_sha256": "04c19c079c68321f2f52899de727c908d9d61321cc79c719422fb18c008fb794",
+ "candidate_footprint_sha256": "21645891dc0da58335f2002a24bb998c08d10bebf4541840ea620f84e5fe0189",
  "candidate_symbol_sha256": "70e4a5058b53589ac62537347849421bdcbeccdbdde0a63bba006decc3c6bf03",
  "decisions": {
   "files": [],
   "mode": "report"
  },
- "footprint_sha256": "47d73902f84d88a40b3e46f267a0ae9f906167a8f8fb9acd58306bd13f8f702e",
+ "footprint_sha256": "5777700fecbd1e7f925cd4a28e8ad7f2b9e70e86387415f875bb622642f0d39b",
  "guide": {
   "bind": "/guide",
-  "commit": "fe4de2590c94abe684b395334e03dc8335308233",
+  "commit": "5f837f02a482f57e730888568a9f3948cdf8cfb6",
   "dirty": false
  },
  "part_id": "bb35k-ra18-3a",
