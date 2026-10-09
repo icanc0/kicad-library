@@ -1,0 +1,30 @@
+{
+ "admitted_by": {
+  "agent": "library-inspector-d44730",
+  "role": "library-inspector"
+ },
+ "author": {
+  "agent": "symbol-maker-c33dee",
+  "board": "truedepth-shim"
+ },
+ "candidate_footprint_sha256": "617edb7522ffa84d10445c614347b4980fa9dec907a8ff07f8725979b5e9a79e",
+ "candidate_symbol_sha256": "0882138c7ff024035971f335de4e130685bf464bbaf18833308a2d5f20d5ecf0",
+ "decisions": {
+  "files": [],
+  "mode": "report"
+ },
+ "footprint_sha256": "8833864eb744f591a7e8ce5432c62d063a419a0523596f569c7804300c5ab12c",
+ "guide": {
+  "bind": "/guide",
+  "commit": "170f4890074a48d6feec7e1b8dd6056fdc370657",
+  "dirty": false
+ },
+ "part_id": "cn5711",
+ "pinset": {
+  "lcsc": "C35634",
+  "result": "clean",
+  "rule": "SYM-PINSET-MATCH"
+ },
+ "schema": "kicad-agent-guide/admission@1",
+ "symbol_sha256": "c825f43b096c39cf1b1ef877247761d06f46351d27b9280a15db68bb6d9695ce"
+}

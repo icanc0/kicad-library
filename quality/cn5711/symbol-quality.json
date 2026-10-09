@@ -1,0 +1,97 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "CN5711",
+ "symbol": {
+  "asset_path": "CN5711.kicad_sym",
+  "internal_name": "CN5711",
+  "sha256": "0882138c7ff024035971f335de4e130685bf464bbaf18833308a2d5f20d5ecf0"
+ },
+ "archetype": "identity-topology",
+ "units": [
+  {
+   "unit": 1,
+   "role": "the whole part: CN5711 1.5 A linear LED current source, all nine pins (DS p1 Pin Assignment, p3 Pin Description), drawn documentation-first (D-54): VCC 3/4 on the top edge, GND 2 and PAD 9 on the bottom, CE 8 and ISET 1 on the left, LED 5/6 and NC 7 on the right, the sides DS p2 Figure 1 gives them",
+   "presentation": "pin-table",
+   "identity_features": [
+    "supply on top, ground on the bottom (D-54): VCC 3 and VCC 4 power_in at x 7.62 / 12.7, 5.08 mm apart (chair fix F1), over GND 2 and PAD 9 power_in (DS p3 'The Negative Terminal of Power Supply'; exposed pad 9 soldered to GND, DS p3, p7)",
+    "inputs on the left: CE 8 input with 'H \u22652.3V = ON' (graft G3; DS p3 'A high input will put the device in the normal operating mode', DS p4 VCEH 2.3 V min at VCC 3.7 V); ISET 1 passive with 'ILED = 1800V/RISET' and 'RISET to GND, \u226430k\u03a9' (graft G4; DS p3, p5)",
+    "output on the right: LED 5 output and LED 6 passive with 'to LED anode' on their midline (graft G5; DS p3 'LED's anode is connected to this pin, and LED current flows out of this pin': the family's sink/source trap, CN5612 sinks), NC 7 no_connect level with ISET",
+    "supply-range note '2.8V to 6V' (D-54's first example note; DS p1, p4) and the bold unit title CN5711; no internal block diagram (D-54 overrides L17 functional ink: unit 1 presentation pin-table, selection a1d52cf presentation.basis, identity gate [])",
+    "every pin end on 100 mil: side ends at x \u00b122.86 on a 35.56 x 20.32 mm body (graft G1); Footprint Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm"
+   ]
+  }
+ ],
+ "evidence": {
+  "comparable_ds": {
+   "path": "comparable_ds.json",
+   "sha256": "9b6fb1d23d177a3a71b9b37477624f5151d228abbee5539a5fe8af413d2fdea6",
+   "own_sha256": "10de32b230a8c101d34f072fe669eb405132b003106d471b714e5460a4cf6f98",
+   "comparable_count": 5
+  },
+  "pin_truth": {
+   "path": "pin-truth.json",
+   "sha256": "ebcc2d1cb8789ccde0a28e2bd080aed133a7fc5b73b42b576198f3e3662d84d7",
+   "coverage": "all"
+  }
+ },
+ "generator": {
+  "contract": "python-cli-output-v1",
+  "path": "gen.py",
+  "sha256": "6fd20eab30781a62c0f5edc10422f5f71c890289832029bdfa2fd4890477d972",
+  "inputs": [],
+  "expected_symbol_sha256": "0882138c7ff024035971f335de4e130685bf464bbaf18833308a2d5f20d5ecf0"
+ },
+ "look": {
+  "receipt_path": "symbol-look.json",
+  "sha256": "4bd70d0de1b58433f959cbf7ae8fa2e542c02a393fee60a3ed37d430f9d3af37"
+ },
+ "binding": {
+  "tool": "library-qa/council.py quality",
+  "by": "lead-996565",
+  "agents": [
+   "council-designer-annotation-rich",
+   "council-designer-flow-first",
+   "council-designer-internals-maximal",
+   "look-judge-1",
+   "look-judge-2",
+   "look-judge-3",
+   "look-regrader-1",
+   "look-regrader-2",
+   "look-regrader-3",
+   "look-regrader-4",
+   "look-regrader-5"
+  ],
+  "candidate": {
+   "sha256": "ecec2446604ffbf6dd1d6412b9a9d155e79816209d609f5c84da6e422b1cd3bc",
+   "files": {
+    "CN5711.kicad_sym": "0882138c7ff024035971f335de4e130685bf464bbaf18833308a2d5f20d5ecf0",
+    "CN5711_unit1.png": "54103b3f2e4f8bb7627549ff8b066e4d54ff9a67211cefe46693ee6cfc4e37cf",
+    "CN5711_unit1_fanout.png": "83cfc95047473b192abd57b2e9ed214a3d4cc0cd89810fe7198d1d687843bef0",
+    "SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm.kicad_mod": "617edb7522ffa84d10445c614347b4980fa9dec907a8ff07f8725979b5e9a79e",
+    "SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm.step": "cd5a14467f3cef6ef62f7225c7d26b97459f809f148127ca596e53d7c1a7032a",
+    "SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm.wrl": "2483db77388dc7d0845c3c5691dac12bafbc9c4a59970cb220cf632f1487eea7",
+    "author.json": "6d282dd4f99e018f5905dcdd803e6d1112cb2d78f8b6b380250a1fb4e8b1ef34",
+    "comparable_ds.json": "9b6fb1d23d177a3a71b9b37477624f5151d228abbee5539a5fe8af413d2fdea6",
+    "council/annotation-rich/CN5711.kicad_sym": "d7f974e025d6ed715fb34a3ea559ce12fec0f6f63d306a6a2ecf2aabf5025c63",
+    "council/annotation-rich/CN5711_unit1.png": "88fe9b08d634122a00b81ffc11a68076c5b252413e44c32c1c92c8482d72a9bb",
+    "council/datasheet-order/CN5711.kicad_sym": "b5325ca95bad111612ad68f14d86f881303839cb9ee09af5f7fcbc04be8f64c0",
+    "council/datasheet-order/CN5711_unit1.png": "be8cb35689eef55ed697ea18a9cf5ae341415e564af22a4294eb45ec30c35e6f",
+    "council/datasheet-order/CN5711_unit1_fanout.png": "8454bc6f3a68d7f21567bee6ba62daa9c33a322dda42b7e7f055fa3dc41ba86f",
+    "council/flow-first/CN5711.kicad_sym": "08389c18295a4a7c6e2ca309908a5c49e7ba7c397729362b2e6645a023041b3c",
+    "council/flow-first/CN5711_unit1.png": "76f5d6c779223d14e2694642bd9b8f4929016b03d52022106de22d4a2af31907",
+    "council/flow-first/CN5711_unit1_fanout.png": "6182e14acb3f0d89ede850d9e3ce42b142c1968a2447fd228be9575921798245",
+    "council/internals-maximal/CN5711.kicad_sym": "0094cdeb2817828e3f8777dfa9e6adfa73da0322103f7c9e6d0fb14d6e61666c",
+    "council/internals-maximal/CN5711_unit1.png": "5cfdd7ca9619ae20a1fba6ec93bed80dc8439088e42a4b99c234d69998d017cb",
+    "council/internals-maximal/CN5711_unit1_fanout.png": "5cdd93bb577c8def3df4dc2e6993608d7bab991314a4ba6c801d75f38f660fa6",
+    "facts.json": "cd307e73cc1567e1e35647d85c23c24c3f4e21c580b0dfd044fe63a9a385b563",
+    "fanout_page.py": "c71096411d176a97b35c37b42f0cb01c2d9bf96432e8a8382f5ba6b04a49fb7d",
+    "footprint.py": "ce5308dce5a02ba4088847f554ba34c8eaac3a5c9da03875d4e8712c97c4e6d4",
+    "gen.py": "6fd20eab30781a62c0f5edc10422f5f71c890289832029bdfa2fd4890477d972",
+    "model.py": "9e65ecb6a382b1d7e021b0e3bd65bb401e79e86587208cce9d39af191595c98b",
+    "pin-truth.json": "ebcc2d1cb8789ccde0a28e2bd080aed133a7fc5b73b42b576198f3e3662d84d7",
+    "render.sh": "1a9774b834efb4d00cc064097e8f499fabde87f1d9346397e4d32b22a956b617"
+   }
+  },
+  "verdict": "pass"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "schema_version": "library-qa-arena-1",
+ "part_id": "CN5711",
+ "symbol_sha256": "0882138c7ff024035971f335de4e130685bf464bbaf18833308a2d5f20d5ecf0",
+ "units": [
+  1
+ ],
+ "verdict": "PASS",
+ "build_sha256": "1ad94e1b299966b2895793a95ec0b5ee1b427352ccfc84c2fcce2ef30c2868ec",
+ "sheets": {
+  "unit_1.kicad_sch": "22a655830a1459c592e612b59e529362b40ed1e470602053be87e57848e470db"
+ },
+ "pages": [
+  {
+   "unit": 1,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png",
+   "sha256": "688b9f642909ba19416b271323bca71a494762af9c027d62de8d31c5bd0f5789",
+   "svg_fingerprint": "7f88ef9ac0579a7d9344e2ca1532bd48e3f8afdf0721651319d649fabb36bfa1",
+   "nonce_sha256": "8491bc8e2b3cfce58f9a4e36564a35cb7ebe313a36a9411a780d738800e0c2b1",
+   "background": "#f5f4ef"
+  }
+ ]
+}

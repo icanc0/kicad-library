@@ -1,0 +1,140 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "cn5711",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Consonance",
+      "normalized": "consonance"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "CN5711",
+      "canonical": "CN5711",
+      "comparison_key": "CN5711",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C35634"
+      }
+    ],
+    "description": "Central library symbol CN5711 promoted from truedepth-shim."
+  },
+  "names": {
+    "canonical": "CN5711",
+    "aliases": [],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/CN5711.kicad_sym",
+        "name": "CN5711"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/CN5711.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "c825f43b096c39cf1b1ef877247761d06f46351d27b9280a15db68bb6d9695ce",
+      "internal_name": "CN5711"
+    },
+    {
+      "path": "footprints/central-agent.pretty/SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm.kicad_mod",
+      "kind": "footprint",
+      "qualification": "unqualified-candidate",
+      "sha256": "8833864eb744f591a7e8ce5432c62d063a419a0523596f569c7804300c5ab12c",
+      "internal_name": "SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm"
+    },
+    {
+      "path": "3dmodels/SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm.step",
+      "kind": "model",
+      "qualification": "unqualified-candidate",
+      "sha256": "cd5a14467f3cef6ef62f7225c7d26b97459f809f148127ca596e53d7c1a7032a"
+    }
+  ],
+  "relationships": [
+    {
+      "kind": "declares-footprint",
+      "source_asset": "symbols/CN5711.kicad_sym",
+      "target": {
+        "asset_path": "footprints/central-agent.pretty/SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm.kicad_mod"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "Promotion supplied this footprint as a candidate; it is not qualified by a symbol-only draft."
+    },
+    {
+      "kind": "declares-model",
+      "source_asset": "footprints/central-agent.pretty/SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm.kicad_mod",
+      "target": {
+        "asset_path": "3dmodels/SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm.step"
+      },
+      "disposition": "unqualified-candidate",
+      "evidence": "Promotion supplied this model as an unqualified candidate."
+    }
+  ],
+  "provenance": {
+    "repository_commit": "be06735f0f0af460ae80f21b7237208bc38495d7",
+    "source_board": "truedepth-shim",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/CN5711.kicad_sym",
+        "evidence": "First-import fit pass: CN5711 (C35634) council final 0882138c: six pin facts second-sourced (p1 pin figure, p7 note 3, p8 drawing vs p3 table), intake clean, arena PASS (unit 1 page 688b9f64, LOOK-4XKXLMWJFFWV), audit PASS, council look + quality receipts sealed (3ffb510); unit 1 pins, types and captions match DS REV 1.2 p1/p3/p4/p5; land SOIC-8-1EP 3.9x4.9 EP2.41x3.3 = p8 nominals"
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "CN5711 (C35634) council final 0882138c: six pin facts second-sourced (p1 pin figure, p7 note 3, p8 drawing vs p3 table), intake clean, arena PASS (unit 1 page 688b9f64, LOOK-4XKXLMWJFFWV), audit PASS, council look + quality receipts sealed (3ffb510); unit 1 pins, types and captions match DS REV 1.2 p1/p3/p4/p5; land SOIC-8-1EP 3.9x4.9 EP2.41x3.3 = p8 nominals",
+      "note": "",
+      "pin_gate": {
+        "symbol": "CN5711",
+        "lcsc": "C35634",
+        "facts_checked": true,
+        "source": "facts",
+        "board_context": null,
+        "state": "clean",
+        "gaps": [],
+        "allow_pin_gaps": null
+      }
+    },
+    "quality": {
+      "state": "council-graded",
+      "symbol_sha256": "0882138c7ff024035971f335de4e130685bf464bbaf18833308a2d5f20d5ecf0",
+      "installed_symbol_sha256": "c825f43b096c39cf1b1ef877247761d06f46351d27b9280a15db68bb6d9695ce",
+      "footprint_sha256": "617edb7522ffa84d10445c614347b4980fa9dec907a8ff07f8725979b5e9a79e",
+      "installed_footprint_sha256": "8833864eb744f591a7e8ce5432c62d063a419a0523596f569c7804300c5ab12c",
+      "quality_receipt": {
+        "path": "quality/cn5711/symbol-quality.json",
+        "sha256": "d369f69e326d5752644bef41322396da70ea485464b1bfd5a3c0c2e5df307088"
+      },
+      "look_receipt": {
+        "path": "quality/cn5711/symbol-look.json",
+        "sha256": "4bd70d0de1b58433f959cbf7ae8fa2e542c02a393fee60a3ed37d430f9d3af37"
+      },
+      "arena_manifest": {
+        "path": "quality/cn5711/arena-manifest.json",
+        "sha256": "6122c7c196f218dfdd64798f5d46d493297c59d1ed871ae8ebaf45ef8e719ead"
+      },
+      "arena_manifest_mtime": "2026-10-09T10:52:06+00:00",
+      "arena_manifest_mtime_note": "st_mtime of QA's arena-manifest.json when promoted — the arena render's clock, reset by any cp/checkout; the receipts carry no audit clock and now() is never written",
+      "admission": {
+        "path": "quality/cn5711/admission.json",
+        "sha256": "802add4f7856cd5a07e2a7346d3738d0f1bd7409beb7aa821836180de9593283"
+      }
+    }
+  }
+}

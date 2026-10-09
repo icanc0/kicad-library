@@ -1,0 +1,949 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "CN5711",
+ "symbol_sha256": "0882138c7ff024035971f335de4e130685bf464bbaf18833308a2d5f20d5ecf0",
+ "units": [
+  1
+ ],
+ "designs": [
+  {
+   "id": "internals-maximal",
+   "designer_id": "council-designer-internals-maximal",
+   "stance": "internals-maximal",
+   "symbol_path": "council/internals-maximal/CN5711.kicad_sym",
+   "symbol_sha256": "0094cdeb2817828e3f8777dfa9e6adfa73da0322103f7c9e6d0fb14d6e61666c",
+   "renders": [
+    {
+     "id": "design:internals-maximal:u1",
+     "unit": 1,
+     "path": "council/internals-maximal/CN5711_unit1.png",
+     "sha256": "5cfdd7ca9619ae20a1fba6ec93bed80dc8439088e42a4b99c234d69998d017cb",
+     "background": "#ffffff",
+     "symbol_sha256": "0094cdeb2817828e3f8777dfa9e6adfa73da0322103f7c9e6d0fb14d6e61666c"
+    }
+   ]
+  },
+  {
+   "id": "flow-first",
+   "designer_id": "council-designer-flow-first",
+   "stance": "flow-first",
+   "symbol_path": "council/flow-first/CN5711.kicad_sym",
+   "symbol_sha256": "08389c18295a4a7c6e2ca309908a5c49e7ba7c397729362b2e6645a023041b3c",
+   "renders": [
+    {
+     "id": "design:flow-first:u1",
+     "unit": 1,
+     "path": "council/flow-first/CN5711_unit1.png",
+     "sha256": "76f5d6c779223d14e2694642bd9b8f4929016b03d52022106de22d4a2af31907",
+     "background": "#ffffff",
+     "symbol_sha256": "08389c18295a4a7c6e2ca309908a5c49e7ba7c397729362b2e6645a023041b3c"
+    }
+   ]
+  },
+  {
+   "id": "annotation-rich",
+   "designer_id": "council-designer-annotation-rich",
+   "stance": "annotation-rich",
+   "symbol_path": "council/annotation-rich/CN5711.kicad_sym",
+   "symbol_sha256": "d7f974e025d6ed715fb34a3ea559ce12fec0f6f63d306a6a2ecf2aabf5025c63",
+   "renders": [
+    {
+     "id": "design:annotation-rich:u1",
+     "unit": 1,
+     "path": "council/annotation-rich/CN5711_unit1.png",
+     "sha256": "88fe9b08d634122a00b81ffc11a68076c5b252413e44c32c1c92c8482d72a9bb",
+     "background": "#ffffff",
+     "symbol_sha256": "d7f974e025d6ed715fb34a3ea559ce12fec0f6f63d306a6a2ecf2aabf5025c63"
+    }
+   ]
+  }
+ ],
+ "judges": [
+  {
+   "reviewer_id": "look-judge-1",
+   "design_id": "internals-maximal",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "Reads as an LED driver laid out the way DS p2 Figure 1 draws it: VCC 3/4 on top, GND 2 and PAD 9 on the bottom (D-54), CE 8 and ISET 1 on the left, LED 5/6 and NC 7 on the right. Captions '1.5A LED DRIVER' (p1 title, 'LED Current up to 1.5A') and 'H = ON' (p3 CE row). No ink shows that LED sources current into the anode (p3 'LED's anode is connected to this pin, and LED current flows out of this pin') or that RISET returns to GND (p3 'between ISET pin and GND'). Those are the family's two traps (CN5612 sinks and returns RISET to VDD), and here they rest only on pin type and placement.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "All nine pins match the DS p1 Pin Assignment, the p3 Pin Description and pins.json by name, number and type: ISET passive, LED 5 output with LED 6 passive, NC no_connect, PAD on 9 as power_in. Every caption is true: 'H = ON' (p3), '1.5A' (p1), 'ILED = 1800V/RISET' (p3, p5). There is no Figure 2 block diagram (D-54). The hidden Description is correct and page-cited: abs max 6.5 V (p3), VCEH 2.3 V / VCEL 0.6 V at VCC 3.7 V (p4), IOC 1.5/1.9/2.3 A (p4), fold-back near 135 C with no shutdown (p4). No contradiction found.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Three short captions and no block diagram. The body is the widest of the three (35.56 x 15.24 mm), and its lower-left quadrant and right-centre are empty. '1.5A LED DRIVER' repeats the Value and Description, while the supply-range note that D-54 names as an example ('supply range, active level'; DS p4 2.8-6 V) is missing. No ink is decorative, but one caption is spent on a restatement.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "This is the only design whose nine pin ends all sit on the 100 mil grid. Signals enter on the left, the LED output leaves on the right, NC is isolated with its X, and the fanout wires cleanly: two VCC flags up, GND and PAD tied to one GND below. The VCC pins are 5.08 mm apart and sit right of centre (x 5.08 / 10.16), while GND and PAD sit at x -2.54 / 2.54, so the supply and ground stubs do not line up the way the stacked VCC-over-GND of DS p2 Figure 1 does.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 2,
+     "note": "The body shows only the active level ('H = ON', without the p4 VCEH 2.3 V threshold) and the formula. It leaves out the three numbers this board's own analysis relies on. The 2.8 V supply floor and the CE 2.3 V high level both appear in architecture.md, which notes SVDD following VIN under the CE's 2.3 V high level and U20's 2.8 V supply (DS p4). The 30 kOhm RISET maximum is where U26/U27 (A and B) sit at RISET 30k (D-53; DS p3, p5 'RISET's maximum value is 30K ohm'). A reviewer must open the Description for all three.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-judge-1",
+   "design_id": "flow-first",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "This is the closest copy of DS p2 Figure 1. VCC 3/4 sit side by side on top, with GND 2 and PAD 9 directly beneath them. CE 8 is upper-left, ISET 1 lower-left, LED 5/6 upper-right and NC 7 lower-right. 'RISET to GND' closes the RISET-return trap (p3), and 'high = on' gives the CE sense (p3). There is no role caption and no anode/source cue (p3 'LED current flows out of this pin'), so LED polarity rests on the output pin type and right-hand placement.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pins and types are identical to pins.json and DS p3. Every body note is exact: '2.8 V to 6 V' (p1 Features, p4 Operating Voltage Range), 'high = on' (p3), 'ILED = 1800V/RISET' and 'RISET to GND' (p3, p5). The Description is correct: shutdown under 1 uA (p4 IVCC2), IOC 1.5-2.3 A (p4), 30 kOhm max (p3), PWM below 2 kHz (p6), 135 C regulation with no shutdown (p4). No Figure 2 ink. No contradiction found.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "Four short notes, each doing a job: supply range and active level, which are D-54's own two examples, plus the formula and the RISET return. There is no decorative ink and no block diagram. The 33.02 x 20.32 mm body has an empty band between the CE row and the ISET row and could lose one row, but nothing on it is redundant.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "Inputs are on the left and outputs on the right. The VCC pair and the GND/PAD pair share the same two columns (x 7.62 / 10.16), so the rail and ground stubs line up. In the fanout, GND and PAD tie with one short jog, and VCC 3/4 at 2.54 mm can share one rail wire, as in Figure 1. However, CE, ISET, LED and NC end at x +-21.59, 50 mil off the 100 mil grid that the VCC/GND/PAD ends use (KLC S4.1). The nine ends can never all be on the 100 mil grid at once. Wires still connect on KiCad's 50 mil default grid, as the fanout shows.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "Carries the supply range (the 2.8 V floor matters here: architecture.md checks U20's 2.8 V supply as VIN sags), the active level, the formula and the RISET return. Two load-bearing numbers are left to the Description: VCEH 2.3 V (DS p4, the threshold the SVDD-droop analysis uses) and the 30 kOhm ceiling where A and B sit at RISET 30k (D-53; DS p3, p5).",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "minor",
+     "summary": "Not a datasheet contradiction. The CE/ISET/LED/NC pin ends at x +-21.59 (body +-16.51) are 50 mil off the 100 mil grid used by the VCC 3/4, GND 2 and PAD 9 ends (x 7.62 / 10.16), so the symbol cannot sit with every pin end on a 100 mil grid. Fix: body +-17.78 and side pin ends at +-22.86.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-judge-1",
+   "design_id": "annotation-rich",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "This is the only design that inks both family traps: 'to LED anode' beside LED 5/6 (DS p3 'The Anode of LED') and 'RISET to GND, <=30kOhm' beside ISET (p3, p5). The CE thresholds read directly. But VCC 3/4 sit on the left edge above CE, not on top. That breaks D-54's supply-on-top rule and the VCC-top placement of DS p2 Figure 1 and Figure 2, so the glance split between supply and signal is lost in a dense text block.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "Pins and types match pins.json and DS p3. The notes are true to their pages: '2.8-6V' (p4), 'ILED <=1.5A' (p1), 'IOC 1.5-2.3A' (p4 min/max), 'H >=2.3V: ON' (p4 VCEH), 'L <=0.6V' (p4 VCEL), '<=30kOhm' (p3). Two stretches. First, the thresholds drop the p4 test condition 'VCC=3.7V', and this board runs VCC from VIN. Second, 'L <=0.6V: OFF, <=1uA' suggests the 1 uA shutdown current holds anywhere at or below 0.6 V, but p4 specifies IVCC2 only at VCE = 0V. The VCC-left placement also departs from Figure 1.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "Eight body notes against D-54's 'a short note or two'. 'ILED <=1.5A' and 'IOC 1.5-2.3A' (p1, p4) belong in the Description, where this design already repeats them. The top-right three-line block crowds against the LED pin names, and the CE note runs two lines. Accurate ink, but well over the owner's density.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 2,
+     "note": "VCC on the left edge brings the supply rail in from the same side as the CE and ISET signals instead of from above (D-54; DS p2 Figure 1 feeds VCC 3/4 from the top). Every pin end carries the same 1.27 mm y offset from the origin (8.89 / 6.35 / 1.27 / -3.81 / -16.51), so with the anchor on the 100 mil grid each end lands 50 mil off. The pins are consistent with each other, so moving the origin would fix it. annotation-rich/ holds no fanout render, so the wiring was never shown. I judged it from the .kicad_sym geometry and the unit render.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "Carries every number this board's analysis relies on: the 2.8 V supply floor (p4), CE high at or above 2.3 V (p4; SVDD 3.18-3.42 V versus VCEH in architecture.md), and RISET up to 30 kOhm where U26/U27 sit (D-53; p3, p5). It adds the anode polarity (p3) and the IOC band (p4), which is relevant to U20 at 1.418 A, whose +5 % reaches 1.49 A against IOC min 1.5 A.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "major",
+     "summary": "Breaks the owner's D-54 rule rather than the datasheet's pin truth: VCC 3/4 sit on the left edge, not on top, against D-54 ('supply pins on top and ground on the bottom') and the VCC-top placement of DS p2 Figure 1 and Figure 2.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    {
+     "severity": "minor",
+     "summary": "'L <=0.6V: OFF, <=1uA' overstates DS p4. IVCC2 (1 uA max) is specified only at VCE = 0V, and VCEH/VCEL hold under the table condition VCC = 3.7V, which the ink drops.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    {
+     "severity": "minor",
+     "summary": "Not a datasheet contradiction. All pin ends are 1.27 mm off the 100 mil grid relative to the origin. There is also no fanout render in annotation-rich/, unlike the other two designs.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-judge-2",
+   "design_id": "internals-maximal",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "Reads as the CN5711 LED driver: datasheet pin names, CE upper-left and ISET lower-left, VCC 3/4 on top, LED 5/6 upper-right, NC below them, GND and PAD on the bottom. That is DS p2 Figure 1's arrangement, and the '1.5A LED DRIVER' caption is the p1 title. Neither family trap is printed on the body: there is no RISET-to-GND note (p3; CN5612 returns it to VDD) and no anode/source cue beyond the output pin type (p3 'LED current flows out of this pin'). Both are in the Description only.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pins 1-9 match pins.json and DS p1/p3 by number, name and type (CE input, ISET passive, LED 5 output + 6 passive, NC no_connect, VCC/GND/PAD power_in, PAD = p3 'Exposed Pad'). Every body note is backed: 'H = ON' p3, 'ILED = 1800V/RISET' p3/p5, 1.5 A p1. The Description is the most complete of the three and alone carries p3 'Other terminal voltage -0.3V to VCC', the limit D-62 designs CE around. No contradiction found.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Shortest body (35.56 x 15.24 mm) with three notes. The '1.5A LED DRIVER' caption repeats what Value and Description already say. Inline captions set the width, and the bottom third holds only the GND/PAD names.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "Every pin tip is on 2.54 mm. CE and ISET sit 5.08 mm apart on the left, which leaves room for the 100k SVDD pull-up and HL2300 drain on CE and for RISET dropping to GND. LED 5/6 are adjacent for the tie. VCC 3/4 are 5.08 apart, so each can take its own D-55 power symbol. GND/PAD straddle the centre. The fanout is clean, with the same arena-only ERC profile as the other two.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 2,
+     "note": "Shows the active level and the current formula. It drops the supply-range note that D-54 names: 2.8-6 V (p1/p4) is the floor the board reasons about when VIN sags (architecture: 'U20's 2.8 V supply'). It also has no RISET-to-GND note and no RISET 30 kOhm maximum (p3/p5), though D-53 puts U26/U27 (A, B) at exactly 30k, the datasheet maximum. 'H = ON' has no 2.3 V threshold (p4 VCEH).",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-judge-2",
+   "design_id": "flow-first",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "A clean D-54 read in DS p2 Figure 1's arrangement: VCC 3/4 on top with '2.8 V to 6 V' under them, GND/PAD on the bottom, 'high = on' beside CE, and 'ILED = 1800V/RISET' plus 'RISET to GND' beside ISET. Each note sits on its own pin, and the RISET return (p3), the family trap CN5612 gets wrong, is printed. LED 5/6 on the right as an output carry the p3 source direction.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pins 1-9 match pins.json and DS p1/p3 exactly, PAD named per the pinset rule. All four notes are backed: 2.8-6 V p1/p4, active-high CE p3, formula and RISET to GND p3/p5. The Description is accurate (VCEH/VCEL p4, IOC p4, 2 kHz PWM p6, 135 C regulation p4) but omits p3's 'other terminal voltage -0.3V to VCC'. No contradiction found.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Four short notes and a 33.02 x 20.32 mm body for only three side rows. The band between CE (5.08) and ISET (-2.54) and the top and bottom margins are partly empty, but nothing on the body is redundant.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "CE and ISET are 7.62 mm apart, plenty for the enable cell and RISET. LED 5/6 are adjacent. The side pin tips sit at x = +-21.59, on the 1.27 mm half-grid, which guide docs/02 allows (no open pins in the fanout ERC) but which is off a 2.54 placement grid. VCC 3/4 at 2.54 mm pitch force a tie plus one power symbol, because two D-55 power symbols would collide. GND/PAD sit under the right side instead of centred.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "Has both notes D-54 names, the supply range and the active level, plus the formula and the RISET return. It does not print the CE thresholds (p4 VCEH 2.3 V / VCEL 0.6 V) that the SVDD pull-up and the HL2300 cell are checked against. It also omits the RISET 30 kOhm maximum (p3/p5), which A and B sit on at 30k (D-53). Both are only in the Description.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-judge-2",
+   "design_id": "annotation-rich",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "Both family traps are printed: 'to LED anode' beside LED 5/6 (p3) and 'RISET to GND' beside ISET (p3). But VCC 3/4 are on the LEFT edge above CE, so the top edge is empty and the supply-on-top read of D-54 and DS p2 Figure 1 is lost. Eight notes also dilute the glance.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "Pins 1-9 match pins.json and DS p1/p3, and every numeric note is on a page: 2.8-6V p1/p4, ILED <=1.5A p1, IOC 1.5-2.3A p4, H >=2.3V / L <=0.6V / <=1uA p4, RISET <=30kOhm p3/p5. However, 'H >=2.3V: ON' and 'L <=0.6V: OFF' drop p4's test condition (VCC = 3.7 V), while every CN5711 here runs on VIN. The VCC-left grouping also departs from Figure 1.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "Eight body notes against D-54's 'a short note or two', set at 1.0 mm on a 1.52 mm line pitch. The tallest body of the three (30.48 x 22.86 mm). 'IOC 1.5-2.3A', 'ILED <=1.5A' and '<=1uA' are Description facts, not wiring facts.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 2,
+     "note": "VCC on the left puts the VIN power symbol and its bypass on the same edge as the CE enable cell and RISET, while the top edge carries nothing. Every side pin (y 8.89, 6.35, 1.27, -3.81) and both bottom pins (y -16.51) sit on the 1.27 mm half-grid. The design shipped no fanout render. I rendered one in my scratchpad with the same arena pipeline: it is clean, with the same ERC profile as the others.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "The most expressive of the three. It prints the CE thresholds the board is designed against (SVDD 3.18-3.42 V over VCEH 2.3 V; the cell's CE <= 0.28 V under VCEL 0.6 V, p4). It prints 'RISET to GND, <=30kOhm' (p3/p5), which flags that D-53's A/B 30k is the datasheet's maximum RISET, plus the supply range, the anode direction and the formula.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "major",
+     "summary": "D-54 breach, not a datasheet contradiction: VCC 3/4 are on the left edge, not on top as D-54 ('supply pins on top and ground on the bottom') and DS p2 Figure 1 draw them. It also carries eight body notes against D-54's 'a short note or two'. Graftable by moving VCC to the top and cutting the notes.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    {
+     "severity": "minor",
+     "summary": "'H >=2.3V: ON' / 'L <=0.6V: OFF' state the DS p4 VCEH/VCEL limits without p4's test condition (VCC = 3.7 V). The board's CN5711s run on VIN, so the printed thresholds are characterized only at a VCC this board does not use.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    {
+     "severity": "minor",
+     "summary": "Process gap: annotation-rich/ ships no CN5711_unit1_fanout.png (the other two do). This judge rendered one in scratch with the flow-first fanout_page.py pipeline to grade wiring.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-judge-3",
+   "design_id": "internals-maximal",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Reads at a glance as the part DS p1 titles '1.5A High Brightness LED Driver IC': the caption '1.5A LED DRIVER', ILED = 1800V/RISET on the ISET row, LED 5/6 leaving on the right, VCC on top. The placement is DS p2 Figure 1's: CE top-left, ISET lower-left, LED 5/6 upper-right, NC 7 level with ISET, GND bottom. The high-side source direction (DS p3 'LED current flows out of this pin') comes only from the pin name and the output type. No ink states it.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pin numbers, names and types match pins.json and DS p1 Pin Assignment / p3 Pin Description: ISET 1 passive, GND 2, VCC 3/4, PAD 9 power_in, LED 5 output + LED 6 passive, NC 7 no_connect, CE 8 input. Every body string is printed by the sheet: '1.5A LED DRIVER' (p1 title), 'H = ON' (p3 pin 8), 'ILED = 1800V/RISET' (p3 pin 1, p5). No Figure 2 ink (D-54). I found no contradiction.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "Smallest body of the three: 35.56 x 15.24 mm, three side rows, nine pins all drawn, no empty row except the gap D-54 grouping needs. The only body ink is one caption and two notes. Shared with the others: the bold unit title repeats the visible Value 'CN5711', so 'CN5711' prints twice above the body.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "The fanout is clean. VCC 3/4 sit 5.08 mm apart on top, so their two VCC labels never merge. LED 5/6 are on adjacent rows and tie at the pin tips. ISET is the lowest left row, so RISET drops to ground uncrossed (DS p7 PCB 1, RISET close to the chip). GND 2 and PAD 9 are 5.08 mm apart on the bottom and tie to one ground symbol. CE is on the top row, so its SVDD pull-up and HL2300 cell (D-51) rise without crossing. The VCC and ground columns do not line up (VCC x 5.08/10.16, GND x -2.54/2.54). This is cosmetic only.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 2,
+     "note": "States the active level and the set formula, but not the supply range. D-54's reading names supply range as the first example note, and the 2.8 V floor matters here: every CN5711 rides VIN behind U17, and architecture.md weighs VIN droop against U20's 2.8 V (DS p1, p4 VCC 2.8-6 V). 'RISET to GND' is implied only by the row next to the bottom edge, and the CN5612 family trap ties RISET to VDD. Most relevant to D-51/D-53: A and B (U26, U27) sit at RISET 30k, which is the DS p3/p5 maximum ('RISET's maximum value is 30K ohm'). The glyph leaves that ceiling to the hidden Description.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-judge-3",
+   "design_id": "flow-first",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "The glyph is DS p2 Figure 1 redrawn pin for pin. VCC 3/4 sit on top right of centre, with CE 8 top-left, ISET 1 lower-left, LED 5/6 upper-right, NC 7 lower-right level with ISET, and GND 2 at the bottom. A reader holding the datasheet matches it instantly. 'ILED = 1800V/RISET' plus 'RISET to GND' mark it as a resistor-set LED current driver and close the CN5612 RISET-to-VDD trap. There is no class caption, and the sourcing direction is carried only by the pin name and output type (DS p3).",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pins and types match pins.json and DS p1/p3 exactly. Each note quotes a page: '2.8 V to 6 V' (p1 features, p4 VCC row), 'high = on' (p3 pin 8), 'ILED = 1800V/RISET' (p3, p5), 'RISET to GND' (p3 pin 1, p5). There is no block diagram (D-54) and I found no contradiction.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Body 33.02 x 20.32 mm. It carries four notes, a little over D-54's 'a short note or two', though each is one short line. Two empty left rows separate CE from ISET, and a bottom band holds only 'RISET to GND' and the GND/PAD names. The duplicate bold 'CN5711' over the Value is shared with the other designs.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "In the fanout VCC 3/4 sit at 2.54 mm on one column, so one short tie hangs the bypass above the body. Their two rotated VCC labels stand side by side and still read as two. GND 2 and PAD 9 sit directly below the same columns and tie to one ground symbol. CE is on the top row for its SVDD pull-up and enable cell. ISET is the low row, and RISET drops uncrossed. LED 5/6 tie on adjacent rows and leave as one wire to the anode. Nothing crosses.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "It carries the two notes D-54 names (supply range, active level), the set formula and the RISET return. That is enough to wire every instance (U20, U22, U26, U27) from the glyph. It does not show the RISET 30 kOhm ceiling (DS p3, p5), and A and B on D-53 run exactly at it with RISET 30k for 60 mA. The CE threshold (VCEH 2.3 V min, p4) is left to the Description, so SVDD at 3.18-3.42 V has to be checked off-glyph.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-judge-3",
+   "design_id": "annotation-rich",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "'to LED anode' beside LED 5/6 states the high-side source direction (DS p3 'LED current flows out of this pin'), and 'RISET to GND' closes the CN5612 trap. These are the strongest trap cues of the three. But VCC 3/4 sit on the left edge, not the top edge, which breaks the DS p2 Figure 1 picture and D-54's 'supply on top'. Eight lines of note text compete with the pin names for the eye.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "Pins and types match pins.json and DS p1/p3. Most notes are verbatim: '2.8-6V' (p4), 'ILED <=1.5A' (p1), 'IOC 1.5-2.3A' (p4 IOC min/max), the formula and '<=30kOhm' (p3, p5). Two notes drop their conditions. 'H >=2.3V: ON' and the 0.6 V low level are specified at VCC = 3.7 V only (p4 header), while every CN5711 here runs on VIN. '<=1uA' is IVCC2 at VCE = 0 V (p4), but the note pins it to the whole 'L <=0.6V' band. The VCC edge also departs from Figure 1 (p2).",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "Eight body note lines ('2.8-6V', 'to LED anode', 'ILED <=1.5A', 'IOC 1.5-2.3A', two CE level lines, the formula, 'RISET to GND, <=30kOhm') against D-54's 'a short note or two'. The body is the largest of the three (30.48 x 22.86 mm). IOC and 'ILED <=1.5A' do not change how the part is wired on this board, where the channels run 60 mA to 1.418 A.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 2,
+     "note": "VCC 3/4 on the left edge share it with CE and ISET, so the VCC bypass, the CE pull-up and HL2300 drain (D-51) and RISET all crowd one edge. The D-55 VCC power symbol lands sideways beside signal labels. No fanout render was shipped, so I built one in my own scratch with the flow-first arena script. It is otherwise clean: LED 5/6 tie, GND/PAD tie, NC 7 crossed. The DS p2 Figure 1 shape, power down from the top, is lost.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "The most expressive of the three. The ISET note states the 30 kOhm ceiling, exactly the A and B setting (U26, U27 at RISET 30k for 60 mA, D-53, DS p3/p5). The CE high level of 2.3 V lets a reader check SVDD at 3.18-3.42 V (architecture.md) against VCEH (p4) without opening the datasheet. 'to LED anode' and 'RISET to GND' state both family traps, and the supply range is printed.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "major",
+     "summary": "VCC 3/4 are drawn on the left edge, rows 0-1. D-54 (owner rule) asks for 'supply pins on top', and the datasheet's own grouping (DS p2 Figure 1) puts VCC 3, 4 on the top edge. The generator's docstring claims 'supply pins on top' but seats them left. The other two designs show that seat_pin can put them on the top edge. This is a style and grouping departure, not a silicon error.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    {
+     "severity": "minor",
+     "summary": "'H >=2.3V: ON' / 'L <=0.6V' drop the VCC = 3.7 V test condition of DS p4 Electrical Characteristics. On this board each CN5711's VCC is VIN, not 3.7 V.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    {
+     "severity": "minor",
+     "summary": "'L <=0.6V: OFF, <=1uA' attaches the 1 uA shutdown maximum to the whole CE-low band. DS p4 specifies IVCC2 1 uA only at VCE = 0 V.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    {
+     "severity": "minor",
+     "summary": "Artifact gap, not a datasheet issue: annotation-rich ships no CN5711_unit1_fanout.png, and its render.sh draws no arena page, unlike the other two designs. I judged its wiring from my own scratch fanout.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   ]
+  }
+ ],
+ "selection": {
+  "winner_design_id": "flow-first",
+  "grafts": [
+   {
+    "id": "G1",
+    "from": [
+     "judge 1 finding + graft 1",
+     "judge 2 graft 4"
+    ],
+    "what": "Body width 35.56 (a 5.08 multiple): the side pin ends move to x = \u00b122.86, so every pin end lands on 100 mil. flow-first's 33.02 put them at \u00b121.59.",
+    "source": "guide docs/02 'Pins must land on the 1.27 mm grid ... centred edges use a 2xGRID multiple (5.08 mm)'; KLC S4.1",
+    "judge_basis": "Judge 1 (look) minor finding and graft 1: CE/ISET/LED/NC ends at \u00b121.59 sit 50 mil off the 100 mil grid of VCC/GND/PAD, 'Fix: body \u00b117.78 and side pin ends at \u00b122.86'. Judge 2 (look) graft 4 asked for the same move to \u00b122.86, and its wiring note calls \u00b121.59 'off a 2.54 placement grid'. Judge 3 (look) did not raise it.",
+    "in_final": "yes: sides x \u00b122.86; top/bottom x 7.62 / 12.7 at y \u00b115.24"
+   },
+   {
+    "id": "G2",
+    "from": [
+     "judges-d54 1 and 2 (e73dd31)"
+    ],
+    "what": "Clear the top-right corner: the supply note ends 1.905 mm before the VCC 3 name, and the VCC names end 2.3 mm above the LED 5 name (with F1).",
+    "source": "e73dd31 render geometry",
+    "judge_basis": "No look judge raised the corner. The graft stands from the D-54 round (judges-d54 1 and 2) as the clearance F1 needs, no look judge objected, and QA's arena run of record on the final passes (pmic-test-arena eb084ec), where a LEG-INK failure would fail it.",
+    "in_final": "yes"
+   },
+   {
+    "id": "G3",
+    "from": [
+     "annotation-rich"
+    ],
+    "what": "CE note 'H \u22652.3V = ON' (one line) replaces 'high = on'. annotation-rich's second CE line is not taken.",
+    "source": "DS p3 pin 8 'A high input will put the device in the normal operating mode'; DS p4 VCEH 2.3 V Min at VCC 3.7 V (condition in Description, G6)",
+    "judge_basis": "Judge 2 (look) graft 2 asked for exactly this line ('H >= 2.3V = ON ... Keep it to one line under D-54'). Judge 1 (look) graft 4 proposed it as optional ('high >=2.3V = on', DS p4 VCEH at VCC 3.7 V). Judge 3 (look) graft 4 dissented: print the condition or keep 'high = on'. The chair takes the majority (see not_grafted N3).",
+    "in_final": "yes: 'H \u22652.3V = ON' at (-7.623, 5.08)"
+   },
+   {
+    "id": "G4",
+    "from": [
+     "annotation-rich"
+    ],
+    "what": "The second ISET line 'RISET to GND, \u226430k\u03a9' replaces 'RISET to GND'.",
+    "source": "DS p3 pin 1 'connected between ISET pin and GND', 'RISET\u2019s maximum value is 30K ohm.'; DS p5 the same",
+    "judge_basis": "All three look judges asked for it: judge 1 graft 3, judge 2 graft 1, judge 3 graft 1. Each cites A and B (U26/U27) at RISET 30k (D-53), which is the datasheet maximum.",
+    "in_final": "yes: at (-3.516, -5.08)"
+   },
+   {
+    "id": "G5",
+    "from": [
+     "annotation-rich"
+    ],
+    "what": "'to LED anode' on the midline between LED 5 and LED 6, ending 1.27 mm before their names.",
+    "source": "DS p3 '5\uff0c6 LED The Anode of LED. LED\u2019s anode is connected to this pin, and LED current flows out of this pin.'",
+    "judge_basis": "Judge 1 (look) graft 2: one short note that closes the family's sink/source trap (CN5612 sinks). Judge 3 (look) graft 3: 'if one more note is allowed, prefer ... \"to LED anode\" ... over a class caption'. Judge 2 (look) did not ask for it; its annotation-rich identity note credits the printed anode cue as one of the two family traps. 2 of 3 judges for it.",
+    "in_final": "yes: at (6.952, 1.27)"
+   },
+   {
+    "id": "G6",
+    "from": [
+     "judges-look 1-3 minors",
+     "judges-d54 2 and 3",
+     "datasheet-order"
+    ],
+    "what": "Description: '+-5 % (DS p1; DS p4 at RISET 1.8 kOhm, VCC 3.7 V, 25 C)'; 'VCEH 2.3 V min, VCEL 0.6 V max at VCC 3.7 V, shutdown current under 1 uA at CE 0 V (DS p4)'; 'tie LED 5 and 6 (DS p2 Figure 1, p3)', with no equal-current claim; temperature regulation worded as p4 words it.",
+    "source": "DS p1 Features; DS p4 table header and rows; DS p2 Figure 1",
+    "judge_basis": "Look judges 1-3 each filed annotation-rich minors for printing the CE levels without p4's VCC 3.7 V condition and for attaching IVCC2 to the whole low band. The final keeps both conditions, in the Description. The +-5 % citation and the equal-current wording come from the D-54 round (judges-d54 2 and 3; datasheet-order).",
+    "in_final": "yes (Description property)"
+   },
+   {
+    "id": "G7",
+    "from": [
+     "datasheet-order"
+    ],
+    "what": "Tooling, no ink: _check_captions in gen.py checks each note's quote on its cited page when the datasheet text is present. QA's sandbox binds only the generator, so the check is skipped there.",
+    "source": "datasheet-order/gen.py _check_captions",
+    "judge_basis": "Chair: makes each body note's silicon-faithfulness checkable on rebuild. datasheet-order is an unjudged extra design this round; the graft adds no ink.",
+    "in_final": "yes (final/gen.py)"
+   },
+   {
+    "id": "F1",
+    "what": "VCC 3 / VCC 4 on the top edge 5.08 mm apart (x 7.62 / 12.7), with GND 2 / PAD 9 under them. LED 5 / LED 6 drop one row (y 2.54 / 0) so the VCC 4 name clears the LED names at width 35.56. NC 7 follows LED 6 onto ISET's row (y -2.54).",
+    "evidence": "library-QA's arena build (e73dd31): flow-first 08389c18 and datasheet-order b5325ca9 FAIL LEG-INK C1 on two hung VCC labels 2.54 mm apart (guide issue #496). QA's arena run of record on the final passes: pmic-test-arena eb084ec, intake clean, arena PASS, unit page 688b9f64.",
+    "judge_basis": "Judge 2 (look) graft 4: 'space VCC 3/4 5.08 apart so each takes a D-55 power symbol'. Judge 3 (look) on internals-maximal: 'VCC 3/4 sit 5.08 mm apart on top, so their two VCC labels never merge'. Cost: judge 1 (look) credited flow-first's 2.54 mm pair for sharing one rail wire 'as in Figure 1', and judge 3 credited its 2.54 mm ties.",
+    "datasheet_fit": "DS p2 Figure 1 spaces VCC 3 and VCC 4 about 0.4 of the body width apart, draws CE 8 above LED 5 and puts NC 7 level with ISET 1. Every pin stays on the side Figure 1 gives it."
+   }
+  ],
+  "final_symbol_sha256": "0882138c7ff024035971f335de4e130685bf464bbaf18833308a2d5f20d5ecf0"
+ },
+ "final_renders": [
+  {
+   "id": "qa:u1",
+   "unit": 1,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png",
+   "sha256": "688b9f642909ba19416b271323bca71a494762af9c027d62de8d31c5bd0f5789",
+   "background": "#f5f4ef",
+   "symbol_sha256": "0882138c7ff024035971f335de4e130685bf464bbaf18833308a2d5f20d5ecf0",
+   "nonce": "LOOK-4XKXLMWJFFWV",
+   "nonce_sha256": "8491bc8e2b3cfce58f9a4e36564a35cb7ebe313a36a9411a780d738800e0c2b1"
+  }
+ ],
+ "regraders": [
+  {
+   "reviewer_id": "look-regrader-1",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Page shows CN5711 title, pins 1 ISET, 3/4 VCC, 5/6 LED, 7 NC, 8 CE, 2 GND, 9 PAD with datasheet names; 'to LED anode' beside the LED pins and 'RISET to GND' beside ISET make the high-side source and the GND return unmistakable (DS p3 pin table: LED anode, current flows out; RISET between ISET and GND).",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pin numbers/names match DS p3 (1 ISET, 2 GND, 3,4 VCC, 5,6 LED, 7 NC, 8 CE, 9 Exposed Pad -> PAD per pins.json). Notes match: '2.8V to 6V' (p4 VCC range), 'H >=2.3V = ON' (p4 VCEH 2.3 V), 'ILED = 1800V/RISET' and '<=30k' (p3 ISET row). LED 5 is the output arrow, LED 6 the passive square, per packet; NC has the cross. PAD tied with GND at one junction, as p3 'Soldered to GND'. No invented internals.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Pin table with no block diagram, per D-54; supply on top, GND bottom. Four small notes (supply range, CE level, LED anode, ILED formula) are slightly more than 'a note or two' but each is a datasheet fact and the body is uncluttered.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "Inputs left (CE, ISET), outputs right (LED pair), VCC up, GND/PAD down; twin pins on adjacent 2.54 mm rows so a single anode net and a single rail reach both easily. Harness connectors only, so no judgment on the symbol's own labels.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "The page lets the same symbol serve U20/U22 (2.2k/2.4k) and U26/U27 (30k, D-51/D-53) since the note states only the formula and the 30k ceiling (DS p3); 60 mA at 30k follows from 1800/30000 and is not claimed on the page. Both LED pins and both VCC pins are drawn so no pad is left open.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-regrader-2",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Page shows CN5711 title, VCC 3 and 4 on top, ISET/CE left, LED 5/6 and NC 7 right, GND 2 and PAD 9 bottom. Caption 'to LED anode' plus ILED = 1800V/RISET and 'RISET to GND' read as a high-side resistor-set source; matches DS p3 pin table (LED anode, current flows out; RISET to GND).",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pin names/numbers match DS p3: 1 ISET, 2 GND, 3,4 VCC, 5,6 LED, 7 NC, 8 CE, 9 pad. Pin 5 drawn as output, pin 6 passive, pin 9 named PAD, per packet/pins. Captions 2.8V to 6V (p4 VCC range), CE H >=2.3V (p4 VCEH 2.3 V min), RISET <=30k (p3), 1800V/RISET (p3). NC carries a no-connect cross. No invented internals.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "No block diagram, no extra pins, body compact. Five captions inside the body (2.8V to 6V, H >=2.3V = ON, to LED anode, ILED formula, RISET to GND <=30k) is slightly more than D-54's 'a note or two', though each is datasheet-backed and none crowds the pin names.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "Supply pins on top, GND and PAD on the bottom, inputs left, LED outputs right; the twin VCC and LED pairs are adjacent and PAD sits beside GND so one ground bus ties both (p3 pad soldered to GND). Nothing crosses; D-51/D-53 RISET 30k for A/B is within the stated <=30k.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "Carries what the board needs: ISET-to-GND resistor rule, active-high CE threshold, anode-side source, paired pins, exposed pad as GND, NC. Thermal fold-back and IOC (p4) rightly left to the description.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "minor",
+     "summary": "Five in-body captions exceed D-54's 'a short note or two'; the CE and RISET captions could be trimmed, though all match DS p3/p4.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-regrader-3",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Body title CN5711, 'to LED anode' beside pins 5/6 and 'ILED = 1800V/RISET' with 'RISET to GND, <=30k' read as a high-side resistor-set source with active-high CE at once; matches DS p3 pin table (LED anode, current flows out; RISET to GND) .",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pins 1 ISET, 2 GND, 3/4 VCC, 5/6 LED, 7 NC (no-connect X), 8 CE, 9 PAD all match DS p3 table; pin 5 shows an output flag and pin 6 a passive square as packet/pins.json require; VCC 2.8V to 6V and CE H >=2.3V match DS p4 (VCC 2.8-6, VCEH 2.3 min); 30k max matches p3. No invented internals.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "D-54 followed: VCC pins on top, GND and PAD on bottom, CE/ISET left, LED/NC right, three short notes inside the body, datasheet pin names, no block diagram. Nothing superfluous.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "Inputs left, supply top, ground bottom, outputs right: easy to wire. Both LED pins and both VCC pins stay separate pins on the same net, so the user ties two pairs; GND and PAD need a join (QA harness joins them). Acceptable, mirrors the 8-pin package.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "Carries the formula and 30k limit so A/B at 30k (60 mA, D-53) and U20/U22 lower RISET are all readable from one symbol; the page does not state the 1.5A max or the 60 mA setting, which is correctly left to the schematic and decisions D-51/D-53.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-regrader-4",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Body prints CN5711, VCC pins 3/4 on top, GND/PAD 2/9 on bottom, CE and ISET on left, two LED pins 5/6 on right with note 'to LED anode'; reads as a high-side source driver at a glance, matching DS p3 'LED's anode is connected to this pin, current flows out'.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pin names/numbers match DS p3 table (1 ISET, 2 GND, 3,4 VCC, 5,6 LED, 7 NC, 8 CE, 9 Exposed Pad -> PAD). Captions '2.8V to 6V' (p4 VCC), 'H >=2.3V = ON' (p4 VCEH), 'ILED = 1800V/RISET', 'RISET to GND, <=30k' (p3). LED 5 output, LED 6 passive, NC crossed, PAD tied to GND; no invented internals.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "No block diagram, only four short captions and a title; slightly more ink than the one-or-two notes of D-54 (CE, ISET, supply and LED notes), but each is datasheet-backed and none crowds the pins.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "Supply top, ground bottom, enable/set on left, load right; paired pins separated by 2.54 mm-class spacing with distinct numbers visible. ISET and CE are clearly the only left-side wiring points; RISET to GND at 30k (D-53 A/B) and 2.2k/2.4k (D-51) are all within the stated formula.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "Pin table, formula and limits let a reader choose RISET for DENSE/SPARSE (1800/RISET) and A/B at 30k (60 mA per D-53) without opening the datasheet; the 30k max is printed. Does not print 1.5 A max, but that is not required by D-54.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-regrader-5",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Page shows CN5711 title, CE/ISET inputs left, LED outputs right with 'to LED anode', ISET note 'ILED = 1800V/RISET', 'RISET to GND, <=30k' (DS p3 pin 1 and 5,6 rows). Reads at once as a high-side, resistor-set current source, not the CN5612 sink.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pins match DS p3 table and pins.json: 1 ISET, 2 GND, 3/4 VCC, 5/6 LED, 7 NC (no-connect X), 8 CE, 9 PAD. LED 5 drawn as output flag, 6 passive. '2.8V to 6V' and 'H >=2.3V = ON' match p4 VCC and VCEH rows. No invented internals; formula and 30k max match p3.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Compact box, no block diagram, datasheet pin names, nothing redundant. Five captions (2.8V to 6V, CE H note, to LED anode, ILED formula, RISET note) are slightly more than D-54's 'a note or two'; the formula and RISET lines overlap in meaning. 'to LED anode' sits between the LED pins, a little crowded.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "Supply pins 3/4 on top, GND 2 and PAD 9 on the bottom (DS p3 pin 9 'Soldered to GND'), CE and ISET left, LED pair right, NC at the right edge. Each pin faces the net it joins. The pin 5 output / 6 passive split avoids a double-output ERC conflict on the shared anode net.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "The page carries the RISET-to-GND rule and 30k max, which is what A and B at 30k (D-53) and DENSE/SPARSE need. The page does not state the 1.5A limit or 60 mA behavior, but that belongs in the description or the decisions, not the ink. Good for all four instances.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "minor",
+     "summary": "Five captions exceed D-54's 'a short note or two'; the 'to LED anode' caption sits between the two LED pins and the ISET and formula notes overlap in meaning. Trimming to two or three would match the style rule.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   ]
+  }
+ ],
+ "binding": {
+  "tool": "library-qa/council.py look",
+  "by": "lead-996565",
+  "agents": [
+   "council-designer-annotation-rich",
+   "council-designer-flow-first",
+   "council-designer-internals-maximal",
+   "look-judge-1",
+   "look-judge-2",
+   "look-judge-3",
+   "look-regrader-1",
+   "look-regrader-2",
+   "look-regrader-3",
+   "look-regrader-4",
+   "look-regrader-5"
+  ],
+  "candidate": {
+   "sha256": "ecec2446604ffbf6dd1d6412b9a9d155e79816209d609f5c84da6e422b1cd3bc",
+   "files": {
+    "CN5711.kicad_sym": "0882138c7ff024035971f335de4e130685bf464bbaf18833308a2d5f20d5ecf0",
+    "CN5711_unit1.png": "54103b3f2e4f8bb7627549ff8b066e4d54ff9a67211cefe46693ee6cfc4e37cf",
+    "CN5711_unit1_fanout.png": "83cfc95047473b192abd57b2e9ed214a3d4cc0cd89810fe7198d1d687843bef0",
+    "SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm.kicad_mod": "617edb7522ffa84d10445c614347b4980fa9dec907a8ff07f8725979b5e9a79e",
+    "SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm.step": "cd5a14467f3cef6ef62f7225c7d26b97459f809f148127ca596e53d7c1a7032a",
+    "SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm.wrl": "2483db77388dc7d0845c3c5691dac12bafbc9c4a59970cb220cf632f1487eea7",
+    "author.json": "6d282dd4f99e018f5905dcdd803e6d1112cb2d78f8b6b380250a1fb4e8b1ef34",
+    "comparable_ds.json": "9b6fb1d23d177a3a71b9b37477624f5151d228abbee5539a5fe8af413d2fdea6",
+    "council/annotation-rich/CN5711.kicad_sym": "d7f974e025d6ed715fb34a3ea559ce12fec0f6f63d306a6a2ecf2aabf5025c63",
+    "council/annotation-rich/CN5711_unit1.png": "88fe9b08d634122a00b81ffc11a68076c5b252413e44c32c1c92c8482d72a9bb",
+    "council/datasheet-order/CN5711.kicad_sym": "b5325ca95bad111612ad68f14d86f881303839cb9ee09af5f7fcbc04be8f64c0",
+    "council/datasheet-order/CN5711_unit1.png": "be8cb35689eef55ed697ea18a9cf5ae341415e564af22a4294eb45ec30c35e6f",
+    "council/datasheet-order/CN5711_unit1_fanout.png": "8454bc6f3a68d7f21567bee6ba62daa9c33a322dda42b7e7f055fa3dc41ba86f",
+    "council/flow-first/CN5711.kicad_sym": "08389c18295a4a7c6e2ca309908a5c49e7ba7c397729362b2e6645a023041b3c",
+    "council/flow-first/CN5711_unit1.png": "76f5d6c779223d14e2694642bd9b8f4929016b03d52022106de22d4a2af31907",
+    "council/flow-first/CN5711_unit1_fanout.png": "6182e14acb3f0d89ede850d9e3ce42b142c1968a2447fd228be9575921798245",
+    "council/internals-maximal/CN5711.kicad_sym": "0094cdeb2817828e3f8777dfa9e6adfa73da0322103f7c9e6d0fb14d6e61666c",
+    "council/internals-maximal/CN5711_unit1.png": "5cfdd7ca9619ae20a1fba6ec93bed80dc8439088e42a4b99c234d69998d017cb",
+    "council/internals-maximal/CN5711_unit1_fanout.png": "5cdd93bb577c8def3df4dc2e6993608d7bab991314a4ba6c801d75f38f660fa6",
+    "facts.json": "cd307e73cc1567e1e35647d85c23c24c3f4e21c580b0dfd044fe63a9a385b563",
+    "fanout_page.py": "c71096411d176a97b35c37b42f0cb01c2d9bf96432e8a8382f5ba6b04a49fb7d",
+    "footprint.py": "ce5308dce5a02ba4088847f554ba34c8eaac3a5c9da03875d4e8712c97c4e6d4",
+    "gen.py": "6fd20eab30781a62c0f5edc10422f5f71c890289832029bdfa2fd4890477d972",
+    "model.py": "9e65ecb6a382b1d7e021b0e3bd65bb401e79e86587208cce9d39af191595c98b",
+    "pin-truth.json": "ebcc2d1cb8789ccde0a28e2bd080aed133a7fc5b73b42b576198f3e3662d84d7",
+    "render.sh": "1a9774b834efb4d00cc064097e8f499fabde87f1d9346397e4d32b22a956b617"
+   }
+  },
+  "verdict": "pass"
+ }
+}
