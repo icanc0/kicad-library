@@ -1,0 +1,92 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "TPS2553DDBVR",
+ "symbol": {
+  "asset_path": "TPS2553DDBVR.kicad_sym",
+  "internal_name": "TPS2553DDBVR",
+  "sha256": "4aae91ec11e3669d1dea14fe2ef82dda34376799a9a8ea7fae74efba007d84b6"
+ },
+ "archetype": "identity-topology",
+ "units": [
+  {
+   "unit": 1,
+   "role": "the whole part: TPS2553D precision adjustable current-limited power-distribution switch, all six pins (SLVSDL7 p4 Pin Functions, TPS2553D DBV column), drawn documentation-first (D-54): IN 1 top-left opposite OUT 6, EN 3 under IN, ~{FAULT} 4 under OUT, GND 2 and ILIM 5 on the bottom edge",
+   "presentation": "pin-table",
+   "identity_features": [
+    "series path across the top row: IN 1 power_in on the left opposite OUT 6 power_out on the right (supply on top for a series switch, the Lead's ruling in design/work/lead-996565.md under D-54); every pin end on 2.54 mm, side rows 5.08 mm apart",
+    "EN 3 input with 'active high' (graft G1; DS p4 'EN = Active High for the TPS2553D', no overbar: the EN-bar row is the TPS2552D's) in one left-flush note column with IN's supply range '2.7-6.5V' (DS p5 VIN)",
+    "~{FAULT} 4 open_collector on the right under OUT (DS p4 'Active-low open-drain output', overbar as printed)",
+    "GND 2 power_in and ILIM 5 passive on the bottom edge 5.08 mm apart, '15k-232k' / 'to GND' beside ILIM (DS p5 'from ILIM to GND 15 232 k\u03a9'), so RILIM drops straight to a ground beside GND; ILIM passive, not the table's O (DS p17 'ILIM should never be driven directly with an external signal')",
+    "bold unit title TPS2553DDBVR, no internal block diagram and no class caption (D-54 overrides L17 functional ink; graft G2 holds its note budget): unit 1 presentation pin-table (selection 66cfac8 final.presentation); Footprint Package_TO_SOT_SMD:SOT-23-6, six leads, no exposed pad (DS p4 PowerPAD row '-', p32 DBV0006A)"
+   ]
+  }
+ ],
+ "evidence": {
+  "comparable_ds": {
+   "path": "comparable_ds.json",
+   "sha256": "8cb1713cf4eb1eae6ca09ed12daa656850b34a648e1e74cb94a1819e26e7977a",
+   "own_sha256": "46d2dd4cbec8c2abfbb3a1479b623471f16dc8749f1a802e3320ffa3d5d403ed",
+   "comparable_count": 5
+  },
+  "pin_truth": {
+   "path": "pin-truth.json",
+   "sha256": "f1f03edc3288a6ce98fe3314c93ba4467be5cf1d047c57d5a04a711f18ee7f15",
+   "coverage": "all"
+  }
+ },
+ "generator": {
+  "contract": "python-cli-output-v1",
+  "path": "gen.py",
+  "sha256": "ef8c654215a050523d5591957c28b417ee32b8286dd056d305455d6b17ea8be8",
+  "inputs": [],
+  "expected_symbol_sha256": "4aae91ec11e3669d1dea14fe2ef82dda34376799a9a8ea7fae74efba007d84b6"
+ },
+ "look": {
+  "receipt_path": "symbol-look.json",
+  "sha256": "dac96a16ea20bc45eedcf49e14842cb72d98d6262df3fdadf317558cdd659792"
+ },
+ "binding": {
+  "tool": "library-qa/council.py quality",
+  "by": "lead-996565",
+  "agents": [
+   "council-designer-annotation-rich",
+   "council-designer-flow-first",
+   "council-designer-internals-maximal",
+   "look-judge-1",
+   "look-judge-2",
+   "look-judge-3",
+   "look-regrader-r2-1",
+   "look-regrader-r2-2",
+   "look-regrader-r2-3",
+   "look-regrader-r2-4",
+   "look-regrader-r2-5"
+  ],
+  "candidate": {
+   "sha256": "916a927487d612ce7834563b112308ddc29a1f82aac0e7ea00428a1ea5c0df59",
+   "files": {
+    "TPS2553DDBVR.kicad_sym": "4aae91ec11e3669d1dea14fe2ef82dda34376799a9a8ea7fae74efba007d84b6",
+    "TPS2553DDBVR_unit1.png": "43a85fb679ea18b2a9212a4cf7714b04cb41190a4660459275866549f2c13df9",
+    "TPS2553DDBVR_unit1_fanout.png": "8d0d2926ef5c53fa80c26c572c5f03d85a94bfe4dc3fdf3fa2ef2c3623cb7b40",
+    "author.json": "9e67612025066c484dc5939e243ae1c4e2cb4ff312bec10c31e484b1b2895aaa",
+    "comparable_ds.json": "8cb1713cf4eb1eae6ca09ed12daa656850b34a648e1e74cb94a1819e26e7977a",
+    "council/annotation-rich/TPS2553DDBVR.kicad_sym": "e6e849dafe5e62288268be875249edf7f781c169496ab6042c5ac749ab62c7aa",
+    "council/annotation-rich/TPS2553DDBVR_unit1.png": "28671db22b21267dfc48e26893294721f4d9c3aa0cba7c30e577f7b3bc32263d",
+    "council/annotation-rich/TPS2553DDBVR_unit1_fanout.png": "1fc86a2b83d3f6ac01f1a4bf7f9b4877e5eedadf0b3225ca1a7b41de094e061a",
+    "council/datasheet-order/TPS2553DDBVR.kicad_sym": "9e71580a468acaeea549fded49b39bbbaed598027aaf7b4e6bd2995075c0b2b1",
+    "council/datasheet-order/TPS2553DDBVR_unit1.png": "bc3f66588984c762fae04eb5d20a5447601570f9e009b536b315f365bbe864fe",
+    "council/flow-first/TPS2553DDBVR.kicad_sym": "b4f990018facbeee1b81208b8317366f263cffb182fd41a60d20dbfb9be5e41f",
+    "council/flow-first/TPS2553DDBVR_unit1.png": "9c2b5baec420130d0ac39384ed9cbf8b599c8b9278506a0ab15775e53e1241a4",
+    "council/flow-first/TPS2553DDBVR_unit1_fanout.png": "3f8b453c214dd3ed5be8e71f12e0f2ea5aae71ecd95b928c3da2ff6ff977aeb7",
+    "council/internals-maximal/TPS2553DDBVR.kicad_sym": "3db0244ff9bbcda4a1ba8fbeb8cff90220233abd4e33daf8cbfb749890fe660e",
+    "council/internals-maximal/TPS2553DDBVR_unit1.png": "94e8dcb35ddbdd1d631e3c62a66ea737e851b33295af35053b0676e286879d93",
+    "council/internals-maximal/TPS2553DDBVR_unit1_fanout.png": "672768c689a13031ef30e3e5c2e63a57e1b90698a4516694a5dafee33183040e",
+    "facts.json": "96ef39eb0d936ba30e7a843051a228fe0afc0787ba0da16b689822430ef39a23",
+    "fanout_page.py": "bc6662e80c02880ba99660345e952b43832091df5c4204989f325d419791d648",
+    "gen.py": "ef8c654215a050523d5591957c28b417ee32b8286dd056d305455d6b17ea8be8",
+    "pin-truth.json": "f1f03edc3288a6ce98fe3314c93ba4467be5cf1d047c57d5a04a711f18ee7f15",
+    "render.sh": "d9cf75b8c99563279deb05ad7ee450aa1ac6fcde34a6323ee9acbd7ba535f077"
+   }
+  },
+  "verdict": "pass"
+ }
+}

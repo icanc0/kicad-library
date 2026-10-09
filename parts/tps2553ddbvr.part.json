@@ -1,0 +1,108 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "tps2553ddbvr",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Texas Instruments",
+      "normalized": "texas-instruments"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "TPS2553DDBVR",
+      "canonical": "TPS2553DDBVR",
+      "comparison_key": "TPS2553DDBVR",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C521201"
+      }
+    ],
+    "description": "Central library symbol TPS2553DDBVR promoted from truedepth-shim."
+  },
+  "names": {
+    "canonical": "TPS2553DDBVR",
+    "aliases": [],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/TPS2553DDBVR.kicad_sym",
+        "name": "TPS2553DDBVR"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/TPS2553DDBVR.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "4aae91ec11e3669d1dea14fe2ef82dda34376799a9a8ea7fae74efba007d84b6",
+      "internal_name": "TPS2553DDBVR"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "be06735f0f0af460ae80f21b7237208bc38495d7",
+    "source_board": "truedepth-shim",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/TPS2553DDBVR.kicad_sym",
+        "evidence": "First-import fit pass: unit 1 looked at on QA page 500421b8 (LOOK-NKWMKTXPX4ET) and the #ffffff render: 1 IN power_in, 3 EN input 'active high', 6 OUT power_out, 4 ~{FAULT} open_collector with overbar, 2 GND power_in bottom, 5 ILIM passive bottom with '15k-232k / to GND'; matches SLVSDL7 p4 DBV top view (vision read) and Pin Functions; no PowerPAD pin. Land stock SOT-23-6 f341c73a fits DBV0006A p32/p33."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "unit 1 looked at on QA page 500421b8 (LOOK-NKWMKTXPX4ET) and the #ffffff render: 1 IN power_in, 3 EN input 'active high', 6 OUT power_out, 4 ~{FAULT} open_collector with overbar, 2 GND power_in bottom, 5 ILIM passive bottom with '15k-232k / to GND'; matches SLVSDL7 p4 DBV top view (vision read) and Pin Functions; no PowerPAD pin. Land stock SOT-23-6 f341c73a fits DBV0006A p32/p33.",
+      "note": "",
+      "pin_gate": {
+        "symbol": "TPS2553DDBVR",
+        "lcsc": "C521201",
+        "facts_checked": true,
+        "source": "facts",
+        "board_context": null,
+        "state": "clean",
+        "gaps": [],
+        "allow_pin_gaps": null
+      }
+    },
+    "quality": {
+      "state": "council-graded",
+      "symbol_sha256": "4aae91ec11e3669d1dea14fe2ef82dda34376799a9a8ea7fae74efba007d84b6",
+      "installed_symbol_sha256": "4aae91ec11e3669d1dea14fe2ef82dda34376799a9a8ea7fae74efba007d84b6",
+      "footprint_sha256": null,
+      "installed_footprint_sha256": null,
+      "quality_receipt": {
+        "path": "quality/tps2553ddbvr/symbol-quality.json",
+        "sha256": "8a9b2b7f5b62b4853e9f2881e677eb0b1e53ba2b4cdb298c7ce9d09bee2473ff"
+      },
+      "look_receipt": {
+        "path": "quality/tps2553ddbvr/symbol-look.json",
+        "sha256": "dac96a16ea20bc45eedcf49e14842cb72d98d6262df3fdadf317558cdd659792"
+      },
+      "arena_manifest": {
+        "path": "quality/tps2553ddbvr/arena-manifest.json",
+        "sha256": "baa65188005b41a2727a59ecfaea7bbf911fd5c258105f9716900b2e95e5718a"
+      },
+      "arena_manifest_mtime": "2026-10-09T11:20:21+00:00",
+      "arena_manifest_mtime_note": "st_mtime of QA's arena-manifest.json when promoted — the arena render's clock, reset by any cp/checkout; the receipts carry no audit clock and now() is never written",
+      "admission": {
+        "path": "quality/tps2553ddbvr/admission.json",
+        "sha256": "00abde7df2da8515329a8d61724d7073f65f40c38fa26fab8bb1e626e207017e"
+      }
+    }
+  }
+}

@@ -1,0 +1,797 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "TPS2553DDBVR",
+ "symbol_sha256": "4aae91ec11e3669d1dea14fe2ef82dda34376799a9a8ea7fae74efba007d84b6",
+ "units": [
+  1
+ ],
+ "designs": [
+  {
+   "id": "internals-maximal",
+   "designer_id": "council-designer-internals-maximal",
+   "stance": "internals-maximal",
+   "symbol_path": "council/internals-maximal/TPS2553DDBVR.kicad_sym",
+   "symbol_sha256": "3db0244ff9bbcda4a1ba8fbeb8cff90220233abd4e33daf8cbfb749890fe660e",
+   "renders": [
+    {
+     "id": "design:internals-maximal:u1",
+     "unit": 1,
+     "path": "council/internals-maximal/TPS2553DDBVR_unit1.png",
+     "sha256": "94e8dcb35ddbdd1d631e3c62a66ea737e851b33295af35053b0676e286879d93",
+     "background": "#ffffff",
+     "symbol_sha256": "3db0244ff9bbcda4a1ba8fbeb8cff90220233abd4e33daf8cbfb749890fe660e"
+    }
+   ]
+  },
+  {
+   "id": "flow-first",
+   "designer_id": "council-designer-flow-first",
+   "stance": "flow-first",
+   "symbol_path": "council/flow-first/TPS2553DDBVR.kicad_sym",
+   "symbol_sha256": "b4f990018facbeee1b81208b8317366f263cffb182fd41a60d20dbfb9be5e41f",
+   "renders": [
+    {
+     "id": "design:flow-first:u1",
+     "unit": 1,
+     "path": "council/flow-first/TPS2553DDBVR_unit1.png",
+     "sha256": "9c2b5baec420130d0ac39384ed9cbf8b599c8b9278506a0ab15775e53e1241a4",
+     "background": "#ffffff",
+     "symbol_sha256": "b4f990018facbeee1b81208b8317366f263cffb182fd41a60d20dbfb9be5e41f"
+    }
+   ]
+  },
+  {
+   "id": "annotation-rich",
+   "designer_id": "council-designer-annotation-rich",
+   "stance": "annotation-rich",
+   "symbol_path": "council/annotation-rich/TPS2553DDBVR.kicad_sym",
+   "symbol_sha256": "e6e849dafe5e62288268be875249edf7f781c169496ab6042c5ac749ab62c7aa",
+   "renders": [
+    {
+     "id": "design:annotation-rich:u1",
+     "unit": 1,
+     "path": "council/annotation-rich/TPS2553DDBVR_unit1.png",
+     "sha256": "28671db22b21267dfc48e26893294721f4d9c3aa0cba7c30e577f7b3bc32263d",
+     "background": "#ffffff",
+     "symbol_sha256": "e6e849dafe5e62288268be875249edf7f781c169496ab6042c5ac749ab62c7aa"
+    }
+   ]
+  }
+ ],
+ "judges": [
+  {
+   "reviewer_id": "look-judge-1",
+   "design_id": "internals-maximal",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Bold MPN, the caption 'CURRENT-LIMITED SWITCH' (the SLVSDL7 p1 title words, p13 9.1) and IN->OUT straight across the top row make it read as a current-limited power switch at a glance. IN top-left counts as supply on top under the Lead ruling; GND is on the bottom (D-54).",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "All six pins match the SLVSDL7 p4 Pin Functions TPS2553D DBV column by number, name and type (1 IN power_in, 2 GND, 3 EN input with no overbar, 4 ~{FAULT} open_collector, 5 ILIM passive per p17, 6 OUT power_out). '2.7-6.5V' matches p5 7.3, so the 2.5 V value of the parent part is not carried over. '15k-232k to GND' matches p5 RILIM and p15 9.5.1. The Description's 1.295 A typ at 20k (p7), 75 mA ILIM-to-IN (p7, p15), OUT > IN + 135 mV, 4 ms (p7, p14) and OT immediate (p14) are all correct. No contradiction found.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "There is no internal ink, as D-54 asks. The body holds three notes: supply range, a class caption and a two-line RILIM note. The class caption is beyond D-54's 'a short note or two' (supply range, active level) and repeats the Description. The lower-left of the 25.4x15.24 body is empty. The MPN prints twice (bold body title plus the visible Value), a cost all three designs share.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "IN and EN are on the left 5.08 apart, OUT and ~{FAULT} on the right, GND and ILIM on the bottom 5.08 apart. RILIM therefore drops straight from ILIM to a ground beside GND, the short route p15 asks for. This board's EN-to-IN tie (architecture.md U17 paragraph; p4, p5 VEN to 6.5 V) is a straight jumper at the pin ends that crosses no other pin. Every pin end is on the 100 mil grid (x +-17.78/+-2.54, y 5.08/0/-12.7).",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "The body states the supply range (p5), the RILIM range and that it goes to GND (p5, p15), and the part class. It has no EN active-level note, although D-54 names active level and p4 makes polarity part-number dependent (TPS2552D EN-bar vs TPS2553D EN). The bare 'EN' name implies it but does not say it. Open drain on FAULT shows only through the overbar and pin type. The 75 mA ILIM-to-IN option appears only in the Description.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-judge-1",
+   "design_id": "flow-first",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "Bold MPN plus the datasheet pin names IN/OUT/EN/~{FAULT}/ILIM and the 'RILIM 15k-232k' note make it read as a resistor-programmed load switch. There is no class word, so 'current-limited' rides on the RILIM note alone. IN top-left counts as supply on top (Lead ruling); GND is on the bottom.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pins match the p4 TPS2553D DBV column by number, name and type. '2.7-6.5V' matches p5 7.3. 'H = ON' matches p4 'EN = Active High for the TPS2553D' and the EN row 'logic high turns on power switch'. 'RILIM 15k-232k' matches p4, p5 and p15. The Description's 85 mOhm (p7), no latch-off (p13), OUT > IN + 135 mV (p14) and FAULT deglitch 7.5/4/immediate (p7, p14) are correct. No contradiction found.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "Smallest body (25.4x12.7). The three notes are exactly what D-54 asks for (supply range on IN, active level on EN, RILIM range on ILIM), one short line each. There is no decorative or internal ink; the only spare ink is the MPN title that all three designs share.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "The power path runs straight along the top row. EN sits 2.54 under IN, so this board's EN-to-IN tie is a one-pitch jumper. ILIM beside GND on the bottom lets RILIM drop straight down (p15 short trace). However, the side pin rows (y 3.81, 1.27) and the bottom pin ends (y -11.43) are on the 50 mil grid, not 100 mil. gen.py's docstring claims 'Every pin tip sits on the 2.54 mm grid', which is true only for x. Wires still connect on the engine's 1.27 GRID, but this falls short of the 100 mil convention the other two designs meet.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "The body states supply range, active level and RILIM range: the D-54 note set. It does not say RILIM goes to GND (p5 defines it 'from ILIM to GND'). FAULT's open drain shows only through the pin type and overbar. The 75 mA ILIM-to-IN option, the reverse-voltage turn-off and the FAULT deglitch are only in the Description, which is acceptable under D-54.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-judge-1",
+   "design_id": "annotation-rich",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "No class word. The ILIM notes ('15k-232k to GND', 'or to IN: 75mA') and the FAULT notes say current-limited switch with a fault flag. Six caption lines on a 35.56x20.32 body make the glance read busier than the other two. IN top-left and GND alone on the bottom satisfy D-54 and the Lead ruling.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pins match p4 by number, name and type. The grouping copies the datasheet's own application box (p1 Simplified Schematic, p8 Figure 1, p18 Figure 24: IN, FAULT, EN left; OUT, ILIM right), with GND moved to the bottom per D-54, which is the closest reading of D-54's 'grouped the way the datasheet groups them'. Every note checks out: 2.7-6.5V (p5), active high (p4), open drain (p4), deglitch OC 7.5 ms / rev 4 ms typ (p7, p14), 15k-232k to GND (p5), 75 mA tied to IN typ (p7 50/75/100, p15). The deglitch line leaves out that OT is not deglitched (p14) but makes no claim against it. The Description's IOSnom = 23950/RILIM^0.977 matches p15 Eq. 1. No contradiction found.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "Six caption lines, where D-54 asks for 'a short note or two'. 'open drain' repeats what the overbar and pin type already carry. The deglitch timings (p7) are datasheet detail the Description already holds. The body is 35.56x20.32 mm, about twice the area of the others for six pins.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 2,
+     "note": "~{FAULT} sits between IN and EN on the left. On this board EN is tied to IN (architecture.md U17 paragraph) and FAULT is left open (D-45), so a straight vertical tie at the pin ends (x -22.86, y 7.62 to -2.54) would pass FAULT's pin end at y 2.54 and short the open-drain FAULT to IN (p5: FAULT sink 25 mA abs max). The tie has to jog out around it. The output also sits on the input edge, unlike the stock TPS2051CDBV convention. ILIM on the right with GND under the body makes RILIM an L route rather than a straight drop. All pin ends are on the 100 mil grid, and the p1-style RFAULT pull-up to IN is easy.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "The body alone states the active level, open drain, deglitch timing, the RILIM range and that it goes to GND, and the ILIM-to-IN 75 mA option (p4, p5, p7, p15). A reader can wire and debug the part without opening SLVSDL7. Strongest of the three on this axis.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-judge-2",
+   "design_id": "internals-maximal",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Plain D-54 box, no block diagram: IN (1) top-left and OUT (6) top-right on one row, so the IN->OUT path reads straight across, and the 'CURRENT-LIMITED SWITCH' centre caption names the part's class at a glance. That is the p1 title 'Current-Limited Power-Distribution Switches' and p13 9.1. GND (2) sits on the bottom and IN is top-left, which meets D-54 under the Lead ruling.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "Every pin number and name matches the p4 TPS2553D DBV column (1 IN, 2 GND, 3 EN, 4 FAULT-bar, 5 ILIM, 6 OUT). EN has no overbar, matching p4 'EN = Active High for the TPS2553D'. '2.7-6.5V' matches p5 VIN. '15k-232k to GND' matches p4, p5 RILIM and p15. The Description matches p5, p7 (85 mOhm, 1.295 A at 20k) and p14. There is no contradiction. The design does not show EN's active level, even though D-54 names active level as a note and the shared p13 diagram draws the TPS2552D's EN-bar form. The unbarred name alone carries it.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "25.4 x 15.24 mm body with three captions: supply range, class title and RILIM range. That is about D-54's 'a short note or two'. The lower-left quadrant is empty, and the body could lose about 2.5 mm of height. The bold body part number repeats the visible Value field, as in all three designs.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "Side pins are on a 5.08 mm pitch at 100-mil positions (+/-17.78, 5.08/0), and the bottom pins are centred at +/-2.54. The fanout render shows no label crowding. ILIM sits beside GND on the bottom, so U17's RILIM 20k (architecture Power tree) drops straight to ground. EN sits one pitch under IN, so U17's EN-tied-on strap is a short jog. FAULT is on the right, where U17 leaves it open (D-45).",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "It shows what the part is, the supply window (p5) and how to set the limit (p15). It does not show the ILIM-to-IN 75 mA option (p7, p15), EN polarity or the open-drain nature of FAULT except through the pin's etype. That is enough for this board, which uses RILIM 20k and leaves FAULT open.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-judge-2",
+   "design_id": "flow-first",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "IN/OUT share the top row and EN/FAULT-bar the next, so the series path reads left to right. GND and ILIM are on the bottom, and IN is top-left, which meets D-54 under the Lead ruling. There is no class caption, so the read rests on the pin names plus 'RILIM 15k-232k'. That still says programmable current-limited switch, but it takes a second look compared with a titled box.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pins match the p4 TPS2553D DBV column, and EN has no overbar (p4). '2.7-6.5V' matches p5 VIN. 'H = ON' matches p4 'logic high turns on power switch' and p1 'TPS2553D (Enable High)'. 'RILIM 15k-232k' matches p5 RILIM, which p5 defines as 'from ILIM to GND'. The page-cited Description is correct against p5, p7, p13, p14 and p15. The ink holds the two notes D-54 names (supply range, active level), both true.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "Smallest body of the three (25.4 x 12.7 mm). It has three short pin-attached captions and no title, and no space is wasted. This is D-54's 'a short note or two' almost exactly. The bold body part number duplicates the Value field, as in all three designs.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "Pins are on the 1.27 mm grid (y 3.81/1.27, bottom -11.43), and the bottom pins are centred at +/-2.54, so ILIM's RILIM drops beside GND. But IN/EN and OUT/FAULT-bar are on a 2.54 mm pitch. The guide (docs/02 'Pitch and the 1.27 mm grid') warns that this pitch stacks hung labels. The fanout render's IN/EN labels sit tight but stay legible. EN next to IN does make U17's EN-tied-on strap a one-pitch jog.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "It says the supply range (p5), the enable polarity (p4) and the programming resistor range (p5, p15), which covers how to wire it. It does not show the ILIM-to-IN 75 mA option (p7, p15), FAULT's open drain (left to the etype) or what the part is.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-judge-2",
+   "design_id": "annotation-rich",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "The pin arrangement copies the datasheet's own documentation drawing, the p1 Simplified Schematic: IN, FAULT-bar, EN left and OUT, ILIM right. GND moves to the bottom as D-54 asks, and IN is top-left per the Lead ruling. That gives a strong documentation-first match. The six caption lines make the body busy, though, so the IN->OUT switch reads more slowly than in the other two.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pins match p4, and EN has no overbar. Every caption is datasheet-backed. '2.7-6.5V' is p5. 'open drain' is p4 and p14 9.3.3. 'deglitch OC 7.5ms, rev 4ms' is p7 FAULT deglitch typ and p14; p13's '8-ms' figure label is the rounded form. 'active high' is p4. '15k-232k to GND' is p5. 'or to IN: 75mA' is p7 'ILIM shorted to IN' 75 typ and p15. The Description's IOS = 23950/RILIM^0.977 is exact to p15, and 'never drive ILIM' is p17. There is no contradiction.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "35.56 x 20.32 mm body, about 2.2x the area of flow-first, with six caption lines against D-54's 'a short note or two'. The deglitch timings are Description material. They do not help wiring, especially on a board that leaves FAULT open (D-45).",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "100-mil grid with a 5.08 mm pitch, IN->OUT on one row, and a clean fanout. But FAULT-bar (an output) sits between IN and EN on the input side. The p1 drawing does this for its RFAULT pull-up to IN, but on U17 (EN tied on, FAULT open) the EN-to-IN strap has to detour around FAULT's pin end. ILIM on the right puts RILIM on the output side rather than beside GND.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "It gives the most complete wiring story of the three: supply range, EN level, FAULT open drain with its deglitch, the RILIM range and the ILIM-to-IN 75 mA option (p4, p5, p7, p14, p15). The cost of carrying all that is scored under economy.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-judge-3",
+   "design_id": "internals-maximal",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Unit 1 reads as a current-limited switch at a glance: 'CURRENT-LIMITED SWITCH' caption (SLVSDL7 p1 title, p13 9.1), IN top-left and OUT top-right on one row (p13 Figure 9.2 power rail IN left to OUT right; p1 Simplified Schematic the same), EN under IN, ~{FAULT} under OUT, GND+ILIM on the bottom. Supply on top per the Lead ruling (IN top-left), ground on the bottom (D-54). Only design that names the part class on the body.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "All six pins match p4 Pin Functions TPS2553D DBV column and pins.json: 1 IN power_in, 2 GND power_in, 3 EN input with no overbar (p4 'EN = Active High for the TPS2553D'), 4 ~{FAULT} open_collector (p4 'Active-low open-drain'), 5 ILIM passive (p17 'never driven directly'), 6 OUT power_out; no EP (p4 PowerPAD '-'). '2.7-6.5V' matches p5 7.3 VIN (not the parent's 2.5 V), '15k-232k to GND' matches p5 RILIM 'from ILIM to GND 15 232'. Description checks out: 85 mOhm (p1, p7 DBV), 1.295 A typ at 20k (p7), 75 mA ILIM-to-IN (p7, p15), 135 mV reverse trip and 4 ms FAULT deglitch (p7, p14), 1.5 A to TJ 105 C / 1.2 A to 125 C (p5). Properties match properties_required. No contradiction found.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "No polyline/circle ink (D-54 'no internal block diagram'); three text items: supply range, a one-line class caption, and a two-line ILIM note. Body 25.4 x 15.24 mm; the extra row over flow-first is the 5.08 mm IN/EN pitch, which pays for itself in wiring. Nothing on the body repeats a pin type.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "Every pin tip on the 100 mil grid (x +-17.78, rows y 5.08/0, bottom +-2.54 at y -12.7; verified from the .kicad_sym). IN->OUT straight across the top row; 5.08 mm row pitch keeps the IN bypass drop (p4 IN row 0.1 uF) and the hung IN/EN labels apart (guide docs/02 warns 2.54 mm stacks labels). ILIM beside GND on the bottom so RILIM (p5 'from ILIM to GND'; p15 'traces as short as possible') hangs straight down to its own ground; ~{FAULT} leaves on the right toward its pull-up and the MCU (U17_FAULT_N). Fanout render is clean.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "Expresses class, supply range and ILIM programming range to GND. Does not ink the EN active level that D-54's reading names (relies on the un-barred name, correct per p4), and the ILIM-to-IN 75 mA option (p7, p15) and FAULT deglitch (p7, p14) live only in the Description. Meets the bar.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-judge-3",
+   "design_id": "flow-first",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "Unit 1: IN top-left / OUT top-right on one row (p13 Figure 9.2, p1), EN and ~{FAULT} directly under them, GND+ILIM on the bottom; notes '2.7-6.5V', 'H = ON', 'RILIM 15k-232k'. Supply on top per the Lead ruling, ground on the bottom (D-54). The pin set and the RILIM note identify a programmable load switch, but no class word on the body: identity rests on the MPN title and pin names.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pins match p4 Pin Functions TPS2553D DBV column exactly (names, numbers, etypes as pins.json; EN un-barred per p4, ~{FAULT} open_collector per p4, ILIM passive per p17). '2.7-6.5V' = p5 7.3 VIN; 'H = ON' = p4 'logic high turns on power switch'; 'RILIM 15k-232k' = p4 ILIM row and p5 RILIM. Description accurate: VIN p5, 1.5/1.2 A p5, 85 mOhm p7, 135 mV turn-off p14, deglitch 7.5/4 ms/immediate p14, constant-current no latch p13. No contradiction.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "Smallest body (25.4 x 12.7 mm), no drawn ink, exactly three short notes and they are the ones D-54's reading asks for (supply range, active level) plus the RILIM range. Nothing redundant with pin types.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "Same good topology as a straight power path (IN/OUT one row, RILIM from ILIM drops beside GND per p5/p15), but every pin tip sits 50 mil off the 100 mil grid (y 3.81, 1.27, -11.43; verified from the .kicad_sym), contradicting gen.py's own 'Every pin tip sits on the 2.54 mm grid'. It is on the guide's hard 1.27 mm grid, not the ideal 2.54 (guide docs/01). IN/EN and OUT/~{FAULT} at 2.54 mm pitch: the guide (docs/02) recommends 3.81 mm because 2.54 stacks hung labels; the fanout render shows IN/EN labels tight but separate. The EN-to-IN tie for U17 is a 2.54 mm jumper, a real plus.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "Inks D-54's full suggested note set: supply range on IN and the active level 'H = ON' on EN, plus the RILIM range by ILIM. 'to GND' is implied by placement only; the ILIM-to-IN 75 mA option (p7, p15) and FAULT deglitch (p7, p14) are Description-only. Meets the bar.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-judge-3",
+   "design_id": "annotation-rich",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "Unit 1 follows the datasheet's own application box: left IN, ~{FAULT}, EN; right OUT, ILIM; GND moved to the bottom (p1 Simplified Schematic, p8 Figure 1, p18 Figure 24 all draw IN/FAULT/EN left and OUT/ILIM/GND right). IN top-left counts as supply on top (Lead ruling); GND on the bottom (D-54). Every pin carries a plain-language note, but six lines of 1.0 mm text compete with the pin names, the 'deglitch' line runs across the body centre, and there is no class word; an output (~{FAULT}) sits between two inputs on the left.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pins match p4 Pin Functions TPS2553D DBV column and pins.json (EN un-barred, ~{FAULT} open_collector, ILIM passive, OUT power_out, no EP). Captions all check: '2.7-6.5V' p5 7.3; 'open drain' p4 FAULT row; 'deglitch OC 7.5ms, rev 4ms' p7 FAULT deglitch typ and p14 9.3.3 (uses the table's 7.5 ms, not the figure's '8-ms'); 'active high' p4; '15k-232k to GND' p5 RILIM; 'or to IN: 75mA' p7 'ILIM shorted to IN 50 75 100', p15. Description's IOSnom = 23950/RILIM^0.977 matches p15 eq. 1; 'never drive ILIM' p17. Grouping is the datasheet's (p1/p8/p18). No contradiction.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "Below the bar for D-54's 'a short note or two': six note lines (supply range, open drain, deglitch, active level, ILIM range, ILIM-to-IN option). 'open drain' restates the open_collector pin type and the overbar; the deglitch timing is application detail the Description already carries. Body 35.56 x 20.32 mm, about 2.2x flow-first's area, for the same six pins.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "All pin tips on the 100 mil grid at 5.08 mm row pitch (verified), GND alone at bottom centre. ~{FAULT} sits next to IN, so the p1 RFAULT pull-up to the input rail is short, and FAULT/EN both face the controller as TI draws them. Costs: ILIM is a right-side pin, so RILIM needs a stub then a drop to ground instead of hanging beside GND; on this board EN is tied on, and a direct EN-to-IN tie would have to pass the ~{FAULT} stub (a rail power symbol per D-55 avoids it); the wide body lengthens the fanout.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "Most complete body: active level, open-drain nature, both deglitch times, the RILIM range to GND and the ILIM-to-IN 75 mA mode (p7, p15), each sitting beside the pin it qualifies. A reader can wire and debug the part without opening the datasheet.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   },
+   "findings": []
+  }
+ ],
+ "selection": {
+  "winner_design_id": "internals-maximal",
+  "grafts": [
+   {
+    "id": "G1",
+    "from": [
+     "flow-first ('H = ON')",
+     "annotation-rich / datasheet-order wording ('active high')"
+    ],
+    "what": "EN-row note 'active high', in one left-flush note column with the IN row's '2.7-6.5V'",
+    "source": "p4 'EN = Active High for the TPS2553D'; p4 EN row 'Enable input, logic high turns on power switch'",
+    "judge_basis": "Judges 1, 2 and 3 all ask for it (graft suggestions: j1 'add flow-first's H = ON (or active high) note on the EN row', j2 'add flow-first's H = ON beside EN', j3 'add flow-first's H = ON on the EN row'); D-54 names the active level, and p4 makes EN polarity part-number dependent (TPS2552D EN-bar, TPS2553D EN; judge 2 notes p13 draws the EN-bar form). The words are p4's ('active high'), as the dc59bb7 round's G1 chose.",
+    "layout": "column x = left wall + name offset + EN name width + 1.5 mm; 'active high' ends 5.5 mm clear of the ~FAULT name ink (gen.py asserts at least 1.5 mm)"
+   },
+   {
+    "id": "G2",
+    "from": [
+     "judge 1"
+    ],
+    "what": "drop the 'CURRENT-LIMITED SWITCH' body caption",
+    "source": "D-54 'a short note or two (supply range, active level)'; the class words stay in Description ('Current-limited power-distribution switch') and ki_keywords",
+    "judge_basis": "Judge 1: 'keep one identity line. Either drop the CURRENT-LIMITED SWITCH caption or let it stand in for the bold MPN body title'; judge 1 economy: the caption is past D-54's note budget and repeats the Description; judge 2 economy: three captions are already 'about' the budget. With G1 the body would carry four notes, so the caption goes (d54_check.final).",
+    "cost": "identity loses the class word the judges credited (4/4/4); the body then reads like flow-first's note set, which judges 1-3 scored identity 3 (the bar). Letting the caption replace the title is barred: docs/02 'The unit title IS the part number'."
+   },
+   {
+    "id": "G3",
+    "from": [
+     "annotation-rich (Description)"
+    ],
+    "what": "Description gains 'IOSnom(mA) = 23950/RILIM(kOhm)^0.977 (p15 eq. 1; 1.295 A typ at 20k, p7)' and 'ILIM should never be driven directly with an external signal (p17)'",
+    "source": "p15 Current-Limit Threshold Equations (IOS), eq. (1) IOSnom; p17 NOTE 'ILIM should never be driven directly with an external signal.'",
+    "judge_basis": "The dc59bb7 round's judges 1, 2 and 3 all proposed this graft onto that round's winner (its G3); in this round judges 1, 2 and 3 each verified both sentences true in annotation-rich's Description (j1 'IOSnom = 23950/RILIM^0.977 matches p15 Eq. 1', j2 'exact to p15, and never drive ILIM is p17', j3 'matches p15 eq. 1; never drive ILIM p17'). Hidden property only: no body ink, D-54 untouched."
+   }
+  ],
+  "final_symbol_sha256": "4aae91ec11e3669d1dea14fe2ef82dda34376799a9a8ea7fae74efba007d84b6"
+ },
+ "final_renders": [
+  {
+   "id": "qa:u1",
+   "unit": 1,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png",
+   "sha256": "500421b823d32bb2c41addcb0fb57fff61d4b21c8f8c84dea3683d484013c8c7",
+   "background": "#f5f4ef",
+   "symbol_sha256": "4aae91ec11e3669d1dea14fe2ef82dda34376799a9a8ea7fae74efba007d84b6",
+   "nonce": "LOOK-NKWMKTXPX4ET",
+   "nonce_sha256": "20cf66fbde09dd3a3884a2f4a3872fd4652949a7ac48fa49888530e31d509ad5"
+  }
+ ],
+ "regraders": [
+  {
+   "reviewer_id": "look-regrader-r2-1",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Page shows value TPS2553DDBVR in the header and a plain rectangle with IN, EN, GND, ILIM, OUT, FAULT (overbar) names; reads as a 6-pin current-limit switch with no internals. Pin table SLVSDL7 p4 (DBV column).",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Numbers match the p4 DBV column: 1 IN, 2 GND, 3 EN, 4 FAULT (overbar), 5 ILIM, 6 OUT. Notes '2.7-6.5V' (SLVSDL7 p5 VIN range), 'active high' for EN (p4: EN active high on TPS2553D, no overbar drawn, correct) and '15k-232k to GND' for RILIM (p4/p15) all agree with the datasheet. FAULT drawn with overbar as printed on p4.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "Single box, six pins, three short captions, no block diagram; fits D-54 documentation-first.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "IN top-left (supply on top per D-54 series-switch rule), OUT and FAULT on the right, GND on the bottom with ILIM beside it so RILIM to GND routes short; pin numbers outside the body and stubs are clear of captions.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "Conveys supply range, EN polarity, active-low open-drain FAULT and the RILIM range without internals; the ILIM caption tells the wirer what to connect (datasheet p4/p15).",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-regrader-r2-2",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Page shows part name TPS2553DDBVR over a plain box with IN/EN/GND/ILIM/OUT/FAULT; reads as a 6-pin SOT-23-6 switch with notes '2.7-6.5V', 'active high', '15k-232k to GND'. Matches datasheet SLVSDL7 p4 pin table (DBV: 1 IN, 2 GND, 3 EN, 4 FAULT, 5 ILIM, 6 OUT).",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pin numbers and names match p4 exactly; FAULT drawn with overbar (p4 prints FAULT-bar); EN has no overbar, correct for TPS2553D active-high; 2.7-6.5V matches p5 VIN range; ILIM 15k-232k matches p4/p15. No exposed pad, none drawn.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "Box plus two short notes (2.7-6.5V/active high) and one ILIM note; no internal block diagram, per D-54.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "IN top-left, GND bottom per D-54, outputs right; all pins on grid with legible numbers. ILIM shares the bottom edge with GND, slightly crowded versus the datasheet grouping but unambiguous.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "Supply, enable, fault flag and the RILIM requirement are all stated on the page; the ILIM-to-GND resistor note tells the user what to wire (p4, p15).",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-regrader-r2-3",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "Page shows TPS2553DDBVR title, 6 pins numbered 1-6 with datasheet names IN/EN/GND/ILIM/OUT/FAULT(overbar); reads as a current-limit switch from the names and 'ILIM 15k-232k to GND'. Matches p4 pin table.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 3,
+     "note": "Pin numbers/names match SLVSDL7 p4 DBV column (IN1 GND2 EN3 FAULT4 ILIM5 OUT6); FAULT overbar correct for active-low open-drain; 'active high' EN correct for TPS2553D; 2.7-6.5V matches the Operating Range on p1. ILIM note omits the tie-to-IN 75 mA option (minor).",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Three short notes (2.7-6.5V, active high, 15k-232k to GND), no internals; slightly beyond 'a note or two' but each is useful and compact.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "IN top-left, OUT/FAULT right, GND and ILIM exit the bottom with clear separation; no overlaps or crowding. GND bottom per D-54.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "Pins typed to datasheet roles; ILIM passive suits RILIM to GND or tie to IN; supply IN top, ground bottom, enable/fault on distinct sides, supports the U17 VBUS limiter topology.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-regrader-r2-4",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Body titled TPS2553DDBVR, ref U1, six numbered pins with datasheet names IN/EN/GND/ILIM/OUT/FAULT; reads at once as a 6-pin current-limit switch. Matches SLVSDL7 p4 pin table.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pin numbers/names match p4 DBV column: 1 IN, 2 GND, 3 EN (active high, no overbar, correct for the D-version), 4 FAULT with overbar, 5 ILIM, 6 OUT. Notes '2.7-6.5V' (p5 VIN range) and '15k-232k to GND' (p4/p5 RILIM 15-232 kohm) are correct. No invented internals.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "Plain box, six pins, two short notes plus 'active high'; no block diagram, consistent with D-54 documentation-first.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "IN top-left (series-switch supply), OUT right, GND pin 2 at the bottom, ILIM at the bottom beside it with its note; inputs left, outputs right, no crossings, pin spacing leaves room for labels.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "ILIM note states the RILIM-to-GND requirement and the range from p4; active-high EN and open-drain FAULT overbar are visible. Enough to wire the part without the datasheet.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-regrader-r2-5",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Body title TPS2553DDBVR; names IN, EN, OUT, FAULT (overbar), GND, ILIM with numbers 1-6 match the p4 pin table (IN1 GND2 EN3 FAULT4 ILIM5 OUT6). Active-high EN note matches p4 'EN = Active High for the TPS2553D'.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pin names, numbers and overbar on FAULT match p4; 'active high' on EN and '2.7-6.5V' match the p1 operating range; '15k-232k to GND' matches the p4 ILIM row. No internal block drawn, no invented pins, no PowerPAD (DBV has none).",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "Three short notes only (2.7-6.5V, active high, 15k-232k to GND); no block diagram; six pins, six names, nothing redundant. Fits D-54.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "IN top-left (supply on top per D-54), OUT/FAULT right, GND bottom; inputs left, outputs right. ILIM also exits the bottom beside GND, which suits a resistor to ground but sits close to the GND pin; stubs are long but clear.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "Notes carry the supply range, enable polarity and RILIM range from p4/p1, which is enough to wire it right without opening the datasheet; open-drain FAULT is shown by the overbar name.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": []
+  }
+ ],
+ "binding": {
+  "tool": "library-qa/council.py look",
+  "by": "lead-996565",
+  "agents": [
+   "council-designer-annotation-rich",
+   "council-designer-flow-first",
+   "council-designer-internals-maximal",
+   "look-judge-1",
+   "look-judge-2",
+   "look-judge-3",
+   "look-regrader-r2-1",
+   "look-regrader-r2-2",
+   "look-regrader-r2-3",
+   "look-regrader-r2-4",
+   "look-regrader-r2-5"
+  ],
+  "candidate": {
+   "sha256": "916a927487d612ce7834563b112308ddc29a1f82aac0e7ea00428a1ea5c0df59",
+   "files": {
+    "TPS2553DDBVR.kicad_sym": "4aae91ec11e3669d1dea14fe2ef82dda34376799a9a8ea7fae74efba007d84b6",
+    "TPS2553DDBVR_unit1.png": "43a85fb679ea18b2a9212a4cf7714b04cb41190a4660459275866549f2c13df9",
+    "TPS2553DDBVR_unit1_fanout.png": "8d0d2926ef5c53fa80c26c572c5f03d85a94bfe4dc3fdf3fa2ef2c3623cb7b40",
+    "author.json": "9e67612025066c484dc5939e243ae1c4e2cb4ff312bec10c31e484b1b2895aaa",
+    "comparable_ds.json": "8cb1713cf4eb1eae6ca09ed12daa656850b34a648e1e74cb94a1819e26e7977a",
+    "council/annotation-rich/TPS2553DDBVR.kicad_sym": "e6e849dafe5e62288268be875249edf7f781c169496ab6042c5ac749ab62c7aa",
+    "council/annotation-rich/TPS2553DDBVR_unit1.png": "28671db22b21267dfc48e26893294721f4d9c3aa0cba7c30e577f7b3bc32263d",
+    "council/annotation-rich/TPS2553DDBVR_unit1_fanout.png": "1fc86a2b83d3f6ac01f1a4bf7f9b4877e5eedadf0b3225ca1a7b41de094e061a",
+    "council/datasheet-order/TPS2553DDBVR.kicad_sym": "9e71580a468acaeea549fded49b39bbbaed598027aaf7b4e6bd2995075c0b2b1",
+    "council/datasheet-order/TPS2553DDBVR_unit1.png": "bc3f66588984c762fae04eb5d20a5447601570f9e009b536b315f365bbe864fe",
+    "council/flow-first/TPS2553DDBVR.kicad_sym": "b4f990018facbeee1b81208b8317366f263cffb182fd41a60d20dbfb9be5e41f",
+    "council/flow-first/TPS2553DDBVR_unit1.png": "9c2b5baec420130d0ac39384ed9cbf8b599c8b9278506a0ab15775e53e1241a4",
+    "council/flow-first/TPS2553DDBVR_unit1_fanout.png": "3f8b453c214dd3ed5be8e71f12e0f2ea5aae71ecd95b928c3da2ff6ff977aeb7",
+    "council/internals-maximal/TPS2553DDBVR.kicad_sym": "3db0244ff9bbcda4a1ba8fbeb8cff90220233abd4e33daf8cbfb749890fe660e",
+    "council/internals-maximal/TPS2553DDBVR_unit1.png": "94e8dcb35ddbdd1d631e3c62a66ea737e851b33295af35053b0676e286879d93",
+    "council/internals-maximal/TPS2553DDBVR_unit1_fanout.png": "672768c689a13031ef30e3e5c2e63a57e1b90698a4516694a5dafee33183040e",
+    "facts.json": "96ef39eb0d936ba30e7a843051a228fe0afc0787ba0da16b689822430ef39a23",
+    "fanout_page.py": "bc6662e80c02880ba99660345e952b43832091df5c4204989f325d419791d648",
+    "gen.py": "ef8c654215a050523d5591957c28b417ee32b8286dd056d305455d6b17ea8be8",
+    "pin-truth.json": "f1f03edc3288a6ce98fe3314c93ba4467be5cf1d047c57d5a04a711f18ee7f15",
+    "render.sh": "d9cf75b8c99563279deb05ad7ee450aa1ac6fcde34a6323ee9acbd7ba535f077"
+   }
+  },
+  "verdict": "pass"
+ }
+}
