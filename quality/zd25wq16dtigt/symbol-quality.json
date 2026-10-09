@@ -1,0 +1,91 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "ZD25WQ16DTIGT",
+ "symbol": {
+  "asset_path": "ZD25WQ16DTIGT.kicad_sym",
+  "internal_name": "ZD25WQ16DTIGT",
+  "sha256": "02a74486f1bf11758af4a1575b0af2af3c6412f6e525f11d0e7cf12fcc1b25f4"
+ },
+ "archetype": "domain-partitioned",
+ "units": [
+  {
+   "unit": 1,
+   "role": "Quad SPI NOR flash: VCC on the top edge, the bus (CS#, SCLK, SI/IO0, SO/IO1, WP#/IO2, HOLD#/IO3) down the left edge in host order in one 2.54 mm run, VSS on the bottom edge under VCC (D-54)",
+   "presentation": "domain",
+   "identity_features": [
+    "bus partition: VCC top edge and VSS bottom edge in one power column; SPI control + data down the left in host order CS#, SCLK, IO0..IO3 (DS p5 Table-1 names verbatim)",
+    "QE bracket note on pins 3/7: 'QE=0 (default)/QE=1' and 'rail tie: QE=0 only' (DS p10 QE bit)",
+    "identity caption QUAD SPI NOR (DS p84 '25WQ: Quad SPI Nor Flash') and supply note 1.65V to 3.6V (DS p4)"
+   ]
+  }
+ ],
+ "evidence": {
+  "comparable_ds": {
+   "path": "comparable_ds.json",
+   "sha256": "78200a2303f6c4d8f416d471bee9892ec09ade09a80449c863c58db9da0cb2d8",
+   "own_sha256": "d83f66ac90df1cf2bbff0dcb072024dfa0c6f63901825375a6419889de0f7cc6",
+   "comparable_count": 4
+  },
+  "pin_truth": {
+   "path": "pin-truth.json",
+   "sha256": "c700cc43fb87cd1e4af7e8d06f401de3731baa781253457b5272b704ead09e73",
+   "coverage": "all"
+  }
+ },
+ "generator": {
+  "contract": "python-cli-output-v1",
+  "path": "gen.py",
+  "sha256": "efc4ed68fffd98165cf2d378bafd921df6673e4a6caa9f3c3ab7887a2213084f",
+  "inputs": [],
+  "expected_symbol_sha256": "02a74486f1bf11758af4a1575b0af2af3c6412f6e525f11d0e7cf12fcc1b25f4"
+ },
+ "look": {
+  "receipt_path": "symbol-look.json",
+  "sha256": "aefddb2d33038b0ff21d6454c8691cccc52cbd7cf214b1d9cc55af38afbb1ba9"
+ },
+ "binding": {
+  "tool": "library-qa/council.py quality",
+  "by": "lead-996565",
+  "agents": [
+   "council-designer-annotation-rich",
+   "council-designer-flow-first",
+   "council-designer-internals-maximal",
+   "look-judge-1",
+   "look-judge-2",
+   "look-judge-3",
+   "look-regrader-1",
+   "look-regrader-2",
+   "look-regrader-3",
+   "look-regrader-4",
+   "look-regrader-5"
+  ],
+  "candidate": {
+   "sha256": "11a4a0e43c8e6229941c7529aeed48563e6f249968735bd58eed9ece1173e194",
+   "files": {
+    "ZD25WQ16DTIGT.kicad_sym": "02a74486f1bf11758af4a1575b0af2af3c6412f6e525f11d0e7cf12fcc1b25f4",
+    "ZD25WQ16DTIGT_unit1.png": "6fa93b77afc11103ad83b5e6317d7ce514567cf3c7c92784429c03b224ce989d",
+    "ZD25WQ16DTIGT_unit1_fanout.png": "57d2442c50190811ee1631571c4ef60db8f57272aa267a97dae0a1e7ca3b39c9",
+    "author.json": "b98694f49a0b54b18359aee5cdcc39b6b171c18d41913e574134183a1639282b",
+    "comparable_ds.json": "78200a2303f6c4d8f416d471bee9892ec09ade09a80449c863c58db9da0cb2d8",
+    "council/annotation-rich/ZD25WQ16DTIGT.kicad_sym": "fac8655db692812cb9b00001118081ea9d4575e043a21e78ab045296b1d012c9",
+    "council/annotation-rich/ZD25WQ16DTIGT_fanout_unit1.png": "a359a00915a764ce94c993ce96c98cfca16195ef48fb9cbfc9b757cdeba1a30a",
+    "council/annotation-rich/ZD25WQ16DTIGT_unit1.png": "3e6f4b141fcb3fbde8a19850e7845f281ab45f51ba67afd6da8de8ceb419cfc1",
+    "council/datasheet-order/ZD25WQ16DTIGT.kicad_sym": "1b5f5473708f0f7d37ac5a4dfe5729a3ae955db9cda9643588a48ef78c970a0f",
+    "council/datasheet-order/ZD25WQ16DTIGT_unit1.png": "de529d736bb7a81d5abc24aa6af4f1cfabac9289386f74174987a4bd7083527e",
+    "council/datasheet-order/ZD25WQ16DTIGT_unit1_fanout.png": "580f988691ef21477410cd7cb1da429318e26203e083209570eb2cf3e812f044",
+    "council/flow-first/ZD25WQ16DTIGT.kicad_sym": "36c7a404a10b6ab972fc6c8f3c8be7e39b729ecdaf671a3bcb2476fce7089379",
+    "council/flow-first/ZD25WQ16DTIGT_unit1.png": "45b15f867d7c96f2e1fa54a300246ef4cffa092aa756dee7f19147c618ab2bbb",
+    "council/flow-first/ZD25WQ16DTIGT_unit1_fanout.png": "341cf5661e3fadb8f2b3f415a5d551ca6b594091ae4d2f1d2f726dcb654f8947",
+    "council/internals-maximal/ZD25WQ16DTIGT.kicad_sym": "526cee321e51a6589793b58a402fde9beaec4b953e4013274f14c3dfaa66481c",
+    "council/internals-maximal/ZD25WQ16DTIGT_unit1.png": "959083ee7c6b7cd8f199f77521137d46f18cbb71692e8bc133ddd8bd7060477b",
+    "council/internals-maximal/ZD25WQ16DTIGT_unit1_fanout.png": "99d19eb8d2e1c760f63055e83da1becf2ba06121e54a6ced5d4a57eab9593103",
+    "facts.json": "78e7bb90cb95625187ae94ff0ce9678216b0586fd2cc3a9bb3fcb52dde5f5a19",
+    "fanout_page.py": "24ab9d76b4f67ef1cc3dd9284b4bbe100781590da04515e765a15142362e4772",
+    "gen.py": "efc4ed68fffd98165cf2d378bafd921df6673e4a6caa9f3c3ab7887a2213084f",
+    "pin-truth.json": "c700cc43fb87cd1e4af7e8d06f401de3731baa781253457b5272b704ead09e73",
+    "render.sh": "7ba6559ce8e12501e95bde250e1b7df566c059d174c366ffa407d4ed36a24e2d"
+   }
+  },
+  "verdict": "pass"
+ }
+}

@@ -1,0 +1,839 @@
+{
+ "schema_version": "1.0.0",
+ "part_id": "ZD25WQ16DTIGT",
+ "symbol_sha256": "02a74486f1bf11758af4a1575b0af2af3c6412f6e525f11d0e7cf12fcc1b25f4",
+ "units": [
+  1
+ ],
+ "designs": [
+  {
+   "id": "internals-maximal",
+   "designer_id": "council-designer-internals-maximal",
+   "stance": "internals-maximal",
+   "symbol_path": "council/internals-maximal/ZD25WQ16DTIGT.kicad_sym",
+   "symbol_sha256": "526cee321e51a6589793b58a402fde9beaec4b953e4013274f14c3dfaa66481c",
+   "renders": [
+    {
+     "id": "design:internals-maximal:u1",
+     "unit": 1,
+     "path": "council/internals-maximal/ZD25WQ16DTIGT_unit1.png",
+     "sha256": "959083ee7c6b7cd8f199f77521137d46f18cbb71692e8bc133ddd8bd7060477b",
+     "background": "#ffffff",
+     "symbol_sha256": "526cee321e51a6589793b58a402fde9beaec4b953e4013274f14c3dfaa66481c"
+    }
+   ]
+  },
+  {
+   "id": "flow-first",
+   "designer_id": "council-designer-flow-first",
+   "stance": "flow-first",
+   "symbol_path": "council/flow-first/ZD25WQ16DTIGT.kicad_sym",
+   "symbol_sha256": "36c7a404a10b6ab972fc6c8f3c8be7e39b729ecdaf671a3bcb2476fce7089379",
+   "renders": [
+    {
+     "id": "design:flow-first:u1",
+     "unit": 1,
+     "path": "council/flow-first/ZD25WQ16DTIGT_unit1.png",
+     "sha256": "45b15f867d7c96f2e1fa54a300246ef4cffa092aa756dee7f19147c618ab2bbb",
+     "background": "#ffffff",
+     "symbol_sha256": "36c7a404a10b6ab972fc6c8f3c8be7e39b729ecdaf671a3bcb2476fce7089379"
+    }
+   ]
+  },
+  {
+   "id": "annotation-rich",
+   "designer_id": "council-designer-annotation-rich",
+   "stance": "annotation-rich",
+   "symbol_path": "council/annotation-rich/ZD25WQ16DTIGT.kicad_sym",
+   "symbol_sha256": "fac8655db692812cb9b00001118081ea9d4575e043a21e78ab045296b1d012c9",
+   "renders": [
+    {
+     "id": "design:annotation-rich:u1",
+     "unit": 1,
+     "path": "council/annotation-rich/ZD25WQ16DTIGT_unit1.png",
+     "sha256": "3e6f4b141fcb3fbde8a19850e7845f281ab45f51ba67afd6da8de8ceb419cfc1",
+     "background": "#ffffff",
+     "symbol_sha256": "fac8655db692812cb9b00001118081ea9d4575e043a21e78ab045296b1d012c9"
+    }
+   ]
+  }
+ ],
+ "judges": [
+  {
+   "reviewer_id": "look-judge-1",
+   "design_id": "internals-maximal",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Reads at a glance as a 16M-bit Quad SPI NOR flash: body caption '16M-bit Quad SPI NOR Flash' and '1.65-3.6 V' beside VCC match DS p4 (Overview: 16M-Bit, Dual/Quad SPI and QPI; 'Single 1.65V to 3.6V supply'). Seen in the unit render and the fanout render. The bold body MPN repeats the Value field, which is redundant but does not blur identity.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pin names are the DS p5 pin-configuration spellings, character for character (CS#, SO/IO1, WP#/IO2, VSS, SI/IO0, SCLK, HOLD#/IO3, VCC). Etypes follow Table-1 p5 (CS#/SCLK I -> input, IO0-IO3 I/O -> bidirectional, VCC/VSS power_in). Signal order SCLK, CS#, IO0..IO3 is the DS p4 interface order ('Serial Clock, Chip Select, Serial Data I/O0 (SI), I/O1 (SO), I/O2 (WP#), I/O3 (HOLD#)'). 'QE=1: IO2, IO3' matches p10. No RESET token (p5, SFDP p74) and no GigaDevice 'never float' note. The Description's QE/S9, 31H/01H (p9, p24), SR=00H delivery (p78 5.2) and Table-5 SRP=01 lock (p10) all check out. No contradiction found.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Ink is spare, as D-54 asks: three short captions, no block diagram. But the 30.48 x 35.56 mm body is oversized for 8 left/bottom pins. Its right half is empty except the QE note, and the 5.08 mm group gaps plus the left-edge VCC row add height. The bold body MPN duplicates Value.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "All 8 pin ends sit on the 100-mil grid (x=-20.32, VSS at 0,-22.86). The six bus pins face left toward the RP2040 QSPI port, and VSS exits the bottom. Against D-54, VCC enters the left edge as the top row instead of the top edge. The fanout shows the supply label arriving from the same side as the bus, and a supply symbol pointing up needs an elbow. The 5.08 mm gaps break the bus into three runs.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "Shows the supply range (p4) and the pin 3/7 quad role ('QE=1: IO2, IO3', p10). It does not mark QE=0 as the default or carry the p10 rail-tie caution on the body; both are only in the Description. The pin names do imply the QE=0 role.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "minor",
+     "summary": "D-54 style, not a datasheet contradiction: VCC (pin 8) is a left-edge pin at the top row, not a top-edge supply pin. D-54 reads 'supply pins on top and ground on the bottom'.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-judge-1",
+   "design_id": "flow-first",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "The caption 'QUAD SPI NOR' identifies the function (DS p4, p84 '25WQ: Quad SPI Nor Flash'), but the body shows neither the density nor the supply range, so it reads as a generic QSPI NOR plus the MPN. The bold body MPN duplicates Value. Seen in the unit render and the fanout render.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Exact DS p5 names and Table-1 etypes. The bracket over pins 3/7 reading 'QE=0 (default)/QE=1' maps each half of WP#/IO2 and HOLD#/IO3 to its QE state, matching p10 ('QE bit is set to 0 (Default) ... WP# and HOLD# pins are enabled ... set to 1, the Quad IO2 and IO3 pins are enabled'). 'rail tie: QE=0 only' is the p10 parenthetical ('Set the QE bit to 0 to avoid short issue if the WP# or HOLD# pin is tied directly to the power supply or ground'). No RESET and no never-float. The order is CS#, SCLK, IO0..IO3 rather than p4's SCLK, CS#; Table-1 orders by pin number, so this is no contradiction.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Two notes plus one caption and a small grouping bracket, inside D-54's 'a short note or two'. The 33.02 x 25.4 mm body is wider than needed, with the right third empty apart from the VCC/VSS column. The bold body MPN duplicates Value.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "The only design with VCC on the top edge and VSS on the bottom edge, as D-54 asks. Both sit at x=12.7, so the fanout's VCC label and GND symbol drop straight in, with room for a decoupling cap. The six bus pins form one unbroken 2.54 mm column. However, every signal pin end is at x=-21.59, which is off the 100-mil grid (KLC S4.1). Wires land only on a 50-mil grid.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "Shows the dual role, the QE=0 default and the rail-tie caution in two bracket-scoped lines (p10). It omits the supply range (p4), the one note D-54 names explicitly; that range is only in the Description.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "minor",
+     "summary": "Not a datasheet contradiction: the six signal pin ends (pins 1,6,5,2,3,7) are at x=-21.59 mm, 1.27 mm off the 100-mil pin grid (KLC S4.1). VCC/VSS at x=12.7 are on grid.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-judge-1",
+   "design_id": "annotation-rich",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "Re-scored on symbol sha fac8655d (ca12e2c). '16M-bit QSPI NOR' and '1.65-3.6 V' (DS p4) identify the part, but they compete with a 3-column mode table and a warning line, so identity takes longer than in the sparser designs. The bold body MPN duplicates Value. Seen in the unit render and the new fanout render (ZD25WQ16DTIGT_fanout_unit1.png).",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pin names are now the DS p5 spellings, character for character (CS#, SO/IO1, WP#/IO2, VSS, SI/IO0, SCLK, HOLD#/IO3, VCC), and etypes follow Table-1 p5. Every annotation checks against the datasheet: 'SR lock (SRP=01)' under QE=0 for WP# (p10 Table-5 row 0 1 0), 'pause' for HOLD# scoped to QE=0 (p8 'Driving the HOLD# pin low will pause'; p8 note: HOLD disabled in Quad I/O and QPI), 'QE=1' IO2/IO3 (p10), 'tied to VCC/VSS: keep QE=0' (p10). There is no RESET or never-float note, and the Description's 31H/01H facts match p24. No contradiction found.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "The largest body (35.56 x 33.02 mm) carries 9 text items: supply, title, a 3x3 QE truth table and a warning line. That is far beyond D-54's 'a short note or two', even though each item is load-bearing. With the wider '#' name, HOLD#/IO3 now sits 0.98 mm from 'pause', and the render shows the name and the table cell crowding each other. The bold body MPN duplicates Value.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 2,
+     "note": "Every pin end is still off the 100-mil grid: the signal pins are at y=13.97/8.89/6.35/3.81/1.27/-3.81/-6.35 and VSS at y=-21.59, all half-grid (KLC S4.1). The new fanout shows the labels landing, which needs a 50-mil grid. VCC enters the left edge as the top row instead of the top edge (D-54), so the fanout brings VCC in from the bus side. The bus column has one 5.08 mm gap before pins 3/7.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "The most complete statement of pin 3/7 behavior: both QE states, each pin's function per state, the SR-lock condition, and the rail-tie rule. It also carries the supply range. All of it traces to p4, p8 and p10.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   },
+   "findings": [
+    {
+     "severity": "minor",
+     "summary": "D-54 style, not a datasheet contradiction: VCC (pin 8) is a left-edge pin at the top row, not a top-edge supply pin. D-54 reads 'supply pins on top and ground on the bottom'.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    {
+     "severity": "minor",
+     "summary": "Not a datasheet contradiction: all 8 pin ends are on the 50-mil half grid, off the 100-mil pin grid (KLC S4.1), e.g. VCC at (-22.86, 13.97) and VSS at (0, -21.59). The ca12e2c revision did not change this.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   ]
+  },
+  {
+   "reviewer_id": "look-judge-2",
+   "design_id": "internals-maximal",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "u1 caption '16M-bit Quad SPI NOR Flash' plus the MPN title and the SPI pin names read at once as a 16 Mbit QSPI NOR (DS p4 overview, p84 '25WQ: Quad SPI Nor Flash', '16: 16Mbit'). VCC sits at the top of the left signal edge while VSS is on the bottom edge, which blurs the bus-versus-power partition the packet names as this domain-partitioned symbol's job.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Names match DS p5 Fig 2.1 and Table-1 exactly: CS#, SO/IO1, WP#/IO2, VSS, SI/IO0, SCLK, HOLD#/IO3, VCC. Etypes follow the p5 I/O column (CS#, SCLK input; IO0-IO3 bidirectional; VCC/VSS power_in). The left-edge order SCLK, CS#, IO0..IO3 follows DS p4's interface list ('Serial Clock, Chip Select, Serial Data I/O0 (SI), I/O1 (SO), I/O2 (WP#), I/O3 (HOLD#)'), and its gaps split the standard SI/SO pair from the quad-only IO2/IO3 pair the way p7 separates Dual and Quad SPI. 'QE=1: IO2, IO3' matches p10, and '1.65-3.6 V' matches p4. No contradiction. Under D-54 the design carries no internal block ink.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "The body is 30.48 x 35.56 mm for 8 pins, and the whole right half (~15 mm) carries a single 14-character note. The tall body comes from a blank band between VCC and SCLK plus 5.08 mm group gaps. The bold in-body 'ZD25WQ16DTIGT' repeats the Value field, so the MPN shows twice on a placed symbol. Ink is light, but the area is about 2x what 8 pins and two notes need.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "Only design with every pin tip on the 2.54 mm lattice (x=-20.32, VSS at 0,-22.86). The fanout render is clean: six bus labels on one left edge and VSS straight down to GND. The cost is VCC as a horizontal left stub: under D-55 a VCC power symbol needs a wire corner. VCC (left) and VSS (bottom centre) also sit on different edges, so a decoupling cap path wraps a corner. The grouped bus pins (5.08 gaps) do not run straight to a contiguous QSPI header, which is fine with labels.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "Matches D-54's 'a short note or two': the supply range at VCC (DS p4), the active level via the datasheet's '#' names (p5) and 'QE=1: IO2, IO3' (p10). The QE=0 default and the p10 rail-tie caution live only in the hidden Description, so a reader of the sheet does not see the one hazard p10 calls out.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-judge-2",
+   "design_id": "flow-first",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "This is the cleanest domain partition of the three. One left edge carries all six bus pins (CS#, SCLK, SI/IO0, SO/IO1, WP#/IO2, HOLD#/IO3). VCC is alone on the top edge and VSS alone on the bottom edge, exactly D-54's 'supply on top, ground on the bottom'. The caption 'QUAD SPI NOR' plus the MPN reads as QSPI flash (DS p84). Density is not on the body, but the MPN carries it.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Names and etypes match DS p5 Table-1 and Fig 2.1 exactly ('#' forms, slash pairs). The bus order starts at pin 1 CS# and runs IO0..IO3 in index order. The bracket note 'QE=0 (default)/QE=1' maps the two halves of each slash name to the QE states (p10 'When the QE bit is set to 0 (Default) ... WP# and HOLD# pins are enabled. When ... 1, the Quad IO2 and IO3 pins are enabled'). 'rail tie: QE=0 only' is p10's '(Set the QE bit to 0 to avoid short issue if the WP# or HOLD# pin is tied directly to the power supply or ground.)'. No contradiction.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "At 33.02 x 25.4 mm it has the smallest body area of the three, with two notes, one bracket and one caption, all load-bearing. The width is set by the note line 'QE=0 (default)/QE=1', and the right ~10 mm is otherwise empty apart from the vertical VCC/VSS names. Same MPN duplication as the others: a bold body title plus the Value field.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "VCC (12.70, 17.78) and VSS (12.70, -17.78) share one x, so the VCC power symbol goes straight up, GND straight down, and the decoupling cap sits beside one vertical line (D-55 power symbols). The six bus pins are contiguous at 2.54 mm, so the QSPI bus runs straight across from the MCU. The fanout render is the tidiest of the three. Nit: the left pin tips are at x=-21.59, on the guide engine's 1.27 mm GRID (engine/symbols.py) but not the 2.54 lattice the power pins use, so the pin tips mix two lattices (KLC S4.1).",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "Both body notes carry real behaviour: the QE role mapping and the rail-tie hazard (DS p10). D-54 names the supply range as its first example note, but '1.65-3.6 V' (p4) is missing from the glyph and appears only in the Description. 'QE=0 (default)/QE=1' is compact but slightly cryptic: it parses as name-half mapping only after a second look.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-judge-2",
+   "design_id": "annotation-rich",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "Re-scored on symbol fac8655d (ca12e2c). The caption '16M-bit QSPI NOR', the '1.65-3.6 V' at VCC and the MPN identify the part (DS p4, p84). VCC still sits on the left signal edge with VSS on the bottom edge, which weakens the bus/power partition this domain-partitioned symbol exists for. The 3x3 QE table is the heaviest body ink. With the wider '#' name, 'HOLD#/IO3' now sits 0.98 mm from 'pause' and reads almost as one run ('HOLD#/IO3 pause') in both the glyph and the fanout render.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "The pin names now match DS p5 Table-1 and Fig 2.1 exactly (CS#, SO/IO1, WP#/IO2, VSS, SI/IO0, SCLK, HOLD#/IO3, VCC), and so do the etypes. The table content is correct: 'QE=0 (default)' (p10; p78 SR=00H on delivery); 'SR lock (SRP=01)' on WP# (p10 Table-5, SRP1,SRP0=0,1 with WP#=0 locks the Status Register); 'pause' on HOLD# (p8 'Driving the HOLD# pin low will pause any serial communications'), scoped to QE=0, consistent with p8's 'HOLD feature is disabled in Quad I/O and QPI mode'; IO2/IO3 at QE=1 (p10); 'tied to VCC/VSS: keep QE=0' (p10). No contradiction.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "Unchanged by the revision. At 35.56 x 33.02 mm (~1174 mm2) it is the largest body of the three. It carries a supply note, a caption, a 3x3 table and a rail-tie line, more than D-54's 'a short note or two'. The QE=1 column ('IO2', 'IO3') repeats what the slash names already say. The bold body MPN duplicates the Value field. The table now squeezes the names: the generator's name-to-note floor had to drop from 1.5 to 0.9 mm to fit HOLD#/IO3.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "The design now ships its own fanout render (ZD25WQ16DTIGT_fanout_unit1.png). It places cleanly: six bus labels on the left edge, VSS straight down to GND, and with '#' names the arena labels are 'CS_', 'WP__IO2', 'HOLD__IO3', matching the other designs. The crop clips part of the sheet frame at its top and left edges, a cosmetic render issue, not a symbol one. Remaining costs: every pin tip carries a uniform 1.27 mm y offset (VCC 13.97, CS# 8.89 ... VSS -21.59), which is on the engine's 1.27 GRID but off the 2.54 lattice, and VCC is a left horizontal stub, so a D-55 power symbol needs a wire corner, and VCC and VSS sit on different edges for the decoupling cap.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "Unchanged, and the most expressive of the three. It shows the supply range (p4), the density (p4), and a state table giving each dual-role pin's QE=0 function with its condition (SR lock only at SRP=01, p10 Table-5; HOLD pause, p8) against its QE=1 role (p10), plus the p10 rail-tie hazard. All of it is datasheet-backed, and none of it is an internal block diagram. The active level now comes from the datasheet's own '#' names.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-judge-3",
+   "design_id": "internals-maximal",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "In-body caption '16M-bit Quad SPI NOR Flash' and a '1.65-3.6 V' note beside VCC, plus the six bus pin names, identify a 16 Mbit QSPI NOR flash at a glance. Backed by DS p4 ('16M-Bit', 'Single 1.65V to 3.6V supply') and p84 ('25WQ: Quad SPI Nor Flash'). The bold in-body 'ZD25WQ16DTIGT' repeats the Value field.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "All 8 names match the DS p5 pin-configuration figure letter for letter (CS#, SO/IO1, WP#/IO2, VSS, SI/IO0, SCLK, HOLD#/IO3, VCC). Electrical types match the p5 I/O column (CS# and SCLK input, IO0-IO3 bidirectional, VCC/VSS power_in). 'QE=1: IO2, IO3' matches p10. Every Description claim checks out: SR=00H at delivery (p78), QE=S9 written by 31H or a two-byte 01H (p9, p24), HOLD disabled in Quad I/O and QPI (p8), WP# lock only at SRP=01 (p10 Table-5). No contradiction found.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Ink is three short notes and the pins, with no block diagram, as D-54 asks. But the body is 30.48 x 35.56 mm with its right two-thirds empty apart from one note, and the bold in-body part number duplicates Value. It could shrink about 10 mm in width.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "Signals sit on one left edge at a 2.54 mm pitch in three gapped groups: SCLK/CS#, SI/SO, then WP#/HOLD#. VSS drops straight down from the bottom edge, and the fanout render is clean. VCC is the top pin of the LEFT edge, not on the top edge, so a D-55 rail power symbol needs a stub and bend. D-54 says supply on top. Pins land on the 1.27 mm grid, and the centred VSS is at x=0.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "Shows the supply range (DS p4) and the QE=1 role of pins 3 and 7 (p10). The QE=0 default is only implied by name order. The p10 rail-tie caution (clear QE before tying WP# or HOLD# to a rail) is in the Description only, not on the body, and it is the trap most relevant to how a schematic gets wired.",
+     "evidence": [
+      "design:internals-maximal:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-judge-3",
+   "design_id": "flow-first",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 3,
+     "note": "The 'QUAD SPI NOR' caption plus bus names reads as QSPI NOR (DS p84 '25WQ: Quad SPI Nor Flash'). The body shows no density and no supply range; both are only in Value and the Description (DS p4).",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Names match the DS p5 figure exactly, and electrical types match the p5 I/O column. The bracketed notes on pins 3 and 7 are right: 'QE=0 (default)/QE=1' matches p10 'QE bit is set to 0 (Default) ... WP# and HOLD# pins are enabled ... QE bit is set to 1, the Quad IO2 and IO3 pins are enabled', and 'rail tie: QE=0 only' matches p10's 'Set the QE bit to 0 to avoid short issue'. The Description claims check out against p8, p9, p10 and p24. No contradiction.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Smallest body of the three (33.02 x 25.4 mm). Its ink is one caption, one bracket and two short notes, and every mark carries meaning. The bold in-body part number still duplicates Value.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "Best fit to D-54 and D-55: VCC is on the top edge and VSS on the bottom edge, in one column (x=12.7), so the rail power symbols and the decoupling cap drop straight on. The six bus pins run contiguously on the left at a 2.54 mm pitch. The fanout render is clean (VCC up, GND down, six straight labels), and every pin is on the 1.27 mm grid.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "On the body it carries both p10 traps: the QE default, the dual roles and the rail-tie caution. It lacks the supply-range note (DS p4) that D-54 names as one of its 'short note or two'. The 'QE=0 (default)/QE=1' shorthand needs the reader to map it onto the halves of each slashed name.",
+     "evidence": [
+      "design:flow-first:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-judge-3",
+   "design_id": "annotation-rich",
+   "seen_units": [
+    1
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Re-scored on symbol fac8655d (ca12e2c). '16M-bit QSPI NOR' plus '1.65-3.6 V' beside VCC identify the part at once (DS p4 '16M-Bit', 'Single 1.65V to 3.6V supply'). The bold in-body part number repeats the Value field.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pin names now match the DS p5 figure and Table-1 letter for letter (CS#, SO/IO1, WP#/IO2, VSS, SI/IO0, SCLK, HOLD#/IO3, VCC). Electrical types match the p5 I/O column. Every annotation is backed by the datasheet: 'SR lock (SRP=01)' (p10 Table-5), 'pause' (p8 'Driving the HOLD# pin low will pause'), the QE=0 default and QE=1 IO2/IO3 columns (p10), 'tied to VCC/VSS: keep QE=0' (p10), and 'No RESET#' in the Description (p5, SFDP p74 'HW Reset# pin 0=not support'). No contradiction found.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "economy": {
+     "score": 2,
+     "note": "Unchanged layout: the largest body of the three (35.56 x 33.02 mm), with eight in-body text items. Those are a 3x3 QE truth table plus the rail-tie note, caption, supply range and a duplicate bold part number. The table is all load-bearing, but D-54 caps notes at 'a short note or two'. The wider '#' spelling now puts HOLD#/IO3 0.98 mm from 'pause' (the generator's clearance floor was relaxed 1.5 -> 0.9 mm), and on the fanout page the two read almost as one string.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 3,
+     "note": "The fanout render (ZD25WQ16DTIGT_fanout_unit1.png) is now present and clean: six straight left labels at a 2.54 mm pitch, with a gap before WP#/HOLD#, and VSS dropping straight to GND from the bottom edge at x=0. VCC is still the top pin of the LEFT edge, not on the top edge. That goes against D-54's supply-on-top and needs a stub and bend for a D-55 rail power symbol. All pins are on the 1.27 mm grid.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "The most complete statement of the pin 3/7 dual role: QE=0 (default) gives SR lock (SRP=01) and pause, QE=1 gives IO2/IO3, and rail ties need QE=0 kept. HOLD is scoped to QE=0, consistent with p8's 'HOLD feature is disabled in Quad I/O and QPI mode'.",
+     "evidence": [
+      "design:annotation-rich:u1"
+     ]
+    }
+   },
+   "findings": []
+  }
+ ],
+ "selection": {
+  "winner_design_id": "flow-first",
+  "grafts": [
+   {
+    "id": "G1",
+    "from": [
+     "internals-maximal",
+     "annotation-rich"
+    ],
+    "what": "Supply-range note '1.65V to 3.6V' on the caption row, ending 1.27 mm before the top-edge VCC name. Wording is DS p4's own (as the unjudged datasheet-order drew it), not the designs' '1.65-3.6 V'.",
+    "source": "DS p4 1.1 'Single 1.65V to 3.6V supply'",
+    "judge_basis": "Look judges 1, 2 and 3, graft 2 each: add internals-maximal's supply note beside VCC on flow-first; 'the one note D-54 names' (judge 1), 'the supply-range note D-54 names first' (judge 2), 'D-54's named example note' (judge 3). All three held flow-first's expressibility at 3 for its absence."
+   },
+   {
+    "id": "G2",
+    "from": [
+     "look judge 1 finding",
+     "look judge 2 ergonomics"
+    ],
+    "what": "Body width 35.56 mm (a 5.08 multiple): the six bus pin ends move from x=-21.59 to x=-22.86, VCC/VSS sit at (15.24, +-15.24); every pin end is on the 100 mil grid.",
+    "source": "KLC S4.1 (judge 1); guide docs/02-symbols.md centred edges on 2xGRID (5.08 mm)",
+    "judge_basis": "Judge 1 finding + graft 1 ('move the signal pin ends onto the 100-mil grid (x=-20.32 or -22.86)'), judge 2 graft 6 (snap to -20.32 or -22.86). x=-20.32 (width 30.48) does not fit the QE note: names 11.72 + bracket 2.39 + 'QE=0 (default)/QE=1' 16.67 + 1.27 margin = 32.05 mm (engine text_ink)."
+   },
+   {
+    "id": "G3",
+    "from": [
+     "look judge economy notes"
+    ],
+    "what": "Body height 20.32 mm, not 25.4: VSS emitted in the right group and moved to the power column, so the emitter's bottom-name reserve (three empty rows under HOLD#/IO3) drops. Area 723 mm2 against flow-first's 839 (-14 %).",
+    "source": "engine templates/symbol_emitter.py _unit_half_h (bottom-name reserve)",
+    "judge_basis": "Judge 1 graft 5 and judge 2 graft 8 ('narrow the body'); judges 1-3 held flow-first's economy at 3 for slack space. Width cannot shrink (G2 arithmetic), so the slack came out of the height."
+   },
+   {
+    "id": "G4",
+    "from": [
+     "annotation-rich",
+     "internals-maximal",
+     "D-54 round judge 2 finding"
+    ],
+    "what": "Description adds: Zetta ZD25WQ16D; SOP8 150 mil (T), -40 to 85 C (I); fC 85 MHz at 1.65-3.6 V, 133 MHz only at 3.0-3.6 V; '31H writes S15-S8, a one-byte 01H writes S7-S0 only'; 'Pin 7 has no RESET# function (DS p5 Table-1; SFDP p74 HW Reset# pin 0b)'.",
+    "source": "DS p84, p80 Table-18, p9, p24, p5, p74",
+    "judge_basis": "Hidden property, carried from b847ec9 (judges-d54 judge 1 graft 6, judge 2 graft 5, judge 3 graft 2). Look judges verified overlapping claims in the source Descriptions: judges 1 and 3 on internals-maximal (QE=S9 written by 31H or a two-byte 01H, p9/p24), judge 3 on annotation-rich ('No RESET#', p5 + SFDP p74). No look judge objected to any G4 clause."
+   }
+  ],
+  "final_symbol_sha256": "02a74486f1bf11758af4a1575b0af2af3c6412f6e525f11d0e7cf12fcc1b25f4"
+ },
+ "final_renders": [
+  {
+   "id": "qa:u1",
+   "unit": 1,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png",
+   "sha256": "68fb6451b3ab7380849a4f89de03358f50fd2b88c8185068dcf54b5a62e51db4",
+   "background": "#f5f4ef",
+   "symbol_sha256": "02a74486f1bf11758af4a1575b0af2af3c6412f6e525f11d0e7cf12fcc1b25f4",
+   "nonce": "LOOK-DYY4T4H4VWUQ",
+   "nonce_sha256": "bd58a4208be1d3c33c7741f2eead5c3322fee5ddfdfdbe343175ed27455753dd"
+  }
+ ],
+ "regraders": [
+  {
+   "reviewer_id": "look-regrader-1",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Body shows ZD25WQ16DTIGT, QUAD SPI NOR, 1.65V to 3.6V; reads instantly as a 1.8 V QSPI flash. Package SOP8 per datasheet p5.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "All 8 pins match Table-1 on p5: 1 CS#, 2 SO/IO1, 3 WP#/IO2, 4 VSS, 5 SI/IO0, 6 SCLK, 7 HOLD#/IO3, 8 VCC; datasheet names; VCC top, VSS bottom; QE note matches the WP#/HOLD# dual function.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "No block diagram, body is compact. Two notes plus a bracket plus the voltage line are slightly more text than the one or two notes D-54 asks for, but all are useful.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "Six signal pins on the left in datasheet pin-table order, supply top, ground bottom, pin numbers clear of the body, no crossings.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "The bracket note QE=0 (default)/QE=1, rail tie: QE=0 only, explains why WP#/HOLD# must be tied to the rail when QE is off; terse but adequate. Left order is not strictly numeric (1,6,5,2,3,7), grouped as SPI signals.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-regrader-2",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Part number ZD25WQ16DTIGT bold above the box, 'QUAD SPI NOR' and '1.65V to 3.6V' inside; reads instantly as the 1.8 V QSPI flash. Datasheet p5 Table-1 pin definition.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pins 1 CS#, 2 SO/IO1, 3 WP#/IO2, 4 VSS, 5 SI/IO0, 6 SCLK, 7 HOLD#/IO3, 8 VCC match pins.json (datasheet p5 SOP8 table); datasheet names kept; 1.65-3.6 V matches the supply range; QE note matches the WP#/HOLD# dual function.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 3,
+     "note": "Single plain rectangle, no internal block diagram, two short notes plus range text per D-54. The QE bracket note is slightly dense but useful; nothing decorative.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "VCC pin 8 on top and VSS pin 4 on bottom, all six signals on the left in datasheet pin-name order grouping, pin numbers and names readable and unobstructed, stubs end on clear grid ends.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "The QE=0 default vs QE=1 and 'rail tie: QE=0 only' note tells the designer the WP#/HOLD# caveat, which this RP2040 wiring needs; bracket meaning is terse but adequate.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-regrader-3",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Body title ZD25WQ16DTIGT in bold, 'QUAD SPI NOR' and '1.65V to 3.6V' inside the box; reads instantly as the 1.8 V QSPI flash (DS p1/p5).",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Eight pins 1 CS#, 2 SO/IO1, 3 WP#/IO2, 4 VSS, 5 SI/IO0, 6 SCLK, 7 HOLD#/IO3, 8 VCC match the Table-1 pin definition on DS p5 and pins.json; dual-role pins 3/7 bracketed with the QE=0/QE=1 note (DS p10); no exposed pad, none drawn.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "Single rectangle, no internal block diagram, two short notes plus the supply range; nothing decorative. Matches D-54.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "VCC pin 8 on top, VSS pin 4 on the bottom, six bus pins on the left in datasheet order grouped apart from supply; pin numbers and names legible and not overlapping, stubs of uniform length.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "Notes state supply range, QE-dependent roles and the QE=0-only rail-tie caveat; bracket spans WP#/HOLD# rows clearly. The 'rail tie: QE=0 only' wording is terse and slightly cryptic without the datasheet, but sufficient.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-regrader-4",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Body title ZD25WQ16DTIGT and 'QUAD SPI NOR' read at once; pins numbered 1-8 in the box match the SOP8 pin table (DS p5 Table 1).",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Names CS#, SCLK, SI/IO0, SO/IO1, WP#/IO2, HOLD#/IO3, VCC, VSS and numbers 1,6,5,2,3,7,8,4 match DS p5 Table 1 exactly. '1.65V to 3.6V' matches DS p1/features (1.65-3.6 V). QE note matches DS QE bit description: QE=0 default enables WP#/HOLD#, QE=1 makes pins IO2/IO3, and tying to rail is only safe at QE=0.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "Single plain box, two short notes (voltage range, QE rail-tie), no internal block diagram, as D-54 asks. Nothing decorative.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "VCC pin 8 on top, VSS pin 4 on bottom, six signal pins on the left in datasheet order grouped as bus; pin numbers are clear of the box and readable; pin spacing is generous.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 3,
+     "note": "The QE dual role is stated by a bracket note next to WP#/HOLD#, which is the key trap for this part (DS QE bit text). Slightly terse: 'rail tie: QE=0 only' does not say the pins are IO2/IO3 at QE=1 beyond the names, and pin type directions are not visible in the render.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": []
+  },
+  {
+   "reviewer_id": "look-regrader-5",
+   "seen_units": [
+    1
+   ],
+   "render_ids": [
+    "qa:u1"
+   ],
+   "axes": {
+    "identity_read": {
+     "score": 4,
+     "note": "Body header reads ZD25WQ16DTIGT with 'QUAD SPI NOR' and '1.65V to 3.6V' inside the box; one glance says 1.8 V quad-SPI flash. Matches Zetta ZD25WQ16D front page / Table-1 pin definition (PDF p5).",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "silicon_faithfulness": {
+     "score": 4,
+     "note": "Pin numbers vs name match Table-1 (PDF p5, SOP8): 1 CS#, 2 SO/IO1, 3 WP#/IO2, 4 VSS, 5 SI/IO0, 6 SCLK, 7 HOLD#/IO3, 8 VCC. Datasheet names kept verbatim; VCC on top, VSS on bottom; bracket note 'QE=0 (default)/QE=1; rail tie: QE=0 only' correctly reflects WP#/HOLD# becoming IO2/IO3 when QE=1. Pin types look right (inputs for CS#/SCLK, bidirectional for IO).",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "economy": {
+     "score": 4,
+     "note": "Only a title line, a voltage-range note and one bracket note; no internal block diagram, no clutter. Fully in line with D-54.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "wiring_ergonomics": {
+     "score": 4,
+     "note": "All six signals on the left at 2.54 mm-style pitch, supply on top, ground on bottom, pin numbers legible beside each stub, nothing crossing; the signal order groups CS/CLK/data naturally for the RP2040 QSPI hookup.",
+     "evidence": [
+      "qa:u1"
+     ]
+    },
+    "expressibility": {
+     "score": 4,
+     "note": "Single unit carries every datasheet pin (8 of 8) with dual-function names and the QE caveat that governs how WP#/HOLD# can be wired; the user can wire it correctly without opening the datasheet.",
+     "evidence": [
+      "qa:u1"
+     ]
+    }
+   },
+   "findings": []
+  }
+ ],
+ "binding": {
+  "tool": "library-qa/council.py look",
+  "by": "lead-996565",
+  "agents": [
+   "council-designer-annotation-rich",
+   "council-designer-flow-first",
+   "council-designer-internals-maximal",
+   "look-judge-1",
+   "look-judge-2",
+   "look-judge-3",
+   "look-regrader-1",
+   "look-regrader-2",
+   "look-regrader-3",
+   "look-regrader-4",
+   "look-regrader-5"
+  ],
+  "candidate": {
+   "sha256": "11a4a0e43c8e6229941c7529aeed48563e6f249968735bd58eed9ece1173e194",
+   "files": {
+    "ZD25WQ16DTIGT.kicad_sym": "02a74486f1bf11758af4a1575b0af2af3c6412f6e525f11d0e7cf12fcc1b25f4",
+    "ZD25WQ16DTIGT_unit1.png": "6fa93b77afc11103ad83b5e6317d7ce514567cf3c7c92784429c03b224ce989d",
+    "ZD25WQ16DTIGT_unit1_fanout.png": "57d2442c50190811ee1631571c4ef60db8f57272aa267a97dae0a1e7ca3b39c9",
+    "author.json": "b98694f49a0b54b18359aee5cdcc39b6b171c18d41913e574134183a1639282b",
+    "comparable_ds.json": "78200a2303f6c4d8f416d471bee9892ec09ade09a80449c863c58db9da0cb2d8",
+    "council/annotation-rich/ZD25WQ16DTIGT.kicad_sym": "fac8655db692812cb9b00001118081ea9d4575e043a21e78ab045296b1d012c9",
+    "council/annotation-rich/ZD25WQ16DTIGT_fanout_unit1.png": "a359a00915a764ce94c993ce96c98cfca16195ef48fb9cbfc9b757cdeba1a30a",
+    "council/annotation-rich/ZD25WQ16DTIGT_unit1.png": "3e6f4b141fcb3fbde8a19850e7845f281ab45f51ba67afd6da8de8ceb419cfc1",
+    "council/datasheet-order/ZD25WQ16DTIGT.kicad_sym": "1b5f5473708f0f7d37ac5a4dfe5729a3ae955db9cda9643588a48ef78c970a0f",
+    "council/datasheet-order/ZD25WQ16DTIGT_unit1.png": "de529d736bb7a81d5abc24aa6af4f1cfabac9289386f74174987a4bd7083527e",
+    "council/datasheet-order/ZD25WQ16DTIGT_unit1_fanout.png": "580f988691ef21477410cd7cb1da429318e26203e083209570eb2cf3e812f044",
+    "council/flow-first/ZD25WQ16DTIGT.kicad_sym": "36c7a404a10b6ab972fc6c8f3c8be7e39b729ecdaf671a3bcb2476fce7089379",
+    "council/flow-first/ZD25WQ16DTIGT_unit1.png": "45b15f867d7c96f2e1fa54a300246ef4cffa092aa756dee7f19147c618ab2bbb",
+    "council/flow-first/ZD25WQ16DTIGT_unit1_fanout.png": "341cf5661e3fadb8f2b3f415a5d551ca6b594091ae4d2f1d2f726dcb654f8947",
+    "council/internals-maximal/ZD25WQ16DTIGT.kicad_sym": "526cee321e51a6589793b58a402fde9beaec4b953e4013274f14c3dfaa66481c",
+    "council/internals-maximal/ZD25WQ16DTIGT_unit1.png": "959083ee7c6b7cd8f199f77521137d46f18cbb71692e8bc133ddd8bd7060477b",
+    "council/internals-maximal/ZD25WQ16DTIGT_unit1_fanout.png": "99d19eb8d2e1c760f63055e83da1becf2ba06121e54a6ced5d4a57eab9593103",
+    "facts.json": "78e7bb90cb95625187ae94ff0ce9678216b0586fd2cc3a9bb3fcb52dde5f5a19",
+    "fanout_page.py": "24ab9d76b4f67ef1cc3dd9284b4bbe100781590da04515e765a15142362e4772",
+    "gen.py": "efc4ed68fffd98165cf2d378bafd921df6673e4a6caa9f3c3ab7887a2213084f",
+    "pin-truth.json": "c700cc43fb87cd1e4af7e8d06f401de3731baa781253457b5272b704ead09e73",
+    "render.sh": "7ba6559ce8e12501e95bde250e1b7df566c059d174c366ffa407d4ed36a24e2d"
+   }
+  },
+  "verdict": "pass"
+ }
+}

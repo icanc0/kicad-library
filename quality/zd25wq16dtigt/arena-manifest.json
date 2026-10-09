@@ -1,0 +1,23 @@
+{
+ "schema_version": "library-qa-arena-1",
+ "part_id": "ZD25WQ16DTIGT",
+ "symbol_sha256": "02a74486f1bf11758af4a1575b0af2af3c6412f6e525f11d0e7cf12fcc1b25f4",
+ "units": [
+  1
+ ],
+ "verdict": "PASS",
+ "build_sha256": "c8c935e4db096fdec75b1872d161adaddf5880104bb7e7fe1dd1da0adfa49539",
+ "sheets": {
+  "unit_1.kicad_sch": "51f79c957756e32e277ebd61e9b058fe2f74ef9ef56351538c735fa9b405ac15"
+ },
+ "pages": [
+  {
+   "unit": 1,
+   "path": "arena/hardware/preview/library-qa-arena-schematic-crop-sheet-U1-box1.png",
+   "sha256": "68fb6451b3ab7380849a4f89de03358f50fd2b88c8185068dcf54b5a62e51db4",
+   "svg_fingerprint": "27e34133e26dfcefcb22d2e3a643376d0a428e41be4e56b5bf6ad49b65fc28bd",
+   "nonce_sha256": "bd58a4208be1d3c33c7741f2eead5c3322fee5ddfdfdbe343175ed27455753dd",
+   "background": "#f5f4ef"
+  }
+ ]
+}

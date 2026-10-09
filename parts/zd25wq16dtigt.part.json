@@ -1,0 +1,108 @@
+{
+  "$schema": "../schema/kag-part-manifest-v1.schema.json",
+  "schema_version": "1.0.0",
+  "part_id": "zd25wq16dtigt",
+  "record_state": "symbol-only",
+  "identity": {
+    "type": "manufactured-part",
+    "manufacturer": {
+      "display": "Zetta",
+      "normalized": "zetta"
+    },
+    "mpn": {
+      "status": "exact",
+      "raw": "ZD25WQ16DTIGT",
+      "canonical": "ZD25WQ16DTIGT",
+      "comparison_key": "ZD25WQ16DTIGT",
+      "normalization": [
+        "trim",
+        "uppercase"
+      ],
+      "significant_characters": []
+    },
+    "identifiers": [
+      {
+        "scheme": "lcsc",
+        "value": "C55563409"
+      }
+    ],
+    "description": "Central library symbol ZD25WQ16DTIGT promoted from truedepth-shim."
+  },
+  "names": {
+    "canonical": "ZD25WQ16DTIGT",
+    "aliases": [],
+    "internal_symbols": [
+      {
+        "asset_path": "symbols/ZD25WQ16DTIGT.kicad_sym",
+        "name": "ZD25WQ16DTIGT"
+      }
+    ]
+  },
+  "classifications": {
+    "package": null,
+    "families": []
+  },
+  "assets": [
+    {
+      "path": "symbols/ZD25WQ16DTIGT.kicad_sym",
+      "kind": "symbol",
+      "qualification": "qualified",
+      "sha256": "02a74486f1bf11758af4a1575b0af2af3c6412f6e525f11d0e7cf12fcc1b25f4",
+      "internal_name": "ZD25WQ16DTIGT"
+    }
+  ],
+  "relationships": [],
+  "provenance": {
+    "repository_commit": "be06735f0f0af460ae80f21b7237208bc38495d7",
+    "source_board": "truedepth-shim",
+    "entries": [
+      {
+        "kind": "manifest",
+        "path": "MANIFEST.md",
+        "locator": "promotion entry for symbols/ZD25WQ16DTIGT.kicad_sym",
+        "evidence": "First-import fit pass: ZD25WQ16DTIGT (C55563409) council final 02a74486, author symbol-maker-3beb17. Pins: 8 names + numbers re-read by eye on DS d83f66ac p.5 SOP8 top-view drawing = Table-1 = symbol (1 CS# in, 2 SO/IO1 bidi, 3 WP#/IO2 bidi, 4 VSS pwr, 5 SI/IO0 bidi, 6 SCLK in, 7 HOLD#/IO3 bidi, 8 VCC pwr). Unit 1 arena page 68fb6451 (LOOK-DYY4T4H4VWUQ) read zoomed: QUAD SPI NOR, 1.65V to 3.6V (DS p4), QE bracket on WP#/HOLD#. Fit: stock Package_SO:SOIC-8_3.9x4.9mm_P1.27mm, pads 1.95x0.6 at x +-2.475, 1.27 pitch, pin 1 top-left; DS p.86 (prints 89) SOP8 150MIL e 1.27, B 5.80-6.20, B1 3.89-3.99, A1 4.85-4.95, d 0.33-0.43, L 0.40-0.80: heel+toe fillets, MS-012AA class; 3D SOIC-8_3.9x4.9mm_P1.27mm.step. Council receipts symbol-look/quality (lead-996565, 74ddb54) bind this page."
+      }
+    ]
+  },
+  "extensions": {
+    "promotion": {
+      "fit_note": "ZD25WQ16DTIGT (C55563409) council final 02a74486, author symbol-maker-3beb17. Pins: 8 names + numbers re-read by eye on DS d83f66ac p.5 SOP8 top-view drawing = Table-1 = symbol (1 CS# in, 2 SO/IO1 bidi, 3 WP#/IO2 bidi, 4 VSS pwr, 5 SI/IO0 bidi, 6 SCLK in, 7 HOLD#/IO3 bidi, 8 VCC pwr). Unit 1 arena page 68fb6451 (LOOK-DYY4T4H4VWUQ) read zoomed: QUAD SPI NOR, 1.65V to 3.6V (DS p4), QE bracket on WP#/HOLD#. Fit: stock Package_SO:SOIC-8_3.9x4.9mm_P1.27mm, pads 1.95x0.6 at x +-2.475, 1.27 pitch, pin 1 top-left; DS p.86 (prints 89) SOP8 150MIL e 1.27, B 5.80-6.20, B1 3.89-3.99, A1 4.85-4.95, d 0.33-0.43, L 0.40-0.80: heel+toe fillets, MS-012AA class; 3D SOIC-8_3.9x4.9mm_P1.27mm.step. Council receipts symbol-look/quality (lead-996565, 74ddb54) bind this page.",
+      "note": "",
+      "pin_gate": {
+        "symbol": "ZD25WQ16DTIGT",
+        "lcsc": "C55563409",
+        "facts_checked": true,
+        "source": "facts",
+        "board_context": null,
+        "state": "clean",
+        "gaps": [],
+        "allow_pin_gaps": null
+      }
+    },
+    "quality": {
+      "state": "council-graded",
+      "symbol_sha256": "02a74486f1bf11758af4a1575b0af2af3c6412f6e525f11d0e7cf12fcc1b25f4",
+      "installed_symbol_sha256": "02a74486f1bf11758af4a1575b0af2af3c6412f6e525f11d0e7cf12fcc1b25f4",
+      "footprint_sha256": null,
+      "installed_footprint_sha256": null,
+      "quality_receipt": {
+        "path": "quality/zd25wq16dtigt/symbol-quality.json",
+        "sha256": "bcd7bb95dac281091f1cad6a3603f588f2d199000505c2bd4005be5d775acf87"
+      },
+      "look_receipt": {
+        "path": "quality/zd25wq16dtigt/symbol-look.json",
+        "sha256": "aefddb2d33038b0ff21d6454c8691cccc52cbd7cf214b1d9cc55af38afbb1ba9"
+      },
+      "arena_manifest": {
+        "path": "quality/zd25wq16dtigt/arena-manifest.json",
+        "sha256": "f2c07f2128b8169c3956e25e7aea419e8bff1bc06f38e7bfc4c199f2c968384c"
+      },
+      "arena_manifest_mtime": "2026-10-09T10:51:48+00:00",
+      "arena_manifest_mtime_note": "st_mtime of QA's arena-manifest.json when promoted — the arena render's clock, reset by any cp/checkout; the receipts carry no audit clock and now() is never written",
+      "admission": {
+        "path": "quality/zd25wq16dtigt/admission.json",
+        "sha256": "f8f0c074b946a99b41135778e8db89c0052e52491c6aa9917d5a7a0f0feb121a"
+      }
+    }
+  }
+}
